@@ -1,0 +1,852 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PurchaseOrderRows | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PurchaseOrderRows | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Purchase.PurchaseOrderRow">
+<h1 id="purchaseorderrows">PurchaseOrderRows</h1>
+
+<p><em>Queryable, Introduced in version 2.26</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Purchase/PurchaseOrderRows
+</code></pre>
+<p>Represents a purchase order row.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">E2C7B35D-48E3-45E6-AEEC-A297943E583F
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show purchase orders
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Position</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The relative numeric position of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderRowType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The type of the row.<br><br><ul><li>Part: 1</li><li>Additional: 2</li><li>Sum: 3</li><li>FreeText: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part set for the row.<br><br>References <a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Part</td>
+<td><a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a></td>
+<td>The part of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>EntityIdentityString</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The human readable identifier of the entity subject of the row.<br><br><ul><li>Max length is 20</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>AdditionalRowDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The additional row description of the row.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>FreeTextHtml</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The free text row's rich text HTML row data.<br><br><ul><li>Max length is 0</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>FreeText</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The free text row's raw text.<br><br><ul><li>Max length is 0</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ParentRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the current row's parent.<br><br>References <a class="xref" href="Monitor.API.Purchase.PurchaseOrderRow.html">PurchaseOrderRows</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The delivery date set for the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RevisionId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's revision.<br><br>References <a class="xref" href="Monitor.API.Common.Revision.html">Revisions</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Revision</td>
+<td><a class="xref" href="Monitor.API.Common.Revision.html">Revisions</a></td>
+<td>The revision of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderedQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The ordered quantity of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Price</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The price of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row price currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceCurrency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The price currency for the row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>Discount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The discount in percent set for the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ToolId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the tool of the row.<br><br>References Tool<br><br><ul><li>Obsolete since version 2.48 (Replaced by Part)</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's unit.<br><br>References <a class="xref" href="Monitor.API.Common.Unit.html">Units</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Unit</td>
+<td><a class="xref" href="Monitor.API.Common.Unit.html">Units</a></td>
+<td>The unit of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>VatRateId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the row's VAT rate.<br><br>References <see cref="P:Monitor.API.Purchase.PurchaseOrderRow.VatRate"></see><br></td>
+<td></td>
+</tr>
+<tr>
+<td>VatRate</td>
+<td><a class="xref" href="Monitor.API.Common.VatRate.html">VatRates</a></td>
+<td>The VAT rate of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>WarehouseId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the warehouse that the row belongs<br>to.<br><br>References <see cref="P:Monitor.API.Purchase.PurchaseOrderRow.Warehouse"></see><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Warehouse</td>
+<td><a class="xref" href="Monitor.API.Common.Warehouse.html">Warehouses</a></td>
+<td>The warehouse that the row belongs to.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>WeightPerUnit</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The weight per unit of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The order date of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ConversionFactor</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The conversion factor of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The row price in the company currency.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the company currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupPriceInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The setup price of the row in the company currency.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupPriceInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the company currency.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>StandardPrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The standard price of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>StandardPriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's standard price currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>StandardPriceCurrency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The standard price currency of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>SetupPrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The setup price of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupPriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's setup price currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupPriceCurrency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The setup price currency of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>ShowPrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if price should be shown for the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartRowType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The part row type of the row.<br><br><ul><li>NotPartRow: 0</li><li>RegularRow: 1</li><li>SubPartRow: 2</li><li>SetupPriceRow: 3</li><li>AlloyCostRow: 4</li><li>PaymentPlanRow: 5</li><li>PackagingRow: 6</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>LifeCycleState</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The life cycle state of the row.<br><br><ul><li>Transient: 1</li><li>Persistent: 10</li><li>History: 20</li><li>RemovableCandidate: 99</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PartStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The part status of the part at the time of row creation.<br><br><ul><li>Quote: 1</li><li>Prototype: 2</li><li>New: 3</li><li>Normal: 4</li><li>NewRevision: 5</li><li>PhasingOut: 6</li><li>Expired: 9</li><li>Inactive: 99</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderedQuantityInOrderUnit</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The ordered quantity in the order unit.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RestQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The rest quantity of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveredQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The delivered quantity of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InitialDeliveryDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The initial delivery date of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>DesiredDeliveryDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The desired delivery date of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RestQuantityInOrderUnit</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The rest quantity in the order unit.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveredQuantityInOrderUnit</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The delivered quantity in the order unit.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CreationContext</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The creation context of the row.<br><br><ul><li>OrderRegistration: 0</li><li>DeliveryReporting: 1</li><li>Invoicing: 2</li><li>PartialInvoicing: 3</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ShowFreeTextIn</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies which documents the free text row data will appear on.<br><br><ul><li>Internal: 0</li><li>Inquiry: 1</li><li>Order: 2</li><li>DeliverySchedule: 4</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>StatisticalGoodsCodeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's statistical goods code.<br><br>References <see cref="P:Monitor.API.Purchase.PurchaseOrderRow.StatisticalGoodsCode"></see><br></td>
+<td></td>
+</tr>
+<tr>
+<td>StatisticalGoodsCode</td>
+<td><a class="xref" href="Monitor.API.Common.StatisticalGoodsCode.html">StatisticalGoodsCodes</a></td>
+<td>The statistical goods code of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>RowStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The status of the purchase order row.<br><br><ul><li>Registered: 1</li><li>PurchaseOrderRowPrinted: 2</li><li>PartiallyDelivered: 5</li><li>Declined: 8</li><li>History: 9</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Version</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The version of the row.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>ArrivalReporting</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the row uses arrival reporting.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>ConfirmedDelayed</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the row is confirmed delayed.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>DelayCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's delay comment.<br>            <br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>DelayComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The delay comment of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>DelayReasonId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's delay reason.<br>            <br>References <a class="xref" href="Monitor.API.Common.ReasonCode.html">ReasonCodes</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>DelayReason</td>
+<td><a class="xref" href="Monitor.API.Common.ReasonCode.html">ReasonCodes</a></td>
+<td>The delay reason of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>CodingId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's coding.<br>            <br>References coding<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>Coding</td>
+<td><a class="xref" href="Monitor.API.Accounting.Coding.html">Codings</a></td>
+<td>The coding of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>IsConfirmed</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the row is confirmed.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>ReceivingInspectionInstructionId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's receiving inspection instruction.<br>            <br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>ReceivingInspectionInstruction</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The receiving inspection instruction of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>ReceivingInspectionType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The receiving inspection type of the row.<br><br><ul><li>None: 0</li><li>Always: 1</li><li>VariableInspection: 2</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>ReceivingMessageId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's receiving message.<br>            <br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>ReceivingMessage</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The receiving message of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>RequiredForManufacturingOrderNode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the manufacturing order node that requires this row.<br>            <br>References ManufacturingOrderNode<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The weight of the row.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>LinkedStockOrderRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's linked stock order row.<br>            <br>References <a class="xref" href="Monitor.API.Sales.CustomerOrderRow.html">CustomerOrderRows</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>LinkedSubcontractingManufacturingOrderOperation</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's linked subcontracting manufacturing order operation.<br>            <br>References <a class="xref" href="Monitor.API.Manufacturing.ManufacturingOrderOperation.html">ManufacturingOrderOperations</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>OriginatingPurchaseOrderDeliveryRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's originating purchase order delivery row.<br>            <br>References <a class="xref" href="Monitor.API.Purchase.PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>CausingTransType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The causing transaction type of the row.<br><br><ul><li>StockBalanceRow: 0</li><li>ReceivedPurchaseOrder: 1</li><li>PurchaseOrder: 2</li><li>PurchaseOrderSuggestion: 3</li><li>ManufactureOrderNode: 4</li><li>ManufactureOrderNodeSuggestion: 5</li><li>ManufactureOrderNodeSimulation: 6</li><li>CustomerOrder: 7</li><li>SalesForecast: 8</li><li>CustomerOrderForecast: 9</li><li>MaterialRequirementFromManufactureOrderNode: 10</li><li>MaterialRequirementFromManufactureOrderSuggestion: 11</li><li>MaterialRequirementFromManufactureOrderSimulation: 12</li><li>Quote: 13</li><li>MaterialRequirementSuggestionFromQuoteSimulation: 14</li><li>ArrivingStockOrder: 15</li><li>DeliveringStockOrder: 16</li><li>StockOrderArrivalSuggestion: 17</li><li>StockOrderDeliverySuggestion: 18</li><li>CustomerOrderFromDeliveryTimeControl: 19</li><li>MaterialRequirementSuggestionFromDeliveryTimeControl: 20</li><li>ManufactureOrderNodeFromDeliveryTimeControl: 21</li><li>PurchaseOrderFromDeliveryTimeControl: 22</li><li>PurchaseOrderAdvice: 23</li><li>DeliveringStockOrderFromDeliveryTimeControl: 24</li><li>CustomerOrderPreliminary: 27</li><li>CustomerOrderRowMissingDeliveryDate: 28</li><li>DeliveringStockOrderPreliminary: 29</li><li>ServiceOrder: 30</li><li>ReturnTool: 33</li><li>WithdrawalTool: 34</li><li>QuotePreliminary: 35</li><li>QuoteMissingDeliveryDate: 36</li><li>SalesBlanketOrder: 40</li><li>PurchaseBlanketOrder: 41</li><li>ReturnPurchaseOrder: 42</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>CausingOrderRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the order row that was the cause of this row.<br>            <br>References depends on CausingTransType<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>RequirementDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The requirement date of the row.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>PreviousOrderedQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The previous ordered quantity of the row.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>PreviousDeliveryDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The previous delivery date of the row.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>SubPartParentRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's sub part parent row.<br>            <br>References <a class="xref" href="Monitor.API.Purchase.PurchaseOrderRow.html">PurchaseOrderRows</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>QuantityRatio</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The quantity ratio of the row.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>ParentOrderId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the row's purchase order.<br>            <br>References <a class="xref" href="Monitor.API.Purchase.PurchaseOrder.html">PurchaseOrders</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>RowIndex</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The row index of the row.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>SumRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's sum row.<br>            <br>References <a class="xref" href="Monitor.API.Purchase.PurchaseOrderRow.html">PurchaseOrderRows</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>PriceOrigin</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The row index of the row.<br><br><ul><li>Undefined: 0</li><li>UserDefined: 1</li><li>PriceList: 2</li><li>PriceListStaggered: 3</li><li>BusinessPartLink: 4</li><li>BusinessPartLinkStaggered: 5</li><li>StandardPrice: 6</li><li>PartConfiguration: 7</li><li>PostCalculatedAverage: 8</li><li>BusinessPartLinkFuturePrice: 9</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>DiscountIsLockedFromAutomaticChanges</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the row's discount is locked from automatic changes.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>IntrastatTransactionTypeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's intrastat transaction type.<br>            <br>References <a class="xref" href="Monitor.API.Common.TransactionTypeIntrastat.html">TransactionTypeIntrastats</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>IntrastatTransactionType</td>
+<td><a class="xref" href="Monitor.API.Common.TransactionTypeIntrastat.html">TransactionTypeIntrastats</a></td>
+<td>The intrastat transaction type of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>TariffAndServiceCodeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's tariff and service code.<br>            <br>References <see cref="P:Monitor.API.Purchase.PurchaseOrderRow.TariffAndServiceCode"></see><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>TariffAndServiceCode</td>
+<td><a class="xref" href="Monitor.API.Common.TariffAndServiceCode.html">TariffAndServiceCodes</a></td>
+<td>The tariff and service code of the row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>PartConfigurationId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's part configuration.<br><br>References PartConfiguration<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>RowsGoodsLabel</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The goods label of the purchase order row.<br><br><ul><li>Max length is 80</li></ul></td>
+<td>Introduced in version 2.46</td>
+</tr>
+<tr>
+<td>OrderQuantityId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of order quantity.<br><br><ul><li>References <a class="xref" href="Monitor.API.Purchase.OrderQuantityPurchaseOrder.html">OrderQuantityPurchaseOrders</a></li></ul></td>
+<td>Introduced in version 22.6</td>
+</tr>
+<tr>
+<td>OrderQuantity</td>
+<td><a class="xref" href="Monitor.API.Purchase.OrderQuantityPurchaseOrder.html">OrderQuantityPurchaseOrders</a></td>
+<td>Order quantity that holds the partial quantities.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 22.6</td>
+</tr>
+<tr>
+<td>SupplierDrawingNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The supplier drawing number of the purchase order row.<br></td>
+<td>Introduced in version 24.6</td>
+</tr>
+<tr>
+<td>SupplierRevisionNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The supplier revision number of the purchase order row.<br></td>
+<td>Introduced in version 24.6</td>
+</tr>
+<tr>
+<td>RowNotes</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The note of the purchase order row.<br><br><ul><li>Max length is 100</li></ul></td>
+<td>Introduced in version 24.9</td>
+</tr>
+<tr>
+<td>BlanketOrderPurchaseRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row's blanket order purchase row.<br><br><ul><li>References <a class="xref" href="Monitor.API.Purchase.BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a></li></ul></td>
+<td>Introduced in version 26.2</td>
+</tr>
+<tr>
+<td>SupplierOrderNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The supplier order number of the purchase order row.<br></td>
+<td>Introduced in version 26.2</td>
+</tr>
+<tr>
+<td>SupplierOrderRowPosition</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The supplier order row position of the purchase order row.<br></td>
+<td>Introduced in version 26.2</td>
+</tr>
+<tr>
+<td>SupplierPartNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The supplier's part number of the purchase order row.<br><br><ul><li>Max length is 50</li></ul></td>
+<td>Introduced in version 26.4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;Position&quot;: null,
+  &quot;OrderRowType&quot;: 0,
+  &quot;PartId&quot;: null,
+  &quot;Part&quot;: null,
+  &quot;EntityIdentityString&quot;: null,
+  &quot;AdditionalRowDescription&quot;: null,
+  &quot;FreeTextHtml&quot;: null,
+  &quot;FreeText&quot;: null,
+  &quot;ParentRowId&quot;: null,
+  &quot;DeliveryDate&quot;: null,
+  &quot;RevisionId&quot;: null,
+  &quot;Revision&quot;: null,
+  &quot;OrderedQuantity&quot;: 0.0,
+  &quot;Price&quot;: null,
+  &quot;PriceCurrencyId&quot;: null,
+  &quot;PriceCurrency&quot;: null,
+  &quot;Discount&quot;: 0.0,
+  &quot;ToolId&quot;: null,
+  &quot;UnitId&quot;: null,
+  &quot;Unit&quot;: null,
+  &quot;VatRateId&quot;: 0,
+  &quot;VatRate&quot;: null,
+  &quot;WarehouseId&quot;: 0,
+  &quot;Warehouse&quot;: null,
+  &quot;WeightPerUnit&quot;: null,
+  &quot;OrderDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;ConversionFactor&quot;: 0.0,
+  &quot;PriceInCompanyCurrency&quot;: null,
+  &quot;PriceInCompanyCurrencyCurrencyId&quot;: null,
+  &quot;SetupPriceInCompanyCurrency&quot;: null,
+  &quot;SetupPriceInCompanyCurrencyCurrencyId&quot;: null,
+  &quot;StandardPrice&quot;: null,
+  &quot;StandardPriceCurrencyId&quot;: null,
+  &quot;StandardPriceCurrency&quot;: null,
+  &quot;SetupPrice&quot;: null,
+  &quot;SetupPriceCurrencyId&quot;: null,
+  &quot;SetupPriceCurrency&quot;: null,
+  &quot;ShowPrice&quot;: false,
+  &quot;PartRowType&quot;: 0,
+  &quot;LifeCycleState&quot;: 0,
+  &quot;PartStatus&quot;: null,
+  &quot;OrderedQuantityInOrderUnit&quot;: 0.0,
+  &quot;RestQuantity&quot;: 0.0,
+  &quot;DeliveredQuantity&quot;: 0.0,
+  &quot;InitialDeliveryDate&quot;: null,
+  &quot;DesiredDeliveryDate&quot;: null,
+  &quot;RestQuantityInOrderUnit&quot;: 0.0,
+  &quot;DeliveredQuantityInOrderUnit&quot;: 0.0,
+  &quot;CreationContext&quot;: 0,
+  &quot;ShowFreeTextIn&quot;: 0,
+  &quot;StatisticalGoodsCodeId&quot;: null,
+  &quot;StatisticalGoodsCode&quot;: null,
+  &quot;RowStatus&quot;: 0,
+  &quot;Version&quot;: 0,
+  &quot;ArrivalReporting&quot;: false,
+  &quot;ConfirmedDelayed&quot;: false,
+  &quot;DelayCommentId&quot;: null,
+  &quot;DelayComment&quot;: null,
+  &quot;DelayReasonId&quot;: null,
+  &quot;DelayReason&quot;: null,
+  &quot;CodingId&quot;: null,
+  &quot;Coding&quot;: null,
+  &quot;IsConfirmed&quot;: false,
+  &quot;ReceivingInspectionInstructionId&quot;: null,
+  &quot;ReceivingInspectionInstruction&quot;: null,
+  &quot;ReceivingInspectionType&quot;: 0,
+  &quot;ReceivingMessageId&quot;: null,
+  &quot;ReceivingMessage&quot;: null,
+  &quot;RequiredForManufacturingOrderNode&quot;: null,
+  &quot;Weight&quot;: 0.0,
+  &quot;LinkedStockOrderRowId&quot;: null,
+  &quot;LinkedSubcontractingManufacturingOrderOperation&quot;: null,
+  &quot;OriginatingPurchaseOrderDeliveryRowId&quot;: null,
+  &quot;CausingTransType&quot;: 0,
+  &quot;CausingOrderRowId&quot;: null,
+  &quot;RequirementDate&quot;: null,
+  &quot;PreviousOrderedQuantity&quot;: null,
+  &quot;PreviousDeliveryDate&quot;: null,
+  &quot;SubPartParentRowId&quot;: null,
+  &quot;QuantityRatio&quot;: null,
+  &quot;ParentOrderId&quot;: 0,
+  &quot;RowIndex&quot;: 0,
+  &quot;SumRowId&quot;: null,
+  &quot;PriceOrigin&quot;: 0,
+  &quot;DiscountIsLockedFromAutomaticChanges&quot;: false,
+  &quot;IntrastatTransactionTypeId&quot;: null,
+  &quot;IntrastatTransactionType&quot;: null,
+  &quot;TariffAndServiceCodeId&quot;: null,
+  &quot;TariffAndServiceCode&quot;: null,
+  &quot;PartConfigurationId&quot;: null,
+  &quot;RowsGoodsLabel&quot;: null,
+  &quot;OrderQuantityId&quot;: null,
+  &quot;OrderQuantity&quot;: null,
+  &quot;SupplierDrawingNumber&quot;: null,
+  &quot;SupplierRevisionNumber&quot;: null,
+  &quot;RowNotes&quot;: null,
+  &quot;BlanketOrderPurchaseRowId&quot;: null,
+  &quot;SupplierOrderNumber&quot;: null,
+  &quot;SupplierOrderRowPosition&quot;: null,
+  &quot;SupplierPartNumber&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

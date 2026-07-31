@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AttendanceGroupSettings | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="AttendanceGroupSettings | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.TimeRecording.AttendanceGroupSettings">
+<h1 id="attendancegroupsettings">AttendanceGroupSettings</h1>
+
+<p><em>Queryable, Introduced in version 22.1</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/TimeRecording/AttendanceGroupSettings
+</code></pre>
+<p>Represents an attendance group setting.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">22F83797-8309-4B93-B483-B0B63FF38D9F
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show basic data for attendance
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the attendance group setting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AllowAttendanceRecordingAdditionsInRecordingTerminal</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if attendance recording additions is allowed in the recording terminal.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AllowAttendanceRecordingAdjustmentsInRecordingTerminal</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if attendance recording adjustments are allowed in the recording terminal.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AllowShorterWorkingHours</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if shorter working hours are allowed.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>GenerateShorterWorkingHoursForHoliday</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if shorter working hours for holidays should be generated.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The translated description of the attendance group setting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AbsenceCheck</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if absences should be checked.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>NonRegulatedWorkinghours</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if non regulated working hours are allowed.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AddRoundOffOvertimeToTimeBank</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The round off for overtime to the time bank.<br><br><ul><li>No: 1</li><li>AllTime: 2</li><li>TimeWithinFlexZone: 3</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Name</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The name of the attendance group setting.<br><br><ul><li>Max length is 8</li><li>Not nullable</li><li>Unique</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>AllowOvertime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if overtime is allowed.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AllowAbsenceRecordingInNegativeFlexZones</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if absence recording is allowed within negative flex zones.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AutomaticOvertimeQuestionOutsideSchedule</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if there should be a dialog for overtime outside of the schedule.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculationBase</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The calculation base type for shorter working hours.<br><br><ul><li>Day: 1</li><li>Hour: 2</li><li>AccordingToSchedule: 3</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculationFactor</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The calculation factor.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculateOvertime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Indicates how overtime is calculated.<br><br><ul><li>AllRecordedOvertime: 0</li><li>AfterFulfilledDailyHours: 1</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>FlexTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if flex time is allowed.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SalaryTypeForPositiveFlex</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The salary type for positive flex.<br><br><ul><li>References <a class="xref" href="Monitor.API.TimeRecording.SalaryType.html">SalaryTypes</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SalaryTypeForNegativeFlex</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The salary type for negative flex.<br><br><ul><li>References <a class="xref" href="Monitor.API.TimeRecording.SalaryType.html">SalaryTypes</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculateFlextime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Indicates how flex is calculated.<br><br><ul><li>AllRecordedFlex: 0</li><li>AfterFulfilledDailyHours: 1</li></ul></td>
+<td>Introduced in version 24.8</td>
+</tr>
+<tr>
+<td>SalaryTypeForScheduleLessRecording</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The salary type for schedule less recordings.<br><br><ul><li>References <a class="xref" href="Monitor.API.TimeRecording.SalaryType.html">SalaryTypes</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>MinTimePerDay</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The minimum time the employee has to work for shorter working hours to apply when using per day calculation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>NegativeFlexIncludedInDailyHours</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if negative flex should be included in daily hours.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>NumberOfDaysBackInTimeThatCanBeAdjusted</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Determains how many days are adjustable back in time.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>NumberOfDaysBackInTimeThatCanBeEdited</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Determains how many days are editable back in time.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OvertimeInFlexZone</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if overtime is allowed within flex zone.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OvertimeLimitAfter</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The overtime limit after the end of the schedule.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OvertimeLimitBefore</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The overtime limit before the start of the schedule.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PlanAbsenceViaRecordingTerminal</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if planned absence is allowed from the recording terminal.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RoundOffOvertime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if round off overtime should be used.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RoundOffOvertimeTimebankId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The timebank to use for round off overtime.<br><br><ul><li>References <a class="xref" href="Monitor.API.TimeRecording.TimeBank.html">TimeBanks</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RoundOffTo</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The time to round off overtime to.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SalaryTypeAccordingToOvertime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if salary type should be calculated from the start of the overtime schedule, not from where it was recorded.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ShorterWorkingHoursTimeBankId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The time bank to use for shorter working hours.<br><br><ul><li>References <a class="xref" href="Monitor.API.TimeRecording.TimeBank.html">TimeBanks</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>TimeAfterScheduleEnd</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>Threshold for automatic overtime question after schedule end in recording terminal.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>TimeBeforeScheduleStart</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>Threshold for automatic overtime question before schedule start in recording terminal.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnavailableAbsenceCodes</td>
+<td><a class="xref" href="Monitor.API.TimeRecording.AbsenceCode.html">AbsenceCodes</a>[]</td>
+<td>Unavailable absence codes for the attendance group setting.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 22.3</td>
+</tr>
+<tr>
+<td>OvertimeTypes</td>
+<td><a class="xref" href="Monitor.API.TimeRecording.OvertimeType.html">OvertimeTypes</a>[]</td>
+<td>The overtime types for the attendance group setting.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 23.4</td>
+</tr>
+<tr>
+<td>IndirectWorkCodeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the indirect work.<br><br><ul><li>References <a class="xref" href="Monitor.API.TimeRecording.IndirectWorkCode.html">IndirectWorkCodes</a></li></ul></td>
+<td>Introduced in version 23.4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;AllowAttendanceRecordingAdditionsInRecordingTerminal&quot;: false,
+  &quot;AllowAttendanceRecordingAdjustmentsInRecordingTerminal&quot;: false,
+  &quot;AllowShorterWorkingHours&quot;: false,
+  &quot;GenerateShorterWorkingHoursForHoliday&quot;: false,
+  &quot;Description&quot;: null,
+  &quot;AbsenceCheck&quot;: false,
+  &quot;NonRegulatedWorkinghours&quot;: false,
+  &quot;AddRoundOffOvertimeToTimeBank&quot;: 0,
+  &quot;Name&quot;: null,
+  &quot;AllowOvertime&quot;: false,
+  &quot;AllowAbsenceRecordingInNegativeFlexZones&quot;: false,
+  &quot;AutomaticOvertimeQuestionOutsideSchedule&quot;: false,
+  &quot;CalculationBase&quot;: 0,
+  &quot;CalculationFactor&quot;: &quot;00:00:00&quot;,
+  &quot;CalculateOvertime&quot;: 0,
+  &quot;FlexTime&quot;: false,
+  &quot;SalaryTypeForPositiveFlex&quot;: null,
+  &quot;SalaryTypeForNegativeFlex&quot;: null,
+  &quot;CalculateFlextime&quot;: 0,
+  &quot;SalaryTypeForScheduleLessRecording&quot;: null,
+  &quot;MinTimePerDay&quot;: &quot;00:00:00&quot;,
+  &quot;NegativeFlexIncludedInDailyHours&quot;: false,
+  &quot;NumberOfDaysBackInTimeThatCanBeAdjusted&quot;: 0,
+  &quot;NumberOfDaysBackInTimeThatCanBeEdited&quot;: 0,
+  &quot;OvertimeInFlexZone&quot;: false,
+  &quot;OvertimeLimitAfter&quot;: &quot;00:00:00&quot;,
+  &quot;OvertimeLimitBefore&quot;: &quot;00:00:00&quot;,
+  &quot;PlanAbsenceViaRecordingTerminal&quot;: false,
+  &quot;RoundOffOvertime&quot;: false,
+  &quot;RoundOffOvertimeTimebankId&quot;: null,
+  &quot;RoundOffTo&quot;: &quot;00:00:00&quot;,
+  &quot;SalaryTypeAccordingToOvertime&quot;: false,
+  &quot;ShorterWorkingHoursTimeBankId&quot;: null,
+  &quot;TimeAfterScheduleEnd&quot;: &quot;00:00:00&quot;,
+  &quot;TimeBeforeScheduleStart&quot;: &quot;00:00:00&quot;,
+  &quot;UnavailableAbsenceCodes&quot;: null,
+  &quot;OvertimeTypes&quot;: null,
+  &quot;IndirectWorkCodeId&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

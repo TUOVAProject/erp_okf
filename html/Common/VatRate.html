@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>VatRates | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="VatRates | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Common.VatRate">
+<h1 id="vatrates">VatRates</h1>
+
+<p><em>Queryable, Introduced in version 2.18</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Common/VatRates
+</code></pre>
+<p>Represents a VAT rate.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">5286db96-c5f6-4394-ba8c-1d67c406b68b
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show VAT settings
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the VAT rate.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Number</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The VAT rate number.<br><br><ul><li>Unique</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Percentage</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The VAT percentage of the rate.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The translated description of the rate.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReversedTax</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if reverse tax responsibility is applicable for the rate.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OutputVatAccountId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the output account for the rate.<br><br><ul><li>References <a class="xref" href="Monitor.API.Accounting.Account.html">Accounts</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InputVatAccountId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the input account for the rate.<br><br><ul><li>References <a class="xref" href="Monitor.API.Accounting.Account.html">Accounts</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Active</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the rate is active.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReversedTaxPercentage</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Specifies the reverse VAT percentage of the rate.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReferenceTextId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the rate reference text.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a>.<br><br><ul><li>Obsolete since version 24.5 (Replaced by Reference.)</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ReferenceText</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The rate reference text.<br><br><ul><li>Expandable</li><li>Obsolete since version 24.5 (Replaced by Reference.)</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Reference</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The translated reference text of the rate.<br></td>
+<td>Introduced in version 24.5</td>
+</tr>
+<tr>
+<td>EcSalesType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>Specifies the European Commission sales type of the VAT rate.<br><br><ul><li>Goods trade: 1</li><li>Services: 2</li><li>Third party trade: 3</li></ul><br><br><ul><li>GoodsTrade: 1</li><li>Services: 2</li><li>ThirdPartyTrade: 3</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CodeType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies the VAT code type of the VAT rate.<br><br><ul><li>None: 0</li><li>Sales: 1</li><li>Purchase: 2</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td>Introduced in version 24.5</td>
+</tr>
+<tr>
+<td>DatevVatCode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The VAT code used in DATEV exports.<br></td>
+<td>Introduced in version 25.6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;Number&quot;: 0,
+  &quot;Percentage&quot;: 0.0,
+  &quot;Description&quot;: null,
+  &quot;ReversedTax&quot;: false,
+  &quot;OutputVatAccountId&quot;: null,
+  &quot;InputVatAccountId&quot;: null,
+  &quot;Active&quot;: false,
+  &quot;ReversedTaxPercentage&quot;: 0.0,
+  &quot;ReferenceTextId&quot;: null,
+  &quot;ReferenceText&quot;: null,
+  &quot;Reference&quot;: null,
+  &quot;EcSalesType&quot;: null,
+  &quot;CodeType&quot;: 0,
+  &quot;DatevVatCode&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

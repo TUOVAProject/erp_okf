@@ -1,0 +1,579 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ProductRecords | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ProductRecords | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Inventory.ProductRecord">
+<h1 id="productrecords">ProductRecords</h1>
+
+<p><em>Queryable, Introduced in version 2.18</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Inventory/ProductRecords
+</code></pre>
+<p>Represents a product record.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">3e3bfb7c-bb0c-495b-b88d-e1efa1f50368
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show serial number
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the product record.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ProductRecordType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The type of the product record.<br><br><ul><li>ProductRecord: 0</li><li>Batch: 1</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SerialNumberWithPartNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The batch or serial number along with the part number of the product record.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the product record's comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The product record comment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CertificateId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the product record's certificate.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td>Introduced in version 2.24</td>
+</tr>
+<tr>
+<td>Certificate</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The certificate of the product record.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.24</td>
+</tr>
+<tr>
+<td>WarrantyCommitmentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the product record's warranty commitment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td>Introduced in version 2.24</td>
+</tr>
+<tr>
+<td>WarrantyCommitment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The warranty commitment of the product record.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.24</td>
+</tr>
+<tr>
+<td>InstallationCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the product record's installation comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td>Introduced in version 2.24</td>
+</tr>
+<tr>
+<td>InstallationComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The installation comment of the product record.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.24</td>
+</tr>
+<tr>
+<td>SerialNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The batch or serial number of the product record.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ChargeNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The charge number of the product record.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the part that the product record belongs to.<br><br>References <a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Part</td>
+<td><a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a></td>
+<td>The part that the product record belongs to.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ManufacturingOrderId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the manufacturing order that the product record is linked to.<br><br>References <a class="xref" href="Monitor.API.Manufacturing.ManufacturingOrder.html">ManufacturingOrders</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ManufacturingOrder</td>
+<td><a class="xref" href="Monitor.API.Manufacturing.ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td>The manufacturing order that the product record is linked to.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ExtraFields</td>
+<td><a class="xref" href="Monitor.API.Common.ExtraField.html">ExtraFields</a>[]</td>
+<td>A collection of extra field values for the product record.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>HasWarranty</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the product is covered by warranty.<br></td>
+<td>Introduced in version 2.36</td>
+</tr>
+<tr>
+<td>WarrantyStartDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date when the warranty started.<br></td>
+<td>Introduced in version 2.36</td>
+</tr>
+<tr>
+<td>WarrantyEndDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date when the warranty expires.<br></td>
+<td>Introduced in version 2.36</td>
+</tr>
+<tr>
+<td>WarrantyMonths</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The length of the warranty period in months.<br></td>
+<td>Introduced in version 2.36</td>
+</tr>
+<tr>
+<td>OwnerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the product record owner.<br><br>References <a class="xref" href="Monitor.API.Sales.Customer.html">Customers</a><br></td>
+<td>Introduced in version 2.40</td>
+</tr>
+<tr>
+<td>CustomerOrderId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer order of the product record.<br><br>References <see cref="P:Monitor.API.Inventory.ProductRecord.CustomerOrder"></see><br></td>
+<td>Introduced in version 2.40</td>
+</tr>
+<tr>
+<td>CustomerOrder</td>
+<td><a class="xref" href="Monitor.API.Sales.CustomerOrder.html">CustomerOrders</a></td>
+<td>The customer order of the product record.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.40</td>
+</tr>
+<tr>
+<td>CustomerOrderDeliveryRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer order delivery row of the product record.<br><br>References <a class="xref" href="Monitor.API.Sales.CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a><br></td>
+<td>Introduced in version 2.40</td>
+</tr>
+<tr>
+<td>CustomerOrderDeliveryRow</td>
+<td><a class="xref" href="Monitor.API.Sales.CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a></td>
+<td>The customer order of the product record.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.40</td>
+</tr>
+<tr>
+<td>DeliveryAddressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the delivery address of the product record.<br><br>References <a class="xref" href="Monitor.API.Common.DeliveryAddress.html">DeliveryAddresses</a><br></td>
+<td>Introduced in version 2.40</td>
+</tr>
+<tr>
+<td>DeliveryAddress</td>
+<td><a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></td>
+<td>The delivery address of the product record.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.40</td>
+</tr>
+<tr>
+<td>BlockMessageId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the message for the life cycle state of the product record.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td>Introduced in version 2.45</td>
+</tr>
+<tr>
+<td>BlockMessage</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The message for the life cycle state of the product record.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.45</td>
+</tr>
+<tr>
+<td>BlockedById</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The identifier of the application user that has set the product record to blocked or message.<br>            <br>References <a class="xref" href="Monitor.API.Common.ApplicationUser.html">ApplicationUsers</a><br></td>
+<td>Introduced in version 2.45</td>
+</tr>
+<tr>
+<td>LifeCycleState</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The life cycle state of the product record.<br><br><ul><li>ApprovalForUse: 0</li><li>NonApproval: 1</li><li>ServicePastDue: 2</li><li>UnderServiceOrCalibration: 3</li><li>Rejected: 4</li><li>ServiceOrCalibrationBeforeUse: 5</li><li>Missing: 6</li><li>Scrapped: 7</li></ul></td>
+<td>Introduced in version 2.45</td>
+</tr>
+<tr>
+<td>BlockContext</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The block context which the product records life cycle state is used for.<br><br><ul><li>None: 0</li><li>ManufacturingOrderWithdrawal: 1</li><li>ManufacturingOrderClearance: 2</li><li>CustomerOrderDelivery: 4</li><li>CustomerOrderClearance: 8</li><li>RequirementCalculation: 16</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td>Introduced in version 2.45</td>
+</tr>
+<tr>
+<td>BlockedFromDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date from which the product record has been blocked.<br></td>
+<td>Introduced in version 2.45</td>
+</tr>
+<tr>
+<td>BlockedToDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date from which the product record has been unblocked.<br></td>
+<td>Introduced in version 2.45</td>
+</tr>
+<tr>
+<td>MeasurementSetting</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The measurement setting for a product record.<br></td>
+<td>Introduced in version 2.49</td>
+</tr>
+<tr>
+<td>OperationTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>The operation time for a product record.<br></td>
+<td>Introduced in version 2.49</td>
+</tr>
+<tr>
+<td>NumberOfCycles</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The number of cycles for a product record.<br></td>
+<td>Introduced in version 2.49</td>
+</tr>
+<tr>
+<td>OperationReportings</td>
+<td><a class="xref" href="Monitor.API.Inventory.ProductRecordOperationReporting.html">ProductRecordOperationReportings</a>[]</td>
+<td>The list of product record operation reporting logs.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.49</td>
+</tr>
+<tr>
+<td>CustomerOrderOurReferenceId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer order our reference person of the product record.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a></li></ul></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>BusinessContactReferenceId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer's reference of the product record.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.BusinessContactReference.html">BusinessContactReferences</a></li></ul></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>CustomerOrderPartRevisionId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the revision for the part of the product record.<br>Has been replaced by the more general PartRevisionId<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Revision.html">Revisions</a></li><li>Obsolete since version 24.1 (Replaced by PartRevisionId)</li></ul></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>PartRevisionId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the revision for the part of the product record.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Revision.html">Revisions</a></li></ul></td>
+<td>Introduced in version 24.1</td>
+</tr>
+<tr>
+<td>PlannedDeliveryDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The planned delivery date for the customer order of the product record.<br></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>ActualDeliveryDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The actual delivery date for the customer order of the product record.<br></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>MeasurementSettingWarranty</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The meter reading for warranty of the product record.<br></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>OperationTimeWarranty</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>The operation time for warranty of the product record.<br></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>NumberOfCyclesWarranty</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The number of cycles for warranty of the product record.<br></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>PurchaseOrderId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the purchase order of the product record.<br><br><ul><li>References <a class="xref" href="Monitor.API.Purchase.PurchaseOrder.html">PurchaseOrders</a></li></ul></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>ActualArrivalDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The actual delivery date for the purchase order of the product record.<br></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>ManufactureDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The finish date for the manufacturing order of the product record.<br></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>InstallationOrderId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer order which the installation is linked to.<br><br><ul><li>References <a class="xref" href="Monitor.API.Sales.CustomerOrder.html">CustomerOrders</a></li></ul></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>InstalledBy</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the person that is linked to the installation of the product record.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a></li></ul></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>InstallationDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date when the installation of the product record will take place.<br></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>InstallationCode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The code that is applying to the installation of the product record.<br></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>WarrantyCode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The code that is applying to the installation of the product record.<br></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>RegistrationNo</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The registration number for the manufacturing order of the product record.<br></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>TypeDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The type description for the customer order of the product record.<br></td>
+<td>Introduced in version 2.51</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The status of the product record.<br><br><ul><li>NotInitialized: 0</li><li>Registrered: 1</li><li>Manufacturing: 2</li><li>ManufacturingPending: 3</li><li>Inventory: 4</li><li>Blocked: 5</li><li>Packed: 6</li><li>PackedAndMarked: 7</li><li>Historical: 9</li></ul></td>
+<td>Introduced in version 22.6</td>
+</tr>
+<tr>
+<td>BestBeforeDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The best before date of the product record.<br></td>
+<td>Introduced in version 22.7</td>
+</tr>
+<tr>
+<td>ProductRecordBatchId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the batch number.<br></td>
+<td>Introduced in version 23.3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;ProductRecordType&quot;: 0,
+  &quot;SerialNumberWithPartNumber&quot;: null,
+  &quot;CommentId&quot;: null,
+  &quot;Comment&quot;: null,
+  &quot;CertificateId&quot;: null,
+  &quot;Certificate&quot;: null,
+  &quot;WarrantyCommitmentId&quot;: null,
+  &quot;WarrantyCommitment&quot;: null,
+  &quot;InstallationCommentId&quot;: null,
+  &quot;InstallationComment&quot;: null,
+  &quot;SerialNumber&quot;: null,
+  &quot;ChargeNumber&quot;: null,
+  &quot;PartId&quot;: 0,
+  &quot;Part&quot;: null,
+  &quot;ManufacturingOrderId&quot;: null,
+  &quot;ManufacturingOrder&quot;: null,
+  &quot;ExtraFields&quot;: null,
+  &quot;HasWarranty&quot;: false,
+  &quot;WarrantyStartDate&quot;: null,
+  &quot;WarrantyEndDate&quot;: null,
+  &quot;WarrantyMonths&quot;: 0,
+  &quot;OwnerId&quot;: null,
+  &quot;CustomerOrderId&quot;: null,
+  &quot;CustomerOrder&quot;: null,
+  &quot;CustomerOrderDeliveryRowId&quot;: null,
+  &quot;CustomerOrderDeliveryRow&quot;: null,
+  &quot;DeliveryAddressId&quot;: null,
+  &quot;DeliveryAddress&quot;: null,
+  &quot;BlockMessageId&quot;: null,
+  &quot;BlockMessage&quot;: null,
+  &quot;BlockedById&quot;: null,
+  &quot;LifeCycleState&quot;: 0,
+  &quot;BlockContext&quot;: 0,
+  &quot;BlockedFromDate&quot;: null,
+  &quot;BlockedToDate&quot;: null,
+  &quot;MeasurementSetting&quot;: null,
+  &quot;OperationTime&quot;: null,
+  &quot;NumberOfCycles&quot;: null,
+  &quot;OperationReportings&quot;: null,
+  &quot;CustomerOrderOurReferenceId&quot;: null,
+  &quot;BusinessContactReferenceId&quot;: null,
+  &quot;CustomerOrderPartRevisionId&quot;: null,
+  &quot;PartRevisionId&quot;: null,
+  &quot;PlannedDeliveryDate&quot;: null,
+  &quot;ActualDeliveryDate&quot;: null,
+  &quot;MeasurementSettingWarranty&quot;: null,
+  &quot;OperationTimeWarranty&quot;: null,
+  &quot;NumberOfCyclesWarranty&quot;: null,
+  &quot;PurchaseOrderId&quot;: null,
+  &quot;ActualArrivalDate&quot;: null,
+  &quot;ManufactureDate&quot;: null,
+  &quot;InstallationOrderId&quot;: null,
+  &quot;InstalledBy&quot;: null,
+  &quot;InstallationDate&quot;: null,
+  &quot;InstallationCode&quot;: null,
+  &quot;WarrantyCode&quot;: null,
+  &quot;RegistrationNo&quot;: null,
+  &quot;TypeDescription&quot;: null,
+  &quot;Status&quot;: 0,
+  &quot;BestBeforeDate&quot;: null,
+  &quot;ProductRecordBatchId&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

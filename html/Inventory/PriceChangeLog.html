@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PriceChangeLogs | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PriceChangeLogs | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Inventory.PriceChangeLog">
+<h1 id="pricechangelogs">PriceChangeLogs</h1>
+
+<p><em>Queryable, Introduced in version 2.51</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Inventory/PriceChangeLogs
+</code></pre>
+<p>Represents a price change log entity.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">37985af3-e55c-476e-ac05-882f1b9f8f7f
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show part
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the price change log.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Context</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The context of the price change in the price change log.<br><br><ul><li>Manual: 0</li><li>PreCalculation: 1</li><li>PostCalculation: 2</li><li>ManualFromList: 3</li><li>PriceImport: 4</li><li>PurchaseCalculation: 5</li><li>PartSynchronization: 6</li><li>CancelInvoice: 7</li><li>CreditInvoice: 8</li><li>Invoice: 9</li><li>ExpenseInvoice: 10</li><li>UndoExpenseInvoice: 11</li><li>SubcontractingCostReport: 12</li><li>AutoUpdateFromFuturePrice: 13</li><li>PriceCorrectionInvoice: 14</li><li>ReportingOfReturnOrder: 15</li><li>FinalRecordingOfCorrectionInvoice: 16</li><li>FullReturnToSupplier: 17</li><li>AutomaticMovingAveragePriceCalculation: 18</li></ul><br><ul><li>Not nullable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The type of the price in the price change log.<br><br><ul><li>Standard: 0</li><li>PriceList: 3</li><li>FuturePriceList: 4</li><li>PriceFromInvoiceOrCustomerOrderRow: 5</li><li>Invoice: 6</li><li>PriceListStaggered: 7</li><li>FuturePriceListStaggered: 8</li><li>CustomerStaggered: 9</li><li>FutureCustomerStaggered: 10</li><li>SupplierStaggered: 11</li><li>FutureSupplierStaggered: 12</li><li>StandardPriceFromCustomerOrderRowWithFallbackToPartStandardPrice: 13</li><li>CustomerWithFallbackPriceListOnCustomer: 14</li><li>FutureSetupPrice: 15</li><li>StandardPriceOnDelivery: 16</li><li>StandardPriceOnInvoicing: 17</li><li>StandardPriceOnFinalBookingAccountsPayable: 18</li><li>PurchaseOrder: 19</li><li>FifoAtInvoicing: 20</li><li>LinkedConfiguredCustomOrderRow: 21</li><li>HistoricalFifoPrice: 22</li><li>ComparativePrice: 23</li><li>ProductRecordStandardPrice: 24</li><li>MovingAveragePrice: 25</li><li>MovingAveragePriceAtInvoicing: 26</li><li>FutureSupplier: -9998</li><li>FutureCustomer: -9997</li><li>None: -99</li><li>ReportedStandard: -20</li><li>MaterialCost: -19</li><li>HistoricalStandard: -18</li><li>DiscountedCustomer: -17</li><li>DiscountedSupplier: -16</li><li>PostCalculatedAverage: -15</li><li>SavedAverage: -14</li><li>Lowest: -9</li><li>FIFO: -8</li><li>AvarageSales: -7</li><li>LatestSales: -6</li><li>AveragePurchase: -5</li><li>LatestPurchase: -4</li><li>Customer: -3</li><li>Supplier: -2</li><li>FutureStandard: -1</li></ul><br><ul><li>Not nullable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceListId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the price changes log's price list.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.PriceList.html">PriceLists</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The timestamp of the price change log.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UserCode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The user code of the price change log.<br><br><ul><li>Not nullable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>NewPriceAmount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The new price amount of the price change log.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>NewPriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier for the new price currency of the price change log.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OldPriceAmount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The old price amount of the price change log.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OldPriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier for the old price currency of the price change log.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Balance</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The balance of the price change log.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The part id of the price change log.<br><br><ul><li>References <a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculationId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The calculation id of the price change log.<br><br><ul><li>References PartCalculation</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SupplierId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The supplier id of the price change log.<br><br><ul><li>References <a class="xref" href="Monitor.API.Purchase.Supplier.html">Suppliers</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CustomerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The customer id of the price change log.<br><br><ul><li>References <a class="xref" href="Monitor.API.Sales.Customer.html">Customers</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>StaggeredQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The staggered quantity of the price change log.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsSetupPrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Is the price in the price change log a setup price.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Discount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The discount of the price change log.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsExportedToManagementAccounting</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Is exported to management accounting.<br></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;Context&quot;: 0,
+  &quot;PriceType&quot;: 0,
+  &quot;PriceListId&quot;: null,
+  &quot;Timestamp&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;UserCode&quot;: null,
+  &quot;NewPriceAmount&quot;: null,
+  &quot;NewPriceCurrencyId&quot;: null,
+  &quot;OldPriceAmount&quot;: null,
+  &quot;OldPriceCurrencyId&quot;: null,
+  &quot;Balance&quot;: null,
+  &quot;PartId&quot;: 0,
+  &quot;CalculationId&quot;: null,
+  &quot;SupplierId&quot;: null,
+  &quot;CustomerId&quot;: null,
+  &quot;StaggeredQuantity&quot;: null,
+  &quot;IsSetupPrice&quot;: false,
+  &quot;Discount&quot;: null,
+  &quot;IsExportedToManagementAccounting&quot;: false
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

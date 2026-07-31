@@ -1,0 +1,432 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Vouchers | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Vouchers | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Accounting.Voucher">
+<h1 id="vouchers">Vouchers</h1>
+
+<p><em>Queryable, Introduced in version 2.30</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Accounting/Vouchers
+</code></pre>
+<p>Represents a voucher.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">7228033A-745C-43F0-9E0F-36AC9B65B761
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show voucher
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the voucher.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Version</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The version of the voucher.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SeriesId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the voucher series for the voucher.<br>            <br>References <a class="xref" href="Monitor.API.Accounting.VoucherSeries.html">VoucherSeries</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>AccountingYearId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the accounting year for the voucher.<br>            <br>References <a class="xref" href="Monitor.API.Accounting.AccountingYear.html">AccountingYears</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Number</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The voucher number.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Text</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The description of the voucher.<br><br><ul><li>Max length is 100</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>VoucherDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The date of the voucher.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ConnectedVoucherId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher connected to the voucher.<br>            <br>References <a class="xref" href="Monitor.API.Accounting.Voucher.html">Vouchers</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ConnectionType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The connection type to the connected voucher.<br><br><ul><li>None: 0</li><li>Correction: 1</li><li>Copy: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ReverseConnectionVoucherId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of rectification/copy connected to the voucher.<br>            <br>References <a class="xref" href="Monitor.API.Accounting.Voucher.html">Vouchers</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReverseConnectionType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The connection type to the reverse connected voucher.<br><br><ul><li>None: 0</li><li>Correction: 1</li><li>Copy: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>IsPreliminary</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the voucher is preliminary.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>BundleNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The bundle number of the voucher.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's comment.<br>            <br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The comment of the voucher.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Rows</td>
+<td><a class="xref" href="Monitor.API.Accounting.VoucherRow.html">VoucherRows</a>[]</td>
+<td>The rows belonging to the voucher.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>AccountsReceivableLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's accounts receivable ledger.<br>            <br>References AccountsReceivableLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelledAccountsReceivableLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's cancelled accounts receivable ledger.<br>            <br>References CancelledAccountsReceivableLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AccountsPayableLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's accounts payable ledger.<br>            <br>References AccountsPayableLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelledAccountsPayableLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's cancelled accounts payable ledger.<br>            <br>References CancelledAccountsPayableLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PreliminaryAccountsPayableLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's preliminary accounts payable ledger.<br>            <br>References PreliminaryAccountsPayableLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelledPreliminaryAccountsPayableLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's cancelled preliminary accounts payable ledger.<br>            <br>References CancelledPreliminaryAccountsPayableLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IncomingPaymentLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's incoming payment ledger.<br>            <br>References IncomingPaymentLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AccrualAccountingLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's accrual accounting ledger.<br>            <br>References AccrualAccountingLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OutgoingPaymentLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's outgoing payment ledger.<br>            <br>References OutgoingPaymentLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>FixedAssetLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's fixed asset payment ledger.<br>            <br>References FixedAssetLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnplannedStockBalanceChangeLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's unplanned stock balance change ledger.<br>            <br>References UnplannedStockBalanceChangeLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>StockTransactionLogLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's stock transaction log ledger.<br>            <br>References StockTransactionLogLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ManufacturingOrderLogLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's manufacturing order log ledger.<br>            <br>References ManufacturingOrderLogLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceLogLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's invoice log ledger.<br>            <br>References InvoiceLogLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceChangeLogLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's price change log ledger.<br>            <br>References PriceChangeLogLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculationDifferenceLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher's calculation difference ledger.<br>            <br>References CalculationDifferenceLedger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnplannedStockBalanceChangeTransactionId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier for the unplanned stock balance change transaction of the voucher.<br>            <br>References UnplannedStockBalanceChangeTransaction.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AccountsReceivableId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier for the accounts receivable linked to the voucher.<br>            <br>References AccountsReceivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AccountsPayableId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier for the accounts payable linked to the voucher.<br>            <br>References References <a class="xref" href="Monitor.API.Accounting.AccountsPayable.html">AccountsPayables</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>AccountsPayable</td>
+<td><a class="xref" href="Monitor.API.Accounting.AccountsPayable.html">AccountsPayables</a></td>
+<td>The accounts payable linked to the voucher.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>AccrualAccountingRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier for the accrual accounting row linked to the voucher.<br>            <br>References References <a class="xref" href="Monitor.API.Accounting.AccrualAccountingRow.html">AccrualAccountingRows</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>VatBookingId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier for the voucher's VAT booking.<br>            <br>References VatBooking.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CorrectionBookingId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier for the voucher's correction booking.<br>            <br>References Booking.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CNSeries</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The CN series of the voucher.<br></td>
+<td>Introduced in version 25.6</td>
+</tr>
+<tr>
+<td>CNNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The CN number of the voucher.<br></td>
+<td>Introduced in version 25.6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;Version&quot;: 0,
+  &quot;SeriesId&quot;: 0,
+  &quot;AccountingYearId&quot;: 0,
+  &quot;Number&quot;: 0,
+  &quot;Text&quot;: null,
+  &quot;VoucherDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;ConnectedVoucherId&quot;: null,
+  &quot;ConnectionType&quot;: 0,
+  &quot;ReverseConnectionVoucherId&quot;: null,
+  &quot;ReverseConnectionType&quot;: 0,
+  &quot;IsPreliminary&quot;: false,
+  &quot;BundleNumber&quot;: null,
+  &quot;CommentId&quot;: null,
+  &quot;Comment&quot;: null,
+  &quot;Rows&quot;: null,
+  &quot;AccountsReceivableLedgerId&quot;: null,
+  &quot;CancelledAccountsReceivableLedgerId&quot;: null,
+  &quot;AccountsPayableLedgerId&quot;: null,
+  &quot;CancelledAccountsPayableLedgerId&quot;: null,
+  &quot;PreliminaryAccountsPayableLedgerId&quot;: null,
+  &quot;CancelledPreliminaryAccountsPayableLedgerId&quot;: null,
+  &quot;IncomingPaymentLedgerId&quot;: null,
+  &quot;AccrualAccountingLedgerId&quot;: null,
+  &quot;OutgoingPaymentLedgerId&quot;: null,
+  &quot;FixedAssetLedgerId&quot;: null,
+  &quot;UnplannedStockBalanceChangeLedgerId&quot;: null,
+  &quot;StockTransactionLogLedgerId&quot;: null,
+  &quot;ManufacturingOrderLogLedgerId&quot;: null,
+  &quot;InvoiceLogLedgerId&quot;: null,
+  &quot;PriceChangeLogLedgerId&quot;: null,
+  &quot;CalculationDifferenceLedgerId&quot;: null,
+  &quot;UnplannedStockBalanceChangeTransactionId&quot;: null,
+  &quot;AccountsReceivableId&quot;: null,
+  &quot;AccountsPayableId&quot;: null,
+  &quot;AccountsPayable&quot;: null,
+  &quot;AccrualAccountingRowId&quot;: null,
+  &quot;VatBookingId&quot;: null,
+  &quot;CorrectionBookingId&quot;: null,
+  &quot;CNSeries&quot;: null,
+  &quot;CNNumber&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

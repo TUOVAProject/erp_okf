@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CaseEntryActivities | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CaseEntryActivities | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Inventory.CaseEntryActivity">
+<h1 id="caseentryactivities">CaseEntryActivities</h1>
+
+<p><em>Queryable, Introduced in version 2.45</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Inventory/CaseEntryActivities
+</code></pre>
+<p>Represents a case entry activity.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">EED439CC-248F-4370-B235-F9C585730CE8
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show case
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the activity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CaseEntryId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the case entry that the activity belongs to.<br><br><ul><li>References <a class="xref" href="Monitor.API.Inventory.CaseEntry.html">CaseEntry</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PlannedTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The planned time of the activity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReportedTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>The reported time of the activity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ShowOnDocuments</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the activity should be shown on documents or not.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReportingType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The reporting type specified for the activity.<br><br><ul><li>Manual: 0</li><li>Automatic: 1</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Mandatory</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies whether or not the activity is mandatory.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CostPerHour</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The cost per hour of the activity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CostPerHourCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the currency that the cost per hour is specified in.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Chargeable</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies whether or not the activity is chargeable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ActivityTypeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the case management activity that the activity is based on.<br><br><ul><li>References <a class="xref" href="Monitor.API.Inventory.CaseManagementActivity.html">CaseManagementActivities</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CalendarAppointmentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The calendar appointment id of the activity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CompletedByUserId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the user that completed the activity.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.ApplicationUser.html">ApplicationUsers</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ResponsibleUserId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the user that is responsible for the activity.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.ApplicationUser.html">ApplicationUsers</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The description of the activity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the activity's comment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The activity's comment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Status</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The status of the activity.<br><br><ul><li>Registered: 1</li><li>InProgress: 2</li><li>History: 9</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ReminderId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the reminder that is linked with the activity.<br><br><ul><li>References Reminder</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PlannedCompletionDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The planned completion date of the activity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CompletionDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The completion date of the activity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PlannedStartDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The planned start date of the activity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ActualStartDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The actual start date of the activity.<br></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;CaseEntryId&quot;: 0,
+  &quot;PlannedTime&quot;: &quot;00:00:00&quot;,
+  &quot;ReportedTime&quot;: null,
+  &quot;ShowOnDocuments&quot;: false,
+  &quot;ReportingType&quot;: 0,
+  &quot;Mandatory&quot;: false,
+  &quot;CostPerHour&quot;: null,
+  &quot;CostPerHourCurrencyId&quot;: null,
+  &quot;Chargeable&quot;: false,
+  &quot;ActivityTypeId&quot;: 0,
+  &quot;CalendarAppointmentId&quot;: null,
+  &quot;CompletedByUserId&quot;: null,
+  &quot;ResponsibleUserId&quot;: 0,
+  &quot;Description&quot;: null,
+  &quot;CommentId&quot;: null,
+  &quot;Comment&quot;: null,
+  &quot;Status&quot;: 0,
+  &quot;ReminderId&quot;: null,
+  &quot;PlannedCompletionDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;CompletionDate&quot;: null,
+  &quot;PlannedStartDate&quot;: null,
+  &quot;ActualStartDate&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

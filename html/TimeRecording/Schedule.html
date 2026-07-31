@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Schedules | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Schedules | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.TimeRecording.Schedule">
+<h1 id="schedules">Schedules</h1>
+
+<p><em>Queryable, Introduced in version 22.2</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/TimeRecording/Schedules
+</code></pre>
+<p>Represents a schedule used for time recording.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">7A50172F-FE1F-40F7-9BDA-6C8566C34991
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show basic data for attendance
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the schedule.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Code</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The human readable identifier of the schedule.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The translated description of the schedule.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ScheduleLength</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The length of the schedule.<br></td>
+<td>Introduced in version 23.1</td>
+</tr>
+<tr>
+<td>Start</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>Information about the start of the schedule.<br></td>
+<td>Introduced in version 23.1</td>
+</tr>
+<tr>
+<td>End</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>Information about the end of the schedule.<br></td>
+<td>Introduced in version 23.1</td>
+</tr>
+<tr>
+<td>OvertimeScheduleId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the Overtime schedule.<br><br><ul><li>References <a class="xref" href="Monitor.API.TimeRecording.Schedule.html">Schedules</a></li></ul></td>
+<td>Introduced in version 23.1</td>
+</tr>
+<tr>
+<td>FlexInStart</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The flex in start of the schedule.<br></td>
+<td>Introduced in version 23.1</td>
+</tr>
+<tr>
+<td>FlexInEnd</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The flex in end of the schedule.<br></td>
+<td>Introduced in version 23.1</td>
+</tr>
+<tr>
+<td>FlexOutStart</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The flex out start of the schedule.<br></td>
+<td>Introduced in version 23.1</td>
+</tr>
+<tr>
+<td>FlexOutEnd</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The flex out end of the schedule.<br></td>
+<td>Introduced in version 23.1</td>
+</tr>
+<tr>
+<td>IsNightSchedule</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>The boolean value for the night schedule.<br></td>
+<td>Introduced in version 23.1</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>A type of schedule.<br><br><ul><li>NotInitialized: 0</li><li>Ordinary: 1</li><li>Overtime: 2</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td>Introduced in version 23.1</td>
+</tr>
+<tr>
+<td>AmountSwh</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The amount of shorter work hours (SWH)<br></td>
+<td>Introduced in version 24.4</td>
+</tr>
+<tr>
+<td>ScheduleNumberForExport</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The schedule number for export<br></td>
+<td>Introduced in version 24.4</td>
+</tr>
+<tr>
+<td>BlockedContextType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The context type of block<br><br><ul><li>None: 0</li><li>RegisterScheduleCycle: 1</li><li>CreateRecording: 2</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td>Introduced in version 24.4</td>
+</tr>
+<tr>
+<td>BlockedById</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the application user that blocked the entity.<br></td>
+<td>Introduced in version 24.4</td>
+</tr>
+<tr>
+<td>BlockedFromDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date when the entity starts being blocked.<br></td>
+<td>Introduced in version 24.4</td>
+</tr>
+<tr>
+<td>BlockedToDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date when the entity stops being blocked.<br></td>
+<td>Introduced in version 24.4</td>
+</tr>
+<tr>
+<td>BlockedStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The block status of the entity.<br><br><ul><li>None: 0</li><li>Message: 1</li><li>Blocked: 2</li></ul></td>
+<td>Introduced in version 24.4</td>
+</tr>
+<tr>
+<td>BlockMessageId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the entity block message comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a>.<br></td>
+<td>Introduced in version 24.4</td>
+</tr>
+<tr>
+<td>BlockMessage</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The entity block message comment<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></li><li>Expandable</li></ul></td>
+<td>Introduced in version 24.4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;Code&quot;: null,
+  &quot;Description&quot;: null,
+  &quot;ScheduleLength&quot;: 0,
+  &quot;Start&quot;: 0,
+  &quot;End&quot;: 0,
+  &quot;OvertimeScheduleId&quot;: null,
+  &quot;FlexInStart&quot;: null,
+  &quot;FlexInEnd&quot;: null,
+  &quot;FlexOutStart&quot;: null,
+  &quot;FlexOutEnd&quot;: null,
+  &quot;IsNightSchedule&quot;: false,
+  &quot;Type&quot;: 0,
+  &quot;AmountSwh&quot;: null,
+  &quot;ScheduleNumberForExport&quot;: null,
+  &quot;BlockedContextType&quot;: 0,
+  &quot;BlockedById&quot;: null,
+  &quot;BlockedFromDate&quot;: null,
+  &quot;BlockedToDate&quot;: null,
+  &quot;BlockedStatus&quot;: 0,
+  &quot;BlockMessageId&quot;: null,
+  &quot;BlockMessage&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>QuoteOrderRowDiscounts | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="QuoteOrderRowDiscounts | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Sales.QuoteOrderRowDiscount">
+<h1 id="quoteorderrowdiscounts">QuoteOrderRowDiscounts</h1>
+
+<p><em>Queryable, Introduced in version 24.8</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Sales/QuoteOrderRowDiscounts
+</code></pre>
+<p>Represents a discount row for a quote row.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">B95A981B-B37F-4B45-880B-9E6F5ADAB385
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show quote
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the discount row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the discount row's quote row.<br><br><ul><li>References <a class="xref" href="Monitor.API.Sales.QuoteRow.html">QuoteRows</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DiscountId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the discount row's discount.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Discount.html">Discounts</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>AsPercent</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The discount amount as percent of the discount row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>DiscountLockedFromAutomaticChanges</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the discount is locked from automatic changes.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AsAmount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The discount amount of the discount row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AsAmountCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the discount row's amount currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DiscountType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The discount type of the discount row.<br><br><ul><li>Discount: 0</li><li>OrderDiscount: 1</li><li>TotalRowDiscount: 2</li><li>ProjectDiscount: 3</li><li>CustomerDiscountOnDiscount: 4 (Introduced in version 25.2)</li><li>OrderTypeDiscount: 5 (Introduced in version 25.3)</li><li>ManualDiscount: 99 (Introduced in version 25.6)</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>GrossPrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The gross price of the discount row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>GrossPriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the discount row's gross price currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>NetPrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The net price of the discount row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>NetPriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the discount row's net price currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DiscountCalculationType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The discount calculation type of the discount row.<br><br><ul><li>Percent: 1</li><li>Amount: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Priority</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The priority of the discount row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReplacesDiscountFieldOnOrderRow</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if this discount row represents the discount which could be applied<br>to the discount field on the order row itself before order multiple discounts<br>on order rows were introduced.<br></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;OrderRowId&quot;: 0,
+  &quot;DiscountId&quot;: null,
+  &quot;AsPercent&quot;: null,
+  &quot;DiscountLockedFromAutomaticChanges&quot;: false,
+  &quot;AsAmount&quot;: null,
+  &quot;AsAmountCurrencyId&quot;: null,
+  &quot;DiscountType&quot;: 0,
+  &quot;GrossPrice&quot;: null,
+  &quot;GrossPriceCurrencyId&quot;: null,
+  &quot;NetPrice&quot;: null,
+  &quot;NetPriceCurrencyId&quot;: null,
+  &quot;DiscountCalculationType&quot;: 0,
+  &quot;Priority&quot;: 0,
+  &quot;ReplacesDiscountFieldOnOrderRow&quot;: false
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>RecordingDays | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="RecordingDays | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.TimeRecording.RecordingDay">
+<h1 id="recordingdays">RecordingDays</h1>
+
+<p><em>Queryable, Introduced in version 2.25</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/TimeRecording/RecordingDays
+</code></pre>
+<p>Represents a Recording Day, which holds the attendance and work recordings which belongs to an employee for a specific date.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">0E8C9FCB-5AA5-4075-8FD0-2CF9305FCE4F
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show recording items
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the recording day.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RecordingDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+<td>The date this recording day belongs to.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PersonId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the Employee that this recording day belongs to.<br><br>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ScheduleId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the workshop schedule assigned to this day. Null if recording without schedule.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OvertimeScheduleId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the workshop overtime schedule assigned to this day. Null if recording without overtime schedule.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculatedScheduleDiff</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The calculated difference between the schedule length and the sum of recorded attendance and absence on the day.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculatedFlex</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The days calculated total flex-time.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculatedOvertime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The days calculated total overtime.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculatedAbsence</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The days calculated total absence.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculatedAttendance</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The days calculated total attendance.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Exported</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicatates if the day has been exported by the salary export system. <br>When true the creation of new or modification of existing attendance recordings is not allowed.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Authorized</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicatates if the day has been authorized.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AttendanceIntervals</td>
+<td><a class="xref" href="Monitor.API.TimeRecording.AttendanceInterval.html">AttendanceIntervals</a>[]</td>
+<td>The recorded attendance intervals belonging to this day.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>WorkIntervals</td>
+<td><a class="xref" href="Monitor.API.TimeRecording.WorkInterval.html">WorkIntervals</a>[]</td>
+<td>The recorded work intervals belonging to this day.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Additions</td>
+<td><a class="xref" href="Monitor.API.TimeRecording.AdditionRecording.html">AdditionRecordings</a>[]</td>
+<td>Additional recordings belonging to this day.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Approved</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates that the employee is finished with the adding or adjustments.<br></td>
+<td>Introduced in version 22.1</td>
+</tr>
+<tr>
+<td>CommentText</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>Recording comment<br></td>
+<td>Introduced in version 22.7</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;RecordingDate&quot;: &quot;0001-01-01T00:00:00&quot;,
+  &quot;PersonId&quot;: 0,
+  &quot;ScheduleId&quot;: null,
+  &quot;OvertimeScheduleId&quot;: null,
+  &quot;CalculatedScheduleDiff&quot;: &quot;00:00:00&quot;,
+  &quot;CalculatedFlex&quot;: &quot;00:00:00&quot;,
+  &quot;CalculatedOvertime&quot;: &quot;00:00:00&quot;,
+  &quot;CalculatedAbsence&quot;: &quot;00:00:00&quot;,
+  &quot;CalculatedAttendance&quot;: &quot;00:00:00&quot;,
+  &quot;Exported&quot;: false,
+  &quot;Authorized&quot;: false,
+  &quot;AttendanceIntervals&quot;: null,
+  &quot;WorkIntervals&quot;: null,
+  &quot;Additions&quot;: null,
+  &quot;Approved&quot;: false,
+  &quot;CommentText&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ManufacturingOrderOperations | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ManufacturingOrderOperations | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Manufacturing.ManufacturingOrderOperation">
+<h1 id="manufacturingorderoperations">ManufacturingOrderOperations</h1>
+
+<p><em>Queryable, Introduced in version 2.18</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Manufacturing/ManufacturingOrderOperations
+</code></pre>
+<p>Represents a manufacturing order operation.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">C1A9916E-607F-4720-9941-EEC496C92E2D
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show manufacturing orders
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the manufacturing order operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Priority</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The priority of the manufacturing order operation.<br>Can be null.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>WorkCenterId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the manufacturing order operation's work center.<br><br>References <a class="xref" href="Monitor.API.Manufacturing.WorkCenter.html">WorkCenters</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the manufacturing order operation's part.<br><br>References <see cref="M:Monitor.API.Inventory.Part.#ctor"></see><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Part</td>
+<td><a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a></td>
+<td>The manufacturing order operation's part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PlannedQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The planned quantity of the manufacturing order operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReportedQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The reported quantity of the manufacturing order operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RestQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The remaining quantity of the manufacturing order operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReportedSetupTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The reported setup time of the manufacturing order operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReportedUnitTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The reported unit time of the manufacturing order operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RejectedQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The rejected quantity of the manufacturing order operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>WipLocation</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The work-in-progress location of the manufacturing order operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReportNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The report number of the manufacturing order operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InstructionCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the manufacturing order operation's instruction comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>InstructionComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The manufacturing order operation's instruction comment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ManufacturingOrderId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the manufacturing order that the manufacturing order operation<br>belongs to.<br><br>References <a class="xref" href="Monitor.API.Manufacturing.ManufacturingOrder.html">ManufacturingOrders</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ManufacturingOrderNodeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the manufacturing order node that the manufacturing<br>order operation belongs to.<br><br>References <a class="xref" href="Monitor.API.Manufacturing.ManufacturingOrderNode.html">ManufacturingOrderNodes</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>OperationNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The operation number of the manufacturing order operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PlannedSetupTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The planned setup time of the manufacturing order operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PlannedUnitTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The planned unit time of the manufacturing order operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PlannedStartDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The planned start date of the manufacturing order operation.<br></td>
+<td>Introduced in version 2.27</td>
+</tr>
+<tr>
+<td>PlannedFinishDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The planned finish date of the manufacturing order operation.<br></td>
+<td>Introduced in version 2.27</td>
+</tr>
+<tr>
+<td>ActualStartDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The actual (reported) start date of the manufacturing order operation.<br></td>
+<td>Introduced in version 2.27</td>
+</tr>
+<tr>
+<td>ActualFinishDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The actual (reported) finish date of the manufacturing order operation.<br></td>
+<td>Introduced in version 2.27</td>
+</tr>
+<tr>
+<td>OperationRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the operation row that the manufacturing order operation is based on.<br>Can be null if the manufacturing order operation is added manually.<br><br><ul><li>References <a class="xref" href="Monitor.API.Manufacturing.OperationRow.html">OperationRows</a></li></ul></td>
+<td>Introduced in version 2.41</td>
+</tr>
+<tr>
+<td>OperationRow</td>
+<td><a class="xref" href="Monitor.API.Manufacturing.OperationRow.html">OperationRows</a></td>
+<td>The operation row that the manufacturing order operation is based on.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.41</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The status of the manufacturing order operation's status.<br><br><ul><li>None: 0</li><li>Started: 1</li><li>PartiallyShipped: 2</li><li>FullyShipped: 3</li><li>PartiallyReported: 4</li><li>Finished: 5</li></ul></td>
+<td>Introduced in version 2.50</td>
+</tr>
+<tr>
+<td>WorkshopOperationStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The workshop status of the manufacturing order operation's status.<br><br><ul><li>NotInitialized: 0</li><li>InProgress: 1</li><li>ClockedOut: 2</li><li>Interrupted: 3</li><li>PartiallyReported: 4</li><li>SetupTime: 5</li><li>IsStandingBy: 6</li><li>Finished: 9</li></ul></td>
+<td>Introduced in version 2.50</td>
+</tr>
+<tr>
+<td>BundleId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>An generated id that is common for a collection of operations.<br></td>
+<td>Introduced in version 2.52</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The translated description of the manufacturing order operation.<br></td>
+<td>Introduced in version 2.54</td>
+</tr>
+<tr>
+<td>ControlDataRows</td>
+<td><a class="xref" href="Monitor.API.Manufacturing.ManufacturingOrderOperationControlDataRow.html">ManufacturingOrderOperationControlDataRows</a>[]</td>
+<td>The control data rows.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 22.5</td>
+</tr>
+<tr>
+<td>OrderQuantityId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of order quantity.<br><br><ul><li>References <a class="xref" href="Monitor.API.Manufacturing.OrderQuantityManufacturingOrderOperation.html">OrderQuantityManufacturingOrderOperations</a></li></ul></td>
+<td>Introduced in version 22.6</td>
+</tr>
+<tr>
+<td>OrderQuantity</td>
+<td><a class="xref" href="Monitor.API.Manufacturing.OrderQuantityManufacturingOrderOperation.html">OrderQuantityManufacturingOrderOperations</a></td>
+<td>Order quantity that holds the partial quantities.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 22.6</td>
+</tr>
+<tr>
+<td>ClearedStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the status is cleared.<br></td>
+<td>Introduced in version 23.3</td>
+</tr>
+<tr>
+<td>OnPriorityPlan</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if the operation is shown in priority plan.<br></td>
+<td>Introduced in version 25.2</td>
+</tr>
+<tr>
+<td>ManualOperationStatusId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of manual operation status.<br><br><ul><li>References <a class="xref" href="Monitor.API.Manufacturing.ManualOperationStatus.html">ManualOperationStatuses</a></li></ul></td>
+<td>Introduced in version 25.2</td>
+</tr>
+<tr>
+<td>ManualOperationStatus</td>
+<td><a class="xref" href="Monitor.API.Manufacturing.ManualOperationStatus.html">ManualOperationStatuses</a></td>
+<td>The manual operation status.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 25.2</td>
+</tr>
+<tr>
+<td>Materials</td>
+<td><a class="xref" href="Monitor.API.Manufacturing.ManufacturingOrderMaterial.html">ManufacturingOrderMaterials</a>[]</td>
+<td>The manufacturing order materials of the operation.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 24.4</td>
+</tr>
+<tr>
+<td>FixedLeadTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>The fixed lead time of the manufacturing order operation.<br></td>
+<td>Introduced in version 24.6</td>
+</tr>
+<tr>
+<td>UnitStaffingFactor</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The unit staffing factor of the manufacturing order operation.<br></td>
+<td>Introduced in version 25.8</td>
+</tr>
+<tr>
+<td>SetupStaffingFactor</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The setup staffing factor of the manufacturing order operation.<br></td>
+<td>Introduced in version 25.8</td>
+</tr>
+<tr>
+<td>IsPlannedTimeCalculated</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates that the planned time of the operation was calculated at order creation<br>(from a part-configurator formula or aggregated from fictitious sub-parts) and must<br>not be overwritten when the work center is changed.<br></td>
+<td>Introduced in version 26.5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;Priority&quot;: null,
+  &quot;WorkCenterId&quot;: 0,
+  &quot;PartId&quot;: 0,
+  &quot;Part&quot;: null,
+  &quot;PlannedQuantity&quot;: 0.0,
+  &quot;ReportedQuantity&quot;: 0.0,
+  &quot;RestQuantity&quot;: 0.0,
+  &quot;ReportedSetupTime&quot;: &quot;00:00:00&quot;,
+  &quot;ReportedUnitTime&quot;: &quot;00:00:00&quot;,
+  &quot;RejectedQuantity&quot;: 0.0,
+  &quot;WipLocation&quot;: null,
+  &quot;ReportNumber&quot;: 0,
+  &quot;InstructionCommentId&quot;: null,
+  &quot;InstructionComment&quot;: null,
+  &quot;ManufacturingOrderId&quot;: 0,
+  &quot;ManufacturingOrderNodeId&quot;: 0,
+  &quot;OperationNumber&quot;: 0,
+  &quot;PlannedSetupTime&quot;: &quot;00:00:00&quot;,
+  &quot;PlannedUnitTime&quot;: &quot;00:00:00&quot;,
+  &quot;PlannedStartDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;PlannedFinishDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;ActualStartDate&quot;: null,
+  &quot;ActualFinishDate&quot;: null,
+  &quot;OperationRowId&quot;: null,
+  &quot;OperationRow&quot;: null,
+  &quot;Status&quot;: 0,
+  &quot;WorkshopOperationStatus&quot;: 0,
+  &quot;BundleId&quot;: null,
+  &quot;Description&quot;: null,
+  &quot;ControlDataRows&quot;: null,
+  &quot;OrderQuantityId&quot;: null,
+  &quot;OrderQuantity&quot;: null,
+  &quot;ClearedStatus&quot;: false,
+  &quot;OnPriorityPlan&quot;: false,
+  &quot;ManualOperationStatusId&quot;: null,
+  &quot;ManualOperationStatus&quot;: null,
+  &quot;Materials&quot;: null,
+  &quot;FixedLeadTime&quot;: null,
+  &quot;UnitStaffingFactor&quot;: null,
+  &quot;SetupStaffingFactor&quot;: null,
+  &quot;IsPlannedTimeCalculated&quot;: false
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

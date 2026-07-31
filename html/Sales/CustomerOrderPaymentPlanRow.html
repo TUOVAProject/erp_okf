@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CustomerOrderPaymentPlanRows | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CustomerOrderPaymentPlanRows | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Sales.CustomerOrderPaymentPlanRow">
+<h1 id="customerorderpaymentplanrows">CustomerOrderPaymentPlanRows</h1>
+
+<p><em>Queryable, Introduced in version 22.7</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Sales/CustomerOrderPaymentPlanRows
+</code></pre>
+<p>Represents a customer order payment plan row.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">E30E5D6E-3753-4F16-A5BC-605083F4816C
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show customer orders
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the customer order payment plan row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CustomerOrderId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the customer order this row belongs to.<br><br><ul><li>References <a class="xref" href="Monitor.API.Sales.CustomerOrder.html">CustomerOrders</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoicingPeriod</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The invoicing period of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>VatRateId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the VAT rate of the row.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.VatRate.html">VatRates</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Amount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The amount of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AmountCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the currency for the rows amount.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>AmountInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The amount in company currency of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AmountInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the currency for the rows amount in company currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ReducedAmountInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The reduced amount in company currency of the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReducedAmountInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the currency for the rows reduced amount in company currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>IsReset</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the row is reset.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CodingEntryId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the coding entry for the row.<br><br><ul><li>References <a class="xref" href="Monitor.API.Accounting.CodingEntry.html">CodingEntries</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PartialInvoiceType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The partial invoice type of the row.<br><br><ul><li>NotInitialized: 0</li><li>InAdvance: 1</li><li>Delivery: 2</li><li>InArrears: 3</li><li>Text: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the rows part.<br><br><ul><li>References <a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OverrideDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The override description of the row.<br><br><ul><li>Max length is 400</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>FractionOfTotal</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The fraction of the total amount for the row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PaymentTermId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the payment term for the row.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.PaymentTerm.html">PaymentTerms</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RowIndex</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The row index of the row.<br></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;CustomerOrderId&quot;: 0,
+  &quot;InvoicingPeriod&quot;: null,
+  &quot;VatRateId&quot;: null,
+  &quot;Amount&quot;: 0.0,
+  &quot;AmountCurrencyId&quot;: null,
+  &quot;AmountInCompanyCurrency&quot;: 0.0,
+  &quot;AmountInCompanyCurrencyCurrencyId&quot;: null,
+  &quot;ReducedAmountInCompanyCurrency&quot;: null,
+  &quot;ReducedAmountInCompanyCurrencyCurrencyId&quot;: null,
+  &quot;IsReset&quot;: false,
+  &quot;CodingEntryId&quot;: null,
+  &quot;PartialInvoiceType&quot;: 0,
+  &quot;PartId&quot;: null,
+  &quot;OverrideDescription&quot;: null,
+  &quot;FractionOfTotal&quot;: 0.0,
+  &quot;PaymentTermId&quot;: null,
+  &quot;RowIndex&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

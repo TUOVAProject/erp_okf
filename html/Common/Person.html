@@ -1,0 +1,566 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Persons | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Persons | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Common.Person">
+<h1 id="persons">Persons</h1>
+
+<p><em>Queryable, Introduced in version 2.18</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Common/Persons
+</code></pre>
+<p>Represents a person.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">50651357-4726-4877-A944-87820BED57BA
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show person
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the person.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedContextType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies where the person block applies.<br><br><ul><li>None: 0</li><li>RegisterCustomerOrder: 1</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>IsRecordingEmployee</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the person has any type of employee recording enabled.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>EmployeeNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The human readable employee number of the person.<br><br><ul><li>Max length is 10</li><li>Not nullable</li><li>Unique</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>FirstName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The first name of the person.<br><br><ul><li>Max length is 35</li><li>Not nullable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>LastName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The last name of the person.<br><br><ul><li>Max length is 35</li><li>Not nullable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PhoneNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The phone number of the person.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PrivatePhoneNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The private phone number of the person.<br><br><ul><li>Max length is 80</li></ul></td>
+<td>Introduced in version 23.7</td>
+</tr>
+<tr>
+<td>CellPhoneNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The cell phone number of the person.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PrivateCellPhoneNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The private cell phone number of the person.<br><br><ul><li>Max length is 80</li></ul></td>
+<td>Introduced in version 23.7</td>
+</tr>
+<tr>
+<td>InternalPhoneNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The internal phone number of the person.<br><br><ul><li>Max length is 80</li></ul></td>
+<td>Introduced in version 2.43</td>
+</tr>
+<tr>
+<td>EmailAddress</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The email address of the person.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PrivateEmailAddress</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The private email address of the person.<br><br><ul><li>Max length is 80</li></ul></td>
+<td>Introduced in version 23.7</td>
+</tr>
+<tr>
+<td>SkypeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The Skype identifier of the person.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>FaxNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The fax number of the person.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Position</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The position of the person.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>IsReference</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the person is a reference.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsPurchaseManager</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the person is a purchase manager.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsPlanner</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specififes if the person is a planner.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsAccountManager</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the person is an account manager.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Contact</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The name of the person's contact.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ContactPhoneNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The phone number of the person's contact.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ContactCellPhoneNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The cell phone number of the person's contact.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ContactEmailAddress</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The email address of the person's contact.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>AddressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the person's address.<br><br>References <a class="xref" href="Monitor.API.Common.Address.html">Addresses</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Address</td>
+<td><a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></td>
+<td>The address of the person.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the person's comment.<br><br>Reference <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The comment of the person.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedFromDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date that the person starts being blocked from.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedToDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date that the person stops being blocked.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsPersonBlocked</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the person is blocked.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PersonBlockedById</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>Specifies the application user that blocked the person.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PersonBlockedDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date when the person was blocked.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CanAuthorize</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the person can authorize invoices provided that EIM is not enabled for this MONITOR system.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ApplicationUserId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the application user that is coupled to the person.<br><br>References <a class="xref" href="Monitor.API.Common.ApplicationUser.html">ApplicationUsers</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsSeller</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the person is a seller.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Initials</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td><list type="bullet"><item><term>Max length</term><description>5</description></item></list><br><br><ul><li>Max length is 5</li></ul></td>
+<td>Introduced in version 2.43</td>
+</tr>
+<tr>
+<td>DepartmentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the department that the person belongs to.<br><br>References <a class="xref" href="Monitor.API.Common.Department.html">Departments</a>.<br></td>
+<td>Introduced in version 2.43</td>
+</tr>
+<tr>
+<td>DistrictId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the district that the person belongs to.<br><br>References <a class="xref" href="Monitor.API.Sales.CustomerDistrict.html">CustomerDistricts</a>.<br></td>
+<td>Introduced in version 2.43</td>
+</tr>
+<tr>
+<td>LanguageId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the person's preferred language.<br><br>References <a class="xref" href="Monitor.API.Common.LanguageCode.html">LanguageCodes</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>WarehouseId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the person's default warehouse.<br><br>References <a class="xref" href="Monitor.API.Common.Warehouse.html">Warehouses</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Category</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The category of the person.<br><br><ul><li>Max length is 15</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>IdentityNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The identity number of the person.<br><br><ul><li>Max length is 16</li></ul></td>
+<td>Introduced in version 2.43</td>
+</tr>
+<tr>
+<td>GroupSettingsId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the person's attendance group settings.<br><br>References AttendanceGroupSettings.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UseWorkCenterManufacturingPrintSettings</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if manufacturing order document settings should come from the work center's settings or the person's settings.<br></td>
+<td>Introduced in version 2.28</td>
+</tr>
+<tr>
+<td>ManufacturingPrintSettings</td>
+<td><a class="xref" href="Monitor.API.Common.PersonManufacturingPrintSettings.html">PersonManufacturingPrintSettings</a>[]</td>
+<td>The person's print settings for manufacturing order documents.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.28</td>
+</tr>
+<tr>
+<td>PlannedAbsences</td>
+<td><a class="xref" href="Monitor.API.TimeRecording.PlannedAbsence.html">PlannedAbsences</a>[]</td>
+<td>The planned absences for the person.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.47</td>
+</tr>
+<tr>
+<td>TimeBanks</td>
+<td><a class="xref" href="Monitor.API.TimeRecording.PersonTimeBank.html">PersonTimeBanks</a>[]</td>
+<td>The time banks for the person.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 22.3</td>
+</tr>
+<tr>
+<td>Relatives</td>
+<td><a class="xref" href="Monitor.API.Common.PersonRelative.html">PersonRelatives</a>[]</td>
+<td>The relatives of the person.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 22.3</td>
+</tr>
+<tr>
+<td>EmploymentPeriods</td>
+<td><a class="xref" href="Monitor.API.Common.EmploymentPeriod.html">EmploymentPeriods</a>[]</td>
+<td>The employment periods that belong to the personnel record.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 22.3</td>
+</tr>
+<tr>
+<td>ExtraFields</td>
+<td><a class="xref" href="Monitor.API.Common.ExtraField.html">ExtraFields</a>[]</td>
+<td>The extra fields of the personnel record.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 22.3</td>
+</tr>
+<tr>
+<td>IsProjectManager</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the person is a project manager.<br></td>
+<td>Introduced in version 23.3</td>
+</tr>
+<tr>
+<td>AvailableWorkshopSchedules</td>
+<td><a class="xref" href="Monitor.API.TimeRecording.Schedule.html">Schedules</a>[]</td>
+<td>The workshop schedules of the personnel record.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 24.3</td>
+</tr>
+<tr>
+<td>AvailableWorkCenters</td>
+<td><a class="xref" href="Monitor.API.TimeRecording.PersonWorkCenter.html">PersonWorkCenters</a>[]</td>
+<td>Specifies which work centers (and thereby which report numbers) the person should be allowed to select among in the priority plan<br>and when starting work via report numbers.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 24.3</td>
+</tr>
+<tr>
+<td>Signature</td>
+<td><a class="xref" href="Monitor.API.Common.BlobData.html">BlobData</a></td>
+<td>The entity signature blob data<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 24.5</td>
+</tr>
+<tr>
+<td>EmployeeRecordingType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The employee recording type of the person.<br><br><ul><li>None: 0</li><li>AttendanceAndWork: 1</li><li>OnlyWork: 2</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td>Introduced in version 24.5</td>
+</tr>
+<tr>
+<td>ScheduleManagementType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The schedule management type of the person.<br><br><ul><li>None: 0</li><li>ScheduleCycle: 1</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td>Introduced in version 24.5</td>
+</tr>
+<tr>
+<td>PersonScheduleCycles</td>
+<td><a class="xref" href="Monitor.API.Common.Commands.Persons.PersonScheduleCycle.html">PersonScheduleCycles</a>[]</td>
+<td>The schedule cycles of the personnel record.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 24.5</td>
+</tr>
+<tr>
+<td>AttendanceRecordingAuthorizers</td>
+<td><a class="xref" href="Monitor.API.Common.Commands.Persons.AttendanceRecordingAuthorizer.html">AttendanceRecordingAuthorizers</a>[]</td>
+<td>The attendance recording authorizers of the personnel record.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 24.5</td>
+</tr>
+<tr>
+<td>WorkMethod</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The work method of the person.<br><br><ul><li>OnlyChange: 0</li><li>StartFinishAtWill: 1</li></ul></td>
+<td>Introduced in version 24.9</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;SignatureId&quot;: null,
+  &quot;Id&quot;: 0,
+  &quot;BlockedContextType&quot;: 0,
+  &quot;IsRecordingEmployee&quot;: false,
+  &quot;EmployeeNumber&quot;: null,
+  &quot;FirstName&quot;: null,
+  &quot;LastName&quot;: null,
+  &quot;PhoneNumber&quot;: null,
+  &quot;PrivatePhoneNumber&quot;: null,
+  &quot;CellPhoneNumber&quot;: null,
+  &quot;PrivateCellPhoneNumber&quot;: null,
+  &quot;InternalPhoneNumber&quot;: null,
+  &quot;EmailAddress&quot;: null,
+  &quot;PrivateEmailAddress&quot;: null,
+  &quot;SkypeId&quot;: null,
+  &quot;FaxNumber&quot;: null,
+  &quot;Position&quot;: null,
+  &quot;IsReference&quot;: false,
+  &quot;IsPurchaseManager&quot;: false,
+  &quot;IsPlanner&quot;: false,
+  &quot;IsAccountManager&quot;: false,
+  &quot;Contact&quot;: null,
+  &quot;ContactPhoneNumber&quot;: null,
+  &quot;ContactCellPhoneNumber&quot;: null,
+  &quot;ContactEmailAddress&quot;: null,
+  &quot;AddressId&quot;: null,
+  &quot;Address&quot;: null,
+  &quot;CommentId&quot;: null,
+  &quot;Comment&quot;: null,
+  &quot;BlockedFromDate&quot;: null,
+  &quot;BlockedToDate&quot;: null,
+  &quot;IsPersonBlocked&quot;: false,
+  &quot;PersonBlockedById&quot;: null,
+  &quot;PersonBlockedDate&quot;: null,
+  &quot;CanAuthorize&quot;: false,
+  &quot;ApplicationUserId&quot;: null,
+  &quot;IsSeller&quot;: false,
+  &quot;Initials&quot;: null,
+  &quot;DepartmentId&quot;: 0,
+  &quot;DistrictId&quot;: null,
+  &quot;LanguageId&quot;: 0,
+  &quot;WarehouseId&quot;: 0,
+  &quot;Category&quot;: null,
+  &quot;IdentityNumber&quot;: null,
+  &quot;GroupSettingsId&quot;: null,
+  &quot;UseWorkCenterManufacturingPrintSettings&quot;: false,
+  &quot;ManufacturingPrintSettings&quot;: null,
+  &quot;PlannedAbsences&quot;: null,
+  &quot;TimeBanks&quot;: null,
+  &quot;Relatives&quot;: null,
+  &quot;EmploymentPeriods&quot;: null,
+  &quot;ExtraFields&quot;: null,
+  &quot;IsProjectManager&quot;: false,
+  &quot;AvailableWorkshopSchedules&quot;: null,
+  &quot;AvailableWorkCenters&quot;: null,
+  &quot;Signature&quot;: null,
+  &quot;EmployeeRecordingType&quot;: 0,
+  &quot;ScheduleManagementType&quot;: 0,
+  &quot;PersonScheduleCycles&quot;: null,
+  &quot;AttendanceRecordingAuthorizers&quot;: null,
+  &quot;WorkMethod&quot;: 0
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

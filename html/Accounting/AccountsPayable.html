@@ -1,0 +1,635 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AccountsPayables | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="AccountsPayables | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Accounting.AccountsPayable">
+<h1 id="accountspayables">AccountsPayables</h1>
+
+<p><em>Queryable, Introduced in version 2.27</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Accounting/AccountsPayables
+</code></pre>
+<p>Represents a account's payable.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">7C342374-541F-4841-ADF9-5925130FD07F
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show accounts payable
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the account's payable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Version</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The version of the account's payable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the account payable's cancellation comment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The cancellation comment of the account payable.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PaymentMethodId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the account payable's payment method.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.PaymentMethod.html">PaymentMethods</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>LanguageId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the account payable's language.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.LanguageCode.html">LanguageCodes</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Language</td>
+<td><a class="xref" href="Monitor.API.Common.LanguageCode.html">LanguageCodes</a></td>
+<td>The language of the account payable.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SuppliersInvoiceNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The human readable identifier of the supplier's invoice number.<br><br><ul><li>Max length is 30</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The invoice type of the accounts payable.<br><br><ul><li>Standard: 1</li><li>Interest: 4</li><li>OnAccount: 5</li><li>ForOrderingOnAccount: 8</li><li>CorrectionInvoice: 9</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>IsCredit</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the accounts payable is a credit or not.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsFinalBooked</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the accounts payable is final booked or not.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PurchaseOrderId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the account payable's purchase order.<br><br><ul><li>References <a class="xref" href="Monitor.API.Purchase.PurchaseOrder.html">PurchaseOrders</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>WarehouseId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the warehouse that the accounts payable belongs to.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Warehouse.html">Warehouses</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PreliminaryBookingDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date of the preliminary booking.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>VoucherDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The voucher date of the account payable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelVoucherDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The voucher cancellation date of the account payable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SupplierAccountGroupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the supplier account group of the acounts payable.<br><br><ul><li>References <a class="xref" href="Monitor.API.Purchase.SupplierAccountGroup.html">SupplierAccountGroups</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CountryId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the account payable's country.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Country.html">Countries</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Status</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The status of the accounts payable invoice.<br><br><ul><li>Registered: 0</li><li>Preliminary: 1</li><li>Final: 2</li><li>Cancelled: 6</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockMessageId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the entity block message comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockMessage</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The block message of the account payable.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OCRNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The OCR number of the account payable.<br><br><ul><li>Max length is 30</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>UseOCRNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if OCR number is used.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CreditedAccountsPayableId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the account payable's credit account payable.<br><br><ul><li>References <a class="xref" href="Monitor.API.Accounting.AccountsPayable.html">AccountsPayables</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedById</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the application user that blocked the entity.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.ApplicationUser.html">ApplicationUsers</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedBy</td>
+<td><a class="xref" href="Monitor.API.Common.ApplicationUser.html">ApplicationUsers</a></td>
+<td>The application user that blocked the account payable.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedFromDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date when the entity starts being blocked.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedToDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date when the entity stops being blocked.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The block status of the entity.<br><br><ul><li>None: 0</li><li>Message: 1</li><li>Blocked: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedContextType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies which contexts the block applies for.<br><br><ul><li>None: 0</li><li>Payment: 1</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>HasEimInvoice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the account payable has EIM invoice.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>HoldEimInvoice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the EIM invoice is on hold.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>EimInvoiceStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies the status of the EIM invoice.<br><br><ul><li>None: 0</li><li>Hold: 1</li><li>ForAuthorization: 2</li><li>Approved: 3</li><li>Rejected: 4</li><li>FinalBooked: 5</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The invoice number of the accounts payable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The invoice date on the account payable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>DueDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The due date on the account payable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceAmount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The invoice amount on the account payable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceAmountCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the invoice amount currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceAmountInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The invoice amount in the company currency.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceAmountInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the company currency for the invoice amount.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>VatAmount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The VAT amount on the account payable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>VatAmountCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the invoice vat amount currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>VatAmountInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The VAT amount in company currency.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>VatAmountInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the company currency for the invoice vat amount.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RestAmount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The rest amount on the account payable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RestAmountCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the invoice rest amount currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RestAmountInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The rest amount in company currency.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RestAmountInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the company currency for the invoice rest amount.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderedRestAmount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The ordered rest amount on the account payable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderedRestAmountCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the invoice ordered rest amount currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the currency on the account payable.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ExchangeRate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The exchange rate on the account payable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PaidInFullDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>Specifies the date when the account payable was paid in full.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the account payable's comment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The internal comment of the account payable.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ReferenceNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The human readable reference number on the account payable.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>UseFixedDueDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if a fixed due date is used.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>VatGroupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the VAT group that the account payable belongs to.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.VatGroup.html">VatGroups</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PaymentTermId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the payment term of the account payable.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.PaymentTerm.html">PaymentTerms</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PaymentTerm</td>
+<td><a class="xref" href="Monitor.API.Common.PaymentTerm.html">PaymentTerms</a></td>
+<td>The payment term of the account payable.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>FinalBookingId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the account payable's final booking.<br>            <br>References Booking.<br></td>
+<td>Introduced in version 2.41.1</td>
+</tr>
+<tr>
+<td>BusinessContactId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the supplier that the accounts payable belongs to.<br><br><ul><li>References <a class="xref" href="Monitor.API.Purchase.Supplier.html">Suppliers</a></li></ul></td>
+<td>Introduced in version 22.5</td>
+</tr>
+<tr>
+<td>CurrencyExchangeTypeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the accounts payable's currency exchange type.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.CurrencyExchangeType.html">CurrencyExchangeTypes</a></li></ul></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>Payments</td>
+<td><a class="xref" href="Monitor.API.Accounting.OutgoingPayment.html">OutgoingPayments</a>[]</td>
+<td>The payments of the accounts payable.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 24.2</td>
+</tr>
+<tr>
+<td>WithholdTaxAmount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The withholding tax amount on the account payable.<br></td>
+<td>Introduced in version 25.6</td>
+</tr>
+<tr>
+<td>WithholdTaxAmountCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the withholding tax amount currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td>Introduced in version 25.6</td>
+</tr>
+<tr>
+<td>WithholdTaxAmountInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The withholding tax in company currency amount on the account payable.<br></td>
+<td>Introduced in version 25.6</td>
+</tr>
+<tr>
+<td>WithholdTaxAmountInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the withholding tax in company currency amount currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td>Introduced in version 25.6</td>
+</tr>
+<tr>
+<td>InputVatDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date used to assign the invoice's input VAT to the correct VAT period.<br>            <br>Only used in the Polish and Hungarian country packages.<br></td>
+<td>Introduced in version 26.5</td>
+</tr>
+<tr>
+<td>OutputVatDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date used to assign the invoice's output VAT to the correct VAT period.<br>            <br>Only used in the Polish and Hungarian country packages.<br></td>
+<td>Introduced in version 26.5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;Version&quot;: 0,
+  &quot;CancelCommentId&quot;: null,
+  &quot;CancelComment&quot;: null,
+  &quot;PaymentMethodId&quot;: null,
+  &quot;LanguageId&quot;: 0,
+  &quot;Language&quot;: null,
+  &quot;SuppliersInvoiceNumber&quot;: null,
+  &quot;InvoiceType&quot;: 0,
+  &quot;IsCredit&quot;: false,
+  &quot;IsFinalBooked&quot;: false,
+  &quot;PurchaseOrderId&quot;: null,
+  &quot;WarehouseId&quot;: 0,
+  &quot;PreliminaryBookingDate&quot;: null,
+  &quot;VoucherDate&quot;: null,
+  &quot;CancelVoucherDate&quot;: null,
+  &quot;SupplierAccountGroupId&quot;: null,
+  &quot;CountryId&quot;: 0,
+  &quot;Status&quot;: 0,
+  &quot;BlockMessageId&quot;: null,
+  &quot;BlockMessage&quot;: null,
+  &quot;OCRNumber&quot;: null,
+  &quot;UseOCRNumber&quot;: false,
+  &quot;CreditedAccountsPayableId&quot;: null,
+  &quot;BlockedById&quot;: null,
+  &quot;BlockedBy&quot;: null,
+  &quot;BlockedFromDate&quot;: null,
+  &quot;BlockedToDate&quot;: null,
+  &quot;BlockedStatus&quot;: 0,
+  &quot;BlockedContextType&quot;: 0,
+  &quot;HasEimInvoice&quot;: false,
+  &quot;HoldEimInvoice&quot;: false,
+  &quot;EimInvoiceStatus&quot;: 0,
+  &quot;InvoiceNumber&quot;: 0,
+  &quot;InvoiceDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;DueDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;InvoiceAmount&quot;: 0.0,
+  &quot;InvoiceAmountCurrencyId&quot;: null,
+  &quot;InvoiceAmountInCompanyCurrency&quot;: 0.0,
+  &quot;InvoiceAmountInCompanyCurrencyCurrencyId&quot;: null,
+  &quot;VatAmount&quot;: 0.0,
+  &quot;VatAmountCurrencyId&quot;: null,
+  &quot;VatAmountInCompanyCurrency&quot;: 0.0,
+  &quot;VatAmountInCompanyCurrencyCurrencyId&quot;: null,
+  &quot;RestAmount&quot;: 0.0,
+  &quot;RestAmountCurrencyId&quot;: null,
+  &quot;RestAmountInCompanyCurrency&quot;: 0.0,
+  &quot;RestAmountInCompanyCurrencyCurrencyId&quot;: null,
+  &quot;OrderedRestAmount&quot;: 0.0,
+  &quot;OrderedRestAmountCurrencyId&quot;: null,
+  &quot;CurrencyId&quot;: null,
+  &quot;ExchangeRate&quot;: 0.0,
+  &quot;PaidInFullDate&quot;: null,
+  &quot;CommentId&quot;: null,
+  &quot;Comment&quot;: null,
+  &quot;ReferenceNumber&quot;: null,
+  &quot;UseFixedDueDate&quot;: false,
+  &quot;VatGroupId&quot;: null,
+  &quot;PaymentTermId&quot;: null,
+  &quot;PaymentTerm&quot;: null,
+  &quot;FinalBookingId&quot;: null,
+  &quot;BusinessContactId&quot;: 0,
+  &quot;CurrencyExchangeTypeId&quot;: 0,
+  &quot;Payments&quot;: null,
+  &quot;WithholdTaxAmount&quot;: null,
+  &quot;WithholdTaxAmountCurrencyId&quot;: null,
+  &quot;WithholdTaxAmountInCompanyCurrency&quot;: null,
+  &quot;WithholdTaxAmountInCompanyCurrencyCurrencyId&quot;: null,
+  &quot;InputVatDate&quot;: null,
+  &quot;OutputVatDate&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

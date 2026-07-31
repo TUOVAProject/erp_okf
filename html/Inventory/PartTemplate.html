@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PartTemplates | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PartTemplates | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Inventory.PartTemplate">
+<h1 id="parttemplates">PartTemplates</h1>
+
+<p><em>Queryable, Introduced in version 2.47</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Inventory/PartTemplates
+</code></pre>
+<p>Represents a part template.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">429950a6-1de2-4eb6-b509-77cd0c55c9e1
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show basic data for part
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the part template.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AbcCodeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the ABC code that the part template applies.<br><br><ul><li>References <a class="xref" href="Monitor.API.Inventory.AbcCode.html">AbcCodes</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>AnnualVolume</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The annual volume that the part template applies.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AutomaticReportingMode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The automatic reporting mode that the part template applies.<br><br><ul><li>PickingLocation: 1</li><li>Cleared: 2</li><li>BufferLocation: 4</li><li>Project: 8</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CategoryString</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The category string that the part template applies.<br><br><ul><li>Max length is 15</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Code</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The human readable identifier of the part template.<br><br><ul><li>Unique</li><li>Max length is 20</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CountryOfOriginId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the country of origin that the part template applies.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Country.html">Countries</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeductSalesForecast</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The sales forecast deduction type that the part template applies.<br><br><ul><li>None: 0</li><li>LeadTime: 1</li><li>Now: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeductionMethod</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The sales deduction method that the part template applies if a deduct sales forecast type is defined.<br><br><ul><li>Percent: 0</li><li>TimeOrder: 1</li><li>Closest: 2</li><li>ClosestBefore: 3</li><li>PeriodicIntervals: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The description of the part template.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Eoq</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The EOQ that the part template applies.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsActive</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies whether or not the part template is active.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsDefault</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies whether or not the part template is the default part template.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsPreset</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies whether or not the part template is a preset.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>LotSizingRule</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The lot sizing rule that the part template applies.<br><br><ul><li>LotForLot: 1</li><li>FixedQuantity: 2</li><li>PeriodRequirement: 3</li><li>Bucketpart: 4</li><li>Linked: 5</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ManageStockBalance</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>?</td>
+<td>The stock balance management strategy that the part template applies.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UseRandomLocationStorage</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>?</td>
+<td>The random location storage strategy that the part template applies.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AllowOrderCreationFromCustomerOrder</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>?</td>
+<td>The customer order creation permission that the part template applies.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RoundingBase</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The rounding base that the part template applies.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>LeadTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>The lead time that the part template applies.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ManufacturingLabelType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The manufacturing transport label type that the part template applies.<br><br><ul><li>None: 0</li><li>Transport: 1</li><li>Label: 2</li><li>SmallLabel: 3</li><li>MultiLabel: 4</li><li>SelectAtPrintout: 5</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SalesLabelType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The sales transport label type that the part template applies.<br><br><ul><li>None: 0</li><li>Transport: 1</li><li>Label: 2</li><li>SmallLabel: 3</li><li>MultiLabel: 4</li><li>SelectAtPrintout: 5</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PurchaseLabelType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The purchase transport label type that the part template applies.<br><br><ul><li>None: 0</li><li>Transport: 1</li><li>Label: 2</li><li>SmallLabel: 3</li><li>MultiLabel: 4</li><li>SelectAtPrintout: 5</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>UseInCalculation</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Whether or not the parts that derive from the part template should be used in calculations.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartCodeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part code that the part template applies.<br><br><ul><li>References <a class="xref" href="Monitor.API.Inventory.PartCode.html">PartCodes</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PartType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The part template type that the part template applies.<br><br><ul><li>Purchased: 0</li><li>Manufactured: 1</li><li>Fictitious: 2</li><li>Service: 5</li><li>Subcontract: 6</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PreparerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the preparer that the part template applies.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ProductGroupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the product group that the part template applies.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.ProductGroup.html">ProductGroups</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ReorderPoint</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The reorder point that the part template applies.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SafetyStock</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The safety stock that the part template applies.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SafetyTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>The safety time that the part template applies.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SerialNumberGeneration</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The serial number generation strategy that the part template applies.<br><br><ul><li>Never: 0</li><li>CustomerOrderRegistration: 1</li><li>ManufacturingOrderRegistration: 2</li><li>DeliveryReporting: 3</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SerialNumberGenerationSource</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The serial number generation source that the part template applies.<br><br><ul><li>NumberSeries: 0</li><li>Manual: 1</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>TemplateType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The template type of the part template.<br><br><ul><li>Part: 0</li><li>ConsumableEquipment: 1</li><li>ReusableEquipment: 2</li><li>EquipmentList: 3</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>TraceabilityMode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The traceability mode that the part template applies.<br><br><ul><li>None: 0</li><li>Batch: 1</li><li>Individual: 2</li><li>IndividualOnlyWithdrawal: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ProfitMarkupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the profit markup that the part template applies.<br><br><ul><li>References <a class="xref" href="Monitor.API.Inventory.ProfitMarkup.html">ProfitMarkups</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SalesOverheadMarkupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the sales overhead markup that the part template applies.<br><br><ul><li>References <a class="xref" href="Monitor.API.Inventory.SalesOverheadMarkup.html">SalesOverheadMarkups</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PartActivityTemplateId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part activity template that the part template applies.<br><br>References PartActivityTemplate.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The part status that the part template applies.<br><br><ul><li>Quote: 1</li><li>Prototype: 2</li><li>New: 3</li><li>Normal: 4</li><li>NewRevision: 5</li><li>PhasingOut: 6</li><li>Expired: 9</li><li>Inactive: 99</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>LithuanianCountyOfOrigin</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The county of origin that the part template applies.<br>            <br>Only used in the Lithuanian country package.<br><br><ul><li>A: 1</li><li>K: 2</li><li>L: 3</li><li>M: 4</li><li>P: 5</li><li>S: 6</li><li>J: 7</li><li>T: 8</li><li>U: 9</li><li>V: 10</li></ul></td>
+<td>Introduced in version 25.8</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;AbcCodeId&quot;: null,
+  &quot;AnnualVolume&quot;: null,
+  &quot;AutomaticReportingMode&quot;: null,
+  &quot;CategoryString&quot;: null,
+  &quot;Code&quot;: null,
+  &quot;CountryOfOriginId&quot;: null,
+  &quot;DeductSalesForecast&quot;: null,
+  &quot;DeductionMethod&quot;: null,
+  &quot;Description&quot;: null,
+  &quot;Eoq&quot;: null,
+  &quot;IsActive&quot;: false,
+  &quot;IsDefault&quot;: false,
+  &quot;IsPreset&quot;: false,
+  &quot;LotSizingRule&quot;: null,
+  &quot;ManageStockBalance&quot;: null,
+  &quot;UseRandomLocationStorage&quot;: null,
+  &quot;AllowOrderCreationFromCustomerOrder&quot;: null,
+  &quot;RoundingBase&quot;: null,
+  &quot;LeadTime&quot;: null,
+  &quot;ManufacturingLabelType&quot;: null,
+  &quot;SalesLabelType&quot;: null,
+  &quot;PurchaseLabelType&quot;: null,
+  &quot;UseInCalculation&quot;: false,
+  &quot;PartCodeId&quot;: null,
+  &quot;PartType&quot;: null,
+  &quot;PreparerId&quot;: null,
+  &quot;ProductGroupId&quot;: null,
+  &quot;ReorderPoint&quot;: null,
+  &quot;SafetyStock&quot;: null,
+  &quot;SafetyTime&quot;: null,
+  &quot;SerialNumberGeneration&quot;: null,
+  &quot;SerialNumberGenerationSource&quot;: null,
+  &quot;TemplateType&quot;: 0,
+  &quot;TraceabilityMode&quot;: null,
+  &quot;ProfitMarkupId&quot;: null,
+  &quot;SalesOverheadMarkupId&quot;: null,
+  &quot;PartActivityTemplateId&quot;: null,
+  &quot;PartStatus&quot;: null,
+  &quot;LithuanianCountyOfOrigin&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

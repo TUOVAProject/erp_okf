@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CommunicationAddresses | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CommunicationAddresses | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Common.CommunicationAddress">
+<h1 id="communicationaddresses">CommunicationAddresses</h1>
+
+<p><em>Queryable, Introduced in version 2.18</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Common/CommunicationAddresses
+</code></pre>
+<p>Represents a queryable communication address. A communication address is used to store
+either phone, cellphone, email or fax information in MONITOR.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">65BC336B-BD64-46B5-947C-894031B8CE33
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the communication address.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Type</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The type of information stored within this particular communication address instance.<br><br><ul><li>Phone: 0</li><li>Fax: 1</li><li>Email: 2</li><li>CellPhone: 3</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CommunicationAddressValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The value of the communication address.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Remarks</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>Any remarks regarding the communication address.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RecipientOf</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies what types of communication the address should be recipient of.<br><br><ul><li>None: 0</li><li>Invoice: 1</li><li>Reminder: 2</li><li>OrderConfirmation: 4</li><li>DispatchAdvice: 8</li><li>ShippingAgentAdvice: 16</li><li>OrderConfirmationReminder: 32</li><li>DeliveryReminder: 64</li><li>DeliverySchedule: 128</li><li>PurchaseOrder: 256</li><li>Quote: 512</li><li>ShippingAgentSmsAdvice: 1024</li><li>SubcontractDeliveryNote: 2048</li><li>Inquiry: 4096</li><li>CaseClaimReport: 8192</li><li>CaseConfirmation: 16384</li><li>CaseResponse: 32768</li><li>NonconformityReport: 65536</li><li>Proforma: 131072</li><li>ProjectReportExternal: 262144</li><li>ProjectReportInternal: 524288</li><li>CustomerDeliveryNote: 1048576</li><li>TraceabilityProtocol: 2097152</li><li>BlanketOrderPurchase: 4194304</li><li>BlanketOrderSales: 8388608</li><li>PurchaseDeliverySchedule: 16777216</li><li>SalesAgreement: 33554432</li><li>AccountStatement: 67108864</li><li>EInvoiceInvitation: 134217728</li><li>ReturnOrder: 268435456</li><li>SubcontractProformaInvoice: 536870912</li><li>SupplierAgreement: 1073741824</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ContactName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The contact name of  the communication address.<br><br><ul><li>Max length is 80</li></ul></td>
+<td>Introduced in version 2.45.1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;Type&quot;: 0,
+  &quot;CommunicationAddressValue&quot;: null,
+  &quot;Remarks&quot;: null,
+  &quot;RecipientOf&quot;: 0,
+  &quot;ContactName&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

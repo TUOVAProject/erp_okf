@@ -1,0 +1,446 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SalesAgreementRowInflows | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SalesAgreementRowInflows | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Sales.SalesAgreementRowInflow">
+<h1 id="salesagreementrowinflows">SalesAgreementRowInflows</h1>
+
+<p><em>Queryable, Introduced in version 26.4</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Sales/SalesAgreementRowInflows
+</code></pre>
+<p>Represents a sales agreement inflow row.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">530d3209-85ab-498d-8b73-7d21ecb03f1d
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show agreement
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CreationTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The creation time of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>LoggingTimeStamp</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The logging timestamp of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderRowType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The order row type of the inflow row.<br><br><ul><li>Part: 1</li><li>Additional: 2</li><li>Sum: 3</li><li>FreeText: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the inflow rows part.<br><br><ul><li>References <a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>AdditionalRowDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The additional row description of the inflow row.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SalesAgreementId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the inflow rows sales agreement.<br><br><ul><li>References <a class="xref" href="Monitor.API.Sales.SalesAgreement.html">SalesAgreements</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SalesAgreementRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the inflow rows sales agreement row.<br><br><ul><li>References <a class="xref" href="Monitor.API.Sales.SalesAgreementRow.html">SalesAgreementRows</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderedQuantityChange</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The ordered quantity change of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceChange</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The price change of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceChangeCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the price change currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceChangeCurrency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The price change currency.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceChangeInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The price change in company currency of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceChangeInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the price change in company currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceChangeInCompanyCurrencyCurrency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The price change in company currency.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DiscountChange</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The discount change of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>TotalValueChange</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The total value change of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>TotalValueChangeCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the total value change currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>TotalValueChangeCurrency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The total value change currency.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>TotalValueChangeInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The total value change in company currency of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>TotalValueChangeInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the total value change in company currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>TotalValueChangeInCompanyCurrencyCurrency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The total value change in company currency.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RowTotalValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The row total value of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RowTotalValueCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row total value currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RowTotalValueCurrency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The row total value currency.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RowTotalValueInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The row total value in company currency of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RowTotalValueInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the row total value in company currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RowTotalValueInCompanyCurrencyCurrency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The row total value in company currency.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RowTotalQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The row total quantity of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsOneTimeCost</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Whether the inflow row is a one-time cost.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SalesAgreementInvoicingInterval</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The invoicing interval of the inflow row.<br><br><ul><li>Monthly: 1</li><li>EveryOtherMonth: 2</li><li>Quarterly: 3</li><li>FourMonthly: 4</li><li>SemiAnnually: 5</li><li>Annually: 6</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>TypeOfChange</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The type of change of the inflow row.<br><br><ul><li>NewRow: 0</li><li>Upgrade: 1</li><li>Downgrade: 2</li><li>Churn: 3</li><li>PriceChange: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceDefinition</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The price definition of the inflow row.<br><br><ul><li>AccordingToInvoicingInterval: 0</li><li>Day: 1</li><li>Week: 2</li><li>Month: 3</li><li>TwoMonths: 4</li><li>Quarter: 5</li><li>FourMonths: 6</li><li>SixMonths: 7</li><li>Annual: 8</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceChangePerInterval</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The price change per interval of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceChangePerIntervalCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the price change per interval currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceChangePerIntervalCurrency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The price change per interval currency.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceChangePerIntervalInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The price change per interval in company currency of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceChangePerIntervalInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the price change per interval in company currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceChangePerIntervalInCompanyCurrencyCurrency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The price change per interval in company currency.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>TotalValueChangePerInterval</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The total value change per interval of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>TotalValueChangePerIntervalInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The total value change per interval in company currency of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RowTotalValuePerInterval</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The row total value per interval of the inflow row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RowTotalValuePerIntervalInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The row total value per interval in company currency of the inflow row.<br></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;CreationTime&quot;: null,
+  &quot;LoggingTimeStamp&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;OrderRowType&quot;: 0,
+  &quot;PartId&quot;: null,
+  &quot;AdditionalRowDescription&quot;: null,
+  &quot;SalesAgreementId&quot;: null,
+  &quot;SalesAgreementRowId&quot;: null,
+  &quot;OrderedQuantityChange&quot;: null,
+  &quot;PriceChange&quot;: null,
+  &quot;PriceChangeCurrencyId&quot;: null,
+  &quot;PriceChangeCurrency&quot;: null,
+  &quot;PriceChangeInCompanyCurrency&quot;: null,
+  &quot;PriceChangeInCompanyCurrencyCurrencyId&quot;: null,
+  &quot;PriceChangeInCompanyCurrencyCurrency&quot;: null,
+  &quot;DiscountChange&quot;: null,
+  &quot;TotalValueChange&quot;: 0.0,
+  &quot;TotalValueChangeCurrencyId&quot;: null,
+  &quot;TotalValueChangeCurrency&quot;: null,
+  &quot;TotalValueChangeInCompanyCurrency&quot;: 0.0,
+  &quot;TotalValueChangeInCompanyCurrencyCurrencyId&quot;: null,
+  &quot;TotalValueChangeInCompanyCurrencyCurrency&quot;: null,
+  &quot;RowTotalValue&quot;: 0.0,
+  &quot;RowTotalValueCurrencyId&quot;: null,
+  &quot;RowTotalValueCurrency&quot;: null,
+  &quot;RowTotalValueInCompanyCurrency&quot;: 0.0,
+  &quot;RowTotalValueInCompanyCurrencyCurrencyId&quot;: null,
+  &quot;RowTotalValueInCompanyCurrencyCurrency&quot;: null,
+  &quot;RowTotalQuantity&quot;: 0.0,
+  &quot;IsOneTimeCost&quot;: false,
+  &quot;SalesAgreementInvoicingInterval&quot;: 0,
+  &quot;TypeOfChange&quot;: 0,
+  &quot;PriceDefinition&quot;: 0,
+  &quot;PriceChangePerInterval&quot;: null,
+  &quot;PriceChangePerIntervalCurrencyId&quot;: null,
+  &quot;PriceChangePerIntervalCurrency&quot;: null,
+  &quot;PriceChangePerIntervalInCompanyCurrency&quot;: null,
+  &quot;PriceChangePerIntervalInCompanyCurrencyCurrencyId&quot;: null,
+  &quot;PriceChangePerIntervalInCompanyCurrencyCurrency&quot;: null,
+  &quot;TotalValueChangePerInterval&quot;: 0.0,
+  &quot;TotalValueChangePerIntervalInCompanyCurrency&quot;: 0.0,
+  &quot;RowTotalValuePerInterval&quot;: 0.0,
+  &quot;RowTotalValuePerIntervalInCompanyCurrency&quot;: 0.0
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

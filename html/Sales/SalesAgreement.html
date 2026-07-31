@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SalesAgreements | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SalesAgreements | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Sales.SalesAgreement">
+<h1 id="salesagreements">SalesAgreements</h1>
+
+<p><em>Queryable, Introduced in version 22.7</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Sales/SalesAgreements
+</code></pre>
+<p>Represents an agreement.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">77CAE1A2-BBC1-405D-9C38-9F8F90950BB8
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show agreement
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The human readable identifier of the agreement.<br><br><ul><li>Max length is 15</li><li>Not nullable</li><li>Unique</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderTypeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the agreements type.<br><br><ul><li>References <a class="xref" href="Monitor.API.Sales.SalesAgreementType.html">SalesAgreementTypes</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PeriodStart</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The start period of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PeriodEnd</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The end period of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AgreementDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>LastNoticeDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The last notice date of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>TerminationDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The termination date of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ExtensionPeriod</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The extension period in months of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CustomerAgreementNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The customers number of the agreement.<br><br><ul><li>Max length is 30</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Status</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The status of the agreement.<br><br><ul><li>Negotiation: 1</li><li>SignedValid: 2</li><li>Active: 3</li><li>Terminated: 4</li><li>Closed: 6</li><li>Historic: 9</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ResponsibleId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the person responsible of the agreement.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BusinessContactId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the agreements customer.<br><br><ul><li>References <a class="xref" href="Monitor.API.Sales.Customer.html">Customers</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BusinessContactReferenceId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agreements customer reference.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.BusinessContactReference.html">BusinessContactReferences</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BusinessContactReferenceName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The customers reference name of the agreement.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OurReferenceId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of our reference on the agreement.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OurReferenceName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>Our reference name of the agreement.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The translated description of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UseForwardRate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if the agreement use forward rate.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ExchangeRate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The exchange rate of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InternalCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agreements internal comment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InternalComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The internal comment of the agreement.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ExternalCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agreements external comment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ExternalComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The external comment of the agreement.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the agreements currency.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>TermLocation</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The term location of the agreement.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoicingMethod</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The invoicing method of the agreement.<br><br><ul><li>InAdvance: 1</li><li>InArrears: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>VatGroupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the agreements VAT group.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.VatGroup.html">VatGroups</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>IsAccrual</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if the agreement is accrual.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>DefaultOrderPrintoutVia</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The default printout method of the agreement.<br><br><ul><li>Printer: 0</li><li>Email: 1</li><li>Edi: 2</li><li>None: 9</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>MailingAddressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agreements mailing address.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>MailingAddress</td>
+<td><a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></td>
+<td>The mailing address of the agreement.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryAddressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agreements delivery address.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryAddress</td>
+<td><a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></td>
+<td>The delivery address of the agreement.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CustomerAccountGroupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agreements customers account group.<br><br><ul><li>References <a class="xref" href="Monitor.API.Sales.CustomerAccountGroup.html">CustomerAccountGroups</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceBusinessContactId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the agreements invoice customer.<br><br><ul><li>References <a class="xref" href="Monitor.API.Sales.Customer.html">Customers</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agreements project.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Project.html">Projects</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>AftermarketProductRecordId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agreements aftermarket product record.<br><br><ul><li>References <a class="xref" href="Monitor.API.Inventory.ProductRecord.html">ProductRecords</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SellerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agreements seller.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Priority</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The priority of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AccrualAccountId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agreements accrual account.<br><br><ul><li>References <a class="xref" href="Monitor.API.Accounting.Account.html">Accounts</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceCurrentMonth</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if the agreement should be invoiced the current month.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoicingInterval</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The invoicing interval of the agreement.<br><br><ul><li>Monthly: 1</li><li>EveryOtherMonth: 2</li><li>Quarterly: 3</li><li>FourMonthly: 4</li><li>SemiAnnually: 5</li><li>Annually: 6</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ComprehensiveInvoiceChoice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The comprehensive invoice choice of the agreement.<br><br><ul><li>No: 1</li><li>PerCustomer: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ReleaseAgreementBasisAutomatically</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if agreement basis should be released automatically.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PaymentTermId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agreements payment term.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.PaymentTerm.html">PaymentTerms</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PaymentTermDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The payment term description of the agreement.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DestinationForDeliveryTerm</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The destination for delivery term of the agreement.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>GracePeriodInDays</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The grace period in days of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryMethodId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agreements delivery method.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.DeliveryMethod.html">DeliveryMethods</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryMethodDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The delivery method description of the agreement.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryTermId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the delivery term of the agreement.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.DeliveryTerm.html">DeliveryTerms</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryTermDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The delivery term description of the agreement.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceDefinition</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The price definition of the agreement.<br><br><ul><li>AccordingToInvoicingInterval: 0</li><li>Day: 1</li><li>Week: 2</li><li>Month: 3</li><li>TwoMonths: 4</li><li>Quarter: 5</li><li>FourMonths: 6</li><li>SixMonths: 7</li><li>Annual: 8</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>UpdateStatusAutomatically</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if agreement status should be updated automatically.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Version</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The version of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>NoticePeriod</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The notice period of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PlannedInvoiceDateOffset</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The planned invoice date offset in days of the agreement.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>NumberOfYearsToCreateBasisFor</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The number of years to create agreement basis for in advance.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CreateAgreementBasis</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if agreement basis should be created.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Rows</td>
+<td><a class="xref" href="Monitor.API.Sales.SalesAgreementRow.html">SalesAgreementRows</a>[]</td>
+<td>The rows of the agreement.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>LifeCycleState</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The life cycle state of the agreement.<br><br><ul><li>Transient: 1</li><li>Persistent: 10</li><li>History: 20</li><li>RemovableCandidate: 99</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Factoring</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if factoring is activated for the agreement.<br></td>
+<td>Introduced in version 25.7</td>
+</tr>
+<tr>
+<td>Bases</td>
+<td><a class="xref" href="Monitor.API.Sales.SalesAgreementBasis.html">SalesAgreementBases</a>[]</td>
+<td>The agreement bases of the agreement.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 26.4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;OrderNumber&quot;: null,
+  &quot;OrderTypeId&quot;: 0,
+  &quot;PeriodStart&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;PeriodEnd&quot;: null,
+  &quot;AgreementDate&quot;: null,
+  &quot;LastNoticeDate&quot;: null,
+  &quot;TerminationDate&quot;: null,
+  &quot;ExtensionPeriod&quot;: null,
+  &quot;CustomerAgreementNumber&quot;: null,
+  &quot;Status&quot;: 0,
+  &quot;ResponsibleId&quot;: null,
+  &quot;BusinessContactId&quot;: 0,
+  &quot;BusinessContactReferenceId&quot;: null,
+  &quot;BusinessContactReferenceName&quot;: null,
+  &quot;OurReferenceId&quot;: null,
+  &quot;OurReferenceName&quot;: null,
+  &quot;Description&quot;: null,
+  &quot;UseForwardRate&quot;: false,
+  &quot;ExchangeRate&quot;: 0.0,
+  &quot;InternalCommentId&quot;: null,
+  &quot;InternalComment&quot;: null,
+  &quot;ExternalCommentId&quot;: null,
+  &quot;ExternalComment&quot;: null,
+  &quot;CurrencyId&quot;: 0,
+  &quot;TermLocation&quot;: null,
+  &quot;InvoicingMethod&quot;: 0,
+  &quot;VatGroupId&quot;: 0,
+  &quot;IsAccrual&quot;: false,
+  &quot;DefaultOrderPrintoutVia&quot;: 0,
+  &quot;MailingAddressId&quot;: null,
+  &quot;MailingAddress&quot;: null,
+  &quot;DeliveryAddressId&quot;: null,
+  &quot;DeliveryAddress&quot;: null,
+  &quot;CustomerAccountGroupId&quot;: null,
+  &quot;InvoiceBusinessContactId&quot;: 0,
+  &quot;ProjectId&quot;: null,
+  &quot;AftermarketProductRecordId&quot;: null,
+  &quot;SellerId&quot;: null,
+  &quot;Priority&quot;: 0,
+  &quot;AccrualAccountId&quot;: null,
+  &quot;InvoiceCurrentMonth&quot;: false,
+  &quot;InvoicingInterval&quot;: 0,
+  &quot;ComprehensiveInvoiceChoice&quot;: 0,
+  &quot;ReleaseAgreementBasisAutomatically&quot;: false,
+  &quot;PaymentTermId&quot;: null,
+  &quot;PaymentTermDescription&quot;: null,
+  &quot;DestinationForDeliveryTerm&quot;: null,
+  &quot;GracePeriodInDays&quot;: null,
+  &quot;DeliveryMethodId&quot;: null,
+  &quot;DeliveryMethodDescription&quot;: null,
+  &quot;DeliveryTermId&quot;: null,
+  &quot;DeliveryTermDescription&quot;: null,
+  &quot;PriceDefinition&quot;: 0,
+  &quot;UpdateStatusAutomatically&quot;: false,
+  &quot;Version&quot;: 0,
+  &quot;NoticePeriod&quot;: 0,
+  &quot;PlannedInvoiceDateOffset&quot;: 0,
+  &quot;NumberOfYearsToCreateBasisFor&quot;: 0,
+  &quot;CreateAgreementBasis&quot;: false,
+  &quot;Rows&quot;: null,
+  &quot;LifeCycleState&quot;: 0,
+  &quot;Factoring&quot;: false,
+  &quot;Bases&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

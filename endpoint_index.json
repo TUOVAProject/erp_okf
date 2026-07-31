@@ -1,0 +1,2823 @@
+{
+  "endpoints": [
+    {
+      "category": "Accounting",
+      "api_class": "Account",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.Account.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccountingBudget",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccountingBudget.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccountingBudgetPeriod",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccountingBudgetPeriod.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccountingBudgetType",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccountingBudgetType.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccountingExportResponse",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccountingExportResponse.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccountingYear",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccountingYear.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccountingYearPeriod",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccountingYearPeriod.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccountsPayable",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccountsPayable.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccountsPayableCashDiscountLevel",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccountsPayableCashDiscountLevel.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccountsReceivable",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccountsReceivable.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccountsReceivableCashDiscountLevel",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccountsReceivableCashDiscountLevel.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccountYearSetting",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccountYearSetting.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccountYearSettingCodingDimensionAvailability",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccountYearSettingCodingDimensionAvailability.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccrualAccounting",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccrualAccounting.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccrualAccountingLedger",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccrualAccountingLedger.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AccrualAccountingRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AccrualAccountingRow.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AllocationKey",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AllocationKey.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AllocationKeyResultRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AllocationKeyResultRow.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "AutoAllocation",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.AutoAllocation.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "Balance",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.Balance.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "BalanceRowDay",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.BalanceRowDay.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "BankAccount",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.BankAccount.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "Booking",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.Booking.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "BookingRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.BookingRow.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "BudgetChart",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.BudgetChart.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "Coding",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.Coding.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "CodingDimension",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.CodingDimension.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "CodingElement",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.CodingElement.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "CodingEntry",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.CodingEntry.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "CodingEntryElement",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.CodingEntryElement.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "CodingRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.CodingRow.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "FixedAsset",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.FixedAsset.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "FixedAssetDepreciation",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.FixedAssetDepreciation.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "FixedAssetGroup",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.FixedAssetGroup.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "FixedAssetSale",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.FixedAssetSale.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "IncomingPayment",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.IncomingPayment.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "OpeningBalance",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.OpeningBalance.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "OutgoingPayment",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.OutgoingPayment.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "SetOffDestination",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.SetOffDestination.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "StandardAccount",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.StandardAccount.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "Voucher",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.Voucher.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "VoucherRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.VoucherRow.html"
+    },
+    {
+      "category": "Accounting",
+      "api_class": "VoucherSeries",
+      "url": "https://api.monitor.se/api/Monitor.API.Accounting.VoucherSeries.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Address",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Address.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ApplicationUser",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ApplicationUser.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ApplicationUserPrinter",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ApplicationUserPrinter.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "AutoCompleteConfiguration",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.AutoCompleteConfiguration.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "BlobData",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.BlobData.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "BusinessContactBankAccount",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.BusinessContactBankAccount.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "BusinessContactNoteHistory",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.BusinessContactNoteHistory.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "BusinessContactReference",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.BusinessContactReference.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Calendar",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Calendar.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "CentralBankCode",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.CentralBankCode.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Comment",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Comment.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "CommunicationAddress",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.CommunicationAddress.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Company",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Company.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "CompanyEmissionDetail",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.CompanyEmissionDetail.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "CompanyOverheadType",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.CompanyOverheadType.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ConnectionProfile",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ConnectionProfile.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Country",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Country.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Currency",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Currency.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "CurrencyExchangeRate",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.CurrencyExchangeRate.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "CurrencyExchangeRateChangeLog",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.CurrencyExchangeRateChangeLog.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "CurrencyExchangeType",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.CurrencyExchangeType.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "CustomReportDefinition",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.CustomReportDefinition.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "CustomReportDisplayDefinition",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.CustomReportDisplayDefinition.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "DelegatedWork",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.DelegatedWork.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "DeliveryAddress",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.DeliveryAddress.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "DeliveryAddressWarehouseInformation",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.DeliveryAddressWarehouseInformation.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "DeliveryMethod",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.DeliveryMethod.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "DeliveryTerm",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.DeliveryTerm.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "DeliveryTime",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.DeliveryTime.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Department",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Department.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Discount",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Discount.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "DiscountCategory",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.DiscountCategory.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "DiscountCategoryRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.DiscountCategoryRow.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "EdiBehavior",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.EdiBehavior.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "EdiChannelConfiguration",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.EdiChannelConfiguration.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "EmploymentPeriod",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.EmploymentPeriod.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "EntityChangeLog",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.EntityChangeLog.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "EntityPropertyChange",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.EntityPropertyChange.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ExtraField",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ExtraField.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ExtraFieldGroup",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ExtraFieldGroup.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ExtraFieldOptionTemplate",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ExtraFieldOptionTemplate.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ExtraFieldTemplate",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ExtraFieldTemplate.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "FileLink",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.FileLink.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "FilePath",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.FilePath.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "FormReportConfiguration",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.FormReportConfiguration.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "FormReportData",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.FormReportData.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "FormReportTranslation",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.FormReportTranslation.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "FormReportTranslationGroup",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.FormReportTranslationGroup.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "FormTemplate",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.FormTemplate.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "FormTemplateRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.FormTemplateRow.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "FormTemplateSelectionRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.FormTemplateSelectionRow.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "LanguageCode",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.LanguageCode.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "MeasuringTemplate",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.MeasuringTemplate.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Money",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Money.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "MonitoringTask",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.MonitoringTask.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "MonitoringTaskRecipient",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.MonitoringTaskRecipient.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "MonitoringTaskRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.MonitoringTaskRow.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "OrderTransferSetting",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.OrderTransferSetting.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PartConfiguration",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PartConfiguration.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PartConfigurationComponentSnapshot",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PartConfigurationComponentSnapshot.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PartConfigurationPreset",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PartConfigurationPreset.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PartConfigurationResult",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PartConfigurationResult.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PartConfigurationSelectionGroupResult",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PartConfigurationSelectionGroupResult.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PartConfigurationTemplate",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PartConfigurationTemplate.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PartialQuantity",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PartialQuantity.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PartUnitUsage",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PartUnitUsage.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PaymentMethod",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PaymentMethod.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PaymentPlanTemplate",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PaymentPlanTemplate.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PaymentPlanTemplateRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PaymentPlanTemplateRow.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PaymentTerm",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PaymentTerm.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Permission",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Permission.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PermissionGroup",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PermissionGroup.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Person",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Person.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PersonManufacturingPrintSettings",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PersonManufacturingPrintSettings.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PersonRelative",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PersonRelative.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "PriceList",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.PriceList.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Probability",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Probability.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProductGroup",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProductGroup.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Project",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Project.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProjectActivity",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProjectActivity.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProjectActivityCalendarAppointment",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProjectActivityCalendarAppointment.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProjectActivityRelation",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProjectActivityRelation.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProjectActivityType",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProjectActivityType.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProjectAggregate",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProjectAggregate.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProjectCostBudget",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProjectCostBudget.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProjectCostForecast",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProjectCostForecast.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProjectCostReportingEntry",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProjectCostReportingEntry.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProjectCostType",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProjectCostType.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProjectGroup",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProjectGroup.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProjectPhase",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProjectPhase.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProjectPhaseType",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProjectPhaseType.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ProjectType",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ProjectType.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ReasonCode",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ReasonCode.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ReasonCodeDebitNote",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ReasonCodeDebitNote.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "RejectionCodeItem",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.RejectionCodeItem.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "RemotePartConfiguration",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.RemotePartConfiguration.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "RemotePartConfigurationRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.RemotePartConfigurationRow.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Reseller",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Reseller.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Revision",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Revision.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Role",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Role.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "ServerPrinter",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.ServerPrinter.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "StaggeredPrice",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.StaggeredPrice.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "StatisticalGoodsCode",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.StatisticalGoodsCode.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Tag",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Tag.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "TariffAndServiceCode",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.TariffAndServiceCode.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "TransactionTypeIntrastat",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.TransactionTypeIntrastat.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "TransferProfile",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.TransferProfile.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Unit",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Unit.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "VatGroup",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.VatGroup.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "VatRate",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.VatRate.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "Warehouse",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.Warehouse.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "WarehousePermission",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.WarehousePermission.html"
+    },
+    {
+      "category": "Common",
+      "api_class": "WriteOffCode",
+      "url": "https://api.monitor.se/api/Monitor.API.Common.WriteOffCode.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "ApiMultipartFormCommandAttribute",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.ApiMultipartFormCommandAttribute.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "ApiValidationResult",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.ApiValidationResult.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "BatchCommandEntity",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.BatchCommandEntity.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "BatchResponse",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.BatchResponse.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "BooleanInput",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.BooleanInput.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "DateTimeInput",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.DateTimeInput.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "DecimalInput",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.DecimalInput.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "EntityCommandResponse",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.EntityCommandResponse.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "ErrorCommandResponse",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.ErrorCommandResponse.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "IntegerInput",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.IntegerInput.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "LongInput",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.LongInput.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "NotNullBooleanInput",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.NotNullBooleanInput.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "NotNullDateTimeInput",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.NotNullDateTimeInput.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "NotNullDecimalInput",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.NotNullDecimalInput.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "NotNullIntegerInput",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.NotNullIntegerInput.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "NotNullLongInput",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.NotNullLongInput.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "StringInput",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.StringInput.html"
+    },
+    {
+      "category": "Infrastructure",
+      "api_class": "ValidationCommandResponse",
+      "url": "https://api.monitor.se/api/Monitor.API.Infrastructure.ValidationCommandResponse.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "AbcCode",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.AbcCode.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "AdditionalIdsRecord",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.AdditionalIdsRecord.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "Alloy",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.Alloy.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "AlloyQuantity",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.AlloyQuantity.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "CaseEntry",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.CaseEntry.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "CaseEntryActivity",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.CaseEntryActivity.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "CaseEntryAdditionalCost",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.CaseEntryAdditionalCost.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "CaseEntryLink",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.CaseEntryLink.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "CaseEntryPhase",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.CaseEntryPhase.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "CaseManagementActivity",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.CaseManagementActivity.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "CaseManagementCost",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.CaseManagementCost.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "CaseManagementPhase",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.CaseManagementPhase.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "CaseManagementTemplate",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.CaseManagementTemplate.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "CaseManagementTemplateCost",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.CaseManagementTemplateCost.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "CaseManagementTemplateNode",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.CaseManagementTemplateNode.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "CaseManagementType",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.CaseManagementType.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "CasePartLink",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.CasePartLink.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "GoodsType",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.GoodsType.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "HyperLink",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.HyperLink.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "Location",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.Location.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "OrderQuantityTemplate",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.OrderQuantityTemplate.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PackageType",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PackageType.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "Part",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.Part.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PartActivity",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PartActivity.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PartActivityType",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PartActivityType.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PartCode",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PartCode.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PartDefaultTransportLabel",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PartDefaultTransportLabel.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PartIdentityType",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PartIdentityType.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PartImage",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PartImage.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PartLocation",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PartLocation.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PartLocationProductRecord",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PartLocationProductRecord.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PartOtherIdentity",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PartOtherIdentity.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PartPlanningInformation",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PartPlanningInformation.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PartPurchaseControlDataRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PartPurchaseControlDataRow.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PartPurchaseExpenseValues",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PartPurchaseExpenseValues.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PartTemplate",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PartTemplate.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PhysicalInventoryList",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PhysicalInventoryList.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PhysicalInventoryRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PhysicalInventoryRow.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "PriceChangeLog",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.PriceChangeLog.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "ProductRecord",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.ProductRecord.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "ProductRecordOperationReporting",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.ProductRecordOperationReporting.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "ProfitMarkup",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.ProfitMarkup.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "QuantityChange",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.QuantityChange.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "SalesForecast",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.SalesForecast.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "SalesForecastRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.SalesForecastRow.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "SalesOverheadMarkup",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.SalesOverheadMarkup.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "StockBalanceChange",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.StockBalanceChange.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "StockTransaction",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.StockTransaction.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "StorageOverheadMarkup",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.StorageOverheadMarkup.html"
+    },
+    {
+      "category": "Inventory",
+      "api_class": "UnplannedStockMovementReasonCode",
+      "url": "https://api.monitor.se/api/Monitor.API.Inventory.UnplannedStockMovementReasonCode.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "AlternativeOperationRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.AlternativeOperationRow.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "Drawing",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.Drawing.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "DrawingRevision",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.DrawingRevision.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "MaintenanceReporting",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.MaintenanceReporting.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "MaintenanceReportingRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.MaintenanceReportingRow.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "MaintenanceReportingSelectionRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.MaintenanceReportingSelectionRow.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ManualOperationStatus",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ManualOperationStatus.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ManufacturingOrder",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingOrder.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ManufacturingOrderMaterial",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingOrderMaterial.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ManufacturingOrderNode",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingOrderNode.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ManufacturingOrderNodeDrawing",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingOrderNodeDrawing.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ManufacturingOrderNodeDrawingRevision",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingOrderNodeDrawingRevision.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ManufacturingOrderOperation",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingOrderOperation.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ManufacturingOrderOperationControlDataRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingOrderOperationControlDataRow.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ManufacturingOrderOperationReporting",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingOrderOperationReporting.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ManufacturingOrderType",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingOrderType.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ManufacturingPickingList",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingPickingList.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ManufacturingPickingListMaterial",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingPickingListMaterial.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "MaterialRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.MaterialRow.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "OperationRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.OperationRow.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "OperationRowControlDataRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.OperationRowControlDataRow.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "OrderQuantityManufacturingOrder",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.OrderQuantityManufacturingOrder.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "OrderQuantityManufacturingOrderOperation",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.OrderQuantityManufacturingOrderOperation.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "Preparation",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.Preparation.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ProductionCalendarException",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ProductionCalendarException.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ReasonCodeTimeConsumption",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ReasonCodeTimeConsumption.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "ReferenceNumber",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.ReferenceNumber.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "WorkCenter",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.WorkCenter.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "WorkCenterCostFactorGroup",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.WorkCenterCostFactorGroup.html"
+    },
+    {
+      "category": "Manufacturing",
+      "api_class": "WorkCenterManufacturingPrintSettings",
+      "url": "https://api.monitor.se/api/Monitor.API.Manufacturing.WorkCenterManufacturingPrintSettings.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "BlanketOrderPurchase",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.BlanketOrderPurchase.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "BlanketOrderPurchaseRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.BlanketOrderPurchaseRow.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "BlanketOrderPurchaseType",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.BlanketOrderPurchaseType.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "EimDocument",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.EimDocument.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "EimDocumentType",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.EimDocumentType.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "Inquiry",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.Inquiry.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "InquiryRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.InquiryRow.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "InquiryType",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.InquiryType.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "OrderQuantityPurchaseOrder",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.OrderQuantityPurchaseOrder.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "OtherSupplierNumber",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.OtherSupplierNumber.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "PackingTerm",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.PackingTerm.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "PurchaseOrder",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrder.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "PurchaseOrderAdvice",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderAdvice.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "PurchaseOrderAdviceRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderAdviceRow.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "PurchaseOrderAdviceRowProductRecord",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderAdviceRowProductRecord.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "PurchaseOrderDelivery",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderDelivery.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "PurchaseOrderDeliveryRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderDeliveryRow.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "PurchaseOrderDeliveryRowQuantity",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderDeliveryRowQuantity.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "PurchaseOrderInvoice",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderInvoice.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "PurchaseOrderInvoiceRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderInvoiceRow.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "PurchaseOrderRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderRow.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "PurchaseOrderType",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderType.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "ResponseTime",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.ResponseTime.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "Supplier",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.Supplier.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "SupplierAccount",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.SupplierAccount.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "SupplierAccountGroup",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.SupplierAccountGroup.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "SupplierDistrict",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.SupplierDistrict.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "SupplierPartLink",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.SupplierPartLink.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "SupplierStatus",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.SupplierStatus.html"
+    },
+    {
+      "category": "Purchase",
+      "api_class": "SupplierType",
+      "url": "https://api.monitor.se/api/Monitor.API.Purchase.SupplierType.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "BlanketOrderSales",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.BlanketOrderSales.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "BlanketOrderSalesRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.BlanketOrderSalesRow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "BlanketOrderSalesType",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.BlanketOrderSalesType.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "BusinessOpportunity",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.BusinessOpportunity.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "BusinessOpportunityActivity",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.BusinessOpportunityActivity.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "BusinessOpportunityActivityTemplate",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.BusinessOpportunityActivityTemplate.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "BusinessOpportunityActivityTemplateRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.BusinessOpportunityActivityTemplateRow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "BusinessOpportunityGroup",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.BusinessOpportunityGroup.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "BusinessOpportunityReference",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.BusinessOpportunityReference.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "BusinessOpportunitySalesProcessStep",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.BusinessOpportunitySalesProcessStep.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "BusinessOpportunityType",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.BusinessOpportunityType.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CountryDocumentSettings",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CountryDocumentSettings.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CreateCustomerEmployeeSpan",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CreateCustomerEmployeeSpan.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CreateSalesPickingList",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CreateSalesPickingList.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "Customer",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.Customer.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerAccountGroup",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerAccountGroup.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerCountryDocumentSettings",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerCountryDocumentSettings.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerDistrict",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerDistrict.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerEmployeeSpan",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerEmployeeSpan.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerOrder",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerOrder.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerOrderActivity",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderActivity.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerOrderDeliveryRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderDeliveryRow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerOrderInvoice",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderInvoice.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerOrderInvoiceOrderRowDiscount",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderInvoiceOrderRowDiscount.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerOrderInvoiceRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderInvoiceRow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerOrderOrderRowDiscount",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderOrderRowDiscount.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerOrderPaymentPlanRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderPaymentPlanRow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerOrderRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderRow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerOrderRowInflow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderRowInflow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerOrderShippingInformationRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderShippingInformationRow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerOrderType",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderType.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerPartLink",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerPartLink.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerRelationshipActivityType",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerRelationshipActivityType.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerRelationshipManagementActivity",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerRelationshipManagementActivity.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerStatus",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerStatus.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "CustomerType",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.CustomerType.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "GetWithdrawalInformation",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.GetWithdrawalInformation.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "InvoiceLog",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.InvoiceLog.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "OrderQuantityCustomerOrder",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.OrderQuantityCustomerOrder.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "OtherCustomerNumber",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.OtherCustomerNumber.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "PackageRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.PackageRow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "PackageRowPartLocation",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.PackageRowPartLocation.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "Quote",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.Quote.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "QuoteActivity",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.QuoteActivity.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "QuoteOrderRowDiscount",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.QuoteOrderRowDiscount.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "QuoteRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.QuoteRow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "QuoteType",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.QuoteType.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "ReasonCodeLostQuote",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.ReasonCodeLostQuote.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "RelatedQuote",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.RelatedQuote.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "RelatedQuoteEntry",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.RelatedQuoteEntry.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "RemoveSalesPickingList",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.RemoveSalesPickingList.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "SalesAgreement",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.SalesAgreement.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "SalesAgreementBasis",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.SalesAgreementBasis.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "SalesAgreementBasisRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.SalesAgreementBasisRow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "SalesAgreementRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.SalesAgreementRow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "SalesAgreementRowInflow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.SalesAgreementRowInflow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "SalesAgreementType",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.SalesAgreementType.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "SalesPickingList",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.SalesPickingList.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "SalesPickingListRowQuantity",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.SalesPickingListRowQuantity.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "SalesPrice",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.SalesPrice.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "SalesProcessStep",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.SalesProcessStep.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "SalesProcessTemplate",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.SalesProcessTemplate.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "SalesProcessTemplateRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.SalesProcessTemplateRow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "SellerGroup",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.SellerGroup.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "Shipment",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.Shipment.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "ShipmentCustoms",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.ShipmentCustoms.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "ShipmentCustomsDocument",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.ShipmentCustomsDocument.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "ShipmentCustomsRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.ShipmentCustomsRow.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "ShipmentInformationSource",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.ShipmentInformationSource.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "ShipmentPackageInformation",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.ShipmentPackageInformation.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "ShipmentPackageInformationPackageNumber",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.ShipmentPackageInformationPackageNumber.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "ShippingService",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.ShippingService.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "ShippingTemplate",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.ShippingTemplate.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "ValidityTime",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.ValidityTime.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "WithdrawalInformationLocation",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.WithdrawalInformationLocation.html"
+    },
+    {
+      "category": "Sales",
+      "api_class": "WithdrawalInformationRow",
+      "url": "https://api.monitor.se/api/Monitor.API.Sales.WithdrawalInformationRow.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "AbsenceCode",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.AbsenceCode.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "AdditionRecording",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.AdditionRecording.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "AttendanceAddition",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.AttendanceAddition.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "AttendanceChart",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.AttendanceChart.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "AttendanceGroupSettings",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.AttendanceGroupSettings.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "AttendanceInterval",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.AttendanceInterval.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "IndirectWorkCode",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.IndirectWorkCode.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "OvertimeType",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.OvertimeType.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "PersonTimeBank",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.PersonTimeBank.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "PersonWorkCenter",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.PersonWorkCenter.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "PlannedAbsence",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.PlannedAbsence.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "RecordingDay",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.RecordingDay.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "SalaryType",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.SalaryType.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "Schedule",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.Schedule.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "Schedule_Obsolete",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.Schedule_Obsolete.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "StandbyWork",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.StandbyWork.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "TimeBank",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.TimeBank.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "WorkInterval",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.WorkInterval.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "WorkshopScheduleSalaryType",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.WorkshopScheduleSalaryType.html"
+    },
+    {
+      "category": "TimeRecording",
+      "api_class": "WorkshopScheduleSalaryTypeRow",
+      "url": "https://api.monitor.se/api/Monitor.API.TimeRecording.WorkshopScheduleSalaryTypeRow.html"
+    }
+  ],
+  "excluded_patterns": [
+    ".Commands."
+  ],
+  "excluded_pages": 913,
+  "excluded_urls": [
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.AddBookingRows.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.AddCodingEntryElement.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.AddDeliveryRows.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.AddFinalBookingRow.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.CancelAccountsPayable.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.ChangeInvoiceType.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.ChangeSupplier.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.CreateAccountsPayable.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.FinalBook.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.ReplaceEimDocument.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.SetAccountsPayableReferenceNumber.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.SetAccountsPayableVoucherDate.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.SetCurrency.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.SetDeliveryRowCoding.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.SetDueDate.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.SetExchangeRate.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.SetInvoiceAmount.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.SetInvoiceDate.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.SetOCRNumber.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.SetPaymentTerm.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.SetVatGroup.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.SetWithholdingTaxAmount.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.SetWithholdingTaxInCompanyCurrencyAmount.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.UpdateBookingRow.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.UpdateBookingRows.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.UpdateCodingEntryElement.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.UpdateDeliveryRow.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.UpdateFinalBookingRows.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsPayables.UpdateVatAmount.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsReceivables.AddIncomingPaymentRow.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsReceivables.CreateAccountsReceivable.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsReceivables.CreateIncomingPayment.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsReceivables.CreateMultipleIncomingPayments.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsReceivables.CreateMultipleIncomingPaymentsResponse.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsReceivables.CreateSetOffPayment.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccountsReceivables.SetPropertiesAccountsReceivable.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccrualAccountings.AddAccrualAccountingRow.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccrualAccountings.AddCodingEntryElement.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AccrualAccountings.CreateAccrualAccounting.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AddBookingRow.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AllocationKeys.AddAllocationKeyResultRow.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AllocationKeys.CreateAllocationKey.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AllocationKeys.RemoveAllocationKey.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.AllocationKeys.UpdateAllocationKey.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.Export.AccountingExportSettings.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.Export.ExportSie4E.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.Export.ExportSie4I.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.Export.VoucherDateSelection.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.Export.VoucherNumberSelection.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.Export.VoucherSeriesSelection.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.FixedAssets.CreateFixedAsset.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.FixedAssets.FixedAssetPartialQuantityInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.FixedAssets.MakeExtraDepreciation.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.FixedAssets.RetireFixedAsset.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.FixedAssets.SellFixedAsset.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.Shared.AddCodingEntryAccount.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.Shared.AddCodingEntryElement.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.Vouchers.AddVoucherRow.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.Vouchers.CreateVoucher.html",
+    "https://api.monitor.se/api/Monitor.API.Accounting.Commands.Vouchers.SetPropertiesVoucher.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Addresses.UpdateAddress.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Addresses.UpdateDeliveryAddress.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Addresses.UpdateDeliveryAddressWarehouseInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ApplicationUsers.AddApplicationUserPermissionGroup.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ApplicationUsers.CreateApplicationUser.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ApplicationUsers.GetApplicationUserLicense.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ApplicationUsers.GetLoggedInUser.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ApplicationUsers.RemoveApplicationUser.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ApplicationUsers.RemoveApplicationUserPermissionGroup.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ApplicationUsers.SetApplicationUserLicense.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ApplicationUsers.SetApplicationUserPassword.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ApplicationUsers.SetApplicationUserPasswordResult.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ApplicationUsers.SetEmailPropertiesApplicationUser.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ApplicationUsers.SetPropertiesApplicationUser.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.AutoCompletes.AutoCompleteRequest.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.AutoCompletes.ExecuteAutoCompletePaging.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.AutoCompletes.ExecuteAutoCompleteSearch.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.AutoCompletes.PopupResult.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CategoryComponent.AddCategoryComponentValue.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CategoryComponent.CategoryComponent.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CategoryComponent.CreateCategoryComponent.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CategoryComponent.RemoveCategoryComponent.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CategoryComponent.UpdateCategoryComponent.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CategoryComponent.UpdateCategoryComponentValue.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Comments.AddFileToComment.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Comments.CreateComment.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Comments.RemoveFileLink.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Comments.UpdateComment.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Comments.UpdateFileLink.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Comments.UpdateFileLinkData.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Configuration.GetMonitorConfiguration.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Configuration.GetSystemId.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Configuration.GetSystemParameters.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Configuration.MonitorConfigurationInfo.Company.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Configuration.MonitorConfigurationInfo.Database.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Configuration.MonitorConfigurationInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CreateBusinessContactNoteHistory.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CreateTag.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CurrencyExchangeRates.SetCurrencyExchangeRate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CustomReports.AddCustomReportParameter.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CustomReports.AddCustomReportRestriction.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CustomReports.GetCustomReport.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CustomReports.GetCustomReportByDisplayId.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.CustomReports.PrintCustomReportByDisplayId.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.DiscountCategories.CreateDiscountCategoryRows.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.DiscountCategories.RemoveDiscountCategoryRows.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.DiscountCategories.UpdateDiscountCategoryRows.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.EdiBehaviors.AddCustomersToEdiBehavior.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.EdiBehaviors.RemoveCustomersFromEdiBehavior.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.AddEmailAttachment.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.CreateEmailOnEntity.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.EntityEmails.EmailAttachment.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.EntityEmails.EmailAttachmentInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.EntityEmails.EmailInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.EntityEmails.EmailItem.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.EntityEmails.EmailListItem.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.EntityEmails.EntityMailResult.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.GetEmail.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.GetEmailsForEntity.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.RemoveEmailFromEntity.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.SendSystemEmail.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.SendUserEmail.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Emails.SetEmailContents.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.EntityBusyStates.AcquireEntityBusyState.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.EntityBusyStates.EntityBusyState.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.EntityBusyStates.GetEntityBusyState.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.EntityBusyStates.GetEntityBusyStatesByEntityType.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.EntityBusyStates.ReleaseEntityBusyState.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ExtraFields.AddExtraFieldOptionTemplate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ExtraFields.AddExtraFieldTemplate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ExtraFields.CreateExtraField.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ExtraFields.CreateExtraFieldGroup.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ExtraFields.ExtraFieldValue.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ExtraFields.RemoveExtraFieldGroup.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ExtraFields.RemoveExtraFieldOptionTemplate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ExtraFields.RemoveExtraFieldTemplate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ExtraFields.SetExtraFieldValues.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ExtraFields.UpdateExtraFieldGroup.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ExtraFields.UpdateExtraFieldOptionTemplate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ExtraFields.UpdateExtraFieldTemplate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.FilePaths.CreateFilePath.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.FilePaths.UploadFile.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.GetCategoryComponentValue.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Licensing.AvailableLicense.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Licensing.GetAvailableLicenses.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ManageFiles.Copy.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ManageFiles.CreateFolder.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ManageFiles.Delete.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ManageFiles.DirectoryItem.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ManageFiles.DownloadFile.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ManageFiles.GetItemInFolder.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ManageFiles.Move.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ManageFiles.Rename.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ManageFiles.UploadFileStream.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddArrivalReportingRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddBlanketOrderPurchaseActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddBlanketOrderSalesActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddCaseEntryActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddCustomerActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddCustomerOrderActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddInquiryActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddManufacturingOrderOperationRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddMonitoringTaskRecipient.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddOrderRowArrivalReportingRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddPartActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddPersonActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddPurchaseOrderActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddQuoteActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddSalesAgreementActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddStockBalanceRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.AddSupplierActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.CreateMonitoringTask.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.RemoveMonitoringTask.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.RemoveMonitoringTaskRecipient.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.RemoveMonitoringTaskRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateArrivalReportingRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateBlanketOrderPurchaseActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateBlanketOrderSalesActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateCaseEntryActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateCustomerActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateCustomerOrderActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateInquiryActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateManufacturingOrderOperationRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateMonitoringTask.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateMonitoringTaskRecipient.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateOrderRowArrivalReportingRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdatePartActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdatePersonActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdatePurchaseOrderActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateQuoteActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateSalesAgreementActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateStockBalanceRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MonitoringTasks.UpdateSupplierActivityRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MultiFactor.GetMultiFactorDeviceSecret.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MultiFactor.MultiFactorDeviceContext.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.MultiFactor.SetMultiFactorAuthenticationDevice.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.NumberSeries.UsedNumberFromNumberSeries.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.NumberSeries.UsedNumberFromNumberSeriesResponse.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Others.AddWorkdaysToDate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Others.EntityModificationInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Others.GetEntity.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Others.GetEntityModificationInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.CreateAndAddPartConfigurationFreeSelectionRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.CreateRemotePartConfigurationSession.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.DestroyPartConfigurationSession.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.Dto.ConfigurationCommentUpdate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.Dto.MainPartUpdate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.Dto.PartConfigurationState.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.Dto.SavePartConfigurationResponse.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.Dto.SectionState.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.Dto.SelectionGroupRowState.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.Dto.SelectionGroupRowUpdate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.Dto.SelectionGroupState.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.Dto.UpdatePartConfigurationInstruction.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.Dto.VariableState.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.Dto.VariableUpdate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.Dto.VariableValue.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.GetPartConfiguration.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.PartConfigurationSessionExists.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.PokePartConfigurationSession.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.RemotePartConfigurationPriceCommentDataRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.SaveRemotePartConfigurationSession.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PartConfigurations.UpdatePartConfiguration.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PaymentPlanTemplates.AddPaymentPlanTemplateRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.PaymentPlanTemplates.CreatePaymentPlanTemplate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Permissions.GetPermissionHierarchy.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Permissions.PermissionGroupNode.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Permissions.PermissionHierarchy.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Permissions.PermissionModuleNode.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Permissions.PermissionNode.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.AddAttendanceRecordingAuthorizer.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.AddPersonEmploymentPeriod.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.AddPersonRelative.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.AddPersonScheduleCycle.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.AttendanceRecordingAuthorizer.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.BlockPerson.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.CreatePerson.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.GetPersonIdByPersonalCardNumber.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.PersonScheduleCycle.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.RemoveAttendanceRecordingAuthorizer.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.RemovePerson.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.RemovePersonEmploymentPeriod.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.RemovePersonRelative.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.RemovePersonScheduleCycle.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.SetAvailableAsPropertiesPerson.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.SetContactInformationPropertiesPerson.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.SetPropertiesPerson.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.UnblockPerson.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.UpdateAttendanceRecordingAuthorizer.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.UpdatePersonEmploymentPeriod.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.UpdatePersonRelative.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.UpdatePersonScheduleCycle.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Persons.WorkshopScheduleCycle.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ProductGroups.GetCustomerAccountGroupCodingRequirements.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ProductGroups.GetSupplierAccountGroupCodingRequirements.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ProductGroups.ProductGroupCodingRequirementResult.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ProductGroups.ProductGroupCodingRequirementResultRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.ProductGroups.ProductGroupCodingRequirementResultRowDimension.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.AddActivityProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.ChangeActivityProjectCostReportingEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.CreateActivityDelegatedWorkProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.CreateActivityProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.CreatePhaseProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.CreateProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.CreateProjectActivityCalendarAppointment.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.CreateProjectActivityCalendarAppointmentFromId.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.CreateProjectCostReportingEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.CreateRootActivityProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.RemoveActivityDelegatedWorkProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.RemoveActivityProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.RemovePhaseProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.RemoveProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.RemoveProjectActivityCalendarAppointment.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.RenameProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.ReplanProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.SetPreviousActivitiesProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.SetPreviousPhasesProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.SetProjectProperties.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.SetProjectType.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.UpdateActivityProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.UpdatePhaseProject.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.UpdateProjectActivityCalendarAppointment.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.UpdateProjectCostBudget.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.UpdateProjectCostForecast.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Projects.UpdateProjectCostReportingEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Shared.AddStaggeredPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Shared.CategoryComponentValue.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Shared.Reporting.SetManufacturingOrderMaterialReportingTraceabilityData.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Shared.Reporting.SetManufacturingOrderOperationReportingTraceabilityData.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Shared.SerialNumberOrderRowInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Shared.SetAddressCountry.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Shared.SetBlobData.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Shared.SetCodingDimension.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Shared.SetComment.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Shared.SetProductGroupCodingRow.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Shared.UpdateStaggeredPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.Tags.RemoveTag.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.UpdateBusinessContactNoteHistory.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.VatRates.CreateVatRate.html",
+    "https://api.monitor.se/api/Monitor.API.Common.Commands.VatRates.UpdateVatRate.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.AddActivityCaseEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.AddCommunicationAddressCaseEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.CalculateCaseEntryCost.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.ChangeCaseEntryNumber.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.CreateActivityCaseEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.CreateCaseEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.CreateCaseEntryAdditionalCost.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.CreateCaseEntryFormReport.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.CreateCaseEntryLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.CreateCasePartLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.CreatePhaseCaseEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.RemoveActivityCaseEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.RemoveCaseEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.RemoveCaseEntryAdditionalCost.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.RemoveCaseEntryLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.RemoveCasePartLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.RemoveCommunicationAddressCaseEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.RemovePhaseCaseEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.SetCaseEntryManufacturingOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.SetCaseEntryPart.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.SetCaseEntryProductRecord.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.SetCaseEntryReplacementDelivery.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.UpdateActivityCaseEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.UpdateCaseEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.UpdateCaseEntryAdditionalCost.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.UpdateCaseEntryLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.UpdateCasePartLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.UpdateCommunicationAddressCaseEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.CaseEntries.UpdatePhaseCaseEntry.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.EmissionFactor.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Locations.AddStockPackage.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Locations.MoveStockPackage.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Locations.SetLocationBlockedStatus.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ManufacturingOrderMaterialReportings.UpdateManufacturingOrderMaterialReporting.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ManufacturingOrderMaterialReportings.UpdateManufacturingOrderOperationReporting.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.AddCustomerPartLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.AddDrawing.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.AddDrawingRevision.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.AddPartActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.AddPartUnitUsage.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.AddRevision.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.AddStaggeredCustomerPartLinkPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.AddStaggeredSupplierPartLinkPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.AddSupplierPartLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.AdjustFifoPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.ApplyPartTemplate.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.BufferLocation.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.ChangePartDefaultUnit.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.CheckDeliveryTime.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.CheckDeliveryTimeResponse.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.CreateHyperLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.CreatePart.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.CreatePartDefaultTransportLabel.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.CreatePartLocation.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.CreatePartOtherIdentity.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.CreateSupplierPartLinkPurchaseExpenseValues.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.GetFromPartLocations.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.GetPartBalanceInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.GetPartLocationReservations.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.GetToPartLocations.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.InactivatePart.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.MoveStockBalance.AddPartLocationRows.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.MoveStockBalance.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.PartBalanceInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.PartLocationInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.PartLocationInfoKey.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.PartLocationReservationInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.PartPurchaseControlDataRows.CreatePartPurchaseControlDataRow.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.PartPurchaseControlDataRows.RemovePartPurchaseControlDataRow.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.PartPurchaseControlDataRows.UpdatePartPurchaseControlDataRow.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.PartTemplateApplierSettings.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.ReactivatePart.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RefillPickLocation.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemoveCustomerPartLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemoveDrawing.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemoveDrawingRevision.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemoveHyperLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemovePart.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemovePartActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemovePartDefaultTransportLabel.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemovePartLocation.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemovePartOtherIdentity.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemovePartUnitUsage.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemoveRevision.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemoveStaggeredCustomerPartLinkPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemoveStaggeredSupplierPartLinkPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.RemoveSupplierPartLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.ReportRefillPickLocation.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.ReportStockCount.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.SavePartAs.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.SetActiveDrawingRevision.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.SetActiveRevision.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.SetActiveSupplierPartLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.SetPropertiesPart.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.SetReason.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.StockCount.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UnplannedArrivalStockMovement.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UnplannedWithdrawalStockMovement.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdateAlloyQuantity.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdateCustomerPartLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdateDrawing.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdateDrawingRevision.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdateHyperLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdatePartActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdatePartBlockedStatus.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdatePartDescription.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdatePartLocation.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdatePartOtherIdentity.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdatePartPlanningInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdatePartPurchaseExpenseValues.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdatePartUnitUsage.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdateRevision.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdateStaggeredCustomerPartLinkPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdateStaggeredSupplierPartLinkPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Parts.UpdateSupplierPartLink.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.PhysicalInventoryLists.ReportPhysicalInventoryRow.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.PriceChangeLogs.UpdatePriceChangeLog.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.PriceChangeLogs.UpdatePriceChangeLogBalancePerWarehouse.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.ChangeOwnerProductRecord.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.CreateAdditionalIDs.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.CreateOrUpdateProductRecordWithExtraFieldValues.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.CreateProductRecord.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.GetManufacturingProductRecordStructure.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.GetProductRecordPartLocations.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.GetProductRecordStructure.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.GetProductRecords.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.GetTraceabilityNodeStructure.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.ManufacturingProductRecordStructure.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.ProductRecordInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.ProductRecordPartLocationInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.ProductRecordStructure.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.RenameProductRecord.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.ReportProductRecordReading.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.SetProductRecordLifeCycle.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.SetProductRecordManufacturingOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.SetPropertiesProductRecord.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.TraceabilityIdentifierGeneratorProperties.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.UpdateDeliveryAddressProductRecord.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.UpdateStocktransaction.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.ProductRecords.UpdateTraceabilityStructure.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Putaway.GetPutawayLocationSuggestionResultRow.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Putaway.GetPutawayLocationSuggestions.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.Sales.InvoiceLogs.UpdateInvoiceLog.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.SalesForecasts.AddSalesForecastRow.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.SalesForecasts.CreateSalesForecast.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.SalesForecasts.RemoveSalesForecast.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.SalesForecasts.RemoveSalesForecastRow.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.SalesForecasts.SetPropertiesSalesForecast.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.SalesForecasts.UpdateSalesForecastRow.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.StockTransactions.GetStockTransactionFifoPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Inventory.Commands.StockTransactions.StockTransactionFifoPriceResponse.html",
+    "https://api.monitor.se/api/Monitor.API.MQ.Commands.Users.CreateUser.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaintenanceReportings.CreateMaintenanceReporting.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaintenanceReportings.MaintenanceReportingRowToReport.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaintenanceReportings.UpdateMaintenanceReporting.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrderMaterials.ConnectPurchaseOrderRowToMaterial.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrderMaterials.DisconnectPurchaseOrderRowFromMaterial.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrderMaterials.UpdateManufacturingOrderMaterial.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrderNodes.AddDrawing.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrderNodes.AddDrawingRevision.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrderNodes.RemoveDrawing.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrderNodes.RemoveDrawingRevision.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrderNodes.SetActiveDrawingRevision.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrderNodes.StepToManufacturingOrderNodeStatus.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrderNodes.UpdateDrawing.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrderNodes.UpdateDrawingRevision.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrderOperations.BundleOperations.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrderOperations.RemoveBundle.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.AddManufacturingOrderMaterial.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.AddManufacturingOrderOperation.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.CreateManufacturingOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.CreateManufacturingOrderFromCustomerOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.RemoveManufacturingOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.RemoveManufacturingOrderMaterial.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.RemoveManufacturingOrderOperation.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.RenameManufacturingOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.ReplanManufacturingOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.ReplanManufacturingOrderOperation.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.ReplanManufacturingOrderQuantity.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.ReplanPinnedManufacturingOrderOperation.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.SetManufacturingOrderOperationSupplier.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.SetManufacturingOrderOperationWorkCenter.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.SetPropertiesManufacturingOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.UpdateManufacturingOrderMaterialQuantity.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ManufacturingOrders.UpdateManufacturingOrderOperation.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialClearances.ClearManufacturingOrderMaterial.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialClearances.ClearManufacturingOrderMaterialLocation.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialClearances.ClearManufacturingOrderMaterialResponse.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialClearances.ClearManufacturingOrderMaterialRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialClearances.ClearManufacturingOrderResponse.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialClearances.UndoClearManufacturingOrderMaterial.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialClearances.UndoClearManufacturingOrderResponse.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialRowReferenceNumbers.CreateMaterialRowReferenceNumber.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialRowReferenceNumbers.RemoveMaterialRowReferenceNumber.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialRowReferenceNumbers.UpdateMaterialRowReferenceNumber.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialRows.RemoveMaterialRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialRows.SetMaterialRowPart.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialRows.UpdateMaterialRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MaterialRows.UpdateMaterialRowPreparationTerm.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MeasuringReportings.GetMeasuringReportingInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MeasuringReportings.MeasuringReportingBatchNumberToReport.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MeasuringReportings.MeasuringReportingFormInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MeasuringReportings.MeasuringReportingFormToReport.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MeasuringReportings.MeasuringReportingInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MeasuringReportings.MeasuringReportingRowInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MeasuringReportings.MeasuringReportingRowToReport.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MeasuringReportings.MeasuringReportingSelectionRowInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MeasuringReportings.MeasuringReportingSelectionRowToReport.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MeasuringReportings.MeasuringReportingSerialNumberToReport.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MeasuringReportings.MeasuringReportingToReport.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.MeasuringReportings.ReportMeasuring.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.OperationRows.AddOperationRowAlternativeWorkCenter.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.OperationRows.CreateOperationRowControlDataRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.OperationRows.RemoveOperationRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.OperationRows.RemoveOperationRowAlternativeWorkCenter.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.OperationRows.RemoveOperationRowControlDataRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.OperationRows.SetOperationRowSupplier.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.OperationRows.SetOperationRowWorkCenter.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.OperationRows.UpdateOperationRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.OperationRows.UpdateOperationRowAlternativeWorkCenter.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.OperationRows.UpdateOperationRowControlDataRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.OperationRows.UpdateOperationRowPreparationTerm.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.PickingLists.CreateManufacturingPickingList.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.PickingLists.DeleteManufacturingPickingList.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.PickingLists.ManufacturingPickingListLocationRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.PickingLists.ManufacturingPickingListMaterialReporting.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.PickingLists.ReportManufacturingPickingList.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.PickingLists.SetManufacturingPickingListMaterialRowValues.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Preparation.AddMaterialRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Preparation.AddOperationRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Preparation.CreatePreparation.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Printing.PrintDefaultShopPacket.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Printing.PrintShopPacket.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Printing.ShopPacketPrintSettings.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Reporting.AddLocationRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Reporting.AddMaterialRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Reporting.AddRejectionRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Reporting.AddTraceableMaterialRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Reporting.CreateManufacturingTransportLabel.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Reporting.CreateManufacturingTraveler.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Reporting.ExistingLocationRow.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Reporting.GetTraceabilityDataForReportManufacturingOrderOperation.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Reporting.PrintManufacturingTransportLabel.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Reporting.ReportManufacturingOrderMaterial.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Reporting.ReportManufacturingOrderOperation.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Reporting.ReportTraceableManufacturingOrderMaterial.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.ScheduleCycles.IsWithinScheduleCycle.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Tools.ToolReturn.CreateToolReturn.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Tools.ToolReturn.ReturnToolRequest.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Tools.ToolWithdrawal.CreateToolWithdrawal.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.Tools.ToolWithdrawal.LendToolRequest.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.WorkCenters.CreateWorkCenterCostFactorGroup.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.WorkCenters.GetWorkCenterCapacityAndLoading.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.WorkCenters.SetWorkCenterCostFactorGroupTypes.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.WorkCenters.UpdateWorkCenterCostFactorGroup.html",
+    "https://api.monitor.se/api/Monitor.API.Manufacturing.Commands.WorkCenters.WorkCenterCapacityAndLoading.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.ArrivalReporting.ArrivalLocation.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.ArrivalReporting.ArrivalProductRecord.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.ArrivalReporting.ArrivalResult.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.ArrivalReporting.ArrivalRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.ArrivalReporting.ReportArrival.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.BlanketOrderPurchases.AddBlanketOrderPurchaseRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.BlanketOrderPurchases.BlanketOrderPurchaseRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.BlanketOrderPurchases.BlanketOrderPurchaseSubRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.BlanketOrderPurchases.CreateBlanketOrderPurchase.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.BlanketOrderPurchases.RemoveBlanketOrderPurchase.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.BlanketOrderPurchases.RemoveBlanketOrderPurchaseRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.BlanketOrderPurchases.SetPropertiesBlanketOrderPurchase.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.BlanketOrderPurchases.UpdateBlanketOrderPurchaseRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.FormReports.CreateInquiry.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.FormReports.CreatePurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.FormReports.CreatePurchaseTransportLabel.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.FormReports.PrintInquiry.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.FormReports.PrintPurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.FormReports.PrintPurchaseTransportLabel.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.AddCommunicationAddressInquiry.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.AddInquiryRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.ChangeCurrencyInquiry.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.ChangeInquiryType.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.ChangeSupplierInquiry.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.CreateInquiry.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.GetRecipientOfTypeInquiry.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.RemoveCommunicationAddressInquiry.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.RemoveInquiryRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.SetInquiryRowCoding.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.SetPropertiesInquiry.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.UpdateCommunicationAddressInquiry.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.UpdateDeliveryAddressInquiry.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.UpdateInquiryRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Inquiries.UpdateMailingAddressInquiry.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrderAdvices.AddPurchaseOrderAdviceRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrderAdvices.CreatePurchaseOrderAdvice.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrderAdvices.PurchaseOrderAdviceRowProductRecordReporting.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrderAdvices.RemovePurchaseOrderAdvice.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrderAdvices.RemovePurchaseOrderAdviceRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrderAdvices.SetPropertiesPurchaseOrderAdvice.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrderAdvices.UpdatePurchaseOrderAdviceRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrderDeliveries.UpdatePurchaseOrderDeliveryRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.AddCommunicationAddressPurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.AddPurchaseOrderActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.AddPurchaseOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.AddSupplierActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.BlanketOrderPurchaseInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.BlanketOrderPurchaseRowInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.ChangeAccountGroupPurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.ChangeCurrencyPurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.ChangeOrderTypePurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.ChangeSupplierPurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.CreatePurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.GetAvailableBlanketOrderRows.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.GetRecipientOfTypePurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.RemoveCommunicationAddressPurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.RemovePurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.RemovePurchaseOrderActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.RemovePurchaseOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.RemoveSupplierActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.RenamePurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.SetIsConfirmedPurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.SetPropertiesPurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.SetPurchaseOrderRowBlanketOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.SetPurchaseOrderRowCoding.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.SetRowIsConfirmedPurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.UpdateCommunicationAddressPurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.UpdateDeliveryAddressPurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.UpdateMailingAddressPurchaseOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.UpdatePurchaseOrderActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.UpdatePurchaseOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.PurchaseOrders.UpdateSupplierActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.ReceivingInspection.ReceivingInspectionRejectionRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.ReceivingInspection.ReceivingInspectionResult.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.ReceivingInspection.ReceivingInspectionRow.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.ReceivingInspection.ReportReceivingInspection.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.AddBankAccountSupplier.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.AddCommunicationAddressSupplier.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.AddSupplierDeliveryAddress.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.AddSupplierReference.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.CreateOtherSupplierNumber.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.CreateSupplier.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.RemoveBankAccountSupplier.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.RemoveCommunicationAddressSupplier.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.RemoveOtherSupplierNumber.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.RemoveSupplierDeliveryAddress.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.RemoveSupplierReference.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.SetPropertiesSupplier.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.SetSupplierBlockedStatus.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.UpdateBankAccountAddressSupplier.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.UpdateBankAccountSupplier.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.UpdateCommunicationAddressSupplier.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.UpdateOtherSupplierNumber.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.UpdateSupplierDeliveryAddress.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.UpdateSupplierMailingAddress.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.Suppliers.UpdateSupplierReference.html",
+    "https://api.monitor.se/api/Monitor.API.Purchase.Commands.UndoArrivalReporting.UndoArrivalForRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.BlanketOrderSale.AddBlanketOrderSalesRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.BlanketOrderSale.ChangeCustomerBlanketOrderSales.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.BlanketOrderSale.ChangeOrderTypeBlanketOrderSales.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.BlanketOrderSale.CreateBlanketOrderSales.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.BlanketOrderSale.RemoveBlanketOrderSales.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.BlanketOrderSale.RemoveBlanketOrderSalesRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.BlanketOrderSale.SetPropertiesBlanketOrderSales.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.BlanketOrderSale.UpdateBlanketOrderSalesRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.BusinessOpportunities.AddBusinessOpportunityActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.BusinessOpportunities.RemoveBusinessOpportunityActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.BusinessOpportunities.UpdateBusinessOpportunityActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.AddInvoiceRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.ChangeCustomerCustomerOrderInvoice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.ChangeOrderAmountCustomerOrderInvoice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.CreateInvoice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.GetComparativePriceCustomerOrderInvoiceRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.InvoiceLocation.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.RemoveInvoice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.RemoveInvoiceRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.SetAftermarketProductRecordCustomerOrderInvoice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.SetCauseCode.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.SetCustomerOrderInvoiceRowCoding.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.SetPropertiesCustomerOrderInvoice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.SplitInvoiceRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrderInvoices.UpdateInvoiceRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.AddCommunicationAddressCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.AddCustomerOrderActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.AddCustomerOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.AddSerialNumberInformationToCustomerOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.BlanketOrderSalesInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.BlanketOrderSalesRowInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.ChangeAccountGroupCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.ChangeCurrencyCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.ChangeCustomerCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.ChangeOrderAmountCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.ChangeOrderTypeCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.ChangeVatGroupCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.ConfigureCustomerOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.CreateCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.CreatePurchaseOrderFromCustomerOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.DeliveryQuantityChange.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.GetAvailibleBlanketOrderRows.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.GetComparativePriceCustomerOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.GetQuantityChanges.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.GetRecipientOfTypeCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.GetSalesPriceInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.OrderRowQuantityChanges.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.PriceInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.ReleasePaymentPlanRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.RemoveCommunicationAddressCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.RemoveCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.RemoveCustomerOrderActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.RemoveCustomerOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.RemoveLinkedManufacturingOrderOnCustomerOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.RemoveLinkedPurchaseOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.SetAftermarketProductRecord.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.SetCustomerOrderRowBlanketOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.SetCustomerOrderRowCoding.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.SetCustomerOrderRowComparativePrice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.SetCustomerOrderRowTransferProfile.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.SetLinkedManufacturingOrderOnCustomerOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.SetLinkedPurchaseOrderRowOnCustomerOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.SetPropertiesCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.SetRemotePartConfigurationRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.SetRowPartCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.StaggeredPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.UpdateCommunicationAddressCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.UpdateCustomerOrderActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.UpdateCustomerOrderPaymentPlan.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.UpdateCustomerOrderPaymentPlanRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.UpdateCustomerOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.UpdateDeliveryAddressCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.UpdateInvoiceAddressCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.UpdateMailingAddressCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.CustomerOrders.ValidateCustomerOrderCoding.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.AddCommunicationAddressCustomer.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.AddCustomerActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.AddCustomerDeliveryAddress.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.AddCustomerReference.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.CreateCustomer.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.CreateInvoiceAddressCustomer.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.CreateVisitingAddressCustomer.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.RemoveCommunicationAddressCustomer.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.RemoveCustomer.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.RemoveCustomerActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.RemoveCustomerDeliveryAddress.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.RemoveCustomerReference.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.RemoveInvoiceAddressCustomer.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.RemoveVisitingAddressCustomer.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.ResetToCountryDocumentSettings.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.SetCustomerBlockedStatus.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.SetCustomerCountryDocumentSettings.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.SetPropertiesCustomer.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.UpdateCommunicationAddressCustomer.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.UpdateCustomerActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.UpdateCustomerDeliveryAddress.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.UpdateCustomerInvoiceAddress.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.UpdateCustomerMailingAddress.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.UpdateCustomerReference.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Customers.UpdateCustomerVisitingAddress.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.DeliveryReporting.DeliveryReportingLocation.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.DeliveryReporting.DeliveryResult.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.DeliveryReporting.DeliveryRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.DeliveryReporting.ReportDelivery.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.DeliveryReporting.UndoDeliveryForCustomerOrderDeliveryRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.DeliveryReporting.UndoDeliveryForCustomerOrderInvoice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.CreateAcknowledgement.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.CreateDeliveryNoteCollectionDelivered.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.CreateDeliveryNoteDelivered.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.CreateQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.CreateSalesAgreement.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.CreateSalesInvoice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.CreateSalesPackageList.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.CreateSalesPackageTransportLabel.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.CreateSalesPickingList.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.CreateSalesTransportLabel.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.CreateSalesTransportLabelA4.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.CreateTraceabilityProtocol.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.ISalesPackageCommand.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.PrintAcknowledgement.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.PrintDeliveryNoteCollectionDelivered.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.PrintDeliveryNoteDelivered.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.PrintQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.PrintSalesAgreement.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.PrintSalesInvoice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.PrintSalesPackageList.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.PrintSalesPackageTransportLabel.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.PrintSalesPickingList.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.PrintSalesTransportLabel.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.PrintSalesTransportLabelA4.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.FormReports.PrintTraceabilityProtocol.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.PartConfigurations.ClonePartConfigurationForCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.PartConfigurations.ClonePartConfigurationForQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.PartConfigurations.CreatePartConfigurationForCustomerOrder.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.PartConfigurations.CreatePartConfigurationForCustomerOrderRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.PartConfigurations.CreatePartConfigurationForQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.PartConfigurations.CreatePartConfigurationForQuoteRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.AddCommunicationAddressQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.AddQuoteActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.AddQuoteRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.AddRelatedQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.ChangeAccountGroupQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.ChangeCurrencyQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.ChangeCustomerQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.ChangeOrderAmountQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.ChangeQuoteTypeQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.ChangeVatGroupQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.ConfigureQuoteRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.CreateOrderFromQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.CreateQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.GetComparativePriceQuoteRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.GetRecipientOfTypeQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.RemoveCommunicationAddressQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.RemoveQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.RemoveQuoteActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.RemoveQuoteRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.RemoveRelatedQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.SaveQuoteAs.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.SetPrimaryRelatedQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.SetPropertiesQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.SetQuoteRowCoding.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.UpdateCommunicationAddressQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.UpdateDeliveryAddressQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.UpdateMailingAddressQuote.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.UpdateQuoteActivity.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.UpdateQuoteRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Quotes.ValidateQuoteCoding.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesAgreements.AddSalesAgreementRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesAgreements.CanCreateSalesAgreementUpwardAdjustment.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesAgreements.CanCreateSalesAgreementUpwardAdjustmentResult.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesAgreements.CanCreateSalesAgreementUpwardAdjustmentRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesAgreements.CanCreateSalesAgreementUpwardAdjustmentRowResult.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesAgreements.CreateSalesAgreement.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesAgreements.CreateSalesAgreementUpwardAdjustment.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesAgreements.CreateSalesAgreementUpwardAdjustmentRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesAgreements.SetPropertiesSalesAgreement.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesAgreements.SetStatusSalesAgreement.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesAgreements.UpdateSalesAgreementRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPickingListRowQuantities.SetSalesPickingListRowQuantity.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPickingLists.AddPackageRowToSalesPickingList.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPickingLists.ClearPackageRowOnPickingList.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPickingLists.CompletePackageRowOnPickingList.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPickingLists.ConfirmSalesPickingList.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPickingLists.PackageRowAddInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPickingLists.PackageRowPartLocationInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPickingLists.ReleaseSalesPickingList.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPickingLists.RemovePackageRowFromPickingList.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPickingLists.SalesPickingListRow.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPickingLists.UpdatePackagePartOnPickingList.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPickingLists.UpdatePackageRowOnPickingList.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPrice.AddStaggeredSalesPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPrice.ClearStaggeredSalesPrices.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPrice.CreateSalesPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPrice.GetCustomerPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPrice.GetPriceListPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPrice.GetPriceListPriceInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPrice.RemoveStaggeredSalesPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPrice.SalesPriceInfo.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPrice.SetPropertiesSalesPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.SalesPrice.UpdateStaggeredSalesPrice.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shared.SumRowDetail.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shared.ValidateCoding.CodingAccountValidationResult.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shared.ValidateCoding.CodingElementValidationResult.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shared.ValidateCoding.SalesCodingValidationResult.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shared.ValidateCoding.SalesRowValidationResult.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shared.ValidateCoding.SalesRowValidationTemplate.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shared.ValidateCoding.ValidateSalesCodingMessage.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shared.ValidateCoding.ValidateSalesCodingResponse.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shared.ValidateCoding.ValidateSalesCodingSummary.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shipments.AddCustomerOrderSourceToShipment.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shipments.AddShipmentPackageRowInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shipments.CreateCustomerOrderShipment.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shipments.CustomerOrderShipmentInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shipments.GetShipmentTrackingLink.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shipments.SetPropertiesShipment.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shipments.ShipmentTrackingLinkResponse.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.Shipments.UpdateShipmentPackageInformation.html",
+    "https://api.monitor.se/api/Monitor.API.Sales.Commands.ShippingInformations.UpdateCustomerOrderShippingInformationRow.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.AttendanceGroupSetting.UpdateAttendanceGroupSettings.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.PersonWorkCenter.CreatePersonWorkCenter.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.PersonWorkCenter.RemovePersonWorkCenter.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.PersonWorkCenter.UpdatePersonWorkCenter.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Persons.CloseActiveWorkRecordings.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Persons.CreatePlannedAbsence.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Persons.RemovePlannedAbsence.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Persons.UpdatePlannedAbsence.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.AbsencePeriod.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.AddNewIndirectWorkRecording.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.AddNewOrderBoundRecording.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.AddStandbyWork.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.AdjustExistingIndirectWorkRecording.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.AdjustOrderBoundWork.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.AdjustProjectActivityReporting.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.AdjustRecordingDay.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.AppendRecordingDayMessage.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.AttendanceAdjustment.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.AttendanceRecordingTemplate.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.CalculateWorkTime.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.CalculateWorkTimePerDay.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.ClearStandbyWork.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.ClockIn.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.ClockOut.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.CreateAdditionRecording.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.CreateProjectActivityReporting.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.DeleteAdditionRecording.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.DeleteRecordingInterval.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.DeleteStandbyWork.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.DeleteWorkRecordingInterval.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.GetAttendanceRecordingTemplate.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.GetTraceabilityDataForReportOrderBoundWork.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.ProjectActivityReportingResult.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.ReportOrderBoundWork.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.SetApproveRecordingDay.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.SetSchedule.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.StartIndirectWork.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.StartOrderBoundWork.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.StartStandbyWork.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.StopIndirectWork.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.WorkTimePerDayResponse.html",
+    "https://api.monitor.se/api/Monitor.API.TimeRecording.Commands.Recording.WorkTimeResponse.html"
+  ]
+}

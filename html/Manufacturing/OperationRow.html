@@ -1,0 +1,411 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OperationRows | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="OperationRows | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Manufacturing.OperationRow">
+<h1 id="operationrows">OperationRows</h1>
+
+<p><em>Queryable, Introduced in version 2.18</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Manufacturing/OperationRows
+</code></pre>
+<p>Represents an operation row.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">6BC59318-2E5D-4097-954D-678C90EACD77
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show part
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the material row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OperationNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The operation number of the operation row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SubcontractPartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the operation row's subcontract part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SupplierId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the operation row's supplier.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>WorkCenterId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the operation's row work center.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsSubcontractor</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the operation is subcontracted.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the operation row's comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The comment of the operation row.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The translated description of the operation row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>TimeCode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The time code specified for the operation row.<br><br><ul><li>NotInitialized: 0</li><li>Calculated: 1</li><li>Studied: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>TimeUnit</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The time unit specified for the operation row.<br><br><ul><li>Hours: 0</li><li>Minutes: 1</li><li>Seconds: 2</li><li>QuantityPerHour: 3</li><li>QuantityPerMinute: 4</li><li>QuantityPerSecond: 5</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The setup time of the operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The unit time of the operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ExtraQuantityPercent</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The extra quantity percentage of the operation row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>NumberOfFlows</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The number of flows specified for the operation row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OverlapPercent</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The overlap percentage of the operation row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitStaffingFactor</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The unit staffing factor of the operation row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupStaffingFactor</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The setup staffing factor of the operation row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The setup quantity of the operation row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsForCalculationOnly</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the operation row is to be used for calculations only.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>QueueTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>The queue time of the operation.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UseQueueTimeWholeDayRoundOf</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>?</td>
+<td>Specifies if queue time should be rounded to full day.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitCostFactorId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the unit cost factor of the operation row.<br><br>References WorkCenterCostFactorGroup<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupCostFactorId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the setup cost factor of the operation row.<br><br>References WorkCenterCostFactorGroup<br></td>
+<td></td>
+</tr>
+<tr>
+<td>FixedLeadTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>The fixed lead time of the operation row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupCost</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The setup cost of the operation row. This value is only available if the operation<br>is a subcontract.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupCostCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the setup cost currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitCost</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The unit cost of the operation row. This value is only available if the operation<br>is a subcontract.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitCostCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the unit cost currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>TransportCost</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The transport cost of the operation represented in the company currency. This value is only available if<br>the operation is a subcontract.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SupplierPartNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The supplier part number of the operation subcontractor part. This value is only available if the<br>operation is a subcontract.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliverToEndCustomer</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Whether the subcontractor will deliver straight to the end customer or not. This value is only available<br>if the operation is a subcontract.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ExtraFields</td>
+<td><a class="xref" href="Monitor.API.Common.ExtraField.html">ExtraFields</a>[]</td>
+<td>The extra fields of the operation row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 22.5</td>
+</tr>
+<tr>
+<td>ControlDataRows</td>
+<td><a class="xref" href="Monitor.API.Manufacturing.OperationRowControlDataRow.html">OperationRowControlDataRows</a>[]</td>
+<td>The control data rows.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 22.5</td>
+</tr>
+<tr>
+<td>AlternativeOperationRows</td>
+<td><a class="xref" href="Monitor.API.Manufacturing.AlternativeOperationRow.html">AlternativeOperationRows</a>[]</td>
+<td>The alternative operation rows (alternative work centers) of the operation row.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 26.5</td>
+</tr>
+<tr>
+<td>PreparationTermType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>PreparationTermType of the Operation Row.<br></td>
+<td>Introduced in version 24.4</td>
+</tr>
+<tr>
+<td>PreparationTermFromValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>PreparationTermFromValue of the Operation Row.<br></td>
+<td>Introduced in version 24.4</td>
+</tr>
+<tr>
+<td>PreparationTermToValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>PreparationTermToValue of the Operation Row.<br></td>
+<td>Introduced in version 24.4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;OperationNumber&quot;: 0,
+  &quot;SubcontractPartId&quot;: null,
+  &quot;SupplierId&quot;: null,
+  &quot;WorkCenterId&quot;: 0,
+  &quot;IsSubcontractor&quot;: false,
+  &quot;CommentId&quot;: null,
+  &quot;Comment&quot;: null,
+  &quot;Description&quot;: null,
+  &quot;TimeCode&quot;: 0,
+  &quot;TimeUnit&quot;: 0,
+  &quot;SetupTime&quot;: &quot;00:00:00&quot;,
+  &quot;UnitTime&quot;: &quot;00:00:00&quot;,
+  &quot;ExtraQuantityPercent&quot;: 0.0,
+  &quot;NumberOfFlows&quot;: null,
+  &quot;OverlapPercent&quot;: 0.0,
+  &quot;UnitStaffingFactor&quot;: null,
+  &quot;SetupStaffingFactor&quot;: null,
+  &quot;SetupQuantity&quot;: 0.0,
+  &quot;IsForCalculationOnly&quot;: false,
+  &quot;QueueTime&quot;: null,
+  &quot;UseQueueTimeWholeDayRoundOf&quot;: null,
+  &quot;UnitCostFactorId&quot;: null,
+  &quot;SetupCostFactorId&quot;: null,
+  &quot;FixedLeadTime&quot;: null,
+  &quot;SetupCost&quot;: null,
+  &quot;SetupCostCurrencyId&quot;: null,
+  &quot;UnitCost&quot;: null,
+  &quot;UnitCostCurrencyId&quot;: null,
+  &quot;TransportCost&quot;: null,
+  &quot;SupplierPartNumber&quot;: null,
+  &quot;DeliverToEndCustomer&quot;: false,
+  &quot;ExtraFields&quot;: null,
+  &quot;ControlDataRows&quot;: null,
+  &quot;AlternativeOperationRows&quot;: null,
+  &quot;PreparationTermType&quot;: null,
+  &quot;PreparationTermFromValue&quot;: null,
+  &quot;PreparationTermToValue&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

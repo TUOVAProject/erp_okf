@@ -1,0 +1,649 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CustomerOrderInvoices | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CustomerOrderInvoices | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Sales.CustomerOrderInvoice">
+<h1 id="customerorderinvoices">CustomerOrderInvoices</h1>
+
+<p><em>Queryable, Introduced in version 2.33</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Sales/CustomerOrderInvoices
+</code></pre>
+<p>Represents a customer order invoice.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">61435D1A-FCFC-4DA4-B199-03BDA9E30A9B
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show customer orders
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the customer order invoice.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Status</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The status of the customer order invoice.<br><br><ul><li>Canceled: 0</li><li>Registered: 1</li><li>Preliminary: 2</li><li>Waiting: 3</li><li>InvoiceApproved: 8</li><li>InvoicePrinted: 9</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryNoteNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The delivery note number of the customer order invoice.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryIndex</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The delivery index of the customer order invoice.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderDeliveryNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The order delivery number of the customer order invoice.<br><br><ul><li>Max length is 18</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PickingListId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the picking list of the customer order invoice.<br><br>References PickingList<br></td>
+<td></td>
+</tr>
+<tr>
+<td>WarehouseId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the warehouse that the customer order invoice belongs to.<br>            <br>References <a class="xref" href="Monitor.API.Common.Warehouse.html">Warehouses</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Version</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The version of the customer order invoice.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ActiveDeliveryAddressCustomerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer source of the active delivery address.<br>            <br>References <a class="xref" href="Monitor.API.Sales.Customer.html">Customers</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ActiveDeliveryAddressSupplierId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the supplier source of the active delivery address.<br>            <br>References <a class="xref" href="Monitor.API.Purchase.Supplier.html">Suppliers</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ActiveDeliveryAddressCompanyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the company source of the active delivery address.<br>            <br>References Company<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>SourceOfAlternativeDeliveryAddresses</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies the source of the customer order invoice delivery address.<br><br><ul><li>CurrentCustomer: 0</li><li>Customer: 1</li><li>Supplier: 2</li><li>Company: 3</li><li>CurrentSupplier: 4</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ConsigneeReferenceId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the consignee reference of the customer order invoice.<br>            <br>References <a class="xref" href="Monitor.API.Common.BusinessContactReference.html">BusinessContactReferences</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ConsigneeReference</td>
+<td><a class="xref" href="Monitor.API.Common.BusinessContactReference.html">BusinessContactReferences</a></td>
+<td>The consignee reference on the customer order invoice.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ProformaStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The proforma status of the customer order invoice.<br><br><ul><li>None: 0</li><li>ApprovedForPrint: 1</li><li>Printed: 2</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of project of the customer order invoice.<br>            <br>References <a class="xref" href="Monitor.API.Common.Project.html">Projects</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>DeliveryAddressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the delivery address of the customer order invoice.<br>            <br>References <a class="xref" href="Monitor.API.Common.Address.html">Addresses</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>DeliveryAddress</td>
+<td><a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></td>
+<td>The delivery address of the customer order invoice.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>InvoiceAddressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the invoice address of the customer order invoice.<br>            <br>References <a class="xref" href="Monitor.API.Common.Address.html">Addresses</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>InvoiceAddress</td>
+<td><a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></td>
+<td>The invoice address of the customer order invoice.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>OurReferenceId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of our reference for the customer order invoice.<br>            <br>Reference <a class="xref" href="Monitor.API.Common.Person.html">Persons</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>OurReferenceName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The name of our reference for the customer order invoice.<br><br><ul><li>Max length is 80</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>BusinessContactReferenceId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer's reference for the customer order invoice.<br>            <br>References <a class="xref" href="Monitor.API.Common.BusinessContactReference.html">BusinessContactReferences</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>BusinessContactReferenceName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The name of the customer's reference for the customer order invoice.<br><br><ul><li>Max length is 80</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>GoodsLabel</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The goods label of the customer order invoice.<br><br><ul><li>Max length is 80</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>InvoiceStatusPending</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the invoice status is pending on the customer order invoice.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>IsPartOfComprehensiveInvoice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the customer order invoice is part of a comprehensive invoice.<br><br><ul><li>Obsolete since version 2.41 (Replaced by ComprehensiveInvoiceGroupingMode)</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ComprehensiveInvoiceGroupingMode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies if the customer order invoice is part of a comprehensive invoice, and how they are grouped.<br><br><ul><li>None: 0</li><li>Customer: 1</li><li>Order: 2</li><li>DeliveryNote: 3</li></ul></td>
+<td>Introduced in version 2.41</td>
+</tr>
+<tr>
+<td>HasInvoicingCharge</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the customer order invoice involves an invoicing charge.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>IsFreeDeliveryMonth</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the customer order invoice have a free delivery month.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>GoodsAddressNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The goods address number of the customer order invoice.<br><br><ul><li>Max length is 80</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>VatNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The VAT number of the customer order invoice.<br><br><ul><li>Max length is 80</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>Dock</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The dock of the customer order invoice.<br><br><ul><li>Max length is 35</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>DeliveryInstruction</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The delivery instruction of the customer order invoice.<br><br><ul><li>Max length is 80</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>InvoicePrintoutMethod</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>Specifies the printout method for the customer order invoice.<br><br><ul><li>Printer: 0</li><li>Email: 1</li><li>Edi: 2</li><li>None: 9</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>PrintProformaInvoiceVia</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The preferred Proforma printout method of the customer order invoice.<br><br><ul><li>Printer: 0</li><li>Email: 1</li><li>Edi: 2</li><li>None: 9</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>EInvoiceExportMode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The preffered electronic invoice export mode to use on this customer order invoice.<br><br><ul><li>No: 0</li><li>Yes: 1</li><li>YesIncludingPrintoutOrEmail: 2</li><li>SaveToFile: 3</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The priority of the customer order invoice.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>DirectlyRegistered</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the customer order invoice is directly registered.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>PartialInvoiceType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The partial invoice type of the customer order invoice.<br><br><ul><li>NotInitialized: 0</li><li>InAdvance: 1</li><li>Delivery: 2</li><li>InArrears: 3</li><li>Text: 4</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>FormReportConfigurationId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer order invoice's form report configuration.<br><br>References <a class="xref" href="Monitor.API.Common.FormReportConfiguration.html">FormReportConfigurations</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>DeliveryNoteCreationDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The delivery note creation date on the customer order invoice.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ExcludeFromEdi</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the customer order invoice will be excluded from EDI.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>SellerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the seller on the customer order invoice.<br>            <br>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ShippingInformationId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the shipping information on the customer order invoice.<br><br>References CustomerOrderShippingInformation<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ProformaNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The proforma number of the customer order invoice.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ProformaDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The proforma date of the customer order invoice.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>DestinationForDeliveryTerm</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The destination for delivery term for the customer order invoice.<br><br><ul><li>Max length is 35</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>CandidateDebitInvoiceId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier to the accounts receivable linked to the debit invoice candidate for this customer order invoice.<br><br>References AccountsReceivable.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ConsigneeReferenceName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The consignee reference name of the customer order invoice.<br><br><ul><li>Max length is 80</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>LedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier to the ledger's accounts receivable of the customer order invoice.<br><br>References AccountsReceivable.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>BusinessContactOrderId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier to the customre order of the customer order invoice.<br><br>References <a class="xref" href="Monitor.API.Sales.CustomerOrder.html">CustomerOrders</a>.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>InvoiceBusinessContactId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier to the customer on the customer order invoice.<br><br>References <a class="xref" href="Monitor.API.Sales.Customer.html">Customers</a>.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>AccountGroupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the account group of the customer order invoice.<br>            <br>References <a class="xref" href="Monitor.API.Sales.CustomerAccountGroup.html">CustomerAccountGroups</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>AccountGroup</td>
+<td><a class="xref" href="Monitor.API.Sales.CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td>The account group on the customer order invoice.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>VatGroupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the VAT group that applies for the customer order invoice.<br>            <br>References <a class="xref" href="Monitor.API.Common.VatGroup.html">VatGroups</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>PaymentTermId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the payment term of the customer order invoice.<br>            <br>References <a class="xref" href="Monitor.API.Common.PaymentTerm.html">PaymentTerms</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>PaymentTerm</td>
+<td><a class="xref" href="Monitor.API.Common.PaymentTerm.html">PaymentTerms</a></td>
+<td>The payment term of the customer order invoice.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>PaymentTermDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The payment term description of the customer order invoice.<br><br><ul><li>Max length is 35</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>GracePeriodInDays</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The grace period in days of the customer order invoice.<br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>DeliveryMethodId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the delivery method of the customer order invoice.<br>            <br>References <a class="xref" href="Monitor.API.Common.DeliveryMethod.html">DeliveryMethods</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>DeliveryTermId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the delivery term of the customer order invoices.<br>            <br>References <a class="xref" href="Monitor.API.Common.DeliveryTerm.html">DeliveryTerms</a><br></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>DeliveryTermDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The delivery term description of the customer order invoice.<br><br><ul><li>Max length is 35</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>DeliveryMethodDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The delivery method description of the customer order invoice.<br><br><ul><li>Max length is 35</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>ShipmentPayer</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies who is responsible for the shipment payment for the customer order invoce.<br><br><ul><li>BuyerPays: 1</li><li>SellerPays: 2</li><li>OtherPayer: 3</li><li>Incoterms: 4</li></ul></td>
+<td>Introduced in version 2.34</td>
+</tr>
+<tr>
+<td>DeliveryRows</td>
+<td><a class="xref" href="Monitor.API.Sales.CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a>[]</td>
+<td>The customer order delivery rows.<br><br><a class="xref" href="Monitor.API.Sales.CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a><br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.36</td>
+</tr>
+<tr>
+<td>InvoiceType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Invoice type of customer order invoice<br><br><ul><li>Standard: 1</li><li>Internal: 2</li><li>CashReceipt: 3</li><li>Interest: 4</li><li>OnAccount: 5</li><li>DebitNote: 6</li><li>ServiceTax: 7</li><li>CorrectionInvoice: 8</li><li>CollectiveCorrectionInvoice: 9</li></ul></td>
+<td>Introduced in version 2.53</td>
+</tr>
+<tr>
+<td>EditedOrderAmountExcludingVat</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The edited order amount excluding VAT for the customer order invoice.<br></td>
+<td>Introduced in version 24.8</td>
+</tr>
+<tr>
+<td>EditedOrderAmountExcludingVatCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The currency of the edited order amount excluding VAT for the customer order invoice.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td>Introduced in version 24.8</td>
+</tr>
+<tr>
+<td>EditedOrderAmountDiscount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The edited order amount discount in percent for the customer order invoice.<br></td>
+<td>Introduced in version 24.8</td>
+</tr>
+<tr>
+<td>TypeOfOrderAmountEntered</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The type of edited order value entered on the customer order invoice.<br><br><ul><li>Percent: 1</li><li>Amount: 2</li></ul></td>
+<td>Introduced in version 24.8</td>
+</tr>
+<tr>
+<td>Factoring</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if factoring is activated for the customer order invoice.<br></td>
+<td>Introduced in version 25.7</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;Status&quot;: 0,
+  &quot;DeliveryNoteNumber&quot;: 0,
+  &quot;DeliveryIndex&quot;: 0,
+  &quot;OrderDeliveryNumber&quot;: null,
+  &quot;PickingListId&quot;: null,
+  &quot;WarehouseId&quot;: 0,
+  &quot;Version&quot;: 0,
+  &quot;ActiveDeliveryAddressCustomerId&quot;: null,
+  &quot;ActiveDeliveryAddressSupplierId&quot;: null,
+  &quot;ActiveDeliveryAddressCompanyId&quot;: null,
+  &quot;SourceOfAlternativeDeliveryAddresses&quot;: 0,
+  &quot;ConsigneeReferenceId&quot;: null,
+  &quot;ConsigneeReference&quot;: null,
+  &quot;ProformaStatus&quot;: 0,
+  &quot;ProjectId&quot;: null,
+  &quot;DeliveryAddressId&quot;: null,
+  &quot;DeliveryAddress&quot;: null,
+  &quot;InvoiceAddressId&quot;: null,
+  &quot;InvoiceAddress&quot;: null,
+  &quot;OurReferenceId&quot;: null,
+  &quot;OurReferenceName&quot;: null,
+  &quot;BusinessContactReferenceId&quot;: null,
+  &quot;BusinessContactReferenceName&quot;: null,
+  &quot;GoodsLabel&quot;: null,
+  &quot;InvoiceStatusPending&quot;: false,
+  &quot;IsPartOfComprehensiveInvoice&quot;: false,
+  &quot;ComprehensiveInvoiceGroupingMode&quot;: 0,
+  &quot;HasInvoicingCharge&quot;: false,
+  &quot;IsFreeDeliveryMonth&quot;: false,
+  &quot;GoodsAddressNumber&quot;: null,
+  &quot;VatNumber&quot;: null,
+  &quot;Dock&quot;: null,
+  &quot;DeliveryInstruction&quot;: null,
+  &quot;InvoicePrintoutMethod&quot;: null,
+  &quot;PrintProformaInvoiceVia&quot;: null,
+  &quot;EInvoiceExportMode&quot;: null,
+  &quot;Priority&quot;: 0,
+  &quot;DirectlyRegistered&quot;: false,
+  &quot;PartialInvoiceType&quot;: null,
+  &quot;FormReportConfigurationId&quot;: null,
+  &quot;DeliveryNoteCreationDate&quot;: null,
+  &quot;ExcludeFromEdi&quot;: false,
+  &quot;SellerId&quot;: null,
+  &quot;ShippingInformationId&quot;: null,
+  &quot;ProformaNumber&quot;: null,
+  &quot;ProformaDate&quot;: null,
+  &quot;DestinationForDeliveryTerm&quot;: null,
+  &quot;CandidateDebitInvoiceId&quot;: null,
+  &quot;ConsigneeReferenceName&quot;: null,
+  &quot;LedgerId&quot;: null,
+  &quot;BusinessContactOrderId&quot;: 0,
+  &quot;InvoiceBusinessContactId&quot;: 0,
+  &quot;AccountGroupId&quot;: 0,
+  &quot;AccountGroup&quot;: null,
+  &quot;VatGroupId&quot;: 0,
+  &quot;PaymentTermId&quot;: null,
+  &quot;PaymentTerm&quot;: null,
+  &quot;PaymentTermDescription&quot;: null,
+  &quot;GracePeriodInDays&quot;: null,
+  &quot;DeliveryMethodId&quot;: null,
+  &quot;DeliveryTermId&quot;: null,
+  &quot;DeliveryTermDescription&quot;: null,
+  &quot;DeliveryMethodDescription&quot;: null,
+  &quot;ShipmentPayer&quot;: 0,
+  &quot;DeliveryRows&quot;: null,
+  &quot;InvoiceType&quot;: 0,
+  &quot;EditedOrderAmountExcludingVat&quot;: null,
+  &quot;EditedOrderAmountExcludingVatCurrencyId&quot;: null,
+  &quot;EditedOrderAmountDiscount&quot;: null,
+  &quot;TypeOfOrderAmountEntered&quot;: null,
+  &quot;Factoring&quot;: false
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

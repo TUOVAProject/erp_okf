@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AccrualAccountings | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="AccrualAccountings | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Accounting.AccrualAccounting">
+<h1 id="accrualaccountings">AccrualAccountings</h1>
+
+<p><em>Queryable, Introduced in version 2.27</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Accounting/AccrualAccountings
+</code></pre>
+<p>Represents a accrual accounting.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">39C3A08C-F566-4259-90FF-6C58EDD97781
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show accrual
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the accrual accounting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Number</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The human readable number on the accrual accounting.<br><br><ul><li>Max length is 20</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Text</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The human readable text on the accrual accounting.<br><br><ul><li>Max length is 100</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Type</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Type of accrual accounting.<br><br><ul><li>AccountsPayableBookingRow: 1</li><li>VoucherRow: 2</li><li>ReverseVoucher: 3</li><li>FreeBooking: 4</li><li>SalesAgreement: 5</li><li>SupplierAgreement: 6</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>StartDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>Start date of the accrual accounting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AccountsPayableId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the accounts payable.<br><br>References <a class="xref" href="Monitor.API.Accounting.AccountsPayable.html">AccountsPayables</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>AccountsPayableBookingRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the accounts payable booking row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>VoucherId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>VoucherRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the voucher row.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the accrual accounting comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The comment on the accrual accounting.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the accrual accounting cancellation comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The cancellation comment on the accrual accounting.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>IsCancelled</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the accrual accounting is cancelled.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>BookingId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the booking.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Rows</td>
+<td><a class="xref" href="Monitor.API.Accounting.AccrualAccountingRow.html">AccrualAccountingRows</a>[]</td>
+<td>The accrual accounting rows.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BookingRows</td>
+<td><a class="xref" href="Monitor.API.Accounting.BookingRow.html">BookingRows</a>[]</td>
+<td>The booking rows on the accrual accounting.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>AccountsPayableBookingRow</td>
+<td><a class="xref" href="Monitor.API.Accounting.BookingRow.html">BookingRows</a></td>
+<td>The booking row of the accrual accounting's account payable.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;Number&quot;: null,
+  &quot;Text&quot;: null,
+  &quot;Type&quot;: 0,
+  &quot;StartDate&quot;: null,
+  &quot;AccountsPayableId&quot;: null,
+  &quot;AccountsPayableBookingRowId&quot;: null,
+  &quot;VoucherId&quot;: null,
+  &quot;VoucherRowId&quot;: null,
+  &quot;CommentId&quot;: null,
+  &quot;Comment&quot;: null,
+  &quot;CancelCommentId&quot;: null,
+  &quot;CancelComment&quot;: null,
+  &quot;IsCancelled&quot;: false,
+  &quot;BookingId&quot;: 0,
+  &quot;Rows&quot;: null,
+  &quot;BookingRows&quot;: null,
+  &quot;AccountsPayableBookingRow&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

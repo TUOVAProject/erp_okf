@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PartPurchaseExpenseValues | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PartPurchaseExpenseValues | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Inventory.PartPurchaseExpenseValues">
+<h1 id="partpurchaseexpensevalues">PartPurchaseExpenseValues</h1>
+
+<p><em>Queryable, Introduced in version 2.48</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Inventory/PartPurchaseExpenseValues
+</code></pre>
+<p>Represents a part purchase expense values entity.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">1e748c37-d10b-44e7-889b-da35ed77c464
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show basic data for part
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the part purchase expense values.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the part that part purchase expense values belongs to.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense1PercentOfPriceValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense1 (default name: Packaging) - percent of price.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense1PerEachValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense1 (default name: Packaging) - per each.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense2PercentOfPriceValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense2 (default name: Freight) - percent of price.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense2PerEachValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense2 (default name: Freight) - per each.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense3PercentOfPriceValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense3 (default name: Customs duty) - percent of price.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense3PerEachValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense3 (default name: Customs duty) - per each.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CertificatePercentOfPriceValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Certificate - percent of price.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CertificatePerEachValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Certificate - per each.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CertificatePerKgValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Certificate - per kg.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CertificatePerPackageValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Certificate - per package.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CertificatePerOrderValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Certificate - per order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CertificatePerQuantityValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Certificate - per quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CertificateQuantityValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Certificate - quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense1PerKgValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense1 (default name: Packaging) - per kg.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense1PerPackageValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense1 (default name: Packaging) - per package.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense1PerOrderValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense1 (default name: Packaging) - per order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense1PerQuantityValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense1 (default name: Packaging) - per quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense1QuantityValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense1 (default name: Packaging) - quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense2PerKgValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense2 (default name: Freight) - per kg.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense2PerPackageValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense2 (default name: Freight) - per package.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense2PerOrderValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense2 (default name: Freight) - per order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense2PerQuantityValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense2 (default name: Freight) - per quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense2QuantityValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense2 (default name: Freight) - quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense3PerKgValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense3 (default name: Customs duty) - per kg.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense3PerPackageValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense3 (default name: Customs duty) - per package.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense3PerOrderValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense3 (default name: Customs duty) - per order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense3PerQuantityValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense3 (default name: Customs duty) - per quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense3QuantityValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense3 (default name: Customs duty) - quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense4PercentOfPriceValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense4 (default name: Tooling) - percent of price.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense4PerEachValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense4 (default name: Tooling) - per each.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense4PerKgValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense4 (default name: Tooling) - per kg.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense4PerPackageValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense4 (default name: Tooling) - per package.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense4PerOrderValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense4 (default name: Tooling) - per order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense4PerQuantityValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense4 (default name: Tooling) - per quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense4QuantityValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense4 (default name: Tooling) - quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense5PercentOfPriceValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense5 (default name: Other) - percent of price.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense5PerEachValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense5 (default name: Other) - per each.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense5PerKgValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense5 (default name: Other) - per kg.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense5PerPackageValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense5 (default name: Other) - per package.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense5PerOrderValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense5 (default name: Other) - per order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense5PerQuantityValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense5 (default name: Other) - per quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Expense5QuantityValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Expense5 (default name: Other) - quantity.<br></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;PartId&quot;: 0,
+  &quot;Expense1PercentOfPriceValue&quot;: 0.0,
+  &quot;Expense1PerEachValue&quot;: 0.0,
+  &quot;Expense2PercentOfPriceValue&quot;: 0.0,
+  &quot;Expense2PerEachValue&quot;: 0.0,
+  &quot;Expense3PercentOfPriceValue&quot;: 0.0,
+  &quot;Expense3PerEachValue&quot;: 0.0,
+  &quot;CertificatePercentOfPriceValue&quot;: 0.0,
+  &quot;CertificatePerEachValue&quot;: 0.0,
+  &quot;CertificatePerKgValue&quot;: 0.0,
+  &quot;CertificatePerPackageValue&quot;: 0.0,
+  &quot;CertificatePerOrderValue&quot;: 0.0,
+  &quot;CertificatePerQuantityValue&quot;: 0.0,
+  &quot;CertificateQuantityValue&quot;: 0.0,
+  &quot;Expense1PerKgValue&quot;: 0.0,
+  &quot;Expense1PerPackageValue&quot;: 0.0,
+  &quot;Expense1PerOrderValue&quot;: 0.0,
+  &quot;Expense1PerQuantityValue&quot;: 0.0,
+  &quot;Expense1QuantityValue&quot;: 0.0,
+  &quot;Expense2PerKgValue&quot;: 0.0,
+  &quot;Expense2PerPackageValue&quot;: 0.0,
+  &quot;Expense2PerOrderValue&quot;: 0.0,
+  &quot;Expense2PerQuantityValue&quot;: 0.0,
+  &quot;Expense2QuantityValue&quot;: 0.0,
+  &quot;Expense3PerKgValue&quot;: 0.0,
+  &quot;Expense3PerPackageValue&quot;: 0.0,
+  &quot;Expense3PerOrderValue&quot;: 0.0,
+  &quot;Expense3PerQuantityValue&quot;: 0.0,
+  &quot;Expense3QuantityValue&quot;: 0.0,
+  &quot;Expense4PercentOfPriceValue&quot;: 0.0,
+  &quot;Expense4PerEachValue&quot;: 0.0,
+  &quot;Expense4PerKgValue&quot;: 0.0,
+  &quot;Expense4PerPackageValue&quot;: 0.0,
+  &quot;Expense4PerOrderValue&quot;: 0.0,
+  &quot;Expense4PerQuantityValue&quot;: 0.0,
+  &quot;Expense4QuantityValue&quot;: 0.0,
+  &quot;Expense5PercentOfPriceValue&quot;: 0.0,
+  &quot;Expense5PerEachValue&quot;: 0.0,
+  &quot;Expense5PerKgValue&quot;: 0.0,
+  &quot;Expense5PerPackageValue&quot;: 0.0,
+  &quot;Expense5PerOrderValue&quot;: 0.0,
+  &quot;Expense5PerQuantityValue&quot;: 0.0,
+  &quot;Expense5QuantityValue&quot;: 0.0
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

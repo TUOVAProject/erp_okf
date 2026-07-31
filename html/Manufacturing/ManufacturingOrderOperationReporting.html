@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ManufacturingOrderOperationReportings | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ManufacturingOrderOperationReportings | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Manufacturing.ManufacturingOrderOperationReporting">
+<h1 id="manufacturingorderoperationreportings">ManufacturingOrderOperationReportings</h1>
+
+<p><em>Queryable, Introduced in version 24.9</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Manufacturing/ManufacturingOrderOperationReportings
+</code></pre>
+<p>Represents a manufacturing order operation reporting.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">F134C530-0C75-432C-8B76-8065A897202D
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show manufacturing orders
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OperationId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the operation that the manufacturing order operation reporting applies.<br><br><ul><li>References <a class="xref" href="Monitor.API.Manufacturing.ManufacturingOrderOperation.html">ManufacturingOrderOperations</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Quantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The quantity of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>The setup time of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>The unit time of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>WorkCenterId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the work center that the manufacturing order operation reporting applies.<br><br><ul><li>References <a class="xref" href="Monitor.API.Manufacturing.WorkCenter.html">WorkCenters</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>EmployeeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the employee that make the manufacturing order operation reporting.<br>            <br>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a><br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ReportingEmployeeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the employee to report as.<br>            <br>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a><br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>WarehouseId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the warehouse the manufacturing order operation reporting applies to.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Warehouse.html">Warehouses</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ActualReportedDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The actual reported date of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PreviousRestQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The previous rest quantity of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RestQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The rest quantity of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OverReceiveQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The over receive quantity of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupCost</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The setup cost of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupCostCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the currency that the setup cost of the manufacturing order operation reporting applies to.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupCostFactor1</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The setup cost factor 1 of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupCostFactor2</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The setup cost factor 2 of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupCostFactor3</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The setup cost factor 3 of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupCostInForeignCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The setup cost in foreign currency of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupCostInForeignCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the foreign currency that the setup cost of the manufacturing order operation reporting applies to.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitCost</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The unit cost of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitCostCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the currency that the unit cost of the manufacturing order operation reporting applies to.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitCostFactor1</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The unit cost factor 1 of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitCostFactor2</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The unit cost factor 2 of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitCostFactor3</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The unit cost factor 3 of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitCostInForeignCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The unit cost in foreign currency of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitCostInForeignCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the foreign currency that the unit cost of the manufacturing order operation reporting applies to.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsSubcontractor</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the operation is subcontracted.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Type</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The type that the manufacturing order operation reporting is.<br><br><ul><li>Regular: 0</li><li>SendToSubcontractor: 1</li><li>ReceiveFromSubcontractor: 2</li><li>CancelRest: 3</li><li>MaterialOnly: 4</li><li>SubcontractorInvoicePrice: 5</li><li>RecordingTerminal: 6</li><li>AdjustRecording: 7</li><li>UndoRegular: 8</li><li>UndoRecordingTerminal: 9</li><li>UndoAdjustRecording: 10</li><li>SubcontractorPosteriorReport: 11</li><li>SubcontractorCostsManualReport: 12</li><li>PickWorkCenter: 13</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SubcontractorRequestedDeliveryDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date requested by the subcontractor for delivering the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SubcontractorActualDeliveryDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The actual delivery date provided by the subcontractor for the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReportRestQuantitiesOnSubsequentOperations</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates whether to report remaining quantities on subsequent operations for the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsExportedToManagementAccounting</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates whether the data has been exported to management accounting for the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>WipLocation</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The work in progress location for the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PreviousWipLocation</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The previous work in progress location for the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OfWichTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>Represents the duration related to a specific event or process.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the manufacturing order operation reporting comment.<br>            <br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>Additional comments or remarks related to the manufacturing order operation reporting.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ReasonCodeTimeConsumptionId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the reason code associated with time consumption for the manufacturing order operation reporting applies to.<br><br><ul><li>References <a class="xref" href="Monitor.API.Manufacturing.ReasonCodeTimeConsumption.html">ReasonCodeTimeConsumptions</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ReasonCodeTimeConsumption</td>
+<td><a class="xref" href="Monitor.API.Manufacturing.ReasonCodeTimeConsumption.html">ReasonCodeTimeConsumptions</a></td>
+<td>The reason code associated with time consumption for the manufacturing order operation reporting applies to.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>AutomaticMaterialReporting</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates whether material reporting is performed automatically for the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PurchaseOrderDeliveryRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the delivery row associated with a purchase order for the manufacturing order operation reporting applies to.<br><br><ul><li>References <a class="xref" href="Monitor.API.Purchase.PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PreviousNodeStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The previous status of the manufacturing order node for the manufacturing order operation reporting applies to.<br><br><ul><li>NotInitialized: 0</li><li>Registrered: 1</li><li>Printed: 2</li><li>Started: 3</li><li>Finished: 4</li><li>PostCalculated: 5</li><li>Delivered: 6</li><li>Historical: 9</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OriginalApprovedQuantityFromDeliveryRow</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The originally approved quantity from the delivery row for the manufacturing order operation reporting applies to.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReportingId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the manufacturing order operation that the reporting applies to.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReportingTimestamp</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The timestamp where the manufacturing order operation reporting occurred.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RowNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The row number of the manufacturing order operation reporting.<br></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;OperationId&quot;: 0,
+  &quot;Quantity&quot;: 0.0,
+  &quot;SetupTime&quot;: null,
+  &quot;UnitTime&quot;: null,
+  &quot;WorkCenterId&quot;: 0,
+  &quot;EmployeeId&quot;: null,
+  &quot;ReportingEmployeeId&quot;: null,
+  &quot;WarehouseId&quot;: 0,
+  &quot;ActualReportedDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;PreviousRestQuantity&quot;: 0.0,
+  &quot;RestQuantity&quot;: 0.0,
+  &quot;OverReceiveQuantity&quot;: 0.0,
+  &quot;SetupCost&quot;: null,
+  &quot;SetupCostCurrencyId&quot;: null,
+  &quot;SetupCostFactor1&quot;: 0.0,
+  &quot;SetupCostFactor2&quot;: 0.0,
+  &quot;SetupCostFactor3&quot;: 0.0,
+  &quot;SetupCostInForeignCurrency&quot;: null,
+  &quot;SetupCostInForeignCurrencyCurrencyId&quot;: null,
+  &quot;UnitCost&quot;: null,
+  &quot;UnitCostCurrencyId&quot;: null,
+  &quot;UnitCostFactor1&quot;: 0.0,
+  &quot;UnitCostFactor2&quot;: 0.0,
+  &quot;UnitCostFactor3&quot;: 0.0,
+  &quot;UnitCostInForeignCurrency&quot;: null,
+  &quot;UnitCostInForeignCurrencyCurrencyId&quot;: null,
+  &quot;IsSubcontractor&quot;: false,
+  &quot;Type&quot;: 0,
+  &quot;SubcontractorRequestedDeliveryDate&quot;: null,
+  &quot;SubcontractorActualDeliveryDate&quot;: null,
+  &quot;ReportRestQuantitiesOnSubsequentOperations&quot;: false,
+  &quot;IsExportedToManagementAccounting&quot;: false,
+  &quot;WipLocation&quot;: null,
+  &quot;PreviousWipLocation&quot;: null,
+  &quot;OfWichTime&quot;: null,
+  &quot;CommentId&quot;: null,
+  &quot;Comment&quot;: null,
+  &quot;ReasonCodeTimeConsumptionId&quot;: null,
+  &quot;ReasonCodeTimeConsumption&quot;: null,
+  &quot;AutomaticMaterialReporting&quot;: false,
+  &quot;PurchaseOrderDeliveryRowId&quot;: null,
+  &quot;PreviousNodeStatus&quot;: 0,
+  &quot;OriginalApprovedQuantityFromDeliveryRow&quot;: null,
+  &quot;ReportingId&quot;: null,
+  &quot;ReportingTimestamp&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;RowNumber&quot;: 0
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

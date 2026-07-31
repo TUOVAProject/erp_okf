@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CustomerPartLinks | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CustomerPartLinks | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Sales.CustomerPartLink">
+<h1 id="customerpartlinks">CustomerPartLinks</h1>
+
+<p><em>Queryable, Introduced in version 2.18</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Sales/CustomerPartLinks
+</code></pre>
+<p>Represents a customer part link.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">41DF82F6-EC6E-4362-A780-91B00BDC8583
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show customer
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the customer part link.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CustomerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the customer part link customer.<br><br>References <a class="xref" href="Monitor.API.Sales.Customer.html">Customers</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CustomerPartNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The part number that the customer uses to identify the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PackagingPartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer part link packaging part.<br><br>References <a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Gs1Code</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The GS1 code of the customer part link.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SalesCommentShowInForms</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies which documents the sales comment of the part link will<br>be shown on.<br><br><ul><li>None: 0</li><li>Quote: 1</li><li>Acknowledgement: 2</li><li>DeliveryNote: 4</li><li>Invoice: 8</li><li>ProFormaInvoice: 16</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>QuantityForLeadTimeToCustomer</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The quantity for lead time.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the customer part link's part.<br><br>References <a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Price</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The price of the customer part link.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SetupPrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The setup price of the customer part link.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>LeadTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>The lead time of the customer part link.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Discount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The discount percentage of the customer part link.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceValidThrough</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date/time offset that the customer part link price is valid through.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>FuturePrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The future price of the customer part link.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>FuturePriceValidThrough</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date/time offset that the future customer part link price is valid through.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>FutureSetupPrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The future setup price of the customer part link.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>QuantityPerPackage</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The quantity per package of the customer part link.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PickingCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer part link picking comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PickingComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The customer part link picking comment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OverrideSalesCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer part link override sales comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OverrideSalesComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The customer part link override sales comment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>UnitId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the customer part link unit.<br><br>References <a class="xref" href="Monitor.API.Common.Unit.html">Units</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Unit</td>
+<td><a class="xref" href="Monitor.API.Common.Unit.html">Units</a></td>
+<td>The customer part link unit.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the customer part link price currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceCurrency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The customer part link price currency.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifer of the customer part link price comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The customer part link price comment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>StaggeredPrices</td>
+<td><a class="xref" href="Monitor.API.Common.StaggeredPrice.html">StaggeredPrices</a>[]</td>
+<td>The staggered prices on the part link.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 24.3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;CustomerId&quot;: 0,
+  &quot;CustomerPartNumber&quot;: null,
+  &quot;PackagingPartId&quot;: null,
+  &quot;Gs1Code&quot;: null,
+  &quot;SalesCommentShowInForms&quot;: 0,
+  &quot;QuantityForLeadTimeToCustomer&quot;: null,
+  &quot;PartId&quot;: 0,
+  &quot;Price&quot;: null,
+  &quot;SetupPrice&quot;: null,
+  &quot;LeadTime&quot;: null,
+  &quot;Discount&quot;: null,
+  &quot;PriceValidThrough&quot;: null,
+  &quot;FuturePrice&quot;: null,
+  &quot;FuturePriceValidThrough&quot;: null,
+  &quot;FutureSetupPrice&quot;: null,
+  &quot;QuantityPerPackage&quot;: null,
+  &quot;PickingCommentId&quot;: null,
+  &quot;PickingComment&quot;: null,
+  &quot;OverrideSalesCommentId&quot;: null,
+  &quot;OverrideSalesComment&quot;: null,
+  &quot;UnitId&quot;: 0,
+  &quot;Unit&quot;: null,
+  &quot;PriceCurrencyId&quot;: 0,
+  &quot;PriceCurrency&quot;: null,
+  &quot;PriceCommentId&quot;: null,
+  &quot;PriceComment&quot;: null,
+  &quot;StaggeredPrices&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

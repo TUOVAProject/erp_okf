@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ManufacturingOrderMaterials | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ManufacturingOrderMaterials | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Manufacturing.ManufacturingOrderMaterial">
+<h1 id="manufacturingordermaterials">ManufacturingOrderMaterials</h1>
+
+<p><em>Queryable, Introduced in version 2.18</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Manufacturing/ManufacturingOrderMaterials
+</code></pre>
+<p>Represents a manufacturing order material.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">34CE9D0E-1927-446E-B5A9-A40E9CC937B6
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show manufacturing orders
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the manufacturing order material.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReportNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The report number of the manufacturing order material.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RowNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The row number of the manufacturing order material.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the manufacturing order material part.<br><br>References <a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Part</td>
+<td><a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a></td>
+<td>The manufacturing order material part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ToOperationNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The manufacturing order operation number that the manufacturing order material belongs to.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReportedQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The reported quantity of the manufacturing order material.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RestQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The remaining quantity of the manufacturing order material.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PlannedQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The planned quantity of the manufacturing order material.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ManufacturingOrderId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the manufacturing order that the manufacturing<br>order material belongs to.<br><br>References <a class="xref" href="Monitor.API.Manufacturing.ManufacturingOrder.html">ManufacturingOrders</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ManufacturingOrderNodeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the manufacturing order node that the manufacturing<br>order material belongs to.<br><br>References <a class="xref" href="Monitor.API.Manufacturing.ManufacturingOrderNode.html">ManufacturingOrderNodes</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>PositionNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The position number of the material.<br></td>
+<td>Introduced in version 2.49</td>
+</tr>
+<tr>
+<td>InstructionCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the manufacturing order material's instruction comment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></li></ul></td>
+<td>Introduced in version 2.49</td>
+</tr>
+<tr>
+<td>InstructionComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The manufacturing order material's instruction comment.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.49</td>
+</tr>
+<tr>
+<td>QuantityPerUnit</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Quantity per unit of the manufacturing order material.<br></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>CycleTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>Cycle time of the manufacturing order material.<br></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>EditedStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Edited status of the manufacturing order material.<br><br><ul><li>NotEdited: 0</li><li>Edited: 1</li><li>Synchronized: 2</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>ExtraQuantityProcent</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Extra quantity procent of the manufacturing order material.<br></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>LinkedPurchaseOrderRowId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the purchase order row that the manufacturing order material belongs to.<br><br><ul><li>References <a class="xref" href="Monitor.API.Purchase.PurchaseOrderRow.html">PurchaseOrderRows</a></li></ul></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>LockedToBatchNo</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>Locked To batch number of the manufacturing order material.<br><br><ul><li>Max length is 35</li></ul></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>QuantityPerCycle</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>Quantity per cycle of the manufacturing order material.<br></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>RejectedQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Rejected quantity of the manufacturing order material.<br></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>ReportedSetupQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Reported setup quantity of the manufacturing order material.<br></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>RestSetupQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Rest setup quantity of the manufacturing order material.<br></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>SetupQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Setup quantity of the manufacturing order material.<br></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>MaterialRowOriginId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>Material row origin id of the manufacturing order material.<br></td>
+<td>Introduced in version 24.4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;ReportNumber&quot;: 0,
+  &quot;RowNumber&quot;: 0,
+  &quot;PartId&quot;: 0,
+  &quot;Part&quot;: null,
+  &quot;ToOperationNumber&quot;: 0,
+  &quot;ReportedQuantity&quot;: 0.0,
+  &quot;RestQuantity&quot;: 0.0,
+  &quot;PlannedQuantity&quot;: 0.0,
+  &quot;ManufacturingOrderId&quot;: 0,
+  &quot;ManufacturingOrderNodeId&quot;: 0,
+  &quot;PositionNumber&quot;: null,
+  &quot;InstructionCommentId&quot;: null,
+  &quot;InstructionComment&quot;: null,
+  &quot;QuantityPerUnit&quot;: 0.0,
+  &quot;CycleTime&quot;: null,
+  &quot;EditedStatus&quot;: 0,
+  &quot;ExtraQuantityProcent&quot;: 0.0,
+  &quot;LinkedPurchaseOrderRowId&quot;: null,
+  &quot;LockedToBatchNo&quot;: null,
+  &quot;QuantityPerCycle&quot;: null,
+  &quot;RejectedQuantity&quot;: 0.0,
+  &quot;ReportedSetupQuantity&quot;: 0.0,
+  &quot;RestSetupQuantity&quot;: 0.0,
+  &quot;SetupQuantity&quot;: 0.0,
+  &quot;MaterialRowOriginId&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

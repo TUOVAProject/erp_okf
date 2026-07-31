@@ -1,0 +1,607 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AccountsReceivables | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="AccountsReceivables | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Accounting.AccountsReceivable">
+<h1 id="accountsreceivables">AccountsReceivables</h1>
+
+<p><em>Queryable, Introduced in version 2.44</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Accounting/AccountsReceivables
+</code></pre>
+<p>Represents an accounts receivable.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">93690592-6919-4221-822a-1f8bfbca9ce9
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show accounts receivable
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Version</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The version of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>BookingId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the booking that the accounts receivable belongs to.<br><br>References <a class="xref" href="Monitor.API.Accounting.Booking.html">Bookings</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Booking</td>
+<td><a class="xref" href="Monitor.API.Accounting.Booking.html">Bookings</a></td>
+<td>The booking that the accounts receivable belongs to.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The invoice type of the accounts receivable.<br><br><ul><li>Standard: 1</li><li>Internal: 2</li><li>CashReceipt: 3</li><li>Interest: 4</li><li>OnAccount: 5</li><li>DebitNote: 6</li><li>ServiceTax: 7</li><li>CorrectionInvoice: 8</li><li>CollectiveCorrectionInvoice: 9</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>LatestReminderDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The latest reminder date of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PaymentReminder</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the accounts receivable has payment reminders.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>NumberOfPaymentReminders</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The number of payment reminders that are left for the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CollectionDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The collection date of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Collection</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the accounts receivable has been collected or not.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InterestType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The interest type of the accounts receivable.<br><br><ul><li>InterestInvoice: 0</li><li>NextRegularInvoice: 1</li><li>None: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>IsComprehensive</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the accounts receivable is comprehensive or not.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartialInvoiceType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies how partial invoicing works for the accounts receivable.<br><br><ul><li>NotInitialized: 0</li><li>InAdvance: 1</li><li>Delivery: 2</li><li>InArrears: 3</li><li>Text: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CustomerAccountGroupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the customer account group for the accounts receivable.<br><br>References <a class="xref" href="Monitor.API.Sales.CustomerAccountGroup.html">CustomerAccountGroups</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>CustomerAccountGroup</td>
+<td><a class="xref" href="Monitor.API.Sales.CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td>The customer account group of the accounts receivable.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DebitInvoiceId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the debit invoice that the accounts receivable belongs to.<br><br>References <a class="xref" href="Monitor.API.Accounting.AccountsReceivable.html">AccountsReceivables</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>OnAccountIncomingPaymentLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the incoming payment ledger for the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OnAccountCancelledIncomingPaymentLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the cancelled incoming payment ledger for the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsEInvoiceExported</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if an e-invoice has been exported for the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AccountsReceivableLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the accounts receivable ledger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelledAccountsReceivableLedgerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the cancelled accounts receivable ledger.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Status</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The status of the accounts receivable.<br><br><ul><li>Approved: 0</li><li>Printed: 1</li><li>Cancelled: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>LatePaymentFee</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The late payment fee of the accounts receivable in percent.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the cancel comment of the accounts receivable.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The cancel comment of the accounts receivable.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The cancel date of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelBookingId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the cancel booking that the accounts receivable belongs to.<br><br>References <a class="xref" href="Monitor.API.Accounting.Booking.html">Bookings</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>CancelBooking</td>
+<td><a class="xref" href="Monitor.API.Accounting.Booking.html">Bookings</a></td>
+<td>The cancel booking that the accounts receivable belongs to.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BusinessContactId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer that the accounts receivable belongs to.<br><br>References <a class="xref" href="Monitor.API.Sales.Customer.html">Customers</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The human readable identifier of the accounts receivable.<br><br><ul><li>Unique</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The invoice date of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>DueDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The due date of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsCredit</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the accounts receivable is on credit or not.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceAmount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The invoice amount of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceAmountCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the accounts receivable’s invoice amount currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceAmountInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The invoice amount of the accounts receivable in the company currency.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoiceAmountInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the accounts receivable’s invoice amount company currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>VatAmount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The VAT amount of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>VatAmountCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the accounts receivable’s VAT amount currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>VatAmountInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The VAT amount of the accounts receivable in the company currency.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>VatAmountInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the accounts receivable’s VAT amount company currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>RestAmount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The rest amount of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RestAmountCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the accounts receivable’s rest amount currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>RestAmountInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The rest amount of the accounts receivable in the company currency.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RestAmountInCompanyCurrencyCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the accounts receivable’s rest amount company currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderedRestAmount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The ordered rest amount of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderedRestAmountCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the accounts receivable’s ordered rest amount currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>CurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the accounts receivable currency.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ExchangeRate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The exchange rate applicable to the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PaidInFullDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>Specifies when the accounts receivable was paid in full.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the accounts receivable comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The comment of the accounts receivable.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ReferenceNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The reference number of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UseFixedDueDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the accounts receivable uses a fixed due date.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>VatGroupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the VAT group that the accounts receivable belongs to.<br><br>References <a class="xref" href="Monitor.API.Common.VatGroup.html">VatGroups</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>PaymentTermId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the payment term that the accounts receivable belongs to.<br><br>References <a class="xref" href="Monitor.API.Common.PaymentTerm.html">PaymentTerms</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ChineseVatInvoiceNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The Chinese VAT invoice number of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ChineseVatInvoiceDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The Chinese VAT invoice date of the accounts receivable.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CurrencyExchangeTypeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the accounts receivable's currency exchange type.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.CurrencyExchangeType.html">CurrencyExchangeTypes</a></li></ul></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>CTCReportingInvoiceNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The invoice number for accounts receivable from CTC reporting system.<br></td>
+<td>Introduced in version 25.6</td>
+</tr>
+<tr>
+<td>CTCReportingReasonForRejection</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The reason for rejection accounts receivable in CTC reporting system.<br></td>
+<td>Introduced in version 25.6</td>
+</tr>
+<tr>
+<td>CTCReportingStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The accounts receivable's status from CTC reporting system.<br><br><ul><li>NotSent: 0</li><li>SentForApproval: 1</li><li>Approved: 2</li><li>NotApproved: 3</li><li>Cancelled: 4</li></ul></td>
+<td>Introduced in version 25.6</td>
+</tr>
+<tr>
+<td>CTCReportingInvoiceDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The accounts receivable's invoice date from CTC reporting system.<br></td>
+<td>Introduced in version 25.6</td>
+</tr>
+<tr>
+<td>CTCReportingIdentifier</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The accounts receivable's identifier from CTC reporting system.<br></td>
+<td>Introduced in version 25.6</td>
+</tr>
+<tr>
+<td>CTCReportingElectronicConfirmationURL</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The official electronic confirmation URL of receipt from CTC reporting system.<br></td>
+<td>Introduced in version 25.6</td>
+</tr>
+<tr>
+<td>CTCReportingElectronicConfirmationNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The official electronic confirmation number of receipt from CTC reporting system.<br></td>
+<td>Introduced in version 25.6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;Version&quot;: 0,
+  &quot;BookingId&quot;: null,
+  &quot;Booking&quot;: null,
+  &quot;InvoiceType&quot;: 0,
+  &quot;LatestReminderDate&quot;: null,
+  &quot;PaymentReminder&quot;: false,
+  &quot;NumberOfPaymentReminders&quot;: 0,
+  &quot;CollectionDate&quot;: null,
+  &quot;Collection&quot;: false,
+  &quot;InterestType&quot;: 0,
+  &quot;IsComprehensive&quot;: false,
+  &quot;PartialInvoiceType&quot;: 0,
+  &quot;CustomerAccountGroupId&quot;: 0,
+  &quot;CustomerAccountGroup&quot;: null,
+  &quot;DebitInvoiceId&quot;: null,
+  &quot;OnAccountIncomingPaymentLedgerId&quot;: null,
+  &quot;OnAccountCancelledIncomingPaymentLedgerId&quot;: null,
+  &quot;IsEInvoiceExported&quot;: false,
+  &quot;AccountsReceivableLedgerId&quot;: null,
+  &quot;CancelledAccountsReceivableLedgerId&quot;: null,
+  &quot;Status&quot;: 0,
+  &quot;LatePaymentFee&quot;: null,
+  &quot;CancelCommentId&quot;: null,
+  &quot;CancelComment&quot;: null,
+  &quot;CancelDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;CancelBookingId&quot;: null,
+  &quot;CancelBooking&quot;: null,
+  &quot;BusinessContactId&quot;: null,
+  &quot;InvoiceNumber&quot;: 0,
+  &quot;InvoiceDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;DueDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;IsCredit&quot;: false,
+  &quot;InvoiceAmount&quot;: 0.0,
+  &quot;InvoiceAmountCurrencyId&quot;: 0,
+  &quot;InvoiceAmountInCompanyCurrency&quot;: 0.0,
+  &quot;InvoiceAmountInCompanyCurrencyCurrencyId&quot;: 0,
+  &quot;VatAmount&quot;: 0.0,
+  &quot;VatAmountCurrencyId&quot;: 0,
+  &quot;VatAmountInCompanyCurrency&quot;: 0.0,
+  &quot;VatAmountInCompanyCurrencyCurrencyId&quot;: 0,
+  &quot;RestAmount&quot;: 0.0,
+  &quot;RestAmountCurrencyId&quot;: 0,
+  &quot;RestAmountInCompanyCurrency&quot;: 0.0,
+  &quot;RestAmountInCompanyCurrencyCurrencyId&quot;: 0,
+  &quot;OrderedRestAmount&quot;: 0.0,
+  &quot;OrderedRestAmountCurrencyId&quot;: null,
+  &quot;CurrencyId&quot;: 0,
+  &quot;ExchangeRate&quot;: 0.0,
+  &quot;PaidInFullDate&quot;: null,
+  &quot;CommentId&quot;: null,
+  &quot;Comment&quot;: null,
+  &quot;ReferenceNumber&quot;: null,
+  &quot;UseFixedDueDate&quot;: false,
+  &quot;VatGroupId&quot;: 0,
+  &quot;PaymentTermId&quot;: 0,
+  &quot;ChineseVatInvoiceNumber&quot;: null,
+  &quot;ChineseVatInvoiceDate&quot;: null,
+  &quot;CurrencyExchangeTypeId&quot;: 0,
+  &quot;CTCReportingInvoiceNumber&quot;: null,
+  &quot;CTCReportingReasonForRejection&quot;: null,
+  &quot;CTCReportingStatus&quot;: null,
+  &quot;CTCReportingInvoiceDate&quot;: null,
+  &quot;CTCReportingIdentifier&quot;: null,
+  &quot;CTCReportingElectronicConfirmationURL&quot;: null,
+  &quot;CTCReportingElectronicConfirmationNumber&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

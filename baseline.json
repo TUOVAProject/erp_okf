@@ -1,0 +1,22 @@
+{
+  "note": "Recorded floor for validate(). The build fails if any stat drops below 95% of these. Update deliberately, as a reviewed change, when upstream genuinely shrinks -- never to make a build pass.",
+  "source_digest": "677a27684767",
+  "stats": {
+    "pages": 380,
+    "entities": 380,
+    "queryable": 351,
+    "commands": 4,
+    "types": 25,
+    "modules": 8,
+    "properties": 5379,
+    "relationships": 1840,
+    "foreign_key_edges": 1227,
+    "navigation_edges": 613,
+    "enum_properties": 417,
+    "obsolete_properties": 58,
+    "expandable_properties": 599,
+    "cref_edges": 48,
+    "distinct_permissions": 86,
+    "pages_without_permission": 50
+  }
+}

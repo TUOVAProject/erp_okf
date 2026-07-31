@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ApplicationUserPrinters | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ApplicationUserPrinters | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Common.ApplicationUserPrinter">
+<h1 id="applicationuserprinters">ApplicationUserPrinters</h1>
+
+<p><em>Queryable, Introduced in version 2.52</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Common/ApplicationUserPrinters
+</code></pre>
+<p>Represents a printer that has been assigned to an application user.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">F518CF01-8FB0-4134-B283-0178684F49F0
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show user
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the application user printer.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ApplicationUserId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the application user that the application user printer belongs to.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.ApplicationUser.html">ApplicationUsers</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PrinterName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The name of the local printer that is assigned.<br><br><ul><li>Max length is 300</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>NormalizedFormReportType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The type of form report that the printer assignment will be used for.<br><br><ul><li>NotInitialized: 0</li><li>Quote: 1</li><li>Acknowledgement: 3</li><li>CustomerDeliveryNote: 5</li><li>CustomerDeliveryNoteDelivered: 6</li><li>Invoice: 7</li><li>CustomerDeliveryNoteCollectionDelivered: 8</li><li>SalesTransportLabelA4: 16</li><li>ComprehensiveInvoice: 17</li><li>PurchaseOrder: 22</li><li>PurchaseOrderConfirmationReminder: 23</li><li>PurchaseOrderConfirmationReminderCasualSupplier: 24</li><li>PurchaseOrderDeliveryConfirmationReminder: 25</li><li>PurchaseOrderDeliveryConfirmationReminderCasualSupplier: 26</li><li>PurchaseTransportLabel: 31</li><li>PickingList: 100</li><li>InspectionReport: 101</li><li>PurchaseTransportLabelForRejection: 102</li><li>ProformaInvoice: 103</li><li>ComprehensiveProformaInvoice: 104</li><li>ManufacturingTransportLabelA4: 105</li><li>ManufacturingTransportLabelA4ForRejection: 106</li><li>ManufacturingTransportLabelA4InProgress: 107</li><li>ManufacturingTransportLabelA4BeforeReporting: 108</li><li>ManufacturingOrderOperation: 109</li><li>ManufacturingOrderMaterial: 110</li><li>ManufacturingOrderTraveler: 111</li><li>PreCalculationSummary: 112</li><li>SubcontractPurchaseOrder: 113</li><li>SubcontractDeliveryNote: 114</li><li>SubcontractTransportLabelA4: 117</li><li>SubcontractTransportLabelA5: 118</li><li>SubcontractTransportLabelSmall: 119</li><li>LevelListWhereUsedList: 120</li><li>LevelListConsistsOfList: 122</li><li>PostCalculationSummary: 123</li><li>PhysicalInventoryList: 124</li><li>MaterialClearanceShortageList: 125</li><li>AccountingOrder: 126</li><li>GeneralLedgerDrilldown: 127</li><li>JournalDrilldown: 128</li><li>ManufacturingPickingList: 129</li><li>ManufacturingPickingListGroupByOrder: 130</li><li>ManufacturingPickingListGroupByMaterial: 131</li><li>AccountingReportHeader: 132</li><li>InternalInvoice: 133</li><li>CashReceipt: 134</li><li>AccountsReceivableLedger: 135</li><li>AccountsReceivableLedgerReprint: 136</li><li>IncomingPaymentLedger: 137</li><li>IncomingPaymentLedgerReprint: 138</li><li>AccountsPayableLedger: 139</li><li>AccountsPayableLedgerReprint: 140</li><li>PreliminaryAccountsPayableLedger: 141</li><li>PreliminaryAccountsPayableLedgerReprint: 142</li><li>CancelledAccountsPayableLedger: 143</li><li>CancelledAccountsPayableLedgerReprint: 144</li><li>CancelledPreliminaryAccountsPayableLedger: 145</li><li>CancelledPreliminaryAccountsPayableLedgerReprint: 146</li><li>PaymentReminder: 147</li><li>PaymentReminderReprint: 148</li><li>AccrualAccountingLedger: 149</li><li>AccrualAccountingLedgerReprint: 150</li><li>VatReport: 151</li><li>VatReportAccounts: 152</li><li>VatReportGeneralLedger: 153</li><li>VatReportTransactions: 154</li><li>VatReportCheck: 155</li><li>VatReportDifferenceSearch: 156</li><li>TransactionList: 157</li><li>OutgoingPaymentLedger: 158</li><li>OutgoingPaymentLedgerReprint: 159</li><li>SalesTransportLabelA5: 160</li><li>CustomerCaseConfirmation: 161</li><li>AccountStatement: 162</li><li>CustomerCaseAnswer: 163</li><li>CustomerNonconformityReport: 164</li><li>SupplierNonconformityReport: 165</li><li>InternalNonconformityReport: 166</li><li>SupplierClaimReport: 167</li><li>CancelledAccountsReceivableLedger: 168</li><li>CancelledAccountsReceivableLedgerReprint: 169</li><li>ShipmentWayBill: 170</li><li>ShipmentParcel: 171</li><li>Inquiry: 172</li><li>CustomerOrderPickingList: 173</li><li>EimInvoiceInformation: 174</li><li>InterestInvoice: 175</li><li>FileLink: 176</li><li>RecordingsAndSalaryTypeSummary: 177</li><li>ProductRecordConsistsOf: 178</li><li>ProductRecordIncludedIn: 179</li><li>InternalProjectReport: 180</li><li>ExternalProjectReport: 181</li><li>TraceabilityProtocol: 182</li><li>FixedAssetLedger: 183</li><li>FixedAssetLedgerReprint: 184</li><li>CustomReport: 185</li><li>StockAcknowledgement: 186</li><li>StockDeliveryNote: 187</li><li>StockPurchaseOrder: 188</li><li>StockDeliveryNoteDelivered: 189</li><li>PurchaseOrderModified: 190</li><li>TaxDepreciation: 191</li><li>TaxDepreciationDrilldown: 192</li><li>PartTransportLabelSmall: 193</li><li>PartTransportLabelA5: 194</li><li>PartTransportLabelA4: 195</li><li>UnplannedStockBalanceChangeLedger: 196</li><li>UnplannedStockBalanceChangeLedgerReprint: 197</li><li>PIADetailed: 198</li><li>StockTransactionLogLedger: 199</li><li>ManufacturingOrderLogLedger: 200</li><li>InvoiceLogLedger: 201</li><li>PriceChangeLogLedger: 202</li><li>CalculationDifferenceLedger: 203</li><li>AccountStatementBalancePerCustomer: 204</li><li>StockTransactionLogLedgerReprint: 205</li><li>ManufacturingOrderLogLedgerReprint: 206</li><li>PriceChangeLogLedgerReprint: 207</li><li>CalculationDifferenceLedgerReprint: 208</li><li>InvoiceLogLedgerReprint: 209</li><li>PrintoutDemoCertificate: 210</li><li>BlanketOrderPurchase: 211</li><li>ArrivalNote: 212</li><li>CorrectionInvoice: 213</li><li>ModifiedOrderConfirmation: 214</li><li>PurchaseDeliverySchedule: 215</li><li>PackageList: 216</li><li>PackageTransportLabel: 217</li><li>AnnualVolumeList: 218</li><li>BlanketOrderSales: 219</li><li>TransportLabelDirectWithdrawalA4: 220</li><li>TransportLabelDirectWithdrawalA5: 221</li><li>TransportLabelDirectWithdrawalSmall: 222</li><li>TransportLabelDirectArrivalA4: 223</li><li>TransportLabelDirectArrivalA5: 224</li><li>TransportLabelDirectArrivalSmall: 225</li><li>TransportLabelMoveBetweenLocationsA4: 226</li><li>TransportLabelMoveBetweenLocationsA5: 227</li><li>TransportLabelMoveBetweenLocationsSmall: 228</li><li>TransportLabelMoveBetweenWarehousesA4: 229</li><li>TransportLabelMoveBetweenWarehousesA5: 230</li><li>TransportLabelMoveBetweenWarehousesSmall: 231</li><li>Standard8DNonconformityReport: 232</li><li>PaymentLedger: 233</li><li>PaymentLedgerReprint: 234</li><li>PaymentVoucher: 235</li><li>DebtorStatement: 236</li><li>CreditorStatement: 237</li><li>PrintVoucher: 238</li><li>OfficialReceipt: 239</li><li>PolishCashReceipt: 240</li><li>PolishCashReport: 241</li><li>Standard8DCustomerNonconformityReport: 242</li><li>AutoCodingLedger: 243</li><li>AutoCodingLedgerReprint: 244</li><li>MeasuringProtocolManufacturing: 245</li><li>MeasuringProtocolPurchase: 246</li><li>VoucherList: 247</li><li>RevenueCalculationLedger: 248</li><li>RevenueCalculationLedgerReprint: 249</li><li>GeneralActivityList: 250</li><li>ReturnPurchaseOrderDeliveryNote: 251</li><li>ReturnPurchaseOrderProforma: 252</li><li>ReturnPurchaseOrderTransportLabelA4: 253</li><li>ReturnPurchaseOrderTransportLabelA5: 254</li><li>ReturnPurchaseOrderTransportLabelSmall: 255</li><li>Waybill: 256</li><li>ShipmentAdvice: 257</li><li>PartTransportMultiLabel: 258</li><li>StockTransportMultiLabel: 259</li><li>SustainabilityCalculationDetailed: 260</li><li>ShipmentReceipt: 261</li><li>OrderRowDiscounts: 262</li><li>BankAccountReconciliation: 263</li><li>CollectiveCorrectionInvoice: 264</li><li>ExternalCustomerNonconformityReport: 265</li><li>ExternalSupplierNonconformityReport: 266</li><li>ExternalInternalNonconformityReport: 267</li><li>PartContentDeliveryReport: 268</li><li>ProjectMaterialCalculationLedger: 269</li><li>ProjectMaterialCalculationLedgerReprint: 270</li><li>CausesForShortage: 271</li><li>CustomerLevelListConsistsOfList: 272</li><li>CustomerLevelListIncludedInList: 273</li><li>SupplierLevelListConsistsOfList: 274</li><li>SupplierLevelListIncludedInList: 275</li><li>GPBForm: 276</li><li>CurrencyWarehouse: 277</li><li>ReturnPurchaseOrderPickingList: 278</li><li>SubcontractProformaInvoice: 279</li><li>LocationLabel: 280</li><li>LocationMultiLabel: 281</li><li>FilesExternal1: 282</li><li>FilesExternal2: 283</li><li>FilesExternal3: 284</li><li>RemittanceAdvice: 285</li><li>SupplierAgreement: 286</li><li>ModifiedSupplierAgreement: 287</li><li>SelfBilledInvoice: 288</li><li>PurchaseTransportLabelA5: 310</li><li>RefillPickingLocationStandard: 500</li><li>PurchaseTransportLabelA5ForRejection: 1020</li><li>ManufacturingTransportLabelA5: 1050</li><li>ManufacturingTransportLabelA5ForRejection: 1060</li><li>ManufacturingTransportLabelA5InProgress: 1070</li><li>ManufacturingTransportLabelA5BeforeReporting: 1080</li><li>SalesTransportLabelSmall: 1600</li><li>Form: 2401</li><li>ServiceReporting: 2402</li><li>SalesAgreement: 2501</li><li>ModifiedSalesAgreement: 2502</li><li>AccountStatementPurchase: 2503</li><li>ReturnPurchaseOrder: 2504</li><li>PurchaseTransportLabelSmall: 3100</li><li>PurchaseTransportLabelSmallForRejection: 10200</li><li>ManufacturingTransportLabelSmall: 10500</li><li>ManufacturingTransportLabelSmallForRejection: 10600</li><li>ManufacturingTransportLabelSmallInProgress: 10700</li><li>ManufacturingTransportLabelSmallBeforeReporting: 10800</li><li>DebitNote: 10801</li><li>ServiceTax: 10802</li><li>EdiCustomerOrderConfirmation: 20001</li><li>EdiCustomerOrderInvoice: 20002</li><li>EdiCustomerOrderSimpleDispatchAdvice: 20003</li><li>EdiCustomerOrderResponse: 20004</li><li>EdiPurchaseOrder: 20005</li><li>EdiCustomerOrderComplexDispatchAdvice: 20006</li><li>EdiPurchaseDeliverySchedule: 20007</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>FormReportType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>?</td>
+<td>The type of form report that the printer assignment will be used for.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ServerPrinterId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The server printer that is linked to the application user printer.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.ServerPrinter.html">ServerPrinters</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>FormDocumentType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The type of document that the printer assignment will be used for.<br><br><ul><li>Document: 0</li><li>AdaptedReport: 1</li></ul></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;ApplicationUserId&quot;: 0,
+  &quot;PrinterName&quot;: null,
+  &quot;NormalizedFormReportType&quot;: null,
+  &quot;FormReportType&quot;: null,
+  &quot;ServerPrinterId&quot;: null,
+  &quot;FormDocumentType&quot;: 0
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SalesAgreementTypes | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SalesAgreementTypes | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Sales.SalesAgreementType">
+<h1 id="salesagreementtypes">SalesAgreementTypes</h1>
+
+<p><em>Queryable, Introduced in version 22.7</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Sales/SalesAgreementTypes
+</code></pre>
+<p>Represents an agreement type.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">7E0ECC63-83B7-4604-893A-795B7B01112B
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show agreement
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the agreement type.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceSetting</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The price setting of the agreement type.<br><br><ul><li>Customer: 1</li><li>PriceList: 2</li><li>StandardPrice: 3</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PriceListId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agreement types price list.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.PriceList.html">PriceLists</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Number</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The number of the agreement type.<br><br><ul><li>Unique</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Prefix</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The prefix of the agreement type.<br><br><ul><li>Max length is 3</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The translated description of the agreement type.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Priority</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The priority of the agreement type.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Visible</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if the agreement type should be visible.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsPreset</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if the agreement type is preset.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CodingGroupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the agreement types coding group.<br><br><ul><li>References CodingGroup</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>UpdateStatusAutomatically</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if the status of the agreement should be updated automatically.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoicingMethod</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The invoicing method of the agreement type.<br><br><ul><li>InAdvance: 1</li><li>InArrears: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PlannedInvoiceDateOffset</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The planned invoice date offset in days of the agreement type.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReleaseBasisAutomatically</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if the agreement basis should be released automatically.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UpwardAdjustmentTriggerType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The trigger type for upward adjustments.<br><br><ul><li>Always: 1</li><li>Never: 2</li><li>MinAmountForRow: 3</li><li>MinAmountForAllRows: 4</li><li>MinDaysToNextInvoice: 5</li></ul></td>
+<td>Introduced in version 25.8</td>
+</tr>
+<tr>
+<td>UpwardAdjustmentTriggerValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The trigger value for upward adjustments.<br></td>
+<td>Introduced in version 25.8</td>
+</tr>
+<tr>
+<td>AgreementValidFromSetting</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The valid from setting of the agreement type.<br><br><ul><li>Today: 1</li><li>Empty: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RateTypeSetting</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The rate type setting of the agreement type.<br><br><ul><li>Customer: 1</li><li>OrderType: 2</li></ul></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;PriceSetting&quot;: 0,
+  &quot;PriceListId&quot;: null,
+  &quot;Number&quot;: 0,
+  &quot;Prefix&quot;: null,
+  &quot;Description&quot;: null,
+  &quot;Priority&quot;: 0,
+  &quot;Visible&quot;: false,
+  &quot;IsPreset&quot;: false,
+  &quot;CodingGroupId&quot;: 0,
+  &quot;UpdateStatusAutomatically&quot;: false,
+  &quot;InvoicingMethod&quot;: 0,
+  &quot;PlannedInvoiceDateOffset&quot;: 0,
+  &quot;ReleaseBasisAutomatically&quot;: false,
+  &quot;UpwardAdjustmentTriggerType&quot;: 0,
+  &quot;UpwardAdjustmentTriggerValue&quot;: 0,
+  &quot;AgreementValidFromSetting&quot;: 0,
+  &quot;RateTypeSetting&quot;: 0
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

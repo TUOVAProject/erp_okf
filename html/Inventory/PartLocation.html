@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PartLocations | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PartLocations | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Inventory.PartLocation">
+<h1 id="partlocations">PartLocations</h1>
+
+<p><em>Queryable, Introduced in version 2.28</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Inventory/PartLocations
+</code></pre>
+<p>Represents a part location.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">B24A64DD-4E57-4FD3-B8EA-B2206EF2E67A
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show part
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the location.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the part to which the location belong.<br><br>References <a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>WarehouseId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the warehouse where the location is located.<br><br>References <a class="xref" href="Monitor.API.Common.Warehouse.html">Warehouses</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Warehouse</td>
+<td><a class="xref" href="Monitor.API.Common.Warehouse.html">Warehouses</a></td>
+<td>The warehouse of the location.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Name</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The name of the location.<br><br><ul><li>Not nullable</li><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Balance</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The balance in standard unit.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>LifeCycleState</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The life cycle state of the location.<br><br><ul><li>Transient: 1</li><li>Persistent: 10</li><li>History: 20</li><li>RemovableCandidate: 99</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>LatestArrivalDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>Latest arrival date for the location.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>WorkCenterPickingLocation</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Whether the location is a work center picking location.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>WorkCenterPickingLocationFillingQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Specifies the filling quantity when the location is a work center picking location.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OutgoingPickLocation</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies whether the location is of type pick location.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ArrivalLocation</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies whether the location is of type arrival location.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Priority</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>Specifies the priority of the location.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OutgoingPickLocationReorderPoint</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Specifies the pick location reordering point, quantity used when filling pick location.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>BatchNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>Batch number when part has traceability of type batch.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SerialNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>Serial number when part has traceability of type serial number.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>InventoryStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The inventory status of the location.<br><br><ul><li>None: 0</li><li>UnderInventory: 1</li><li>UnderInventoryWithBalanceCheckpoint: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>IsOngoingRefill</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the location is currently being refilled.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RevisionId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the revision of the location.<br><br>References <a class="xref" href="Monitor.API.Common.Revision.html">Revisions</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Revision</td>
+<td><a class="xref" href="Monitor.API.Common.Revision.html">Revisions</a></td>
+<td>The revision of the location.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>IgnoredBalance</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the balance of the location is to be ignored when calculating Net Requirement and CDT.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartLocationProductRecords</td>
+<td><a class="xref" href="Monitor.API.Inventory.PartLocationProductRecord.html">PartLocationProductRecords</a>[]</td>
+<td>A collection of quantity items that holds the quantity of each batch/serial number.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.29</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;PartId&quot;: 0,
+  &quot;WarehouseId&quot;: 0,
+  &quot;Warehouse&quot;: null,
+  &quot;Name&quot;: null,
+  &quot;Balance&quot;: 0.0,
+  &quot;LifeCycleState&quot;: 0,
+  &quot;LatestArrivalDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;WorkCenterPickingLocation&quot;: false,
+  &quot;WorkCenterPickingLocationFillingQuantity&quot;: 0.0,
+  &quot;OutgoingPickLocation&quot;: false,
+  &quot;ArrivalLocation&quot;: false,
+  &quot;Priority&quot;: null,
+  &quot;OutgoingPickLocationReorderPoint&quot;: 0.0,
+  &quot;BatchNumber&quot;: null,
+  &quot;SerialNumber&quot;: null,
+  &quot;InventoryStatus&quot;: 0,
+  &quot;IsOngoingRefill&quot;: false,
+  &quot;RevisionId&quot;: null,
+  &quot;Revision&quot;: null,
+  &quot;IgnoredBalance&quot;: false,
+  &quot;PartLocationProductRecords&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

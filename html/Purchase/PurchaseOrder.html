@@ -1,0 +1,698 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PurchaseOrders | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PurchaseOrders | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Purchase.PurchaseOrder">
+<h1 id="purchaseorders">PurchaseOrders</h1>
+
+<p><em>Queryable, Introduced in version 2.26</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Purchase/PurchaseOrders
+</code></pre>
+<p>Represents a purchase order.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">3A8DD78D-902D-4E50-8DE6-C0AEE4CE582E
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show purchase orders
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the purchase order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PaymentTermId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the payment term of the purchase order.<br>            <br>References <a class="xref" href="Monitor.API.Common.PaymentTerm.html">PaymentTerms</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>PaymentTerm</td>
+<td><a class="xref" href="Monitor.API.Common.PaymentTerm.html">PaymentTerms</a></td>
+<td>The payment term of the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PaymentTermDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The payment term description of the purchase order.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>GracePeriodInDays</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The purchase order's grace period in days.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryMethodId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the purchase order's delivery method.<br>            <br>References <a class="xref" href="Monitor.API.Common.DeliveryMethod.html">DeliveryMethods</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryMethod</td>
+<td><a class="xref" href="Monitor.API.Common.DeliveryMethod.html">DeliveryMethods</a></td>
+<td>The purchase order's delivery method.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>DeliveryTermId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the purchase order's delivery term.<br>            <br>References <a class="xref" href="Monitor.API.Common.DeliveryTerm.html">DeliveryTerms</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryTerm</td>
+<td><a class="xref" href="Monitor.API.Common.DeliveryTerm.html">DeliveryTerms</a></td>
+<td>The purchase order's delivery term.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>DeliveryTermDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The delivery term description of the purchase order.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryMethodDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The delivery method description of the purchase order.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ShipmentPayer</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies who is responsible for the shipment payment for the purchase order.<br><br><ul><li>BuyerPays: 1</li><li>SellerPays: 2</li><li>OtherPayer: 3</li><li>Incoterms: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BusinessContactOrderNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The supplier's order number for the purchase order.<br><br><ul><li>Max length is 30</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OurReferenceId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of our reference for the purchase order.<br>            <br>Reference <a class="xref" href="Monitor.API.Common.Person.html">Persons</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>OurReference</td>
+<td><a class="xref" href="Monitor.API.Common.Person.html">Persons</a></td>
+<td>Our reference for the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>OurReferenceName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The name of our reference for the purchase order.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BusinessContactReferenceId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the supplier's reference for the purchase order.<br>            <br>References <a class="xref" href="Monitor.API.Common.BusinessContactReference.html">BusinessContactReferences</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>BusinessContactReference</td>
+<td><a class="xref" href="Monitor.API.Common.BusinessContactReference.html">BusinessContactReferences</a></td>
+<td>The supplier's reference for the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>BusinessContactReferenceName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The name of the supplier's reference for the purchase order.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>GoodsLabel</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The goods label of the purchase order.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the currency of the purchase order.<br>            <br>References <see cref="P:Monitor.API.Purchase.PurchaseOrder.Currency"></see><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Currency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The currency for the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>VatGroupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the VAT group that applies for the purchase order.<br>            <br>References <see cref="P:Monitor.API.Purchase.PurchaseOrder.VatGroup"></see><br></td>
+<td></td>
+</tr>
+<tr>
+<td>VatGroup</td>
+<td><a class="xref" href="Monitor.API.Common.VatGroup.html">VatGroups</a></td>
+<td>The VAT group that applies for the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>WarehouseId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the warehouse that the purchase order belongs to.<br>            <br>References <see cref="P:Monitor.API.Purchase.PurchaseOrder.Warehouse"></see><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Warehouse</td>
+<td><a class="xref" href="Monitor.API.Common.Warehouse.html">Warehouses</a></td>
+<td>The warehouse that the purchase order belongs to.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The priority of the purchase order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the purchase order's project.<br>            <br>References Project<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SendMethod</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies the printout method for the purchase order.<br><br><ul><li>Printer: 0</li><li>Email: 1</li><li>Edi: 2</li><li>None: 9</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InvoicePrintoutMethod</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies the printout method that should be used for invoices.<br><br><ul><li>Printer: 0</li><li>Email: 1</li><li>Edi: 2</li><li>None: 9</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InternalCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the purchase order's internal comment.<br>            <br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>InternalComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The internal comment of the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ExternalCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the purchase order's external comment.<br>            <br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ExternalComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The external comment of the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>TransportTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The transport time of the purchase order in workdays.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>LifeCycleState</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The life cycle state of the purchase order.<br><br><ul><li>Transient: 1</li><li>Persistent: 10</li><li>History: 20</li><li>RemovableCandidate: 99</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Version</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The version of the purchase order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>UseForwardRate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if forward rate should apply for the purchase order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ExchangeRate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Specifies the exchange rate to use for the purchase order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderAmount</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>This property is obsolete and no longer carries a value.<br><br><ul><li>Obsolete since version 2.36 (Unavailable)</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderAmountInCompanyCurrency</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>This property is obsolete and no longer carries a value.<br><br><ul><li>Obsolete since version 2.36 (Unavailable)</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>AgentSupplierId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the agent that the purchase order<br>belongs to.<br>            <br>References <a class="xref" href="Monitor.API.Purchase.Supplier.html">Suppliers</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>SuppliersQuoteNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The readable supplier's quote number.<br><br><ul><li>Max length is 30</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>IsStockOrder</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the purchase order is a Stock order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsConfirmed</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the order is Confirmed.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CustomerOrderId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer order.<br>            <br>References <a class="xref" href="Monitor.API.Sales.CustomerOrder.html">CustomerOrders</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The human readable identifier of the purchase order.<br><br><ul><li>Not nullable</li><li>Max length is 15</li><li>Unique</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OrderDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The order date of the purchase order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Rows</td>
+<td><a class="xref" href="Monitor.API.Purchase.PurchaseOrderRow.html">PurchaseOrderRows</a>[]</td>
+<td>The rows of the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ActiveDeliveryAddressCustomerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customer source of the active delivery address.<br>            <br>References <a class="xref" href="Monitor.API.Sales.Customer.html">Customers</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ActiveDeliveryAddressSupplierId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the supplier source of the active delivery address.<br>            <br>References <a class="xref" href="Monitor.API.Purchase.Supplier.html">Suppliers</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ActiveDeliveryAddressCompanyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the company source of the active delivery address.<br>            <br>References Company<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SourceOfAlternativeDeliveryAddresses</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies the source of the purchase order delivery address.<br><br><ul><li>CurrentCustomer: 0</li><li>Customer: 1</li><li>Supplier: 2</li><li>Company: 3</li><li>CurrentSupplier: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryAddressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the purchase order's delivery address.<br>            <br>References <a class="xref" href="Monitor.API.Common.Address.html">Addresses</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryAddress</td>
+<td><a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></td>
+<td>The delivery address of the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>MailingAddressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the purchase order's mailing<br>address.<br>            <br>References <a class="xref" href="Monitor.API.Common.Address.html">Addresses</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>MailingAddress</td>
+<td><a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></td>
+<td>The mailing address of the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>GoodsAddressNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The goods address number of the purchase order.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>FromInquiryNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The human readable identifier of the inquiry that resulted in<br>the purchase order.<br><br><ul><li>Max length is 15</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Status</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The status of the purchase order.<br><br><ul><li>PendingAuthorization: 0</li><li>Registered: 1</li><li>PurchaseOrderPrinted: 2</li><li>PartiallyDelivered: 5</li><li>Declined: 8</li><li>History: 9</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>InquiryId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the purchase order's inquiry.<br>            <br>References Inquiry<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>PackingTermId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the purchase order's packing term.<br>            <br>References <see cref="P:Monitor.API.Purchase.PurchaseOrder.PackingTerm"></see><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>PackingTerm</td>
+<td><a class="xref" href="Monitor.API.Purchase.PackingTerm.html">PackingTerms</a></td>
+<td>The packing term of the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>PackingTermDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The packing term description of the purchase order.<br><br><ul><li>Max length is 35</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>ShowPriceInFormReport</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the purchase order shows price in form report.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>ShowTotalInFormReport</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the purchase order shows total in form report.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>IsCredit</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the purchase order is a credit order.<br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>CausingCreditPurchaseOrderId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the purchase order which caused this credit purchase order to be created.<br>            <br>References <a class="xref" href="Monitor.API.Purchase.PurchaseOrder.html">PurchaseOrders</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>BusinessContactId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the purchase order's supplier.<br>            <br>References <a class="xref" href="Monitor.API.Purchase.Supplier.html">Suppliers</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>InvoiceBusinessContactId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the purchase order's supplier sending the invoice.<br>            <br>References <a class="xref" href="Monitor.API.Purchase.Supplier.html">Suppliers</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>OrderTypeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the purchase order's type.<br>            <br>References <a class="xref" href="Monitor.API.Purchase.PurchaseOrderType.html">PurchaseOrderTypes</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>OrderType</td>
+<td><a class="xref" href="Monitor.API.Purchase.PurchaseOrderType.html">PurchaseOrderTypes</a></td>
+<td>The order type of the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>AccountGroupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the purchase order's account group.<br>            <br>References <a class="xref" href="Monitor.API.Purchase.SupplierAccountGroup.html">SupplierAccountGroups</a><br></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>AccountGroup</td>
+<td><a class="xref" href="Monitor.API.Purchase.SupplierAccountGroup.html">SupplierAccountGroups</a></td>
+<td>The account group of the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>CategoryString</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The category string of the purchase order.<br><br><ul><li>Max length is 15</li></ul></td>
+<td>Introduced in version 2.30</td>
+</tr>
+<tr>
+<td>CurrencyExchangeTypeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the purchase order's currency exchange type.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.CurrencyExchangeType.html">CurrencyExchangeTypes</a></li></ul></td>
+<td>Introduced in version 22.9</td>
+</tr>
+<tr>
+<td>DestinationForDeliveryTerm</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The destination for the delivery term.<br><br><ul><li>Max length is 35</li></ul></td>
+<td>Introduced in version 23.9</td>
+</tr>
+<tr>
+<td>TransportDistance</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>The transport distance of the purchase order in kilometres.<br></td>
+<td>Introduced in version 26.6</td>
+</tr>
+<tr>
+<td>CommunicationAddresses</td>
+<td><a class="xref" href="Monitor.API.Common.CommunicationAddress.html">CommunicationAddresses</a>[]</td>
+<td>The communication addresses of the purchase order.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 24.3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;PaymentTermId&quot;: null,
+  &quot;PaymentTerm&quot;: null,
+  &quot;PaymentTermDescription&quot;: null,
+  &quot;GracePeriodInDays&quot;: null,
+  &quot;DeliveryMethodId&quot;: null,
+  &quot;DeliveryMethod&quot;: null,
+  &quot;DeliveryTermId&quot;: null,
+  &quot;DeliveryTerm&quot;: null,
+  &quot;DeliveryTermDescription&quot;: null,
+  &quot;DeliveryMethodDescription&quot;: null,
+  &quot;ShipmentPayer&quot;: 0,
+  &quot;BusinessContactOrderNumber&quot;: null,
+  &quot;OurReferenceId&quot;: null,
+  &quot;OurReference&quot;: null,
+  &quot;OurReferenceName&quot;: null,
+  &quot;BusinessContactReferenceId&quot;: null,
+  &quot;BusinessContactReference&quot;: null,
+  &quot;BusinessContactReferenceName&quot;: null,
+  &quot;GoodsLabel&quot;: null,
+  &quot;CurrencyId&quot;: 0,
+  &quot;Currency&quot;: null,
+  &quot;VatGroupId&quot;: 0,
+  &quot;VatGroup&quot;: null,
+  &quot;WarehouseId&quot;: 0,
+  &quot;Warehouse&quot;: null,
+  &quot;Priority&quot;: 0,
+  &quot;ProjectId&quot;: null,
+  &quot;SendMethod&quot;: 0,
+  &quot;InvoicePrintoutMethod&quot;: 0,
+  &quot;InternalCommentId&quot;: null,
+  &quot;InternalComment&quot;: null,
+  &quot;ExternalCommentId&quot;: null,
+  &quot;ExternalComment&quot;: null,
+  &quot;TransportTime&quot;: null,
+  &quot;LifeCycleState&quot;: 0,
+  &quot;Version&quot;: 0,
+  &quot;UseForwardRate&quot;: false,
+  &quot;ExchangeRate&quot;: 0.0,
+  &quot;OrderAmount&quot;: 0.0,
+  &quot;OrderAmountInCompanyCurrency&quot;: 0.0,
+  &quot;AgentSupplierId&quot;: null,
+  &quot;SuppliersQuoteNumber&quot;: null,
+  &quot;IsStockOrder&quot;: false,
+  &quot;IsConfirmed&quot;: false,
+  &quot;CustomerOrderId&quot;: null,
+  &quot;OrderNumber&quot;: null,
+  &quot;OrderDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;Rows&quot;: null,
+  &quot;ActiveDeliveryAddressCustomerId&quot;: null,
+  &quot;ActiveDeliveryAddressSupplierId&quot;: null,
+  &quot;ActiveDeliveryAddressCompanyId&quot;: null,
+  &quot;SourceOfAlternativeDeliveryAddresses&quot;: 0,
+  &quot;DeliveryAddressId&quot;: null,
+  &quot;DeliveryAddress&quot;: null,
+  &quot;MailingAddressId&quot;: null,
+  &quot;MailingAddress&quot;: null,
+  &quot;GoodsAddressNumber&quot;: null,
+  &quot;FromInquiryNumber&quot;: null,
+  &quot;Status&quot;: 0,
+  &quot;InquiryId&quot;: null,
+  &quot;PackingTermId&quot;: null,
+  &quot;PackingTerm&quot;: null,
+  &quot;PackingTermDescription&quot;: null,
+  &quot;ShowPriceInFormReport&quot;: false,
+  &quot;ShowTotalInFormReport&quot;: false,
+  &quot;IsCredit&quot;: false,
+  &quot;CausingCreditPurchaseOrderId&quot;: null,
+  &quot;BusinessContactId&quot;: 0,
+  &quot;InvoiceBusinessContactId&quot;: 0,
+  &quot;OrderTypeId&quot;: 0,
+  &quot;OrderType&quot;: null,
+  &quot;AccountGroupId&quot;: 0,
+  &quot;AccountGroup&quot;: null,
+  &quot;CategoryString&quot;: null,
+  &quot;CurrencyExchangeTypeId&quot;: 0,
+  &quot;DestinationForDeliveryTerm&quot;: null,
+  &quot;TransportDistance&quot;: null,
+  &quot;CommunicationAddresses&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

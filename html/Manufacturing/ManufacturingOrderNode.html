@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ManufacturingOrderNodes | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ManufacturingOrderNodes | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Manufacturing.ManufacturingOrderNode">
+<h1 id="manufacturingordernodes">ManufacturingOrderNodes</h1>
+
+<p><em>Queryable, Introduced in version 2.30</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Manufacturing/ManufacturingOrderNodes
+</code></pre>
+<p>Represents a manufacturing order node.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">CFFE1A38-0B7F-498B-9B9B-E5FEA2BB2E75
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show manufacturing orders
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the manufacturing order node.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsMainNode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the node is the main node on manufacturing order.<br><br>Only one of the root nodes on order can be the main node.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsRootNode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the node is a root node on manufacturing order.<br><br>It can be several root nodes.<br>For example when splitting from max quantity or when coordinated parts exists.<br><br>Only one of the root nodes on order can be the main node.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Level</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Level in the node hierarchy<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Number</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Node number, a sequence number in exploding sort order.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the part that the manufacturing order node is to produce.<br><br>References <a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReportedQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The reported quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PlannedQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The planned quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>RestQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The rest quantity.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>StartDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The start date of the manufacturing order node.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>EndDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The finish date of the manufacturing order node.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>WarehouseId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the warehouse that the node belongs to.<br><br>References <a class="xref" href="Monitor.API.Common.Warehouse.html">Warehouses</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Status</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The status of the manufacturing order node.<br><br><ul><li>NotInitialized: 0</li><li>Registrered: 1</li><li>Printed: 2</li><li>Started: 3</li><li>Finished: 4</li><li>PostCalculated: 5</li><li>Delivered: 6</li><li>Historical: 9</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ManufacturingOrderNodeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the manufacturing order node that the manufacturing<br>order node belongs to.<br><br>If id is null, it's a root node.<br><br>References <a class="xref" href="Monitor.API.Manufacturing.ManufacturingOrderNode.html">ManufacturingOrderNodes</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Drawings</td>
+<td><a class="xref" href="Monitor.API.Manufacturing.ManufacturingOrderNodeDrawing.html">ManufacturingOrderNodeDrawings</a>[]</td>
+<td>A collection of drawings that belong to the manufacturing order node.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 24.2</td>
+</tr>
+<tr>
+<td>RevisionId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the revision that the manufacturing order node has.<br><br>References <a class="xref" href="Monitor.API.Common.Revision.html">Revisions</a><br></td>
+<td>Introduced in version 24.2</td>
+</tr>
+<tr>
+<td>Revision</td>
+<td><a class="xref" href="Monitor.API.Common.Revision.html">Revisions</a></td>
+<td>The revision that the manufacturing order node has.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 24.2</td>
+</tr>
+<tr>
+<td>SerialNumberProductRecords</td>
+<td><a class="xref" href="Monitor.API.Inventory.ProductRecord.html">ProductRecords</a>[]</td>
+<td>A collection of product records with serial number traceability that belong to the manufacturing order node.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 25.2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;IsMainNode&quot;: false,
+  &quot;IsRootNode&quot;: false,
+  &quot;Level&quot;: 0,
+  &quot;Number&quot;: 0,
+  &quot;PartId&quot;: 0,
+  &quot;ReportedQuantity&quot;: 0.0,
+  &quot;PlannedQuantity&quot;: 0.0,
+  &quot;RestQuantity&quot;: 0.0,
+  &quot;StartDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;EndDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;WarehouseId&quot;: 0,
+  &quot;Status&quot;: 0,
+  &quot;ManufacturingOrderNodeId&quot;: null,
+  &quot;Drawings&quot;: null,
+  &quot;RevisionId&quot;: null,
+  &quot;Revision&quot;: null,
+  &quot;SerialNumberProductRecords&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

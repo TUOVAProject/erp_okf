@@ -1,0 +1,768 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Shipments | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Shipments | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Sales.Shipment">
+<h1 id="shipments">Shipments</h1>
+
+<p><em>Queryable, Introduced in version 23.1</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Sales/Shipments
+</code></pre>
+<p>Represents a shipment.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">4E8AEFBC-74B0-427C-A043-5AA7D91ED387
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show shipment
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the shipment.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ShipmentNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The human readable identifier of the shipment.<br><br><ul><li>Max length is 20</li><li>Not nullable</li><li>Unique</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ConsignmentNo</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The real consignment/shipment number from the shipper.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>UnifaunOnlineFirstParcelNo</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The unifaun online first parcel number of the shipment.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>UnifaunOnlineFirstPrintLink</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The unifaun online first print link of the shipment.<br><br><ul><li>Max length is 4000</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>LogTradeTrackingNo</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The log trade tracking number of the shipment.<br><br><ul><li>Max length is 400</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryMethodId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the shipments delivery method.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.DeliveryMethod.html">DeliveryMethods</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryTermId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the shipments delivery term.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.DeliveryTerm.html">DeliveryTerms</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryTermStandardCode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The delivery term standard code of the shipment.<br><br><ul><li>Max length is 10</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryTermLocation</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The delivery term location of the shipment.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ShippingAgentType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The shipping agent type of the shipment.<br><br><ul><li>Other: 0</li><li>DHL: 1</li><li>Schenker: 2</li><li>PostNord: 3</li><li>DSV: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ShipmentPayer</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The shipment payer of the shipment.<br><br><ul><li>BuyerPays: 1</li><li>SellerPays: 2</li><li>OtherPayer: 3</li><li>Incoterms: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ShipmentPayerReference</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The shipment payer reference of the shipment.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>TransportDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+<td>The transport date of the shipment.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>StoredShipment</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if the shipment is stored.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PickupDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The pickup date of the shipment.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PickupTimeFrom</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The pickup time from of the shipment.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PickupTimeTo</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The pickup time to of the shipment.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ExportDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The export date of the shipment.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The delivery date of the shipment.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The delivery time of the shipment.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PickupText1</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The first pickup text of the shipment.<br><br><ul><li>Max length is 50</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PickupMisc</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The pickup misc. text of the shipment.<br><br><ul><li>Max length is 50</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SchenkerOpalNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The Schenker opal number of the shipment.<br><br><ul><li>Max length is 50</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>IsConsolidated</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if the shipment is consolidated.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ConsolidateKey</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The consolidate key of the shipment.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>TotalEurPallets</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The total number of euro pallets on the shipment.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CurrentInformationSourceType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The current shipment information source type of the shipment.<br><br><ul><li>CustomerOrder: 0</li><li>Supplier: 1</li><li>PickingList: 2</li><li>Customer: 3</li><li>PickingListWithPackageStructure: 4</li><li>Subcontract: 5</li><li>ReturnOrder: 6</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Status</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The status of the shipment.<br><br><ul><li>Registered: 1</li><li>ShipmentFailed: 2</li><li>ShipmentInformationNotSufficient: 3</li><li>Sent: 4</li><li>Booked: 5</li><li>Shipped: 6</li><li>Cancelled: 7</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ShippingAgentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the shipping agent of the shipment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Purchase.Supplier.html">Suppliers</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RecipientAdressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the recipient adress of the shipment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RecipientAdress</td>
+<td><a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></td>
+<td>The recipient adress of the shipment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RecipientInvoiceAddressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the recipient invoice adress of the shipment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RecipientInvoiceAddress</td>
+<td><a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></td>
+<td>The recipient invoice adress of the shipment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>FreightPayerAddressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the freight payer adress of the shipment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>FreightPayerAddress</td>
+<td><a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></td>
+<td>The freight payer adress of the shipment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ConsignmentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The consignment id of the shipment.<br><br><ul><li>Max length is 25</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ConsignmentIdForReturn</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The consignment id for return of the shipment.<br><br><ul><li>Max length is 25</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OurReferenceName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>Our reference name of the shipment.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OurReferencePhoneNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>Our reference phone number of the shipment.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OurReferenceMobilePhoneNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>Our reference mobile phone number of the shipment.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OurReferenceMail</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>Our reference mail of the shipment.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OurPickUpAddressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of our pick up address of the shipment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OurPickUpAddress</td>
+<td><a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></td>
+<td>Our pick up adress of the shipment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OurInvoiceAdressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of our invoce address of the shipment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OurInvoiceAddress</td>
+<td><a class="xref" href="Monitor.API.Common.Address.html">Addresses</a></td>
+<td>Our invoice adress of the shipment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PalletRegistrationNo</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The pallet registration number of the shipment.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>OurPalletRegistrationNo</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>Our pallet registration number of the shipment.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BusinessContactReferenceName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The business contact reference name of the shipment.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BusinessContactReferencePhoneNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The business contact reference phone number of the shipment.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BusinessContactReferenceMobilePhoneNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The business contact reference mobile phone number of the shipment.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BusinessContactReferenceMail</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The business contact reference mail of the shipment.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ShippingTemplate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The shipping template code of the shipment.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ShippingTemplateId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the shipping template of the shipment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Sales.ShippingTemplate.html">ShippingTemplates</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ShippingServiceId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of shipping service of the shipment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Sales.ShippingService.html">ShippingServices</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ShippingService</td>
+<td><a class="xref" href="Monitor.API.Sales.ShippingService.html">ShippingServices</a></td>
+<td>The shipping service of the shipment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ShippingServiceCode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The shipping service code of the shipment.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SenderQuickId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The sender quick id of the shipment.<br><br><ul><li>Max length is 30</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SellerQuickId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The seller quick id of the shipment.<br><br><ul><li>Max length is 30</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ConsignorId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The consignor id of the shipment.<br><br><ul><li>Max length is 30</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PickupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The pickup id of the shipment.<br><br><ul><li>Max length is 30</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>LogTradePrintQueue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The log trade print queue of the shipment.<br><br><ul><li>Max length is 25</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ShippingAgentCode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The shipping agent code of the shipment.<br><br><ul><li>Max length is 15</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SenderReference</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The sender reference of the shipment.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>RecipientReference</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The recipient reference of the shipment.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DeliveryInstruction</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The delivery instruction of the shipment.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BookTransport</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if the shipment has booked transport.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReturnLabel</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Indicates if the shipment has return label.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ShipmentPrintSetting</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The print setting of the shipment.<br><br><ul><li>WaybillAndParcel: 0</li><li>Waybill: 1</li><li>Parcel: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ActiveDeliveryAddressCustomerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the active delivery address customer of the shipment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Sales.Customer.html">Customers</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ActiveDeliveryAddressSupplierId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the active delivery address supplier of the shipment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Purchase.Supplier.html">Suppliers</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ActiveDeliveryAddressCompanyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the active delivery address company of the shipment.<br><br><ul><li>References Company</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ActiveDeliveryAddressDeliveryAddressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the active delivery address delivery address of the shipment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.DeliveryAddress.html">DeliveryAddresses</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ActiveDeliveryAddressDeliveryAddress</td>
+<td><a class="xref" href="Monitor.API.Common.DeliveryAddress.html">DeliveryAddresses</a></td>
+<td>The active delivery address delivery address of the shipment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ActiveFallbackDeliveryAddressDeliveryAddressId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the active fallback delivery address delivery address of the shipment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.DeliveryAddress.html">DeliveryAddresses</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ActiveFallbackDeliveryAddressDeliveryAddress</td>
+<td><a class="xref" href="Monitor.API.Common.DeliveryAddress.html">DeliveryAddresses</a></td>
+<td>The active fallback delivery address delivery address of the shipment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SourceOfAlternativeDeliveryAddresses</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The source of alternative delivery addresses of the shipment.<br><br><ul><li>CurrentCustomer: 0</li><li>Customer: 1</li><li>Supplier: 2</li><li>Company: 3</li><li>CurrentSupplier: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>WarehouseShippingAgentCode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The warehouse shipping agent code of the shipment.<br><br><ul><li>Max length is 20</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CustomerGoodsAddressNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The customer goods address number of the shipment.<br><br><ul><li>Max length is 80</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CustomerShippingAgentCode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The customer shipping agent code of the shipment.<br><br><ul><li>Max length is 20</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>WarehouseId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the shipments warehouse.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Warehouse.html">Warehouses</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ShippingAgentAccountName</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The shipping agent account name of the shipment.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculatedFreightPrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The calculated freight price of the shipment.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculatedFreightPriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the calculated freight price currency of the shipment.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculatedFreightPriceCurrency</td>
+<td><a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a></td>
+<td>The calculated freight price currency of the shipment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>MobilePhoneNotificationNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The mobile phone notification number for phone advice of the shipment.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>GoodsTrackingUrl</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The goods tracking URL of the shipment.<br><br><ul><li>Max length is 4000</li></ul></td>
+<td>Introduced in version 24.7</td>
+</tr>
+<tr>
+<td>CustomsId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the customs information of the shipment.<br></td>
+<td>Introduced in version 26.4</td>
+</tr>
+<tr>
+<td>Customs</td>
+<td><a class="xref" href="Monitor.API.Sales.ShipmentCustoms.html">ShipmentCustoms</a></td>
+<td>The customs information of the shipment.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 26.4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;ShipmentNumber&quot;: null,
+  &quot;ConsignmentNo&quot;: null,
+  &quot;UnifaunOnlineFirstParcelNo&quot;: null,
+  &quot;UnifaunOnlineFirstPrintLink&quot;: null,
+  &quot;LogTradeTrackingNo&quot;: null,
+  &quot;DeliveryMethodId&quot;: null,
+  &quot;DeliveryTermId&quot;: null,
+  &quot;DeliveryTermStandardCode&quot;: null,
+  &quot;DeliveryTermLocation&quot;: null,
+  &quot;ShippingAgentType&quot;: 0,
+  &quot;ShipmentPayer&quot;: 0,
+  &quot;ShipmentPayerReference&quot;: null,
+  &quot;TransportDate&quot;: &quot;0001-01-01T00:00:00+00:00&quot;,
+  &quot;StoredShipment&quot;: false,
+  &quot;PickupDate&quot;: null,
+  &quot;PickupTimeFrom&quot;: null,
+  &quot;PickupTimeTo&quot;: null,
+  &quot;ExportDate&quot;: null,
+  &quot;DeliveryDate&quot;: null,
+  &quot;DeliveryTime&quot;: null,
+  &quot;PickupText1&quot;: null,
+  &quot;PickupMisc&quot;: null,
+  &quot;SchenkerOpalNumber&quot;: null,
+  &quot;IsConsolidated&quot;: false,
+  &quot;ConsolidateKey&quot;: null,
+  &quot;TotalEurPallets&quot;: 0,
+  &quot;CurrentInformationSourceType&quot;: 0,
+  &quot;Status&quot;: 0,
+  &quot;ShippingAgentId&quot;: 0,
+  &quot;RecipientAdressId&quot;: null,
+  &quot;RecipientAdress&quot;: null,
+  &quot;RecipientInvoiceAddressId&quot;: null,
+  &quot;RecipientInvoiceAddress&quot;: null,
+  &quot;FreightPayerAddressId&quot;: null,
+  &quot;FreightPayerAddress&quot;: null,
+  &quot;ConsignmentId&quot;: null,
+  &quot;ConsignmentIdForReturn&quot;: null,
+  &quot;OurReferenceName&quot;: null,
+  &quot;OurReferencePhoneNumber&quot;: null,
+  &quot;OurReferenceMobilePhoneNumber&quot;: null,
+  &quot;OurReferenceMail&quot;: null,
+  &quot;OurPickUpAddressId&quot;: null,
+  &quot;OurPickUpAddress&quot;: null,
+  &quot;OurInvoiceAdressId&quot;: null,
+  &quot;OurInvoiceAddress&quot;: null,
+  &quot;PalletRegistrationNo&quot;: null,
+  &quot;OurPalletRegistrationNo&quot;: null,
+  &quot;BusinessContactReferenceName&quot;: null,
+  &quot;BusinessContactReferencePhoneNumber&quot;: null,
+  &quot;BusinessContactReferenceMobilePhoneNumber&quot;: null,
+  &quot;BusinessContactReferenceMail&quot;: null,
+  &quot;ShippingTemplate&quot;: null,
+  &quot;ShippingTemplateId&quot;: null,
+  &quot;ShippingServiceId&quot;: null,
+  &quot;ShippingService&quot;: null,
+  &quot;ShippingServiceCode&quot;: null,
+  &quot;SenderQuickId&quot;: null,
+  &quot;SellerQuickId&quot;: null,
+  &quot;ConsignorId&quot;: null,
+  &quot;PickupId&quot;: null,
+  &quot;LogTradePrintQueue&quot;: null,
+  &quot;ShippingAgentCode&quot;: null,
+  &quot;SenderReference&quot;: null,
+  &quot;RecipientReference&quot;: null,
+  &quot;DeliveryInstruction&quot;: null,
+  &quot;BookTransport&quot;: false,
+  &quot;ReturnLabel&quot;: false,
+  &quot;ShipmentPrintSetting&quot;: 0,
+  &quot;ActiveDeliveryAddressCustomerId&quot;: null,
+  &quot;ActiveDeliveryAddressSupplierId&quot;: null,
+  &quot;ActiveDeliveryAddressCompanyId&quot;: null,
+  &quot;ActiveDeliveryAddressDeliveryAddressId&quot;: null,
+  &quot;ActiveDeliveryAddressDeliveryAddress&quot;: null,
+  &quot;ActiveFallbackDeliveryAddressDeliveryAddressId&quot;: null,
+  &quot;ActiveFallbackDeliveryAddressDeliveryAddress&quot;: null,
+  &quot;SourceOfAlternativeDeliveryAddresses&quot;: 0,
+  &quot;WarehouseShippingAgentCode&quot;: null,
+  &quot;CustomerGoodsAddressNumber&quot;: null,
+  &quot;CustomerShippingAgentCode&quot;: null,
+  &quot;WarehouseId&quot;: 0,
+  &quot;ShippingAgentAccountName&quot;: null,
+  &quot;CalculatedFreightPrice&quot;: null,
+  &quot;CalculatedFreightPriceCurrencyId&quot;: null,
+  &quot;CalculatedFreightPriceCurrency&quot;: null,
+  &quot;MobilePhoneNotificationNumber&quot;: null,
+  &quot;GoodsTrackingUrl&quot;: null,
+  &quot;CustomsId&quot;: null,
+  &quot;Customs&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

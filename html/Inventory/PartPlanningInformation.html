@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PartPlanningInformation | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PartPlanningInformation | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Inventory.PartPlanningInformation">
+<h1 id="partplanninginformation">PartPlanningInformation</h1>
+
+<p><em>Queryable, Introduced in version 2.18</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Inventory/PartPlanningInformation
+</code></pre>
+<p>Represents part planning information for a warehouse.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">9215F190-5E07-46AD-9A9F-A46BE27A7007
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show part
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the part planning information.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ContactId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the contact person of the part planning information.<br><br>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>WarehouseId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the warehouse that the part planning information is<br>defined for.<br><br>References <a class="xref" href="Monitor.API.Common.Warehouse.html">Warehouses</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>AbcCodeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the AbcCode used.<br><br>References <a class="xref" href="Monitor.API.Inventory.AbcCode.html">AbcCodes</a><br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>AcquisitionWarehouseId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the warehouse to refill from.<br><br>References <a class="xref" href="Monitor.API.Common.Warehouse.html">Warehouses</a><br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>Eoq</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The economic order quantity.<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>RoundingBase</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The rounding quantity for orders.<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>SafetyStock</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The safety stock for the part .<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>AnnualVolume</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The annual volume for the part.<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>LeadTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>The lead time for the part.<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>MinQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The minimum order quantity (both purchase and manufacturing).<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>MaxQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The maximum quantity per order when manufacturing.<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>ReorderPoint</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The reorder quantity for the part.<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>PalletQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The quantity per packet when manufacturing.<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>AnnualVolumePace</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The annual volume, current pace.<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>EoqPace</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>Order quantity current pace.<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>LotSizingRule</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The lot sizing rule for the part.<br><br><ul><li>LotForLot: 1</li><li>FixedQuantity: 2</li><li>PeriodRequirement: 3</li><li>Bucketpart: 4</li><li>Linked: 5</li></ul></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>LotSizingPeriod</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>The length of the period when using period requirement as lot sizing rule.<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>AllowOrderCreationFromCustomerOrder</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Allow to create orders from customer order (manufacturing order for manufactured parts and purchase orders for purchased parts).<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>SafetyTime</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+<td>Safety time.<br></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>DeductSalesForecast</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The type of forecast deduction used.<br><br><ul><li>None: 0</li><li>LeadTime: 1</li><li>Now: 2</li></ul></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>DeductionMethod</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The method of forecast deduction used.<br><br><ul><li>Percent: 0</li><li>TimeOrder: 1</li><li>Closest: 2</li><li>ClosestBefore: 3</li><li>PeriodicIntervals: 4</li></ul></td>
+<td>Introduced in version 2.31</td>
+</tr>
+<tr>
+<td>ActiveSupplierPartLinkId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the active supplier part link of the part planning information.<br><br><ul><li>References <a class="xref" href="Monitor.API.Purchase.SupplierPartLink.html">SupplierPartLinks</a></li></ul></td>
+<td>Introduced in version 2.55</td>
+</tr>
+<tr>
+<td>ActiveSupplierPartLink</td>
+<td><a class="xref" href="Monitor.API.Purchase.SupplierPartLink.html">SupplierPartLinks</a></td>
+<td>The active supplier part link of the part planning information.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DefaultTransferProfileId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the default transfer profile.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.TransferProfile.html">TransferProfiles</a></li></ul></td>
+<td>Introduced in version 22.1</td>
+</tr>
+<tr>
+<td>PlanningMethod</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The planning method of the part planning information.<br><br><ul><li>Netting: 0</li><li>StockRefill: 1</li><li>Physical: 2</li></ul></td>
+<td>Introduced in version 22.1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;ContactId&quot;: null,
+  &quot;WarehouseId&quot;: 0,
+  &quot;AbcCodeId&quot;: null,
+  &quot;AcquisitionWarehouseId&quot;: null,
+  &quot;Eoq&quot;: 0.0,
+  &quot;RoundingBase&quot;: 0.0,
+  &quot;SafetyStock&quot;: 0.0,
+  &quot;AnnualVolume&quot;: 0.0,
+  &quot;LeadTime&quot;: null,
+  &quot;MinQuantity&quot;: 0.0,
+  &quot;MaxQuantity&quot;: 0.0,
+  &quot;ReorderPoint&quot;: 0.0,
+  &quot;PalletQuantity&quot;: 0.0,
+  &quot;AnnualVolumePace&quot;: 0.0,
+  &quot;EoqPace&quot;: 0.0,
+  &quot;LotSizingRule&quot;: 0,
+  &quot;LotSizingPeriod&quot;: &quot;00:00:00&quot;,
+  &quot;AllowOrderCreationFromCustomerOrder&quot;: false,
+  &quot;SafetyTime&quot;: &quot;00:00:00&quot;,
+  &quot;DeductSalesForecast&quot;: 0,
+  &quot;DeductionMethod&quot;: 0,
+  &quot;ActiveSupplierPartLinkId&quot;: null,
+  &quot;ActiveSupplierPartLink&quot;: null,
+  &quot;DefaultTransferProfileId&quot;: null,
+  &quot;PlanningMethod&quot;: 0
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

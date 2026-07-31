@@ -1,0 +1,1111 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Parts | Monitor ERP API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Parts | Monitor ERP API ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Monitor.API.Inventory.Part">
+<h1 id="parts">Parts</h1>
+
+<p><em>Queryable, Introduced in version 2.18</em></p>
+<pre><code class="lang-text">GET https://localhost:8001/sv/001.1/api/v1/Inventory/Parts
+</code></pre>
+<p>Represents a part.</p>
+<h2 id="guid">GUID</h2>
+<pre><code class="lang-text">6B6B98DA-21A0-4CA4-9B88-21631C6EA572
+</code></pre>
+<h2 id="required-permission">Required permission</h2>
+<pre><code class="lang-text">Show part
+</code></pre>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Summary</th>
+<th>Introduced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartNumber</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The human readable identifier of the part.<br><br><ul><li>Not nullable</li><li>Max length is 20</li><li>Unique</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The translated description of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ExtraDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The translated extra description of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CompanyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the company that the part is defined for.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Length</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The physical length of the part in metres.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Width</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The physical width of the part in metres.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Height</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The physical height of the part in metres.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PackagingType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The packaging type that the part specifies.<br><br><ul><li>Unspecified: 0</li><li>OuterPackaging: 1</li><li>EurPallets: 2</li><li>InnerPackaging: 3</li><li>CoverPackaging: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PackageVolumeConsistsOf</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies how package volume of the part has been specified.<br><br><ul><li>SurroundingPackagingVolume: 0</li><li>PackagingVolumeAndPartVolume: 1</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PackageTypeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the package type specified by the part.<br><br>References <a class="xref" href="Monitor.API.Inventory.PackageType.html">PackageTypes</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>PackageType</td>
+<td><a class="xref" href="Monitor.API.Inventory.PackageType.html">PackageTypes</a></td>
+<td>The package type specified by the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PartPlanningInformations</td>
+<td><a class="xref" href="Monitor.API.Inventory.PartPlanningInformation.html">PartPlanningInformation</a>[]</td>
+<td>A collection of part planning information for the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>UseRandomLocationStorage</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the part employs random location storage.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ShowFictiousStructureOnOrderRegistration</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the part should show its fictitious structure when registering<br>orders.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>TraceabilityMode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The traceability mode that is employed by the part.<br><br><ul><li>None: 0</li><li>Batch: 1</li><li>Individual: 2</li><li>IndividualOnlyWithdrawal: 4</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>UseBestBeforeDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies whether or not best before date applies to the part.<br></td>
+<td>Introduced in version 2.40</td>
+</tr>
+<tr>
+<td>DaysToAddToBestBeforeDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>?</td>
+<td>Days to use when best before date is active.<br></td>
+<td>Introduced in version 2.40</td>
+</tr>
+<tr>
+<td>SuggestBestBeforeDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies whether or not a best before date should be suggested for the part.<br><br><ul><li>No: 0</li><li>AddDays: 1</li><li>ShortestFromReportedMaterial: 2</li></ul></td>
+<td>Introduced in version 2.40</td>
+</tr>
+<tr>
+<td>ManageStockBalance</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if stock balance management is enabled for the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>StandardPrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The standard price of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>StandardPriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the currency that the standard price is<br>specified in.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>FutureStandardPrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The future standard price of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>FutureStandardPriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the currency that the future standard price<br>is specified in.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>PostCalculatedAveragePrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The post calculated average price of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PostCalculatedAveragePriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the currency that the post calculated average price<br>is specified in.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Type</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The part type.<br><br><ul><li>Purchased: 0</li><li>Manufactured: 1</li><li>Fictitious: 2</li><li>Service: 5</li><li>Subcontract: 6</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ProductGroupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the product group that the part belongs to.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.ProductGroup.html">ProductGroups</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ProductGroup</td>
+<td><a class="xref" href="Monitor.API.Common.ProductGroup.html">ProductGroups</a></td>
+<td>The product group that the part belongs to.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>WeightPerUnit</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The weight of the part per unit in kilograms.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>StatisticalGoodsCodeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the statistical goods code that the part is<br>organized under.<br><br>References a <a class="xref" href="Monitor.API.Common.StatisticalGoodsCode.html">StatisticalGoodsCodes</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>StatisticalGoodsCode</td>
+<td><a class="xref" href="Monitor.API.Common.StatisticalGoodsCode.html">StatisticalGoodsCodes</a></td>
+<td>The statistical goods code that the part is organized under.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>StatisticalGoodsValue</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The statistical goods value of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>CountryOfOriginId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part's country of origin.<br><br>References <a class="xref" href="Monitor.API.Common.Country.html">Countries</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>CountryOfOrigin</td>
+<td><a class="xref" href="Monitor.API.Common.Country.html">Countries</a></td>
+<td>The part's country of origin.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PartCodeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part's part code.<br><br>References <a class="xref" href="Monitor.API.Inventory.PartCode.html">PartCodes</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>PartCode</td>
+<td><a class="xref" href="Monitor.API.Inventory.PartCode.html">PartCodes</a></td>
+<td>The part's part code.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CategoryString</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The category of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>StorageOverheadMarkupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the storage overhead markup of the part.<br><br>References <a class="xref" href="Monitor.API.Inventory.StorageOverheadMarkup.html">StorageOverheadMarkups</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>StorageOverheadMarkup</td>
+<td><a class="xref" href="Monitor.API.Inventory.StorageOverheadMarkup.html">StorageOverheadMarkups</a></td>
+<td>The storage overhead markup of the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SalesOverheadMarkupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the sales overhead markup of the part.<br><br>References <a class="xref" href="Monitor.API.Inventory.SalesOverheadMarkup.html">SalesOverheadMarkups</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>SalesOverheadMarkup</td>
+<td><a class="xref" href="Monitor.API.Inventory.SalesOverheadMarkup.html">SalesOverheadMarkups</a></td>
+<td>The sales overhead markup of the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ProfitMarkupId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the part's profit markup.<br><br>References <a class="xref" href="Monitor.API.Inventory.ProfitMarkup.html">ProfitMarkups</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ProfitMarkup</td>
+<td><a class="xref" href="Monitor.API.Inventory.ProfitMarkup.html">ProfitMarkups</a></td>
+<td>The part's profit markup.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>VolumePerUnit</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The volume per unit of the part in cubic metres.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AveragePrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The average price of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>AveragePriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the currency that the part's average price<br>is specified in.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>LastPurchasePrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The last purchase price of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>LastPurchasePriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part's last purchase price.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>AveragePriceTimestamp</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The timestamp of the part's average price.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PurchaseLabelType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The type of transport label that is used for the part when purchasing.<br><br><ul><li>None: 0</li><li>Transport: 1</li><li>Label: 2</li><li>SmallLabel: 3</li><li>MultiLabel: 4</li><li>SelectAtPrintout: 5</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CurrentAlloyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the current part alloy.<br><br>References <a class="xref" href="Monitor.API.Inventory.Alloy.html">Alloys</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>CurrentAlloy</td>
+<td><a class="xref" href="Monitor.API.Inventory.Alloy.html">Alloys</a></td>
+<td>The part's current alloy.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PurchaseQuantityPerPackage</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The quantity per package of the part when purchasing.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>IsPackaging</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Specifies if the part is used for packaging.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Status</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The status of the part.<br><br><ul><li>Quote: 1</li><li>Prototype: 2</li><li>New: 3</li><li>Normal: 4</li><li>NewRevision: 5</li><li>PhasingOut: 6</li><li>Expired: 9</li><li>Inactive: 99</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PurchaseAndManufactureOnProject</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies if the part is purchased and manufactured on a project.<br><br><ul><li>No: 0</li><li>Yes: 1</li><li>PickFromStockFirst: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ServiceType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The service type of the part.<br><br><ul><li>Unspecified: 0</li><li>Freight: 1</li><li>AlloyCost: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>QuantityPerPackage</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The quantity per package of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PackagingWeightPerPackage</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The packaging weight per package.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PackagingPartId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the packaging part used for this part.<br><br>References <a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>PackagingPart</td>
+<td><a class="xref" href="Monitor.API.Inventory.Part.html">Parts</a></td>
+<td>The packaging part used for this part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>LoadingMetersPerUnit</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The loading metres per unit.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>PackingReference</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The packing reference of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Gs1Code</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The GS1 code of the part.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>VatRateId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part's VAT rate.<br><br>References <a class="xref" href="Monitor.API.Common.VatRate.html">VatRates</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>VatRate</td>
+<td><a class="xref" href="Monitor.API.Common.VatRate.html">VatRates</a></td>
+<td>The part's VAT rate.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>LastSalesPrice</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The last sales price of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>LastSalesPriceCurrencyId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the currency that the last sales price was<br>specified in.<br><br>References <a class="xref" href="Monitor.API.Common.Currency.html">Currencies</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>TransportCost</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The transport cost of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SerialNumberGeneration</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The serial number generation method of the part.<br><br><ul><li>Never: 0</li><li>CustomerOrderRegistration: 1</li><li>ManufacturingOrderRegistration: 2</li><li>DeliveryReporting: 3</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SerialNumberGenerationSource</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The serial number generation source of the part.<br><br><ul><li>NumberSeries: 0</li><li>Manual: 1</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>GoodsType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The goods type of the part.<br><br><ul><li>Max length is 35</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>LeadTimeToCustomer</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</td>
+<td>The lead time to the customer for the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>QuantityForLeadtimeToCustomer</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The quantity for the lead time to the customer for the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>SalesLabelType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The type of transport label to use for the part when selling.<br><br><ul><li>None: 0</li><li>Transport: 1</li><li>Label: 2</li><li>SmallLabel: 3</li><li>MultiLabel: 4</li><li>SelectAtPrintout: 5</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>DefaultCustomerOrderWarehouseId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the default customer order warehouse to use<br>for the part.<br><br>References <a class="xref" href="Monitor.API.Common.Warehouse.html">Warehouses</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ManufacturingLabelType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The type of transport label to use for the part when manufacturing.<br><br><ul><li>None: 0</li><li>Transport: 1</li><li>Label: 2</li><li>SmallLabel: 3</li><li>MultiLabel: 4</li><li>SelectAtPrintout: 5</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PreparerId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the person that prepares the part.<br><br>References <a class="xref" href="Monitor.API.Common.Person.html">Persons</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Preparer</td>
+<td><a class="xref" href="Monitor.API.Common.Person.html">Persons</a></td>
+<td>The person that prepares the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>GoodsTypeId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the goods type of the part.<br><br>References <a class="xref" href="Monitor.API.Inventory.GoodsType.html">GoodsTypes</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ExpGoodsType</td>
+<td><a class="xref" href="Monitor.API.Inventory.GoodsType.html">GoodsTypes</a></td>
+<td>The goods type of the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CalculatedQuantity</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
+<td>The calculated quantity of the part.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Alias</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The part alias.<br><br><ul><li>Max length is 20</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedById</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the application user that blocked the entity.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.ApplicationUser.html">ApplicationUsers</a></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedBy</td>
+<td><a class="xref" href="Monitor.API.Common.ApplicationUser.html">ApplicationUsers</a></td>
+<td>The application user that blocked the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedStatus</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The block status of the entity.<br><br><ul><li>None: 0</li><li>Message: 1</li><li>Blocked: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedContextType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies which contexts the block applies for.<br><br><ul><li>None: 0</li><li>RegisterManufacturingOrder: 1</li><li>RegisterPurchaseOrder: 2</li><li>RegisterCustomerOrder: 4</li><li>ReportManufacturingOrder: 8</li><li>ReportPurchaseOrder: 16</li><li>ReportCustomerOrder: 32</li><li>WithdrawalManufacturingOrder: 64</li><li>Preparation: 128</li><li>ConfigurationSelection: 256</li><li>RegisterAgreement: 512</li><li>RegisterBlanketOrderPurchase: 1024</li><li>RegisterBlanketOrderSales: 2048</li><li>RegisterQuote: 4096 (Introduced in version 25.7)</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockMessageId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the entity block message comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a>.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockMessage</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The block message of the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedFromDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date when the entity starts being blocked.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>BlockedToDate</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</td>
+<td>The date when the entity stops being blocked.<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReceivingInspectionType</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>Specifies when reception inspection of the type occurs.<br><br><ul><li>None: 0</li><li>Always: 1</li><li>VariableInspection: 2</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>StandardUnitId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the standard unit of the part.<br><br>References <a class="xref" href="Monitor.API.Common.Unit.html">Units</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>StandardPartUnitUsageId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+<td>The business key identifier of the standard part unit usage.<br><br>References <a class="xref" href="Monitor.API.Common.PartUnitUsage.html">PartUnitUsages</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>StandardPartUnitUsage</td>
+<td><a class="xref" href="Monitor.API.Common.PartUnitUsage.html">PartUnitUsages</a></td>
+<td>The standard part unit usage.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PartUnitUsages</td>
+<td><a class="xref" href="Monitor.API.Common.PartUnitUsage.html">PartUnitUsages</a>[]</td>
+<td>A collection of part unit usages for the part.<br><br>References <a class="xref" href="Monitor.API.Common.PartUnitUsage.html">PartUnitUsages</a><br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.32</td>
+</tr>
+<tr>
+<td>CommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The part comment.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ActiveRevisionId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part's active revision.<br><br>References <a class="xref" href="Monitor.API.Common.Revision.html">Revisions</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ActiveRevision</td>
+<td><a class="xref" href="Monitor.API.Common.Revision.html">Revisions</a></td>
+<td>The active revision of the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>LatestCalculationId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the latest part calculation.<br><br>References PartCalculation<br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReceivingInstructionId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the receiving instruction of the part.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ReceivingInstruction</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The receiving instruction of the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PurchaseCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part's purchase comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>PurchaseComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The purchase comment of the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PickingInstructionId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part's picking instruction.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>PickingInstruction</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The picking instruction of the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SalesCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part's sales comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>SalesComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The sales comment of the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>ManufacturingCommentId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part's manufacturing comment.<br><br>References <a class="xref" href="Monitor.API.Common.Comment.html">Comments</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ManufacturingComment</td>
+<td><a class="xref" href="Monitor.API.Common.Comment.html">Comments</a></td>
+<td>The manufacturing comment of the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PreparationId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part's preparation.<br><br>References <a class="xref" href="Monitor.API.Manufacturing.Preparation.html">Preparations</a><br></td>
+<td></td>
+</tr>
+<tr>
+<td>ExtraFields</td>
+<td><a class="xref" href="Monitor.API.Common.ExtraField.html">ExtraFields</a>[]</td>
+<td>A collection of extra field values for the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>CustomerPartLinks</td>
+<td><a class="xref" href="Monitor.API.Sales.CustomerPartLink.html">CustomerPartLinks</a>[]</td>
+<td>A collection of customer part links for the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SupplierPartLinks</td>
+<td><a class="xref" href="Monitor.API.Purchase.SupplierPartLink.html">SupplierPartLinks</a>[]</td>
+<td>A collection of supplier part links for the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Revisions</td>
+<td><a class="xref" href="Monitor.API.Common.Revision.html">Revisions</a>[]</td>
+<td>A collection of revisions that belong to the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Drawings</td>
+<td><a class="xref" href="Monitor.API.Manufacturing.Drawing.html">Drawings</a>[]</td>
+<td>A collection of drawings that belong to the part.<br><br><ul><li>Expandable</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>PartLocations</td>
+<td><a class="xref" href="Monitor.API.Inventory.PartLocation.html">PartLocations</a>[]</td>
+<td>A collection of locations that belong to the part.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.28</td>
+</tr>
+<tr>
+<td>HyperLinks</td>
+<td><a class="xref" href="Monitor.API.Inventory.HyperLink.html">HyperLinks</a>[]</td>
+<td>A collection of hyperlinks that belong to the part.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.55</td>
+</tr>
+<tr>
+<td>PartActivities</td>
+<td><a class="xref" href="Monitor.API.Inventory.PartActivity.html">PartActivities</a>[]</td>
+<td>A collection of activities that belong to the part.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 22.7</td>
+</tr>
+<tr>
+<td>ConfigurationTemplateId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part configuration template that the<br>part uses for part configuration.<br><br>References PartConfigurationTemplate<br></td>
+<td>Introduced in version 2.33</td>
+</tr>
+<tr>
+<td>ConfigurationTemplate</td>
+<td><a class="xref" href="Monitor.API.Common.PartConfigurationTemplate.html">PartConfigurationTemplates</a></td>
+<td>The part configuration template that the part uses for part configuration.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 22.3</td>
+</tr>
+<tr>
+<td>OtherIdentities</td>
+<td><a class="xref" href="Monitor.API.Inventory.PartOtherIdentity.html">PartOtherIdentities</a>[]</td>
+<td>The &quot;other&quot; identities of the part.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.47</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td><a class="xref" href="Monitor.API.Common.BusinessContactNoteHistory.html">BusinessContactNoteHistories</a>[]</td>
+<td>Rows of business contact notes.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 2.55</td>
+</tr>
+<tr>
+<td>ConfigurationSelectionDescription</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+<td>The selected configuration description of the part.<br></td>
+<td>Introduced in version 2.55</td>
+</tr>
+<tr>
+<td>OrderQuantityId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of order quantity.<br><br><ul><li>References <a class="xref" href="Monitor.API.Inventory.OrderQuantityTemplate.html">OrderQuantityTemplates</a></li></ul></td>
+<td>Introduced in version 22.6</td>
+</tr>
+<tr>
+<td>OrderQuantity</td>
+<td><a class="xref" href="Monitor.API.Inventory.OrderQuantityTemplate.html">OrderQuantityTemplates</a></td>
+<td>Order quantity template that holds the partial quantities, that acts as a default for the order equivalent order quantities.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 22.6</td>
+</tr>
+<tr>
+<td>ProjectId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the project that the part belongs to.<br><br><ul><li>References <a class="xref" href="Monitor.API.Common.Project.html">Projects</a></li></ul></td>
+<td>Introduced in version 22.7</td>
+</tr>
+<tr>
+<td>PartTemplateId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the part template.<br><br><ul><li>References <a class="xref" href="Monitor.API.Inventory.PartTemplate.html">PartTemplates</a></li></ul></td>
+<td>Introduced in version 23.1</td>
+</tr>
+<tr>
+<td>PartTemplate</td>
+<td><a class="xref" href="Monitor.API.Inventory.PartTemplate.html">PartTemplates</a></td>
+<td>A part template information for the part.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 23.1</td>
+</tr>
+<tr>
+<td>IsFixedWeight</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+<td>Information whether the part has a fixed weight.<br></td>
+<td>Introduced in version 23.2</td>
+</tr>
+<tr>
+<td>MaterialValidationSetting</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The settings for serial number linked to which operation.<br><br><ul><li>ActualOperation: 0</li><li>AnyOperation: 1</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td>Introduced in version 24.5</td>
+</tr>
+<tr>
+<td>AutomaticReportingMode</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+<td>The automatic reporting mode that the part applies.<br><br><ul><li>PickingLocation: 1</li><li>Cleared: 2</li><li>BufferLocation: 4</li><li>Project: 8</li></ul><br><ul><li>Bitmask</li></ul></td>
+<td>Introduced in version 24.6</td>
+</tr>
+<tr>
+<td>EmissionFactorId</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>?</td>
+<td>The business key identifier of the material type of the part.<br></td>
+<td>Introduced in version 25.7</td>
+</tr>
+<tr>
+<td>EmissionFactor</td>
+<td><a class="xref" href="Monitor.API.Inventory.Commands.EmissionFactor.html">EmissionFactors</a></td>
+<td>The emission factor for the part.<br><br><ul><li>Expandable</li><li>References <a class="xref" href="Monitor.API.Inventory.Commands.EmissionFactor.html">EmissionFactors</a></li></ul></td>
+<td>Introduced in version 25.7</td>
+</tr>
+<tr>
+<td>Emissions</td>
+<td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a>?</td>
+<td>The emission factor registered for the material type of the part.<br></td>
+<td>Introduced in version 25.7</td>
+</tr>
+<tr>
+<td>ControlDataRows</td>
+<td><a class="xref" href="Monitor.API.Inventory.PartPurchaseControlDataRow.html">PartPurchaseControlDataRows</a>[]</td>
+<td>A collection of purchase control data rows for the part.<br><br><ul><li>Expandable</li></ul></td>
+<td>Introduced in version 26.6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<pre><code>{
+  &quot;Id&quot;: 0,
+  &quot;PartNumber&quot;: null,
+  &quot;Description&quot;: null,
+  &quot;ExtraDescription&quot;: null,
+  &quot;CompanyId&quot;: 0,
+  &quot;Length&quot;: null,
+  &quot;Width&quot;: null,
+  &quot;Height&quot;: null,
+  &quot;PackagingType&quot;: 0,
+  &quot;PackageVolumeConsistsOf&quot;: 0,
+  &quot;PackageTypeId&quot;: null,
+  &quot;PackageType&quot;: null,
+  &quot;PartPlanningInformations&quot;: null,
+  &quot;UseRandomLocationStorage&quot;: false,
+  &quot;ShowFictiousStructureOnOrderRegistration&quot;: false,
+  &quot;TraceabilityMode&quot;: 0,
+  &quot;UseBestBeforeDate&quot;: false,
+  &quot;DaysToAddToBestBeforeDate&quot;: null,
+  &quot;SuggestBestBeforeDate&quot;: 0,
+  &quot;ManageStockBalance&quot;: false,
+  &quot;StandardPrice&quot;: 0.0,
+  &quot;StandardPriceCurrencyId&quot;: 0,
+  &quot;FutureStandardPrice&quot;: null,
+  &quot;FutureStandardPriceCurrencyId&quot;: null,
+  &quot;PostCalculatedAveragePrice&quot;: null,
+  &quot;PostCalculatedAveragePriceCurrencyId&quot;: null,
+  &quot;Type&quot;: 0,
+  &quot;ProductGroupId&quot;: 0,
+  &quot;ProductGroup&quot;: null,
+  &quot;WeightPerUnit&quot;: null,
+  &quot;StatisticalGoodsCodeId&quot;: null,
+  &quot;StatisticalGoodsCode&quot;: null,
+  &quot;StatisticalGoodsValue&quot;: null,
+  &quot;CountryOfOriginId&quot;: null,
+  &quot;CountryOfOrigin&quot;: null,
+  &quot;PartCodeId&quot;: null,
+  &quot;PartCode&quot;: null,
+  &quot;CategoryString&quot;: null,
+  &quot;StorageOverheadMarkupId&quot;: 0,
+  &quot;StorageOverheadMarkup&quot;: null,
+  &quot;SalesOverheadMarkupId&quot;: 0,
+  &quot;SalesOverheadMarkup&quot;: null,
+  &quot;ProfitMarkupId&quot;: 0,
+  &quot;ProfitMarkup&quot;: null,
+  &quot;VolumePerUnit&quot;: null,
+  &quot;AveragePrice&quot;: null,
+  &quot;AveragePriceCurrencyId&quot;: null,
+  &quot;LastPurchasePrice&quot;: null,
+  &quot;LastPurchasePriceCurrencyId&quot;: null,
+  &quot;AveragePriceTimestamp&quot;: null,
+  &quot;PurchaseLabelType&quot;: 0,
+  &quot;CurrentAlloyId&quot;: null,
+  &quot;CurrentAlloy&quot;: null,
+  &quot;PurchaseQuantityPerPackage&quot;: null,
+  &quot;IsPackaging&quot;: false,
+  &quot;Status&quot;: 0,
+  &quot;PurchaseAndManufactureOnProject&quot;: 0,
+  &quot;ServiceType&quot;: 0,
+  &quot;QuantityPerPackage&quot;: null,
+  &quot;PackagingWeightPerPackage&quot;: null,
+  &quot;PackagingPartId&quot;: null,
+  &quot;PackagingPart&quot;: null,
+  &quot;LoadingMetersPerUnit&quot;: null,
+  &quot;PackingReference&quot;: null,
+  &quot;Gs1Code&quot;: null,
+  &quot;VatRateId&quot;: null,
+  &quot;VatRate&quot;: null,
+  &quot;LastSalesPrice&quot;: null,
+  &quot;LastSalesPriceCurrencyId&quot;: null,
+  &quot;TransportCost&quot;: null,
+  &quot;SerialNumberGeneration&quot;: 0,
+  &quot;SerialNumberGenerationSource&quot;: 0,
+  &quot;GoodsType&quot;: null,
+  &quot;LeadTimeToCustomer&quot;: null,
+  &quot;QuantityForLeadtimeToCustomer&quot;: null,
+  &quot;SalesLabelType&quot;: 0,
+  &quot;DefaultCustomerOrderWarehouseId&quot;: null,
+  &quot;ManufacturingLabelType&quot;: 0,
+  &quot;PreparerId&quot;: null,
+  &quot;Preparer&quot;: null,
+  &quot;GoodsTypeId&quot;: null,
+  &quot;ExpGoodsType&quot;: null,
+  &quot;CalculatedQuantity&quot;: 0.0,
+  &quot;Alias&quot;: null,
+  &quot;BlockedById&quot;: null,
+  &quot;BlockedBy&quot;: null,
+  &quot;BlockedStatus&quot;: 0,
+  &quot;BlockedContextType&quot;: 0,
+  &quot;BlockMessageId&quot;: null,
+  &quot;BlockMessage&quot;: null,
+  &quot;BlockedFromDate&quot;: null,
+  &quot;BlockedToDate&quot;: null,
+  &quot;ReceivingInspectionType&quot;: 0,
+  &quot;StandardUnitId&quot;: 0,
+  &quot;StandardPartUnitUsageId&quot;: 0,
+  &quot;StandardPartUnitUsage&quot;: null,
+  &quot;PartUnitUsages&quot;: null,
+  &quot;CommentId&quot;: null,
+  &quot;Comment&quot;: null,
+  &quot;ActiveRevisionId&quot;: null,
+  &quot;ActiveRevision&quot;: null,
+  &quot;LatestCalculationId&quot;: null,
+  &quot;ReceivingInstructionId&quot;: null,
+  &quot;ReceivingInstruction&quot;: null,
+  &quot;PurchaseCommentId&quot;: null,
+  &quot;PurchaseComment&quot;: null,
+  &quot;PickingInstructionId&quot;: null,
+  &quot;PickingInstruction&quot;: null,
+  &quot;SalesCommentId&quot;: null,
+  &quot;SalesComment&quot;: null,
+  &quot;ManufacturingCommentId&quot;: null,
+  &quot;ManufacturingComment&quot;: null,
+  &quot;PreparationId&quot;: null,
+  &quot;ExtraFields&quot;: null,
+  &quot;CustomerPartLinks&quot;: null,
+  &quot;SupplierPartLinks&quot;: null,
+  &quot;Revisions&quot;: null,
+  &quot;Drawings&quot;: null,
+  &quot;PartLocations&quot;: null,
+  &quot;HyperLinks&quot;: null,
+  &quot;PartActivities&quot;: null,
+  &quot;ConfigurationTemplateId&quot;: null,
+  &quot;ConfigurationTemplate&quot;: null,
+  &quot;OtherIdentities&quot;: null,
+  &quot;Notes&quot;: null,
+  &quot;ConfigurationSelectionDescription&quot;: null,
+  &quot;OrderQuantityId&quot;: null,
+  &quot;OrderQuantity&quot;: null,
+  &quot;ProjectId&quot;: null,
+  &quot;PartTemplateId&quot;: null,
+  &quot;PartTemplate&quot;: null,
+  &quot;IsFixedWeight&quot;: false,
+  &quot;MaterialValidationSetting&quot;: 0,
+  &quot;AutomaticReportingMode&quot;: 0,
+  &quot;EmissionFactorId&quot;: null,
+  &quot;EmissionFactor&quot;: null,
+  &quot;Emissions&quot;: null,
+  &quot;ControlDataRows&quot;: null
+}
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2023 Monitor ERP System AB</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
