@@ -18,9 +18,9 @@ import re
 import shutil
 import sys
 
-from monitor_api import emit_okf
+from monitor_api import emit_compact, emit_okf
 from monitor_api.model import build
-from monitor_api.paths import BASELINE_JSON, HTML_DIR, OKF_DIR, REPO_ROOT
+from monitor_api.paths import BASELINE_JSON, HTML_DIR, OKF_COMPACT_DIR, OKF_DIR, REPO_ROOT
 from monitor_api.parse import parse_page
 
 # Pages chosen to pin down a specific parser behaviour each. If one of these
@@ -130,6 +130,37 @@ def check_determinism():
             f"okf/{relative} differs from a fresh emit -- okf/ is stale, re-run build.py"
         )
 
+    # okf-compact/ is only ~14 files, cheap enough to re-emit and diff in full
+    # (unlike okf/'s check above, which only covers emit_root + emit_guides).
+    compact_staging = REPO_ROOT / "okf-compact.check.tmp"
+
+    if compact_staging.exists():
+        shutil.rmtree(compact_staging)
+
+    try:
+        original_compact_dir = emit_compact.OKF_COMPACT_TMP_DIR
+        emit_compact.OKF_COMPACT_TMP_DIR = compact_staging
+        emit_compact.emit_root(first)
+        emit_compact.emit_guides(first)
+        emit_compact.emit_modules(first)
+        rendered_compact = {
+            path.relative_to(compact_staging): path.read_bytes()
+            for path in compact_staging.rglob("*.md")
+        }
+    finally:
+        emit_compact.OKF_COMPACT_TMP_DIR = original_compact_dir
+        shutil.rmtree(compact_staging, ignore_errors=True)
+
+    assert rendered_compact, "emitting the compact bundle produced no files"
+
+    for relative, content in rendered_compact.items():
+        committed = OKF_COMPACT_DIR / relative
+        assert committed.exists(), f"okf-compact/{relative} was emitted but is not committed"
+        assert committed.read_bytes() == content, (
+            f"okf-compact/{relative} differs from a fresh emit -- "
+            "okf-compact/ is stale, re-run build.py"
+        )
+
 
 def check_baseline():
     """Extraction has not shrunk since the recorded floor."""
@@ -161,15 +192,73 @@ def check_links():
     assert not broken, f"{len(broken)} broken links, e.g. " + "; ".join(broken[:5])
 
 
-def check_encoding():
-    """No UTF-8-decoded-as-latin-1 corruption anywhere in the bundle."""
-    mangled = [
-        str(path.relative_to(OKF_DIR))
-        for path in sorted(OKF_DIR.rglob("*.md"))
-        if re.search(r"[-]", path.read_text(encoding="utf-8"))
+def check_compact_links():
+    """Every okf-compact/ link resolves, including its in-file anchor.
+
+    Compact links carry a '#entity-key' fragment instead of pointing at a
+    separate per-entity file, so the file part and the anchor must both be
+    verified -- a broken in-module reference would otherwise pass silently.
+    """
+    broken = []
+    anchors_by_file = {}
+
+    for path in sorted(OKF_COMPACT_DIR.rglob("*.md")):
+        for target in LINK_PATTERN.findall(path.read_text(encoding="utf-8")):
+            file_part, _, fragment = target.partition("#")
+            resolved = OKF_COMPACT_DIR / file_part.lstrip("/")
+
+            if not resolved.exists():
+                broken.append(f"{path.relative_to(OKF_COMPACT_DIR)} -> {target} (missing file)")
+                continue
+
+            if not fragment:
+                continue
+
+            if resolved not in anchors_by_file:
+                anchors_by_file[resolved] = resolved.read_text(encoding="utf-8")
+
+            if f'id="{fragment}"' not in anchors_by_file[resolved]:
+                broken.append(f"{path.relative_to(OKF_COMPACT_DIR)} -> {target} (missing anchor)")
+
+    assert not broken, f"{len(broken)} broken compact links, e.g. " + "; ".join(broken[:5])
+
+
+def check_compact_structure():
+    """okf-compact/ stays inside the ~50-file agent context budget, and every
+    entity the model knows about actually made it into its module file."""
+    files = sorted(OKF_COMPACT_DIR.rglob("*.md"))
+    assert len(files) <= 50, f"{len(files)} files in okf-compact/, exceeds the 50-file agent budget"
+
+    model = build()
+
+    for name, module in model["modules"].items():
+        text = (OKF_COMPACT_DIR / "modules" / f"{name}.md").read_text(encoding="utf-8")
+        for key in module["entities"]:
+            assert f'id="{key}"' in text, f"{key} is missing from okf-compact/modules/{name}.md"
+
+
+def _mojibake_files(root):
+    """UTF-8-decoded-as-latin-1 corruption never occurs in real prose, so any
+    C1 control character in a markdown file is proof of a decoding error."""
+    return [
+        str(path.relative_to(root))
+        for path in sorted(root.rglob("*.md"))
+        if re.search(r"[\x80-\x9f]", path.read_text(encoding="utf-8"))
     ]
 
+
+def check_encoding():
+    """No UTF-8-decoded-as-latin-1 corruption anywhere in the bundle."""
+    mangled = _mojibake_files(OKF_DIR)
+
     assert not mangled, f"{len(mangled)} files contain mojibake, e.g. {mangled[:3]}"
+
+
+def check_compact_encoding():
+    """Same mojibake scan as check_encoding, applied to okf-compact/."""
+    mangled = _mojibake_files(OKF_COMPACT_DIR)
+
+    assert not mangled, f"{len(mangled)} compact files contain mojibake, e.g. {mangled[:3]}"
 
 
 CHECKS = [
@@ -178,11 +267,14 @@ CHECKS = [
     ("baseline floor", check_baseline),
     ("link integrity", check_links),
     ("character encoding", check_encoding),
+    ("compact bundle structure", check_compact_structure),
+    ("compact bundle links", check_compact_links),
+    ("compact bundle encoding", check_compact_encoding),
 ]
 
 
 def main():
-    if not OKF_DIR.exists():
+    if not OKF_DIR.exists() or not OKF_COMPACT_DIR.exists():
         sys.exit("No bundle to check. Run: python build.py")
 
     failures = 0

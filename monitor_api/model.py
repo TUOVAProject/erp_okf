@@ -324,6 +324,28 @@ def build_modules(entities: dict) -> dict:
     return dict(sorted(modules.items()))
 
 
+def module_dependencies(modules: dict, relationships: list[dict]) -> dict:
+    """Which other modules' entities each module's data reaches into.
+
+    Computed once here, alongside the rest of the graph, so emitters read
+    ``module["dependencies"]`` instead of each filtering ``relationships``
+    themselves.
+    """
+    outgoing = {name: {} for name in modules}
+
+    for edge in relationships:
+        if edge["source_module"] == edge["target_module"]:
+            continue
+
+        targets = outgoing[edge["source_module"]].setdefault(edge["target_module"], set())
+        targets.add(edge["target"])
+
+    return {
+        name: {other: sorted(targets) for other, targets in deps.items()}
+        for name, deps in outgoing.items()
+    }
+
+
 def mojibake_problems(entities: dict) -> list[str]:
     """Catch UTF-8 decoded as latin-1.
 
@@ -439,11 +461,17 @@ def build() -> dict:
 
     properties = [prop for entity in entities.values() for prop in entity["properties"]]
 
+    modules = build_modules(entities)
+    dependencies = module_dependencies(modules, relationships)
+
+    for name, module in modules.items():
+        module["dependencies"] = dependencies[name]
+
     model = {
         "source_digest": source_digest(),
         "source": SOURCE_ROOT,
         "scope": scrape_scope(),
-        "modules": build_modules(entities),
+        "modules": modules,
         "most_referenced": rank_by_incoming(entities),
         "entities": dict(sorted(entities.items())),
         "relationships": sorted(

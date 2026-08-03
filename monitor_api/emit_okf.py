@@ -391,18 +391,14 @@ def emit_modules(model: dict) -> None:
 
         # Cross-module dependencies are the most useful thing to know about a
         # module up front: which other modules its data actually depends on.
-        outgoing = defaultdict(set)
+        dependencies = module["dependencies"]
 
-        for edge in model["relationships"]:
-            if edge["source_module"] == name and edge["target_module"] != name:
-                outgoing[edge["target_module"]].add(edge["target"])
-
-        if outgoing:
+        if dependencies:
             lines += ["", "## Depends on other modules", ""]
-            for other in sorted(outgoing):
+            for other in sorted(dependencies):
                 targets = ", ".join(
                     link(entities[key]["title"], entity_path(entities[key]))
-                    for key in sorted(outgoing[other], key=lambda k: entities[k]["title"].lower())
+                    for key in sorted(dependencies[other], key=lambda k: entities[k]["title"].lower())
                 )
                 lines.append(f"- {link(other, module_path(other))}: {targets}")
 
@@ -431,25 +427,11 @@ def emit_modules(model: dict) -> None:
     write("/modules/index.md", {"type": "Index", "title": "Modules"}, "\n".join(lines))
 
 
-def emit_guides(model: dict) -> None:
-    """Hand-written orientation, with every number taken from the model.
-
-    These are the pages that answer "how does this API work at all", which no
-    single entity page can.
-    """
+def querying_body(model: dict, entities: dict, entity_link, modules_path: str) -> str:
     stats = model["stats"]
-    entities = model["entities"]
-    common = {"generated": {"by": GENERATOR, "from": model["source_digest"]}, "tags": ["guide"]}
+    form_report_configuration = entity_link(entities["Common.FormReportConfiguration"])
 
-    write(
-        "/guides/querying.md",
-        {
-            "type": "Guide",
-            "title": "Querying the Monitor API",
-            "description": "Endpoint shape, HTTP verbs and what the documentation does and does not cover.",
-            **common,
-        },
-        f"""# Querying the Monitor API
+    return f"""# Querying the Monitor API
 
 ## Endpoint shape
 
@@ -469,7 +451,7 @@ is the `endpoint` value recorded on every entity page in this bundle.
 
 - **{stats['queryable']} queryable entities** — `GET`, returning a collection.
 - **{stats['commands']} commands** — `POST`, listed in
-  [Modules](/modules/index.md). Their properties table is the **request body**,
+  [Modules]({modules_path}). Their properties table is the **request body**,
   not a response shape.
 - **{stats['types']} payload types** — no endpoint of their own; they appear
   nested inside other responses or command bodies.
@@ -500,7 +482,7 @@ the docs give to query semantics:
   of them) are navigation properties — the docs flag them as expandable, which
   implies an expand mechanism exists.
 - One property summary
-  ([FormReportConfigurations](/entities/Common/FormReportConfiguration.md) `Type`)
+  ({form_report_configuration} `Type`)
   notes that `$filter` and `$orderby` cannot be used with it, which confirms both
   options exist in some form.
 
@@ -511,18 +493,11 @@ Treat anything beyond that as unverified: it is not in the source documentation.
 - [Naming conventions](/guides/naming-conventions.md)
 - [Relationships](/guides/relationships.md)
 - [Permissions](/guides/permissions.md)
-""",
-    )
+"""
 
-    write(
-        "/guides/naming-conventions.md",
-        {
-            "type": "Guide",
-            "title": "Naming conventions",
-            "description": "How documentation names, API class names and URL paths relate.",
-            **common,
-        },
-        f"""# Naming conventions
+
+def naming_conventions_body(stats: dict) -> str:
+    return f"""# Naming conventions
 
 ## Plural name vs. class name
 
@@ -559,26 +534,20 @@ An entity whose class name ends in `_Obsolete` is marked `status: deprecated` in
 its frontmatter. Individual properties carry their own deprecation:
 **{stats['obsolete_properties']} properties** are marked deprecated, most with an
 explicit replacement in the description.
-""",
-    )
+"""
 
+
+def relationships_body(model: dict, entities: dict, entity_link) -> str:
+    stats = model["stats"]
     fk = stats["foreign_key_edges"]
     nav = stats["navigation_edges"]
     most_referenced_list = "\n".join(
-        f"- {link(ranked['title'], entity_path(entities[ranked['key']]))} — referenced by "
+        f"- {entity_link(entities[ranked['key']])} — referenced by "
         f"{ranked['incoming']} properties"
         for ranked in model["most_referenced"][:5]
     )
 
-    write(
-        "/guides/relationships.md",
-        {
-            "type": "Guide",
-            "title": "How entities relate",
-            "description": "Foreign keys vs. navigation properties, and how to traverse the model.",
-            **common,
-        },
-        f"""# How entities relate
+    return f"""# How entities relate
 
 The model contains **{stats['relationships']} relationships** between
 {stats['entities']} entities. They come in two forms, and most related entities
@@ -626,9 +595,10 @@ The most heavily referenced entities are the shared basic-data tables. Follow
 Each module page has a **Depends on other modules** section listing exactly
 which entities it reaches into elsewhere — the fastest way to see how coupled
 the modules are.
-""",
-    )
+"""
 
+
+def permissions_body(entities: dict, stats: dict, entity_link) -> str:
     permissions = defaultdict(list)
 
     for entity in entities.values():
@@ -650,39 +620,23 @@ the modules are.
         members = sorted(permissions[permission], key=lambda e: e["title"].lower())
         lines.append(
             f"| {md_cell(permission)} | "
-            + ", ".join(link(e["title"], entity_path(e)) for e in members)
+            + ", ".join(entity_link(e) for e in members)
             + " |"
         )
 
-    write(
-        "/guides/permissions.md",
-        {
-            "type": "Guide",
-            "title": "Permissions",
-            "description": "Which Monitor permission each documented endpoint requires.",
-            **common,
-        },
-        "\n".join(lines),
-    )
+    return "\n".join(lines)
 
+
+def core_entities_body(model: dict, entities: dict, entity_link, modules_path: str) -> str:
+    stats = model["stats"]
     core_rows = "\n".join(
-        f"| {link(ranked['title'], entity_path(entities[ranked['key']]))} "
+        f"| {entity_link(entities[ranked['key']])} "
         f"| {link(ranked['module'], module_path(ranked['module']))} "
         f"| {ranked['incoming']} | {md_cell(ranked['description'])} |"
         for ranked in model["most_referenced"][:CORE_ENTITY_COUNT]
     )
 
-    write(
-        "/guides/core-entities.md",
-        {
-            "type": "Guide",
-            "title": "Core entities",
-            "description": (
-                "The most heavily referenced entities -- where to start reading."
-            ),
-            **common,
-        },
-        f"""# Core entities
+    return f"""# Core entities
 
 {stats['entities']} pages is too many to read. These {CORE_ENTITY_COUNT} are the
 ones the rest of the model hangs off, ranked by how many properties across the
@@ -703,8 +657,77 @@ these specific resources" in one hop.
 ## Related
 
 - [How entities relate](/guides/relationships.md) — what the reference counts mean
-- [Modules](/modules/index.md) — the same {stats['entities']} pages grouped by area
-""",
+- [Modules]({modules_path}) — the same {stats['entities']} pages grouped by area
+"""
+
+
+def emit_guides(model: dict) -> None:
+    """Hand-written orientation, with every number taken from the model.
+
+    These are the pages that answer "how does this API work at all", which no
+    single entity page can. Each body is a standalone function parameterized by
+    an ``entity_link`` callback, so emit_compact.py can reuse them unchanged
+    with its own per-module-anchor link shape.
+    """
+    entities = model["entities"]
+    common = {"generated": {"by": GENERATOR, "from": model["source_digest"]}, "tags": ["guide"]}
+    okf_entity_link = lambda entity: link(entity["title"], entity_path(entity))
+
+    write(
+        "/guides/querying.md",
+        {
+            "type": "Guide",
+            "title": "Querying the Monitor API",
+            "description": "Endpoint shape, HTTP verbs and what the documentation does and does not cover.",
+            **common,
+        },
+        querying_body(model, entities, okf_entity_link, "/modules/index.md"),
+    )
+
+    write(
+        "/guides/naming-conventions.md",
+        {
+            "type": "Guide",
+            "title": "Naming conventions",
+            "description": "How documentation names, API class names and URL paths relate.",
+            **common,
+        },
+        naming_conventions_body(model["stats"]),
+    )
+
+    write(
+        "/guides/relationships.md",
+        {
+            "type": "Guide",
+            "title": "How entities relate",
+            "description": "Foreign keys vs. navigation properties, and how to traverse the model.",
+            **common,
+        },
+        relationships_body(model, entities, okf_entity_link),
+    )
+
+    write(
+        "/guides/permissions.md",
+        {
+            "type": "Guide",
+            "title": "Permissions",
+            "description": "Which Monitor permission each documented endpoint requires.",
+            **common,
+        },
+        permissions_body(entities, model["stats"], okf_entity_link),
+    )
+
+    write(
+        "/guides/core-entities.md",
+        {
+            "type": "Guide",
+            "title": "Core entities",
+            "description": (
+                "The most heavily referenced entities -- where to start reading."
+            ),
+            **common,
+        },
+        core_entities_body(model, entities, okf_entity_link, "/modules/index.md"),
     )
 
     write(

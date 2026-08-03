@@ -12,9 +12,9 @@ pick up upstream documentation changes.
 import argparse
 import sys
 
-from monitor_api import emit_json, emit_okf, scrape
+from monitor_api import emit_compact, emit_json, emit_okf, scrape
 from monitor_api.model import ValidationError, build
-from monitor_api.paths import HTML_DIR, MODEL_JSON, OKF_DIR
+from monitor_api.paths import HTML_DIR, MODEL_JSON, OKF_COMPACT_DIR, OKF_DIR
 
 
 def main():
@@ -52,6 +52,9 @@ def main():
 
     emit_okf.emit(model)
     print(f"Wrote {OKF_DIR} ({sum(1 for _ in OKF_DIR.rglob('*.md'))} markdown files)")
+
+    emit_compact.emit(model)
+    print(f"Wrote {OKF_COMPACT_DIR} ({sum(1 for _ in OKF_COMPACT_DIR.rglob('*.md'))} markdown files)")
 
 
 if __name__ == "__main__":

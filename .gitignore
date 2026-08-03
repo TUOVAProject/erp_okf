@@ -10,5 +10,6 @@ build/
 # Emitter staging directories; only exist mid-build.
 build.tmp/
 okf.tmp/
+okf-compact.tmp/
 CLAUDE.md
 .DS_Store

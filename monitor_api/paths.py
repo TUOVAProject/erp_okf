@@ -17,12 +17,14 @@ ENDPOINT_INDEX = REPO_ROOT / "endpoint_index.json"
 BUILD_DIR = REPO_ROOT / "build"
 MODEL_JSON = BUILD_DIR / "model.json"
 OKF_DIR = REPO_ROOT / "okf"
+OKF_COMPACT_DIR = REPO_ROOT / "okf-compact"
 
 # Staging directories. Emitters write here and swap on success, so a crash
 # mid-emit leaves the previous good output in place instead of a half-written
 # bundle where a complete one used to be.
 BUILD_TMP_DIR = REPO_ROOT / "build.tmp"
 OKF_TMP_DIR = REPO_ROOT / "okf.tmp"
+OKF_COMPACT_TMP_DIR = REPO_ROOT / "okf-compact.tmp"
 
 # Recorded stats floor; validate() fails if a build drops below it.
 BASELINE_JSON = REPO_ROOT / "baseline.json"
