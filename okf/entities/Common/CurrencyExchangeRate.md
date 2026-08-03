@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a currency exchange rate entry.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `CurrencyExchangeRate`
 - **Endpoint:** `GET /api/v1/Common/CurrencyExchangeRates`
 - **Required permission:** Show currencies
@@ -43,14 +43,14 @@ Represents a currency exchange rate entry.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the currency exchange rate entry. |
-| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) |  | The currency exchange type of the entry. |
+| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](CurrencyExchangeType.md) |  | The currency exchange type of the entry. |
 | `Rate` | `Decimal` | no |  |  | The exchange rate of the entry. |
 
 ## Referenced by
 
 **Common**
 
-- [Currencies](/entities/Common/Currency.md) — `ExchangeRates` (expand)
+- [Currencies](Currency.md) — `ExchangeRates` (expand)
 
 
 ## Example

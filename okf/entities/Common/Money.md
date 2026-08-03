@@ -26,7 +26,7 @@ references_out:
 
 An object composite representing a money value.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `Money`
 - **Endpoint:** none — this is a payload type, not a queryable resource.
 - **Introduced in:** 2.33
@@ -36,7 +36,7 @@ An object composite representing a money value.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Amount` | `Decimal` | no |  |  | The money amount. |
-| `CurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency that the amount is specified in. |
+| `CurrencyId` | `Int64?` | yes | [Currencies](Currency.md) |  | The business key identifier of the currency that the amount is specified in. |
 
 ## Example
 

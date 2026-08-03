@@ -41,7 +41,7 @@ referenced_by:
 
 Represents a price list.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PriceList`
 - **Endpoint:** `GET /api/v1/Common/PriceLists`
 - **Required permission:** Show price lists
@@ -56,8 +56,8 @@ Represents a price list.
 | `Number` | `Int64` | no |  |  | The price list number. |
 | `Description` | `String` | no |  |  | The translated description of the price list. |
 | `ConversionFactor` | `Decimal` | no |  |  | The conversion factor of the price list. |
-| `ParentPriceListId` | `Int64?` | yes | [PriceLists](/entities/Common/PriceList.md) |  | The business key identifier of the price list's parent. References PriceLists . |
-| `CurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the price list's currency. References Currencies . |
+| `ParentPriceListId` | `Int64?` | yes | [PriceLists](PriceList.md) |  | The business key identifier of the price list's parent. References PriceLists . |
+| `CurrencyId` | `Int64` | no | [Currencies](Currency.md) |  | The business key identifier of the price list's currency. References Currencies . |
 | `PriceListBasis` | `Int32` | no |  | enum | Specifies the basis of the price list. |
 | `CompanyIds` | `Int64[]` | no |  | collection | The business key identifiers of the companies that this entity is available for. |
 
@@ -76,26 +76,26 @@ Represents a price list.
 
 **Common**
 
-- [PriceLists](/entities/Common/PriceList.md) — `ParentPriceListId` (FK)
+- [PriceLists](PriceList.md) — `ParentPriceListId` (FK)
 
 **Inventory**
 
-- [PriceChangeLogs](/entities/Inventory/PriceChangeLog.md) — `PriceListId` (FK)
+- [PriceChangeLogs](../Inventory/PriceChangeLog.md) — `PriceListId` (FK)
 
 **Purchase**
 
-- [BlanketOrderPurchaseRows](/entities/Purchase/BlanketOrderPurchaseRow.md) — `PriceOriginPriceListId` (FK)
+- [BlanketOrderPurchaseRows](../Purchase/BlanketOrderPurchaseRow.md) — `PriceOriginPriceListId` (FK)
 
 **Sales**
 
-- [BlanketOrderSalesRows](/entities/Sales/BlanketOrderSalesRow.md) — `PriceOriginPriceListId` (FK)
-- [BlanketOrderSalesTypes](/entities/Sales/BlanketOrderSalesType.md) — `PriceListId` (FK)
-- [CustomerOrderTypes](/entities/Sales/CustomerOrderType.md) — `PriceListId` (FK)
-- [Customers](/entities/Sales/Customer.md) — `ConfigurationPriceListId` (FK)
-- [Customers](/entities/Sales/Customer.md) — `PriceListId` (FK)
-- [QuoteTypes](/entities/Sales/QuoteType.md) — `PriceListId` (FK)
-- [SalesAgreementTypes](/entities/Sales/SalesAgreementType.md) — `PriceListId` (FK)
-- [SalesPrices](/entities/Sales/SalesPrice.md) — `PriceListId` (FK)
+- [BlanketOrderSalesRows](../Sales/BlanketOrderSalesRow.md) — `PriceOriginPriceListId` (FK)
+- [BlanketOrderSalesTypes](../Sales/BlanketOrderSalesType.md) — `PriceListId` (FK)
+- [CustomerOrderTypes](../Sales/CustomerOrderType.md) — `PriceListId` (FK)
+- [Customers](../Sales/Customer.md) — `ConfigurationPriceListId` (FK)
+- [Customers](../Sales/Customer.md) — `PriceListId` (FK)
+- [QuoteTypes](../Sales/QuoteType.md) — `PriceListId` (FK)
+- [SalesAgreementTypes](../Sales/SalesAgreementType.md) — `PriceListId` (FK)
+- [SalesPrices](../Sales/SalesPrice.md) — `PriceListId` (FK)
 
 
 ## Example

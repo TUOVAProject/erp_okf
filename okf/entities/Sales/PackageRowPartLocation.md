@@ -31,7 +31,7 @@ references_out:
 
 Represents a package row's location.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `PackageRowPartLocation`
 - **Endpoint:** `GET /api/v1/Sales/PackageRowPartLocations`
 - **Required permission:** Show customer orders
@@ -43,9 +43,9 @@ Represents a package row's location.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the package row location. |
-| `ParentPackageRowId` | `Int64` | no | [PackageRows](/entities/Sales/PackageRow.md) |  | The business key identifier of the location's parent package row. |
-| `PartLocationId` | `Int64` | no | [PartLocations](/entities/Inventory/PartLocation.md) |  | The business key identifier of the package row location's part location. |
-| `ProductRecordId` | `Int64?` | yes | [ProductRecords](/entities/Inventory/ProductRecord.md) |  | The business key identifier of the package row location's product record. |
+| `ParentPackageRowId` | `Int64` | no | [PackageRows](PackageRow.md) |  | The business key identifier of the location's parent package row. |
+| `PartLocationId` | `Int64` | no | [PartLocations](../Inventory/PartLocation.md) |  | The business key identifier of the package row location's part location. |
+| `ProductRecordId` | `Int64?` | yes | [ProductRecords](../Inventory/ProductRecord.md) |  | The business key identifier of the package row location's product record. |
 | `BalanceChange` | `Decimal` | no |  |  | The balance change of the package row location. |
 
 ## Example

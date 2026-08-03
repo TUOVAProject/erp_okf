@@ -39,7 +39,7 @@ referenced_by:
 
 Represents a voucher.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `Voucher`
 - **Endpoint:** `GET /api/v1/Accounting/Vouchers`
 - **Required permission:** Show voucher
@@ -52,20 +52,20 @@ Represents a voucher.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the voucher. |
 | `Version` | `Int32` | no |  |  | The version of the voucher. |
-| `SeriesId` | `Int64` | no | [VoucherSeries](/entities/Accounting/VoucherSeries.md) |  | The business key identifier of the voucher series for the voucher. |
-| `AccountingYearId` | `Int64` | no | [AccountingYears](/entities/Accounting/AccountingYear.md) |  | The business key identifier of the accounting year for the voucher. |
+| `SeriesId` | `Int64` | no | [VoucherSeries](VoucherSeries.md) |  | The business key identifier of the voucher series for the voucher. |
+| `AccountingYearId` | `Int64` | no | [AccountingYears](AccountingYear.md) |  | The business key identifier of the accounting year for the voucher. |
 | `Number` | `Int64` | no |  |  | The voucher number. |
 | `Text` | `String` | no |  | max length 100 | The description of the voucher. |
 | `VoucherDate` | `DateTimeOffset` | no |  |  | The date of the voucher. |
-| `ConnectedVoucherId` | `Int64?` | yes | [Vouchers](/entities/Accounting/Voucher.md) |  | The business key identifier of the voucher connected to the voucher. |
+| `ConnectedVoucherId` | `Int64?` | yes | [Vouchers](Voucher.md) |  | The business key identifier of the voucher connected to the voucher. |
 | `ConnectionType` | `Int32` | no |  | enum | The connection type to the connected voucher. |
-| `ReverseConnectionVoucherId` | `Int64?` | yes | [Vouchers](/entities/Accounting/Voucher.md) |  | The business key identifier of rectification/copy connected to the voucher. |
+| `ReverseConnectionVoucherId` | `Int64?` | yes | [Vouchers](Voucher.md) |  | The business key identifier of rectification/copy connected to the voucher. |
 | `ReverseConnectionType` | `Int32` | no |  | enum | The connection type to the reverse connected voucher. |
 | `IsPreliminary` | `Boolean` | no |  |  | Specifies if the voucher is preliminary. |
 | `BundleNumber` | `Int64?` | yes |  |  | The bundle number of the voucher. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the voucher's comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the voucher. |
-| `Rows` | `VoucherRows[]` | no | [VoucherRows](/entities/Accounting/VoucherRow.md) | expandable, collection | The rows belonging to the voucher. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the voucher's comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment of the voucher. |
+| `Rows` | `VoucherRows[]` | no | [VoucherRows](VoucherRow.md) | expandable, collection | The rows belonging to the voucher. |
 | `AccountsReceivableLedgerId` | `Int64?` | yes |  |  | The business key identifier of the voucher's accounts receivable ledger. References AccountsReceivableLedger. |
 | `CancelledAccountsReceivableLedgerId` | `Int64?` | yes |  |  | The business key identifier of the voucher's cancelled accounts receivable ledger. References CancelledAccountsReceivableLedger. |
 | `AccountsPayableLedgerId` | `Int64?` | yes |  |  | The business key identifier of the voucher's accounts payable ledger. References AccountsPayableLedger. |
@@ -84,9 +84,9 @@ Represents a voucher.
 | `CalculationDifferenceLedgerId` | `Int64?` | yes |  |  | The business key identifier of the voucher's calculation difference ledger. References CalculationDifferenceLedger. |
 | `UnplannedStockBalanceChangeTransactionId` | `Int64?` | yes |  |  | The business key identifier for the unplanned stock balance change transaction of the voucher. References UnplannedStockBalanceChangeTransaction. |
 | `AccountsReceivableId` | `Int64?` | yes |  |  | The business key identifier for the accounts receivable linked to the voucher. References AccountsReceivable. |
-| `AccountsPayableId` | `Int64?` | yes | [AccountsPayables](/entities/Accounting/AccountsPayable.md) |  | The business key identifier for the accounts payable linked to the voucher. |
-| `AccountsPayable` | `AccountsPayables` | no | [AccountsPayables](/entities/Accounting/AccountsPayable.md) | expandable | The accounts payable linked to the voucher. |
-| `AccrualAccountingRowId` | `Int64?` | yes | [AccrualAccountingRows](/entities/Accounting/AccrualAccountingRow.md) |  | The business key identifier for the accrual accounting row linked to the voucher. |
+| `AccountsPayableId` | `Int64?` | yes | [AccountsPayables](AccountsPayable.md) |  | The business key identifier for the accounts payable linked to the voucher. |
+| `AccountsPayable` | `AccountsPayables` | no | [AccountsPayables](AccountsPayable.md) | expandable | The accounts payable linked to the voucher. |
+| `AccrualAccountingRowId` | `Int64?` | yes | [AccrualAccountingRows](AccrualAccountingRow.md) |  | The business key identifier for the accrual accounting row linked to the voucher. |
 | `VatBookingId` | `Int64?` | yes |  |  | The business key identifier for the voucher's VAT booking. References VatBooking. |
 | `CorrectionBookingId` | `Int64?` | yes |  |  | The business key identifier for the voucher's correction booking. References Booking. |
 | `CNSeries` | `String` | no |  | since 25.6 | The CN series of the voucher. |
@@ -115,10 +115,10 @@ Represents a voucher.
 
 **Accounting**
 
-- [FixedAssets](/entities/Accounting/FixedAsset.md) — `VoucherId` (FK)
-- [VoucherRows](/entities/Accounting/VoucherRow.md) — `VoucherId` (FK)
-- [Vouchers](/entities/Accounting/Voucher.md) — `ConnectedVoucherId` (FK)
-- [Vouchers](/entities/Accounting/Voucher.md) — `ReverseConnectionVoucherId` (FK)
+- [FixedAssets](FixedAsset.md) — `VoucherId` (FK)
+- [VoucherRows](VoucherRow.md) — `VoucherId` (FK)
+- [Vouchers](Voucher.md) — `ConnectedVoucherId` (FK)
+- [Vouchers](Voucher.md) — `ReverseConnectionVoucherId` (FK)
 
 
 ## Example

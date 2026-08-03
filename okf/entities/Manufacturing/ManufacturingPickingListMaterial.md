@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a manufacturing picking list material.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ManufacturingPickingListMaterial`
 - **Endpoint:** `GET /api/v1/Manufacturing/ManufacturingPickingListMaterials`
 - **Required permission:** Show manufacturing orders
@@ -44,16 +44,16 @@ Represents a manufacturing picking list material.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the manufacturing picking list material. |
-| `MaterialId` | `Int64` | no | [ManufacturingOrderMaterials](/entities/Manufacturing/ManufacturingOrderMaterial.md) |  | The business key identifier of the manufacturing order material. |
-| `Material` | `ManufacturingOrderMaterials` | no | [ManufacturingOrderMaterials](/entities/Manufacturing/ManufacturingOrderMaterial.md) | expandable, since 24.9 | The manufacturing order material in the manufacturing picking list. |
-| `QuantityChangeId` | `Int64` | no | [QuantityChanges](/entities/Inventory/QuantityChange.md) |  | The business key identifier of the manufacturing picking list materials quantity change. |
-| `QuantityChange` | `QuantityChanges` | no | [QuantityChanges](/entities/Inventory/QuantityChange.md) | expandable | The suggested quantity for withdrawal when creating the picking list. |
+| `MaterialId` | `Int64` | no | [ManufacturingOrderMaterials](ManufacturingOrderMaterial.md) |  | The business key identifier of the manufacturing order material. |
+| `Material` | `ManufacturingOrderMaterials` | no | [ManufacturingOrderMaterials](ManufacturingOrderMaterial.md) | expandable, since 24.9 | The manufacturing order material in the manufacturing picking list. |
+| `QuantityChangeId` | `Int64` | no | [QuantityChanges](../Inventory/QuantityChange.md) |  | The business key identifier of the manufacturing picking list materials quantity change. |
+| `QuantityChange` | `QuantityChanges` | no | [QuantityChanges](../Inventory/QuantityChange.md) | expandable | The suggested quantity for withdrawal when creating the picking list. |
 
 ## Referenced by
 
 **Manufacturing**
 
-- [ManufacturingPickingLists](/entities/Manufacturing/ManufacturingPickingList.md) — `Materials` (expand)
+- [ManufacturingPickingLists](ManufacturingPickingList.md) — `Materials` (expand)
 
 
 ## Example

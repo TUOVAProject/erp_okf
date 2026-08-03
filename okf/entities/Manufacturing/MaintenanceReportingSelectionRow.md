@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a maintenance reporting selection row.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `MaintenanceReportingSelectionRow`
 - **Endpoint:** `GET /api/v1/Manufacturing/MaintenanceReportingSelectionRows`
 - **Required permission:** Show maintenance plan
@@ -47,19 +47,19 @@ Represents a maintenance reporting selection row.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the entity. |
 | `Code` | `String` | no |  | unique, max length 12 | The human readable identifier of the maintenance reporting selection row. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the maintenance reporting selection row. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the maintenance reporting selection row's comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment of the maintenance reporting selection row. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the maintenance reporting selection row's comment. |
 | `Description` | `String` | no |  |  | The translated description of the maintenance reporting selection row. |
-| `MaintenanceReportingId` | `Int64` | no | [MaintenanceReportings](/entities/Manufacturing/MaintenanceReporting.md) |  | The business key identifier of the maintenance reporting that the maintenance reporting selection row relates to. |
+| `MaintenanceReportingId` | `Int64` | no | [MaintenanceReportings](MaintenanceReporting.md) |  | The business key identifier of the maintenance reporting that the maintenance reporting selection row relates to. |
 | `RowIndex` | `Int32?` | yes |  |  | The row index of the maintenance reporting selection row. |
-| `MaintenanceReportingRows` | `MaintenanceReportingRows[]` | no | [MaintenanceReportingRows](/entities/Manufacturing/MaintenanceReportingRow.md) | expandable, collection | The maintenance reporting rows. |
+| `MaintenanceReportingRows` | `MaintenanceReportingRows[]` | no | [MaintenanceReportingRows](MaintenanceReportingRow.md) | expandable, collection | The maintenance reporting rows. |
 
 ## Referenced by
 
 **Manufacturing**
 
-- [MaintenanceReportingRows](/entities/Manufacturing/MaintenanceReportingRow.md) — `MaintenanceReportingSelectionRowId` (FK)
-- [MaintenanceReportings](/entities/Manufacturing/MaintenanceReporting.md) — `MaintenanceReportingSelectionRows` (expand)
+- [MaintenanceReportingRows](MaintenanceReportingRow.md) — `MaintenanceReportingSelectionRowId` (FK)
+- [MaintenanceReportings](MaintenanceReporting.md) — `MaintenanceReportingSelectionRows` (expand)
 
 
 ## Example

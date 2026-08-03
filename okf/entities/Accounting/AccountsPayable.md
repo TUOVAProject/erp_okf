@@ -56,7 +56,7 @@ referenced_by:
 
 Represents a account's payable.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccountsPayable`
 - **Endpoint:** `GET /api/v1/Accounting/AccountsPayables`
 - **Required permission:** Show accounts payable
@@ -69,30 +69,30 @@ Represents a account's payable.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the account's payable. |
 | `Version` | `Int32` | no |  |  | The version of the account's payable. |
-| `CancelCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the account payable's cancellation comment. |
-| `CancelComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The cancellation comment of the account payable. |
-| `PaymentMethodId` | `Int64?` | yes | [PaymentMethods](/entities/Common/PaymentMethod.md) |  | The business key identifier of the account payable's payment method. |
-| `LanguageId` | `Int64` | no | [LanguageCodes](/entities/Common/LanguageCode.md) |  | The business key identifier of the account payable's language. |
-| `Language` | `LanguageCodes` | no | [LanguageCodes](/entities/Common/LanguageCode.md) | expandable | The language of the account payable. |
+| `CancelCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the account payable's cancellation comment. |
+| `CancelComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The cancellation comment of the account payable. |
+| `PaymentMethodId` | `Int64?` | yes | [PaymentMethods](../Common/PaymentMethod.md) |  | The business key identifier of the account payable's payment method. |
+| `LanguageId` | `Int64` | no | [LanguageCodes](../Common/LanguageCode.md) |  | The business key identifier of the account payable's language. |
+| `Language` | `LanguageCodes` | no | [LanguageCodes](../Common/LanguageCode.md) | expandable | The language of the account payable. |
 | `SuppliersInvoiceNumber` | `String` | no |  | max length 30 | The human readable identifier of the supplier's invoice number. |
 | `InvoiceType` | `Int32` | no |  | enum | The invoice type of the accounts payable. |
 | `IsCredit` | `Boolean` | no |  |  | Specifies if the accounts payable is a credit or not. |
 | `IsFinalBooked` | `Boolean` | no |  |  | Specifies if the accounts payable is final booked or not. |
-| `PurchaseOrderId` | `Int64?` | yes | [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) |  | The business key identifier of the account payable's purchase order. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse that the accounts payable belongs to. |
+| `PurchaseOrderId` | `Int64?` | yes | [PurchaseOrders](../Purchase/PurchaseOrder.md) |  | The business key identifier of the account payable's purchase order. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse that the accounts payable belongs to. |
 | `PreliminaryBookingDate` | `DateTimeOffset?` | yes |  |  | The date of the preliminary booking. |
 | `VoucherDate` | `DateTimeOffset?` | yes |  |  | The voucher date of the account payable. |
 | `CancelVoucherDate` | `DateTimeOffset?` | yes |  |  | The voucher cancellation date of the account payable. |
-| `SupplierAccountGroupId` | `Int64?` | yes | [SupplierAccountGroups](/entities/Purchase/SupplierAccountGroup.md) |  | The business key identifier of the supplier account group of the acounts payable. |
-| `CountryId` | `Int64` | no | [Countries](/entities/Common/Country.md) |  | The business key identifier of the account payable's country. |
+| `SupplierAccountGroupId` | `Int64?` | yes | [SupplierAccountGroups](../Purchase/SupplierAccountGroup.md) |  | The business key identifier of the supplier account group of the acounts payable. |
+| `CountryId` | `Int64` | no | [Countries](../Common/Country.md) |  | The business key identifier of the account payable's country. |
 | `Status` | `Int32` | no |  | enum | The status of the accounts payable invoice. |
-| `BlockMessageId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the entity block message comment. References Comments . |
-| `BlockMessage` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The block message of the account payable. |
+| `BlockMessageId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the entity block message comment. References Comments . |
+| `BlockMessage` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The block message of the account payable. |
 | `OCRNumber` | `String` | no |  | max length 30 | The OCR number of the account payable. |
 | `UseOCRNumber` | `Boolean` | no |  |  | Specifies if OCR number is used. |
-| `CreditedAccountsPayableId` | `Int64?` | yes | [AccountsPayables](/entities/Accounting/AccountsPayable.md) |  | The business key identifier of the account payable's credit account payable. |
-| `BlockedById` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that blocked the entity. |
-| `BlockedBy` | `ApplicationUsers` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) | expandable | The application user that blocked the account payable. |
+| `CreditedAccountsPayableId` | `Int64?` | yes | [AccountsPayables](AccountsPayable.md) |  | The business key identifier of the account payable's credit account payable. |
+| `BlockedById` | `Int64?` | yes | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the application user that blocked the entity. |
+| `BlockedBy` | `ApplicationUsers` | no | [ApplicationUsers](../Common/ApplicationUser.md) | expandable | The application user that blocked the account payable. |
 | `BlockedFromDate` | `DateTimeOffset?` | yes |  |  | The date when the entity starts being blocked. |
 | `BlockedToDate` | `DateTimeOffset?` | yes |  |  | The date when the entity stops being blocked. |
 | `BlockedStatus` | `Int32` | no |  | enum | The block status of the entity. |
@@ -104,37 +104,37 @@ Represents a account's payable.
 | `InvoiceDate` | `DateTimeOffset` | no |  |  | The invoice date on the account payable. |
 | `DueDate` | `DateTimeOffset` | no |  |  | The due date on the account payable. |
 | `InvoiceAmount` | `Decimal` | no |  |  | The invoice amount on the account payable. |
-| `InvoiceAmountCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the invoice amount currency. |
+| `InvoiceAmountCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the invoice amount currency. |
 | `InvoiceAmountInCompanyCurrency` | `Decimal` | no |  |  | The invoice amount in the company currency. |
-| `InvoiceAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the company currency for the invoice amount. |
+| `InvoiceAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the company currency for the invoice amount. |
 | `VatAmount` | `Decimal` | no |  |  | The VAT amount on the account payable. |
-| `VatAmountCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the invoice vat amount currency. |
+| `VatAmountCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the invoice vat amount currency. |
 | `VatAmountInCompanyCurrency` | `Decimal` | no |  |  | The VAT amount in company currency. |
-| `VatAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the company currency for the invoice vat amount. |
+| `VatAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the company currency for the invoice vat amount. |
 | `RestAmount` | `Decimal` | no |  |  | The rest amount on the account payable. |
-| `RestAmountCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the invoice rest amount currency. |
+| `RestAmountCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the invoice rest amount currency. |
 | `RestAmountInCompanyCurrency` | `Decimal` | no |  |  | The rest amount in company currency. |
-| `RestAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the company currency for the invoice rest amount. |
+| `RestAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the company currency for the invoice rest amount. |
 | `OrderedRestAmount` | `Decimal` | no |  |  | The ordered rest amount on the account payable. |
-| `OrderedRestAmountCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the invoice ordered rest amount currency. |
-| `CurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency on the account payable. |
+| `OrderedRestAmountCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the invoice ordered rest amount currency. |
+| `CurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency on the account payable. |
 | `ExchangeRate` | `Decimal` | no |  |  | The exchange rate on the account payable. |
 | `PaidInFullDate` | `DateTimeOffset?` | yes |  |  | Specifies the date when the account payable was paid in full. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the account payable's comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The internal comment of the account payable. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the account payable's comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The internal comment of the account payable. |
 | `ReferenceNumber` | `String` | no |  | max length 35 | The human readable reference number on the account payable. |
 | `UseFixedDueDate` | `Boolean` | no |  |  | Specifies if a fixed due date is used. |
-| `VatGroupId` | `Int64?` | yes | [VatGroups](/entities/Common/VatGroup.md) |  | The business key identifier of the VAT group that the account payable belongs to. |
-| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](/entities/Common/PaymentTerm.md) |  | The business key identifier of the payment term of the account payable. |
-| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](/entities/Common/PaymentTerm.md) | expandable | The payment term of the account payable. |
+| `VatGroupId` | `Int64?` | yes | [VatGroups](../Common/VatGroup.md) |  | The business key identifier of the VAT group that the account payable belongs to. |
+| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](../Common/PaymentTerm.md) |  | The business key identifier of the payment term of the account payable. |
+| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](../Common/PaymentTerm.md) | expandable | The payment term of the account payable. |
 | `FinalBookingId` | `Int64?` | yes |  | since 2.41.1 | The business key identifier of the account payable's final booking. References Booking. |
-| `BusinessContactId` | `Int64` | no | [Suppliers](/entities/Purchase/Supplier.md) | since 22.5 | The business key identifier of the supplier that the accounts payable belongs to. |
-| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the accounts payable's currency exchange type. |
-| `Payments` | `OutgoingPayments[]` | no | [OutgoingPayments](/entities/Accounting/OutgoingPayment.md) | expandable, collection, since 24.2 | The payments of the accounts payable. |
+| `BusinessContactId` | `Int64` | no | [Suppliers](../Purchase/Supplier.md) | since 22.5 | The business key identifier of the supplier that the accounts payable belongs to. |
+| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the accounts payable's currency exchange type. |
+| `Payments` | `OutgoingPayments[]` | no | [OutgoingPayments](OutgoingPayment.md) | expandable, collection, since 24.2 | The payments of the accounts payable. |
 | `WithholdTaxAmount` | `Decimal?` | yes |  | since 25.6 | The withholding tax amount on the account payable. |
-| `WithholdTaxAmountCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) | since 25.6 | The business key identifier of the withholding tax amount currency. |
+| `WithholdTaxAmountCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) | since 25.6 | The business key identifier of the withholding tax amount currency. |
 | `WithholdTaxAmountInCompanyCurrency` | `Decimal?` | yes |  | since 25.6 | The withholding tax in company currency amount on the account payable. |
-| `WithholdTaxAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) | since 25.6 | The business key identifier of the withholding tax in company currency amount currency. |
+| `WithholdTaxAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) | since 25.6 | The business key identifier of the withholding tax in company currency amount currency. |
 | `InputVatDate` | `DateTimeOffset?` | yes |  | since 26.5 | The date used to assign the invoice's input VAT to the correct VAT period. Only used in the Polish and Hungarian country packages. |
 | `OutputVatDate` | `DateTimeOffset?` | yes |  | since 26.5 | The date used to assign the invoice's output VAT to the correct VAT period. Only used in the Polish and Hungarian country packages. |
 
@@ -190,25 +190,25 @@ Represents a account's payable.
 
 **Accounting**
 
-- [AccountsPayableCashDiscountLevels](/entities/Accounting/AccountsPayableCashDiscountLevel.md) — `ParentId` (FK)
-- [AccountsPayables](/entities/Accounting/AccountsPayable.md) — `CreditedAccountsPayableId` (FK)
-- [AccrualAccountings](/entities/Accounting/AccrualAccounting.md) — `AccountsPayableId` (FK)
-- [FixedAssets](/entities/Accounting/FixedAsset.md) — `AccountsPayableId` (FK)
-- [OutgoingPayments](/entities/Accounting/OutgoingPayment.md) — `AccountsPayableId` (FK)
-- [SetOffDestination](/entities/Accounting/SetOffDestination.md) — `AccountsPayableId` (FK)
-- [VoucherRows](/entities/Accounting/VoucherRow.md) — `AccountsPayableId` (FK)
-- [Vouchers](/entities/Accounting/Voucher.md) — `AccountsPayable` (expand)
-- [Vouchers](/entities/Accounting/Voucher.md) — `AccountsPayableId` (FK)
+- [AccountsPayableCashDiscountLevels](AccountsPayableCashDiscountLevel.md) — `ParentId` (FK)
+- [AccountsPayables](AccountsPayable.md) — `CreditedAccountsPayableId` (FK)
+- [AccrualAccountings](AccrualAccounting.md) — `AccountsPayableId` (FK)
+- [FixedAssets](FixedAsset.md) — `AccountsPayableId` (FK)
+- [OutgoingPayments](OutgoingPayment.md) — `AccountsPayableId` (FK)
+- [SetOffDestination](SetOffDestination.md) — `AccountsPayableId` (FK)
+- [VoucherRows](VoucherRow.md) — `AccountsPayableId` (FK)
+- [Vouchers](Voucher.md) — `AccountsPayable` (expand)
+- [Vouchers](Voucher.md) — `AccountsPayableId` (FK)
 
 **Inventory**
 
-- [CaseEntryPartLinks](/entities/Inventory/CasePartLink.md) — `CompensationAccountsPayableId` (FK)
+- [CaseEntryPartLinks](../Inventory/CasePartLink.md) — `CompensationAccountsPayableId` (FK)
 
 **Purchase**
 
-- [EimDocuments](/entities/Purchase/EimDocument.md) — `AccountsPayableId` (FK)
-- [PurchaseOrderDeliveryRows](/entities/Purchase/PurchaseOrderDeliveryRow.md) — `AccountsPayableId` (FK)
-- [PurchaseOrderInvoiceRows](/entities/Purchase/PurchaseOrderInvoiceRow.md) — `LedgerId` (FK)
+- [EimDocuments](../Purchase/EimDocument.md) — `AccountsPayableId` (FK)
+- [PurchaseOrderDeliveryRows](../Purchase/PurchaseOrderDeliveryRow.md) — `AccountsPayableId` (FK)
+- [PurchaseOrderInvoiceRows](../Purchase/PurchaseOrderInvoiceRow.md) — `LedgerId` (FK)
 
 
 ## Example

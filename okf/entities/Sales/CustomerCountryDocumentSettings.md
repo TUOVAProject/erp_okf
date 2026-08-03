@@ -30,7 +30,7 @@ references_out:
 
 Represents a customer country document setting.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerCountryDocumentSettings`
 - **Endpoint:** `GET /api/v1/Sales/CustomerCountryDocumentSettings`
 - **Required permission:** Show customer
@@ -47,8 +47,8 @@ Represents a customer country document setting.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the customer country document setting. |
 | `RowIndex` | `Int32?` | yes |  |  | The row index of the document setting. |
-| `CustomerId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) |  | The business key identifier of the document setting's customer. |
-| `CountryId` | `Int64` | no | [Countries](/entities/Common/Country.md) |  | The business key identifier of the document setting's country. |
+| `CustomerId` | `Int64?` | yes | [Customers](Customer.md) |  | The business key identifier of the document setting's customer. |
+| `CountryId` | `Int64` | no | [Countries](../Common/Country.md) |  | The business key identifier of the document setting's country. |
 | `ShowInSalesForm` | `Int32` | no |  | bitmask, enum | Specifies the document type this setting applies to. |
 | `ShowCountryOfOrigin` | `Boolean?` | yes |  |  | Specifies if this setting should show country of origin. |
 | `ShowNetWeight` | `Boolean?` | yes |  |  | Specifies if this setting should show net weight. |

@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a queryable delivery time.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `DeliveryTime`
 - **Endpoint:** `GET /api/v1/Common/DeliveryTimes`
 - **Required permission:** Show terms
@@ -50,8 +50,8 @@ Represents a queryable delivery time.
 
 **Sales**
 
-- [Quotes](/entities/Sales/Quote.md) — `DeliveryTime` (expand)
-- [Quotes](/entities/Sales/Quote.md) — `DeliveryTimeId` (FK)
+- [Quotes](../Sales/Quote.md) — `DeliveryTime` (expand)
+- [Quotes](../Sales/Quote.md) — `DeliveryTimeId` (FK)
 
 
 ## Example

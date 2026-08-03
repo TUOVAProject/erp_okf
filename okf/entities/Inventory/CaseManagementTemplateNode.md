@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a case management template node.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `CaseManagementTemplateNode`
 - **Endpoint:** `GET /api/v1/Inventory/CaseManagementTemplateNodes`
 - **Required permission:** Show basic data for case
@@ -47,9 +47,9 @@ Represents a case management template node.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the case management template node. |
-| `ActivityId` | `Int64?` | yes | [CaseManagementActivities](/entities/Inventory/CaseManagementActivity.md) |  | The business key identifier of the case management activity. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the case management template node comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the case management template node. |
+| `ActivityId` | `Int64?` | yes | [CaseManagementActivities](CaseManagementActivity.md) |  | The business key identifier of the case management activity. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the case management template node comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment of the case management template node. |
 | `PlannedTime` | `TimeSpan?` | yes |  |  | The planned time of the case management template node. |
 | `LeadTime` | `Int32?` | yes |  |  | The lead time of the case management template node in work days. |
 | `Status` | `Int32` | no |  | enum | The status for the case management template node. |
@@ -57,9 +57,9 @@ Represents a case management template node.
 | `IsMandatory` | `Boolean` | no |  |  | Specifies if the case management template node is mandatory. |
 | `IsIncludeActivityOnDocument` | `Boolean` | no |  |  | Whether or not to include activity on document for the case management template node. |
 | `IsChargeable` | `Boolean` | no |  |  | Specifies if the case management template node is chargeable. |
-| `UserId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier for the application user of the case management template node. |
-| `PhaseId` | `Int64?` | yes | [CaseManagementPhases](/entities/Inventory/CaseManagementPhase.md) |  | The business key identifier for the case management phase of the case management template node. |
-| `ParentId` | `Int64?` | yes | [CaseManagementTemplates](/entities/Inventory/CaseManagementTemplate.md) |  | The business key identifier of the case management template. |
+| `UserId` | `Int64?` | yes | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier for the application user of the case management template node. |
+| `PhaseId` | `Int64?` | yes | [CaseManagementPhases](CaseManagementPhase.md) |  | The business key identifier for the case management phase of the case management template node. |
+| `ParentId` | `Int64?` | yes | [CaseManagementTemplates](CaseManagementTemplate.md) |  | The business key identifier of the case management template. |
 | `ParentNodeId` | `Int64?` | yes |  |  | The business key identifier of the case management template node's parent that the case management template node belongs to. |
 | `RowIndex` | `Int32?` | yes |  |  | The row index of the case management template node. |
 
@@ -77,7 +77,7 @@ Represents a case management template node.
 
 **Inventory**
 
-- [CaseManagementTemplates](/entities/Inventory/CaseManagementTemplate.md) — `CaseManagementTemplateNode` (expand)
+- [CaseManagementTemplates](CaseManagementTemplate.md) — `CaseManagementTemplateNode` (expand)
 
 
 ## Example

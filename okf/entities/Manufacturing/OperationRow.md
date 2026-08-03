@@ -38,7 +38,7 @@ referenced_by:
 
 Represents an operation row.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `OperationRow`
 - **Endpoint:** `GET /api/v1/Manufacturing/OperationRows`
 - **Required permission:** Show part
@@ -55,8 +55,8 @@ Represents an operation row.
 | `SupplierId` | `Int64?` | yes |  |  | The business key identifier of the operation row's supplier. |
 | `WorkCenterId` | `Int64` | no |  |  | The business key identifier of the operation's row work center. |
 | `IsSubcontractor` | `Boolean` | no |  |  | Specifies if the operation is subcontracted. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the operation row's comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the operation row. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the operation row's comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment of the operation row. |
 | `Description` | `String` | no |  |  | The translated description of the operation row. |
 | `TimeCode` | `Int32` | no |  | enum | The time code specified for the operation row. |
 | `TimeUnit` | `Int32` | no |  | enum | The time unit specified for the operation row. |
@@ -75,15 +75,15 @@ Represents an operation row.
 | `SetupCostFactorId` | `Int64?` | yes |  |  | The business key identifier of the setup cost factor of the operation row. |
 | `FixedLeadTime` | `TimeSpan?` | yes |  |  | The fixed lead time of the operation row. |
 | `SetupCost` | `Decimal?` | yes |  |  | The setup cost of the operation row. This value is only available if the operation is a subcontract. |
-| `SetupCostCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the setup cost currency. |
+| `SetupCostCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the setup cost currency. |
 | `UnitCost` | `Decimal?` | yes |  |  | The unit cost of the operation row. This value is only available if the operation is a subcontract. |
-| `UnitCostCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the unit cost currency. |
+| `UnitCostCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the unit cost currency. |
 | `TransportCost` | `Decimal?` | yes |  |  | The transport cost of the operation represented in the company currency. This value is only available if the operation is a subcontract. |
 | `SupplierPartNumber` | `String` | no |  |  | The supplier part number of the operation subcontractor part. This value is only available if the operation is a subcontract. |
 | `DeliverToEndCustomer` | `Boolean` | no |  |  | Whether the subcontractor will deliver straight to the end customer or not. This value is only available if the operation is a subcontract. |
-| `ExtraFields` | `ExtraFields[]` | no | [ExtraFields](/entities/Common/ExtraField.md) | expandable, collection, since 22.5 | The extra fields of the operation row. |
-| `ControlDataRows` | `OperationRowControlDataRows[]` | no | [OperationRowControlDataRows](/entities/Manufacturing/OperationRowControlDataRow.md) | expandable, collection, since 22.5 | The control data rows. |
-| `AlternativeOperationRows` | `AlternativeOperationRows[]` | no | [AlternativeOperationRows](/entities/Manufacturing/AlternativeOperationRow.md) | expandable, collection, since 26.5 | The alternative operation rows (alternative work centers) of the operation row. |
+| `ExtraFields` | `ExtraFields[]` | no | [ExtraFields](../Common/ExtraField.md) | expandable, collection, since 22.5 | The extra fields of the operation row. |
+| `ControlDataRows` | `OperationRowControlDataRows[]` | no | [OperationRowControlDataRows](OperationRowControlDataRow.md) | expandable, collection, since 22.5 | The control data rows. |
+| `AlternativeOperationRows` | `AlternativeOperationRows[]` | no | [AlternativeOperationRows](AlternativeOperationRow.md) | expandable, collection, since 26.5 | The alternative operation rows (alternative work centers) of the operation row. |
 | `PreparationTermType` | `Int32?` | yes |  | since 24.4 | PreparationTermType of the Operation Row. |
 | `PreparationTermFromValue` | `String` | no |  | since 24.4 | PreparationTermFromValue of the Operation Row. |
 | `PreparationTermToValue` | `String` | no |  | since 24.4 | PreparationTermToValue of the Operation Row. |
@@ -114,11 +114,11 @@ Represents an operation row.
 
 **Manufacturing**
 
-- [AlternativeOperationRows](/entities/Manufacturing/AlternativeOperationRow.md) — `OperationRowId` (FK)
-- [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) — `OperationRow` (expand)
-- [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) — `OperationRowId` (FK)
-- [OperationRowControlDataRows](/entities/Manufacturing/OperationRowControlDataRow.md) — `OperationRowId` (FK)
-- [Preparations](/entities/Manufacturing/Preparation.md) — `Operations` (expand)
+- [AlternativeOperationRows](AlternativeOperationRow.md) — `OperationRowId` (FK)
+- [ManufacturingOrderOperations](ManufacturingOrderOperation.md) — `OperationRow` (expand)
+- [ManufacturingOrderOperations](ManufacturingOrderOperation.md) — `OperationRowId` (FK)
+- [OperationRowControlDataRows](OperationRowControlDataRow.md) — `OperationRowId` (FK)
+- [Preparations](Preparation.md) — `Operations` (expand)
 
 
 ## Example

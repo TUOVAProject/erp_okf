@@ -23,6 +23,7 @@ from .emit_okf import (
     permissions_body,
     querying_body,
     relationships_body,
+    relativize_links,
 )
 from .paths import OKF_COMPACT_DIR, OKF_COMPACT_TMP_DIR
 
@@ -44,6 +45,7 @@ def entity_link(entity: dict) -> str:
 def write(relative_path: str, body: str) -> None:
     path = OKF_COMPACT_TMP_DIR / relative_path.lstrip("/")
     path.parent.mkdir(parents=True, exist_ok=True)
+    body = relativize_links(body, relative_path)
     path.write_text(body.rstrip() + "\n", encoding="utf-8")
 
 

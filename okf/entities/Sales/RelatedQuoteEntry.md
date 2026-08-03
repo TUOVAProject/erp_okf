@@ -30,7 +30,7 @@ references_out:
 
 Represents a related quote entry.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `RelatedQuoteEntry`
 - **Endpoint:** `GET /api/v1/Sales/RelatedQuoteEntries`
 - **Required permission:** Show quote
@@ -42,9 +42,9 @@ Represents a related quote entry.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the related quote entry. |
-| `QuoteId` | `Int64?` | yes | [Quotes](/entities/Sales/Quote.md) |  | The business key identifier of the entry's related quote. |
+| `QuoteId` | `Int64?` | yes | [Quotes](Quote.md) |  | The business key identifier of the entry's related quote. |
 | `IsPrimary` | `Boolean` | no |  |  | Specifies if this is the primary related quote. |
-| `RelatedQuotesId` | `Int64?` | yes | [RelatedQuotes](/entities/Sales/RelatedQuote.md) |  | The business key identifier of the entry's related quotes placeholder. |
+| `RelatedQuotesId` | `Int64?` | yes | [RelatedQuotes](RelatedQuote.md) |  | The business key identifier of the entry's related quotes placeholder. |
 
 ## Example
 

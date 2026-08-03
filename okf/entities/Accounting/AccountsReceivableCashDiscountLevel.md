@@ -29,7 +29,7 @@ references_out:
 
 Represents a cash discount level for an accounts receivable.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccountsReceivableCashDiscountLevel`
 - **Endpoint:** `GET /api/v1/Accounting/AccountsReceivableCashDiscountLevels`
 - **Required permission:** Show accounts receivable
@@ -41,7 +41,7 @@ Represents a cash discount level for an accounts receivable.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the cash discount level. |
-| `ParentId` | `Int64` | no | [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) |  | The business key identifier of the accounts receivable the cash discount level belongs to. |
+| `ParentId` | `Int64` | no | [AccountsReceivables](AccountsReceivable.md) |  | The business key identifier of the accounts receivable the cash discount level belongs to. |
 | `Discount` | `Decimal?` | yes |  |  | The discount in percent for the cash discount level. |
 | `DiscountDate` | `DateTimeOffset?` | yes |  |  | The date to which the discount applies. |
 | `RowIndex` | `Int32?` | yes |  |  | The row index of the cash discount level. |

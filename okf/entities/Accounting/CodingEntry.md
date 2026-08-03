@@ -46,7 +46,7 @@ referenced_by:
 
 Represents a coding entry.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `CodingEntry`
 - **Endpoint:** `GET /api/v1/Accounting/CodingEntries`
 - **Required permission:** Show dimensions/dimension codes
@@ -59,54 +59,54 @@ Represents a coding entry.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the coding entry. |
 | `CodingEntryDescription` | `String` | no |  | max length 50 | The description of the coding entry. |
-| `AccountId` | `Int64?` | yes | [Accounts](/entities/Accounting/Account.md) |  | The business key identifier of the coding entry's account. |
-| `Account` | `Accounts` | no | [Accounts](/entities/Accounting/Account.md) | expandable | The account of the coding entry. |
-| `CodingEntryElements` | `CodingEntryElements[]` | no | [CodingEntryElements](/entities/Accounting/CodingEntryElement.md) | expandable, collection | The coding entry elements of the coding entry. |
+| `AccountId` | `Int64?` | yes | [Accounts](Account.md) |  | The business key identifier of the coding entry's account. |
+| `Account` | `Accounts` | no | [Accounts](Account.md) | expandable | The account of the coding entry. |
+| `CodingEntryElements` | `CodingEntryElements[]` | no | [CodingEntryElements](CodingEntryElement.md) | expandable, collection | The coding entry elements of the coding entry. |
 
 ## Referenced by
 
 **Accounting**
 
-- [AccountingBudgets](/entities/Accounting/AccountingBudget.md) — `CodingEntry` (expand)
-- [AccountingBudgets](/entities/Accounting/AccountingBudget.md) — `CodingEntryId` (FK)
-- [AllocationKeyResultRows](/entities/Accounting/AllocationKeyResultRow.md) — `CodingEntry` (expand)
-- [AllocationKeyResultRows](/entities/Accounting/AllocationKeyResultRow.md) — `CodingEntryId` (FK)
-- [Balances](/entities/Accounting/Balance.md) — `CodingEntryId` (FK)
-- [BookingRows](/entities/Accounting/BookingRow.md) — `CodingEntryId` (FK)
-- [CodingEntryElements](/entities/Accounting/CodingEntryElement.md) — `CodingEntryId` (FK)
-- [CodingRows](/entities/Accounting/CodingRow.md) — `CodingEntry` (expand)
-- [CodingRows](/entities/Accounting/CodingRow.md) — `CodingEntryId` (FK)
-- [OpeningBalances](/entities/Accounting/OpeningBalance.md) — `CodingEntryId` (FK)
-- [StandardAccounts](/entities/Accounting/StandardAccount.md) — `CodingEntryId` (FK)
-- [VoucherRows](/entities/Accounting/VoucherRow.md) — `CodingEntryId` (FK)
+- [AccountingBudgets](AccountingBudget.md) — `CodingEntry` (expand)
+- [AccountingBudgets](AccountingBudget.md) — `CodingEntryId` (FK)
+- [AllocationKeyResultRows](AllocationKeyResultRow.md) — `CodingEntry` (expand)
+- [AllocationKeyResultRows](AllocationKeyResultRow.md) — `CodingEntryId` (FK)
+- [Balances](Balance.md) — `CodingEntryId` (FK)
+- [BookingRows](BookingRow.md) — `CodingEntryId` (FK)
+- [CodingEntryElements](CodingEntryElement.md) — `CodingEntryId` (FK)
+- [CodingRows](CodingRow.md) — `CodingEntry` (expand)
+- [CodingRows](CodingRow.md) — `CodingEntryId` (FK)
+- [OpeningBalances](OpeningBalance.md) — `CodingEntryId` (FK)
+- [StandardAccounts](StandardAccount.md) — `CodingEntryId` (FK)
+- [VoucherRows](VoucherRow.md) — `CodingEntryId` (FK)
 
 **Common**
 
-- [PaymentMethods](/entities/Common/PaymentMethod.md) — `BankingFeeAccountId` (FK)
-- [PaymentMethods](/entities/Common/PaymentMethod.md) — `BankingFeeCodingEntry` (expand)
-- [PaymentMethods](/entities/Common/PaymentMethod.md) — `BankingFeeCodingEntryId` (FK)
-- [PaymentMethods](/entities/Common/PaymentMethod.md) — `CodingAccountCodingEntry` (expand)
-- [PaymentMethods](/entities/Common/PaymentMethod.md) — `CodingAccountCodingEntryId` (FK)
-- [PaymentMethods](/entities/Common/PaymentMethod.md) — `CodingAccountId` (FK)
-- [WriteOffCodes](/entities/Common/WriteOffCode.md) — `IncomingPaymentCodingEntry` (expand)
-- [WriteOffCodes](/entities/Common/WriteOffCode.md) — `IncomingPaymentCodingEntryId` (FK)
-- [WriteOffCodes](/entities/Common/WriteOffCode.md) — `OutgoingPaymentCodingEntry` (expand)
-- [WriteOffCodes](/entities/Common/WriteOffCode.md) — `OutgoingPaymentCodingEntryId` (FK)
+- [PaymentMethods](../Common/PaymentMethod.md) — `BankingFeeAccountId` (FK)
+- [PaymentMethods](../Common/PaymentMethod.md) — `BankingFeeCodingEntry` (expand)
+- [PaymentMethods](../Common/PaymentMethod.md) — `BankingFeeCodingEntryId` (FK)
+- [PaymentMethods](../Common/PaymentMethod.md) — `CodingAccountCodingEntry` (expand)
+- [PaymentMethods](../Common/PaymentMethod.md) — `CodingAccountCodingEntryId` (FK)
+- [PaymentMethods](../Common/PaymentMethod.md) — `CodingAccountId` (FK)
+- [WriteOffCodes](../Common/WriteOffCode.md) — `IncomingPaymentCodingEntry` (expand)
+- [WriteOffCodes](../Common/WriteOffCode.md) — `IncomingPaymentCodingEntryId` (FK)
+- [WriteOffCodes](../Common/WriteOffCode.md) — `OutgoingPaymentCodingEntry` (expand)
+- [WriteOffCodes](../Common/WriteOffCode.md) — `OutgoingPaymentCodingEntryId` (FK)
 
 **Purchase**
 
-- [PurchaseOrderInvoiceRows](/entities/Purchase/PurchaseOrderInvoiceRow.md) — `CodingId` (FK)
-- [SupplierAccounts](/entities/Purchase/SupplierAccount.md) — `CodingEntryId` (FK)
-- [Suppliers](/entities/Purchase/Supplier.md) — `AccrualAccountingReverseAccount` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `AccrualAccountingReverseAccountId` (FK)
-- [Suppliers](/entities/Purchase/Supplier.md) — `OutgoingPaymentsAccount` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `OutgoingPaymentsAccountId` (FK)
-- [Suppliers](/entities/Purchase/Supplier.md) — `PurchaseAccount` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `PurchaseAccountId` (FK)
+- [PurchaseOrderInvoiceRows](../Purchase/PurchaseOrderInvoiceRow.md) — `CodingId` (FK)
+- [SupplierAccounts](../Purchase/SupplierAccount.md) — `CodingEntryId` (FK)
+- [Suppliers](../Purchase/Supplier.md) — `AccrualAccountingReverseAccount` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `AccrualAccountingReverseAccountId` (FK)
+- [Suppliers](../Purchase/Supplier.md) — `OutgoingPaymentsAccount` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `OutgoingPaymentsAccountId` (FK)
+- [Suppliers](../Purchase/Supplier.md) — `PurchaseAccount` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `PurchaseAccountId` (FK)
 
 **Sales**
 
-- [CustomerOrderPaymentPlanRows](/entities/Sales/CustomerOrderPaymentPlanRow.md) — `CodingEntryId` (FK)
+- [CustomerOrderPaymentPlanRows](../Sales/CustomerOrderPaymentPlanRow.md) — `CodingEntryId` (FK)
 
 
 ## Example

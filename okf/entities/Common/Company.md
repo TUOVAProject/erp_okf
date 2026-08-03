@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a company in the MONITOR system.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `Company`
 - **Endpoint:** `GET /api/v1/Common/Companies`
 - **Required permission:** Show company information
@@ -48,12 +48,12 @@ Represents a company in the MONITOR system.
 | `Id` | `Int64` | no |  |  | The business key identifier of the company. |
 | `Name` | `String` | no |  |  | The name of the company. |
 | `ImageId` | `Int64?` | yes |  |  | The business key identifier for the image of the company. |
-| `Image` | `BlobData` | no | [BlobData](/entities/Common/BlobData.md) | expandable | The image blob of the company. |
-| `CurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier for the currency of the company. |
-| `Currency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The company currency. |
-| `LanguageId` | `Int64` | no | [LanguageCodes](/entities/Common/LanguageCode.md) |  | The business key identifier of the language. |
-| `Language` | `LanguageCodes` | no | [LanguageCodes](/entities/Common/LanguageCode.md) | expandable | The language of the company. |
-| `Warehouses` | `Warehouses[]` | no | [Warehouses](/entities/Common/Warehouse.md) | expandable, collection | The warehouses that belong to the company. |
+| `Image` | `BlobData` | no | [BlobData](BlobData.md) | expandable | The image blob of the company. |
+| `CurrencyId` | `Int64` | no | [Currencies](Currency.md) |  | The business key identifier for the currency of the company. |
+| `Currency` | `Currencies` | no | [Currencies](Currency.md) | expandable | The company currency. |
+| `LanguageId` | `Int64` | no | [LanguageCodes](LanguageCode.md) |  | The business key identifier of the language. |
+| `Language` | `LanguageCodes` | no | [LanguageCodes](LanguageCode.md) | expandable | The language of the company. |
+| `Warehouses` | `Warehouses[]` | no | [Warehouses](Warehouse.md) | expandable, collection | The warehouses that belong to the company. |
 | `TimeZone` | `String` | no |  | since 25.2 | The time zone of the company. Specified as a time zone identifier. Identifier depends on underlying database engine, and could be in either IANA or Windows style. |
 | `CorporationIdentificationNumber` | `String` | no |  | max length 25, since 25.4 | The corporation identification number of the company. |
 
@@ -61,7 +61,7 @@ Represents a company in the MONITOR system.
 
 **Common**
 
-- [Warehouses](/entities/Common/Warehouse.md) — `TimeZoneId` (FK)
+- [Warehouses](Warehouse.md) — `TimeZoneId` (FK)
 
 
 ## Example

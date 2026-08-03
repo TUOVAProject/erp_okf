@@ -32,7 +32,7 @@ references_out:
 
 Represents a stock transaction.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `StockTransaction`
 - **Endpoint:** `GET /api/v1/Inventory/StockTransactions`
 - **Required permission:** Show basic data for part
@@ -45,7 +45,7 @@ Represents a stock transaction.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the stock transaction. |
 | `PartNumber` | `String` | no |  | max length 20 | The part number of the stock transaction. |
-| `PartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part that was involved in the stock transaction. This value might not be set even though a part always is involved in a stock transaction, read part number to identify involved part in that case. |
+| `PartId` | `Int64?` | yes | [Parts](Part.md) |  | The business key identifier of the part that was involved in the stock transaction. This value might not be set even though a part always is involved in a stock transaction, read part number to identify involved part in that case. |
 | `BalanceChange` | `Decimal` | no |  |  | The balance change of the stock transaction. |
 | `BalanceOnPartAfterChange` | `Decimal` | no |  |  | The balance on the part after the stock transaction. |
 | `BalanceOnLocationAfterChange` | `Decimal` | no |  |  | The balance on the location after the stock transaction. |
@@ -53,10 +53,10 @@ Represents a stock transaction.
 | `DeliveryDate` | `DateTimeOffset` | no |  |  | The delivery date of the stock transaction. |
 | `LocationName` | `String` | no |  | max length 35 | The location name of the stock transaction. |
 | `BusinessTransactionId` | `Int64` | no |  |  | The business transaction identity of the stock transaction. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse where the stock transaction occured. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse where the stock transaction occured. |
 | `PhysicalInventoryListNumber` | `Int64?` | yes |  |  | The physical inventory list number of the stock transaction. |
-| `PartLocationId` | `Int64?` | yes | [PartLocations](/entities/Inventory/PartLocation.md) |  | The business key identifier of the part location where the stock transaction occured. |
-| `ProductRecordId` | `Int64?` | yes | [ProductRecords](/entities/Inventory/ProductRecord.md) |  | The business key identifier of the product record used in the stock transaction. |
+| `PartLocationId` | `Int64?` | yes | [PartLocations](PartLocation.md) |  | The business key identifier of the part location where the stock transaction occured. |
+| `ProductRecordId` | `Int64?` | yes | [ProductRecords](ProductRecord.md) |  | The business key identifier of the product record used in the stock transaction. |
 | `BatchNumber` | `String` | no |  | since 23.4 | The batch number of the product record in this stock transaction. |
 | `OrderNumber` | `String` | no |  | since 23.4 | The order number associated to this stock transaction. |
 | `BusinessTransactionContextType` | `Int32` | no |  | enum, since 23.4 | The type of the business transaction context of this stock transaction. |

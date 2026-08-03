@@ -54,7 +54,7 @@ referenced_by:
 
 Represents a purchase order row.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `PurchaseOrderRow`
 - **Endpoint:** `GET /api/v1/Purchase/PurchaseOrderRows`
 - **Required permission:** Show purchase orders
@@ -68,41 +68,41 @@ Represents a purchase order row.
 | `Id` | `Int64` | no |  |  | The business key identifier of the row. |
 | `Position` | `Int64?` | yes |  |  | The relative numeric position of the row. |
 | `OrderRowType` | `Int32` | no |  | enum | The type of the row. |
-| `PartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part set for the row. |
-| `Part` | `Parts` | no | [Parts](/entities/Inventory/Part.md) | expandable | The part of the row. |
+| `PartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the part set for the row. |
+| `Part` | `Parts` | no | [Parts](../Inventory/Part.md) | expandable | The part of the row. |
 | `EntityIdentityString` | `String` | no |  | max length 20 | The human readable identifier of the entity subject of the row. |
 | `AdditionalRowDescription` | `String` | no |  | max length 80 | The additional row description of the row. |
 | `FreeTextHtml` | `String` | no |  | max length 0 | The free text row's rich text HTML row data. |
 | `FreeText` | `String` | no |  | max length 0 | The free text row's raw text. |
-| `ParentRowId` | `Int64?` | yes | [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) |  | The business key identifier of the current row's parent. |
+| `ParentRowId` | `Int64?` | yes | [PurchaseOrderRows](PurchaseOrderRow.md) |  | The business key identifier of the current row's parent. |
 | `DeliveryDate` | `DateTimeOffset?` | yes |  |  | The delivery date set for the row. |
-| `RevisionId` | `Int64?` | yes | [Revisions](/entities/Common/Revision.md) |  | The business key identifier of the row's revision. |
-| `Revision` | `Revisions` | no | [Revisions](/entities/Common/Revision.md) | expandable | The revision of the row. |
+| `RevisionId` | `Int64?` | yes | [Revisions](../Common/Revision.md) |  | The business key identifier of the row's revision. |
+| `Revision` | `Revisions` | no | [Revisions](../Common/Revision.md) | expandable | The revision of the row. |
 | `OrderedQuantity` | `Decimal` | no |  |  | The ordered quantity of the row. |
 | `Price` | `Decimal?` | yes |  |  | The price of the row. |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row price currency. |
-| `PriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable, since 2.30 | The price currency for the row. |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row price currency. |
+| `PriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable, since 2.30 | The price currency for the row. |
 | `Discount` | `Decimal` | no |  |  | The discount in percent set for the row. |
 | `ToolId` | `Int64?` | yes |  | **deprecated since 2.48** | The business key identifier of the tool of the row. _(Replaced by Part)_ |
-| `UnitId` | `Int64?` | yes | [Units](/entities/Common/Unit.md) |  | The business key identifier of the row's unit. |
-| `Unit` | `Units` | no | [Units](/entities/Common/Unit.md) | expandable | The unit of the row. |
-| `VatRateId` | `Int64` | no | [VatRates](/entities/Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
-| `VatRate` | `VatRates` | no | [VatRates](/entities/Common/VatRate.md) | expandable, since 2.30 | The VAT rate of the row. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse that the row belongs to. |
-| `Warehouse` | `Warehouses` | no | [Warehouses](/entities/Common/Warehouse.md) | expandable, since 2.30 | The warehouse that the row belongs to. |
+| `UnitId` | `Int64?` | yes | [Units](../Common/Unit.md) |  | The business key identifier of the row's unit. |
+| `Unit` | `Units` | no | [Units](../Common/Unit.md) | expandable | The unit of the row. |
+| `VatRateId` | `Int64` | no | [VatRates](../Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
+| `VatRate` | `VatRates` | no | [VatRates](../Common/VatRate.md) | expandable, since 2.30 | The VAT rate of the row. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse that the row belongs to. |
+| `Warehouse` | `Warehouses` | no | [Warehouses](../Common/Warehouse.md) | expandable, since 2.30 | The warehouse that the row belongs to. |
 | `WeightPerUnit` | `Decimal?` | yes |  |  | The weight per unit of the row. |
 | `OrderDate` | `DateTimeOffset` | no |  |  | The order date of the row. |
 | `ConversionFactor` | `Decimal` | no |  |  | The conversion factor of the row. |
 | `PriceInCompanyCurrency` | `Decimal?` | yes |  |  | The row price in the company currency. |
-| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the company currency. |
+| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the company currency. |
 | `SetupPriceInCompanyCurrency` | `Decimal?` | yes |  |  | The setup price of the row in the company currency. |
 | `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes |  |  | The business key identifier of the company currency. |
 | `StandardPrice` | `Decimal?` | yes |  |  | The standard price of the row. |
-| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row's standard price currency. |
-| `StandardPriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable, since 2.30 | The standard price currency of the row. |
+| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row's standard price currency. |
+| `StandardPriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable, since 2.30 | The standard price currency of the row. |
 | `SetupPrice` | `Decimal?` | yes |  |  | The setup price of the row. |
-| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row's setup price currency. |
-| `SetupPriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable, since 2.30 | The setup price currency of the row. |
+| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row's setup price currency. |
+| `SetupPriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable, since 2.30 | The setup price currency of the row. |
 | `ShowPrice` | `Boolean` | no |  |  | Specifies if price should be shown for the row. |
 | `PartRowType` | `Int32` | no |  | enum | The part row type of the row. |
 | `LifeCycleState` | `Int32` | no |  | enum | The life cycle state of the row. |
@@ -116,53 +116,53 @@ Represents a purchase order row.
 | `DeliveredQuantityInOrderUnit` | `Decimal` | no |  |  | The delivered quantity in the order unit. |
 | `CreationContext` | `Int32` | no |  | enum | The creation context of the row. |
 | `ShowFreeTextIn` | `Int32` | no |  | bitmask, enum | Specifies which documents the free text row data will appear on. |
-| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](/entities/Common/StatisticalGoodsCode.md) |  | The business key identifier of the row's statistical goods code. |
-| `StatisticalGoodsCode` | `StatisticalGoodsCodes` | no | [StatisticalGoodsCodes](/entities/Common/StatisticalGoodsCode.md) | expandable, since 2.30 | The statistical goods code of the row. |
+| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](../Common/StatisticalGoodsCode.md) |  | The business key identifier of the row's statistical goods code. |
+| `StatisticalGoodsCode` | `StatisticalGoodsCodes` | no | [StatisticalGoodsCodes](../Common/StatisticalGoodsCode.md) | expandable, since 2.30 | The statistical goods code of the row. |
 | `RowStatus` | `Int32` | no |  | enum | The status of the purchase order row. |
 | `Version` | `Int32` | no |  | since 2.30 | The version of the row. |
 | `ArrivalReporting` | `Boolean` | no |  | since 2.30 | Specifies if the row uses arrival reporting. |
 | `ConfirmedDelayed` | `Boolean` | no |  | since 2.30 | Specifies if the row is confirmed delayed. |
-| `DelayCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) | since 2.30 | The business key identifier of the row's delay comment. |
-| `DelayComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable, since 2.30 | The delay comment of the row. |
-| `DelayReasonId` | `Int64?` | yes | [ReasonCodes](/entities/Common/ReasonCode.md) | since 2.30 | The business key identifier of the row's delay reason. |
-| `DelayReason` | `ReasonCodes` | no | [ReasonCodes](/entities/Common/ReasonCode.md) | expandable, since 2.30 | The delay reason of the row. |
+| `DelayCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) | since 2.30 | The business key identifier of the row's delay comment. |
+| `DelayComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable, since 2.30 | The delay comment of the row. |
+| `DelayReasonId` | `Int64?` | yes | [ReasonCodes](../Common/ReasonCode.md) | since 2.30 | The business key identifier of the row's delay reason. |
+| `DelayReason` | `ReasonCodes` | no | [ReasonCodes](../Common/ReasonCode.md) | expandable, since 2.30 | The delay reason of the row. |
 | `CodingId` | `Int64?` | yes |  | since 2.30 | The business key identifier of the row's coding. |
-| `Coding` | `Codings` | no | [Codings](/entities/Accounting/Coding.md) | expandable, since 2.30 | The coding of the row. |
+| `Coding` | `Codings` | no | [Codings](../Accounting/Coding.md) | expandable, since 2.30 | The coding of the row. |
 | `IsConfirmed` | `Boolean` | no |  | since 2.30 | Specifies if the row is confirmed. |
-| `ReceivingInspectionInstructionId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) | since 2.30 | The business key identifier of the row's receiving inspection instruction. |
-| `ReceivingInspectionInstruction` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable, since 2.30 | The receiving inspection instruction of the row. |
+| `ReceivingInspectionInstructionId` | `Int64?` | yes | [Comments](../Common/Comment.md) | since 2.30 | The business key identifier of the row's receiving inspection instruction. |
+| `ReceivingInspectionInstruction` | `Comments` | no | [Comments](../Common/Comment.md) | expandable, since 2.30 | The receiving inspection instruction of the row. |
 | `ReceivingInspectionType` | `Int32` | no |  | enum, since 2.30 | The receiving inspection type of the row. |
-| `ReceivingMessageId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) | since 2.30 | The business key identifier of the row's receiving message. |
-| `ReceivingMessage` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable, since 2.30 | The receiving message of the row. |
+| `ReceivingMessageId` | `Int64?` | yes | [Comments](../Common/Comment.md) | since 2.30 | The business key identifier of the row's receiving message. |
+| `ReceivingMessage` | `Comments` | no | [Comments](../Common/Comment.md) | expandable, since 2.30 | The receiving message of the row. |
 | `RequiredForManufacturingOrderNode` | `Int64?` | yes |  | since 2.30 | The business key identifier of the manufacturing order node that requires this row. |
 | `Weight` | `Decimal` | no |  | since 2.30 | The weight of the row. |
-| `LinkedStockOrderRowId` | `Int64?` | yes | [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) | since 2.30 | The business key identifier of the row's linked stock order row. |
-| `LinkedSubcontractingManufacturingOrderOperation` | `Int64?` | yes | [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) | since 2.30 | The business key identifier of the row's linked subcontracting manufacturing order operation. |
-| `OriginatingPurchaseOrderDeliveryRowId` | `Int64?` | yes | [PurchaseOrderDeliveryRows](/entities/Purchase/PurchaseOrderDeliveryRow.md) | since 2.30 | The business key identifier of the row's originating purchase order delivery row. |
+| `LinkedStockOrderRowId` | `Int64?` | yes | [CustomerOrderRows](../Sales/CustomerOrderRow.md) | since 2.30 | The business key identifier of the row's linked stock order row. |
+| `LinkedSubcontractingManufacturingOrderOperation` | `Int64?` | yes | [ManufacturingOrderOperations](../Manufacturing/ManufacturingOrderOperation.md) | since 2.30 | The business key identifier of the row's linked subcontracting manufacturing order operation. |
+| `OriginatingPurchaseOrderDeliveryRowId` | `Int64?` | yes | [PurchaseOrderDeliveryRows](PurchaseOrderDeliveryRow.md) | since 2.30 | The business key identifier of the row's originating purchase order delivery row. |
 | `CausingTransType` | `Int32` | no |  | enum, since 2.30 | The causing transaction type of the row. |
 | `CausingOrderRowId` | `Int64?` | yes |  | since 2.30 | The business key identifier of the order row that was the cause of this row. References depends on CausingTransType |
 | `RequirementDate` | `DateTimeOffset?` | yes |  | since 2.30 | The requirement date of the row. |
 | `PreviousOrderedQuantity` | `Decimal?` | yes |  | since 2.30 | The previous ordered quantity of the row. |
 | `PreviousDeliveryDate` | `DateTimeOffset?` | yes |  | since 2.30 | The previous delivery date of the row. |
-| `SubPartParentRowId` | `Int64?` | yes | [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) | since 2.30 | The business key identifier of the row's sub part parent row. |
+| `SubPartParentRowId` | `Int64?` | yes | [PurchaseOrderRows](PurchaseOrderRow.md) | since 2.30 | The business key identifier of the row's sub part parent row. |
 | `QuantityRatio` | `Decimal?` | yes |  | since 2.30 | The quantity ratio of the row. |
-| `ParentOrderId` | `Int64` | no | [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) | since 2.30 | The business key identifier of the row's purchase order. |
+| `ParentOrderId` | `Int64` | no | [PurchaseOrders](PurchaseOrder.md) | since 2.30 | The business key identifier of the row's purchase order. |
 | `RowIndex` | `Int32` | no |  | since 2.30 | The row index of the row. |
-| `SumRowId` | `Int64?` | yes | [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) | since 2.30 | The business key identifier of the row's sum row. |
+| `SumRowId` | `Int64?` | yes | [PurchaseOrderRows](PurchaseOrderRow.md) | since 2.30 | The business key identifier of the row's sum row. |
 | `PriceOrigin` | `Int32` | no |  | enum, since 2.30 | The row index of the row. |
 | `DiscountIsLockedFromAutomaticChanges` | `Boolean` | no |  | since 2.30 | Specifies if the row's discount is locked from automatic changes. |
-| `IntrastatTransactionTypeId` | `Int64?` | yes | [TransactionTypeIntrastats](/entities/Common/TransactionTypeIntrastat.md) | since 2.30 | The business key identifier of the row's intrastat transaction type. |
-| `IntrastatTransactionType` | `TransactionTypeIntrastats` | no | [TransactionTypeIntrastats](/entities/Common/TransactionTypeIntrastat.md) | expandable, since 2.30 | The intrastat transaction type of the row. |
-| `TariffAndServiceCodeId` | `Int64?` | yes | [TariffAndServiceCodes](/entities/Common/TariffAndServiceCode.md) | since 2.30 | The business key identifier of the row's tariff and service code. |
-| `TariffAndServiceCode` | `TariffAndServiceCodes` | no | [TariffAndServiceCodes](/entities/Common/TariffAndServiceCode.md) | expandable, since 2.30 | The tariff and service code of the row. |
+| `IntrastatTransactionTypeId` | `Int64?` | yes | [TransactionTypeIntrastats](../Common/TransactionTypeIntrastat.md) | since 2.30 | The business key identifier of the row's intrastat transaction type. |
+| `IntrastatTransactionType` | `TransactionTypeIntrastats` | no | [TransactionTypeIntrastats](../Common/TransactionTypeIntrastat.md) | expandable, since 2.30 | The intrastat transaction type of the row. |
+| `TariffAndServiceCodeId` | `Int64?` | yes | [TariffAndServiceCodes](../Common/TariffAndServiceCode.md) | since 2.30 | The business key identifier of the row's tariff and service code. |
+| `TariffAndServiceCode` | `TariffAndServiceCodes` | no | [TariffAndServiceCodes](../Common/TariffAndServiceCode.md) | expandable, since 2.30 | The tariff and service code of the row. |
 | `PartConfigurationId` | `Int64?` | yes |  | since 2.30 | The business key identifier of the row's part configuration. |
 | `RowsGoodsLabel` | `String` | no |  | max length 80, since 2.46 | The goods label of the purchase order row. |
-| `OrderQuantityId` | `Int64?` | yes | [OrderQuantityPurchaseOrders](/entities/Purchase/OrderQuantityPurchaseOrder.md) | since 22.6 | The business key identifier of order quantity. |
-| `OrderQuantity` | `OrderQuantityPurchaseOrders` | no | [OrderQuantityPurchaseOrders](/entities/Purchase/OrderQuantityPurchaseOrder.md) | expandable, since 22.6 | Order quantity that holds the partial quantities. |
+| `OrderQuantityId` | `Int64?` | yes | [OrderQuantityPurchaseOrders](OrderQuantityPurchaseOrder.md) | since 22.6 | The business key identifier of order quantity. |
+| `OrderQuantity` | `OrderQuantityPurchaseOrders` | no | [OrderQuantityPurchaseOrders](OrderQuantityPurchaseOrder.md) | expandable, since 22.6 | Order quantity that holds the partial quantities. |
 | `SupplierDrawingNumber` | `String` | no |  | since 24.6 | The supplier drawing number of the purchase order row. |
 | `SupplierRevisionNumber` | `String` | no |  | since 24.6 | The supplier revision number of the purchase order row. |
 | `RowNotes` | `String` | no |  | max length 100, since 24.9 | The note of the purchase order row. |
-| `BlanketOrderPurchaseRowId` | `Int64?` | yes | [BlanketOrderPurchaseRows](/entities/Purchase/BlanketOrderPurchaseRow.md) | since 26.2 | The business key identifier of the row's blanket order purchase row. |
+| `BlanketOrderPurchaseRowId` | `Int64?` | yes | [BlanketOrderPurchaseRows](BlanketOrderPurchaseRow.md) | since 26.2 | The business key identifier of the row's blanket order purchase row. |
 | `SupplierOrderNumber` | `String` | no |  | since 26.2 | The supplier order number of the purchase order row. |
 | `SupplierOrderRowPosition` | `String` | no |  | since 26.2 | The supplier order row position of the purchase order row. |
 | `SupplierPartNumber` | `String` | no |  | max length 50, since 26.4 | The supplier's part number of the purchase order row. |
@@ -309,23 +309,23 @@ Represents a purchase order row.
 
 **Manufacturing**
 
-- [ManufacturingOrderMaterials](/entities/Manufacturing/ManufacturingOrderMaterial.md) — `LinkedPurchaseOrderRowId` (FK)
+- [ManufacturingOrderMaterials](../Manufacturing/ManufacturingOrderMaterial.md) — `LinkedPurchaseOrderRowId` (FK)
 
 **Purchase**
 
-- [PurchaseOrderAdviceRows](/entities/Purchase/PurchaseOrderAdviceRow.md) — `PurchaseOrderRowId` (FK)
-- [PurchaseOrderDeliveryRows](/entities/Purchase/PurchaseOrderDeliveryRow.md) — `PurchaseOrderRow` (expand)
-- [PurchaseOrderDeliveryRows](/entities/Purchase/PurchaseOrderDeliveryRow.md) — `PurchaseOrderRowId` (FK)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `ParentRowId` (FK)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `SubPartParentRowId` (FK)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `SumRowId` (FK)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `Rows` (expand)
+- [PurchaseOrderAdviceRows](PurchaseOrderAdviceRow.md) — `PurchaseOrderRowId` (FK)
+- [PurchaseOrderDeliveryRows](PurchaseOrderDeliveryRow.md) — `PurchaseOrderRow` (expand)
+- [PurchaseOrderDeliveryRows](PurchaseOrderDeliveryRow.md) — `PurchaseOrderRowId` (FK)
+- [PurchaseOrderRows](PurchaseOrderRow.md) — `ParentRowId` (FK)
+- [PurchaseOrderRows](PurchaseOrderRow.md) — `SubPartParentRowId` (FK)
+- [PurchaseOrderRows](PurchaseOrderRow.md) — `SumRowId` (FK)
+- [PurchaseOrders](PurchaseOrder.md) — `Rows` (expand)
 
 **Sales**
 
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `LinkedPurchaseOrderRowId` (FK)
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `LinkedStockOrderRow` (expand)
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `LinkedStockOrderRowId` (FK)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `LinkedPurchaseOrderRowId` (FK)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `LinkedStockOrderRow` (expand)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `LinkedStockOrderRowId` (FK)
 
 
 ## Example

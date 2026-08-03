@@ -29,7 +29,7 @@ references_out:
 
 Represents a project cost reporting entry.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ProjectCostReportingEntry`
 - **Endpoint:** `GET /api/v1/Common/ProjectCostReportingEntries`
 - **Required permission:** Report activity for any user
@@ -56,12 +56,12 @@ Represents a project cost reporting entry.
 | `DepartmentId` | `Int64?` | yes |  |  | The business key identifier of the department the reporting concerns. |
 | `IsCancelled` | `Boolean` | no |  |  | Specifies if the project cost reporting entry is cancelled. |
 | `CommentId` | `Int64?` | yes |  |  | The business key identifier of the comment for the project cost reporting entry. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the project cost reporting entry. |
+| `Comment` | `Comments` | no | [Comments](Comment.md) | expandable | The comment of the project cost reporting entry. |
 | `CustomerReference` | `String` | no |  | max length 80, since 26.6 | Customer reference for the project cost reporting entry. Entered per log in Authorize/adjust and copied from the work recording. |
 | `CustomerOrderNumber` | `String` | no |  | max length 15, since 26.6 | Customer order number for the project cost reporting entry. Entered per log in Authorize/adjust and copied from the work recording. |
 | `GoodsMark` | `String` | no |  | max length 80, since 26.6 | Goods mark for the project cost reporting entry. Entered per log in Authorize/adjust and copied from the work recording. |
 | `InternalCommentId` | `Int64?` | yes |  | since 26.6 | The business key identifier of the internal comment for the project cost reporting entry. |
-| `InternalComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable, since 26.6 | The internal comment of the project cost reporting entry. |
+| `InternalComment` | `Comments` | no | [Comments](Comment.md) | expandable, since 26.6 | The internal comment of the project cost reporting entry. |
 
 ## Example
 

@@ -28,7 +28,7 @@ property_count: 4
 
 Represents an overhead type used in company emission and sustainability calculations.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `CompanyOverheadType`
 - **Endpoint:** `GET /api/v1/Common/CompanyOverheadTypes`
 - **Required permission:** Show pre-calculation

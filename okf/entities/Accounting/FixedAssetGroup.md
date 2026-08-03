@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a fixed assets group.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `FixedAssetGroup`
 - **Endpoint:** `GET /api/v1/Accounting/FixedAssetGroups`
 - **Required permission:** Show basic data for fixed assets register
@@ -47,8 +47,8 @@ Represents a fixed assets group.
 
 **Accounting**
 
-- [FixedAssets](/entities/Accounting/FixedAsset.md) — `Group` (expand)
-- [FixedAssets](/entities/Accounting/FixedAsset.md) — `GroupId` (FK)
+- [FixedAssets](FixedAsset.md) — `Group` (expand)
+- [FixedAssets](FixedAsset.md) — `GroupId` (FK)
 
 
 ## Example

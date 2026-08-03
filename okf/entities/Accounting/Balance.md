@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a balance.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `Balance`
 - **Endpoint:** `GET /api/v1/Accounting/Balances`
 - **Required permission:** Show balance information
@@ -47,20 +47,20 @@ Represents a balance.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the balance. |
-| `AccountingYearId` | `Int64` | no | [AccountingYears](/entities/Accounting/AccountingYear.md) |  | The business key identifier of the accounting year the balance belongs to. |
+| `AccountingYearId` | `Int64` | no | [AccountingYears](AccountingYear.md) |  | The business key identifier of the accounting year the balance belongs to. |
 | `Amount` | `Decimal` | no |  |  | The balance amount in the account's currency. |
 | `AmountInCompanyCurrency` | `Decimal` | no |  |  | The balance amount in company currency. |
-| `CodingEntryId` | `Int64` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the coding entry the balance belongs to. |
-| `OpeningBalanceId` | `Int64?` | yes | [OpeningBalances](/entities/Accounting/OpeningBalance.md) |  | The business key identifier of the opening balance for the balance. |
+| `CodingEntryId` | `Int64` | no | [CodingEntries](CodingEntry.md) |  | The business key identifier of the coding entry the balance belongs to. |
+| `OpeningBalanceId` | `Int64?` | yes | [OpeningBalances](OpeningBalance.md) |  | The business key identifier of the opening balance for the balance. |
 | `Quantity` | `Decimal` | no |  |  | The recorded quantity of the balance. |
 
 ## Referenced by
 
 **Accounting**
 
-- [AccountingBudgets](/entities/Accounting/AccountingBudget.md) — `BalanceId` (FK)
-- [BalanceRowDays](/entities/Accounting/BalanceRowDay.md) — `BalanceId` (FK)
-- [VoucherRows](/entities/Accounting/VoucherRow.md) — `BalanceId` (FK)
+- [AccountingBudgets](AccountingBudget.md) — `BalanceId` (FK)
+- [BalanceRowDays](BalanceRowDay.md) — `BalanceId` (FK)
+- [VoucherRows](VoucherRow.md) — `BalanceId` (FK)
 
 
 ## Example

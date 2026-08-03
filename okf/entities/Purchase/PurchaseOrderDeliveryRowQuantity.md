@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a purchase order delivery row quantity entry
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `PurchaseOrderDeliveryRowQuantity`
 - **Endpoint:** `GET /api/v1/Purchase/PurchaseOrderDeliveryRowQuantities`
 - **Required permission:** Show purchase orders
@@ -44,10 +44,10 @@ Represents a purchase order delivery row quantity entry
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the purchase order delivery row quantity. |
-| `QuantityChangeId` | `Int64` | no | [QuantityChanges](/entities/Inventory/QuantityChange.md) |  | The business key identifier of the quantity change. |
-| `QuantityChange` | `QuantityChanges` | no | [QuantityChanges](/entities/Inventory/QuantityChange.md) | expandable | The quantity change. |
+| `QuantityChangeId` | `Int64` | no | [QuantityChanges](../Inventory/QuantityChange.md) |  | The business key identifier of the quantity change. |
+| `QuantityChange` | `QuantityChanges` | no | [QuantityChanges](../Inventory/QuantityChange.md) | expandable | The quantity change. |
 | `BusinessTransactionContextType` | `Int32` | no |  | enum | The type of business transaction context. |
-| `ParentId` | `Int64` | no | [PurchaseOrderDeliveryRows](/entities/Purchase/PurchaseOrderDeliveryRow.md) |  | The business key identifier of the purchase order delivery row. |
+| `ParentId` | `Int64` | no | [PurchaseOrderDeliveryRows](PurchaseOrderDeliveryRow.md) |  | The business key identifier of the purchase order delivery row. |
 
 ## Enumerations
 
@@ -97,7 +97,7 @@ Represents a purchase order delivery row quantity entry
 
 **Purchase**
 
-- [PurchaseOrderDeliveryRows](/entities/Purchase/PurchaseOrderDeliveryRow.md) — `PurchaseOrderDeliveryRowQuantities` (expand)
+- [PurchaseOrderDeliveryRows](PurchaseOrderDeliveryRow.md) — `PurchaseOrderDeliveryRowQuantities` (expand)
 
 
 ## Example

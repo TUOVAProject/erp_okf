@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a monitoring task.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `MonitoringTask`
 - **Endpoint:** `GET /api/v1/Common/MonitoringTasks`
 - **Required permission:** Create and handle all monitoring tasks
@@ -53,10 +53,10 @@ Represents a monitoring task.
 | `RunOnce` | `Boolean` | no |  |  | Specifies if the monitoring task should be deactivated when any of the terms are fulfilled. |
 | `StartTime` | `DateTimeOffset?` | yes |  |  | The start time of the monitoring task. |
 | `StopTime` | `DateTimeOffset?` | yes |  |  | The end time of the monitoring task. |
-| `ApplicationUserId` | `Int64` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that create the monitoring task. |
-| `ApplicationUser` | `ApplicationUsers` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) | expandable | The application user that create the monitoring task. |
-| `CommentId` | `Int64` | no | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the monitoring task's comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The monitoring task's comment. |
+| `ApplicationUserId` | `Int64` | no | [ApplicationUsers](ApplicationUser.md) |  | The business key identifier of the application user that create the monitoring task. |
+| `ApplicationUser` | `ApplicationUsers` | no | [ApplicationUsers](ApplicationUser.md) | expandable | The application user that create the monitoring task. |
+| `CommentId` | `Int64` | no | [Comments](Comment.md) |  | The business key identifier of the monitoring task's comment. |
+| `Comment` | `Comments` | no | [Comments](Comment.md) | expandable | The monitoring task's comment. |
 
 ## Enumerations
 
@@ -97,8 +97,8 @@ Represents a monitoring task.
 
 **Common**
 
-- [MonitoringTaskRecipients](/entities/Common/MonitoringTaskRecipient.md) — `TaskId` (FK)
-- [MonitoringTaskRows](/entities/Common/MonitoringTaskRow.md) — `TaskId` (FK)
+- [MonitoringTaskRecipients](MonitoringTaskRecipient.md) — `TaskId` (FK)
+- [MonitoringTaskRows](MonitoringTaskRow.md) — `TaskId` (FK)
 
 
 ## Example

@@ -32,7 +32,7 @@ references_out:
 
 Represents a sales agreement inflow row.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `SalesAgreementRowInflow`
 - **Endpoint:** `GET /api/v1/Sales/SalesAgreementRowInflows`
 - **Required permission:** Show agreement
@@ -47,41 +47,41 @@ Represents a sales agreement inflow row.
 | `CreationTime` | `DateTimeOffset?` | yes |  |  | The creation time of the inflow row. |
 | `LoggingTimeStamp` | `DateTimeOffset` | no |  |  | The logging timestamp of the inflow row. |
 | `OrderRowType` | `Int32` | no |  | enum | The order row type of the inflow row. |
-| `PartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the inflow rows part. |
+| `PartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the inflow rows part. |
 | `AdditionalRowDescription` | `String` | no |  | max length 80 | The additional row description of the inflow row. |
-| `SalesAgreementId` | `Int64?` | yes | [SalesAgreements](/entities/Sales/SalesAgreement.md) |  | The business key identifier of the inflow rows sales agreement. |
-| `SalesAgreementRowId` | `Int64?` | yes | [SalesAgreementRows](/entities/Sales/SalesAgreementRow.md) |  | The business key identifier of the inflow rows sales agreement row. |
+| `SalesAgreementId` | `Int64?` | yes | [SalesAgreements](SalesAgreement.md) |  | The business key identifier of the inflow rows sales agreement. |
+| `SalesAgreementRowId` | `Int64?` | yes | [SalesAgreementRows](SalesAgreementRow.md) |  | The business key identifier of the inflow rows sales agreement row. |
 | `OrderedQuantityChange` | `Decimal?` | yes |  |  | The ordered quantity change of the inflow row. |
 | `PriceChange` | `Decimal?` | yes |  |  | The price change of the inflow row. |
-| `PriceChangeCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the price change currency. |
-| `PriceChangeCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The price change currency. |
+| `PriceChangeCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the price change currency. |
+| `PriceChangeCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The price change currency. |
 | `PriceChangeInCompanyCurrency` | `Decimal?` | yes |  |  | The price change in company currency of the inflow row. |
-| `PriceChangeInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the price change in company currency. |
-| `PriceChangeInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The price change in company currency. |
+| `PriceChangeInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the price change in company currency. |
+| `PriceChangeInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The price change in company currency. |
 | `DiscountChange` | `Decimal?` | yes |  |  | The discount change of the inflow row. |
 | `TotalValueChange` | `Decimal` | no |  |  | The total value change of the inflow row. |
-| `TotalValueChangeCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the total value change currency. |
-| `TotalValueChangeCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The total value change currency. |
+| `TotalValueChangeCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the total value change currency. |
+| `TotalValueChangeCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The total value change currency. |
 | `TotalValueChangeInCompanyCurrency` | `Decimal` | no |  |  | The total value change in company currency of the inflow row. |
-| `TotalValueChangeInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the total value change in company currency. |
-| `TotalValueChangeInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The total value change in company currency. |
+| `TotalValueChangeInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the total value change in company currency. |
+| `TotalValueChangeInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The total value change in company currency. |
 | `RowTotalValue` | `Decimal` | no |  |  | The row total value of the inflow row. |
-| `RowTotalValueCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row total value currency. |
-| `RowTotalValueCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The row total value currency. |
+| `RowTotalValueCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row total value currency. |
+| `RowTotalValueCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The row total value currency. |
 | `RowTotalValueInCompanyCurrency` | `Decimal` | no |  |  | The row total value in company currency of the inflow row. |
-| `RowTotalValueInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row total value in company currency. |
-| `RowTotalValueInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The row total value in company currency. |
+| `RowTotalValueInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row total value in company currency. |
+| `RowTotalValueInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The row total value in company currency. |
 | `RowTotalQuantity` | `Decimal` | no |  |  | The row total quantity of the inflow row. |
 | `IsOneTimeCost` | `Boolean` | no |  |  | Whether the inflow row is a one-time cost. |
 | `SalesAgreementInvoicingInterval` | `Int32` | no |  | enum | The invoicing interval of the inflow row. |
 | `TypeOfChange` | `Int32` | no |  | enum | The type of change of the inflow row. |
 | `PriceDefinition` | `Int32` | no |  | enum | The price definition of the inflow row. |
 | `PriceChangePerInterval` | `Decimal?` | yes |  |  | The price change per interval of the inflow row. |
-| `PriceChangePerIntervalCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the price change per interval currency. |
-| `PriceChangePerIntervalCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The price change per interval currency. |
+| `PriceChangePerIntervalCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the price change per interval currency. |
+| `PriceChangePerIntervalCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The price change per interval currency. |
 | `PriceChangePerIntervalInCompanyCurrency` | `Decimal?` | yes |  |  | The price change per interval in company currency of the inflow row. |
-| `PriceChangePerIntervalInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the price change per interval in company currency. |
-| `PriceChangePerIntervalInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The price change per interval in company currency. |
+| `PriceChangePerIntervalInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the price change per interval in company currency. |
+| `PriceChangePerIntervalInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The price change per interval in company currency. |
 | `TotalValueChangePerInterval` | `Decimal` | no |  |  | The total value change per interval of the inflow row. |
 | `TotalValueChangePerIntervalInCompanyCurrency` | `Decimal` | no |  |  | The total value change per interval in company currency of the inflow row. |
 | `RowTotalValuePerInterval` | `Decimal` | no |  |  | The row total value per interval of the inflow row. |

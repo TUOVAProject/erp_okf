@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a project group.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ProjectGroup`
 - **Endpoint:** `GET /api/v1/Common/ProjectGroups`
 - **Required permission:** Show basic data for project
@@ -48,8 +48,8 @@ Represents a project group.
 
 **Common**
 
-- [Projects](/entities/Common/Project.md) — `ProjectGroup` (expand)
-- [Projects](/entities/Common/Project.md) — `ProjectGroupId` (FK)
+- [Projects](Project.md) — `ProjectGroup` (expand)
+- [Projects](Project.md) — `ProjectGroupId` (FK)
 
 
 ## Example

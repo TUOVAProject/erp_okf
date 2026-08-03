@@ -36,7 +36,7 @@ referenced_by:
 
 Represents an incoming payment.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `IncomingPayment`
 - **Endpoint:** `GET /api/v1/Accounting/IncomingPayments`
 - **Required permission:** Show accounts receivable
@@ -49,31 +49,31 @@ Represents an incoming payment.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the incoming payment. |
 | `BankChargeAmount` | `Decimal?` | yes |  |  | The bank charge amount of the incoming payment. |
-| `BankChargeAmountCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the bank charge amount's currency. |
-| `BookingId` | `Int64?` | yes | [Bookings](/entities/Accounting/Booking.md) |  | The business key identifier of the incoming payment's booking. |
+| `BankChargeAmountCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the bank charge amount's currency. |
+| `BookingId` | `Int64?` | yes | [Bookings](Booking.md) |  | The business key identifier of the incoming payment's booking. |
 | `CancelDate` | `DateTimeOffset?` | yes |  | **deprecated since 26.5** | The date the payment was cancelled. _(Replaced by CancelTimeStamp)_ |
 | `CancelTimeStamp` | `DateTimeOffset?` | yes |  | since 26.5 | The timestamp when the payment was cancelled. |
-| `CancelledByUserId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the user that cancelled the payment. |
+| `CancelledByUserId` | `Int64?` | yes | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the user that cancelled the payment. |
 | `CancelPaymentDate` | `DateTimeOffset` | no |  |  | The date the cancellation is booked. |
 | `CreationDate` | `DateTimeOffset` | no |  |  | The date the incoming payment was created. |
 | `CurrencyExchangeRate` | `Decimal` | no |  |  | The exchange rate of the incoming payment. |
 | `InterestType` | `Int32` | no |  | enum | The interest type of the incoming payment. |
 | `IsCancelled` | `Boolean` | no |  |  | Whether or not the payment is cancelled. |
 | `PaidAmount` | `Decimal` | no |  |  | The paid amount. |
-| `PaidAmountCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the paid amount's currency. |
+| `PaidAmountCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the paid amount's currency. |
 | `PaidAmountInCompanyCurrency` | `Decimal` | no |  |  | The paid amount in company currency. |
-| `PaidAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the paid amount in company currency's currency. |
+| `PaidAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the paid amount in company currency's currency. |
 | `PaidVatAmount` | `Decimal?` | yes |  |  | The paid VAT amount. |
-| `PaidVatAmountCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the paid VAT amount's currency. |
-| `ParentId` | `Int64` | no | [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) |  | The business key identifier of the paid accounts receivable. |
+| `PaidVatAmountCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the paid VAT amount's currency. |
+| `ParentId` | `Int64` | no | [AccountsReceivables](AccountsReceivable.md) |  | The business key identifier of the paid accounts receivable. |
 | `PaymentDate` | `DateTimeOffset` | no |  |  | The payment date. |
-| `PaymentMethodId` | `Int64?` | yes | [PaymentMethods](/entities/Common/PaymentMethod.md) |  | The business key identifier of the payment method. |
+| `PaymentMethodId` | `Int64?` | yes | [PaymentMethods](../Common/PaymentMethod.md) |  | The business key identifier of the payment method. |
 | `VoucherText` | `String` | no |  | max length 100 | The voucher text of the incoming payment. |
 | `WriteOffAmount` | `Decimal?` | yes |  |  | The amount written off for the incoming payment. |
-| `WriteOffAmountCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency of the amount written off. |
+| `WriteOffAmountCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency of the amount written off. |
 | `WriteOffAmountInCompanyCurrency` | `Decimal?` | yes |  |  | The amount written off in company currency for the incoming payment. |
-| `WriteOffAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency of the amount written off in company currency for the incoming payment. |
-| `WriteOffCodeId` | `Int64?` | yes | [WriteOffCodes](/entities/Common/WriteOffCode.md) |  | The business key identifier of the incoming payment's write off code. |
+| `WriteOffAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency of the amount written off in company currency for the incoming payment. |
+| `WriteOffCodeId` | `Int64?` | yes | [WriteOffCodes](../Common/WriteOffCode.md) |  | The business key identifier of the incoming payment's write off code. |
 | `InterestInvoicingStatus` | `Int32` | no |  | enum | The interest invoicing status of the incoming payment. |
 | `IsSetOffPayment` | `Boolean` | no |  |  | Specifies if the incoming payment is a set off payment. |
 | `LedgerId` | `Int64?` | yes |  |  | The business key identifier of the incoming payment ledger. References IncomingPaymentLedger. |
@@ -102,7 +102,7 @@ Represents an incoming payment.
 
 **Accounting**
 
-- [OutgoingPayments](/entities/Accounting/OutgoingPayment.md) — `SetOffIncomingPaymentId` (FK)
+- [OutgoingPayments](OutgoingPayment.md) — `SetOffIncomingPaymentId` (FK)
 
 
 ## Example

@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a response time.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `ResponseTime`
 - **Endpoint:** `GET /api/v1/Purchase/ResponseTimes`
 - **Required permission:** Show terms
@@ -50,8 +50,8 @@ Represents a response time.
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `ResponseTime` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `ResponseTimeId` (FK)
+- [Suppliers](Supplier.md) — `ResponseTime` (expand)
+- [Suppliers](Supplier.md) — `ResponseTimeId` (FK)
 
 
 ## Example

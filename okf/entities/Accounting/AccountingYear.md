@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a accounting year.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccountingYear`
 - **Endpoint:** `GET /api/v1/Accounting/AccountingYears`
 - **Required permission:** Show accounting year
@@ -68,13 +68,13 @@ Represents a accounting year.
 
 **Accounting**
 
-- [AccountYearSettings](/entities/Accounting/AccountYearSetting.md) — `AccountingYearId` (FK)
-- [AccountingBudgets](/entities/Accounting/AccountingBudget.md) — `AccountingYearId` (FK)
-- [AccountingYearPeriods](/entities/Accounting/AccountingYearPeriod.md) — `AccountingYear` (expand)
-- [AccountingYearPeriods](/entities/Accounting/AccountingYearPeriod.md) — `AccountingYearId` (FK)
-- [Balances](/entities/Accounting/Balance.md) — `AccountingYearId` (FK)
-- [OpeningBalances](/entities/Accounting/OpeningBalance.md) — `AccountingYearId` (FK)
-- [Vouchers](/entities/Accounting/Voucher.md) — `AccountingYearId` (FK)
+- [AccountYearSettings](AccountYearSetting.md) — `AccountingYearId` (FK)
+- [AccountingBudgets](AccountingBudget.md) — `AccountingYearId` (FK)
+- [AccountingYearPeriods](AccountingYearPeriod.md) — `AccountingYear` (expand)
+- [AccountingYearPeriods](AccountingYearPeriod.md) — `AccountingYearId` (FK)
+- [Balances](Balance.md) — `AccountingYearId` (FK)
+- [OpeningBalances](OpeningBalance.md) — `AccountingYearId` (FK)
+- [Vouchers](Voucher.md) — `AccountingYearId` (FK)
 
 
 ## Example

@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a order quantity template on part that holds many partial quantities.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `OrderQuantityCustomerOrder`
 - **Endpoint:** `GET /api/v1/Sales/OrderQuantityCustomerOrders`
 - **Required permission:** Show purchase orders
@@ -44,14 +44,14 @@ Represents a order quantity template on part that holds many partial quantities.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the entity. |
-| `PartialQuantities` | `PartialQuantities[]` | no | [PartialQuantities](/entities/Common/PartialQuantity.md) | expandable, collection | The partial quantities for the order quantity. |
+| `PartialQuantities` | `PartialQuantities[]` | no | [PartialQuantities](../Common/PartialQuantity.md) | expandable, collection | The partial quantities for the order quantity. |
 
 ## Referenced by
 
 **Sales**
 
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `OrderQuantity` (expand)
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `OrderQuantityId` (FK)
+- [CustomerOrderRows](CustomerOrderRow.md) — `OrderQuantity` (expand)
+- [CustomerOrderRows](CustomerOrderRow.md) — `OrderQuantityId` (FK)
 
 
 ## Example

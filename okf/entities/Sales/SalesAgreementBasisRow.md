@@ -39,7 +39,7 @@ referenced_by:
 
 Represents a sales agreement basis row.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `SalesAgreementBasisRow`
 - **Endpoint:** `GET /api/v1/Sales/SalesAgreementBasisRows`
 - **Required permission:** Show agreement
@@ -51,34 +51,34 @@ Represents a sales agreement basis row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the agreement basis row. |
-| `ParentRowId` | `Int64?` | yes | [SalesAgreementBasisRows](/entities/Sales/SalesAgreementBasisRow.md) |  | The business key identifier of the parent row. |
-| `ParentAgreementBasisId` | `Int64` | no | [SalesAgreementBases](/entities/Sales/SalesAgreementBasis.md) |  | The business key identifier of the parent agreement basis. |
-| `AgreementRowId` | `Int64` | no | [SalesAgreementRows](/entities/Sales/SalesAgreementRow.md) |  | The business key identifier of the source agreement row. |
-| `CustomerOrderRowId` | `Int64` | no | [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) |  | The business key identifier of the generated customer order row. |
+| `ParentRowId` | `Int64?` | yes | [SalesAgreementBasisRows](SalesAgreementBasisRow.md) |  | The business key identifier of the parent row. |
+| `ParentAgreementBasisId` | `Int64` | no | [SalesAgreementBases](SalesAgreementBasis.md) |  | The business key identifier of the parent agreement basis. |
+| `AgreementRowId` | `Int64` | no | [SalesAgreementRows](SalesAgreementRow.md) |  | The business key identifier of the source agreement row. |
+| `CustomerOrderRowId` | `Int64` | no | [CustomerOrderRows](CustomerOrderRow.md) |  | The business key identifier of the generated customer order row. |
 | `OrderRowType` | `Int32` | no |  | enum | The order row type of the row. |
-| `PartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the row's part. |
+| `PartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the row's part. |
 | `EntityIdentityString` | `String` | no |  | max length 20 | The entity identity string of the row. |
 | `AdditionalRowDescription` | `String` | no |  |  | The additional row description of the row. |
 | `FreeTextHtml` | `String` | no |  |  | The free text formatted as rich text HTML of the row. |
 | `FreeText` | `String` | no |  |  | The free text as raw text of the row. |
 | `Quantity` | `Decimal` | no |  |  | The quantity of the row. |
 | `ConversionFactor` | `Decimal` | no |  |  | The conversion factor of the row. |
-| `UnitId` | `Int64?` | yes | [Units](/entities/Common/Unit.md) |  | The business key identifier of the row's unit. |
-| `Unit` | `Units` | no | [Units](/entities/Common/Unit.md) | expandable | The unit of the row. |
+| `UnitId` | `Int64?` | yes | [Units](../Common/Unit.md) |  | The business key identifier of the row's unit. |
+| `Unit` | `Units` | no | [Units](../Common/Unit.md) | expandable | The unit of the row. |
 | `MileageHours` | `Decimal` | no |  |  | The mileage hours of the row. |
 | `Price` | `Decimal?` | yes |  |  | The price of the row. |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row's price currency. |
-| `PriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The price currency of the row. |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row's price currency. |
+| `PriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The price currency of the row. |
 | `PriceInCompanyCurrency` | `Decimal?` | yes |  |  | The price in company currency of the row. |
-| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the company currency. |
-| `PriceInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The company currency of the row's price. |
+| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the company currency. |
+| `PriceInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The company currency of the row's price. |
 | `Discount` | `Decimal` | no |  |  | The discount of the row. |
 | `StandardPrice` | `Decimal?` | yes |  |  | The standard price of the row. |
-| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row's standard price currency. |
-| `StandardPriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The standard price currency of the row. |
+| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row's standard price currency. |
+| `StandardPriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The standard price currency of the row. |
 | `Amount` | `Decimal` | no |  |  | The total amount of the row. |
 | `AmountInCompanyCurrency` | `Decimal` | no |  |  | The total amount in company currency of the row. |
-| `VatRateId` | `Int64` | no | [VatRates](/entities/Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
+| `VatRateId` | `Int64` | no | [VatRates](../Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
 | `IsOneTimeCost` | `Boolean` | no |  |  | Indicates if the row is a one-time cost. |
 | `PeriodStart` | `DateTimeOffset?` | yes |  |  | The period start date of the row. |
 | `PeriodEnd` | `DateTimeOffset?` | yes |  |  | The period end date of the row. |
@@ -99,8 +99,8 @@ Represents a sales agreement basis row.
 
 **Sales**
 
-- [SalesAgreementBases](/entities/Sales/SalesAgreementBasis.md) — `Rows` (expand)
-- [SalesAgreementBasisRows](/entities/Sales/SalesAgreementBasisRow.md) — `ParentRowId` (FK)
+- [SalesAgreementBases](SalesAgreementBasis.md) — `Rows` (expand)
+- [SalesAgreementBasisRows](SalesAgreementBasisRow.md) — `ParentRowId` (FK)
 
 
 ## Example

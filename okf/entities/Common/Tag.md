@@ -27,7 +27,7 @@ property_count: 4
 
 Represents a tag.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `Tag`
 - **Endpoint:** `GET /api/v1/Common/Tags`
 - **Required permission:** Show part

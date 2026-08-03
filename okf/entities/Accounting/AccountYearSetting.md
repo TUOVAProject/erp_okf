@@ -36,7 +36,7 @@ referenced_by:
 
 Represents a account setting on a specific year.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccountYearSetting`
 - **Endpoint:** `GET /api/v1/Accounting/AccountYearSettings`
 - **Required permission:** Show accounting year
@@ -48,22 +48,22 @@ Represents a account setting on a specific year.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the account year setting. |
-| `AccountingYearId` | `Int64` | no | [AccountingYears](/entities/Accounting/AccountingYear.md) |  | The business key identifier of accounting year. |
+| `AccountingYearId` | `Int64` | no | [AccountingYears](AccountingYear.md) |  | The business key identifier of accounting year. |
 | `Description` | `String` | no |  |  | The description of the account year setting. |
 | `AllowSpecification` | `Boolean` | no |  |  | Specifies if the account year setting allows specification to be used. |
 | `AllowQuantity` | `Boolean` | no |  |  | Specifies if the account year setting allows quantity to be used. |
 | `IsCurrencyAccount` | `Boolean` | no |  |  | Specifies if the account year setting is a currency account. |
-| `CurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency if used. |
+| `CurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency if used. |
 | `IsAccrual` | `Boolean` | no |  |  | Specifies if the account year setting is accrual. |
 | `DebitOrCreditType` | `Int32` | no |  | enum | Specifies if the account year setting is of debit or credit type. |
 | `VatType` | `Int32` | no |  | enum | The vat type on the account year setting. |
-| `VatRateId` | `Int64?` | yes | [VatRates](/entities/Common/VatRate.md) |  | The business key identifier of the vat rate. |
+| `VatRateId` | `Int64?` | yes | [VatRates](../Common/VatRate.md) |  | The business key identifier of the vat rate. |
 | `BlockedForManualCoding` | `Boolean` | no |  |  | Specifies if the account year setting is block for manual coding. |
 | `IsFixedAssetAccount` | `Boolean` | no |  |  | Specifies if the account year setting is a fixed asset account. |
 | `IncludeOrderNumberInCoding` | `Boolean` | no |  |  | Specifies if the account year setting should include ordernumber in coding. |
-| `AccountId` | `Int64` | no | [Accounts](/entities/Accounting/Account.md) |  | The business key identifier of the account. |
-| `Account` | `Accounts` | no | [Accounts](/entities/Accounting/Account.md) | expandable | The account of the account year setting. |
-| `AccountCodingDimensions` | `AccountYearSettingCodingDimensionAvailabilities[]` | no | [AccountYearSettingCodingDimensionAvailabilities](/entities/Accounting/AccountYearSettingCodingDimensionAvailability.md) | expandable, collection | The account coding dimensions of the account year setting. |
+| `AccountId` | `Int64` | no | [Accounts](Account.md) |  | The business key identifier of the account. |
+| `Account` | `Accounts` | no | [Accounts](Account.md) | expandable | The account of the account year setting. |
+| `AccountCodingDimensions` | `AccountYearSettingCodingDimensionAvailabilities[]` | no | [AccountYearSettingCodingDimensionAvailabilities](AccountYearSettingCodingDimensionAvailability.md) | expandable, collection | The account coding dimensions of the account year setting. |
 
 ## Enumerations
 
@@ -89,8 +89,8 @@ Represents a account setting on a specific year.
 
 **Accounting**
 
-- [AccountYearSettingCodingDimensionAvailabilities](/entities/Accounting/AccountYearSettingCodingDimensionAvailability.md) — `AccountYearSettingId` (FK)
-- [AccountingBudgets](/entities/Accounting/AccountingBudget.md) — `AccountYearSettingId` (FK)
+- [AccountYearSettingCodingDimensionAvailabilities](AccountYearSettingCodingDimensionAvailability.md) — `AccountYearSettingId` (FK)
+- [AccountingBudgets](AccountingBudget.md) — `AccountYearSettingId` (FK)
 
 
 ## Example

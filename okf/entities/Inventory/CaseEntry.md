@@ -59,7 +59,7 @@ referenced_by:
 
 Represents a case entry.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `CaseEntry`
 - **Endpoint:** `GET /api/v1/Inventory/CaseEntry`
 - **Required permission:** Show case
@@ -72,64 +72,64 @@ Represents a case entry.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the case entry. |
 | `Number` | `String` | no |  | unique, max length 20, since 2.36 | The human readable identifier of the case entry. |
-| `ProjectId` | `Int64?` | yes | [Projects](/entities/Common/Project.md) | since 2.36 | The business key identifier of the project that belongs to the case entry. |
-| `Project` | `Projects` | no | [Projects](/entities/Common/Project.md) | expandable, since 2.36 | The project that belongs to the case entry |
+| `ProjectId` | `Int64?` | yes | [Projects](../Common/Project.md) | since 2.36 | The business key identifier of the project that belongs to the case entry. |
+| `Project` | `Projects` | no | [Projects](../Common/Project.md) | expandable, since 2.36 | The project that belongs to the case entry |
 | `ContactCaseNumber` | `String` | no |  | unique, max length 40, since 2.36 | The customer's or the supplier's case number (depending on case type) |
-| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](/entities/Sales/CustomerOrder.md) | since 2.36 | The business key identifier of the customer order that is linked to the case entry. |
-| `CustomerOrder` | `CustomerOrders` | no | [CustomerOrders](/entities/Sales/CustomerOrder.md) | expandable, since 2.36 | The customer order that is linked to the case entry. |
-| `PurchaseOrderId` | `Int64?` | yes | [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) | since 2.36 | The business key identifier of the purchase order that is linked to the case entry. |
-| `PurchaseOrder` | `PurchaseOrders` | no | [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) | expandable, since 2.36 | The purchase order that is linked to the case entry. |
+| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](../Sales/CustomerOrder.md) | since 2.36 | The business key identifier of the customer order that is linked to the case entry. |
+| `CustomerOrder` | `CustomerOrders` | no | [CustomerOrders](../Sales/CustomerOrder.md) | expandable, since 2.36 | The customer order that is linked to the case entry. |
+| `PurchaseOrderId` | `Int64?` | yes | [PurchaseOrders](../Purchase/PurchaseOrder.md) | since 2.36 | The business key identifier of the purchase order that is linked to the case entry. |
+| `PurchaseOrder` | `PurchaseOrders` | no | [PurchaseOrders](../Purchase/PurchaseOrder.md) | expandable, since 2.36 | The purchase order that is linked to the case entry. |
 | `ArrivalDate` | `DateTimeOffset?` | yes |  | since 2.36 | Date when delivery arrived. |
 | `DeliveryDate` | `DateTimeOffset?` | yes |  | since 2.36 | Date when delivery was made. |
 | `DeliveredQuantity` | `Decimal?` | yes |  | since 2.36 | The quantity the delivery consisted of. |
 | `ArrivedQuantity` | `Decimal?` | yes |  | since 2.36 | The quantity the arrival consisted of. |
-| `ReasonSupplierId` | `Int64?` | yes | [Suppliers](/entities/Purchase/Supplier.md) | since 2.36 | The business key identifier of the supplier that caused the nonconformity. References Suppliers . |
-| `ReasonWorkCenterId` | `Int64?` | yes | [WorkCenters](/entities/Manufacturing/WorkCenter.md) | since 2.36 | The business key identifier of the work center that caused the nonconformity. References WorkCenters . |
-| `ReasonDepartmentId` | `Int64?` | yes | [Departments](/entities/Common/Department.md) | since 2.36 | The business key identifier of the department that caused the nonconformity. References Departments . |
-| `ReasonRejectionCodeId` | `Int64?` | yes | [RejectionCodeItems](/entities/Common/RejectionCodeItem.md) | since 2.36 | The business key identifier of the rejection that caused the nonconformity. |
-| `ReasonPartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) | since 2.36 | The business key identifier of the part that caused the nonconformity. |
-| `InternalCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the case internal comment. |
-| `InternalComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The internal comment of the case. |
-| `ReasonCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) | since 2.36 | The business key identifier of the reason comment. |
-| `ReasonComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable, since 2.36 | The reason comment of the case. |
-| `ActualRejectionCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) | since 2.36 | The business key identifier of the actual rejections description. |
-| `ActualRejectionComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable, since 2.36 | The actual rejections description. |
+| `ReasonSupplierId` | `Int64?` | yes | [Suppliers](../Purchase/Supplier.md) | since 2.36 | The business key identifier of the supplier that caused the nonconformity. References Suppliers . |
+| `ReasonWorkCenterId` | `Int64?` | yes | [WorkCenters](../Manufacturing/WorkCenter.md) | since 2.36 | The business key identifier of the work center that caused the nonconformity. References WorkCenters . |
+| `ReasonDepartmentId` | `Int64?` | yes | [Departments](../Common/Department.md) | since 2.36 | The business key identifier of the department that caused the nonconformity. References Departments . |
+| `ReasonRejectionCodeId` | `Int64?` | yes | [RejectionCodeItems](../Common/RejectionCodeItem.md) | since 2.36 | The business key identifier of the rejection that caused the nonconformity. |
+| `ReasonPartId` | `Int64?` | yes | [Parts](Part.md) | since 2.36 | The business key identifier of the part that caused the nonconformity. |
+| `InternalCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the case internal comment. |
+| `InternalComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The internal comment of the case. |
+| `ReasonCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) | since 2.36 | The business key identifier of the reason comment. |
+| `ReasonComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable, since 2.36 | The reason comment of the case. |
+| `ActualRejectionCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) | since 2.36 | The business key identifier of the actual rejections description. |
+| `ActualRejectionComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable, since 2.36 | The actual rejections description. |
 | `Status` | `Int32` | no |  | enum | The status of the case. |
-| `CaseTypeId` | `Int64` | no | [CaseManagementType](/entities/Inventory/CaseManagementType.md) |  | The business key identifier of the case management type. |
-| `CaseType` | `CaseManagementType` | no | [CaseManagementType](/entities/Inventory/CaseManagementType.md) | expandable | The case management type of the case. |
+| `CaseTypeId` | `Int64` | no | [CaseManagementType](CaseManagementType.md) |  | The business key identifier of the case management type. |
+| `CaseType` | `CaseManagementType` | no | [CaseManagementType](CaseManagementType.md) | expandable | The case management type of the case. |
 | `CaseDate` | `DateTimeOffset` | no |  |  | The case date of the case. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse where the case is registered. |
-| `Warehouse` | `Warehouses` | no | [Warehouses](/entities/Common/Warehouse.md) | expandable | The warehouse of the case. |
-| `CustomerId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) |  | The business key identifier of the customer. |
-| `ProductRecordId` | `Int64?` | yes | [ProductRecords](/entities/Inventory/ProductRecord.md) |  | The business key identifier of the used product record for the case. |
-| `ProductRecord` | `ProductRecords` | no | [ProductRecords](/entities/Inventory/ProductRecord.md) | expandable | The product record of the case. |
-| `PartRevisionId` | `Int64?` | yes | [Revisions](/entities/Common/Revision.md) | since 24.5 | The business key identifier of the part revision used for the case. |
-| `PartRevision` | `Revisions` | no | [Revisions](/entities/Common/Revision.md) | expandable, since 24.5 | The part revision of the case. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the used part for the case. |
-| `Part` | `Parts` | no | [Parts](/entities/Inventory/Part.md) | expandable | The part of the case. |
-| `ManufacturingOrderId` | `Int64?` | yes | [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) |  | The business key identifier of the manufacturing order. |
-| `ManufacturingOrder` | `ManufacturingOrders` | no | [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) | expandable | The manufacturing order of the case. |
-| `SupplierId` | `Int64` | no | [Suppliers](/entities/Purchase/Supplier.md) |  | The business key identifier of the supplier. |
-| `ActualRejectionCodeId` | `Int64?` | yes | [RejectionCodeItems](/entities/Common/RejectionCodeItem.md) |  | The business key identifier of the actual rejection code for the case. |
-| `ActualRejectionCode` | `RejectionCodeItems` | no | [RejectionCodeItems](/entities/Common/RejectionCodeItem.md) | expandable | The actual rejection code for the case. |
-| `RejectionCodeItemId` | `Int64` | no | [RejectionCodeItems](/entities/Common/RejectionCodeItem.md) |  | The business key identifier of the planned rejection code item for the case. |
-| `RejectionCodeItem` | `RejectionCodeItems` | no | [RejectionCodeItems](/entities/Common/RejectionCodeItem.md) | expandable | The rejection code item of the case. |
-| `ExtraFields` | `ExtraFields[]` | no | [ExtraFields](/entities/Common/ExtraField.md) | expandable, collection | A collection of extra field values for the case. |
-| `Costs` | `CaseEntryAdditionalCost[]` | no | [CaseEntryAdditionalCost](/entities/Inventory/CaseEntryAdditionalCost.md) | expandable, collection, since 2.26 | A collection of case entry additional cost values for the case. |
-| `OurReferenceId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) | since 2.36 | The business key identifier of our reference for the case entry. Reference Persons |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse where the case is registered. |
+| `Warehouse` | `Warehouses` | no | [Warehouses](../Common/Warehouse.md) | expandable | The warehouse of the case. |
+| `CustomerId` | `Int64?` | yes | [Customers](../Sales/Customer.md) |  | The business key identifier of the customer. |
+| `ProductRecordId` | `Int64?` | yes | [ProductRecords](ProductRecord.md) |  | The business key identifier of the used product record for the case. |
+| `ProductRecord` | `ProductRecords` | no | [ProductRecords](ProductRecord.md) | expandable | The product record of the case. |
+| `PartRevisionId` | `Int64?` | yes | [Revisions](../Common/Revision.md) | since 24.5 | The business key identifier of the part revision used for the case. |
+| `PartRevision` | `Revisions` | no | [Revisions](../Common/Revision.md) | expandable, since 24.5 | The part revision of the case. |
+| `PartId` | `Int64` | no | [Parts](Part.md) |  | The business key identifier of the used part for the case. |
+| `Part` | `Parts` | no | [Parts](Part.md) | expandable | The part of the case. |
+| `ManufacturingOrderId` | `Int64?` | yes | [ManufacturingOrders](../Manufacturing/ManufacturingOrder.md) |  | The business key identifier of the manufacturing order. |
+| `ManufacturingOrder` | `ManufacturingOrders` | no | [ManufacturingOrders](../Manufacturing/ManufacturingOrder.md) | expandable | The manufacturing order of the case. |
+| `SupplierId` | `Int64` | no | [Suppliers](../Purchase/Supplier.md) |  | The business key identifier of the supplier. |
+| `ActualRejectionCodeId` | `Int64?` | yes | [RejectionCodeItems](../Common/RejectionCodeItem.md) |  | The business key identifier of the actual rejection code for the case. |
+| `ActualRejectionCode` | `RejectionCodeItems` | no | [RejectionCodeItems](../Common/RejectionCodeItem.md) | expandable | The actual rejection code for the case. |
+| `RejectionCodeItemId` | `Int64` | no | [RejectionCodeItems](../Common/RejectionCodeItem.md) |  | The business key identifier of the planned rejection code item for the case. |
+| `RejectionCodeItem` | `RejectionCodeItems` | no | [RejectionCodeItems](../Common/RejectionCodeItem.md) | expandable | The rejection code item of the case. |
+| `ExtraFields` | `ExtraFields[]` | no | [ExtraFields](../Common/ExtraField.md) | expandable, collection | A collection of extra field values for the case. |
+| `Costs` | `CaseEntryAdditionalCost[]` | no | [CaseEntryAdditionalCost](CaseEntryAdditionalCost.md) | expandable, collection, since 2.26 | A collection of case entry additional cost values for the case. |
+| `OurReferenceId` | `Int64?` | yes | [Persons](../Common/Person.md) | since 2.36 | The business key identifier of our reference for the case entry. Reference Persons |
 | `OurReferenceName` | `String` | no |  | max length 80, since 2.36 | The name of our reference for the case entry. |
-| `Phases` | `CaseEntryPhases[]` | no | [CaseEntryPhases](/entities/Inventory/CaseEntryPhase.md) | expandable, collection, since 2.45 | The phases that belong to the case entry |
+| `Phases` | `CaseEntryPhases[]` | no | [CaseEntryPhases](CaseEntryPhase.md) | expandable, collection, since 2.45 | The phases that belong to the case entry |
 | `RejectionDescription` | `String` | no |  | max length 400, since 2.45 | The rejection description of the case entry. |
-| `Notes` | `BusinessContactNoteHistories[]` | no | [BusinessContactNoteHistories](/entities/Common/BusinessContactNoteHistory.md) | expandable, collection, since 2.55 | Rows of business contact notes. |
-| `ContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](/entities/Common/BusinessContactReference.md) | since 2.54 | The business key identifier of business contact reference. |
+| `Notes` | `BusinessContactNoteHistories[]` | no | [BusinessContactNoteHistories](../Common/BusinessContactNoteHistory.md) | expandable, collection, since 2.55 | Rows of business contact notes. |
+| `ContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](../Common/BusinessContactReference.md) | since 2.54 | The business key identifier of business contact reference. |
 | `ContactName` | `String` | no |  | max length 80, since 2.54 | The customer's or supplier's reference name. Only set when ContactReferenceId is not set. |
-| `AccountReciveableId` | `Int64?` | yes | [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) | since 2.54 | The business key identifier of the accounts receiveable. |
-| `AccountsReceivable` | `AccountsReceivables` | no | [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) | expandable, since 2.54 | The accounts receiveable that is linked on the case entry |
+| `AccountReciveableId` | `Int64?` | yes | [AccountsReceivables](../Accounting/AccountsReceivable.md) | since 2.54 | The business key identifier of the accounts receiveable. |
+| `AccountsReceivable` | `AccountsReceivables` | no | [AccountsReceivables](../Accounting/AccountsReceivable.md) | expandable, since 2.54 | The accounts receiveable that is linked on the case entry |
 | `CategoryString` | `String` | no |  | max length 20, since 2.54 | Category string. |
-| `ExternalCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) | since 23.2 | The business key identifier of the case entry external comment. |
-| `ExternalComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable, since 23.2 | The case entry external comment. |
+| `ExternalCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) | since 23.2 | The business key identifier of the case entry external comment. |
+| `ExternalComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable, since 23.2 | The case entry external comment. |
 | `RejectedQuantity` | `Decimal` | no |  | since 24.3 | The case entry rejected quantity. |
-| `CasePartLinks` | `CaseEntryPartLinks[]` | no | [CaseEntryPartLinks](/entities/Inventory/CasePartLink.md) | expandable, collection, since 24.5 | Case part links that reference the parts included in this case. |
+| `CasePartLinks` | `CaseEntryPartLinks[]` | no | [CaseEntryPartLinks](CasePartLink.md) | expandable, collection, since 24.5 | Case part links that reference the parts included in this case. |
 
 ## Enumerations
 
@@ -149,20 +149,20 @@ Represents a case entry.
 
 **Inventory**
 
-- [CaseEntryActivities](/entities/Inventory/CaseEntryActivity.md) — `CaseEntryId` (FK)
-- [CaseEntryAdditionalCost](/entities/Inventory/CaseEntryAdditionalCost.md) — `CaseEntryId` (FK)
-- [CaseEntryLinks](/entities/Inventory/CaseEntryLink.md) — `ChildId` (FK)
-- [CaseEntryLinks](/entities/Inventory/CaseEntryLink.md) — `ParentId` (FK)
-- [CaseEntryPartLinks](/entities/Inventory/CasePartLink.md) — `CaseId` (FK)
-- [CaseEntryPhases](/entities/Inventory/CaseEntryPhase.md) — `ParentId` (FK)
+- [CaseEntryActivities](CaseEntryActivity.md) — `CaseEntryId` (FK)
+- [CaseEntryAdditionalCost](CaseEntryAdditionalCost.md) — `CaseEntryId` (FK)
+- [CaseEntryLinks](CaseEntryLink.md) — `ChildId` (FK)
+- [CaseEntryLinks](CaseEntryLink.md) — `ParentId` (FK)
+- [CaseEntryPartLinks](CasePartLink.md) — `CaseId` (FK)
+- [CaseEntryPhases](CaseEntryPhase.md) — `ParentId` (FK)
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `CaseEntries` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `CaseEntries` (expand)
 
 **Sales**
 
-- [Customers](/entities/Sales/Customer.md) — `CaseEntries` (expand)
+- [Customers](../Sales/Customer.md) — `CaseEntries` (expand)
 
 
 ## Example

@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a cost factor group belonging to a work center. Note that all cost factors are represented in company currency per hour.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `WorkCenterCostFactorGroup`
 - **Endpoint:** `GET /api/v1/Manufacturing/WorkCenterCostFactorGroups`
 - **Required permission:** Show work center
@@ -54,7 +54,7 @@ Represents a cost factor group belonging to a work center. Note that all cost fa
 | `FutureCostFactor3` | `Decimal?` | yes |  |  | The future third cost factor of the group. |
 | `IsDefaultSetupCost` | `Boolean` | no |  |  | Specifies if the cost factor group is used as the default group for setup costs for its parent work center. |
 | `IsDefaultUnitCost` | `Boolean` | no |  |  | Specifies if the cost factor group is used as the default group for unit costs for its parent work center. |
-| `ParentId` | `Int64` | no | [WorkCenters](/entities/Manufacturing/WorkCenter.md) |  | The business key identifier of the work center that the cost factor group belongs to. |
+| `ParentId` | `Int64` | no | [WorkCenters](WorkCenter.md) |  | The business key identifier of the work center that the cost factor group belongs to. |
 | `RowIndex` | `Int32` | no |  |  | The row index of the work center cost factor group in relation to the other groups that belong to the parent work center. |
 
 ## Enumerations
@@ -72,7 +72,7 @@ Represents a cost factor group belonging to a work center. Note that all cost fa
 
 **Manufacturing**
 
-- [WorkCenters](/entities/Manufacturing/WorkCenter.md) — `CostFactorGroups` (expand)
+- [WorkCenters](WorkCenter.md) — `CostFactorGroups` (expand)
 
 
 ## Example

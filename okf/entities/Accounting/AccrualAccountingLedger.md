@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a accrual accounting ledger.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccrualAccountingLedger`
 - **Endpoint:** `GET /api/v1/Accounting/AccrualAccountingLedgers`
 - **Required permission:** Show accrual
@@ -48,8 +48,8 @@ Represents a accrual accounting ledger.
 
 **Accounting**
 
-- [AccrualAccountingRows](/entities/Accounting/AccrualAccountingRow.md) — `Ledger` (expand)
-- [AccrualAccountingRows](/entities/Accounting/AccrualAccountingRow.md) — `LedgerId` (FK)
+- [AccrualAccountingRows](AccrualAccountingRow.md) — `Ledger` (expand)
+- [AccrualAccountingRows](AccrualAccountingRow.md) — `LedgerId` (FK)
 
 
 ## Example

@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a quote type.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `QuoteType`
 - **Endpoint:** `GET /api/v1/Sales/QuoteTypes`
 - **Required permission:** Show order types
@@ -53,14 +53,14 @@ Represents a quote type.
 | `Visible` | `Boolean` | no |  |  | Specifies if the type is visible. |
 | `IsPreset` | `Boolean` | no |  |  | Specifies if the type is a preset type. |
 | `PriceSetting` | `Int32` | no |  | enum | The price setting to apply for quotes of this type. |
-| `PriceListId` | `Int64?` | yes | [PriceLists](/entities/Common/PriceList.md) |  | The business key identifier of the type's price list. |
+| `PriceListId` | `Int64?` | yes | [PriceLists](../Common/PriceList.md) |  | The business key identifier of the type's price list. |
 | `BaseType` | `Int32` | no |  | enum | The base type of quotes created from this type. |
 | `CodingGroupId` | `Int64` | no |  |  | The business key identifier of the type's coding group. |
-| `FormReportConfigurationId` | `Int64?` | yes | [FormReportConfigurations](/entities/Common/FormReportConfiguration.md) |  | The business key identifier of the type's form report configuration. |
+| `FormReportConfigurationId` | `Int64?` | yes | [FormReportConfigurations](../Common/FormReportConfiguration.md) |  | The business key identifier of the type's form report configuration. |
 | `RateTypeSetting` | `Int32` | no |  | enum, since 22.9 | The rate type setting of the quote type. |
-| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the quote type's currency exchange type. |
-| `CustomerOrderTypeId` | `Int64?` | yes | [CustomerOrderTypes](/entities/Sales/CustomerOrderType.md) | since 23.2 | The business key identifier of the quote type's cutomer order type. |
-| `CustomerOrderType` | `CustomerOrderTypes` | no | [CustomerOrderTypes](/entities/Sales/CustomerOrderType.md) | expandable, since 23.2 | The quote type's cutomer order type. |
+| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the quote type's currency exchange type. |
+| `CustomerOrderTypeId` | `Int64?` | yes | [CustomerOrderTypes](CustomerOrderType.md) | since 23.2 | The business key identifier of the quote type's cutomer order type. |
+| `CustomerOrderType` | `CustomerOrderTypes` | no | [CustomerOrderTypes](CustomerOrderType.md) | expandable, since 23.2 | The quote type's cutomer order type. |
 
 ## Enumerations
 
@@ -90,8 +90,8 @@ Represents a quote type.
 
 **Sales**
 
-- [Quotes](/entities/Sales/Quote.md) — `OrderType` (expand)
-- [Quotes](/entities/Sales/Quote.md) — `OrderTypeId` (FK)
+- [Quotes](Quote.md) — `OrderType` (expand)
+- [Quotes](Quote.md) — `OrderTypeId` (FK)
 
 
 ## Example

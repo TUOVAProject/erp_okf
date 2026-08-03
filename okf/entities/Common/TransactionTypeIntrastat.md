@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a transaction type intrastat.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `TransactionTypeIntrastat`
 - **Endpoint:** `GET /api/v1/Common/TransactionTypeIntrastats`
 - **Required permission:** Show transaction types
@@ -50,13 +50,13 @@ Represents a transaction type intrastat.
 
 **Purchase**
 
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `IntrastatTransactionType` (expand)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `IntrastatTransactionTypeId` (FK)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `IntrastatTransactionType` (expand)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `IntrastatTransactionTypeId` (FK)
 
 **Sales**
 
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `IntrastatTransactionType` (expand)
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `IntrastatTransactionTypeId` (FK)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `IntrastatTransactionType` (expand)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `IntrastatTransactionTypeId` (FK)
 
 
 ## Example

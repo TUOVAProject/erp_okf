@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a printer that has been assigned to an application user.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ApplicationUserPrinter`
 - **Endpoint:** `GET /api/v1/Common/ApplicationUserPrinters`
 - **Required permission:** Show user
@@ -44,11 +44,11 @@ Represents a printer that has been assigned to an application user.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the application user printer. |
-| `ApplicationUserId` | `Int64` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that the application user printer belongs to. |
+| `ApplicationUserId` | `Int64` | no | [ApplicationUsers](ApplicationUser.md) |  | The business key identifier of the application user that the application user printer belongs to. |
 | `PrinterName` | `String` | no |  | max length 300 | The name of the local printer that is assigned. |
 | `NormalizedFormReportType` | `Int32?` | yes |  | enum | The type of form report that the printer assignment will be used for. |
 | `FormReportType` | `Guid?` | yes |  |  | The type of form report that the printer assignment will be used for. |
-| `ServerPrinterId` | `Int64?` | yes | [ServerPrinters](/entities/Common/ServerPrinter.md) |  | The server printer that is linked to the application user printer. |
+| `ServerPrinterId` | `Int64?` | yes | [ServerPrinters](ServerPrinter.md) |  | The server printer that is linked to the application user printer. |
 | `FormDocumentType` | `Int32` | no |  | enum | The type of document that the printer assignment will be used for. |
 
 ## Enumerations
@@ -300,7 +300,7 @@ Represents a printer that has been assigned to an application user.
 
 **Common**
 
-- [ApplicationUsers](/entities/Common/ApplicationUser.md) — `Printers` (expand)
+- [ApplicationUsers](ApplicationUser.md) — `Printers` (expand)
 
 
 ## Example

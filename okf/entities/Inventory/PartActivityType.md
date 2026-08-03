@@ -29,7 +29,7 @@ referenced_by:
 
 Represents an part activity type.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PartActivityType`
 - **Endpoint:** `GET /api/v1/Inventory/PartActivityTypes`
 - **Required permission:** Show basic data for part
@@ -48,7 +48,7 @@ Represents an part activity type.
 
 **Inventory**
 
-- [PartActivities](/entities/Inventory/PartActivity.md) — `ActivityTypeId` (FK)
+- [PartActivities](PartActivity.md) — `ActivityTypeId` (FK)
 
 
 ## Example

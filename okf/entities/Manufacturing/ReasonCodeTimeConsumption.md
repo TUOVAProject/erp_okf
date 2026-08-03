@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a reason code time consumption.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ReasonCodeTimeConsumption`
 - **Endpoint:** `GET /api/v1/Manufacturing/ReasonCodeTimeConsumptions`
 - **Required permission:** Show cause codes
@@ -61,8 +61,8 @@ Represents a reason code time consumption.
 
 **Manufacturing**
 
-- [ManufacturingOrderOperationReportings](/entities/Manufacturing/ManufacturingOrderOperationReporting.md) — `ReasonCodeTimeConsumption` (expand)
-- [ManufacturingOrderOperationReportings](/entities/Manufacturing/ManufacturingOrderOperationReporting.md) — `ReasonCodeTimeConsumptionId` (FK)
+- [ManufacturingOrderOperationReportings](ManufacturingOrderOperationReporting.md) — `ReasonCodeTimeConsumption` (expand)
+- [ManufacturingOrderOperationReportings](ManufacturingOrderOperationReporting.md) — `ReasonCodeTimeConsumptionId` (FK)
 
 
 ## Example

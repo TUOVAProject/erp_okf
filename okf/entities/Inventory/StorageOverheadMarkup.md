@@ -29,7 +29,7 @@ referenced_by:
 
 Represents storage overhead markup.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `StorageOverheadMarkup`
 - **Endpoint:** `GET /api/v1/Inventory/StorageOverheadMarkups`
 - **Required permission:** Show calculation mark-up
@@ -61,8 +61,8 @@ Represents storage overhead markup.
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `StorageOverheadMarkup` (expand)
-- [Parts](/entities/Inventory/Part.md) — `StorageOverheadMarkupId` (FK)
+- [Parts](Part.md) — `StorageOverheadMarkup` (expand)
+- [Parts](Part.md) — `StorageOverheadMarkupId` (FK)
 
 
 ## Example

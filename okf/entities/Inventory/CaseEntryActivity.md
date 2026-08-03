@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a case entry activity.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `CaseEntryActivity`
 - **Endpoint:** `GET /api/v1/Inventory/CaseEntryActivities`
 - **Required permission:** Show case
@@ -47,22 +47,22 @@ Represents a case entry activity.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the activity. |
-| `CaseEntryId` | `Int64` | no | [CaseEntry](/entities/Inventory/CaseEntry.md) |  | The business key identifier of the case entry that the activity belongs to. |
+| `CaseEntryId` | `Int64` | no | [CaseEntry](CaseEntry.md) |  | The business key identifier of the case entry that the activity belongs to. |
 | `PlannedTime` | `TimeSpan` | no |  |  | The planned time of the activity. |
 | `ReportedTime` | `TimeSpan?` | yes |  |  | The reported time of the activity. |
 | `ShowOnDocuments` | `Boolean` | no |  |  | Specifies if the activity should be shown on documents or not. |
 | `ReportingType` | `Int32` | no |  | enum | The reporting type specified for the activity. |
 | `Mandatory` | `Boolean` | no |  |  | Specifies whether or not the activity is mandatory. |
 | `CostPerHour` | `Decimal?` | yes |  |  | The cost per hour of the activity. |
-| `CostPerHourCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency that the cost per hour is specified in. |
+| `CostPerHourCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency that the cost per hour is specified in. |
 | `Chargeable` | `Boolean` | no |  |  | Specifies whether or not the activity is chargeable. |
-| `ActivityTypeId` | `Int64` | no | [CaseManagementActivities](/entities/Inventory/CaseManagementActivity.md) |  | The business key identifier of the case management activity that the activity is based on. |
+| `ActivityTypeId` | `Int64` | no | [CaseManagementActivities](CaseManagementActivity.md) |  | The business key identifier of the case management activity that the activity is based on. |
 | `CalendarAppointmentId` | `String` | no |  |  | The calendar appointment id of the activity. |
-| `CompletedByUserId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the user that completed the activity. |
-| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the user that is responsible for the activity. |
+| `CompletedByUserId` | `Int64?` | yes | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the user that completed the activity. |
+| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the user that is responsible for the activity. |
 | `Description` | `String` | no |  |  | The description of the activity. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the activity's comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The activity's comment. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the activity's comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The activity's comment. |
 | `Status` | `Int32` | no |  | enum | The status of the activity. |
 | `ReminderId` | `Int64?` | yes |  |  | The business key identifier of the reminder that is linked with the activity. |
 | `PlannedCompletionDate` | `DateTimeOffset` | no |  |  | The planned completion date of the activity. |
@@ -92,7 +92,7 @@ Represents a case entry activity.
 
 **Inventory**
 
-- [CaseEntryPhases](/entities/Inventory/CaseEntryPhase.md) — `Activities` (expand)
+- [CaseEntryPhases](CaseEntryPhase.md) — `Activities` (expand)
 
 
 ## Example

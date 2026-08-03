@@ -25,7 +25,7 @@ property_count: 1
 
 This is the response type returned if an error occurs when invoking a command.
 
-- **Module:** [Infrastructure](/modules/Infrastructure.md)
+- **Module:** [Infrastructure](../../modules/Infrastructure.md)
 - **API class:** `ErrorCommandResponse`
 - **Endpoint:** none — this is a payload type, not a queryable resource.
 - **Introduced in:** 2.18

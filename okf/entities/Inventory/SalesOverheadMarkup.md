@@ -30,7 +30,7 @@ referenced_by:
 
 Represents sales overhead markup.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `SalesOverheadMarkup`
 - **Endpoint:** `GET /api/v1/Inventory/SalesOverheadMarkups`
 - **Required permission:** Show calculation mark-up
@@ -50,9 +50,9 @@ Represents sales overhead markup.
 
 **Inventory**
 
-- [PartTemplates](/entities/Inventory/PartTemplate.md) — `SalesOverheadMarkupId` (FK)
-- [Parts](/entities/Inventory/Part.md) — `SalesOverheadMarkup` (expand)
-- [Parts](/entities/Inventory/Part.md) — `SalesOverheadMarkupId` (FK)
+- [PartTemplates](PartTemplate.md) — `SalesOverheadMarkupId` (FK)
+- [Parts](Part.md) — `SalesOverheadMarkup` (expand)
+- [Parts](Part.md) — `SalesOverheadMarkupId` (FK)
 
 
 ## Example

@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a measuring plan for a manufacturing order operation.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ManufacturingOrderOperationControlDataRow`
 - **Endpoint:** `GET /api/v1/Manufacturing/ManufacturingOrderOperationControlDataRows`
 - **Required permission:** Show manufacturing orders
@@ -46,19 +46,19 @@ Represents a measuring plan for a manufacturing order operation.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the entity. |
-| `ManufacturingOrderOperationId` | `Int64` | no | [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) |  | The business key identifier of the manufacturing order operation that the row relates to. |
-| `MeasuringTemplateId` | `Int64` | no | [MeasuringTemplates](/entities/Common/MeasuringTemplate.md) |  | The business key identifier of the measuring template that the row relates to. |
-| `OverridenFormTemplateId` | `Int64` | no | [FormTemplates](/entities/Common/FormTemplate.md) |  | The business key identifier of the form template specified for this row. |
+| `ManufacturingOrderOperationId` | `Int64` | no | [ManufacturingOrderOperations](ManufacturingOrderOperation.md) |  | The business key identifier of the manufacturing order operation that the row relates to. |
+| `MeasuringTemplateId` | `Int64` | no | [MeasuringTemplates](../Common/MeasuringTemplate.md) |  | The business key identifier of the measuring template that the row relates to. |
+| `OverridenFormTemplateId` | `Int64` | no | [FormTemplates](../Common/FormTemplate.md) |  | The business key identifier of the form template specified for this row. |
 | `OverridenFrequencyText` | `String` | no |  | max length 80 | The frequency text specified for this row. |
 | `OverridenIntervalAmount` | `Int32?` | yes |  |  | The quantity value specified for this row. |
 | `OverridenInterval` | `Int32?` | yes |  |  | The interval value specified for this row. |
-| `WorkCenterId` | `Int64?` | yes | [WorkCenters](/entities/Manufacturing/WorkCenter.md) |  | The business key identifier of the work center that the row relates to. |
+| `WorkCenterId` | `Int64?` | yes | [WorkCenters](WorkCenter.md) |  | The business key identifier of the work center that the row relates to. |
 
 ## Referenced by
 
 **Manufacturing**
 
-- [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) — `ControlDataRows` (expand)
+- [ManufacturingOrderOperations](ManufacturingOrderOperation.md) — `ControlDataRows` (expand)
 
 
 ## Example

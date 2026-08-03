@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a remote part configuration row.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `RemotePartConfigurationRow`
 - **Endpoint:** `GET /api/v1/Common/RemotePartConfigurationRows`
 - **Required permission:** Show part
@@ -51,7 +51,7 @@ Represents a remote part configuration row.
 
 **Common**
 
-- [RemotePartConfigurations](/entities/Common/RemotePartConfiguration.md) — `Rows` (expand)
+- [RemotePartConfigurations](RemotePartConfiguration.md) — `Rows` (expand)
 
 
 ## Example

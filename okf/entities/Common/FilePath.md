@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a queryable file path.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `FilePath`
 - **Endpoint:** `GET /api/v1/Common/FilePaths`
 - **Required permission:** Show paths
@@ -86,9 +86,9 @@ Represents a queryable file path.
 
 **Common**
 
-- [ServerPrinters](/entities/Common/ServerPrinter.md) — `FilePath` (expand)
-- [ServerPrinters](/entities/Common/ServerPrinter.md) — `FilePathId` (FK)
-- [ServerPrinters](/entities/Common/ServerPrinter.md) — `SubPath` (FK)
+- [ServerPrinters](ServerPrinter.md) — `FilePath` (expand)
+- [ServerPrinters](ServerPrinter.md) — `FilePathId` (FK)
+- [ServerPrinters](ServerPrinter.md) — `SubPath` (FK)
 
 
 ## Example

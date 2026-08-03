@@ -34,7 +34,7 @@ referenced_by:
 
 Represents an alloy.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `Alloy`
 - **Endpoint:** `GET /api/v1/Inventory/Alloys`
 - **Required permission:** Show alloy codes
@@ -49,17 +49,17 @@ Represents an alloy.
 | `Code` | `String` | no |  | unique, max length 10 | The human readable identifier of the alloy. |
 | `Description` | `String` | no |  |  | The translated description of the alloy. |
 | `Price` | `Decimal` | no |  |  | The price of the alloy. |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency that the alloy price is specified in. |
-| `UnitId` | `Int64` | no | [Units](/entities/Common/Unit.md) |  | The business key identifier of the alloy unit. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the alloy part. |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency that the alloy price is specified in. |
+| `UnitId` | `Int64` | no | [Units](../Common/Unit.md) |  | The business key identifier of the alloy unit. |
+| `PartId` | `Int64` | no | [Parts](Part.md) |  | The business key identifier of the alloy part. |
 
 ## Referenced by
 
 **Inventory**
 
-- [AlloyQuantities](/entities/Inventory/AlloyQuantity.md) — `AlloyId` (FK)
-- [Parts](/entities/Inventory/Part.md) — `CurrentAlloy` (expand)
-- [Parts](/entities/Inventory/Part.md) — `CurrentAlloyId` (FK)
+- [AlloyQuantities](AlloyQuantity.md) — `AlloyId` (FK)
+- [Parts](Part.md) — `CurrentAlloy` (expand)
+- [Parts](Part.md) — `CurrentAlloyId` (FK)
 
 
 ## Example

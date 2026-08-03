@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a drawing revision for manufacturing order node.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ManufacturingOrderNodeDrawingRevision`
 - **Endpoint:** `GET /api/v1/Manufacturing/ManufacturingOrderNodeDrawingRevisions`
 - **Required permission:** Show manufacturing orders
@@ -45,16 +45,16 @@ Represents a drawing revision for manufacturing order node.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the revision. |
 | `Number` | `String` | no |  | unique (per per Drawing), max length 25 | The human readable number of the revision. |
-| `ParentId` | `Int64?` | yes | [ManufacturingOrderNodeDrawings](/entities/Manufacturing/ManufacturingOrderNodeDrawing.md) |  | The business key identifier of the drawing that the revision belongs to. |
-| `RevisionCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the revision comment. |
-| `RevisionComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The revision comment. |
+| `ParentId` | `Int64?` | yes | [ManufacturingOrderNodeDrawings](ManufacturingOrderNodeDrawing.md) |  | The business key identifier of the drawing that the revision belongs to. |
+| `RevisionCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the revision comment. |
+| `RevisionComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The revision comment. |
 
 ## Referenced by
 
 **Manufacturing**
 
-- [ManufacturingOrderNodeDrawings](/entities/Manufacturing/ManufacturingOrderNodeDrawing.md) — `ActiveDrawingRevisionId` (FK)
-- [ManufacturingOrderNodeDrawings](/entities/Manufacturing/ManufacturingOrderNodeDrawing.md) — `Revisions` (expand)
+- [ManufacturingOrderNodeDrawings](ManufacturingOrderNodeDrawing.md) — `ActiveDrawingRevisionId` (FK)
+- [ManufacturingOrderNodeDrawings](ManufacturingOrderNodeDrawing.md) — `Revisions` (expand)
 
 
 ## Example

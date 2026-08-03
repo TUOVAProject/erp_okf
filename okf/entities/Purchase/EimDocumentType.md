@@ -29,7 +29,7 @@ referenced_by:
 
 Represents an EIM document type.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `EimDocumentType`
 - **Endpoint:** `GET /api/v1/Purchase/EimDocumentTypes`
 - **Required permission:** Show attachment types
@@ -51,7 +51,7 @@ Represents an EIM document type.
 
 **Purchase**
 
-- [EimDocuments](/entities/Purchase/EimDocument.md) — `DocumentTypeId` (FK)
+- [EimDocuments](EimDocument.md) — `DocumentTypeId` (FK)
 
 
 ## Example

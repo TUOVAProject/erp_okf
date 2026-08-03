@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a permission group.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PermissionGroup`
 - **Endpoint:** `GET /api/v1/Common/PermissionGroups`
 - **Required permission:** Show user rights groups
@@ -44,13 +44,13 @@ Represents a permission group.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the permission group. |
 | `Description` | `String` | no |  |  | The translated description of the permission group. |
-| `Permissions` | `Permissions[]` | no | [Permissions](/entities/Common/Permission.md) | expandable, collection | The permissions that apply to the permission group. |
+| `Permissions` | `Permissions[]` | no | [Permissions](Permission.md) | expandable, collection | The permissions that apply to the permission group. |
 
 ## Referenced by
 
 **Common**
 
-- [WarehousePermissions](/entities/Common/WarehousePermission.md) — `PermissionGroups` (expand)
+- [WarehousePermissions](WarehousePermission.md) — `PermissionGroups` (expand)
 
 
 ## Example

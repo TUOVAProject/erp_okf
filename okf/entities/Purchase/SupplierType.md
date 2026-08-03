@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a supplier type.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `SupplierType`
 - **Endpoint:** `GET /api/v1/Purchase/SupplierTypes`
 - **Required permission:** Show supplier
@@ -48,8 +48,8 @@ Represents a supplier type.
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `Type` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `TypeId` (FK)
+- [Suppliers](Supplier.md) — `Type` (expand)
+- [Suppliers](Supplier.md) — `TypeId` (FK)
 
 
 ## Example

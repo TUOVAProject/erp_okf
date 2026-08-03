@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a reseller.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `Reseller`
 - **Endpoint:** `GET /api/v1/Common/Resellers`
 - **Required permission:** Show customer
@@ -49,7 +49,7 @@ Represents a reseller.
 
 **Sales**
 
-- [Customers](/entities/Sales/Customer.md) — `Reseller` (expand)
+- [Customers](../Sales/Customer.md) — `Reseller` (expand)
 
 
 ## Example

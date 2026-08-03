@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a blanket order type for sales.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `BlanketOrderSalesType`
 - **Endpoint:** `GET /api/v1/Sales/BlanketOrderSalesTypes`
 - **Required permission:** Show blanket order
@@ -52,12 +52,12 @@ Represents a blanket order type for sales.
 | `Visible` | `Boolean` | no |  |  | Specifies if the blanket order type is visible. |
 | `IsPreset` | `Boolean` | no |  |  | Specifies if the blanket order type is preset. |
 | `BaseType` | `Int32` | no |  | enum | The base type of the blanket order type. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the blanket order type's warehouse. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the blanket order type's warehouse. |
 | `PriceSetting` | `Int32` | no |  | enum | The price setting of the blanket order type. |
-| `PriceListId` | `Int64?` | yes | [PriceLists](/entities/Common/PriceList.md) |  | The business key identifier of the blanket order type's price list. |
+| `PriceListId` | `Int64?` | yes | [PriceLists](../Common/PriceList.md) |  | The business key identifier of the blanket order type's price list. |
 | `RateTypeSetting` | `Int32` | no |  | enum | The rate typ setting of the blanket order type. |
 | `BlanketOrderSalesActivityTemplateId` | `Int64?` | yes |  |  | The business key identifier of the blanket order types activity template. |
-| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) |  | The business key identifier of the blanket order type's currency exchange type. |
+| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) |  | The business key identifier of the blanket order type's currency exchange type. |
 | `DefaultValidDays` | `Int32` | no |  |  | The default valid days of the blanket order type. |
 
 ## Enumerations
@@ -88,8 +88,8 @@ Represents a blanket order type for sales.
 
 **Sales**
 
-- [BlanketOrderSales](/entities/Sales/BlanketOrderSales.md) — `OrderType` (expand)
-- [BlanketOrderSales](/entities/Sales/BlanketOrderSales.md) — `OrderTypeId` (FK)
+- [BlanketOrderSales](BlanketOrderSales.md) — `OrderType` (expand)
+- [BlanketOrderSales](BlanketOrderSales.md) — `OrderTypeId` (FK)
 
 
 ## Example

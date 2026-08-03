@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a form report configuration.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `FormReportConfiguration`
 - **Endpoint:** `GET /api/v1/Common/FormReportConfigurations`
 - **GUID:** `4570168B-D8A4-44E1-98BF-520E6AF19C09`
@@ -55,16 +55,16 @@ Represents a form report configuration.
 
 **Common**
 
-- [PaymentMethods](/entities/Common/PaymentMethod.md) — `TransactionListFormReportConfigurationId` (FK)
+- [PaymentMethods](PaymentMethod.md) — `TransactionListFormReportConfigurationId` (FK)
 
 **Inventory**
 
-- [PartDefaultTransportLabels](/entities/Inventory/PartDefaultTransportLabel.md) — `FormReportConfigurationId` (FK)
+- [PartDefaultTransportLabels](../Inventory/PartDefaultTransportLabel.md) — `FormReportConfigurationId` (FK)
 
 **Sales**
 
-- [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) — `FormReportConfigurationId` (FK)
-- [QuoteTypes](/entities/Sales/QuoteType.md) — `FormReportConfigurationId` (FK)
+- [CustomerOrderInvoices](../Sales/CustomerOrderInvoice.md) — `FormReportConfigurationId` (FK)
+- [QuoteTypes](../Sales/QuoteType.md) — `FormReportConfigurationId` (FK)
 
 
 ## Example

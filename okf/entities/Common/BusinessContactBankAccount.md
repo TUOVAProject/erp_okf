@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a business contact bank account.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `BusinessContactBankAccount`
 - **Endpoint:** `GET /api/v1/Common/BusinessContactBankAccounts`
 - **GUID:** `2E25739E-28B0-4E9A-B1E0-E5F71BB65783`
@@ -47,17 +47,17 @@ Represents a business contact bank account.
 | `Id` | `Int64` | no |  |  | The business key identifier of the business contact bank account. |
 | `ClearingNumber` | `String` | no |  |  | The clearing number of the business contact bank account. |
 | `ClearingSystem` | `String` | no |  |  | The clearing system of the business contact bank account. |
-| `CountryId` | `Int64` | no | [Countries](/entities/Common/Country.md) |  | The business key identifier of the business contact bank account country. |
-| `Country` | `Countries` | no | [Countries](/entities/Common/Country.md) | expandable | The country of the business contact bank account. |
-| `CentralBankCodeId` | `Int64?` | yes | [CentralBankCodes](/entities/Common/CentralBankCode.md) |  | The business key identifier of the business contact bank account central bank code. |
-| `CentralBankCode` | `CentralBankCodes` | no | [CentralBankCodes](/entities/Common/CentralBankCode.md) | expandable | The central bank code of the business contact bank account. |
-| `CurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the business contact bank account currency. |
-| `Currency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The currency of the business contact bank account. |
+| `CountryId` | `Int64` | no | [Countries](Country.md) |  | The business key identifier of the business contact bank account country. |
+| `Country` | `Countries` | no | [Countries](Country.md) | expandable | The country of the business contact bank account. |
+| `CentralBankCodeId` | `Int64?` | yes | [CentralBankCodes](CentralBankCode.md) |  | The business key identifier of the business contact bank account central bank code. |
+| `CentralBankCode` | `CentralBankCodes` | no | [CentralBankCodes](CentralBankCode.md) | expandable | The central bank code of the business contact bank account. |
+| `CurrencyId` | `Int64` | no | [Currencies](Currency.md) |  | The business key identifier of the business contact bank account currency. |
+| `Currency` | `Currencies` | no | [Currencies](Currency.md) | expandable | The currency of the business contact bank account. |
 | `Type` | `Int32` | no |  | enum | The type of the business contact bank account. |
 | `Number` | `String` | no |  | max length 50 | The human readable identifier number of the business contact bank account. |
 | `BankIdentifierCode` | `String` | no |  | max length 30 | The human readable identifier bank identifier code of the business contact bank account. |
-| `BankAddressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) |  | The business key identifier of the business contact bank account bank address. |
-| `BankAddress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable | The bank address of the business contact bank account. |
+| `BankAddressId` | `Int64?` | yes | [Addresses](Address.md) |  | The business key identifier of the business contact bank account bank address. |
+| `BankAddress` | `Addresses` | no | [Addresses](Address.md) | expandable | The bank address of the business contact bank account. |
 
 ## Enumerations
 
@@ -75,13 +75,13 @@ Represents a business contact bank account.
 
 **Accounting**
 
-- [OutgoingPayments](/entities/Accounting/OutgoingPayment.md) — `ReceivingBankAccountId` (FK)
+- [OutgoingPayments](../Accounting/OutgoingPayment.md) — `ReceivingBankAccountId` (FK)
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `AllBusinessContactBankAccountOfSupplier` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `DefaultBusinessContactBankAccount` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `DefaultBusinessContactBankAccountId` (FK)
+- [Suppliers](../Purchase/Supplier.md) — `AllBusinessContactBankAccountOfSupplier` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `DefaultBusinessContactBankAccount` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `DefaultBusinessContactBankAccountId` (FK)
 
 
 ## Example

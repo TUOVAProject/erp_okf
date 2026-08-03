@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a drawing for manufacturing order node.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ManufacturingOrderNodeDrawing`
 - **Endpoint:** `GET /api/v1/Manufacturing/ManufacturingOrderNodeDrawings`
 - **Required permission:** Show manufacturing orders
@@ -46,16 +46,16 @@ Represents a drawing for manufacturing order node.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the drawing. |
 | `DrawingNumber` | `String` | no |  |  | The human readable number of the drawing. |
-| `ManufacturingOrderNodeId` | `Int64` | no | [ManufacturingOrderNodes](/entities/Manufacturing/ManufacturingOrderNode.md) |  | The business key identifier of the manufacturing order node that the drawing belongs to. |
-| `Revisions` | `ManufacturingOrderNodeDrawingRevisions[]` | no | [ManufacturingOrderNodeDrawingRevisions](/entities/Manufacturing/ManufacturingOrderNodeDrawingRevision.md) | expandable, collection | A collection of revisions that belong the the drawing. |
-| `ActiveDrawingRevisionId` | `Int64?` | yes | [ManufacturingOrderNodeDrawingRevisions](/entities/Manufacturing/ManufacturingOrderNodeDrawingRevision.md) |  | The business key identifier of the active drawing revision. |
+| `ManufacturingOrderNodeId` | `Int64` | no | [ManufacturingOrderNodes](ManufacturingOrderNode.md) |  | The business key identifier of the manufacturing order node that the drawing belongs to. |
+| `Revisions` | `ManufacturingOrderNodeDrawingRevisions[]` | no | [ManufacturingOrderNodeDrawingRevisions](ManufacturingOrderNodeDrawingRevision.md) | expandable, collection | A collection of revisions that belong the the drawing. |
+| `ActiveDrawingRevisionId` | `Int64?` | yes | [ManufacturingOrderNodeDrawingRevisions](ManufacturingOrderNodeDrawingRevision.md) |  | The business key identifier of the active drawing revision. |
 
 ## Referenced by
 
 **Manufacturing**
 
-- [ManufacturingOrderNodeDrawingRevisions](/entities/Manufacturing/ManufacturingOrderNodeDrawingRevision.md) — `ParentId` (FK)
-- [ManufacturingOrderNodes](/entities/Manufacturing/ManufacturingOrderNode.md) — `Drawings` (expand)
+- [ManufacturingOrderNodeDrawingRevisions](ManufacturingOrderNodeDrawingRevision.md) — `ParentId` (FK)
+- [ManufacturingOrderNodes](ManufacturingOrderNode.md) — `Drawings` (expand)
 
 
 ## Example

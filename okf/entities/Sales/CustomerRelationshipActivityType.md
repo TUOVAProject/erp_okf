@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a customer relationship activity type.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerRelationshipActivityType`
 - **Endpoint:** `GET /api/v1/Sales/CustomerRelationshipActivityTypes`
 - **Required permission:** Show customer
@@ -72,11 +72,11 @@ Represents a customer relationship activity type.
 
 **Sales**
 
-- [BusinessOpportunityActivityTemplateRows](/entities/Sales/BusinessOpportunityActivityTemplateRow.md) — `ActivityTypeId` (FK)
-- [CustomerOrderActivities](/entities/Sales/CustomerOrderActivity.md) — `ActivityTypeId` (FK)
-- [CustomerRelationshipManagementActivities](/entities/Sales/CustomerRelationshipManagementActivity.md) — `ActivityType` (expand)
-- [CustomerRelationshipManagementActivities](/entities/Sales/CustomerRelationshipManagementActivity.md) — `ActivityTypeId` (FK)
-- [QuoteActivities](/entities/Sales/QuoteActivity.md) — `ActivityTypeId` (FK)
+- [BusinessOpportunityActivityTemplateRows](BusinessOpportunityActivityTemplateRow.md) — `ActivityTypeId` (FK)
+- [CustomerOrderActivities](CustomerOrderActivity.md) — `ActivityTypeId` (FK)
+- [CustomerRelationshipManagementActivities](CustomerRelationshipManagementActivity.md) — `ActivityType` (expand)
+- [CustomerRelationshipManagementActivities](CustomerRelationshipManagementActivity.md) — `ActivityTypeId` (FK)
+- [QuoteActivities](QuoteActivity.md) — `ActivityTypeId` (FK)
 
 
 ## Example

@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a blanket order type for purchase.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `BlanketOrderPurchaseType`
 - **Endpoint:** `GET /api/v1/Purchase/BlanketOrderPurchaseTypes`
 - **Required permission:** Show blanket order
@@ -52,7 +52,7 @@ Represents a blanket order type for purchase.
 | `BaseType` | `Int32` | no |  | enum | The base type of the blanket order type. |
 | `BlanketOrderPurchaseActivityTemplateId` | `Int64?` | yes |  |  | The business key identifier of the blanket order types activity template. |
 | `RateTypeSetting` | `Int32` | no |  | enum | The rate typ setting of the blanket order type. |
-| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) |  | The business key identifier of the blanket order type's currency exchange type. |
+| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) |  | The business key identifier of the blanket order type's currency exchange type. |
 | `DefaultValidDays` | `Int32` | no |  |  | The default valid days of the blanket order type. |
 
 ## Enumerations
@@ -75,7 +75,7 @@ Represents a blanket order type for purchase.
 
 **Purchase**
 
-- [BlanketOrderPurchases](/entities/Purchase/BlanketOrderPurchase.md) — `OrderTypeId` (FK)
+- [BlanketOrderPurchases](BlanketOrderPurchase.md) — `OrderTypeId` (FK)
 
 
 ## Example

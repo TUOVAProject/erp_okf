@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a measuring plan for an operation row.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `OperationRowControlDataRow`
 - **Endpoint:** `GET /api/v1/Manufacturing/OperationRowControlDataRows`
 - **Required permission:** Show manufacturing orders
@@ -46,19 +46,19 @@ Represents a measuring plan for an operation row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the entity. |
-| `OperationRowId` | `Int64` | no | [OperationRows](/entities/Manufacturing/OperationRow.md) |  | The business key identifier of the operation row that the row relates to. |
-| `MeasuringTemplateId` | `Int64` | no | [MeasuringTemplates](/entities/Common/MeasuringTemplate.md) |  | The business key identifier of the measuring template that the row relates to. |
-| `OverriddenFormTemplateId` | `Int64?` | yes | [FormTemplates](/entities/Common/FormTemplate.md) |  | The business key identifier of the form template specified for this row. |
+| `OperationRowId` | `Int64` | no | [OperationRows](OperationRow.md) |  | The business key identifier of the operation row that the row relates to. |
+| `MeasuringTemplateId` | `Int64` | no | [MeasuringTemplates](../Common/MeasuringTemplate.md) |  | The business key identifier of the measuring template that the row relates to. |
+| `OverriddenFormTemplateId` | `Int64?` | yes | [FormTemplates](../Common/FormTemplate.md) |  | The business key identifier of the form template specified for this row. |
 | `OverriddenFrequencyText` | `String` | no |  | max length 80 | The frequency text specified for this row. |
 | `OverriddenIntervalAmount` | `Int32?` | yes |  |  | The quantity value specified for this row. |
 | `OverriddenInterval` | `Int32?` | yes |  |  | The interval value specified for this row. |
-| `WorkCenterId` | `Int64?` | yes | [WorkCenters](/entities/Manufacturing/WorkCenter.md) |  | The business key identifier of the work center that the row relates to. |
+| `WorkCenterId` | `Int64?` | yes | [WorkCenters](WorkCenter.md) |  | The business key identifier of the work center that the row relates to. |
 
 ## Referenced by
 
 **Manufacturing**
 
-- [OperationRows](/entities/Manufacturing/OperationRow.md) — `ControlDataRows` (expand)
+- [OperationRows](OperationRow.md) — `ControlDataRows` (expand)
 
 
 ## Example

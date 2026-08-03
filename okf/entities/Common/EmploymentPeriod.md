@@ -32,7 +32,7 @@ referenced_by:
 
 Represents the employment period of a personnel record.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `EmploymentPeriod`
 - **Endpoint:** `GET /api/v1/Common/EmploymentPeriods`
 - **Required permission:** Show person
@@ -46,16 +46,16 @@ Represents the employment period of a personnel record.
 | `Id` | `Int64` | no |  |  | The business key identifier of the employment period. |
 | `StartDate` | `DateTimeOffset` | no |  |  | The start date of the employment period. |
 | `FinishDate` | `DateTimeOffset?` | yes |  |  | The finish date of the employment period. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the comment that belongs to the employment period. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment that belongs to the employment period. |
-| `PersonId` | `Int64` | no | [Persons](/entities/Common/Person.md) |  | The business key identifier of the personnel record that the employment period belongs to. |
+| `CommentId` | `Int64?` | yes | [Comments](Comment.md) |  | The business key identifier of the comment that belongs to the employment period. |
+| `Comment` | `Comments` | no | [Comments](Comment.md) | expandable | The comment that belongs to the employment period. |
+| `PersonId` | `Int64` | no | [Persons](Person.md) |  | The business key identifier of the personnel record that the employment period belongs to. |
 | `RowIndex` | `Int32` | no |  |  | The ordered row index of the employment period. |
 
 ## Referenced by
 
 **Common**
 
-- [Persons](/entities/Common/Person.md) — `EmploymentPeriods` (expand)
+- [Persons](Person.md) — `EmploymentPeriods` (expand)
 
 
 ## Example

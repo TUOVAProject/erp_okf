@@ -27,7 +27,7 @@ property_count: 3
 
 Represents a schedule used for time recording.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `Schedule_Obsolete`
 - **Endpoint:** `GET /api/v1/TimeRecording/Shedules`
 - **Required permission:** Show basic data for attendance

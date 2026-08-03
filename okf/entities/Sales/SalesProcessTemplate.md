@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a sales process template.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `SalesProcessTemplate`
 - **Endpoint:** `GET /api/v1/Sales/SalesProcessTemplates`
 - **Required permission:** Show business opportunity
@@ -48,17 +48,17 @@ Represents a sales process template.
 | `Code` | `String` | no |  | unique, max length 5 | The human readable identifier of the sales process template. |
 | `IsActive` | `Boolean` | no |  |  | Specifies if the sales process template is active. |
 | `Description` | `String` | no |  | max length 400 | The translated description of the sales process template. |
-| `Rows` | `SalesProcessTemplateRows[]` | no | [SalesProcessTemplateRows](/entities/Sales/SalesProcessTemplateRow.md) | expandable, collection | The rows of the sales process template. |
+| `Rows` | `SalesProcessTemplateRows[]` | no | [SalesProcessTemplateRows](SalesProcessTemplateRow.md) | expandable, collection | The rows of the sales process template. |
 
 ## Referenced by
 
 **Sales**
 
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `SalesProcessTemplate` (expand)
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `SalesProcessTemplateId` (FK)
-- [BusinessOpportunityTypes](/entities/Sales/BusinessOpportunityType.md) — `SalesProcessTemplate` (expand)
-- [BusinessOpportunityTypes](/entities/Sales/BusinessOpportunityType.md) — `SalesProcessTemplateId` (FK)
-- [SalesProcessTemplateRows](/entities/Sales/SalesProcessTemplateRow.md) — `ParentId` (FK)
+- [BusinessOpportunities](BusinessOpportunity.md) — `SalesProcessTemplate` (expand)
+- [BusinessOpportunities](BusinessOpportunity.md) — `SalesProcessTemplateId` (FK)
+- [BusinessOpportunityTypes](BusinessOpportunityType.md) — `SalesProcessTemplate` (expand)
+- [BusinessOpportunityTypes](BusinessOpportunityType.md) — `SalesProcessTemplateId` (FK)
+- [SalesProcessTemplateRows](SalesProcessTemplateRow.md) — `ParentId` (FK)
 
 
 ## Example

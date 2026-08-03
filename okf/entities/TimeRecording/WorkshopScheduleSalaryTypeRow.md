@@ -31,7 +31,7 @@ referenced_by:
 
 Represent a workshop schedule salary type row.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `WorkshopScheduleSalaryTypeRow`
 - **Endpoint:** `GET /api/v1/TimeRecording/WorkshopScheduleSalaryTypeRows`
 - **Required permission:** Show basic data for attendance
@@ -43,7 +43,7 @@ Represent a workshop schedule salary type row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the row |
-| `ScheduleId` | `Int64` | no | [Schedules](/entities/TimeRecording/Schedule.md) |  | The business key identifier of schedule |
+| `ScheduleId` | `Int64` | no | [Schedules](Schedule.md) |  | The business key identifier of schedule |
 | `Start` | `Int64?` | yes |  |  | Information about the start of the salary type row |
 | `End` | `Int64?` | yes |  |  | Information about the end of the salary type row |
 | `RowNumber` | `Int32?` | yes |  |  | The row number of the workshop salary type row. |
@@ -52,7 +52,7 @@ Represent a workshop schedule salary type row.
 
 **TimeRecording**
 
-- [WorkshopScheduleSalaryTypes](/entities/TimeRecording/WorkshopScheduleSalaryType.md) — `WorkshopScheduleSalaryTypeRowId` (FK)
+- [WorkshopScheduleSalaryTypes](WorkshopScheduleSalaryType.md) — `WorkshopScheduleSalaryTypeRowId` (FK)
 
 
 ## Example

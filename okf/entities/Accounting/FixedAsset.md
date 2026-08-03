@@ -38,7 +38,7 @@ referenced_by:
 
 Represents a fixed assets object.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `FixedAsset`
 - **Endpoint:** `GET /api/v1/Accounting/FixedAssets`
 - **Required permission:** Show fixed assets objects
@@ -52,17 +52,17 @@ Represents a fixed assets object.
 | `Id` | `Int64` | no |  |  | The business key identifier of the fixed assets object. |
 | `Code` | `String` | no |  | unique, max length 16 | The human readable identifier of the fixed assets object. |
 | `Description` | `String` | no |  | max length 400 | The translated description of the fixed assets object. |
-| `GroupId` | `Int64` | no | [FixedAssetGroups](/entities/Accounting/FixedAssetGroup.md) |  | The business key identifier of fixed assets group that the fixed assets object belongs to. |
-| `Group` | `FixedAssetGroups` | no | [FixedAssetGroups](/entities/Accounting/FixedAssetGroup.md) | expandable | The fixed assets group that the fixed assets object belongs to. |
+| `GroupId` | `Int64` | no | [FixedAssetGroups](FixedAssetGroup.md) |  | The business key identifier of fixed assets group that the fixed assets object belongs to. |
+| `Group` | `FixedAssetGroups` | no | [FixedAssetGroups](FixedAssetGroup.md) | expandable | The fixed assets group that the fixed assets object belongs to. |
 | `AcquisitionDate` | `DateTimeOffset` | no |  |  | The acquisition date of the fixed assets object. |
 | `AcquisitionValue` | `Decimal` | no |  |  | The acquisition value in company currency of the fixed assets object. |
 | `Quantity` | `Decimal` | no |  |  | The quantity of the fixed assets object. |
-| `AccountsPayableId` | `Int64?` | yes | [AccountsPayables](/entities/Accounting/AccountsPayable.md) |  | The business key identifier of the accounts payable connected to the fixed assets object. |
-| `VoucherId` | `Int64?` | yes | [Vouchers](/entities/Accounting/Voucher.md) |  | The business key identifier of the voucher connected to the fixed assets object. |
-| `SupplierId` | `Int64?` | yes | [Suppliers](/entities/Purchase/Supplier.md) |  | The business key identifier of the supplier connected to the fixed assets object. |
+| `AccountsPayableId` | `Int64?` | yes | [AccountsPayables](AccountsPayable.md) |  | The business key identifier of the accounts payable connected to the fixed assets object. |
+| `VoucherId` | `Int64?` | yes | [Vouchers](Voucher.md) |  | The business key identifier of the voucher connected to the fixed assets object. |
+| `SupplierId` | `Int64?` | yes | [Suppliers](../Purchase/Supplier.md) |  | The business key identifier of the supplier connected to the fixed assets object. |
 | `CategoryString` | `String` | no |  | max length 20 | The category string of the fixed assets object. |
-| `WorkCenterId` | `Int64?` | yes | [WorkCenters](/entities/Manufacturing/WorkCenter.md) |  | The business key identifier of the work center of the fixed assets object. |
-| `DepartmentId` | `Int64?` | yes | [Departments](/entities/Common/Department.md) |  | The business key identifier of the department of the fixed assets object. |
+| `WorkCenterId` | `Int64?` | yes | [WorkCenters](../Manufacturing/WorkCenter.md) |  | The business key identifier of the work center of the fixed assets object. |
+| `DepartmentId` | `Int64?` | yes | [Departments](../Common/Department.md) |  | The business key identifier of the department of the fixed assets object. |
 | `SerialNumber` | `String` | no |  | max length 26 | The serial number of the fixed assets object. |
 | `Location` | `String` | no |  | max length 255 | The location of the fixed assets object. |
 | `PlannedDepreciationStartDate` | `DateTimeOffset` | no |  |  | The start date for the scheduled depreciation of the fixed assets object. |
@@ -71,17 +71,17 @@ Represents a fixed assets object.
 | `CalculatedDepreciationStartDate` | `DateTimeOffset` | no |  |  | The start date for the calculated depreciation of the fixed assets object. |
 | `CalculatedDepreciationPercentage` | `Decimal` | no |  |  | The depreciation percentage for the calculated depreciation of the fixed assets object. |
 | `MinimumValue` | `Decimal` | no |  |  | The minimal value to depreciate the fixed assets object to. |
-| `Sales` | `FixedAssetSales[]` | no | [FixedAssetSales](/entities/Accounting/FixedAssetSale.md) | expandable, collection, since 23.8 | The registered sales/retirements of the fixed assets object. |
+| `Sales` | `FixedAssetSales[]` | no | [FixedAssetSales](FixedAssetSale.md) | expandable, collection, since 23.8 | The registered sales/retirements of the fixed assets object. |
 
 ## Referenced by
 
 **Accounting**
 
-- [FixedAssetDepreciations](/entities/Accounting/FixedAssetDepreciation.md) — `ParentId` (FK)
+- [FixedAssetDepreciations](FixedAssetDepreciation.md) — `ParentId` (FK)
 
 **Sales**
 
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `FixedAssetId` (FK)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `FixedAssetId` (FK)
 
 
 ## Example

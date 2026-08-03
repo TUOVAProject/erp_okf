@@ -38,7 +38,7 @@ referenced_by:
 
 Represents a sales picking list.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `SalesPickingList`
 - **Endpoint:** `GET /api/v1/Sales/SalesPickingLists`
 - **Required permission:** Show customer orders
@@ -51,13 +51,13 @@ Represents a sales picking list.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the picking list. |
 | `Number` | `Int64` | no |  |  | The human readable identifier of the picking list. |
-| `PrintedByApplicationUserId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that printed the picking list. |
-| `PrintedByPersonId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the person that printed the picking list. |
+| `PrintedByApplicationUserId` | `Int64?` | yes | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the application user that printed the picking list. |
+| `PrintedByPersonId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the person that printed the picking list. |
 | `PrintedTimestamp` | `DateTimeOffset?` | yes |  |  | The date the picking list was printed. |
 | `State` | `Int32` | no |  | enum | The state for the picking list. |
 | `Status` | `Int32` | no |  | enum | The state for the picking list. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse for the picking list. |
-| `CustomerOrderInvoices` | `CustomerOrderInvoices[]` | no | [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) | expandable, collection | The customer order invoices of the picking list. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse for the picking list. |
+| `CustomerOrderInvoices` | `CustomerOrderInvoices[]` | no | [CustomerOrderInvoices](CustomerOrderInvoice.md) | expandable, collection | The customer order invoices of the picking list. |
 | `LifeCycleState` | `Int32` | no |  | enum | The life cycle state of the picking list. |
 
 ## Enumerations
@@ -97,11 +97,11 @@ Represents a sales picking list.
 
 **Sales**
 
-- [GetWithdrawalInformation](/entities/Sales/GetWithdrawalInformation.md) — `PickingListId` (FK)
-- [PackageRows](/entities/Sales/PackageRow.md) — `ParentId` (FK)
-- [RemoveSalesPickingList](/entities/Sales/RemoveSalesPickingList.md) — `PickingListId` (FK)
-- [ShipmentInformationSources](/entities/Sales/ShipmentInformationSource.md) — `PickingListId` (FK)
-- [WithdrawalInformationRow](/entities/Sales/WithdrawalInformationRow.md) — `PickingListId` (FK)
+- [GetWithdrawalInformation](GetWithdrawalInformation.md) — `PickingListId` (FK)
+- [PackageRows](PackageRow.md) — `ParentId` (FK)
+- [RemoveSalesPickingList](RemoveSalesPickingList.md) — `PickingListId` (FK)
+- [ShipmentInformationSources](ShipmentInformationSource.md) — `PickingListId` (FK)
+- [WithdrawalInformationRow](WithdrawalInformationRow.md) — `PickingListId` (FK)
 
 
 ## Example

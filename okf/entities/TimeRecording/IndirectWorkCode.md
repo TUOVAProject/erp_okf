@@ -33,7 +33,7 @@ referenced_by:
 
 Represents indirect work used for work recording.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `IndirectWorkCode`
 - **Endpoint:** `GET /api/v1/TimeRecording/IndirectWorkCodes`
 - **Required permission:** Show basic data for attendance
@@ -48,7 +48,7 @@ Represents indirect work used for work recording.
 | `Code` | `String` | no |  |  | The human readable identifier of the indirect work. |
 | `Description` | `String` | no |  |  | The translated description of the indirect work. |
 | `CommentInputType` | `Int32` | no |  | enum | Describes if a comment may or must be supplied when recording. |
-| `AffectsOrder` | `Int32` | no | [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) | enum | Describes how this indirect work is reported when linked to a ManufacturingOrderOperations in recording. |
+| `AffectsOrder` | `Int32` | no | [ManufacturingOrderOperations](../Manufacturing/ManufacturingOrderOperation.md) | enum | Describes how this indirect work is reported when linked to a ManufacturingOrderOperations in recording. |
 | `ColorCode` | `Int32?` | yes |  |  | Color code encoded as an ARGB. |
 | `Active` | `Boolean` | no |  | since 26.6 | Indicates whether the indirect work code is active and may be used to start new indirect work. |
 
@@ -75,10 +75,10 @@ Represents indirect work used for work recording.
 
 **TimeRecording**
 
-- [AttendanceGroupSettings](/entities/TimeRecording/AttendanceGroupSettings.md) — `IndirectWorkCodeId` (FK)
-- [StandbyWorks](/entities/TimeRecording/StandbyWork.md) — `IndirectWorkCode` (expand)
-- [StandbyWorks](/entities/TimeRecording/StandbyWork.md) — `IndirectWorkCodeId` (FK)
-- [WorkIntervals](/entities/TimeRecording/WorkInterval.md) — `IndirectWorkCodeId` (FK)
+- [AttendanceGroupSettings](AttendanceGroupSettings.md) — `IndirectWorkCodeId` (FK)
+- [StandbyWorks](StandbyWork.md) — `IndirectWorkCode` (expand)
+- [StandbyWorks](StandbyWork.md) — `IndirectWorkCodeId` (FK)
+- [WorkIntervals](WorkInterval.md) — `IndirectWorkCodeId` (FK)
 
 
 ## Example

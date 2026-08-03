@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a queryable custom report definition.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `CustomReportDefinition`
 - **Endpoint:** `GET /api/v1/Common/CustomReportDefinitions`
 - **GUID:** `888AEAB7-14E1-4A07-A3A1-CEFF67559DC1`
@@ -43,13 +43,13 @@ Represents a queryable custom report definition.
 | `Id` | `Int64` | no |  |  | The business key identifier of the custom report. |
 | `ReportNumber` | `String` | no |  | unique, max length 10 | The report number of the custom report. |
 | `Description` | `String` | no |  |  | The translated description of the custom report. |
-| `DisplayDefinitions` | `CustomReportDisplayDefinitions[]` | no | [CustomReportDisplayDefinitions](/entities/Common/CustomReportDisplayDefinition.md) | expandable, collection | A collection of display definitions belonging to the custom report definition. |
+| `DisplayDefinitions` | `CustomReportDisplayDefinitions[]` | no | [CustomReportDisplayDefinitions](CustomReportDisplayDefinition.md) | expandable, collection | A collection of display definitions belonging to the custom report definition. |
 
 ## Referenced by
 
 **Common**
 
-- [CustomReportDisplayDefinitions](/entities/Common/CustomReportDisplayDefinition.md) — `ParentId` (FK)
+- [CustomReportDisplayDefinitions](CustomReportDisplayDefinition.md) — `ParentId` (FK)
 
 
 ## Example

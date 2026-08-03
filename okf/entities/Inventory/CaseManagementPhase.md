@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a case management phase.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `CaseManagementPhase`
 - **Endpoint:** `GET /api/v1/Inventory/CaseManagementPhases`
 - **Required permission:** Show case
@@ -49,8 +49,8 @@ Represents a case management phase.
 
 **Inventory**
 
-- [CaseEntryPhases](/entities/Inventory/CaseEntryPhase.md) — `CaseManagementPhase` (expand)
-- [CaseManagementTemplateNodes](/entities/Inventory/CaseManagementTemplateNode.md) — `PhaseId` (FK)
+- [CaseEntryPhases](CaseEntryPhase.md) — `CaseManagementPhase` (expand)
+- [CaseManagementTemplateNodes](CaseManagementTemplateNode.md) — `PhaseId` (FK)
 
 
 ## Example

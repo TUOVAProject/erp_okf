@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a customer type.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerType`
 - **Endpoint:** `GET /api/v1/Sales/CustomerTypes`
 - **Required permission:** Show customer
@@ -49,8 +49,8 @@ Represents a customer type.
 
 **Sales**
 
-- [Customers](/entities/Sales/Customer.md) — `Type` (expand)
-- [Customers](/entities/Sales/Customer.md) — `TypeId` (FK)
+- [Customers](Customer.md) — `Type` (expand)
+- [Customers](Customer.md) — `TypeId` (FK)
 
 
 ## Example

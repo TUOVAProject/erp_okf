@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a seller group.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `SellerGroup`
 - **Endpoint:** `GET /api/v1/Sales/SellerGroups`
 - **Required permission:** Show business opportunity
@@ -50,9 +50,9 @@ Represents a seller group.
 
 **Sales**
 
-- [BusinessOpportunitySalesProcessSteps](/entities/Sales/BusinessOpportunitySalesProcessStep.md) — `ResponsibleSellerGroupId` (FK)
-- [SalesProcessTemplateRows](/entities/Sales/SalesProcessTemplateRow.md) — `ResponsibleSellerGroup` (expand)
-- [SalesProcessTemplateRows](/entities/Sales/SalesProcessTemplateRow.md) — `ResponsibleSellerGroupId` (FK)
+- [BusinessOpportunitySalesProcessSteps](BusinessOpportunitySalesProcessStep.md) — `ResponsibleSellerGroupId` (FK)
+- [SalesProcessTemplateRows](SalesProcessTemplateRow.md) — `ResponsibleSellerGroup` (expand)
+- [SalesProcessTemplateRows](SalesProcessTemplateRow.md) — `ResponsibleSellerGroupId` (FK)
 
 
 ## Example

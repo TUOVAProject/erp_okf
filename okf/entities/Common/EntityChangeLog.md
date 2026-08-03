@@ -29,7 +29,7 @@ references_out:
 
 Represents a queryable entity changelog entry.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `EntityChangeLog`
 - **Endpoint:** `GET /api/v1/Common/EntityChangeLogs`
 - **Required permission:** Show changelog
@@ -49,7 +49,7 @@ Represents a queryable entity changelog entry.
 | `AssociatedTypeId` | `Guid?` | yes |  |  | The GUID of the changed entity's parent type. |
 | `AssociatedEntityId` | `Int64?` | yes |  |  | The business key identifier of the changed entity's parent. |
 | `EntityCode` | `String` | no |  | max length 255 | The human readable identifier of the changed entity. |
-| `Changes` | `EntityPropertyChanges[]` | no | [EntityPropertyChanges](/entities/Common/EntityPropertyChange.md) | collection | The property changes for this entity. |
+| `Changes` | `EntityPropertyChanges[]` | no | [EntityPropertyChanges](EntityPropertyChange.md) | collection | The property changes for this entity. |
 | `Remark` | `String` | no |  | max length 100 | Holds extra information about the change. |
 
 ## Enumerations

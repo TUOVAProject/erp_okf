@@ -29,7 +29,7 @@ references_out:
 
 Represents an addtional ids record.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `AdditionalIdsRecord`
 - **Endpoint:** `GET /api/v1/Inventory/AdditionalIDsRecords`
 - **Required permission:** Show serial number
@@ -41,7 +41,7 @@ Represents an addtional ids record.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the additional ids. |
-| `ProductRecordId` | `Int64` | no | [ProductRecords](/entities/Inventory/ProductRecord.md) |  | The business key identifier of the product record that the addtional ids belong to. |
+| `ProductRecordId` | `Int64` | no | [ProductRecords](ProductRecord.md) |  | The business key identifier of the product record that the addtional ids belong to. |
 | `Code` | `String` | no |  |  | Code value of the additional ids. |
 | `Code2` | `String` | no |  |  | Code2 value of the additional ids. |
 | `Code3` | `String` | no |  |  | Code3 value of the additional ids. |

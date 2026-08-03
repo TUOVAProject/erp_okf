@@ -47,7 +47,7 @@ referenced_by:
 
 Represents a manufacturing order operation.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ManufacturingOrderOperation`
 - **Endpoint:** `GET /api/v1/Manufacturing/ManufacturingOrderOperations`
 - **Required permission:** Show manufacturing orders
@@ -60,9 +60,9 @@ Represents a manufacturing order operation.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the manufacturing order operation. |
 | `Priority` | `Int32?` | yes |  |  | The priority of the manufacturing order operation. Can be null. |
-| `WorkCenterId` | `Int64` | no | [WorkCenters](/entities/Manufacturing/WorkCenter.md) |  | The business key identifier of the manufacturing order operation's work center. |
-| `PartId` | `Int64` | no | [Part](/entities/Inventory/Part.md) |  | The business key identifier of the manufacturing order operation's part. |
-| `Part` | `Parts` | no | [Parts](/entities/Inventory/Part.md) | expandable | The manufacturing order operation's part. |
+| `WorkCenterId` | `Int64` | no | [WorkCenters](WorkCenter.md) |  | The business key identifier of the manufacturing order operation's work center. |
+| `PartId` | `Int64` | no | [Part](../Inventory/Part.md) |  | The business key identifier of the manufacturing order operation's part. |
+| `Part` | `Parts` | no | [Parts](../Inventory/Part.md) | expandable | The manufacturing order operation's part. |
 | `PlannedQuantity` | `Decimal` | no |  |  | The planned quantity of the manufacturing order operation. |
 | `ReportedQuantity` | `Decimal` | no |  |  | The reported quantity of the manufacturing order operation. |
 | `RestQuantity` | `Decimal` | no |  |  | The remaining quantity of the manufacturing order operation. |
@@ -71,10 +71,10 @@ Represents a manufacturing order operation.
 | `RejectedQuantity` | `Decimal` | no |  |  | The rejected quantity of the manufacturing order operation. |
 | `WipLocation` | `String` | no |  |  | The work-in-progress location of the manufacturing order operation. |
 | `ReportNumber` | `Int64` | no |  |  | The report number of the manufacturing order operation. |
-| `InstructionCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the manufacturing order operation's instruction comment. |
-| `InstructionComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The manufacturing order operation's instruction comment. |
-| `ManufacturingOrderId` | `Int64` | no | [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) |  | The business key identifier of the manufacturing order that the manufacturing order operation belongs to. |
-| `ManufacturingOrderNodeId` | `Int64` | no | [ManufacturingOrderNodes](/entities/Manufacturing/ManufacturingOrderNode.md) | since 2.30 | The business key identifier of the manufacturing order node that the manufacturing order operation belongs to. |
+| `InstructionCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the manufacturing order operation's instruction comment. |
+| `InstructionComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The manufacturing order operation's instruction comment. |
+| `ManufacturingOrderId` | `Int64` | no | [ManufacturingOrders](ManufacturingOrder.md) |  | The business key identifier of the manufacturing order that the manufacturing order operation belongs to. |
+| `ManufacturingOrderNodeId` | `Int64` | no | [ManufacturingOrderNodes](ManufacturingOrderNode.md) | since 2.30 | The business key identifier of the manufacturing order node that the manufacturing order operation belongs to. |
 | `OperationNumber` | `Int32` | no |  |  | The operation number of the manufacturing order operation. |
 | `PlannedSetupTime` | `TimeSpan` | no |  |  | The planned setup time of the manufacturing order operation. |
 | `PlannedUnitTime` | `TimeSpan` | no |  |  | The planned unit time of the manufacturing order operation. |
@@ -82,20 +82,20 @@ Represents a manufacturing order operation.
 | `PlannedFinishDate` | `DateTimeOffset` | no |  | since 2.27 | The planned finish date of the manufacturing order operation. |
 | `ActualStartDate` | `DateTimeOffset?` | yes |  | since 2.27 | The actual (reported) start date of the manufacturing order operation. |
 | `ActualFinishDate` | `DateTimeOffset?` | yes |  | since 2.27 | The actual (reported) finish date of the manufacturing order operation. |
-| `OperationRowId` | `Int64?` | yes | [OperationRows](/entities/Manufacturing/OperationRow.md) | since 2.41 | The business key identifier of the operation row that the manufacturing order operation is based on. Can be null if the manufacturing order operation is added manually. |
-| `OperationRow` | `OperationRows` | no | [OperationRows](/entities/Manufacturing/OperationRow.md) | expandable, since 2.41 | The operation row that the manufacturing order operation is based on. |
+| `OperationRowId` | `Int64?` | yes | [OperationRows](OperationRow.md) | since 2.41 | The business key identifier of the operation row that the manufacturing order operation is based on. Can be null if the manufacturing order operation is added manually. |
+| `OperationRow` | `OperationRows` | no | [OperationRows](OperationRow.md) | expandable, since 2.41 | The operation row that the manufacturing order operation is based on. |
 | `Status` | `Int32` | no |  | enum, since 2.50 | The status of the manufacturing order operation's status. |
 | `WorkshopOperationStatus` | `Int32` | no |  | enum, since 2.50 | The workshop status of the manufacturing order operation's status. |
 | `BundleId` | `Int64?` | yes |  | since 2.52 | An generated id that is common for a collection of operations. |
 | `Description` | `String` | no |  | since 2.54 | The translated description of the manufacturing order operation. |
-| `ControlDataRows` | `ManufacturingOrderOperationControlDataRows[]` | no | [ManufacturingOrderOperationControlDataRows](/entities/Manufacturing/ManufacturingOrderOperationControlDataRow.md) | expandable, collection, since 22.5 | The control data rows. |
-| `OrderQuantityId` | `Int64?` | yes | [OrderQuantityManufacturingOrderOperations](/entities/Manufacturing/OrderQuantityManufacturingOrderOperation.md) | since 22.6 | The business key identifier of order quantity. |
-| `OrderQuantity` | `OrderQuantityManufacturingOrderOperations` | no | [OrderQuantityManufacturingOrderOperations](/entities/Manufacturing/OrderQuantityManufacturingOrderOperation.md) | expandable, since 22.6 | Order quantity that holds the partial quantities. |
+| `ControlDataRows` | `ManufacturingOrderOperationControlDataRows[]` | no | [ManufacturingOrderOperationControlDataRows](ManufacturingOrderOperationControlDataRow.md) | expandable, collection, since 22.5 | The control data rows. |
+| `OrderQuantityId` | `Int64?` | yes | [OrderQuantityManufacturingOrderOperations](OrderQuantityManufacturingOrderOperation.md) | since 22.6 | The business key identifier of order quantity. |
+| `OrderQuantity` | `OrderQuantityManufacturingOrderOperations` | no | [OrderQuantityManufacturingOrderOperations](OrderQuantityManufacturingOrderOperation.md) | expandable, since 22.6 | Order quantity that holds the partial quantities. |
 | `ClearedStatus` | `Boolean` | no |  | since 23.3 | Specifies if the status is cleared. |
 | `OnPriorityPlan` | `Boolean` | no |  | since 25.2 | Indicates if the operation is shown in priority plan. |
-| `ManualOperationStatusId` | `Int64?` | yes | [ManualOperationStatuses](/entities/Manufacturing/ManualOperationStatus.md) | since 25.2 | The business key identifier of manual operation status. |
-| `ManualOperationStatus` | `ManualOperationStatuses` | no | [ManualOperationStatuses](/entities/Manufacturing/ManualOperationStatus.md) | expandable, since 25.2 | The manual operation status. |
-| `Materials` | `ManufacturingOrderMaterials[]` | no | [ManufacturingOrderMaterials](/entities/Manufacturing/ManufacturingOrderMaterial.md) | expandable, collection, since 24.4 | The manufacturing order materials of the operation. |
+| `ManualOperationStatusId` | `Int64?` | yes | [ManualOperationStatuses](ManualOperationStatus.md) | since 25.2 | The business key identifier of manual operation status. |
+| `ManualOperationStatus` | `ManualOperationStatuses` | no | [ManualOperationStatuses](ManualOperationStatus.md) | expandable, since 25.2 | The manual operation status. |
+| `Materials` | `ManufacturingOrderMaterials[]` | no | [ManufacturingOrderMaterials](ManufacturingOrderMaterial.md) | expandable, collection, since 24.4 | The manufacturing order materials of the operation. |
 | `FixedLeadTime` | `TimeSpan?` | yes |  | since 24.6 | The fixed lead time of the manufacturing order operation. |
 | `UnitStaffingFactor` | `Decimal?` | yes |  | since 25.8 | The unit staffing factor of the manufacturing order operation. |
 | `SetupStaffingFactor` | `Decimal?` | yes |  | since 25.8 | The setup staffing factor of the manufacturing order operation. |
@@ -132,24 +132,24 @@ Represents a manufacturing order operation.
 
 **Common**
 
-- [DelegatedWork](/entities/Common/DelegatedWork.md) — `OperationId` (FK)
+- [DelegatedWork](../Common/DelegatedWork.md) — `OperationId` (FK)
 
 **Manufacturing**
 
-- [ManufacturingOrderOperationControlDataRows](/entities/Manufacturing/ManufacturingOrderOperationControlDataRow.md) — `ManufacturingOrderOperationId` (FK)
-- [ManufacturingOrderOperationReportings](/entities/Manufacturing/ManufacturingOrderOperationReporting.md) — `OperationId` (FK)
-- [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) — `Operations` (expand)
+- [ManufacturingOrderOperationControlDataRows](ManufacturingOrderOperationControlDataRow.md) — `ManufacturingOrderOperationId` (FK)
+- [ManufacturingOrderOperationReportings](ManufacturingOrderOperationReporting.md) — `OperationId` (FK)
+- [ManufacturingOrders](ManufacturingOrder.md) — `Operations` (expand)
 
 **Purchase**
 
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `LinkedSubcontractingManufacturingOrderOperation` (FK)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `LinkedSubcontractingManufacturingOrderOperation` (FK)
 
 **TimeRecording**
 
-- [IndirectWorkCodes](/entities/TimeRecording/IndirectWorkCode.md) — `AffectsOrder` (FK)
-- [StandbyWorks](/entities/TimeRecording/StandbyWork.md) — `Operation` (expand)
-- [StandbyWorks](/entities/TimeRecording/StandbyWork.md) — `OperationId` (FK)
-- [WorkIntervals](/entities/TimeRecording/WorkInterval.md) — `OperationId` (FK)
+- [IndirectWorkCodes](../TimeRecording/IndirectWorkCode.md) — `AffectsOrder` (FK)
+- [StandbyWorks](../TimeRecording/StandbyWork.md) — `Operation` (expand)
+- [StandbyWorks](../TimeRecording/StandbyWork.md) — `OperationId` (FK)
+- [WorkIntervals](../TimeRecording/WorkInterval.md) — `OperationId` (FK)
 
 
 ## Example

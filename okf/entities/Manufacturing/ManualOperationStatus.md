@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a manual operation status.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ManualOperationStatus`
 - **Endpoint:** `GET /api/v1/Manufacturing/ManualOperationStatuses`
 - **Required permission:** Show manufacturing orders
@@ -48,8 +48,8 @@ Represents a manual operation status.
 
 **Manufacturing**
 
-- [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) — `ManualOperationStatus` (expand)
-- [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) — `ManualOperationStatusId` (FK)
+- [ManufacturingOrderOperations](ManufacturingOrderOperation.md) — `ManualOperationStatus` (expand)
+- [ManufacturingOrderOperations](ManufacturingOrderOperation.md) — `ManualOperationStatusId` (FK)
 
 
 ## Example

@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a Coding element.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `CodingElement`
 - **Endpoint:** `GET /api/v1/Accounting/CodingElements`
 - **Required permission:** Show dimensions/dimension codes
@@ -46,15 +46,15 @@ Represents a Coding element.
 | `Id` | `Int64` | no |  |  | The business key identifier of the coding element. |
 | `Code` | `String` | no |  | max length 12 | The human readable coding element code. |
 | `Description` | `String` | no |  |  | The description of the coding element. |
-| `CodingDimensionId` | `Int64` | no | [CodingDimensions](/entities/Accounting/CodingDimension.md) |  | The business key identifier of the coding element. |
+| `CodingDimensionId` | `Int64` | no | [CodingDimensions](CodingDimension.md) |  | The business key identifier of the coding element. |
 | `IsActive` | `Boolean` | no |  |  | Specifies if the coding element is active. |
 
 ## Referenced by
 
 **Accounting**
 
-- [CodingDimensions](/entities/Accounting/CodingDimension.md) — `CodingElements` (expand)
-- [CodingEntryElements](/entities/Accounting/CodingEntryElement.md) — `ReferencingEntityId` (FK)
+- [CodingDimensions](CodingDimension.md) — `CodingElements` (expand)
+- [CodingEntryElements](CodingEntryElement.md) — `ReferencingEntityId` (FK)
 
 
 ## Example

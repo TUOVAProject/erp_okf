@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a persons time bank.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `PersonTimeBank`
 - **Endpoint:** `GET /api/v1/TimeRecording/PersonTimeBanks`
 - **Required permission:** Show recording items
@@ -44,15 +44,15 @@ Represents a persons time bank.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the person time bank. |
-| `PersonId` | `Int64` | no | [Persons](/entities/Common/Person.md) |  | The person identifier of the person time bank. |
-| `TimeBankId` | `Int64` | no | [TimeBanks](/entities/TimeRecording/TimeBank.md) |  | The time bank identifier for the person time bank. |
+| `PersonId` | `Int64` | no | [Persons](../Common/Person.md) |  | The person identifier of the person time bank. |
+| `TimeBankId` | `Int64` | no | [TimeBanks](TimeBank.md) |  | The time bank identifier for the person time bank. |
 | `Balance` | `TimeSpan` | no |  |  | The balance of the person time bank. |
 
 ## Referenced by
 
 **Common**
 
-- [Persons](/entities/Common/Person.md) — `TimeBanks` (expand)
+- [Persons](../Common/Person.md) — `TimeBanks` (expand)
 
 
 ## Example

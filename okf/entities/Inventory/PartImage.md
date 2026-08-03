@@ -30,7 +30,7 @@ references_out:
 
 Represents a part image.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PartImage`
 - **Endpoint:** `GET /api/v1/Inventory/PartImages`
 - **Required permission:** Show part
@@ -42,9 +42,9 @@ Represents a part image.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the part image. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part that the image belongs to. |
-| `PhotoThumbnailId` | `Int64` | no | [BlobData](/entities/Common/BlobData.md) |  | The business key identifier of entity downscaled thumbnail blob data. |
-| `PhotoThumbnail` | `BlobData` | no | [BlobData](/entities/Common/BlobData.md) | expandable | The entity thumbnail blob data |
+| `PartId` | `Int64` | no | [Parts](Part.md) |  | The business key identifier of the part that the image belongs to. |
+| `PhotoThumbnailId` | `Int64` | no | [BlobData](../Common/BlobData.md) |  | The business key identifier of entity downscaled thumbnail blob data. |
+| `PhotoThumbnail` | `BlobData` | no | [BlobData](../Common/BlobData.md) | expandable | The entity thumbnail blob data |
 | `ExternalVisible` | `Boolean` | no |  |  | Whether the part image should be shown externally. |
 
 ## Example

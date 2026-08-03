@@ -38,7 +38,7 @@ referenced_by:
 
 Represents a customer delivery order row.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerOrderDeliveryRow`
 - **Endpoint:** `GET /api/v1/Sales/CustomerOrderDeliveryRows`
 - **Required permission:** Show customer orders
@@ -56,18 +56,18 @@ Represents a customer delivery order row.
 | `Id` | `Int64` | no |  |  | The business key identifier of the row. |
 | `AffectStockBalance` | `Boolean` | no |  |  | Specifies if row affect the stock balance. |
 | `BusinessTransactionContextType` | `Int32` | no |  | enum | The type of the business transaction context. |
-| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](/entities/Sales/CustomerOrder.md) |  | The business key identifier of the customer order. |
-| `CustomerOrderRowId` | `Int64?` | yes | [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) |  | The business key identifier of the customer order row. |
+| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](CustomerOrder.md) |  | The business key identifier of the customer order. |
+| `CustomerOrderRowId` | `Int64?` | yes | [CustomerOrderRows](CustomerOrderRow.md) |  | The business key identifier of the customer order row. |
 | `DeliveryDate` | `DateTimeOffset` | no |  |  | The delivery date of the row. |
 | `FreeTextHtml` | `String` | no |  | max length 0 | The free text row's rich text HTML row data. |
 | `FreeText` | `String` | no |  | max length 0 | The free text row's raw text. |
-| `InvoiceId` | `Int64?` | yes | [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) |  | The business key identifier of the customer order invoice. CustomerOrderInvoices |
+| `InvoiceId` | `Int64?` | yes | [CustomerOrderInvoices](CustomerOrderInvoice.md) |  | The business key identifier of the customer order invoice. CustomerOrderInvoices |
 | `ParentId` | `Int64?` | yes |  |  | The business key identifier of the parent. |
 | `ParentInvoiceId` | `Int64?` | yes |  |  | The business key identifier of the parent invoice. |
 | `PickListDeliveryDate` | `DateTimeOffset?` | yes |  |  | The delivery date of the pick list. |
 | `QuantityChangeId` | `Int64?` | yes |  |  | The business key identifier of the quantity change. |
-| `InvoiceRowId` | `Int64?` | yes | [CustomerOrderInvoiceRows](/entities/Sales/CustomerOrderInvoiceRow.md) |  | The business key identifier of the customer order invoice row. CustomerOrderInvoiceRows |
-| `InvoiceRow` | `CustomerOrderInvoiceRows` | no | [CustomerOrderInvoiceRows](/entities/Sales/CustomerOrderInvoiceRow.md) |  | The invoice row of the customer order delivery row. CustomerOrderInvoiceRows |
+| `InvoiceRowId` | `Int64?` | yes | [CustomerOrderInvoiceRows](CustomerOrderInvoiceRow.md) |  | The business key identifier of the customer order invoice row. CustomerOrderInvoiceRows |
+| `InvoiceRow` | `CustomerOrderInvoiceRows` | no | [CustomerOrderInvoiceRows](CustomerOrderInvoiceRow.md) |  | The invoice row of the customer order delivery row. CustomerOrderInvoiceRows |
 
 ## Enumerations
 
@@ -117,15 +117,15 @@ Represents a customer delivery order row.
 
 **Inventory**
 
-- [ProductRecords](/entities/Inventory/ProductRecord.md) — `CustomerOrderDeliveryRow` (expand)
-- [ProductRecords](/entities/Inventory/ProductRecord.md) — `CustomerOrderDeliveryRowId` (FK)
+- [ProductRecords](../Inventory/ProductRecord.md) — `CustomerOrderDeliveryRow` (expand)
+- [ProductRecords](../Inventory/ProductRecord.md) — `CustomerOrderDeliveryRowId` (FK)
 
 **Sales**
 
-- [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) — `DeliveryRows` (expand)
-- [InvoiceLogs](/entities/Sales/InvoiceLog.md) — `DeliveryRowId` (FK)
-- [PackageRows](/entities/Sales/PackageRow.md) — `CustomerOrderDeliveryRowId` (FK)
-- [SalesPickingListRowQuantities](/entities/Sales/SalesPickingListRowQuantity.md) — `CustomerOrderDeliveryRowId` (FK)
+- [CustomerOrderInvoices](CustomerOrderInvoice.md) — `DeliveryRows` (expand)
+- [InvoiceLogs](InvoiceLog.md) — `DeliveryRowId` (FK)
+- [PackageRows](PackageRow.md) — `CustomerOrderDeliveryRowId` (FK)
+- [SalesPickingListRowQuantities](SalesPickingListRowQuantity.md) — `CustomerOrderDeliveryRowId` (FK)
 
 
 ## Example

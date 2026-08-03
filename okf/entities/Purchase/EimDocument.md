@@ -31,7 +31,7 @@ references_out:
 
 Represents an EimDocument.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `EimDocument`
 - **Endpoint:** `GET /api/v1/Purchase/EimDocuments`
 - **Required permission:** Show supplier invoice
@@ -43,10 +43,10 @@ Represents an EimDocument.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the document. |
-| `BlobDataId` | `Int64` | no | [BlobData](/entities/Common/BlobData.md) |  | The business key identifier of the blob data contained in the document. |
+| `BlobDataId` | `Int64` | no | [BlobData](../Common/BlobData.md) |  | The business key identifier of the blob data contained in the document. |
 | `RotationAngle` | `Int32` | no |  |  | The amount of rotation in degrees to be applied to the document. |
-| `AccountsPayableId` | `Int64` | no | [AccountsPayables](/entities/Accounting/AccountsPayable.md) |  | The business key identifier of the accounts payable to which document belongs. |
-| `DocumentTypeId` | `Int64` | no | [EimDocumentTypes](/entities/Purchase/EimDocumentType.md) |  | The business key identifier of the document type of the document. |
+| `AccountsPayableId` | `Int64` | no | [AccountsPayables](../Accounting/AccountsPayable.md) |  | The business key identifier of the accounts payable to which document belongs. |
+| `DocumentTypeId` | `Int64` | no | [EimDocumentTypes](EimDocumentType.md) |  | The business key identifier of the document type of the document. |
 
 ## Example
 

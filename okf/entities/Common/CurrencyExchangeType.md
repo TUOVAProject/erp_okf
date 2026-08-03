@@ -47,7 +47,7 @@ referenced_by:
 
 Represents a currency exchange type.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `CurrencyExchangeType`
 - **Endpoint:** `GET /api/v1/Common/CurrencyExchangeTypes`
 - **Required permission:** Show currencies
@@ -66,37 +66,37 @@ Represents a currency exchange type.
 
 **Accounting**
 
-- [AccountsPayables](/entities/Accounting/AccountsPayable.md) — `CurrencyExchangeTypeId` (FK)
-- [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) — `CurrencyExchangeTypeId` (FK)
+- [AccountsPayables](../Accounting/AccountsPayable.md) — `CurrencyExchangeTypeId` (FK)
+- [AccountsReceivables](../Accounting/AccountsReceivable.md) — `CurrencyExchangeTypeId` (FK)
 
 **Common**
 
-- [CurrencyExchangeRateChangeLogs](/entities/Common/CurrencyExchangeRateChangeLog.md) — `CurrencyExchangeTypeId` (FK)
-- [CurrencyExchangeRates](/entities/Common/CurrencyExchangeRate.md) — `CurrencyExchangeTypeId` (FK)
+- [CurrencyExchangeRateChangeLogs](CurrencyExchangeRateChangeLog.md) — `CurrencyExchangeTypeId` (FK)
+- [CurrencyExchangeRates](CurrencyExchangeRate.md) — `CurrencyExchangeTypeId` (FK)
 
 **Purchase**
 
-- [BlanketOrderPurchaseTypes](/entities/Purchase/BlanketOrderPurchaseType.md) — `CurrencyExchangeTypeId` (FK)
-- [BlanketOrderPurchases](/entities/Purchase/BlanketOrderPurchase.md) — `CurrencyExchangeType` (expand)
-- [BlanketOrderPurchases](/entities/Purchase/BlanketOrderPurchase.md) — `CurrencyExchangeTypeId` (FK)
-- [Inquiries](/entities/Purchase/Inquiry.md) — `CurrencyExchangeTypeId` (FK)
-- [InquiryTypes](/entities/Purchase/InquiryType.md) — `CurrencyExchangeTypeId` (FK)
-- [PurchaseOrderTypes](/entities/Purchase/PurchaseOrderType.md) — `CurrencyExchangeTypeId` (FK)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `CurrencyExchangeTypeId` (FK)
-- [Suppliers](/entities/Purchase/Supplier.md) — `CurrencyExchangeTypeId` (FK)
+- [BlanketOrderPurchaseTypes](../Purchase/BlanketOrderPurchaseType.md) — `CurrencyExchangeTypeId` (FK)
+- [BlanketOrderPurchases](../Purchase/BlanketOrderPurchase.md) — `CurrencyExchangeType` (expand)
+- [BlanketOrderPurchases](../Purchase/BlanketOrderPurchase.md) — `CurrencyExchangeTypeId` (FK)
+- [Inquiries](../Purchase/Inquiry.md) — `CurrencyExchangeTypeId` (FK)
+- [InquiryTypes](../Purchase/InquiryType.md) — `CurrencyExchangeTypeId` (FK)
+- [PurchaseOrderTypes](../Purchase/PurchaseOrderType.md) — `CurrencyExchangeTypeId` (FK)
+- [PurchaseOrders](../Purchase/PurchaseOrder.md) — `CurrencyExchangeTypeId` (FK)
+- [Suppliers](../Purchase/Supplier.md) — `CurrencyExchangeTypeId` (FK)
 
 **Sales**
 
-- [BlanketOrderSales](/entities/Sales/BlanketOrderSales.md) — `CurrencyExchangeType` (expand)
-- [BlanketOrderSales](/entities/Sales/BlanketOrderSales.md) — `CurrencyExchangeTypeId` (FK)
-- [BlanketOrderSalesTypes](/entities/Sales/BlanketOrderSalesType.md) — `CurrencyExchangeTypeId` (FK)
-- [CustomerOrderTypes](/entities/Sales/CustomerOrderType.md) — `CurrencyExchangeTypeId` (FK)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `CurrencyExchangeTypeId` (FK)
-- [Customers](/entities/Sales/Customer.md) — `CurrencyExchangeTypeId` (FK)
-- [QuoteTypes](/entities/Sales/QuoteType.md) — `CurrencyExchangeTypeId` (FK)
-- [Quotes](/entities/Sales/Quote.md) — `CurrencyExchangeTypeId` (FK)
-- [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) — `CurrencyExchangeType` (expand)
-- [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) — `CurrencyExchangeTypeId` (FK)
+- [BlanketOrderSales](../Sales/BlanketOrderSales.md) — `CurrencyExchangeType` (expand)
+- [BlanketOrderSales](../Sales/BlanketOrderSales.md) — `CurrencyExchangeTypeId` (FK)
+- [BlanketOrderSalesTypes](../Sales/BlanketOrderSalesType.md) — `CurrencyExchangeTypeId` (FK)
+- [CustomerOrderTypes](../Sales/CustomerOrderType.md) — `CurrencyExchangeTypeId` (FK)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `CurrencyExchangeTypeId` (FK)
+- [Customers](../Sales/Customer.md) — `CurrencyExchangeTypeId` (FK)
+- [QuoteTypes](../Sales/QuoteType.md) — `CurrencyExchangeTypeId` (FK)
+- [Quotes](../Sales/Quote.md) — `CurrencyExchangeTypeId` (FK)
+- [ShipmentCustoms](../Sales/ShipmentCustoms.md) — `CurrencyExchangeType` (expand)
+- [ShipmentCustoms](../Sales/ShipmentCustoms.md) — `CurrencyExchangeTypeId` (FK)
 
 
 ## Example

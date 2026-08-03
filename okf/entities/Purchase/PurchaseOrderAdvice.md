@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a purchase order advice.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `PurchaseOrderAdvice`
 - **Endpoint:** `GET /api/v1/Purchase/PurchaseOrderAdvices`
 - **Required permission:** Show arrival
@@ -43,7 +43,7 @@ Represents a purchase order advice.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the purchase order advice. |
-| `SupplierId` | `Int64` | no | [Suppliers](/entities/Purchase/Supplier.md) |  | The business key identifier of the supplier for the advice. |
+| `SupplierId` | `Int64` | no | [Suppliers](Supplier.md) |  | The business key identifier of the supplier for the advice. |
 | `Status` | `Int32` | no |  | enum | The status of the advice. |
 | `DispatchDate` | `DateTimeOffset` | no |  |  | The dispatch date of the advice. |
 | `DeliveryNoteNumber` | `String` | no |  | max length 35 | The delivery note number of the advice. |
@@ -65,7 +65,7 @@ Represents a purchase order advice.
 
 **Purchase**
 
-- [PurchaseOrderAdviceRows](/entities/Purchase/PurchaseOrderAdviceRow.md) — `ParentId` (FK)
+- [PurchaseOrderAdviceRows](PurchaseOrderAdviceRow.md) — `ParentId` (FK)
 
 
 ## Example

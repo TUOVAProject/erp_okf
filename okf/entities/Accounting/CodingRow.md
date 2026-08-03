@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a coding row.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `CodingRow`
 - **Endpoint:** `GET /api/v1/Accounting/CodingRows`
 - **GUID:** `31C893BD-61C5-42E4-AD40-9D9FF51362CE`
@@ -41,8 +41,8 @@ Represents a coding row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the coding row. |
-| `CodingEntryId` | `Int64` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the coding row's coding entry. |
-| `CodingEntry` | `CodingEntries` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The coding entry of the coding row. |
+| `CodingEntryId` | `Int64` | no | [CodingEntries](CodingEntry.md) |  | The business key identifier of the coding row's coding entry. |
+| `CodingEntry` | `CodingEntries` | no | [CodingEntries](CodingEntry.md) |  | The coding entry of the coding row. |
 | `Type` | `Int32` | no |  | enum | The type of the coding row. |
 
 ## Enumerations
@@ -63,7 +63,7 @@ Represents a coding row.
 
 **Accounting**
 
-- [Codings](/entities/Accounting/Coding.md) — `CodingRows` (expand)
+- [Codings](Coding.md) — `CodingRows` (expand)
 
 
 ## Example

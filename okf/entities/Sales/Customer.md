@@ -83,7 +83,7 @@ referenced_by:
 
 Represents a customer.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `Customer`
 - **Endpoint:** `GET /api/v1/Sales/Customers`
 - **Required permission:** Show customer
@@ -102,23 +102,23 @@ Represents a customer.
 | `PersonalNumber` | `String` | no |  | max length 13 | The personal number of the customer. |
 | `IsPrivateCustomer` | `Boolean` | no |  |  | Specifies if the customer is a private person. |
 | `VatNumber` | `String` | no |  | max length 30 | The VAT number of the customer. |
-| `DeliveryAddresses` | `DeliveryAddresses[]` | no | [DeliveryAddresses](/entities/Common/DeliveryAddress.md) | expandable, collection | The delivery addresses of the customer. |
-| `ActiveDeliveryAddressId` | `Int64` | no | [DeliveryAddresses](/entities/Common/DeliveryAddress.md) |  | The business key identifier of the customer's active delivery address. |
-| `ActiveDeliveryAddress` | `DeliveryAddresses` | no | [DeliveryAddresses](/entities/Common/DeliveryAddress.md) | expandable | The active delivery address of the customer. |
-| `References` | `BusinessContactReferences[]` | no | [BusinessContactReferences](/entities/Common/BusinessContactReference.md) | expandable, collection | The business contact references belonging to the customer. |
-| `DefaultReferenceId` | `Int64?` | yes | [BusinessContactReferences](/entities/Common/BusinessContactReference.md) |  | The business key identifier of the customer's default business contact reference. |
-| `DefaultReference` | `BusinessContactReferences` | no | [BusinessContactReferences](/entities/Common/BusinessContactReference.md) | expandable | The default reference of the customer. |
+| `DeliveryAddresses` | `DeliveryAddresses[]` | no | [DeliveryAddresses](../Common/DeliveryAddress.md) | expandable, collection | The delivery addresses of the customer. |
+| `ActiveDeliveryAddressId` | `Int64` | no | [DeliveryAddresses](../Common/DeliveryAddress.md) |  | The business key identifier of the customer's active delivery address. |
+| `ActiveDeliveryAddress` | `DeliveryAddresses` | no | [DeliveryAddresses](../Common/DeliveryAddress.md) | expandable | The active delivery address of the customer. |
+| `References` | `BusinessContactReferences[]` | no | [BusinessContactReferences](../Common/BusinessContactReference.md) | expandable, collection | The business contact references belonging to the customer. |
+| `DefaultReferenceId` | `Int64?` | yes | [BusinessContactReferences](../Common/BusinessContactReference.md) |  | The business key identifier of the customer's default business contact reference. |
+| `DefaultReference` | `BusinessContactReferences` | no | [BusinessContactReferences](../Common/BusinessContactReference.md) | expandable | The default reference of the customer. |
 | `Alias` | `String` | no |  | max length 10 | The alias code of the customer. |
 | `AlloyCost` | `Int32` | no |  |  | The alloy cost associated with the customer. |
 | `ApplyBankCharge` | `Boolean` | no |  |  | Specifies if bank charge should be applied for the customer. |
 | `ApplyInvoicingCharge` | `Boolean` | no |  |  | Specifies if invoicing charge should be applied for the customer. |
 | `ApplyReminderCharge` | `Boolean` | no |  |  | Specifies if reminder charge should be applied for the customer. |
-| `AccountManagerId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the customer's account manager. |
-| `AccountManager` | `Persons` | no | [Persons](/entities/Common/Person.md) | expandable | The account manager of the customer. |
-| `ActiveDeliveryAddressAccountGroupId` | `Int64?` | yes | [CustomerAccountGroups](/entities/Sales/CustomerAccountGroup.md) | since 2.28 | The business key identifier of the customer's active delivery address account group. |
-| `ActiveDeliveryAddressAccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](/entities/Sales/CustomerAccountGroup.md) | expandable, since 2.28 | The active delivery address account group of the customer. |
-| `ActualCustomerProbabilityId` | `Int64?` | yes | [Probabilities](/entities/Common/Probability.md) |  | The business key identifier of the customer's actualization probability. |
-| `ActualCustomerProbability` | `Probabilities` | no | [Probabilities](/entities/Common/Probability.md) | expandable | The actualization probability of the customer. |
+| `AccountManagerId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the customer's account manager. |
+| `AccountManager` | `Persons` | no | [Persons](../Common/Person.md) | expandable | The account manager of the customer. |
+| `ActiveDeliveryAddressAccountGroupId` | `Int64?` | yes | [CustomerAccountGroups](CustomerAccountGroup.md) | since 2.28 | The business key identifier of the customer's active delivery address account group. |
+| `ActiveDeliveryAddressAccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](CustomerAccountGroup.md) | expandable, since 2.28 | The active delivery address account group of the customer. |
+| `ActualCustomerProbabilityId` | `Int64?` | yes | [Probabilities](../Common/Probability.md) |  | The business key identifier of the customer's actualization probability. |
+| `ActualCustomerProbability` | `Probabilities` | no | [Probabilities](../Common/Probability.md) | expandable | The actualization probability of the customer. |
 | `AttachDatafileWithOrder` | `Boolean` | no |  |  | Specifies if data file should be attached with orders for the customer. |
 | `AttachDatafileWithInvoice` | `Boolean` | no |  |  | Specifies if data file should be attached with invoices for the customer. |
 | `AttachDatafileWithCase` | `Boolean` | no |  | since 22.2 | Specifies if data file should be attached with cases for the customer. |
@@ -126,32 +126,32 @@ Represents a customer.
 | `AttachDatafileWithDispatchAdvice` | `Boolean` | no |  |  | Specifies if data file should be attached with dispatch advice for the customer. |
 | `BankChargeAmount` | `Decimal` | no |  |  | The bank charge amount of the customer. |
 | `BankGiroNo` | `String` | no |  | max length 15 | The bank giro number of the customer. |
-| `BlockedById` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that blocked the entity. |
-| `BlockedBy` | `ApplicationUsers` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) | expandable | The application user that blocked the customer. |
+| `BlockedById` | `Int64?` | yes | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the application user that blocked the entity. |
+| `BlockedBy` | `ApplicationUsers` | no | [ApplicationUsers](../Common/ApplicationUser.md) | expandable | The application user that blocked the customer. |
 | `BlockedStatus` | `Int32` | no |  | enum | The block status of the entity. |
 | `BlockedContextType` | `Int32` | no |  | bitmask, enum | Specifies in which contexts that the customer is blocked. |
-| `BlockMessageId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the entity block message comment. References Comments . |
-| `BlockMessage` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The block message that applies for the customer. |
+| `BlockMessageId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the entity block message comment. References Comments . |
+| `BlockMessage` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The block message that applies for the customer. |
 | `BlockedFromDate` | `DateTimeOffset?` | yes |  |  | The date when the entity starts being blocked. |
 | `BlockedToDate` | `DateTimeOffset?` | yes |  |  | The date when the entity stops being blocked. |
 | `CategoryString` | `String` | no |  | max length 15 | The category string of the customer. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the customer's comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the customer. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the customer's comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment of the customer. |
 | `CompanyId` | `Int64` | no |  |  | The business key identifier of the company that the customer belongs to. |
-| `ConfigurationPriceListId` | `Int64?` | yes | [PriceLists](/entities/Common/PriceList.md) |  | The business key identifier of the configuration price list that the customer belongs to. |
+| `ConfigurationPriceListId` | `Int64?` | yes | [PriceLists](../Common/PriceList.md) |  | The business key identifier of the configuration price list that the customer belongs to. |
 | `CreditLimit` | `Decimal` | no |  |  | The credit limit of the customer. |
-| `CurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the customer's currency. |
-| `Currency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable, since 2.28 | The currency of the customer. |
+| `CurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the customer's currency. |
+| `Currency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable, since 2.28 | The currency of the customer. |
 | `DateDisplayFormat` | `Int32` | no |  | enum, since 2.28 | The date display format of the customer. |
 | `DecimalSymbol` | `String` | no |  | max length 1, since 2.28 | The decimal symbol of the customer. |
 | `DeliveryHorizon` | `Int64?` | yes |  | since 2.28 | The delivery horizon of the customer. |
 | `DeliveryNoteNumberWhenDeliveryPlanning` | `Boolean` | no |  | since 2.28 | The delivery note number when delivery planning of the customer. |
-| `DistrictId` | `Int64?` | yes | [CustomerDistricts](/entities/Sales/CustomerDistrict.md) |  | The business key identifier of the district that the customer belongs to. |
-| `District` | `CustomerDistricts` | no | [CustomerDistricts](/entities/Sales/CustomerDistrict.md) | expandable | The district that the customer belongs to. |
+| `DistrictId` | `Int64?` | yes | [CustomerDistricts](CustomerDistrict.md) |  | The business key identifier of the district that the customer belongs to. |
+| `District` | `CustomerDistricts` | no | [CustomerDistricts](CustomerDistrict.md) | expandable | The district that the customer belongs to. |
 | `DateForTransitionToActualContact` | `DateTimeOffset?` | yes |  |  | The date/time when transition to actual contact was made for the customer. Changed from DateTimeOffset to DateTimeOffset? in 26.3 |
 | `Discount` | `Decimal?` | yes |  |  | The general discount of the customer. |
-| `DiscountCategoryId` | `Int64?` | yes | [DiscountCategories](/entities/Common/DiscountCategory.md) |  | The business key identifier of the discount category that applies for the customer. |
-| `DiscountCategory` | `DiscountCategories` | no | [DiscountCategories](/entities/Common/DiscountCategory.md) | expandable | The discount category that applies for the customer. |
+| `DiscountCategoryId` | `Int64?` | yes | [DiscountCategories](../Common/DiscountCategory.md) |  | The business key identifier of the discount category that applies for the customer. |
+| `DiscountCategory` | `DiscountCategories` | no | [DiscountCategories](../Common/DiscountCategory.md) | expandable | The discount category that applies for the customer. |
 | `DefaultOrderPrintoutVia` | `Int32` | no |  | enum | The preferred order printout method of the customer. |
 | `PrintProformaInvoiceVia` | `Int32` | no |  | enum | The preferred Proforma printout method of the customer. |
 | `PrintPaymentReminderVia` | `Int32` | no |  | enum | The preferred payment reminder printout method of the customer. |
@@ -165,54 +165,54 @@ Represents a customer.
 | `GracePeriod` | `TimeSpan?` | yes |  |  | The grace period of the customer. |
 | `HideDiscountOnProformaInvoice` | `Boolean` | no |  | **deprecated since 26.3**, since 2.28 | Specifies if the customer hides discount on proforma invoices. _(Replaced by CustomerCountryDocumentSettings)_ |
 | `IncludeInDeliveryAnalysis` | `Boolean?` | yes |  | since 2.28 | Specifies if the customer is included in delivery analysis. |
-| `InvoiceAddressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) |  | The business key identifier of the customer's invoice address. If there is no value here use MailingAddressId. |
-| `InvoiceAddress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable | The invoice address of the customer. If there is no value here use MailingAddress. |
+| `InvoiceAddressId` | `Int64?` | yes | [Addresses](../Common/Address.md) |  | The business key identifier of the customer's invoice address. If there is no value here use MailingAddressId. |
+| `InvoiceAddress` | `Addresses` | no | [Addresses](../Common/Address.md) | expandable | The invoice address of the customer. If there is no value here use MailingAddress. |
 | `InterestType` | `Int32` | no |  | enum | Specifies the interest type of the customer. |
 | `IsCasualCustomer` | `Boolean` | no |  |  | Specifies if the customer is a stray customer. |
 | `InterestInvoiceDays` | `Int32?` | yes |  |  | Specifies the interest invoice days for the customer. |
 | `InsuranceCost` | `Decimal` | no |  |  | The insurance cost specified for the customer. |
-| `InvoiceCustomerId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) |  | The business key identifier of the invoice customer of the customer. |
+| `InvoiceCustomerId` | `Int64?` | yes | [Customers](Customer.md) |  | The business key identifier of the invoice customer of the customer. |
 | `InvoicePrintoutMethod` | `Int32` | no |  | enum | The customer's preferred printout method for invoices. |
 | `InvoicePrintoutOccasion` | `Int32` | no |  | enum | Specifies when invoices should be printed for the customer. |
 | `IsInternal` | `Boolean` | no |  | since 2.28 | Specifies if the customer is internal. |
-| `LanguageId` | `Int64` | no | [LanguageCodes](/entities/Common/LanguageCode.md) |  | The business key identifier of the customer's preferred language. |
-| `Language` | `LanguageCodes` | no | [LanguageCodes](/entities/Common/LanguageCode.md) | since 2.28 | The language of the customer. |
+| `LanguageId` | `Int64` | no | [LanguageCodes](../Common/LanguageCode.md) |  | The business key identifier of the customer's preferred language. |
+| `Language` | `LanguageCodes` | no | [LanguageCodes](../Common/LanguageCode.md) | since 2.28 | The language of the customer. |
 | `LatePaymentFee` | `Decimal?` | yes |  |  | The late payment fee of the customer. |
-| `MailingAddressId` | `Int64` | no | [Addresses](/entities/Common/Address.md) |  | The business key identifier of the customer's mailing address. If InvoiceAddressId does not have a value this is also used as invoice adress. |
-| `MailingAddress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable | The mailing address of the customer. If InvoiceAddressId does not have a value this is also used as invoice adress. |
+| `MailingAddressId` | `Int64` | no | [Addresses](../Common/Address.md) |  | The business key identifier of the customer's mailing address. If InvoiceAddressId does not have a value this is also used as invoice adress. |
+| `MailingAddress` | `Addresses` | no | [Addresses](../Common/Address.md) | expandable | The mailing address of the customer. If InvoiceAddressId does not have a value this is also used as invoice adress. |
 | `NumberOfInvoiceCopies` | `Int32?` | yes |  |  | The number of invoice copies that should be produced for the customer. |
 | `OurCodeByYou` | `String` | no |  | max length 50 | The supplier code assigned to us by the customer. |
 | `PalletRegistrationNo` | `String` | no |  | max length 35 | The customer's pallet registration number. |
 | `PartialDeliveryType` | `Int32` | no |  | enum, since 2.28 | The partial delivery type of the customer. |
-| `PaymentPlanTemplateId` | `Int64?` | yes | [PaymentPlanTemplates](/entities/Common/PaymentPlanTemplate.md) | since 2.28 | The business key identifier of the customer's payment plan template. |
-| `PaymentPlanTemplate` | `PaymentPlanTemplates` | no | [PaymentPlanTemplates](/entities/Common/PaymentPlanTemplate.md) | expandable, since 2.28 | The payment plan template of the customer. |
-| `PaymentTermId` | `Int64` | no | [PaymentTerms](/entities/Common/PaymentTerm.md) |  | The business key identifier of the customer's payment term. |
-| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](/entities/Common/PaymentTerm.md) | expandable | The payment term of the customer. |
+| `PaymentPlanTemplateId` | `Int64?` | yes | [PaymentPlanTemplates](../Common/PaymentPlanTemplate.md) | since 2.28 | The business key identifier of the customer's payment plan template. |
+| `PaymentPlanTemplate` | `PaymentPlanTemplates` | no | [PaymentPlanTemplates](../Common/PaymentPlanTemplate.md) | expandable, since 2.28 | The payment plan template of the customer. |
+| `PaymentTermId` | `Int64` | no | [PaymentTerms](../Common/PaymentTerm.md) |  | The business key identifier of the customer's payment term. |
+| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](../Common/PaymentTerm.md) | expandable | The payment term of the customer. |
 | `PlusGiroNo` | `String` | no |  | max length 15 | The PlusGiro number of the customer. |
-| `PriceListId` | `Int64` | no | [PriceLists](/entities/Common/PriceList.md) |  | The business key identifier of the customer's price list. |
+| `PriceListId` | `Int64` | no | [PriceLists](../Common/PriceList.md) |  | The business key identifier of the customer's price list. |
 | `Priority` | `Int32` | no |  |  | The priority of the customer. |
-| `PickingListCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the customer's picking list comment. |
-| `PickingListComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The picking list comment of the customer. |
+| `PickingListCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the customer's picking list comment. |
+| `PickingListComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The picking list comment of the customer. |
 | `ProformaInvoicePrintoutOccasion` | `Int32` | no |  | enum | Specifies when proforma invoices should be printed for the customer. |
-| `ResellerId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the customer's reseller. |
-| `Reseller` | `Resellers` | no | [Resellers](/entities/Common/Reseller.md) | expandable | The reseller of the customer. |
+| `ResellerId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the customer's reseller. |
+| `Reseller` | `Resellers` | no | [Resellers](../Common/Reseller.md) | expandable | The reseller of the customer. |
 | `RoundOff` | `Boolean` | no |  |  | Specifies if round off applies for the customer. |
-| `SellerId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the customer's seller. |
-| `Seller` | `Persons` | no | [Persons](/entities/Common/Person.md) | expandable | The seller of the customer. |
+| `SellerId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the customer's seller. |
+| `Seller` | `Persons` | no | [Persons](../Common/Person.md) | expandable | The seller of the customer. |
 | `ServiceAgreementId` | `Int64?` | yes |  |  | The business key identifier of the customer's service agreement. |
 | `ServiceTaxNumber` | `String` | no |  | max length 30, since 2.28 | The service tax number of the customer. |
 | `ShowPartStatisticalGoodsCodeAndCountryOfOriginInForms` | `Int32` | no |  | bitmask, enum, **deprecated since 24.3** | New properties available: ShowPartStatisticalGoodsCodeInForms and ShowCountryOfOriginInForms. Try to use new properties instead. _(Replaced by ShowPartStatisticalGoodsCodeInForms and ShowCountryOfOriginInForms)_ |
 | `ShowPartStatisticalGoodsCodeInForms` | `Int32` | no |  | bitmask, enum, **deprecated since 26.3**, since 24.3 | Specifies which documents should display statistical goods codes for the customer. _(Replaced by CustomerCountryDocumentSettings)_ |
 | `ShowCountryOfOriginInForms` | `Int32` | no |  | bitmask, enum, **deprecated since 26.3**, since 24.3 | Specifies which documents should show country of origin for the customer. _(Replaced by CustomerCountryDocumentSettings)_ |
 | `ShowPartWeightInForms` | `Int32` | no |  | bitmask, enum, **deprecated since 26.3** | Specifies which documents should show part weight for the customer. _(Replaced by CustomerCountryDocumentSettings)_ |
-| `StatusId` | `Int64` | no | [CustomerStatuses](/entities/Sales/CustomerStatus.md) |  | The business key identifier of the customer's status. |
-| `Status` | `CustomerStatuses` | no | [CustomerStatuses](/entities/Sales/CustomerStatus.md) | expandable | The status of the customer. |
+| `StatusId` | `Int64` | no | [CustomerStatuses](CustomerStatus.md) |  | The business key identifier of the customer's status. |
+| `Status` | `CustomerStatuses` | no | [CustomerStatuses](CustomerStatus.md) | expandable | The status of the customer. |
 | `TimeZone` | `String` | no |  | since 2.29 | The time zone of the customer. Specified as a time zone identifier (e.g. "W. Europe Standard Time"). |
 | `TimeZoneOffset` | `Decimal` | no |  | **deprecated since 2.29**, since 2.28 | The time zone offset of the customer. _(Replaced by TimeZone)_ |
 | `ToleranceForLateDelivery` | `TimeSpan?` | yes |  |  | The customer's tolerance for late delivery. |
 | `ToleranceForEarlyDelivery` | `TimeSpan?` | yes |  |  | The customer's tolerance for early delivery. |
-| `TypeId` | `Int64?` | yes | [CustomerTypes](/entities/Sales/CustomerType.md) |  | The business key identifier of the customer's type. |
-| `Type` | `CustomerTypes` | no | [CustomerTypes](/entities/Sales/CustomerType.md) | expandable | The type of the customer. |
+| `TypeId` | `Int64?` | yes | [CustomerTypes](CustomerType.md) |  | The business key identifier of the customer's type. |
+| `Type` | `CustomerTypes` | no | [CustomerTypes](CustomerType.md) | expandable | The type of the customer. |
 | `Url` | `String` | no |  | max length 255 | The URL of the customer. |
 | `UseBundling` | `Boolean?` | yes |  | since 2.28 | Specifies if the customer uses bundling. |
 | `UseComprehensiveInvoices` | `Boolean` | no |  | **deprecated since 2.41** | Specifies if comprehensive invoices should be used for the customer. _(Replaced by ComprehensiveInvoiceGroupingMode)_ |
@@ -223,23 +223,23 @@ Represents a customer.
 | `UseInvoiceCustomersVatNumber` | `Boolean` | no |  |  | Specifies if VAT number should be taken via the invoice customer. |
 | `UsePackageSpecification` | `Boolean?` | yes |  | since 2.28 | Specifies if the customer uses package specification. |
 | `UseReminder` | `Boolean` | no |  |  | Specifies if reminders should be enabled for the customer. |
-| `VatRateId` | `Int64?` | yes | [VatRates](/entities/Common/VatRate.md) | **deprecated since 23.6** | The business key identifier of the customer's VAT rate. _(Replaced by VatGroupId on DeliveryAddress)_ |
-| `VatRate` | `VatRates` | no | [VatRates](/entities/Common/VatRate.md) | expandable, **deprecated since 23.6** | The VAT rate of the customer. _(Replaced by VatGroup from DeliveryAddress)_ |
-| `ValidityTimeId` | `Int64` | no | [ValidityTimes](/entities/Sales/ValidityTime.md) |  | The business key identifier of the customer's validity time. |
-| `ValidityTime` | `ValidityTimes` | no | [ValidityTimes](/entities/Sales/ValidityTime.md) |  | The validity time of the customer. |
+| `VatRateId` | `Int64?` | yes | [VatRates](../Common/VatRate.md) | **deprecated since 23.6** | The business key identifier of the customer's VAT rate. _(Replaced by VatGroupId on DeliveryAddress)_ |
+| `VatRate` | `VatRates` | no | [VatRates](../Common/VatRate.md) | expandable, **deprecated since 23.6** | The VAT rate of the customer. _(Replaced by VatGroup from DeliveryAddress)_ |
+| `ValidityTimeId` | `Int64` | no | [ValidityTimes](ValidityTime.md) |  | The business key identifier of the customer's validity time. |
+| `ValidityTime` | `ValidityTimes` | no | [ValidityTimes](ValidityTime.md) |  | The validity time of the customer. |
 | `Version` | `Int32` | no |  |  | The version of the customer. |
-| `VisitingAddressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) |  | The business key identifier of the customer's visiting address. |
-| `VisitingAddress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable | The visiting address of the customer. |
-| `CustomerPartLinks` | `CustomerPartLinks[]` | no | [CustomerPartLinks](/entities/Sales/CustomerPartLink.md) | expandable, collection | The part links defined for the customer. |
-| `CaseEntries` | `CaseEntry[]` | no | [CaseEntry](/entities/Inventory/CaseEntry.md) | expandable, collection | A collection of case entries that belong to the customer. |
-| `OtherCustomerNumbers` | `OtherCustomerNumbers[]` | no | [OtherCustomerNumbers](/entities/Sales/OtherCustomerNumber.md) | expandable, collection, since 2.32 | Available other customer numbers. Mainly used as EDI identifiers. |
-| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](/entities/Common/CommunicationAddress.md) | expandable, collection, since 2.50 | The communication addresses for the customer. |
-| `ExtraFields` | `ExtraFields[]` | no | [ExtraFields](/entities/Common/ExtraField.md) | expandable, collection, since 2.54 | A collection of extra field values for the customer. |
+| `VisitingAddressId` | `Int64?` | yes | [Addresses](../Common/Address.md) |  | The business key identifier of the customer's visiting address. |
+| `VisitingAddress` | `Addresses` | no | [Addresses](../Common/Address.md) | expandable | The visiting address of the customer. |
+| `CustomerPartLinks` | `CustomerPartLinks[]` | no | [CustomerPartLinks](CustomerPartLink.md) | expandable, collection | The part links defined for the customer. |
+| `CaseEntries` | `CaseEntry[]` | no | [CaseEntry](../Inventory/CaseEntry.md) | expandable, collection | A collection of case entries that belong to the customer. |
+| `OtherCustomerNumbers` | `OtherCustomerNumbers[]` | no | [OtherCustomerNumbers](OtherCustomerNumber.md) | expandable, collection, since 2.32 | Available other customer numbers. Mainly used as EDI identifiers. |
+| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](../Common/CommunicationAddress.md) | expandable, collection, since 2.50 | The communication addresses for the customer. |
+| `ExtraFields` | `ExtraFields[]` | no | [ExtraFields](../Common/ExtraField.md) | expandable, collection, since 2.54 | A collection of extra field values for the customer. |
 | `PreliminaryPickingList` | `Boolean` | no |  | since 22.6 | Specifies if the customer should apply preliminary picking list. |
-| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the customer's currency exchange type. |
+| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the customer's currency exchange type. |
 | `RootId` | `Int64` | no |  | since 24.3 | The business key identifier of the customer's root entity. |
 | `EmployeeSpanId` | `Int64?` | yes |  | since 24.3 | The business key identifier of employee span of customer |
-| `EmployeeSpan` | `CustomerEmployeeSpans` | no | [CustomerEmployeeSpans](/entities/Sales/CustomerEmployeeSpan.md) | expandable, since 24.3 | The employee span of customer |
+| `EmployeeSpan` | `CustomerEmployeeSpans` | no | [CustomerEmployeeSpans](CustomerEmployeeSpan.md) | expandable, since 24.3 | The employee span of customer |
 | `TinNumber` | `String` | no |  | max length 13, since 25.9 | The customer's income tax reference number |
 
 ## Enumerations
@@ -415,53 +415,53 @@ Represents a customer.
 
 **Accounting**
 
-- [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) — `BusinessContactId` (FK)
-- [FixedAssetSales](/entities/Accounting/FixedAssetSale.md) — `CustomerId` (FK)
+- [AccountsReceivables](../Accounting/AccountsReceivable.md) — `BusinessContactId` (FK)
+- [FixedAssetSales](../Accounting/FixedAssetSale.md) — `CustomerId` (FK)
 
 **Common**
 
-- [EdiBehaviors](/entities/Common/EdiBehavior.md) — `Customers` (expand)
-- [EdiBehaviors](/entities/Common/EdiBehavior.md) — `InvoiceCustomers` (expand)
-- [Projects](/entities/Common/Project.md) — `CustomerId` (FK)
+- [EdiBehaviors](../Common/EdiBehavior.md) — `Customers` (expand)
+- [EdiBehaviors](../Common/EdiBehavior.md) — `InvoiceCustomers` (expand)
+- [Projects](../Common/Project.md) — `CustomerId` (FK)
 
 **Inventory**
 
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `CustomerId` (FK)
-- [PriceChangeLogs](/entities/Inventory/PriceChangeLog.md) — `CustomerId` (FK)
-- [ProductRecords](/entities/Inventory/ProductRecord.md) — `OwnerId` (FK)
-- [SalesForecasts](/entities/Inventory/SalesForecast.md) — `CustomerId` (FK)
+- [CaseEntry](../Inventory/CaseEntry.md) — `CustomerId` (FK)
+- [PriceChangeLogs](../Inventory/PriceChangeLog.md) — `CustomerId` (FK)
+- [ProductRecords](../Inventory/ProductRecord.md) — `OwnerId` (FK)
+- [SalesForecasts](../Inventory/SalesForecast.md) — `CustomerId` (FK)
 
 **Manufacturing**
 
-- [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) — `CustomerId` (FK)
+- [ManufacturingOrders](../Manufacturing/ManufacturingOrder.md) — `CustomerId` (FK)
 
 **Purchase**
 
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `ActiveDeliveryAddressCustomerId` (FK)
+- [PurchaseOrders](../Purchase/PurchaseOrder.md) — `ActiveDeliveryAddressCustomerId` (FK)
 
 **Sales**
 
-- [BlanketOrderSales](/entities/Sales/BlanketOrderSales.md) — `BusinessContact` (expand)
-- [BlanketOrderSales](/entities/Sales/BlanketOrderSales.md) — `BusinessContactId` (FK)
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `Customers` (expand)
-- [BusinessOpportunityActivities](/entities/Sales/BusinessOpportunityActivity.md) — `CustomerId` (FK)
-- [BusinessOpportunityReferences](/entities/Sales/BusinessOpportunityReference.md) — `CustomerId` (FK)
-- [CustomerCountryDocumentSettings](/entities/Sales/CustomerCountryDocumentSettings.md) — `CustomerId` (FK)
-- [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) — `ActiveDeliveryAddressCustomerId` (FK)
-- [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) — `InvoiceBusinessContactId` (FK)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `ActiveDeliveryAddressCustomerId` (FK)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `CustomerId` (FK)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `InvoiceCustomerId` (FK)
-- [CustomerPartLinks](/entities/Sales/CustomerPartLink.md) — `CustomerId` (FK)
-- [CustomerRelationshipManagementActivities](/entities/Sales/CustomerRelationshipManagementActivity.md) — `CustomerId` (FK)
-- [Customers](/entities/Sales/Customer.md) — `InvoiceCustomerId` (FK)
-- [InvoiceLogs](/entities/Sales/InvoiceLog.md) — `CustomerId` (FK)
-- [OtherCustomerNumbers](/entities/Sales/OtherCustomerNumber.md) — `CustomerId` (FK)
-- [Quotes](/entities/Sales/Quote.md) — `CustomerId` (FK)
-- [SalesAgreements](/entities/Sales/SalesAgreement.md) — `BusinessContactId` (FK)
-- [SalesAgreements](/entities/Sales/SalesAgreement.md) — `InvoiceBusinessContactId` (FK)
-- [ShipmentInformationSources](/entities/Sales/ShipmentInformationSource.md) — `CustomerId` (FK)
-- [Shipments](/entities/Sales/Shipment.md) — `ActiveDeliveryAddressCustomerId` (FK)
+- [BlanketOrderSales](BlanketOrderSales.md) — `BusinessContact` (expand)
+- [BlanketOrderSales](BlanketOrderSales.md) — `BusinessContactId` (FK)
+- [BusinessOpportunities](BusinessOpportunity.md) — `Customers` (expand)
+- [BusinessOpportunityActivities](BusinessOpportunityActivity.md) — `CustomerId` (FK)
+- [BusinessOpportunityReferences](BusinessOpportunityReference.md) — `CustomerId` (FK)
+- [CustomerCountryDocumentSettings](CustomerCountryDocumentSettings.md) — `CustomerId` (FK)
+- [CustomerOrderInvoices](CustomerOrderInvoice.md) — `ActiveDeliveryAddressCustomerId` (FK)
+- [CustomerOrderInvoices](CustomerOrderInvoice.md) — `InvoiceBusinessContactId` (FK)
+- [CustomerOrders](CustomerOrder.md) — `ActiveDeliveryAddressCustomerId` (FK)
+- [CustomerOrders](CustomerOrder.md) — `CustomerId` (FK)
+- [CustomerOrders](CustomerOrder.md) — `InvoiceCustomerId` (FK)
+- [CustomerPartLinks](CustomerPartLink.md) — `CustomerId` (FK)
+- [CustomerRelationshipManagementActivities](CustomerRelationshipManagementActivity.md) — `CustomerId` (FK)
+- [Customers](Customer.md) — `InvoiceCustomerId` (FK)
+- [InvoiceLogs](InvoiceLog.md) — `CustomerId` (FK)
+- [OtherCustomerNumbers](OtherCustomerNumber.md) — `CustomerId` (FK)
+- [Quotes](Quote.md) — `CustomerId` (FK)
+- [SalesAgreements](SalesAgreement.md) — `BusinessContactId` (FK)
+- [SalesAgreements](SalesAgreement.md) — `InvoiceBusinessContactId` (FK)
+- [ShipmentInformationSources](ShipmentInformationSource.md) — `CustomerId` (FK)
+- [Shipments](Shipment.md) — `ActiveDeliveryAddressCustomerId` (FK)
 
 
 ## Example

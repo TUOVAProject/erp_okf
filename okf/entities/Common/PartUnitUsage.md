@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a part unit usage.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PartUnitUsage`
 - **Endpoint:** `GET /api/v1/Common/PartUnitUsages`
 - **Required permission:** Show part
@@ -44,11 +44,11 @@ Represents a part unit usage.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the part unit usage. |
-| `UnitId` | `Int64` | no | [Units](/entities/Common/Unit.md) |  | The unit of the part unit usage. References Units . |
+| `UnitId` | `Int64` | no | [Units](Unit.md) |  | The unit of the part unit usage. References Units . |
 | `IsRemoved` | `Boolean` | no |  |  | Specifies if the part unit usage has been removed. |
 | `ConversionFactor` | `Decimal` | no |  |  | The conversion factor between the default part unit usage and this part unit usage. |
 | `UsageType` | `Int32` | no |  | bitmask, enum | The usage type of the part unit usage. |
-| `PartId` | `Int64` | no | [Part](/entities/Inventory/Part.md) |  | The business key identifier of the part that the part unit usage belongs to. References . |
+| `PartId` | `Int64` | no | [Part](../Inventory/Part.md) |  | The business key identifier of the part that the part unit usage belongs to. References . |
 
 ## Enumerations
 
@@ -71,9 +71,9 @@ Represents a part unit usage.
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `PartUnitUsages` (expand)
-- [Parts](/entities/Inventory/Part.md) — `StandardPartUnitUsage` (expand)
-- [Parts](/entities/Inventory/Part.md) — `StandardPartUnitUsageId` (FK)
+- [Parts](../Inventory/Part.md) — `PartUnitUsages` (expand)
+- [Parts](../Inventory/Part.md) — `StandardPartUnitUsage` (expand)
+- [Parts](../Inventory/Part.md) — `StandardPartUnitUsageId` (FK)
 
 
 ## Example

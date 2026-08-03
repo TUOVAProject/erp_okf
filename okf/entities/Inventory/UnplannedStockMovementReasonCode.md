@@ -27,7 +27,7 @@ property_count: 5
 
 Represents a queryable unplanned stock movement reason code.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `UnplannedStockMovementReasonCode`
 - **Endpoint:** `GET /api/v1/Inventory/UnplannedStockMovementReasonCodes`
 - **Required permission:** Show cause codes

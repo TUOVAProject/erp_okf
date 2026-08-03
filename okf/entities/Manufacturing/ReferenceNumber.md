@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a reference number attached to a material row.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ReferenceNumber`
 - **Endpoint:** `GET /api/v1/Manufacturing/MaterialRowReferenceNumbers`
 - **Required permission:** Show part
@@ -43,7 +43,7 @@ Represents a reference number attached to a material row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the reference number. |
-| `MaterialRowId` | `Int64` | no | [MaterialRows](/entities/Manufacturing/MaterialRow.md) |  | The business key identifier of the material row that the reference number belongs to. |
+| `MaterialRowId` | `Int64` | no | [MaterialRows](MaterialRow.md) |  | The business key identifier of the material row that the reference number belongs to. |
 | `Prefix` | `String` | no |  | max length 4 | The prefix part of the reference number. |
 | `From` | `String` | no |  | max length 15 | The starting value of the reference number range. |
 | `To` | `String` | no |  | max length 15 | The ending value of the reference number range. Only valid when is numeric; otherwise this value is not persisted and the quantity is one. |
@@ -56,7 +56,7 @@ Represents a reference number attached to a material row.
 
 **Manufacturing**
 
-- [MaterialRows](/entities/Manufacturing/MaterialRow.md) — `ReferenceNumbers` (expand)
+- [MaterialRows](MaterialRow.md) — `ReferenceNumbers` (expand)
 
 
 ## Example

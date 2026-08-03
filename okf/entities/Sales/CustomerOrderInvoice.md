@@ -49,7 +49,7 @@ referenced_by:
 
 Represents a customer order invoice.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerOrderInvoice`
 - **Endpoint:** `GET /api/v1/Sales/CustomerOrderInvoices`
 - **Required permission:** Show customer orders
@@ -66,23 +66,23 @@ Represents a customer order invoice.
 | `DeliveryIndex` | `Int32` | no |  |  | The delivery index of the customer order invoice. |
 | `OrderDeliveryNumber` | `String` | no |  | max length 18 | The order delivery number of the customer order invoice. |
 | `PickingListId` | `Int64?` | yes |  |  | The business key identifier of the picking list of the customer order invoice. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse that the customer order invoice belongs to. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse that the customer order invoice belongs to. |
 | `Version` | `Int32` | no |  | since 2.34 | The version of the customer order invoice. |
-| `ActiveDeliveryAddressCustomerId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) | since 2.34 | The business key identifier of the customer source of the active delivery address. |
-| `ActiveDeliveryAddressSupplierId` | `Int64?` | yes | [Suppliers](/entities/Purchase/Supplier.md) | since 2.34 | The business key identifier of the supplier source of the active delivery address. |
+| `ActiveDeliveryAddressCustomerId` | `Int64?` | yes | [Customers](Customer.md) | since 2.34 | The business key identifier of the customer source of the active delivery address. |
+| `ActiveDeliveryAddressSupplierId` | `Int64?` | yes | [Suppliers](../Purchase/Supplier.md) | since 2.34 | The business key identifier of the supplier source of the active delivery address. |
 | `ActiveDeliveryAddressCompanyId` | `Int64?` | yes |  | since 2.34 | The business key identifier of the company source of the active delivery address. |
 | `SourceOfAlternativeDeliveryAddresses` | `Int32` | no |  | enum, since 2.34 | Specifies the source of the customer order invoice delivery address. |
-| `ConsigneeReferenceId` | `Int64?` | yes | [BusinessContactReferences](/entities/Common/BusinessContactReference.md) | since 2.34 | The business key identifier of the consignee reference of the customer order invoice. |
-| `ConsigneeReference` | `BusinessContactReferences` | no | [BusinessContactReferences](/entities/Common/BusinessContactReference.md) | expandable, since 2.34 | The consignee reference on the customer order invoice. |
+| `ConsigneeReferenceId` | `Int64?` | yes | [BusinessContactReferences](../Common/BusinessContactReference.md) | since 2.34 | The business key identifier of the consignee reference of the customer order invoice. |
+| `ConsigneeReference` | `BusinessContactReferences` | no | [BusinessContactReferences](../Common/BusinessContactReference.md) | expandable, since 2.34 | The consignee reference on the customer order invoice. |
 | `ProformaStatus` | `Int32` | no |  | enum, since 2.34 | The proforma status of the customer order invoice. |
-| `ProjectId` | `Int64?` | yes | [Projects](/entities/Common/Project.md) | since 2.34 | The business key identifier of project of the customer order invoice. |
-| `DeliveryAddressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) | since 2.34 | The business key identifier of the delivery address of the customer order invoice. |
-| `DeliveryAddress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable, since 2.34 | The delivery address of the customer order invoice. |
-| `InvoiceAddressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) | since 2.34 | The business key identifier of the invoice address of the customer order invoice. |
-| `InvoiceAddress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable, since 2.34 | The invoice address of the customer order invoice. |
-| `OurReferenceId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) | since 2.34 | The business key identifier of our reference for the customer order invoice. Reference Persons |
+| `ProjectId` | `Int64?` | yes | [Projects](../Common/Project.md) | since 2.34 | The business key identifier of project of the customer order invoice. |
+| `DeliveryAddressId` | `Int64?` | yes | [Addresses](../Common/Address.md) | since 2.34 | The business key identifier of the delivery address of the customer order invoice. |
+| `DeliveryAddress` | `Addresses` | no | [Addresses](../Common/Address.md) | expandable, since 2.34 | The delivery address of the customer order invoice. |
+| `InvoiceAddressId` | `Int64?` | yes | [Addresses](../Common/Address.md) | since 2.34 | The business key identifier of the invoice address of the customer order invoice. |
+| `InvoiceAddress` | `Addresses` | no | [Addresses](../Common/Address.md) | expandable, since 2.34 | The invoice address of the customer order invoice. |
+| `OurReferenceId` | `Int64?` | yes | [Persons](../Common/Person.md) | since 2.34 | The business key identifier of our reference for the customer order invoice. Reference Persons |
 | `OurReferenceName` | `String` | no |  | max length 80, since 2.34 | The name of our reference for the customer order invoice. |
-| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](/entities/Common/BusinessContactReference.md) | since 2.34 | The business key identifier of the customer's reference for the customer order invoice. |
+| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](../Common/BusinessContactReference.md) | since 2.34 | The business key identifier of the customer's reference for the customer order invoice. |
 | `BusinessContactReferenceName` | `String` | no |  | max length 80, since 2.34 | The name of the customer's reference for the customer order invoice. |
 | `GoodsLabel` | `String` | no |  | max length 80, since 2.34 | The goods label of the customer order invoice. |
 | `InvoiceStatusPending` | `Boolean` | no |  | since 2.34 | Specifies if the invoice status is pending on the customer order invoice. |
@@ -100,10 +100,10 @@ Represents a customer order invoice.
 | `Priority` | `Int32` | no |  | since 2.34 | The priority of the customer order invoice. |
 | `DirectlyRegistered` | `Boolean` | no |  | since 2.34 | Specifies if the customer order invoice is directly registered. |
 | `PartialInvoiceType` | `Int32?` | yes |  | enum, since 2.34 | The partial invoice type of the customer order invoice. |
-| `FormReportConfigurationId` | `Int64?` | yes | [FormReportConfigurations](/entities/Common/FormReportConfiguration.md) | since 2.34 | The business key identifier of the customer order invoice's form report configuration. |
+| `FormReportConfigurationId` | `Int64?` | yes | [FormReportConfigurations](../Common/FormReportConfiguration.md) | since 2.34 | The business key identifier of the customer order invoice's form report configuration. |
 | `DeliveryNoteCreationDate` | `DateTimeOffset?` | yes |  | since 2.34 | The delivery note creation date on the customer order invoice. |
 | `ExcludeFromEdi` | `Boolean` | no |  | since 2.34 | Specifies if the customer order invoice will be excluded from EDI. |
-| `SellerId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) | since 2.34 | The business key identifier of the seller on the customer order invoice. |
+| `SellerId` | `Int64?` | yes | [Persons](../Common/Person.md) | since 2.34 | The business key identifier of the seller on the customer order invoice. |
 | `ShippingInformationId` | `Int64?` | yes |  | since 2.34 | The business key identifier of the shipping information on the customer order invoice. |
 | `ProformaNumber` | `Int64?` | yes |  | since 2.34 | The proforma number of the customer order invoice. |
 | `ProformaDate` | `DateTimeOffset?` | yes |  | since 2.34 | The proforma date of the customer order invoice. |
@@ -111,24 +111,24 @@ Represents a customer order invoice.
 | `CandidateDebitInvoiceId` | `Int64?` | yes |  | since 2.34 | The business key identifier to the accounts receivable linked to the debit invoice candidate for this customer order invoice. References AccountsReceivable. |
 | `ConsigneeReferenceName` | `String` | no |  | max length 80, since 2.34 | The consignee reference name of the customer order invoice. |
 | `LedgerId` | `Int64?` | yes |  | since 2.34 | The business key identifier to the ledger's accounts receivable of the customer order invoice. References AccountsReceivable. |
-| `BusinessContactOrderId` | `Int64` | no | [CustomerOrders](/entities/Sales/CustomerOrder.md) | since 2.34 | The business key identifier to the customre order of the customer order invoice. References CustomerOrders . |
-| `InvoiceBusinessContactId` | `Int64` | no | [Customers](/entities/Sales/Customer.md) | since 2.34 | The business key identifier to the customer on the customer order invoice. References Customers . |
-| `AccountGroupId` | `Int64` | no | [CustomerAccountGroups](/entities/Sales/CustomerAccountGroup.md) | since 2.34 | The business key identifier of the account group of the customer order invoice. |
-| `AccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](/entities/Sales/CustomerAccountGroup.md) | expandable, since 2.34 | The account group on the customer order invoice. |
-| `VatGroupId` | `Int64` | no | [VatGroups](/entities/Common/VatGroup.md) | since 2.34 | The business key identifier of the VAT group that applies for the customer order invoice. |
-| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](/entities/Common/PaymentTerm.md) | since 2.34 | The business key identifier of the payment term of the customer order invoice. |
-| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](/entities/Common/PaymentTerm.md) | expandable, since 2.34 | The payment term of the customer order invoice. |
+| `BusinessContactOrderId` | `Int64` | no | [CustomerOrders](CustomerOrder.md) | since 2.34 | The business key identifier to the customre order of the customer order invoice. References CustomerOrders . |
+| `InvoiceBusinessContactId` | `Int64` | no | [Customers](Customer.md) | since 2.34 | The business key identifier to the customer on the customer order invoice. References Customers . |
+| `AccountGroupId` | `Int64` | no | [CustomerAccountGroups](CustomerAccountGroup.md) | since 2.34 | The business key identifier of the account group of the customer order invoice. |
+| `AccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](CustomerAccountGroup.md) | expandable, since 2.34 | The account group on the customer order invoice. |
+| `VatGroupId` | `Int64` | no | [VatGroups](../Common/VatGroup.md) | since 2.34 | The business key identifier of the VAT group that applies for the customer order invoice. |
+| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](../Common/PaymentTerm.md) | since 2.34 | The business key identifier of the payment term of the customer order invoice. |
+| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](../Common/PaymentTerm.md) | expandable, since 2.34 | The payment term of the customer order invoice. |
 | `PaymentTermDescription` | `String` | no |  | max length 35, since 2.34 | The payment term description of the customer order invoice. |
 | `GracePeriodInDays` | `Int32?` | yes |  | since 2.34 | The grace period in days of the customer order invoice. |
-| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](/entities/Common/DeliveryMethod.md) | since 2.34 | The business key identifier of the delivery method of the customer order invoice. |
-| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](/entities/Common/DeliveryTerm.md) | since 2.34 | The business key identifier of the delivery term of the customer order invoices. |
+| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](../Common/DeliveryMethod.md) | since 2.34 | The business key identifier of the delivery method of the customer order invoice. |
+| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](../Common/DeliveryTerm.md) | since 2.34 | The business key identifier of the delivery term of the customer order invoices. |
 | `DeliveryTermDescription` | `String` | no |  | max length 35, since 2.34 | The delivery term description of the customer order invoice. |
 | `DeliveryMethodDescription` | `String` | no |  | max length 35, since 2.34 | The delivery method description of the customer order invoice. |
 | `ShipmentPayer` | `Int32` | no |  | enum, since 2.34 | Specifies who is responsible for the shipment payment for the customer order invoce. |
-| `DeliveryRows` | `CustomerOrderDeliveryRows[]` | no | [CustomerOrderDeliveryRows](/entities/Sales/CustomerOrderDeliveryRow.md) | expandable, collection, since 2.36 | The customer order delivery rows. CustomerOrderDeliveryRows |
+| `DeliveryRows` | `CustomerOrderDeliveryRows[]` | no | [CustomerOrderDeliveryRows](CustomerOrderDeliveryRow.md) | expandable, collection, since 2.36 | The customer order delivery rows. CustomerOrderDeliveryRows |
 | `InvoiceType` | `Int32` | no |  | enum, since 2.53 | Invoice type of customer order invoice |
 | `EditedOrderAmountExcludingVat` | `Decimal?` | yes |  | since 24.8 | The edited order amount excluding VAT for the customer order invoice. |
-| `EditedOrderAmountExcludingVatCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) | since 24.8 | The currency of the edited order amount excluding VAT for the customer order invoice. |
+| `EditedOrderAmountExcludingVatCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) | since 24.8 | The currency of the edited order amount excluding VAT for the customer order invoice. |
 | `EditedOrderAmountDiscount` | `Decimal?` | yes |  | since 24.8 | The edited order amount discount in percent for the customer order invoice. |
 | `TypeOfOrderAmountEntered` | `Int32?` | yes |  | enum, since 24.8 | The type of edited order value entered on the customer order invoice. |
 | `Factoring` | `Boolean` | no |  | since 25.7 | Specifies if factoring is activated for the customer order invoice. |
@@ -245,10 +245,10 @@ Represents a customer order invoice.
 
 **Sales**
 
-- [CustomerOrderDeliveryRows](/entities/Sales/CustomerOrderDeliveryRow.md) — `InvoiceId` (FK)
-- [SalesAgreementBases](/entities/Sales/SalesAgreementBasis.md) — `InvoiceId` (FK)
-- [SalesPickingLists](/entities/Sales/SalesPickingList.md) — `CustomerOrderInvoices` (expand)
-- [ShipmentInformationSources](/entities/Sales/ShipmentInformationSource.md) — `CustomerOrderInvoiceId` (FK)
+- [CustomerOrderDeliveryRows](CustomerOrderDeliveryRow.md) — `InvoiceId` (FK)
+- [SalesAgreementBases](SalesAgreementBasis.md) — `InvoiceId` (FK)
+- [SalesPickingLists](SalesPickingList.md) — `CustomerOrderInvoices` (expand)
+- [ShipmentInformationSources](ShipmentInformationSource.md) — `CustomerOrderInvoiceId` (FK)
 
 
 ## Example

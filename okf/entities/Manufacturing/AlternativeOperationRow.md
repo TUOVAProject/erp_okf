@@ -32,7 +32,7 @@ referenced_by:
 
 Represents an alternative work center on an operation row.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `AlternativeOperationRow`
 - **Endpoint:** `GET /api/v1/Manufacturing/AlternativeOperationRows`
 - **Required permission:** Show part
@@ -44,8 +44,8 @@ Represents an alternative work center on an operation row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the alternative operation row. |
-| `OperationRowId` | `Int64` | no | [OperationRows](/entities/Manufacturing/OperationRow.md) |  | The business key identifier of the operation row that owns this alternative. |
-| `WorkCenterId` | `Int64` | no | [WorkCenters](/entities/Manufacturing/WorkCenter.md) |  | The business key identifier of the alternative work center. |
+| `OperationRowId` | `Int64` | no | [OperationRows](OperationRow.md) |  | The business key identifier of the operation row that owns this alternative. |
+| `WorkCenterId` | `Int64` | no | [WorkCenters](WorkCenter.md) |  | The business key identifier of the alternative work center. |
 | `UnitStaffingFactor` | `Decimal?` | yes |  |  | The unit staffing factor of the alternative operation row. |
 | `SetupStaffingFactor` | `Decimal?` | yes |  |  | The setup staffing factor of the alternative operation row. |
 | `QueueTime` | `TimeSpan?` | yes |  |  | The queue time of the alternative operation row. |
@@ -57,7 +57,7 @@ Represents an alternative work center on an operation row.
 
 **Manufacturing**
 
-- [OperationRows](/entities/Manufacturing/OperationRow.md) — `AlternativeOperationRows` (expand)
+- [OperationRows](OperationRow.md) — `AlternativeOperationRows` (expand)
 
 
 ## Example

@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a part hyperlink.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `HyperLink`
 - **Endpoint:** `GET /api/v1/Inventory/HyperLinks`
 - **Required permission:** Show part
@@ -43,7 +43,7 @@ Represents a part hyperlink.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the hyperlink. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part that the hyperlink belongs to. |
+| `PartId` | `Int64` | no | [Parts](Part.md) |  | The business key identifier of the part that the hyperlink belongs to. |
 | `Link` | `String` | no |  |  | The link (url) of the hyperlink. |
 | `Description` | `String` | no |  |  | The description of the hyperlink. |
 
@@ -51,7 +51,7 @@ Represents a part hyperlink.
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `HyperLinks` (expand)
+- [Parts](Part.md) — `HyperLinks` (expand)
 
 
 ## Example

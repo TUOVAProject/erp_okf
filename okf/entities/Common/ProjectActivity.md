@@ -38,7 +38,7 @@ referenced_by:
 
 Represents a project activity.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ProjectActivity`
 - **Endpoint:** `GET /api/v1/Common/ProjectActivities`
 - **Required permission:** Show Activity list – Project
@@ -55,15 +55,15 @@ Represents a project activity.
 | `RestTimeInHours` | `Decimal` | no |  |  | The rest time in hours of the project activity. |
 | `PlannedTimeInHours` | `Decimal` | no |  |  | The planned time in hours of the project activity. |
 | `ShowInProjectReport` | `Boolean` | no |  |  | Specifies if the project activity should be shown in the project report. |
-| `ParentId` | `Int64` | no | [ProjectPhases](/entities/Common/ProjectPhase.md) |  | The business key identifier of the activity's parent. References ProjectPhases . |
+| `ParentId` | `Int64` | no | [ProjectPhases](ProjectPhase.md) |  | The business key identifier of the activity's parent. References ProjectPhases . |
 | `LockedDelegateWork` | `Boolean` | no |  |  | Specifies if the activity's delegate work is locked. |
-| `ActivityTypeId` | `Int64` | no | [ProjectActivityTypes](/entities/Common/ProjectActivityType.md) |  | The business key identifier of the activity's type. References ProjectActivityTypes . |
-| `ActivityType` | `ProjectActivityTypes` | no | [ProjectActivityTypes](/entities/Common/ProjectActivityType.md) | expandable | The type of the project activity. |
-| `CompletedByUserId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that has completed the activity. References ApplicationUsers . |
-| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that is responsible for the activity. References ApplicationUsers . |
+| `ActivityTypeId` | `Int64` | no | [ProjectActivityTypes](ProjectActivityType.md) |  | The business key identifier of the activity's type. References ProjectActivityTypes . |
+| `ActivityType` | `ProjectActivityTypes` | no | [ProjectActivityTypes](ProjectActivityType.md) | expandable | The type of the project activity. |
+| `CompletedByUserId` | `Int64?` | yes | [ApplicationUsers](ApplicationUser.md) |  | The business key identifier of the application user that has completed the activity. References ApplicationUsers . |
+| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](ApplicationUser.md) |  | The business key identifier of the application user that is responsible for the activity. References ApplicationUsers . |
 | `Description` | `String` | no |  |  | The description of the activity. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the activity's comment. References Comments . |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the activity. |
+| `CommentId` | `Int64?` | yes | [Comments](Comment.md) |  | The business key identifier of the activity's comment. References Comments . |
+| `Comment` | `Comments` | no | [Comments](Comment.md) | expandable | The comment of the activity. |
 | `Status` | `Int32` | no |  | enum | The status of the activity. |
 | `ReminderId` | `Int64?` | yes |  |  | The business key identifier of the activity's reminder. References Reminder. |
 | `PlannedCompletionDate` | `DateTimeOffset` | no |  |  | The planned completion date of the activity. |
@@ -88,15 +88,15 @@ Represents a project activity.
 
 **Common**
 
-- [DelegatedWork](/entities/Common/DelegatedWork.md) — `ActivityId` (FK)
-- [ProjectActivityCalendarAppointments](/entities/Common/ProjectActivityCalendarAppointment.md) — `ProjectActivityId` (FK)
-- [ProjectActivityRelations](/entities/Common/ProjectActivityRelation.md) — `DependentOnEntityId` (FK)
-- [ProjectActivityRelations](/entities/Common/ProjectActivityRelation.md) — `ParentId` (FK)
-- [ProjectPhases](/entities/Common/ProjectPhase.md) — `Activities` (expand)
+- [DelegatedWork](DelegatedWork.md) — `ActivityId` (FK)
+- [ProjectActivityCalendarAppointments](ProjectActivityCalendarAppointment.md) — `ProjectActivityId` (FK)
+- [ProjectActivityRelations](ProjectActivityRelation.md) — `DependentOnEntityId` (FK)
+- [ProjectActivityRelations](ProjectActivityRelation.md) — `ParentId` (FK)
+- [ProjectPhases](ProjectPhase.md) — `Activities` (expand)
 
 **TimeRecording**
 
-- [WorkIntervals](/entities/TimeRecording/WorkInterval.md) — `ActivityId` (FK)
+- [WorkIntervals](../TimeRecording/WorkInterval.md) — `ActivityId` (FK)
 
 
 ## Example

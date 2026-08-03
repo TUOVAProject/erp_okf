@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a business opportunity activity template row.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `BusinessOpportunityActivityTemplateRow`
 - **Endpoint:** `GET /api/v1/Sales/BusinessOpportunityActivityTemplateRows`
 - **Required permission:** Show business opportunity
@@ -46,13 +46,13 @@ Represents a business opportunity activity template row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the business opportunity activity template row. |
-| `ActivityTemplateId` | `Int64?` | yes | [BusinessOpportunityActivityTemplates](/entities/Sales/BusinessOpportunityActivityTemplate.md) |  | The business key identifier of the row's business opportunity activity template. |
-| `ActivityTypeId` | `Int64?` | yes | [CustomerRelationshipActivityTypes](/entities/Sales/CustomerRelationshipActivityType.md) |  | The business key identifier of the template row's activity type. |
-| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the template row's responsible application user. |
+| `ActivityTemplateId` | `Int64?` | yes | [BusinessOpportunityActivityTemplates](BusinessOpportunityActivityTemplate.md) |  | The business key identifier of the row's business opportunity activity template. |
+| `ActivityTypeId` | `Int64?` | yes | [CustomerRelationshipActivityTypes](CustomerRelationshipActivityType.md) |  | The business key identifier of the template row's activity type. |
+| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the template row's responsible application user. |
 | `Code` | `Int64` | no |  |  | The code of the template row. |
 | `IsAdministratorResponsible` | `Boolean` | no |  |  | Specifies if administrator is responsible for the template row. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the template row's comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The template row's comment. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the template row's comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The template row's comment. |
 | `DueDateType` | `Int32` | no |  | enum | The due date type of the template row. |
 | `NumberDaysFromDueDate` | `Int32` | no |  |  | The number of work days from due date of the template row. |
 | `Status` | `Int32` | no |  | enum | The status of the template row. |
@@ -82,7 +82,7 @@ Represents a business opportunity activity template row.
 
 **Sales**
 
-- [BusinessOpportunityActivityTemplates](/entities/Sales/BusinessOpportunityActivityTemplate.md) — `Rows` (expand)
+- [BusinessOpportunityActivityTemplates](BusinessOpportunityActivityTemplate.md) — `Rows` (expand)
 
 
 ## Example

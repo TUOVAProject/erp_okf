@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a purchase order advice row.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `PurchaseOrderAdviceRow`
 - **Endpoint:** `GET /api/v1/Purchase/PurchaseOrderAdviceRows`
 - **Required permission:** Show arrival
@@ -47,15 +47,15 @@ Represents a purchase order advice row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the purchase order advice row. |
-| `PurchaseOrderRowId` | `Int64?` | yes | [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) |  | The business key identifier of the purchase order row for this row. |
-| `ParentId` | `Int64?` | yes | [PurchaseOrderAdvices](/entities/Purchase/PurchaseOrderAdvice.md) |  | The business key identifier of the purchase order advice for this row. |
+| `PurchaseOrderRowId` | `Int64?` | yes | [PurchaseOrderRows](PurchaseOrderRow.md) |  | The business key identifier of the purchase order row for this row. |
+| `ParentId` | `Int64?` | yes | [PurchaseOrderAdvices](PurchaseOrderAdvice.md) |  | The business key identifier of the purchase order advice for this row. |
 | `Status` | `Int32` | no |  | enum | The status for the row. |
 | `Quantity` | `Decimal` | no |  |  | The quantity for the row. |
 | `DeliveredQuantity` | `Decimal` | no |  |  | The delivered quantity for the row. |
 | `RestQuantity` | `Decimal` | no |  |  | The rest quantity for the row. |
-| `UnitId` | `Int64?` | yes | [Units](/entities/Common/Unit.md) |  | The business key identifier of the unit for the row. |
+| `UnitId` | `Int64?` | yes | [Units](../Common/Unit.md) |  | The business key identifier of the unit for the row. |
 | `ConversionFactor` | `Decimal?` | yes |  |  | The conversion factor for the row. |
-| `ParentRowId` | `Int64?` | yes | [PurchaseOrderAdviceRows](/entities/Purchase/PurchaseOrderAdviceRow.md) |  | The business key identifier of the purchase order advice row for the row. |
+| `ParentRowId` | `Int64?` | yes | [PurchaseOrderAdviceRows](PurchaseOrderAdviceRow.md) |  | The business key identifier of the purchase order advice row for the row. |
 | `SupplierPackageNumber` | `String` | no |  | max length 80 | The supplier package number for the row. |
 | `SupplierAgreementReference` | `String` | no |  | max length 80 | The supplier agreement reference tor the row. |
 
@@ -74,8 +74,8 @@ Represents a purchase order advice row.
 
 **Purchase**
 
-- [PurchaseOrderAdviceRowProductRecords](/entities/Purchase/PurchaseOrderAdviceRowProductRecord.md) — `ParentId` (FK)
-- [PurchaseOrderAdviceRows](/entities/Purchase/PurchaseOrderAdviceRow.md) — `ParentRowId` (FK)
+- [PurchaseOrderAdviceRowProductRecords](PurchaseOrderAdviceRowProductRecord.md) — `ParentId` (FK)
+- [PurchaseOrderAdviceRows](PurchaseOrderAdviceRow.md) — `ParentRowId` (FK)
 
 
 ## Example

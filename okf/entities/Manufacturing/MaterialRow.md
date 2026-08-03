@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a material row.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `MaterialRow`
 - **Endpoint:** `GET /api/v1/Manufacturing/MaterialRows`
 - **Required permission:** Show part
@@ -46,8 +46,8 @@ Represents a material row.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the material row. |
 | `PartId` | `Int64` | no |  |  | The business key identifier of material row part. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the material row's comment. References Comments /// |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the material row. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the material row's comment. References Comments /// |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment of the material row. |
 | `Position` | `String` | no |  | max length 10 | The position of the material row. |
 | `ToOperation` | `Int32` | no |  |  | The number of the operation row that the material row belongs to. |
 | `Quantity` | `Decimal` | no |  |  | The quantity of the material row. |
@@ -59,14 +59,14 @@ Represents a material row.
 | `PreparationTermType` | `Int32?` | yes |  | since 24.4 | PreparationTermType of the Material Row. |
 | `PreparationTermFromValue` | `String` | no |  | since 24.4 | PreparationTermFromValue of the Material Row. |
 | `PreparationTermToValue` | `String` | no |  | since 24.4 | PreparationTermToValue of the Material Row. |
-| `ReferenceNumbers` | `MaterialRowReferenceNumbers[]` | no | [MaterialRowReferenceNumbers](/entities/Manufacturing/ReferenceNumber.md) | expandable, collection, since 26.6 | The reference numbers configured for this material row. |
+| `ReferenceNumbers` | `MaterialRowReferenceNumbers[]` | no | [MaterialRowReferenceNumbers](ReferenceNumber.md) | expandable, collection, since 26.6 | The reference numbers configured for this material row. |
 
 ## Referenced by
 
 **Manufacturing**
 
-- [MaterialRowReferenceNumbers](/entities/Manufacturing/ReferenceNumber.md) — `MaterialRowId` (FK)
-- [Preparations](/entities/Manufacturing/Preparation.md) — `Materials` (expand)
+- [MaterialRowReferenceNumbers](ReferenceNumber.md) — `MaterialRowId` (FK)
+- [Preparations](Preparation.md) — `Materials` (expand)
 
 
 ## Example

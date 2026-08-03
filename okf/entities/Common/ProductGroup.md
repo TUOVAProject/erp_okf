@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a product group.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ProductGroup`
 - **Endpoint:** `GET /api/v1/Common/ProductGroups`
 - **Required permission:** Show posting matrix
@@ -52,13 +52,13 @@ Represents a product group.
 
 **Common**
 
-- [DiscountCategoryRows](/entities/Common/DiscountCategoryRow.md) — `ProductGroupId` (FK)
+- [DiscountCategoryRows](DiscountCategoryRow.md) — `ProductGroupId` (FK)
 
 **Inventory**
 
-- [PartTemplates](/entities/Inventory/PartTemplate.md) — `ProductGroupId` (FK)
-- [Parts](/entities/Inventory/Part.md) — `ProductGroup` (expand)
-- [Parts](/entities/Inventory/Part.md) — `ProductGroupId` (FK)
+- [PartTemplates](../Inventory/PartTemplate.md) — `ProductGroupId` (FK)
+- [Parts](../Inventory/Part.md) — `ProductGroup` (expand)
+- [Parts](../Inventory/Part.md) — `ProductGroupId` (FK)
 
 
 ## Example

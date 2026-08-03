@@ -37,7 +37,7 @@ referenced_by:
 
 Represents a queryable payment method.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PaymentMethod`
 - **Endpoint:** `GET /api/v1/Common/PaymentMethods`
 - **Required permission:** Show terms
@@ -56,16 +56,16 @@ Represents a queryable payment method.
 | `CustomerIdAtBank` | `String` | no |  | max length 15 | The bank customer identifier of the payment method. |
 | `SendPaymentFilePath` | `String` | no |  | max length 255 | The send payment file path of the payment method. |
 | `SendPaymentDirectoryPath` | `String` | no |  | max length 255 | The send payment directory path of the payment method. |
-| `CodingAccountId` | `Int64?` | yes | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the payment method's coding account. This account is also found in the payment method's . References Account. |
+| `CodingAccountId` | `Int64?` | yes | [CodingEntries](../Accounting/CodingEntry.md) |  | The business key identifier of the payment method's coding account. This account is also found in the payment method's . References Account. |
 | `IsActive` | `Boolean` | no |  |  | Specifies if the payment method is active and available in the MONITOR system. |
-| `BankingFeeAccountId` | `Int64?` | yes | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the payment method's banking fee account. This account is also found in the payment method's . References Account. |
-| `TransactionListFormReportConfigurationId` | `Int64?` | yes | [FormReportConfigurations](/entities/Common/FormReportConfiguration.md) |  | The business key identifier of the payment method's translation list form report configuration. |
+| `BankingFeeAccountId` | `Int64?` | yes | [CodingEntries](../Accounting/CodingEntry.md) |  | The business key identifier of the payment method's banking fee account. This account is also found in the payment method's . References Account. |
+| `TransactionListFormReportConfigurationId` | `Int64?` | yes | [FormReportConfigurations](FormReportConfiguration.md) |  | The business key identifier of the payment method's translation list form report configuration. |
 | `ReceivingBankAccountValidation` | `Int32` | no |  | enum | Specifies which type of validation will be performed for the payment method's receiving bank account. |
 | `ReceivingGiroAccountValidation` | `Int32` | no |  | enum | Specifies which type of validation will be performed for the payment method's receiving giro account. |
-| `CodingAccountCodingEntryId` | `Int64` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) | since 2.38 | The business key identifier of the payment method's coding account coding entry. References CodingEntries . |
-| `CodingAccountCodingEntry` | `CodingEntries` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) | expandable, since 2.38 | The payment method's coding account coding entry. |
-| `BankingFeeCodingEntryId` | `Int64` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) | since 2.38 | The business key identifier of the payment method's banking fee coding entry. References CodingEntries . |
-| `BankingFeeCodingEntry` | `CodingEntries` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) | expandable, since 2.38 | The payment method's banking fee coding entry. |
+| `CodingAccountCodingEntryId` | `Int64` | no | [CodingEntries](../Accounting/CodingEntry.md) | since 2.38 | The business key identifier of the payment method's coding account coding entry. References CodingEntries . |
+| `CodingAccountCodingEntry` | `CodingEntries` | no | [CodingEntries](../Accounting/CodingEntry.md) | expandable, since 2.38 | The payment method's coding account coding entry. |
+| `BankingFeeCodingEntryId` | `Int64` | no | [CodingEntries](../Accounting/CodingEntry.md) | since 2.38 | The business key identifier of the payment method's banking fee coding entry. References CodingEntries . |
+| `BankingFeeCodingEntry` | `CodingEntries` | no | [CodingEntries](../Accounting/CodingEntry.md) | expandable, since 2.38 | The payment method's banking fee coding entry. |
 
 ## Enumerations
 
@@ -101,23 +101,23 @@ Represents a queryable payment method.
 
 **Accounting**
 
-- [AccountsPayables](/entities/Accounting/AccountsPayable.md) — `PaymentMethodId` (FK)
-- [IncomingPayments](/entities/Accounting/IncomingPayment.md) — `PaymentMethodId` (FK)
-- [OutgoingPayments](/entities/Accounting/OutgoingPayment.md) — `PaymentMethodId` (FK)
+- [AccountsPayables](../Accounting/AccountsPayable.md) — `PaymentMethodId` (FK)
+- [IncomingPayments](../Accounting/IncomingPayment.md) — `PaymentMethodId` (FK)
+- [OutgoingPayments](../Accounting/OutgoingPayment.md) — `PaymentMethodId` (FK)
 
 **Common**
 
-- [PaymentTerms](/entities/Common/PaymentTerm.md) — `PaymentMethodId` (FK)
+- [PaymentTerms](PaymentTerm.md) — `PaymentMethodId` (FK)
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `PaymentMethod` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `PaymentMethodId` (FK)
+- [Suppliers](../Purchase/Supplier.md) — `PaymentMethod` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `PaymentMethodId` (FK)
 
 **Sales**
 
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `PaymentMethod` (expand)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `PaymentMethodId` (FK)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `PaymentMethod` (expand)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `PaymentMethodId` (FK)
 
 
 ## Example

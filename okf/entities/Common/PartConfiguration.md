@@ -37,7 +37,7 @@ referenced_by:
 
 Represents a part configuration.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PartConfiguration`
 - **Endpoint:** `GET /api/v1/Common/PartConfigurations`
 - **Required permission:** Show part
@@ -49,26 +49,26 @@ Represents a part configuration.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the part configuration. |
-| `ResultId` | `Int64?` | yes | [PartConfigurationResults](/entities/Common/PartConfigurationResult.md) |  | The business key identifier of the configuration's result. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the comment that belongs to the configuration. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment that belongs to the configuration. |
+| `ResultId` | `Int64?` | yes | [PartConfigurationResults](PartConfigurationResult.md) |  | The business key identifier of the configuration's result. |
+| `CommentId` | `Int64?` | yes | [Comments](Comment.md) |  | The business key identifier of the comment that belongs to the configuration. |
+| `Comment` | `Comments` | no | [Comments](Comment.md) | expandable | The comment that belongs to the configuration. |
 
 ## Referenced by
 
 **Common**
 
-- [PartConfigurationPresets](/entities/Common/PartConfigurationPreset.md) — `PartConfigurationId` (FK)
-- [PartConfigurationResults](/entities/Common/PartConfigurationResult.md) — `PartConfigurationId` (FK)
-- [RemotePartConfigurations](/entities/Common/RemotePartConfiguration.md) — `PartConfigurationIdInRemoteCompany` (FK)
+- [PartConfigurationPresets](PartConfigurationPreset.md) — `PartConfigurationId` (FK)
+- [PartConfigurationResults](PartConfigurationResult.md) — `PartConfigurationId` (FK)
+- [RemotePartConfigurations](RemotePartConfiguration.md) — `PartConfigurationIdInRemoteCompany` (FK)
 
 **Manufacturing**
 
-- [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) — `PartConfigurationId` (FK)
+- [ManufacturingOrders](../Manufacturing/ManufacturingOrder.md) — `PartConfigurationId` (FK)
 
 **Sales**
 
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `PartConfigurationIdInRemoteCompany` (FK)
-- [QuoteRows](/entities/Sales/QuoteRow.md) — `PartConfigurationIdInRemoteCompany` (FK)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `PartConfigurationIdInRemoteCompany` (FK)
+- [QuoteRows](../Sales/QuoteRow.md) — `PartConfigurationIdInRemoteCompany` (FK)
 
 
 ## Example

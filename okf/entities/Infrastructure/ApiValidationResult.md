@@ -26,7 +26,7 @@ referenced_by:
 
 Specifies a command validation result.
 
-- **Module:** [Infrastructure](/modules/Infrastructure.md)
+- **Module:** [Infrastructure](../../modules/Infrastructure.md)
 - **API class:** `ApiValidationResult`
 - **Endpoint:** none — this is a payload type, not a queryable resource.
 - **Introduced in:** 2.18
@@ -57,7 +57,7 @@ Specifies a command validation result.
 
 **Infrastructure**
 
-- [ValidationCommandResponse](/entities/Infrastructure/ValidationCommandResponse.md) — `Results` (expand)
+- [ValidationCommandResponse](ValidationCommandResponse.md) — `Results` (expand)
 
 
 ## Example

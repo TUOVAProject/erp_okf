@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a queryable custom report display definition.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `CustomReportDisplayDefinition`
 - **Endpoint:** `GET /api/v1/Common/CustomReportDisplayDefinitions`
 - **GUID:** `74DDBC7F-7649-416D-BA9A-4FA8AF1BC7DA`
@@ -45,7 +45,7 @@ Represents a queryable custom report display definition.
 | `Description` | `String` | no |  |  | The translated description of the custom report display definition. |
 | `ReportType` | `Int32` | no |  | enum | The report type of the custom report display definition. |
 | `Sql` | `String` | no |  |  | The SQL query of the custom report display definition. |
-| `ParentId` | `Int64` | no | [CustomReportDefinitions](/entities/Common/CustomReportDefinition.md) |  | The business key identifier of the parent custom report definition. References CustomReportDefinitions . |
+| `ParentId` | `Int64` | no | [CustomReportDefinitions](CustomReportDefinition.md) |  | The business key identifier of the parent custom report definition. References CustomReportDefinitions . |
 
 ## Enumerations
 
@@ -62,7 +62,7 @@ Represents a queryable custom report display definition.
 
 **Common**
 
-- [CustomReportDefinitions](/entities/Common/CustomReportDefinition.md) — `DisplayDefinitions` (expand)
+- [CustomReportDefinitions](CustomReportDefinition.md) — `DisplayDefinitions` (expand)
 
 
 ## Example

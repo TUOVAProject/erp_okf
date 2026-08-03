@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a tariff and service code.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `TariffAndServiceCode`
 - **Endpoint:** `GET /api/v1/Common/TariffAndServiceCodes`
 - **Required permission:** Show basic data for part
@@ -62,13 +62,13 @@ Represents a tariff and service code.
 
 **Purchase**
 
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `TariffAndServiceCode` (expand)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `TariffAndServiceCodeId` (FK)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `TariffAndServiceCode` (expand)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `TariffAndServiceCodeId` (FK)
 
 **Sales**
 
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `TariffAndServiceCode` (expand)
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `TariffAndServiceCodeId` (FK)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `TariffAndServiceCode` (expand)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `TariffAndServiceCodeId` (FK)
 
 
 ## Example

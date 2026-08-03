@@ -34,7 +34,7 @@ referenced_by:
 
 Represents an extra field template.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ExtraFieldTemplate`
 - **Endpoint:** `GET /api/v1/Common/ExtraFieldTemplates`
 - **Required permission:** Show extra fields
@@ -49,10 +49,10 @@ Represents an extra field template.
 | `Name` | `String` | no |  |  | The translated name of the extra field template. |
 | `Description` | `String` | no |  |  | The translated description of the extra field template. |
 | `Type` | `Int32` | no |  | enum | The extra field template type. |
-| `ParentId` | `Int64` | no | [ExtraFieldGroups](/entities/Common/ExtraFieldGroup.md) |  | The business key identifier of the extra field group that the template belongs to. |
+| `ParentId` | `Int64` | no | [ExtraFieldGroups](ExtraFieldGroup.md) |  | The business key identifier of the extra field group that the template belongs to. |
 | `RowNumber` | `Int32` | no |  |  | The row number of the extra field template. |
 | `Identifier` | `String` | no |  | max length 12 | The alphanumeric identifier of the extra field template. |
-| `OptionTemplates` | `ExtraFieldOptionTemplates[]` | no | [ExtraFieldOptionTemplates](/entities/Common/ExtraFieldOptionTemplate.md) | expandable, collection | The extra field option templates that belong to the extra field template. |
+| `OptionTemplates` | `ExtraFieldOptionTemplates[]` | no | [ExtraFieldOptionTemplates](ExtraFieldOptionTemplate.md) | expandable, collection | The extra field option templates that belong to the extra field template. |
 
 ## Enumerations
 
@@ -74,15 +74,15 @@ Represents an extra field template.
 
 **Common**
 
-- [ExtraFieldGroups](/entities/Common/ExtraFieldGroup.md) — `Templates` (expand)
-- [ExtraFieldOptionTemplates](/entities/Common/ExtraFieldOptionTemplate.md) — `ExtraFieldTemplateId` (FK)
+- [ExtraFieldGroups](ExtraFieldGroup.md) — `Templates` (expand)
+- [ExtraFieldOptionTemplates](ExtraFieldOptionTemplate.md) — `ExtraFieldTemplateId` (FK)
 
 **Manufacturing**
 
-- [Preparations](/entities/Manufacturing/Preparation.md) — `VariantXAxis` (expand)
-- [Preparations](/entities/Manufacturing/Preparation.md) — `VariantXAxisId` (FK)
-- [Preparations](/entities/Manufacturing/Preparation.md) — `VariantYAxis` (expand)
-- [Preparations](/entities/Manufacturing/Preparation.md) — `VariantYAxisId` (FK)
+- [Preparations](../Manufacturing/Preparation.md) — `VariantXAxis` (expand)
+- [Preparations](../Manufacturing/Preparation.md) — `VariantXAxisId` (FK)
+- [Preparations](../Manufacturing/Preparation.md) — `VariantYAxis` (expand)
+- [Preparations](../Manufacturing/Preparation.md) — `VariantYAxisId` (FK)
 
 
 ## Example

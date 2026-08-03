@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a drawing.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `Drawing`
 - **Endpoint:** `GET /api/v1/Manufacturing/Drawings`
 - **Required permission:** Show part
@@ -46,19 +46,19 @@ Represents a drawing.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the drawing. |
 | `DrawingNumber` | `String` | no |  | unique (per per Part), max length 80 | The human readable number of the drawing. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part that the drawing belongs to. |
-| `Revisions` | `DrawingRevisions[]` | no | [DrawingRevisions](/entities/Manufacturing/DrawingRevision.md) | expandable, collection | A collection of revisions that belong the the drawing. |
-| `ActiveDrawingRevisionId` | `Int64?` | yes | [DrawingRevisions](/entities/Manufacturing/DrawingRevision.md) | since 23.2 | The business key identifier of the active drawing revision. |
+| `PartId` | `Int64` | no | [Parts](../Inventory/Part.md) |  | The business key identifier of the part that the drawing belongs to. |
+| `Revisions` | `DrawingRevisions[]` | no | [DrawingRevisions](DrawingRevision.md) | expandable, collection | A collection of revisions that belong the the drawing. |
+| `ActiveDrawingRevisionId` | `Int64?` | yes | [DrawingRevisions](DrawingRevision.md) | since 23.2 | The business key identifier of the active drawing revision. |
 
 ## Referenced by
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `Drawings` (expand)
+- [Parts](../Inventory/Part.md) — `Drawings` (expand)
 
 **Manufacturing**
 
-- [DrawingRevisions](/entities/Manufacturing/DrawingRevision.md) — `ParentId` (FK)
+- [DrawingRevisions](DrawingRevision.md) — `ParentId` (FK)
 
 
 ## Example

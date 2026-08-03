@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a table that determines which work centers (and thereby which report numbers) the person should be allowed to select among in the priority plan and when starting work via report numbers.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `PersonWorkCenter`
 - **Endpoint:** `GET /api/v1/TimeRecording/PersonWorkCenters`
 - **Required permission:** Show person
@@ -51,8 +51,8 @@ Represents a table that determines which work centers (and thereby which report 
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the person work center. |
-| `WorkCenterId` | `Int64` | no | [WorkCenters](/entities/Manufacturing/WorkCenter.md) |  | The business key identifier of the work center that is linked to the person. |
-| `PersonId` | `Int64` | no | [Persons](/entities/Common/Person.md) |  | The business key identifier of the employee that is linked to the work center. |
+| `WorkCenterId` | `Int64` | no | [WorkCenters](../Manufacturing/WorkCenter.md) |  | The business key identifier of the work center that is linked to the person. |
+| `PersonId` | `Int64` | no | [Persons](../Common/Person.md) |  | The business key identifier of the employee that is linked to the work center. |
 | `Availability` | `Decimal?` | yes |  |  | Availability in percent |
 | `IsCapacityWorkCenter` | `Boolean` | no |  |  | Determines if the Work Center has the employee linked as capacity. |
 | `IsDefault` | `Boolean` | no |  |  | Determines if the work center should be selected by default when starting direct work. |
@@ -62,11 +62,11 @@ Represents a table that determines which work centers (and thereby which report 
 
 **Common**
 
-- [Persons](/entities/Common/Person.md) — `AvailableWorkCenters` (expand)
+- [Persons](../Common/Person.md) — `AvailableWorkCenters` (expand)
 
 **Manufacturing**
 
-- [WorkCenters](/entities/Manufacturing/WorkCenter.md) — `Employees` (expand)
+- [WorkCenters](../Manufacturing/WorkCenter.md) — `Employees` (expand)
 
 
 ## Example

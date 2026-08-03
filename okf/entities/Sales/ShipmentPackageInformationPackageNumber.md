@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a shipping agents real package number for a shipment package information.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `ShipmentPackageInformationPackageNumber`
 - **Endpoint:** `GET /api/v1/Sales/ShipmentPackageInformationPackageNumbers`
 - **Required permission:** Show shipment
@@ -44,14 +44,14 @@ Represents a shipping agents real package number for a shipment package informat
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the shipment package information package number. |
-| `ParentId` | `Int64` | no | [ShipmentPackageInformations](/entities/Sales/ShipmentPackageInformation.md) | mandatory (Parent must always be set) | The business key identifier of the ShipmentPackageInformation it belongs to. |
+| `ParentId` | `Int64` | no | [ShipmentPackageInformations](ShipmentPackageInformation.md) | mandatory (Parent must always be set) | The business key identifier of the ShipmentPackageInformation it belongs to. |
 | `ShippingAgentsPackageNumber` | `String` | no |  | max length 80 | The Real PackageNumber from shipper or edited manually of the package information. |
 
 ## Referenced by
 
 **Sales**
 
-- [ShipmentPackageInformations](/entities/Sales/ShipmentPackageInformation.md) — `ShippingAgentsPackageNumbers` (expand)
+- [ShipmentPackageInformations](ShipmentPackageInformation.md) — `ShippingAgentsPackageNumbers` (expand)
 
 
 ## Example

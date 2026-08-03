@@ -33,7 +33,7 @@ referenced_by:
 
 Represents an application user warehouse permission.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `WarehousePermission`
 - **Endpoint:** `GET /api/v1/Common/WarehousePermissions`
 - **Required permission:** Show user rights groups
@@ -47,15 +47,15 @@ Represents an application user warehouse permission.
 | `Id` | `Int64` | no |  |  | The business key identifier of the warehouse permission. |
 | `ApplicationUserId` | `Int64` | no |  |  | The business key identifier of the application user that the warehouse permission belongs to. |
 | `WarehouseId` | `Int64` | no |  |  | The business key identifier of the warehouse that the warehouse permission applies to. |
-| `PermissionGroups` | `PermissionGroups[]` | no | [PermissionGroups](/entities/Common/PermissionGroup.md) | expandable, collection | The permission groups that apply to the warehouse permission. |
-| `Roles` | `Roles[]` | no | [Roles](/entities/Common/Role.md) | expandable, collection | The roles that apply to the warehouse permission. |
-| `Permissions` | `Permissions[]` | no | [Permissions](/entities/Common/Permission.md) | expandable, collection | The individual permissions that apply to the warehouse permission. |
+| `PermissionGroups` | `PermissionGroups[]` | no | [PermissionGroups](PermissionGroup.md) | expandable, collection | The permission groups that apply to the warehouse permission. |
+| `Roles` | `Roles[]` | no | [Roles](Role.md) | expandable, collection | The roles that apply to the warehouse permission. |
+| `Permissions` | `Permissions[]` | no | [Permissions](Permission.md) | expandable, collection | The individual permissions that apply to the warehouse permission. |
 
 ## Referenced by
 
 **Common**
 
-- [ApplicationUsers](/entities/Common/ApplicationUser.md) — `WarehousePermissions` (expand)
+- [ApplicationUsers](ApplicationUser.md) — `WarehousePermissions` (expand)
 
 
 ## Example

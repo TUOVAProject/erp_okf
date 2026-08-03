@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a shipments customs information row.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `ShipmentCustomsRow`
 - **Endpoint:** `GET /api/v1/Sales/ShipmentCustomsRows`
 - **Required permission:** Show shipment
@@ -46,14 +46,14 @@ Represents a shipments customs information row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the shipments customs information row. |
-| `ParentId` | `Int64` | no | [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) |  | The business key identifier of the rows customs information. |
+| `ParentId` | `Int64` | no | [ShipmentCustoms](ShipmentCustoms.md) |  | The business key identifier of the rows customs information. |
 | `RowIndex` | `Int32?` | yes |  |  | The rows index number. |
-| `CountryOfOriginId` | `Int64?` | yes | [Countries](/entities/Common/Country.md) |  | The business key identifier of the rows country of origin. |
-| `CountryOfOrigin` | `Countries` | no | [Countries](/entities/Common/Country.md) | expandable | The rows country of origin. |
-| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](/entities/Common/StatisticalGoodsCode.md) |  | The business key identifier of the rows statistical goods code. |
-| `StatisticalGoodsCode` | `StatisticalGoodsCodes` | no | [StatisticalGoodsCodes](/entities/Common/StatisticalGoodsCode.md) | expandable | The rows statistical goods code. |
-| `UnitId` | `Int64?` | yes | [Units](/entities/Common/Unit.md) |  | The business key identifier of the rows unit. |
-| `Unit` | `Units` | no | [Units](/entities/Common/Unit.md) | expandable | The rows unit. |
+| `CountryOfOriginId` | `Int64?` | yes | [Countries](../Common/Country.md) |  | The business key identifier of the rows country of origin. |
+| `CountryOfOrigin` | `Countries` | no | [Countries](../Common/Country.md) | expandable | The rows country of origin. |
+| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](../Common/StatisticalGoodsCode.md) |  | The business key identifier of the rows statistical goods code. |
+| `StatisticalGoodsCode` | `StatisticalGoodsCodes` | no | [StatisticalGoodsCodes](../Common/StatisticalGoodsCode.md) | expandable | The rows statistical goods code. |
+| `UnitId` | `Int64?` | yes | [Units](../Common/Unit.md) |  | The business key identifier of the rows unit. |
+| `Unit` | `Units` | no | [Units](../Common/Unit.md) | expandable | The rows unit. |
 | `AdditionalCode` | `String` | no |  | max length 50 | The rows additional code. |
 | `Amount` | `Decimal` | no |  |  | The rows amount. |
 | `AmountInCompanyCurrency` | `Decimal` | no |  |  | The rows amount in company currency. |
@@ -62,8 +62,8 @@ Represents a shipments customs information row.
 | `NetWeight` | `Decimal?` | yes |  |  | The rows net weight. |
 | `GoodsLabel` | `String` | no |  | max length 50 | The rows goods label. |
 | `OtherQuantity` | `Decimal?` | yes |  |  | The rows other quantity. |
-| `OtherUnitId` | `Int64?` | yes | [Units](/entities/Common/Unit.md) |  | The business key identifier of the rows other unit. |
-| `OtherUnit` | `Units` | no | [Units](/entities/Common/Unit.md) | expandable | The rows other unit. |
+| `OtherUnitId` | `Int64?` | yes | [Units](../Common/Unit.md) |  | The business key identifier of the rows other unit. |
+| `OtherUnit` | `Units` | no | [Units](../Common/Unit.md) | expandable | The rows other unit. |
 | `OtherUnitCode` | `String` | no |  | max length 10 | The rows other unit code. |
 | `Procedure` | `String` | no |  | max length 80 | The rows procedure. |
 | `Quantity` | `Int32` | no |  |  | The rows quantity. |
@@ -72,7 +72,7 @@ Represents a shipments customs information row.
 
 **Sales**
 
-- [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) — `Rows` (expand)
+- [ShipmentCustoms](ShipmentCustoms.md) — `Rows` (expand)
 
 
 ## Example

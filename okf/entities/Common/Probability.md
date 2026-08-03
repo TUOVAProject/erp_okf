@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a probability.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `Probability`
 - **Endpoint:** `GET /api/v1/Common/Probabilities`
 - **Required permission:** Show probability codes
@@ -51,10 +51,10 @@ Represents a probability.
 
 **Sales**
 
-- [Customers](/entities/Sales/Customer.md) — `ActualCustomerProbability` (expand)
-- [Customers](/entities/Sales/Customer.md) — `ActualCustomerProbabilityId` (FK)
-- [Quotes](/entities/Sales/Quote.md) — `Probability` (expand)
-- [Quotes](/entities/Sales/Quote.md) — `ProbabilityId` (FK)
+- [Customers](../Sales/Customer.md) — `ActualCustomerProbability` (expand)
+- [Customers](../Sales/Customer.md) — `ActualCustomerProbabilityId` (FK)
+- [Quotes](../Sales/Quote.md) — `Probability` (expand)
+- [Quotes](../Sales/Quote.md) — `ProbabilityId` (FK)
 
 
 ## Example

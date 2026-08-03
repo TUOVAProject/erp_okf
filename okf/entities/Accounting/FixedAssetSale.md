@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a sale/retirement of a fixed assets object.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `FixedAssetSale`
 - **Endpoint:** `GET /api/v1/Accounting/FixedAssetSales`
 - **Required permission:** Show fixed assets objects
@@ -52,13 +52,13 @@ Represents a sale/retirement of a fixed assets object.
 | `PartOfAcquisitionValue` | `Decimal` | no |  |  | The sold part of the fixed assets object's acquisition value. |
 | `SalesValue` | `Decimal` | no |  |  | The sales value of the fixed asset sale. |
 | `SalesProfit` | `Decimal?` | yes |  |  | The profit of the fixed asset sale. |
-| `AccountsReceivableId` | `Int64?` | yes | [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) |  | The business key identifier of the accounts receivable linked to the fixed asset sale. |
-| `CustomerId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) |  | The business key identifier of the customer linked to the fixed asset sale. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the comment to the fixed asset sale. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment to the fixed asset sale. |
+| `AccountsReceivableId` | `Int64?` | yes | [AccountsReceivables](AccountsReceivable.md) |  | The business key identifier of the accounts receivable linked to the fixed asset sale. |
+| `CustomerId` | `Int64?` | yes | [Customers](../Sales/Customer.md) |  | The business key identifier of the customer linked to the fixed asset sale. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the comment to the fixed asset sale. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment to the fixed asset sale. |
 | `VoucherText` | `String` | no |  | max length 100 | The voucher text of the fixed asset sale. |
 | `SalesTimestamp` | `DateTimeOffset` | no |  |  | The timestamp of the fixed asset sale. |
-| `BookingId` | `Int64?` | yes | [Bookings](/entities/Accounting/Booking.md) |  | The business key identifier of the booking of the fixed asset sale. |
+| `BookingId` | `Int64?` | yes | [Bookings](Booking.md) |  | The business key identifier of the booking of the fixed asset sale. |
 
 ## Enumerations
 
@@ -74,7 +74,7 @@ Represents a sale/retirement of a fixed assets object.
 
 **Accounting**
 
-- [FixedAssets](/entities/Accounting/FixedAsset.md) — `Sales` (expand)
+- [FixedAssets](FixedAsset.md) — `Sales` (expand)
 
 
 ## Example

@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a queryable statistical goods code.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `StatisticalGoodsCode`
 - **Endpoint:** `GET /api/v1/Common/StatisticalGoodsCodes`
 - **Required permission:** Show CN codes
@@ -66,21 +66,21 @@ Represents a queryable statistical goods code.
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `StatisticalGoodsCode` (expand)
-- [Parts](/entities/Inventory/Part.md) — `StatisticalGoodsCodeId` (FK)
+- [Parts](../Inventory/Part.md) — `StatisticalGoodsCode` (expand)
+- [Parts](../Inventory/Part.md) — `StatisticalGoodsCodeId` (FK)
 
 **Purchase**
 
-- [InquiryRows](/entities/Purchase/InquiryRow.md) — `StatisticalGoodsCodeId` (FK)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `StatisticalGoodsCode` (expand)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `StatisticalGoodsCodeId` (FK)
+- [InquiryRows](../Purchase/InquiryRow.md) — `StatisticalGoodsCodeId` (FK)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `StatisticalGoodsCode` (expand)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `StatisticalGoodsCodeId` (FK)
 
 **Sales**
 
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `StatisticalGoodsCodeId` (FK)
-- [QuoteRows](/entities/Sales/QuoteRow.md) — `StatisticalGoodsCodeId` (FK)
-- [ShipmentCustomsRows](/entities/Sales/ShipmentCustomsRow.md) — `StatisticalGoodsCode` (expand)
-- [ShipmentCustomsRows](/entities/Sales/ShipmentCustomsRow.md) — `StatisticalGoodsCodeId` (FK)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `StatisticalGoodsCodeId` (FK)
+- [QuoteRows](../Sales/QuoteRow.md) — `StatisticalGoodsCodeId` (FK)
+- [ShipmentCustomsRows](../Sales/ShipmentCustomsRow.md) — `StatisticalGoodsCode` (expand)
+- [ShipmentCustomsRows](../Sales/ShipmentCustomsRow.md) — `StatisticalGoodsCodeId` (FK)
 
 
 ## Example

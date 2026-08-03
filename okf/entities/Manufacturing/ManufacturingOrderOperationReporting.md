@@ -37,7 +37,7 @@ referenced_by:
 
 Represents a manufacturing order operation reporting.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ManufacturingOrderOperationReporting`
 - **Endpoint:** `GET /api/v1/Manufacturing/ManufacturingOrderOperationReportings`
 - **Required permission:** Show manufacturing orders
@@ -49,14 +49,14 @@ Represents a manufacturing order operation reporting.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the manufacturing order operation reporting. |
-| `OperationId` | `Int64` | no | [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) |  | The business key identifier of the operation that the manufacturing order operation reporting applies. |
+| `OperationId` | `Int64` | no | [ManufacturingOrderOperations](ManufacturingOrderOperation.md) |  | The business key identifier of the operation that the manufacturing order operation reporting applies. |
 | `Quantity` | `Decimal` | no |  |  | The quantity of the manufacturing order operation reporting. |
 | `SetupTime` | `TimeSpan?` | yes |  |  | The setup time of the manufacturing order operation reporting. |
 | `UnitTime` | `TimeSpan?` | yes |  |  | The unit time of the manufacturing order operation reporting. |
-| `WorkCenterId` | `Int64` | no | [WorkCenters](/entities/Manufacturing/WorkCenter.md) |  | The business key identifier of the work center that the manufacturing order operation reporting applies. |
-| `EmployeeId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the employee that make the manufacturing order operation reporting. |
-| `ReportingEmployeeId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the employee to report as. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse the manufacturing order operation reporting applies to. |
+| `WorkCenterId` | `Int64` | no | [WorkCenters](WorkCenter.md) |  | The business key identifier of the work center that the manufacturing order operation reporting applies. |
+| `EmployeeId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the employee that make the manufacturing order operation reporting. |
+| `ReportingEmployeeId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the employee to report as. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse the manufacturing order operation reporting applies to. |
 | `ActualReportedDate` | `DateTimeOffset` | no |  |  | The actual reported date of the manufacturing order operation reporting. |
 | `PreviousRestQuantity` | `Decimal` | no |  |  | The previous rest quantity of the manufacturing order operation reporting. |
 | `RestQuantity` | `Decimal` | no |  |  | The rest quantity of the manufacturing order operation reporting. |
@@ -84,12 +84,12 @@ Represents a manufacturing order operation reporting.
 | `WipLocation` | `String` | no |  |  | The work in progress location for the manufacturing order operation reporting. |
 | `PreviousWipLocation` | `String` | no |  |  | The previous work in progress location for the manufacturing order operation reporting. |
 | `OfWichTime` | `TimeSpan?` | yes |  |  | Represents the duration related to a specific event or process. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the manufacturing order operation reporting comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | Additional comments or remarks related to the manufacturing order operation reporting. |
-| `ReasonCodeTimeConsumptionId` | `Int64?` | yes | [ReasonCodeTimeConsumptions](/entities/Manufacturing/ReasonCodeTimeConsumption.md) |  | The business key identifier of the reason code associated with time consumption for the manufacturing order operation reporting applies to. |
-| `ReasonCodeTimeConsumption` | `ReasonCodeTimeConsumptions` | no | [ReasonCodeTimeConsumptions](/entities/Manufacturing/ReasonCodeTimeConsumption.md) | expandable | The reason code associated with time consumption for the manufacturing order operation reporting applies to. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the manufacturing order operation reporting comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | Additional comments or remarks related to the manufacturing order operation reporting. |
+| `ReasonCodeTimeConsumptionId` | `Int64?` | yes | [ReasonCodeTimeConsumptions](ReasonCodeTimeConsumption.md) |  | The business key identifier of the reason code associated with time consumption for the manufacturing order operation reporting applies to. |
+| `ReasonCodeTimeConsumption` | `ReasonCodeTimeConsumptions` | no | [ReasonCodeTimeConsumptions](ReasonCodeTimeConsumption.md) | expandable | The reason code associated with time consumption for the manufacturing order operation reporting applies to. |
 | `AutomaticMaterialReporting` | `Boolean` | no |  |  | Indicates whether material reporting is performed automatically for the manufacturing order operation reporting. |
-| `PurchaseOrderDeliveryRowId` | `Int64?` | yes | [PurchaseOrderDeliveryRows](/entities/Purchase/PurchaseOrderDeliveryRow.md) |  | The business key identifier of the delivery row associated with a purchase order for the manufacturing order operation reporting applies to. |
+| `PurchaseOrderDeliveryRowId` | `Int64?` | yes | [PurchaseOrderDeliveryRows](../Purchase/PurchaseOrderDeliveryRow.md) |  | The business key identifier of the delivery row associated with a purchase order for the manufacturing order operation reporting applies to. |
 | `PreviousNodeStatus` | `Int32` | no |  | enum | The previous status of the manufacturing order node for the manufacturing order operation reporting applies to. |
 | `OriginalApprovedQuantityFromDeliveryRow` | `Decimal?` | yes |  |  | The originally approved quantity from the delivery row for the manufacturing order operation reporting applies to. |
 | `ReportingId` | `Int64?` | yes |  |  | The business key identifier of the manufacturing order operation that the reporting applies to. |
@@ -135,7 +135,7 @@ Represents a manufacturing order operation reporting.
 
 **Inventory**
 
-- [Locations](/entities/Inventory/Location.md) — `ManufacturingOrderMaterialId` (FK)
+- [Locations](../Inventory/Location.md) — `ManufacturingOrderMaterialId` (FK)
 
 
 ## Example

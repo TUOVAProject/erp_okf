@@ -30,7 +30,7 @@ references_out:
 
 Represents a part's default transport label.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PartDefaultTransportLabel`
 - **Endpoint:** `GET /api/v1/Inventory/PartDefaultTransportLabels`
 - **Required permission:** Show part
@@ -42,8 +42,8 @@ Represents a part's default transport label.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the default transport label. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part to which the transport label is set as default for. |
-| `FormReportConfigurationId` | `Int64?` | yes | [FormReportConfigurations](/entities/Common/FormReportConfiguration.md) |  | The business key identifier of the transport label's form report configuration. |
+| `PartId` | `Int64` | no | [Parts](Part.md) |  | The business key identifier of the part to which the transport label is set as default for. |
+| `FormReportConfigurationId` | `Int64?` | yes | [FormReportConfigurations](../Common/FormReportConfiguration.md) |  | The business key identifier of the transport label's form report configuration. |
 | `Type` | `Int32` | no |  | enum | The transport label's type. |
 | `FormReportTypeId` | `Guid` | no |  |  | The form report type id of the transport label. |
 

@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a shipping service.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `ShippingTemplate`
 - **Endpoint:** `GET /api/v1/Sales/ShippingTemplates`
 - **Required permission:** Show shipment
@@ -50,14 +50,14 @@ Represents a shipping service.
 | `ExportDeliveryAddress` | `Boolean` | no |  |  | Indicates if the shipping template export delivery address. |
 | `ConsignorId` | `String` | no |  | max length 30 | The consignor id of the shipping template. |
 | `PickupId` | `String` | no |  | max length 30 | The pickup id of the shipping template. |
-| `SupplierId` | `Int64?` | yes | [Suppliers](/entities/Purchase/Supplier.md) |  | The business key identifier of the shipping templates supplier. |
+| `SupplierId` | `Int64?` | yes | [Suppliers](../Purchase/Supplier.md) |  | The business key identifier of the shipping templates supplier. |
 
 ## Referenced by
 
 **Sales**
 
-- [Shipments](/entities/Sales/Shipment.md) — `ShippingTemplateId` (FK)
-- [ShippingServices](/entities/Sales/ShippingService.md) — `ShippingTemplateId` (FK)
+- [Shipments](Shipment.md) — `ShippingTemplateId` (FK)
+- [ShippingServices](ShippingService.md) — `ShippingTemplateId` (FK)
 
 
 ## Example

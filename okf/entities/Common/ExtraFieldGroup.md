@@ -31,7 +31,7 @@ referenced_by:
 
 Represents an extra field group.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ExtraFieldGroup`
 - **Endpoint:** `GET /api/v1/Common/ExtraFieldGroups`
 - **Required permission:** Show extra fields
@@ -46,13 +46,13 @@ Represents an extra field group.
 | `Name` | `String` | no |  |  | The translated name of the extra field group. |
 | `EntityId` | `Guid` | no |  |  | The business-domain identifier of the entity that the extra field group is defined for. |
 | `RowNumber` | `Int32` | no |  |  | The row number of the extra field group. |
-| `Templates` | `ExtraFieldTemplates[]` | no | [ExtraFieldTemplates](/entities/Common/ExtraFieldTemplate.md) | expandable, collection | A collection of extra field templates that belong to the extra field group. |
+| `Templates` | `ExtraFieldTemplates[]` | no | [ExtraFieldTemplates](ExtraFieldTemplate.md) | expandable, collection | A collection of extra field templates that belong to the extra field group. |
 
 ## Referenced by
 
 **Common**
 
-- [ExtraFieldTemplates](/entities/Common/ExtraFieldTemplate.md) — `ParentId` (FK)
+- [ExtraFieldTemplates](ExtraFieldTemplate.md) — `ParentId` (FK)
 
 
 ## Example

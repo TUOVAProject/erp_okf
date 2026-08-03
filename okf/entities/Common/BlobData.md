@@ -31,7 +31,7 @@ referenced_by:
 
 A container for blob data.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `BlobData`
 - **Endpoint:** `GET /api/v1/Common/BlobData`
 - **GUID:** `0A07B09A-03F9-4AC2-908A-523A4BE9C770`
@@ -65,17 +65,17 @@ A container for blob data.
 
 **Common**
 
-- [Companies](/entities/Common/Company.md) — `Image` (expand)
-- [Persons](/entities/Common/Person.md) — `Signature` (expand)
+- [Companies](Company.md) — `Image` (expand)
+- [Persons](Person.md) — `Signature` (expand)
 
 **Inventory**
 
-- [PartImages](/entities/Inventory/PartImage.md) — `PhotoThumbnail` (expand)
-- [PartImages](/entities/Inventory/PartImage.md) — `PhotoThumbnailId` (FK)
+- [PartImages](../Inventory/PartImage.md) — `PhotoThumbnail` (expand)
+- [PartImages](../Inventory/PartImage.md) — `PhotoThumbnailId` (FK)
 
 **Purchase**
 
-- [EimDocuments](/entities/Purchase/EimDocument.md) — `BlobDataId` (FK)
+- [EimDocuments](../Purchase/EimDocument.md) — `BlobDataId` (FK)
 
 
 ## Example

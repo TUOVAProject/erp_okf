@@ -30,7 +30,7 @@ references_out:
 
 Represents a remote part configuration.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `RemotePartConfiguration`
 - **Endpoint:** `GET /api/v1/Common/RemotePartConfigurations`
 - **Required permission:** Show part
@@ -42,8 +42,8 @@ Represents a remote part configuration.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | /// The business key identifier of the remote part configuration. |
-| `PartConfigurationIdInRemoteCompany` | `Int64` | no | [PartConfigurations](/entities/Common/PartConfiguration.md) |  | The business key identifier of the row's part configuration in the remote company. |
-| `Rows` | `RemotePartConfigurationRows[]` | no | [RemotePartConfigurationRows](/entities/Common/RemotePartConfigurationRow.md) | expandable, collection | A collection of remote comfiguration rows that belong to the remote configuration. |
+| `PartConfigurationIdInRemoteCompany` | `Int64` | no | [PartConfigurations](PartConfiguration.md) |  | The business key identifier of the row's part configuration in the remote company. |
+| `Rows` | `RemotePartConfigurationRows[]` | no | [RemotePartConfigurationRows](RemotePartConfigurationRow.md) | expandable, collection | A collection of remote comfiguration rows that belong to the remote configuration. |
 
 ## Example
 

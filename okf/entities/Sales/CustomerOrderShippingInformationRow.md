@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a customer order shipping information row.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerOrderShippingInformationRow`
 - **Endpoint:** `GET /api/v1/Sales/CustomerOrderShippingInformationRows`
 - **Required permission:** Show customer orders
@@ -53,19 +53,19 @@ Represents a customer order shipping information row.
 | `Length` | `Decimal` | no |  |  | The length of the customer order shipping information row. |
 | `Width` | `Decimal` | no |  |  | The width of the customer order shipping information row. |
 | `Height` | `Decimal` | no |  |  | The height of the customer order shipping information row. |
-| `PackageTypeId` | `Int64` | no | [PackageTypes](/entities/Inventory/PackageType.md) |  | The business key identifier of the customer order shipping information row's package type. |
-| `PackageType` | `PackageTypes` | no | [PackageTypes](/entities/Inventory/PackageType.md) | expandable | The package type of the customer order shipping information row. |
-| `GoodsTypeId` | `Int64` | no | [GoodsTypes](/entities/Inventory/GoodsType.md) |  | The business key identifier of the customer order shipping information row's goods type. |
-| `GoodsType` | `GoodsTypes` | no | [GoodsTypes](/entities/Inventory/GoodsType.md) | expandable | The goods type of the customer order shipping information row. |
-| `PackagingPartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the customer order shipping information row's packaging part. |
-| `PackagingPart` | `Parts` | no | [Parts](/entities/Inventory/Part.md) | expandable | The packaging part of the customer order shipping information row. |
+| `PackageTypeId` | `Int64` | no | [PackageTypes](../Inventory/PackageType.md) |  | The business key identifier of the customer order shipping information row's package type. |
+| `PackageType` | `PackageTypes` | no | [PackageTypes](../Inventory/PackageType.md) | expandable | The package type of the customer order shipping information row. |
+| `GoodsTypeId` | `Int64` | no | [GoodsTypes](../Inventory/GoodsType.md) |  | The business key identifier of the customer order shipping information row's goods type. |
+| `GoodsType` | `GoodsTypes` | no | [GoodsTypes](../Inventory/GoodsType.md) | expandable | The goods type of the customer order shipping information row. |
+| `PackagingPartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the customer order shipping information row's packaging part. |
+| `PackagingPart` | `Parts` | no | [Parts](../Inventory/Part.md) | expandable | The packaging part of the customer order shipping information row. |
 | `ParentId` | `Int64?` | yes |  |  | The business key identifier of the customer order shipping information row's parent. |
 
 ## Referenced by
 
 **Sales**
 
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `ShippingInformationRows` (expand)
+- [CustomerOrders](CustomerOrder.md) — `ShippingInformationRows` (expand)
 
 
 ## Example

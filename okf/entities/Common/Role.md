@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a user role.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `Role`
 - **Endpoint:** `GET /api/v1/Common/Roles`
 - **Required permission:** Show user
@@ -48,7 +48,7 @@ Represents a user role.
 
 **Common**
 
-- [WarehousePermissions](/entities/Common/WarehousePermission.md) — `Roles` (expand)
+- [WarehousePermissions](WarehousePermission.md) — `Roles` (expand)
 
 
 ## Example

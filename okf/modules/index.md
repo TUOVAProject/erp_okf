@@ -7,11 +7,11 @@ title: Modules
 
 | Module | Queryable | Commands | Types |
 | --- | ---: | ---: | ---: |
-| [Accounting](/modules/Accounting.md) | 41 | 0 | 2 |
-| [Common](/modules/Common.md) | 110 | 0 | 3 |
-| [Infrastructure](/modules/Infrastructure.md) | 0 | 0 | 18 |
-| [Inventory](/modules/Inventory.md) | 50 | 0 | 0 |
-| [Manufacturing](/modules/Manufacturing.md) | 30 | 0 | 0 |
-| [Purchase](/modules/Purchase.md) | 30 | 0 | 0 |
-| [Sales](/modules/Sales.md) | 70 | 4 | 2 |
-| [TimeRecording](/modules/TimeRecording.md) | 20 | 0 | 0 |
+| [Accounting](Accounting.md) | 41 | 0 | 2 |
+| [Common](Common.md) | 110 | 0 | 3 |
+| [Infrastructure](Infrastructure.md) | 0 | 0 | 18 |
+| [Inventory](Inventory.md) | 50 | 0 | 0 |
+| [Manufacturing](Manufacturing.md) | 30 | 0 | 0 |
+| [Purchase](Purchase.md) | 30 | 0 | 0 |
+| [Sales](Sales.md) | 70 | 4 | 2 |
+| [TimeRecording](TimeRecording.md) | 20 | 0 | 0 |

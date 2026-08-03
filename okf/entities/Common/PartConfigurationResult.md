@@ -36,7 +36,7 @@ referenced_by:
 
 Represents a part configuration result.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PartConfigurationResult`
 - **Endpoint:** `GET /api/v1/Common/PartConfigurationResults`
 - **Required permission:** Show part
@@ -48,15 +48,15 @@ Represents a part configuration result.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the part configuration result. |
-| `TemplateId` | `Int64` | no | [PartConfigurationTemplates](/entities/Common/PartConfigurationTemplate.md) |  | The business key identifier of the result's template. |
-| `MainPartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part to configure. |
+| `TemplateId` | `Int64` | no | [PartConfigurationTemplates](PartConfigurationTemplate.md) |  | The business key identifier of the result's template. |
+| `MainPartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the part to configure. |
 | `Quantity` | `Decimal` | no |  |  | The quantity to produce from this configuration. |
 | `UnitPrice` | `Decimal?` | yes |  |  | The unit price of the configured part. |
-| `UnitPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for the configured part's unit price. |
+| `UnitPriceCurrencyId` | `Int64?` | yes | [Currencies](Currency.md) |  | The business key identifier of the currency for the configured part's unit price. |
 | `StandardPrice` | `Decimal?` | yes |  |  | The standard price of the configured part. |
-| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for the configured part's standard price. |
+| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](Currency.md) |  | The business key identifier of the currency for the configured part's standard price. |
 | `UnitPriceInCompanyCurrency` | `Decimal?` | yes |  |  | The unit price of the configured part int the company's currency. |
-| `UnitPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for the configured part's price in company currency. |
+| `UnitPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Currency.md) |  | The business key identifier of the currency for the configured part's price in company currency. |
 | `DiscountPercentage` | `Decimal` | no |  |  | The discount percentage for the configured part. |
 | `LockedUnitPrice` | `Boolean` | no |  |  | If the unit price is locked on the configured part. |
 | `LockedDiscount` | `Boolean` | no |  |  | If the discount percentage is locked on the configured part. |
@@ -65,16 +65,16 @@ Represents a part configuration result.
 | `IsValid` | `Boolean` | no |  |  | If the configuration is valid. |
 | `PriceFormulaFactor` | `Decimal` | no |  |  | The price formula factor for the configured part. |
 | `SnapshotId` | `Int64?` | yes |  |  | The business key identifier of the result's snapshot. |
-| `PartConfigurationId` | `Int64?` | yes | [PartConfigurations](/entities/Common/PartConfiguration.md) |  | The business key identifier of the result's configuration. |
+| `PartConfigurationId` | `Int64?` | yes | [PartConfigurations](PartConfiguration.md) |  | The business key identifier of the result's configuration. |
 | `PartCalculationId` | `Int64?` | yes |  |  | The business key identifier of the result's calculation. |
-| `PartConfigurationSelectionGroupResults` | `PartConfigurationSelectionGroupResults[]` | no | [PartConfigurationSelectionGroupResults](/entities/Common/PartConfigurationSelectionGroupResult.md) | collection, since 25.7 | The list of Part configuration selection group result. |
+| `PartConfigurationSelectionGroupResults` | `PartConfigurationSelectionGroupResults[]` | no | [PartConfigurationSelectionGroupResults](PartConfigurationSelectionGroupResult.md) | collection, since 25.7 | The list of Part configuration selection group result. |
 
 ## Referenced by
 
 **Common**
 
-- [PartConfigurationSelectionGroupResults](/entities/Common/PartConfigurationSelectionGroupResult.md) — `PartConfigurationResultId` (FK)
-- [PartConfigurations](/entities/Common/PartConfiguration.md) — `ResultId` (FK)
+- [PartConfigurationSelectionGroupResults](PartConfigurationSelectionGroupResult.md) — `PartConfigurationResultId` (FK)
+- [PartConfigurations](PartConfiguration.md) — `ResultId` (FK)
 
 
 ## Example

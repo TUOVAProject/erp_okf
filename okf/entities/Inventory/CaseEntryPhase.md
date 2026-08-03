@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a case entry phase.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `CaseEntryPhase`
 - **Endpoint:** `GET /api/v1/Inventory/CaseEntryPhases`
 - **Required permission:** Show case
@@ -47,18 +47,18 @@ Represents a case entry phase.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the phase. |
 | `CaseManagementPhaseId` | `Int64` | no |  |  | The business key identifier of the case management phase that the phase is based on. |
-| `CaseManagementPhase` | `CaseManagementPhases` | no | [CaseManagementPhases](/entities/Inventory/CaseManagementPhase.md) | expandable | The case management phase that the phase is based on. |
+| `CaseManagementPhase` | `CaseManagementPhases` | no | [CaseManagementPhases](CaseManagementPhase.md) | expandable | The case management phase that the phase is based on. |
 | `Description` | `String` | no |  |  | The description of the phase. |
-| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that is responsible for the phase. |
-| `ParentId` | `Int64` | no | [CaseEntry](/entities/Inventory/CaseEntry.md) |  | The business key identifier of the parent of the phase. |
+| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the application user that is responsible for the phase. |
+| `ParentId` | `Int64` | no | [CaseEntry](CaseEntry.md) |  | The business key identifier of the parent of the phase. |
 | `RowIndex` | `Int32` | no |  |  | Determines where the phase is placed in relation to the other phases belonging to the same parent. |
-| `Activities` | `CaseEntryActivities[]` | no | [CaseEntryActivities](/entities/Inventory/CaseEntryActivity.md) | expandable, collection | The activities that are linked to the phase. |
+| `Activities` | `CaseEntryActivities[]` | no | [CaseEntryActivities](CaseEntryActivity.md) | expandable, collection | The activities that are linked to the phase. |
 
 ## Referenced by
 
 **Inventory**
 
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `Phases` (expand)
+- [CaseEntry](CaseEntry.md) — `Phases` (expand)
 
 
 ## Example

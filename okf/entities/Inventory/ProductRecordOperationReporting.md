@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a product record operation reporting.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `ProductRecordOperationReporting`
 - **Endpoint:** `GET /api/v1/Inventory/ProductRecordOperationReportings`
 - **Required permission:** Show serial number
@@ -45,7 +45,7 @@ Represents a product record operation reporting.
 | `Id` | `Int64` | no |  |  | The business key identifier of the product record operation reporting. |
 | `LoggingTimeStamp` | `DateTimeOffset` | no |  |  | The time when the product record operation reporting was reported. |
 | `ReportingType` | `Int32` | no |  | enum | The type that the product record operation reporting is. |
-| `ProductRecordId` | `Int64` | no | [ProductRecords](/entities/Inventory/ProductRecord.md) |  | The business key identifier of the product record that the product record operation reporting applies. |
+| `ProductRecordId` | `Int64` | no | [ProductRecords](ProductRecord.md) |  | The business key identifier of the product record that the product record operation reporting applies. |
 | `OperationReportingId` | `Int64?` | yes |  |  | The business key identifier of the manufacturing order operation reporting that the product record operation reporting applies. |
 | `OrderNumber` | `String` | no |  |  | The product record operation reportings order number. |
 | `ReportedTime` | `TimeSpan?` | yes |  |  | The product record operation reportings reported time. |
@@ -72,7 +72,7 @@ Represents a product record operation reporting.
 
 **Inventory**
 
-- [ProductRecords](/entities/Inventory/ProductRecord.md) — `OperationReportings` (expand)
+- [ProductRecords](ProductRecord.md) — `OperationReportings` (expand)
 
 
 ## Example

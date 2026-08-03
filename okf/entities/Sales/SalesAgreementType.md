@@ -31,7 +31,7 @@ referenced_by:
 
 Represents an agreement type.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `SalesAgreementType`
 - **Endpoint:** `GET /api/v1/Sales/SalesAgreementTypes`
 - **Required permission:** Show agreement
@@ -44,7 +44,7 @@ Represents an agreement type.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the agreement type. |
 | `PriceSetting` | `Int32` | no |  | enum | The price setting of the agreement type. |
-| `PriceListId` | `Int64?` | yes | [PriceLists](/entities/Common/PriceList.md) |  | The business key identifier of the agreement types price list. |
+| `PriceListId` | `Int64?` | yes | [PriceLists](../Common/PriceList.md) |  | The business key identifier of the agreement types price list. |
 | `Number` | `Int64` | no |  | unique | The number of the agreement type. |
 | `Prefix` | `String` | no |  | max length 3 | The prefix of the agreement type. |
 | `Description` | `String` | no |  |  | The translated description of the agreement type. |
@@ -107,7 +107,7 @@ Represents an agreement type.
 
 **Sales**
 
-- [SalesAgreements](/entities/Sales/SalesAgreement.md) — `OrderTypeId` (FK)
+- [SalesAgreements](SalesAgreement.md) — `OrderTypeId` (FK)
 
 
 ## Example

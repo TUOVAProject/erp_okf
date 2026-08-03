@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a customer employee span.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerEmployeeSpan`
 - **Endpoint:** `GET /api/v1/Sales/CustomerEmployeeSpans`
 - **Required permission:** Show customer
@@ -48,7 +48,7 @@ Represents a customer employee span.
 
 **Sales**
 
-- [Customers](/entities/Sales/Customer.md) — `EmployeeSpan` (expand)
+- [Customers](Customer.md) — `EmployeeSpan` (expand)
 
 
 ## Example

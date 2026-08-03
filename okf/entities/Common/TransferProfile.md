@@ -37,7 +37,7 @@ referenced_by:
 
 Represents a transfer profile.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `TransferProfile`
 - **Endpoint:** `GET /api/v1/Common/TransferProfiles`
 - **Required permission:** Show transfer profile
@@ -55,10 +55,10 @@ Represents a transfer profile.
 | `TargetRole` | `Int32` | no |  | enum, since 23.2 | The role of the transfer profile. |
 | `IsVerified` | `Boolean` | no |  | since 23.2 | Specifies if this transfer profile is verified. |
 | `IsActive` | `Boolean` | no |  | since 23.2 | Specifies if this transfer profile is active. |
-| `ConnectionProfileId` | `Int64` | no | [ConnectionProfiles](/entities/Common/ConnectionProfile.md) | since 23.2 | The business key identifier of the transfer profile's connection profile. |
-| `RemoteWarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) | since 23.2 | The business key identifier of the transfer profile's remote warehouse. |
-| `OrderTransferSettingsId` | `Int64` | no | [OrderTransferSettings](/entities/Common/OrderTransferSetting.md) | since 23.2 | The business key identifier of the transfer profile's order transfer setting. |
-| `SupplierId` | `Int64?` | yes | [Suppliers](/entities/Purchase/Supplier.md) | since 23.2 | The business key identifier of the transfer profile's supplier. |
+| `ConnectionProfileId` | `Int64` | no | [ConnectionProfiles](ConnectionProfile.md) | since 23.2 | The business key identifier of the transfer profile's connection profile. |
+| `RemoteWarehouseId` | `Int64` | no | [Warehouses](Warehouse.md) | since 23.2 | The business key identifier of the transfer profile's remote warehouse. |
+| `OrderTransferSettingsId` | `Int64` | no | [OrderTransferSettings](OrderTransferSetting.md) | since 23.2 | The business key identifier of the transfer profile's order transfer setting. |
+| `SupplierId` | `Int64?` | yes | [Suppliers](../Purchase/Supplier.md) | since 23.2 | The business key identifier of the transfer profile's supplier. |
 | `CustomerCode` | `String` | no |  | max length 10, since 23.2 | The customer code of the transfer profile. |
 
 ## Enumerations
@@ -84,13 +84,13 @@ Represents a transfer profile.
 
 **Inventory**
 
-- [PartPlanningInformation](/entities/Inventory/PartPlanningInformation.md) — `DefaultTransferProfileId` (FK)
+- [PartPlanningInformation](../Inventory/PartPlanningInformation.md) — `DefaultTransferProfileId` (FK)
 
 **Sales**
 
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `TransferProfileId` (FK)
-- [CustomerOrderTypes](/entities/Sales/CustomerOrderType.md) — `DefaultTransferProfileId` (FK)
-- [QuoteRows](/entities/Sales/QuoteRow.md) — `TransferProfileId` (FK)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `TransferProfileId` (FK)
+- [CustomerOrderTypes](../Sales/CustomerOrderType.md) — `DefaultTransferProfileId` (FK)
+- [QuoteRows](../Sales/QuoteRow.md) — `TransferProfileId` (FK)
 
 
 ## Example

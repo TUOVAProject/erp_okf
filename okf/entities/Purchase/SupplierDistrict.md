@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a supplier district.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `SupplierDistrict`
 - **Endpoint:** `GET /api/v1/Purchase/SupplierDistricts`
 - **Required permission:** Show supplier
@@ -48,8 +48,8 @@ Represents a supplier district.
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `District` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `DistrictId` (FK)
+- [Suppliers](Supplier.md) — `District` (expand)
+- [Suppliers](Supplier.md) — `DistrictId` (FK)
 
 
 ## Example

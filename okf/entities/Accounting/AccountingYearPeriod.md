@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a accounting year period.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccountingYearPeriod`
 - **Endpoint:** `GET /api/v1/Accounting/AccountingYearPeriods`
 - **Required permission:** Show accounting year
@@ -48,8 +48,8 @@ Represents a accounting year period.
 | `ToDate` | `DateTimeOffset?` | yes |  |  | Period date, to |
 | `Number` | `Int32?` | yes |  |  | Period number |
 | `Status` | `Int32` | no |  | enum | Status of the period |
-| `AccountingYearId` | `Int64` | no | [AccountingYears](/entities/Accounting/AccountingYear.md) |  | The business key identifier of the accounting year |
-| `AccountingYear` | `AccountingYears` | no | [AccountingYears](/entities/Accounting/AccountingYear.md) | expandable | The accounting year of the period. |
+| `AccountingYearId` | `Int64` | no | [AccountingYears](AccountingYear.md) |  | The business key identifier of the accounting year |
+| `AccountingYear` | `AccountingYears` | no | [AccountingYears](AccountingYear.md) | expandable | The accounting year of the period. |
 
 ## Enumerations
 
@@ -67,9 +67,9 @@ Represents a accounting year period.
 
 **Accounting**
 
-- [AccountingBudgetPeriods](/entities/Accounting/AccountingBudgetPeriod.md) — `PeriodId` (FK)
-- [AccrualAccountingRows](/entities/Accounting/AccrualAccountingRow.md) — `Period` (expand)
-- [AccrualAccountingRows](/entities/Accounting/AccrualAccountingRow.md) — `PeriodId` (FK)
+- [AccountingBudgetPeriods](AccountingBudgetPeriod.md) — `PeriodId` (FK)
+- [AccrualAccountingRows](AccrualAccountingRow.md) — `Period` (expand)
+- [AccrualAccountingRows](AccrualAccountingRow.md) — `PeriodId` (FK)
 
 
 ## Example

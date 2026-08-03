@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a central bank code.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `CentralBankCode`
 - **Endpoint:** `GET /api/v1/Common/CentralBankCodes`
 - **Required permission:** Show bank settings
@@ -49,8 +49,8 @@ Represents a central bank code.
 
 **Common**
 
-- [BusinessContactBankAccounts](/entities/Common/BusinessContactBankAccount.md) — `CentralBankCode` (expand)
-- [BusinessContactBankAccounts](/entities/Common/BusinessContactBankAccount.md) — `CentralBankCodeId` (FK)
+- [BusinessContactBankAccounts](BusinessContactBankAccount.md) — `CentralBankCode` (expand)
+- [BusinessContactBankAccounts](BusinessContactBankAccount.md) — `CentralBankCodeId` (FK)
 
 
 ## Example

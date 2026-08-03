@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a location quantity item where the quantity and possible product record is to be found.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PartLocationProductRecord`
 - **Endpoint:** `GET /api/v1/Inventory/PartLocationProductRecords`
 - **Required permission:** Show part
@@ -45,15 +45,15 @@ Represents a location quantity item where the quantity and possible product reco
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the location quantity item. |
-| `PartLocationId` | `Int64` | no | [PartLocations](/entities/Inventory/PartLocation.md) |  | The business key identifier of the location to which the location quantity item belong. |
-| `ProductRecordId` | `Int64?` | yes | [ProductRecords](/entities/Inventory/ProductRecord.md) |  | The business key identifier of the product record of the location quantity item. |
+| `PartLocationId` | `Int64` | no | [PartLocations](PartLocation.md) |  | The business key identifier of the location to which the location quantity item belong. |
+| `ProductRecordId` | `Int64?` | yes | [ProductRecords](ProductRecord.md) |  | The business key identifier of the product record of the location quantity item. |
 | `Quantity` | `Decimal` | no |  |  | The quantity in standard unit. |
 
 ## Referenced by
 
 **Inventory**
 
-- [PartLocations](/entities/Inventory/PartLocation.md) — `PartLocationProductRecords` (expand)
+- [PartLocations](PartLocation.md) — `PartLocationProductRecords` (expand)
 
 
 ## Example

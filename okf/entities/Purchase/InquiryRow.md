@@ -42,7 +42,7 @@ referenced_by:
 
 Represents an inquiry row.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `InquiryRow`
 - **Endpoint:** `GET /api/v1/Purchase/InquiryRows`
 - **Required permission:** Show inquiry
@@ -56,33 +56,33 @@ Represents an inquiry row.
 | `Id` | `Int64` | no |  |  | The business key identifier of the row. |
 | `Position` | `Int64?` | yes |  |  | The position of the row. |
 | `OrderRowType` | `Int32` | no |  | enum | The row type. |
-| `PartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the row's part. |
+| `PartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the row's part. |
 | `EntityIdentityString` | `String` | no |  | max length 20 | The human readable identifier of the row's entity. |
 | `AdditionalRowDescription` | `String` | no |  | max length 80 | The additional row description of the row. |
 | `FreeTextHtml` | `String` | no |  | max length 0 | The free text row's rich text HTML data. |
 | `FreeText` | `String` | no |  | max length 0 | The free text row's raw text data. |
-| `ParentRowId` | `Int64?` | yes | [InquiryRows](/entities/Purchase/InquiryRow.md) |  | The business key identifier of the row's parent. |
+| `ParentRowId` | `Int64?` | yes | [InquiryRows](InquiryRow.md) |  | The business key identifier of the row's parent. |
 | `DeliveryDate` | `DateTimeOffset?` | yes |  |  | The delivery date of the row. |
-| `RevisionId` | `Int64?` | yes | [Revisions](/entities/Common/Revision.md) |  | The business key identifier of the row's revision. |
-| `Revision` | `Revisions` | no | [Revisions](/entities/Common/Revision.md) | expandable | The revision of the row. |
+| `RevisionId` | `Int64?` | yes | [Revisions](../Common/Revision.md) |  | The business key identifier of the row's revision. |
+| `Revision` | `Revisions` | no | [Revisions](../Common/Revision.md) | expandable | The revision of the row. |
 | `OrderedQuantity` | `Decimal` | no |  |  | The ordered quantity of the row. |
 | `Price` | `Decimal?` | yes |  |  | The price of the row. |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row's price currency. |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row's price currency. |
 | `Discount` | `Decimal` | no |  |  | The discount specified on the row. |
 | `ToolId` | `Int64?` | yes |  | **deprecated since 2.48** | The business key identifier of the row's tool. _(Replaced by Part)_ |
-| `UnitId` | `Int64?` | yes | [Units](/entities/Common/Unit.md) |  | The business key identifier of the row's unit. |
-| `Unit` | `Units` | no | [Units](/entities/Common/Unit.md) | expandable | The unit of the row. |
-| `VatRateId` | `Int64` | no | [VatRates](/entities/Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the row's warehouse. |
+| `UnitId` | `Int64?` | yes | [Units](../Common/Unit.md) |  | The business key identifier of the row's unit. |
+| `Unit` | `Units` | no | [Units](../Common/Unit.md) | expandable | The unit of the row. |
+| `VatRateId` | `Int64` | no | [VatRates](../Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the row's warehouse. |
 | `WeightPerUnit` | `Decimal?` | yes |  |  | The weight per unit of the row. |
 | `OrderDate` | `DateTimeOffset` | no |  |  | The order date of the row. |
 | `ConversionFactor` | `Decimal` | no |  |  | The conversion factor of the row. |
 | `PriceInCompanyCurrency` | `Decimal?` | yes |  |  | The row's price in the company currency. |
-| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the company currency. |
+| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the company currency. |
 | `SetupPriceInCompanyCurrency` | `Decimal?` | yes |  |  | The row's setup price in the company currency. |
-| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the company currency. |
+| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the company currency. |
 | `StandardPrice` | `Decimal?` | yes |  |  | The standard price of the row. |
-| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row's standard price currency. |
+| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row's standard price currency. |
 | `SetupPrice` | `Decimal?` | yes |  |  | The setup price of the row. |
 | `SetupPriceCurrencyId` | `Int64?` | yes |  |  | The business key identifier of the row's setup price currency. |
 | `ShowPrice` | `Boolean` | no |  |  | Specifies if price should be shown for the row. |
@@ -91,12 +91,12 @@ Represents an inquiry row.
 | `PartStatus` | `Int32?` | yes |  | enum | The part status of the row. |
 | `OrderedQuantityInOrderUnit` | `Decimal` | no |  |  | The ordered quantity of the row in the order unit. |
 | `ShowFreeTextIn` | `Int32` | no |  | bitmask, enum | Specifies which documents the free text data of the row should be projected on. |
-| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](/entities/Common/StatisticalGoodsCode.md) |  | The business key identifier of the row's statistical goods code. |
-| `PurchaseOrderId` | `Int64?` | yes | [PurchaseOrder](/entities/Purchase/PurchaseOrder.md) |  | The business key identifier of the purchase order that was created as a result of the row. |
+| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](../Common/StatisticalGoodsCode.md) |  | The business key identifier of the row's statistical goods code. |
+| `PurchaseOrderId` | `Int64?` | yes | [PurchaseOrder](PurchaseOrder.md) |  | The business key identifier of the purchase order that was created as a result of the row. |
 | `ExemptFromStatistics` | `Boolean` | no |  |  | Specifies if the row should be exempted from statistics. |
-| `ParentOrderId` | `Int64` | no | [Inquiries](/entities/Purchase/Inquiry.md) | since 2.30 | The business key identifier of the rows parent inquiry. |
-| `CodingId` | `Int64?` | yes | [Codings](/entities/Accounting/Coding.md) | since 2.33 | The business key identifier of the rows coding. |
-| `Coding` | `Codings` | no | [Codings](/entities/Accounting/Coding.md) | expandable, since 2.33 | The coding of the row. |
+| `ParentOrderId` | `Int64` | no | [Inquiries](Inquiry.md) | since 2.30 | The business key identifier of the rows parent inquiry. |
+| `CodingId` | `Int64?` | yes | [Codings](../Accounting/Coding.md) | since 2.33 | The business key identifier of the rows coding. |
+| `Coding` | `Codings` | no | [Codings](../Accounting/Coding.md) | expandable, since 2.33 | The coding of the row. |
 | `RowIndex` | `Int32?` | yes |  | since 2.54 | The index of the row. |
 
 ## Enumerations
@@ -158,8 +158,8 @@ Represents an inquiry row.
 
 **Purchase**
 
-- [Inquiries](/entities/Purchase/Inquiry.md) — `Rows` (expand)
-- [InquiryRows](/entities/Purchase/InquiryRow.md) — `ParentRowId` (FK)
+- [Inquiries](Inquiry.md) — `Rows` (expand)
+- [InquiryRows](InquiryRow.md) — `ParentRowId` (FK)
 
 
 ## Example

@@ -32,7 +32,7 @@ references_out:
 
 Represents a manufacturing picking list.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ManufacturingPickingList`
 - **Endpoint:** `GET /api/v1/Manufacturing/ManufacturingPickingLists`
 - **Required permission:** Show manufacturing orders
@@ -45,18 +45,18 @@ Represents a manufacturing picking list.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the picking list. |
 | `Number` | `String` | no |  |  | The human readable identifier of the picking list. |
-| `CreatedByApplicationUserId` | `Int64` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that created the picking list. |
-| `CreatedByPersonId` | `Int64` | no | [Persons](/entities/Common/Person.md) |  | The business key identifier of the person that created the picking list. |
+| `CreatedByApplicationUserId` | `Int64` | no | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the application user that created the picking list. |
+| `CreatedByPersonId` | `Int64` | no | [Persons](../Common/Person.md) |  | The business key identifier of the person that created the picking list. |
 | `CreatedTimestamp` | `DateTimeOffset` | no |  |  | The date the picking list was created. |
-| `PrintedByApplicationUserId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that printed the picking list. |
-| `PrintedByPersonId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the person that printed the picking list. |
+| `PrintedByApplicationUserId` | `Int64?` | yes | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the application user that printed the picking list. |
+| `PrintedByPersonId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the person that printed the picking list. |
 | `PrintedTimestamp` | `DateTimeOffset?` | yes |  |  | The date the picking list was printed. |
 | `Status` | `Int32` | no |  | enum | The status of the picking list. |
 | `Grouping` | `Int32` | no |  | enum | The grouping for the picking list. |
 | `Sorting` | `Int32` | no |  | enum | The sorting for the picking list. |
-| `WarehouseId` | `Int64?` | yes | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse for the picking list. |
+| `WarehouseId` | `Int64?` | yes | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse for the picking list. |
 | `Type` | `Int32` | no |  | enum | The type of picking list. |
-| `Materials` | `ManufacturingPickingListMaterials[]` | no | [ManufacturingPickingListMaterials](/entities/Manufacturing/ManufacturingPickingListMaterial.md) | collection | The picking lists materials |
+| `Materials` | `ManufacturingPickingListMaterials[]` | no | [ManufacturingPickingListMaterials](ManufacturingPickingListMaterial.md) | collection | The picking lists materials |
 
 ## Enumerations
 

@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a project phase.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ProjectPhase`
 - **Endpoint:** `GET /api/v1/Common/ProjectPhases`
 - **Required permission:** Show Activity list – Project
@@ -49,20 +49,20 @@ Represents a project phase.
 | `Id` | `Int64` | no |  |  | The business key identifier of the project phase. |
 | `Description` | `String` | no |  |  | The translated description of the project phase. |
 | `Number` | `Int64` | no |  |  | The number of the project phase. |
-| `PhaseTypeId` | `Int64` | no | [ProjectPhaseTypes](/entities/Common/ProjectPhaseType.md) |  | The business key identifier of the type of the project phase. References ProjectPhaseTypes . |
-| `PhaseType` | `ProjectPhaseTypes` | no | [ProjectPhaseTypes](/entities/Common/ProjectPhaseType.md) | expandable | The type of the project phase. |
-| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the project phase's reponsible user. References ApplicationUsers . |
-| `ParentId` | `Int64` | no | [Projects](/entities/Common/Project.md) |  | The business key identifier of the phase's parent. References Projects . |
+| `PhaseTypeId` | `Int64` | no | [ProjectPhaseTypes](ProjectPhaseType.md) |  | The business key identifier of the type of the project phase. References ProjectPhaseTypes . |
+| `PhaseType` | `ProjectPhaseTypes` | no | [ProjectPhaseTypes](ProjectPhaseType.md) | expandable | The type of the project phase. |
+| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](ApplicationUser.md) |  | The business key identifier of the project phase's reponsible user. References ApplicationUsers . |
+| `ParentId` | `Int64` | no | [Projects](Project.md) |  | The business key identifier of the phase's parent. References Projects . |
 | `IsDummy` | `Boolean` | no |  |  | Specifies if the project phase is a dummy phase. |
 | `RowIndex` | `Int32` | no |  |  | The row index of the project phase. |
-| `Activities` | `ProjectActivities[]` | no | [ProjectActivities](/entities/Common/ProjectActivity.md) | expandable, collection | The activities of the project phase. |
+| `Activities` | `ProjectActivities[]` | no | [ProjectActivities](ProjectActivity.md) | expandable, collection | The activities of the project phase. |
 
 ## Referenced by
 
 **Common**
 
-- [ProjectActivities](/entities/Common/ProjectActivity.md) — `ParentId` (FK)
-- [Projects](/entities/Common/Project.md) — `Phases` (expand)
+- [ProjectActivities](ProjectActivity.md) — `ParentId` (FK)
+- [Projects](Project.md) — `Phases` (expand)
 
 
 ## Example

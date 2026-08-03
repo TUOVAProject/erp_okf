@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a form report translation group.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `FormReportTranslationGroup`
 - **Endpoint:** `GET /api/v1/Common/FormReportTranslationGroups`
 - **GUID:** `EF268C33-EED6-4E25-81AB-9B615FEDC2D9`
@@ -45,7 +45,7 @@ Represents a form report translation group.
 | `IsPreset` | `Boolean` | no |  |  | Whether or not the translation group is a preset delivered with MONITOR or not. |
 | `Description` | `String` | no |  |  | The translated description of the translation group. |
 | `Code` | `String` | no |  | unique, max length 20 | The human readable identifier of the translation group. |
-| `Translations` | `FormReportTranslations[]` | no | [FormReportTranslations](/entities/Common/FormReportTranslation.md) | collection | The translations that belong to the translation group. |
+| `Translations` | `FormReportTranslations[]` | no | [FormReportTranslations](FormReportTranslation.md) | collection | The translations that belong to the translation group. |
 
 ## Enumerations
 
@@ -62,7 +62,7 @@ Represents a form report translation group.
 
 **Common**
 
-- [FormReportTranslations](/entities/Common/FormReportTranslation.md) — `FormReportTranslationGroupId` (FK)
+- [FormReportTranslations](FormReportTranslation.md) — `FormReportTranslationGroupId` (FK)
 
 
 ## Example

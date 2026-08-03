@@ -38,7 +38,7 @@ referenced_by:
 
 Represents a supplier part link.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `SupplierPartLink`
 - **Endpoint:** `GET /api/v1/Purchase/SupplierPartLinks`
 - **Required permission:** Show supplier
@@ -50,11 +50,11 @@ Represents a supplier part link.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the supplier part link. |
-| `SupplierId` | `Int64` | no | [Suppliers](/entities/Purchase/Supplier.md) |  | The business key identifier of the supplier part link supplier. |
+| `SupplierId` | `Int64` | no | [Suppliers](Supplier.md) |  | The business key identifier of the supplier part link supplier. |
 | `SupplierPartNumber` | `String` | no |  |  | The supplier part link part number. |
 | `PurchaseCommentShowInForms` | `Int32` | no |  | bitmask, enum | Specifies on which forms the purchase comment should be shown. |
 | `IncludeAlloyCostOnPurchaseOrder` | `Boolean` | no |  |  | Include alloy cost on purchase orders for this supplier part link. |
-| `PartId` | `Int64` | no | [Part](/entities/Inventory/Part.md) |  | The business key identifier of the supplier part link part. |
+| `PartId` | `Int64` | no | [Part](../Inventory/Part.md) |  | The business key identifier of the supplier part link part. |
 | `Price` | `Decimal?` | yes |  |  | The price of the supplier link part. |
 | `SetupPrice` | `Decimal?` | yes |  |  | The setup price of the supplier link part. |
 | `LeadTime` | `TimeSpan?` | yes |  |  | The lead time of the supplier part link in work days. |
@@ -64,20 +64,20 @@ Represents a supplier part link.
 | `FuturePriceValidThrough` | `DateTimeOffset?` | yes |  |  | The valid through date of the supplier part link future price. |
 | `FutureSetupPrice` | `Decimal?` | yes |  |  | The future setup price of the supplier part link. |
 | `QuantityPerPackage` | `Decimal?` | yes |  |  | The quantity per package of the supplier part link. |
-| `OverridePurchaseCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the supplier part link override purchase comment. |
-| `OverridePurchaseComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The supplier part link override purchase comment. |
-| `UnitId` | `Int64` | no | [Units](/entities/Common/Unit.md) |  | The business key identifier of the supplier part link unit. |
-| `Unit` | `Units` | no | [Units](/entities/Common/Unit.md) | expandable | The supplier part link unit. |
-| `PriceCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the supplier part link price currency. |
-| `PriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The supplier part link price currency. |
-| `PriceCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the supplier part link price comment. |
-| `PriceComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The supplier part link price comment. |
+| `OverridePurchaseCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the supplier part link override purchase comment. |
+| `OverridePurchaseComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The supplier part link override purchase comment. |
+| `UnitId` | `Int64` | no | [Units](../Common/Unit.md) |  | The business key identifier of the supplier part link unit. |
+| `Unit` | `Units` | no | [Units](../Common/Unit.md) | expandable | The supplier part link unit. |
+| `PriceCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the supplier part link price currency. |
+| `PriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The supplier part link price currency. |
+| `PriceCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the supplier part link price comment. |
+| `PriceComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The supplier part link price comment. |
 | `Brand` | `String` | no |  | max length 80, since 2.47 | The brand of the supplier part link. |
 | `Storage` | `String` | no |  | max length 35, since 2.47 | The storage of the supplier part link. |
 | `Dock` | `String` | no |  | max length 35, since 2.47 | The dock of the supplier part link. |
 | `IsRemoteConfigured` | `Boolean` | no |  | since 23.2 | Specifies if the part is remote configured via the transfer profile connected to the supplier. |
-| `PartPurchaseExpenseValuesId` | `Int64?` | yes | [PartPurchaseExpenseValues](/entities/Inventory/PartPurchaseExpenseValues.md) | since 26.6 | The business key identitier of the supplier part link purchase expense values. |
-| `PartPurchaseExpenseValues` | `PartPurchaseExpenseValues` | no | [PartPurchaseExpenseValues](/entities/Inventory/PartPurchaseExpenseValues.md) | expandable, since 26.6 | The supplier part link purchase expense values. |
+| `PartPurchaseExpenseValuesId` | `Int64?` | yes | [PartPurchaseExpenseValues](../Inventory/PartPurchaseExpenseValues.md) | since 26.6 | The business key identitier of the supplier part link purchase expense values. |
+| `PartPurchaseExpenseValues` | `PartPurchaseExpenseValues` | no | [PartPurchaseExpenseValues](../Inventory/PartPurchaseExpenseValues.md) | expandable, since 26.6 | The supplier part link purchase expense values. |
 
 ## Enumerations
 
@@ -95,13 +95,13 @@ Represents a supplier part link.
 
 **Inventory**
 
-- [PartPlanningInformation](/entities/Inventory/PartPlanningInformation.md) — `ActiveSupplierPartLink` (expand)
-- [PartPlanningInformation](/entities/Inventory/PartPlanningInformation.md) — `ActiveSupplierPartLinkId` (FK)
-- [Parts](/entities/Inventory/Part.md) — `SupplierPartLinks` (expand)
+- [PartPlanningInformation](../Inventory/PartPlanningInformation.md) — `ActiveSupplierPartLink` (expand)
+- [PartPlanningInformation](../Inventory/PartPlanningInformation.md) — `ActiveSupplierPartLinkId` (FK)
+- [Parts](../Inventory/Part.md) — `SupplierPartLinks` (expand)
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `SupplierPartLinks` (expand)
+- [Suppliers](Supplier.md) — `SupplierPartLinks` (expand)
 
 
 ## Example

@@ -24,7 +24,7 @@ property_count: 1
 
 Represents a date/time value for update commands.
 
-- **Module:** [Infrastructure](/modules/Infrastructure.md)
+- **Module:** [Infrastructure](../../modules/Infrastructure.md)
 - **API class:** `NotNullDateTimeInput`
 - **Endpoint:** none — this is a payload type, not a queryable resource.
 - **Introduced in:** 2.18

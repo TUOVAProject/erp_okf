@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a order quantity template on part that holds many partial quantities.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `OrderQuantityTemplate`
 - **Endpoint:** `GET /api/v1/Inventory/OrderQuantityTemplates`
 - **Required permission:** Show part
@@ -44,14 +44,14 @@ Represents a order quantity template on part that holds many partial quantities.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the entity. |
-| `PartialQuantities` | `PartialQuantities[]` | no | [PartialQuantities](/entities/Common/PartialQuantity.md) | expandable, collection | The partial quantities for the order quantity. |
+| `PartialQuantities` | `PartialQuantities[]` | no | [PartialQuantities](../Common/PartialQuantity.md) | expandable, collection | The partial quantities for the order quantity. |
 
 ## Referenced by
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `OrderQuantity` (expand)
-- [Parts](/entities/Inventory/Part.md) — `OrderQuantityId` (FK)
+- [Parts](Part.md) — `OrderQuantity` (expand)
+- [Parts](Part.md) — `OrderQuantityId` (FK)
 
 
 ## Example

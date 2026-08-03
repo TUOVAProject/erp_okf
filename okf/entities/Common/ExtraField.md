@@ -39,7 +39,7 @@ referenced_by:
 
 Represents an extra field.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ExtraField`
 - **Endpoint:** `GET /api/v1/Common/ExtraFields`
 - **Required permission:** Show extra fields
@@ -60,37 +60,37 @@ Represents an extra field.
 | `DecimalValue` | `Decimal?` | yes |  |  | The decimal value of the extra field. |
 | `DateOnlyValue` | `DateTimeOffset?` | yes |  |  | The date-only value of the extra field. |
 | `DateTimeValue` | `DateTimeOffset?` | yes |  |  | The date-time value of the extra field. |
-| `SelectedOptionId` | `Int64?` | yes | [ExtraFieldOptionTemplates](/entities/Common/ExtraFieldOptionTemplate.md) |  | The business key identifier of the selected option. References ExtraFieldOptionTemplates . |
-| `SelectedOption` | `ExtraFieldOptionTemplates` | no | [ExtraFieldOptionTemplates](/entities/Common/ExtraFieldOptionTemplate.md) | expandable | The selected option of the extra field. Only applicable to extra fields of type 6 (Options). |
-| `SelectedOptionIds` | `String` | no | [ExtraFieldOptionTemplates](/entities/Common/ExtraFieldOptionTemplate.md) |  | A comma separated value list of the selected options. References multiple ExtraFieldOptionTemplates . |
-| `SelectedOptions` | `ExtraFieldOptionTemplates[]` | no | [ExtraFieldOptionTemplates](/entities/Common/ExtraFieldOptionTemplate.md) | expandable, collection | The selected options of the extra field. Only applicable to extra fields of type 7 (Multiple options). |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) | since 2.36 | The business key identifier of the comment value of the extra field. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable, since 2.36 | The comment value of the extra field. |
+| `SelectedOptionId` | `Int64?` | yes | [ExtraFieldOptionTemplates](ExtraFieldOptionTemplate.md) |  | The business key identifier of the selected option. References ExtraFieldOptionTemplates . |
+| `SelectedOption` | `ExtraFieldOptionTemplates` | no | [ExtraFieldOptionTemplates](ExtraFieldOptionTemplate.md) | expandable | The selected option of the extra field. Only applicable to extra fields of type 6 (Options). |
+| `SelectedOptionIds` | `String` | no | [ExtraFieldOptionTemplates](ExtraFieldOptionTemplate.md) |  | A comma separated value list of the selected options. References multiple ExtraFieldOptionTemplates . |
+| `SelectedOptions` | `ExtraFieldOptionTemplates[]` | no | [ExtraFieldOptionTemplates](ExtraFieldOptionTemplate.md) | expandable, collection | The selected options of the extra field. Only applicable to extra fields of type 7 (Multiple options). |
+| `CommentId` | `Int64?` | yes | [Comments](Comment.md) | since 2.36 | The business key identifier of the comment value of the extra field. |
+| `Comment` | `Comments` | no | [Comments](Comment.md) | expandable, since 2.36 | The comment value of the extra field. |
 
 ## Referenced by
 
 **Common**
 
-- [Persons](/entities/Common/Person.md) — `ExtraFields` (expand)
-- [Projects](/entities/Common/Project.md) — `ExtraFields` (expand)
+- [Persons](Person.md) — `ExtraFields` (expand)
+- [Projects](Project.md) — `ExtraFields` (expand)
 
 **Inventory**
 
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `ExtraFields` (expand)
-- [Parts](/entities/Inventory/Part.md) — `ExtraFields` (expand)
-- [ProductRecords](/entities/Inventory/ProductRecord.md) — `ExtraFields` (expand)
+- [CaseEntry](../Inventory/CaseEntry.md) — `ExtraFields` (expand)
+- [Parts](../Inventory/Part.md) — `ExtraFields` (expand)
+- [ProductRecords](../Inventory/ProductRecord.md) — `ExtraFields` (expand)
 
 **Manufacturing**
 
-- [OperationRows](/entities/Manufacturing/OperationRow.md) — `ExtraFields` (expand)
+- [OperationRows](../Manufacturing/OperationRow.md) — `ExtraFields` (expand)
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `ExtraFields` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `ExtraFields` (expand)
 
 **Sales**
 
-- [Customers](/entities/Sales/Customer.md) — `ExtraFields` (expand)
+- [Customers](../Sales/Customer.md) — `ExtraFields` (expand)
 
 
 ## Example

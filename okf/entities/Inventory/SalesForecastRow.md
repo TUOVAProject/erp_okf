@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a sales forecast row.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `SalesForecastRow`
 - **Endpoint:** `GET /api/v1/Inventory/SalesForecastRows`
 - **Required permission:** Show basic data for part
@@ -45,17 +45,17 @@ Represents a sales forecast row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the sales forecast row. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier for the part of the sales forecast row. |
+| `PartId` | `Int64` | no | [Parts](Part.md) |  | The business key identifier for the part of the sales forecast row. |
 | `Quantity` | `Decimal` | no |  |  | The quantity of the sales forecast row. |
-| `UnitId` | `Int64` | no | [Units](/entities/Common/Unit.md) |  | The business key identifier for the unit of the sales forecast row. |
+| `UnitId` | `Int64` | no | [Units](../Common/Unit.md) |  | The business key identifier for the unit of the sales forecast row. |
 | `DeliveryDate` | `DateTimeOffset` | no |  |  | The delivery date of the sales forecast row. |
-| `SalesForecastId` | `Int64` | no | [SalesForecasts](/entities/Inventory/SalesForecast.md) | since 23.2 | The business key identifier of the sales forecast that the row belongs to. |
+| `SalesForecastId` | `Int64` | no | [SalesForecasts](SalesForecast.md) | since 23.2 | The business key identifier of the sales forecast that the row belongs to. |
 
 ## Referenced by
 
 **Inventory**
 
-- [SalesForecasts](/entities/Inventory/SalesForecast.md) — `SalesForecastRows` (expand)
+- [SalesForecasts](SalesForecast.md) — `SalesForecastRows` (expand)
 
 
 ## Example

@@ -29,7 +29,7 @@ references_out:
 
 Represents a relation between two project activities.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ProjectActivityRelation`
 - **Endpoint:** `GET /api/v1/Common/ProjectActivityRelations`
 - **Required permission:** Show Activity list – Project
@@ -41,8 +41,8 @@ Represents a relation between two project activities.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the project activity relation. |
-| `ParentId` | `Int64` | no | [ProjectActivities](/entities/Common/ProjectActivity.md) |  | The business key identifier of the activity that the relation belongs to. |
-| `DependentOnEntityId` | `Int64` | no | [ProjectActivities](/entities/Common/ProjectActivity.md) |  | The business key identifier of the activity that the relation depends on. |
+| `ParentId` | `Int64` | no | [ProjectActivities](ProjectActivity.md) |  | The business key identifier of the activity that the relation belongs to. |
+| `DependentOnEntityId` | `Int64` | no | [ProjectActivities](ProjectActivity.md) |  | The business key identifier of the activity that the relation depends on. |
 | `Type` | `Int32` | no |  | enum | The type of activitity relation. |
 | `RowIndex` | `Int32` | no |  |  | The row index of the activity relation. |
 

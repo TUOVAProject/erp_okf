@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a maintenance reporting row.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `MaintenanceReportingRow`
 - **Endpoint:** `GET /api/v1/Manufacturing/MaintenanceReportingRows`
 - **Required permission:** Show maintenance plan
@@ -48,12 +48,12 @@ Represents a maintenance reporting row.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the entity. |
 | `Code` | `String` | no |  | max length 12 | The human readable identifier of the maintenance reporting row. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the maintenance reporting row. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the maintenance reporting row's comment. |
-| `Instruction` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The instruction of the maintenance reporting row. |
-| `InstructionId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the maintenance reporting row's instruction. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment of the maintenance reporting row. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the maintenance reporting row's comment. |
+| `Instruction` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The instruction of the maintenance reporting row. |
+| `InstructionId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the maintenance reporting row's instruction. |
 | `Description` | `String` | no |  |  | The translated description of the maintenance reporting row. |
-| `MaintenanceReportingSelectionRowId` | `Int64` | no | [MaintenanceReportingSelectionRows](/entities/Manufacturing/MaintenanceReportingSelectionRow.md) |  | The business key identifier of the maintenance reporting selection row that the maintenance reporting row relates to. |
+| `MaintenanceReportingSelectionRowId` | `Int64` | no | [MaintenanceReportingSelectionRows](MaintenanceReportingSelectionRow.md) |  | The business key identifier of the maintenance reporting selection row that the maintenance reporting row relates to. |
 | `RowIndex` | `Int32?` | yes |  |  | The row index of the maintenance reporting row. |
 | `Checkbox` | `Boolean` | no |  |  | The boolean value of the maintenance reporting row. |
 | `DateTimeValue` | `DateTimeOffset?` | yes |  |  | The timestamp of the maintenance reporting row. |
@@ -64,9 +64,9 @@ Represents a maintenance reporting row.
 | `MinValue` | `Decimal?` | yes |  |  | The minimum tolerance value of the maintenance reporting row. |
 | `MaxValue` | `Decimal?` | yes |  |  | The maximum tolerance value of the maintenance reporting row. |
 | `Value` | `Decimal?` | yes |  |  | The setpoint value of the maintenance reporting row. |
-| `MasterToolId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the tool that the maintenance reporting row relates to. |
-| `MasterToolProductRecordId` | `Int64?` | yes | [ProductRecords](/entities/Inventory/ProductRecord.md) |  | The business key identifier of the tool's product record that the maintenance reporting row relates to. |
-| `UnitId` | `Int64?` | yes | [Units](/entities/Common/Unit.md) |  | The business key identifier of the unit of the maintenance reporting row's value. |
+| `MasterToolId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the tool that the maintenance reporting row relates to. |
+| `MasterToolProductRecordId` | `Int64?` | yes | [ProductRecords](../Inventory/ProductRecord.md) |  | The business key identifier of the tool's product record that the maintenance reporting row relates to. |
+| `UnitId` | `Int64?` | yes | [Units](../Common/Unit.md) |  | The business key identifier of the unit of the maintenance reporting row's value. |
 
 ## Enumerations
 
@@ -92,7 +92,7 @@ Represents a maintenance reporting row.
 
 **Manufacturing**
 
-- [MaintenanceReportingSelectionRows](/entities/Manufacturing/MaintenanceReportingSelectionRow.md) — `MaintenanceReportingRows` (expand)
+- [MaintenanceReportingSelectionRows](MaintenanceReportingSelectionRow.md) — `MaintenanceReportingRows` (expand)
 
 
 ## Example

@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a shipments customs information document.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `ShipmentCustomsDocument`
 - **Endpoint:** `GET /api/v1/Sales/ShipmentCustomsDocuments`
 - **Required permission:** Show shipment
@@ -43,7 +43,7 @@ Represents a shipments customs information document.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the shipments customs information document. |
-| `ParentId` | `Int64` | no | [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) |  | The business key identifier of the documents customs information. |
+| `ParentId` | `Int64` | no | [ShipmentCustoms](ShipmentCustoms.md) |  | The business key identifier of the documents customs information. |
 | `Code` | `String` | no |  | max length 35 | The documents code. |
 | `Name` | `String` | no |  | max length 50 | The documents name. |
 | `RowIndex` | `Int32?` | yes |  |  | The documents row index. |
@@ -52,7 +52,7 @@ Represents a shipments customs information document.
 
 **Sales**
 
-- [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) — `Documents` (expand)
+- [ShipmentCustoms](ShipmentCustoms.md) — `Documents` (expand)
 
 
 ## Example

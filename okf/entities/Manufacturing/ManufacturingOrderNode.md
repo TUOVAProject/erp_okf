@@ -40,7 +40,7 @@ referenced_by:
 
 Represents a manufacturing order node.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ManufacturingOrderNode`
 - **Endpoint:** `GET /api/v1/Manufacturing/ManufacturingOrderNodes`
 - **Required permission:** Show manufacturing orders
@@ -56,19 +56,19 @@ Represents a manufacturing order node.
 | `IsRootNode` | `Boolean` | no |  |  | Specifies if the node is a root node on manufacturing order. It can be several root nodes. For example when splitting from max quantity or when coordinated parts exists. Only one of the root nodes on order can be the main node. |
 | `Level` | `Int32` | no |  |  | Level in the node hierarchy |
 | `Number` | `Int32` | no |  |  | Node number, a sequence number in exploding sort order. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part that the manufacturing order node is to produce. |
+| `PartId` | `Int64` | no | [Parts](../Inventory/Part.md) |  | The business key identifier of the part that the manufacturing order node is to produce. |
 | `ReportedQuantity` | `Decimal` | no |  |  | The reported quantity. |
 | `PlannedQuantity` | `Decimal` | no |  |  | The planned quantity. |
 | `RestQuantity` | `Decimal` | no |  |  | The rest quantity. |
 | `StartDate` | `DateTimeOffset` | no |  |  | The start date of the manufacturing order node. |
 | `EndDate` | `DateTimeOffset` | no |  |  | The finish date of the manufacturing order node. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse that the node belongs to. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse that the node belongs to. |
 | `Status` | `Int32` | no |  | enum | The status of the manufacturing order node. |
-| `ManufacturingOrderNodeId` | `Int64?` | yes | [ManufacturingOrderNodes](/entities/Manufacturing/ManufacturingOrderNode.md) |  | The business key identifier of the manufacturing order node that the manufacturing order node belongs to. If id is null, it's a root node. |
-| `Drawings` | `ManufacturingOrderNodeDrawings[]` | no | [ManufacturingOrderNodeDrawings](/entities/Manufacturing/ManufacturingOrderNodeDrawing.md) | expandable, collection, since 24.2 | A collection of drawings that belong to the manufacturing order node. |
-| `RevisionId` | `Int64?` | yes | [Revisions](/entities/Common/Revision.md) | since 24.2 | The business key identifier of the revision that the manufacturing order node has. |
-| `Revision` | `Revisions` | no | [Revisions](/entities/Common/Revision.md) | expandable, since 24.2 | The revision that the manufacturing order node has. |
-| `SerialNumberProductRecords` | `ProductRecords[]` | no | [ProductRecords](/entities/Inventory/ProductRecord.md) | expandable, collection, since 25.2 | A collection of product records with serial number traceability that belong to the manufacturing order node. |
+| `ManufacturingOrderNodeId` | `Int64?` | yes | [ManufacturingOrderNodes](ManufacturingOrderNode.md) |  | The business key identifier of the manufacturing order node that the manufacturing order node belongs to. If id is null, it's a root node. |
+| `Drawings` | `ManufacturingOrderNodeDrawings[]` | no | [ManufacturingOrderNodeDrawings](ManufacturingOrderNodeDrawing.md) | expandable, collection, since 24.2 | A collection of drawings that belong to the manufacturing order node. |
+| `RevisionId` | `Int64?` | yes | [Revisions](../Common/Revision.md) | since 24.2 | The business key identifier of the revision that the manufacturing order node has. |
+| `Revision` | `Revisions` | no | [Revisions](../Common/Revision.md) | expandable, since 24.2 | The revision that the manufacturing order node has. |
+| `SerialNumberProductRecords` | `ProductRecords[]` | no | [ProductRecords](../Inventory/ProductRecord.md) | expandable, collection, since 25.2 | A collection of product records with serial number traceability that belong to the manufacturing order node. |
 
 ## Enumerations
 
@@ -90,11 +90,11 @@ Represents a manufacturing order node.
 
 **Manufacturing**
 
-- [ManufacturingOrderMaterials](/entities/Manufacturing/ManufacturingOrderMaterial.md) — `ManufacturingOrderNodeId` (FK)
-- [ManufacturingOrderNodeDrawings](/entities/Manufacturing/ManufacturingOrderNodeDrawing.md) — `ManufacturingOrderNodeId` (FK)
-- [ManufacturingOrderNodes](/entities/Manufacturing/ManufacturingOrderNode.md) — `ManufacturingOrderNodeId` (FK)
-- [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) — `ManufacturingOrderNodeId` (FK)
-- [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) — `Nodes` (expand)
+- [ManufacturingOrderMaterials](ManufacturingOrderMaterial.md) — `ManufacturingOrderNodeId` (FK)
+- [ManufacturingOrderNodeDrawings](ManufacturingOrderNodeDrawing.md) — `ManufacturingOrderNodeId` (FK)
+- [ManufacturingOrderNodes](ManufacturingOrderNode.md) — `ManufacturingOrderNodeId` (FK)
+- [ManufacturingOrderOperations](ManufacturingOrderOperation.md) — `ManufacturingOrderNodeId` (FK)
+- [ManufacturingOrders](ManufacturingOrder.md) — `Nodes` (expand)
 
 
 ## Example

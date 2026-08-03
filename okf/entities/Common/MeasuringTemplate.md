@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a measuring template.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `MeasuringTemplate`
 - **Endpoint:** `GET /api/v1/Common/MeasuringTemplates`
 - **Required permission:** Show measuring templates
@@ -45,7 +45,7 @@ Represents a measuring template.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the entity. |
-| `FormTemplateId` | `Int64` | no | [FormTemplates](/entities/Common/FormTemplate.md) |  | The business key identifier of the form template that the measuring template relates to. |
+| `FormTemplateId` | `Int64` | no | [FormTemplates](FormTemplate.md) |  | The business key identifier of the form template that the measuring template relates to. |
 | `Code` | `String` | no |  | unique, max length 40 | The human readable identifier of the measuring template. |
 | `Description` | `String` | no |  |  | The translated description of the measuring template. |
 | `FrequencyText` | `String` | no |  | max length 80 | The frequency text defined for the measuring template. |
@@ -80,12 +80,12 @@ Represents a measuring template.
 
 **Inventory**
 
-- [PartPurchaseControlDataRows](/entities/Inventory/PartPurchaseControlDataRow.md) — `MeasuringTemplateId` (FK)
+- [PartPurchaseControlDataRows](../Inventory/PartPurchaseControlDataRow.md) — `MeasuringTemplateId` (FK)
 
 **Manufacturing**
 
-- [ManufacturingOrderOperationControlDataRows](/entities/Manufacturing/ManufacturingOrderOperationControlDataRow.md) — `MeasuringTemplateId` (FK)
-- [OperationRowControlDataRows](/entities/Manufacturing/OperationRowControlDataRow.md) — `MeasuringTemplateId` (FK)
+- [ManufacturingOrderOperationControlDataRows](../Manufacturing/ManufacturingOrderOperationControlDataRow.md) — `MeasuringTemplateId` (FK)
+- [OperationRowControlDataRows](../Manufacturing/OperationRowControlDataRow.md) — `MeasuringTemplateId` (FK)
 
 
 ## Example

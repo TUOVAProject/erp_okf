@@ -32,7 +32,7 @@ referenced_by:
 
 Represents an extra field option template.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ExtraFieldOptionTemplate`
 - **Endpoint:** `GET /api/v1/Common/ExtraFieldOptionTemplates`
 - **Required permission:** Show extra fields
@@ -47,17 +47,17 @@ Represents an extra field option template.
 | `Code` | `String` | no |  | max length 12 | The human readable code of the extra field option template. |
 | `IsActive` | `Boolean` | no |  |  | Specifies whether or not the extra field option template is active in the system. |
 | `Description` | `String` | no |  |  | The translated description of the extra field option template. |
-| `ExtraFieldTemplateId` | `Int64` | no | [ExtraFieldTemplates](/entities/Common/ExtraFieldTemplate.md) |  | The business key identifier of the extra field template that the extra field option template belongs to. |
+| `ExtraFieldTemplateId` | `Int64` | no | [ExtraFieldTemplates](ExtraFieldTemplate.md) |  | The business key identifier of the extra field template that the extra field option template belongs to. |
 
 ## Referenced by
 
 **Common**
 
-- [ExtraFieldTemplates](/entities/Common/ExtraFieldTemplate.md) — `OptionTemplates` (expand)
-- [ExtraFields](/entities/Common/ExtraField.md) — `SelectedOption` (expand)
-- [ExtraFields](/entities/Common/ExtraField.md) — `SelectedOptionId` (FK)
-- [ExtraFields](/entities/Common/ExtraField.md) — `SelectedOptionIds` (FK)
-- [ExtraFields](/entities/Common/ExtraField.md) — `SelectedOptions` (expand)
+- [ExtraFieldTemplates](ExtraFieldTemplate.md) — `OptionTemplates` (expand)
+- [ExtraFields](ExtraField.md) — `SelectedOption` (expand)
+- [ExtraFields](ExtraField.md) — `SelectedOptionId` (FK)
+- [ExtraFields](ExtraField.md) — `SelectedOptionIds` (FK)
+- [ExtraFields](ExtraField.md) — `SelectedOptions` (expand)
 
 
 ## Example

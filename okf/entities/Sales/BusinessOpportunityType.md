@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a business opportunity type.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `BusinessOpportunityType`
 - **Endpoint:** `GET /api/v1/Sales/BusinessOpportunityTypes`
 - **Required permission:** Show business opportunity
@@ -53,23 +53,23 @@ Represents a business opportunity type.
 | `Prefix` | `String` | no |  | max length 3 | The prefix of the opportunity number created by the business opportunity type. |
 | `IsDefault` | `Boolean` | no |  |  | Specifies if the business opportunity type is the default type. |
 | `Priority` | `Int32` | no |  |  | The priority of the business opportunity type. |
-| `BusinessOpportunityGroupId` | `Int64?` | yes | [BusinessOpportunityGroups](/entities/Sales/BusinessOpportunityGroup.md) |  | The business key identifier of the business opportunity type's business opportunity group. |
-| `BusinessOpportunityGroup` | `BusinessOpportunityGroups` | no | [BusinessOpportunityGroups](/entities/Sales/BusinessOpportunityGroup.md) | expandable | The business opportunity type's business opportunity group. |
-| `ResponsibleSellerId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the business opportunity type's .responsible seller. |
-| `ResponsibleSeller` | `Persons` | no | [Persons](/entities/Common/Person.md) | expandable | The business opportunity type's .responsible seller. |
-| `SalesProcessTemplateId` | `Int64?` | yes | [SalesProcessTemplates](/entities/Sales/SalesProcessTemplate.md) |  | The business key identifier of the business opportunity type's .sales process template. |
-| `SalesProcessTemplate` | `SalesProcessTemplates` | no | [SalesProcessTemplates](/entities/Sales/SalesProcessTemplate.md) | expandable | The business opportunity type's .sales process template. |
-| `BusinessOpportunityActivityTemplateId` | `Int64?` | yes | [BusinessOpportunityActivityTemplates](/entities/Sales/BusinessOpportunityActivityTemplate.md) |  | The business key identifier of the business opportunity type's .activity template. |
-| `BusinessOpportunityActivityTemplate` | `BusinessOpportunityActivityTemplates` | no | [BusinessOpportunityActivityTemplates](/entities/Sales/BusinessOpportunityActivityTemplate.md) |  | The business opportunity type's .activity template. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the business opportunity type's .comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The business opportunity type's .comment. |
+| `BusinessOpportunityGroupId` | `Int64?` | yes | [BusinessOpportunityGroups](BusinessOpportunityGroup.md) |  | The business key identifier of the business opportunity type's business opportunity group. |
+| `BusinessOpportunityGroup` | `BusinessOpportunityGroups` | no | [BusinessOpportunityGroups](BusinessOpportunityGroup.md) | expandable | The business opportunity type's business opportunity group. |
+| `ResponsibleSellerId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the business opportunity type's .responsible seller. |
+| `ResponsibleSeller` | `Persons` | no | [Persons](../Common/Person.md) | expandable | The business opportunity type's .responsible seller. |
+| `SalesProcessTemplateId` | `Int64?` | yes | [SalesProcessTemplates](SalesProcessTemplate.md) |  | The business key identifier of the business opportunity type's .sales process template. |
+| `SalesProcessTemplate` | `SalesProcessTemplates` | no | [SalesProcessTemplates](SalesProcessTemplate.md) | expandable | The business opportunity type's .sales process template. |
+| `BusinessOpportunityActivityTemplateId` | `Int64?` | yes | [BusinessOpportunityActivityTemplates](BusinessOpportunityActivityTemplate.md) |  | The business key identifier of the business opportunity type's .activity template. |
+| `BusinessOpportunityActivityTemplate` | `BusinessOpportunityActivityTemplates` | no | [BusinessOpportunityActivityTemplates](BusinessOpportunityActivityTemplate.md) |  | The business opportunity type's .activity template. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the business opportunity type's .comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The business opportunity type's .comment. |
 
 ## Referenced by
 
 **Sales**
 
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `BusinessOpportunityType` (expand)
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `BusinessOpportunityTypeId` (FK)
+- [BusinessOpportunities](BusinessOpportunity.md) — `BusinessOpportunityType` (expand)
+- [BusinessOpportunities](BusinessOpportunity.md) — `BusinessOpportunityTypeId` (FK)
 
 
 ## Example

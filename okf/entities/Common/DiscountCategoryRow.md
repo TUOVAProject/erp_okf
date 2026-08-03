@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a discount category row.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `DiscountCategoryRow`
 - **Endpoint:** `GET /api/v1/Common/DiscountCategoryRows`
 - **Required permission:** Show discount categories
@@ -45,10 +45,10 @@ Represents a discount category row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the row. |
-| `DiscountCategoryId` | `Int64` | no | [DiscountCategories](/entities/Common/DiscountCategory.md) |  | The business key identifier of the discount category this row belongs to. |
+| `DiscountCategoryId` | `Int64` | no | [DiscountCategories](DiscountCategory.md) |  | The business key identifier of the discount category this row belongs to. |
 | `BoundaryType` | `Int32` | no |  | enum | The boundary type of the row. |
-| `ProductGroupId` | `Int64?` | yes | [ProductGroups](/entities/Common/ProductGroup.md) |  | The business key identifier of the product group for this row. |
-| `PartCodeId` | `Int64?` | yes | [PartCodes](/entities/Inventory/PartCode.md) |  | The business key identifier of the part code for this row. |
+| `ProductGroupId` | `Int64?` | yes | [ProductGroups](ProductGroup.md) |  | The business key identifier of the product group for this row. |
+| `PartCodeId` | `Int64?` | yes | [PartCodes](../Inventory/PartCode.md) |  | The business key identifier of the part code for this row. |
 | `PartCategory` | `String` | no |  | max length 20 | The part category for this row. |
 | `Boundary1` | `Decimal` | no |  |  | The first boundary of this row. |
 | `Discount1` | `Decimal` | no |  |  | The discount for the first boundary of this row. |
@@ -85,7 +85,7 @@ Represents a discount category row.
 
 **Common**
 
-- [DiscountCategories](/entities/Common/DiscountCategory.md) — `Rows` (expand)
+- [DiscountCategories](DiscountCategory.md) — `Rows` (expand)
 
 
 ## Example

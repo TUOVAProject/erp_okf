@@ -28,7 +28,7 @@ referenced_by:
 
 This is the response type of all state commands available in the system. As long as a command uses this return-type, it can be used with the command batching system.
 
-- **Module:** [Infrastructure](/modules/Infrastructure.md)
+- **Module:** [Infrastructure](../../modules/Infrastructure.md)
 - **API class:** `EntityCommandResponse`
 - **Endpoint:** none — this is a payload type, not a queryable resource.
 - **Introduced in:** 2.18
@@ -46,7 +46,7 @@ This is the response type of all state commands available in the system. As long
 
 **Infrastructure**
 
-- [BatchResponse](/entities/Infrastructure/BatchResponse.md) — `Response` (expand)
+- [BatchResponse](BatchResponse.md) — `Response` (expand)
 
 
 ## Example

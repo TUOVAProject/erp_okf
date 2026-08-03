@@ -33,7 +33,7 @@ references_out:
 
 Represents sales picking list row quantity information used by the web-client procedure.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `SalesPickingListRowQuantity`
 - **Endpoint:** `GET /api/v1/Sales/SalesPickingListRowQuantities`
 - **Required permission:** Show customer orders
@@ -46,10 +46,10 @@ Represents sales picking list row quantity information used by the web-client pr
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the sales picking list row quantity. |
 | `PickingListRowKey` | `String` | no |  | unique, max length 76 | The composite string key of the sales picking list row quantity. |
-| `CustomerOrderDeliveryRowId` | `Int64` | no | [CustomerOrderDeliveryRows](/entities/Sales/CustomerOrderDeliveryRow.md) |  | The business key identifier of the customer order delivery row that the row quantity relates to. |
-| `PartLocationId` | `Int64?` | yes | [PartLocations](/entities/Inventory/PartLocation.md) |  | The business key identifier of the part location that the row quantity relates to. |
-| `ProductRecordId` | `Int64?` | yes | [ProductRecords](/entities/Inventory/ProductRecord.md) |  | The business key identifier of the product record that the row quantity relates to. |
-| `PartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part that the row quantity relates to. |
+| `CustomerOrderDeliveryRowId` | `Int64` | no | [CustomerOrderDeliveryRows](CustomerOrderDeliveryRow.md) |  | The business key identifier of the customer order delivery row that the row quantity relates to. |
+| `PartLocationId` | `Int64?` | yes | [PartLocations](../Inventory/PartLocation.md) |  | The business key identifier of the part location that the row quantity relates to. |
+| `ProductRecordId` | `Int64?` | yes | [ProductRecords](../Inventory/ProductRecord.md) |  | The business key identifier of the product record that the row quantity relates to. |
+| `PartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the part that the row quantity relates to. |
 | `Quantity` | `Decimal` | no |  |  | The quantity set for the row. |
 | `Included` | `Boolean?` | yes |  |  | Null if the user has not specifically set the included state of the row, otherwise true or false depending on if the row is included or not. |
 

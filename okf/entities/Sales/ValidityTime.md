@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a validity time.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `ValidityTime`
 - **Endpoint:** `GET /api/v1/Sales/ValidityTimes`
 - **Required permission:** Show terms
@@ -52,10 +52,10 @@ Represents a validity time.
 
 **Sales**
 
-- [Customers](/entities/Sales/Customer.md) — `ValidityTime` (expand)
-- [Customers](/entities/Sales/Customer.md) — `ValidityTimeId` (FK)
-- [Quotes](/entities/Sales/Quote.md) — `ValidityTime` (expand)
-- [Quotes](/entities/Sales/Quote.md) — `ValidityTimeId` (FK)
+- [Customers](Customer.md) — `ValidityTime` (expand)
+- [Customers](Customer.md) — `ValidityTimeId` (FK)
+- [Quotes](Quote.md) — `ValidityTime` (expand)
+- [Quotes](Quote.md) — `ValidityTimeId` (FK)
 
 
 ## Example

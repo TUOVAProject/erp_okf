@@ -30,7 +30,7 @@ references_out:
 
 Represents a Project Activity Calendar Appointment.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ProjectActivityCalendarAppointment`
 - **Endpoint:** `GET /api/v1/Common/ProjectActivityCalendarAppointments`
 - **Required permission:** Show projects
@@ -42,8 +42,8 @@ Represents a Project Activity Calendar Appointment.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the project appointment. |
-| `ProjectActivityId` | `Int64?` | yes | [ProjectActivities](/entities/Common/ProjectActivity.md) |  | The business key identifier of the project activity. |
-| `SenderPersonId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the sender person. |
+| `ProjectActivityId` | `Int64?` | yes | [ProjectActivities](ProjectActivity.md) |  | The business key identifier of the project activity. |
+| `SenderPersonId` | `Int64?` | yes | [Persons](Person.md) |  | The business key identifier of the sender person. |
 | `CalendarAppointmentId` | `String` | no |  | max length 256 | The unique identifier of the appointment created in the user's calendar program. |
 
 ## Example

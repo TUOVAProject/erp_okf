@@ -29,7 +29,7 @@ referenced_by:
 
 Represents manufacturing print settings for a person.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PersonManufacturingPrintSettings`
 - **Endpoint:** `GET /api/v1/Common/PersonManufacturingPrintSettings`
 - **Required permission:** Show person
@@ -49,7 +49,7 @@ Represents manufacturing print settings for a person.
 
 **Common**
 
-- [Persons](/entities/Common/Person.md) — `ManufacturingPrintSettings` (expand)
+- [Persons](Person.md) — `ManufacturingPrintSettings` (expand)
 
 
 ## Example

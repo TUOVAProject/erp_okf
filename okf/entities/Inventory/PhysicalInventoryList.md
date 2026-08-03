@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a physical inventory list.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PhysicalInventoryList`
 - **Endpoint:** `GET /api/v1/Inventory/PhysicalInventoryLists`
 - **Required permission:** Report stock count
@@ -43,7 +43,7 @@ Represents a physical inventory list.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the physical inventory list. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse for the physical inventory list. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse for the physical inventory list. |
 | `Number` | `Int64` | no |  | unique | The number of the physical inventory list. |
 | `Version` | `Int32` | no |  |  | The version of the physical inventory list. |
 | `Name` | `String` | no |  | max length 50 | The name of the physical inventory list. |
@@ -77,7 +77,7 @@ Represents a physical inventory list.
 
 **Inventory**
 
-- [PhysicalInventoryRows](/entities/Inventory/PhysicalInventoryRow.md) — `PhysicalInventoryListId` (FK)
+- [PhysicalInventoryRows](PhysicalInventoryRow.md) — `PhysicalInventoryListId` (FK)
 
 
 ## Example

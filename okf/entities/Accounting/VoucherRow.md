@@ -40,7 +40,7 @@ referenced_by:
 
 Represents a voucher row.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `VoucherRow`
 - **Endpoint:** `GET /api/v1/Accounting/VoucherRows`
 - **Required permission:** Show voucher
@@ -53,35 +53,35 @@ Represents a voucher row.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the voucher row. |
 | `EntryIdentifier` | `String` | no |  |  | The unique coding identifier of the voucher row's coding entry. |
-| `VoucherId` | `Int64` | no | [Vouchers](/entities/Accounting/Voucher.md) |  | The business key identifier of the voucher that the voucher row belongs to. |
+| `VoucherId` | `Int64` | no | [Vouchers](Voucher.md) |  | The business key identifier of the voucher that the voucher row belongs to. |
 | `ParentVoucherDate` | `DateTimeOffset` | no |  |  | The voucher date of the parent voucher. |
 | `ParentIsPreliminary` | `Boolean` | no |  |  | Specifies if the parent voucher is preliminary. |
 | `ExchangeRate` | `Decimal` | no |  |  | The exchange rate of the voucher row. |
-| `VatRateId` | `Int64?` | yes | [VatRates](/entities/Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
-| `BalanceId` | `Int64?` | yes | [Balances](/entities/Accounting/Balance.md) |  | The business key identifier of the row's balance. |
+| `VatRateId` | `Int64?` | yes | [VatRates](../Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
+| `BalanceId` | `Int64?` | yes | [Balances](Balance.md) |  | The business key identifier of the row's balance. |
 | `CodingMethodId` | `Int64?` | yes |  |  | The business key identifier of the row's coding method. References CodingMethod. |
-| `AccrualAccountingId` | `Int64?` | yes | [AccrualAccountings](/entities/Accounting/AccrualAccounting.md) |  | The business key identifier of the row's accrual accounting. |
+| `AccrualAccountingId` | `Int64?` | yes | [AccrualAccountings](AccrualAccounting.md) |  | The business key identifier of the row's accrual accounting. |
 | `OrderNumber` | `String` | no |  | max length 50 | The order number linked to the voucher row |
 | `DebitInCompanyCurrency` | `Decimal` | no |  |  | Debit in the company currency. |
-| `DebitInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the debit in the company currency. |
+| `DebitInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the debit in the company currency. |
 | `CreditInCompanyCurrency` | `Decimal` | no |  |  | Credit in the company currency. |
-| `CreditInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the credit in the company currency. |
+| `CreditInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the credit in the company currency. |
 | `Debit` | `Decimal` | no |  |  | Debit on the voucher row. |
-| `DebitCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the debit currency. |
+| `DebitCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the debit currency. |
 | `Credit` | `Decimal` | no |  |  | Credit on the voucher row. |
-| `CreditCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the credit currency. |
+| `CreditCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the credit currency. |
 | `Quantity` | `Decimal` | no |  |  | The quantity set on the voucher row. |
-| `CodingEntryId` | `Int64` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the coding entry. |
-| `AccountsPayableId` | `Int64?` | yes | [AccountsPayables](/entities/Accounting/AccountsPayable.md) | since 25.6 | The business key identifier of the accounts payable connected to the row. |
-| `AccountsReceivableId` | `Int64?` | yes | [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) | since 25.6 | The business key identifier of the accounts receivable connected to the row. |
-| `NetAmountVoucherRowId` | `Int64?` | yes | [VoucherRows](/entities/Accounting/VoucherRow.md) | since 25.6 | The business key identifier of the net amount row that the VAT row belongs to. |
+| `CodingEntryId` | `Int64` | no | [CodingEntries](CodingEntry.md) |  | The business key identifier of the coding entry. |
+| `AccountsPayableId` | `Int64?` | yes | [AccountsPayables](AccountsPayable.md) | since 25.6 | The business key identifier of the accounts payable connected to the row. |
+| `AccountsReceivableId` | `Int64?` | yes | [AccountsReceivables](AccountsReceivable.md) | since 25.6 | The business key identifier of the accounts receivable connected to the row. |
+| `NetAmountVoucherRowId` | `Int64?` | yes | [VoucherRows](VoucherRow.md) | since 25.6 | The business key identifier of the net amount row that the VAT row belongs to. |
 
 ## Referenced by
 
 **Accounting**
 
-- [VoucherRows](/entities/Accounting/VoucherRow.md) — `NetAmountVoucherRowId` (FK)
-- [Vouchers](/entities/Accounting/Voucher.md) — `Rows` (expand)
+- [VoucherRows](VoucherRow.md) — `NetAmountVoucherRowId` (FK)
+- [Vouchers](Voucher.md) — `Rows` (expand)
 
 
 ## Example

@@ -82,7 +82,7 @@ referenced_by:
 
 Represents a person.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `Person`
 - **Endpoint:** `GET /api/v1/Common/Persons`
 - **Required permission:** Show person
@@ -117,37 +117,37 @@ Represents a person.
 | `ContactPhoneNumber` | `String` | no |  | max length 80 | The phone number of the person's contact. |
 | `ContactCellPhoneNumber` | `String` | no |  | max length 80 | The cell phone number of the person's contact. |
 | `ContactEmailAddress` | `String` | no |  | max length 80 | The email address of the person's contact. |
-| `AddressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) |  | The business key identifier of the person's address. References Addresses . |
-| `Address` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable | The address of the person. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the person's comment. Reference Comments . |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the person. |
+| `AddressId` | `Int64?` | yes | [Addresses](Address.md) |  | The business key identifier of the person's address. References Addresses . |
+| `Address` | `Addresses` | no | [Addresses](Address.md) | expandable | The address of the person. |
+| `CommentId` | `Int64?` | yes | [Comments](Comment.md) |  | The business key identifier of the person's comment. Reference Comments . |
+| `Comment` | `Comments` | no | [Comments](Comment.md) | expandable | The comment of the person. |
 | `BlockedFromDate` | `DateTimeOffset?` | yes |  |  | The date that the person starts being blocked from. |
 | `BlockedToDate` | `DateTimeOffset?` | yes |  |  | The date that the person stops being blocked. |
 | `IsPersonBlocked` | `Boolean` | no |  |  | Specifies if the person is blocked. |
 | `PersonBlockedById` | `Int64?` | yes |  |  | Specifies the application user that blocked the person. |
 | `PersonBlockedDate` | `DateTimeOffset?` | yes |  |  | The date when the person was blocked. |
 | `CanAuthorize` | `Boolean` | no |  |  | Specifies if the person can authorize invoices provided that EIM is not enabled for this MONITOR system. |
-| `ApplicationUserId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that is coupled to the person. References ApplicationUsers . |
+| `ApplicationUserId` | `Int64?` | yes | [ApplicationUsers](ApplicationUser.md) |  | The business key identifier of the application user that is coupled to the person. References ApplicationUsers . |
 | `IsSeller` | `Boolean` | no |  |  | Specifies if the person is a seller. |
 | `Initials` | `String` | no |  | max length 5, since 2.43 | Max length 5 |
-| `DepartmentId` | `Int64` | no | [Departments](/entities/Common/Department.md) | since 2.43 | The business key identifier of the department that the person belongs to. References Departments . |
-| `DistrictId` | `Int64?` | yes | [CustomerDistricts](/entities/Sales/CustomerDistrict.md) | since 2.43 | The business key identifier of the district that the person belongs to. References CustomerDistricts . |
-| `LanguageId` | `Int64` | no | [LanguageCodes](/entities/Common/LanguageCode.md) |  | The business key identifier of the person's preferred language. References LanguageCodes . |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the person's default warehouse. References Warehouses . |
+| `DepartmentId` | `Int64` | no | [Departments](Department.md) | since 2.43 | The business key identifier of the department that the person belongs to. References Departments . |
+| `DistrictId` | `Int64?` | yes | [CustomerDistricts](../Sales/CustomerDistrict.md) | since 2.43 | The business key identifier of the district that the person belongs to. References CustomerDistricts . |
+| `LanguageId` | `Int64` | no | [LanguageCodes](LanguageCode.md) |  | The business key identifier of the person's preferred language. References LanguageCodes . |
+| `WarehouseId` | `Int64` | no | [Warehouses](Warehouse.md) |  | The business key identifier of the person's default warehouse. References Warehouses . |
 | `Category` | `String` | no |  | max length 15 | The category of the person. |
 | `IdentityNumber` | `String` | no |  | max length 16, since 2.43 | The identity number of the person. |
 | `GroupSettingsId` | `Int64?` | yes |  |  | The business key identifier of the person's attendance group settings. References AttendanceGroupSettings. |
 | `UseWorkCenterManufacturingPrintSettings` | `Boolean` | no |  | since 2.28 | Specifies if manufacturing order document settings should come from the work center's settings or the person's settings. |
-| `ManufacturingPrintSettings` | `PersonManufacturingPrintSettings[]` | no | [PersonManufacturingPrintSettings](/entities/Common/PersonManufacturingPrintSettings.md) | expandable, collection, since 2.28 | The person's print settings for manufacturing order documents. |
-| `PlannedAbsences` | `PlannedAbsences[]` | no | [PlannedAbsences](/entities/TimeRecording/PlannedAbsence.md) | expandable, collection, since 2.47 | The planned absences for the person. |
-| `TimeBanks` | `PersonTimeBanks[]` | no | [PersonTimeBanks](/entities/TimeRecording/PersonTimeBank.md) | expandable, collection, since 22.3 | The time banks for the person. |
-| `Relatives` | `PersonRelatives[]` | no | [PersonRelatives](/entities/Common/PersonRelative.md) | expandable, collection, since 22.3 | The relatives of the person. |
-| `EmploymentPeriods` | `EmploymentPeriods[]` | no | [EmploymentPeriods](/entities/Common/EmploymentPeriod.md) | expandable, collection, since 22.3 | The employment periods that belong to the personnel record. |
-| `ExtraFields` | `ExtraFields[]` | no | [ExtraFields](/entities/Common/ExtraField.md) | expandable, collection, since 22.3 | The extra fields of the personnel record. |
+| `ManufacturingPrintSettings` | `PersonManufacturingPrintSettings[]` | no | [PersonManufacturingPrintSettings](PersonManufacturingPrintSettings.md) | expandable, collection, since 2.28 | The person's print settings for manufacturing order documents. |
+| `PlannedAbsences` | `PlannedAbsences[]` | no | [PlannedAbsences](../TimeRecording/PlannedAbsence.md) | expandable, collection, since 2.47 | The planned absences for the person. |
+| `TimeBanks` | `PersonTimeBanks[]` | no | [PersonTimeBanks](../TimeRecording/PersonTimeBank.md) | expandable, collection, since 22.3 | The time banks for the person. |
+| `Relatives` | `PersonRelatives[]` | no | [PersonRelatives](PersonRelative.md) | expandable, collection, since 22.3 | The relatives of the person. |
+| `EmploymentPeriods` | `EmploymentPeriods[]` | no | [EmploymentPeriods](EmploymentPeriod.md) | expandable, collection, since 22.3 | The employment periods that belong to the personnel record. |
+| `ExtraFields` | `ExtraFields[]` | no | [ExtraFields](ExtraField.md) | expandable, collection, since 22.3 | The extra fields of the personnel record. |
 | `IsProjectManager` | `Boolean` | no |  | since 23.3 | Specifies if the person is a project manager. |
-| `AvailableWorkshopSchedules` | `Schedules[]` | no | [Schedules](/entities/TimeRecording/Schedule.md) | expandable, collection, since 24.3 | The workshop schedules of the personnel record. |
-| `AvailableWorkCenters` | `PersonWorkCenters[]` | no | [PersonWorkCenters](/entities/TimeRecording/PersonWorkCenter.md) | expandable, collection, since 24.3 | Specifies which work centers (and thereby which report numbers) the person should be allowed to select among in the priority plan and when starting work via report numbers. |
-| `Signature` | `BlobData` | no | [BlobData](/entities/Common/BlobData.md) | expandable, since 24.5 | The entity signature blob data |
+| `AvailableWorkshopSchedules` | `Schedules[]` | no | [Schedules](../TimeRecording/Schedule.md) | expandable, collection, since 24.3 | The workshop schedules of the personnel record. |
+| `AvailableWorkCenters` | `PersonWorkCenters[]` | no | [PersonWorkCenters](../TimeRecording/PersonWorkCenter.md) | expandable, collection, since 24.3 | Specifies which work centers (and thereby which report numbers) the person should be allowed to select among in the priority plan and when starting work via report numbers. |
+| `Signature` | `BlobData` | no | [BlobData](BlobData.md) | expandable, since 24.5 | The entity signature blob data |
 | `EmployeeRecordingType` | `Int32` | no |  | bitmask, enum, since 24.5 | The employee recording type of the person. |
 | `ScheduleManagementType` | `Int32` | no |  | bitmask, enum, since 24.5 | The schedule management type of the person. |
 | `PersonScheduleCycles` | `PersonScheduleCycles[]` | no |  | expandable, collection, since 24.5 | The schedule cycles of the personnel record. |
@@ -190,93 +190,93 @@ Represents a person.
 
 **Common**
 
-- [DelegatedWork](/entities/Common/DelegatedWork.md) — `EmployeeId` (FK)
-- [EmploymentPeriods](/entities/Common/EmploymentPeriod.md) — `PersonId` (FK)
-- [ProjectActivityCalendarAppointments](/entities/Common/ProjectActivityCalendarAppointment.md) — `SenderPersonId` (FK)
-- [Projects](/entities/Common/Project.md) — `OurReference` (expand)
-- [Projects](/entities/Common/Project.md) — `OurReferenceId` (FK)
-- [Projects](/entities/Common/Project.md) — `ProjectManagerId` (FK)
-- [Projects](/entities/Common/Project.md) — `Seller` (expand)
-- [Projects](/entities/Common/Project.md) — `SellerId` (FK)
+- [DelegatedWork](DelegatedWork.md) — `EmployeeId` (FK)
+- [EmploymentPeriods](EmploymentPeriod.md) — `PersonId` (FK)
+- [ProjectActivityCalendarAppointments](ProjectActivityCalendarAppointment.md) — `SenderPersonId` (FK)
+- [Projects](Project.md) — `OurReference` (expand)
+- [Projects](Project.md) — `OurReferenceId` (FK)
+- [Projects](Project.md) — `ProjectManagerId` (FK)
+- [Projects](Project.md) — `Seller` (expand)
+- [Projects](Project.md) — `SellerId` (FK)
 
 **Inventory**
 
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `OurReferenceId` (FK)
-- [PartPlanningInformation](/entities/Inventory/PartPlanningInformation.md) — `ContactId` (FK)
-- [PartTemplates](/entities/Inventory/PartTemplate.md) — `PreparerId` (FK)
-- [Parts](/entities/Inventory/Part.md) — `Preparer` (expand)
-- [Parts](/entities/Inventory/Part.md) — `PreparerId` (FK)
-- [ProductRecords](/entities/Inventory/ProductRecord.md) — `CustomerOrderOurReferenceId` (FK)
-- [ProductRecords](/entities/Inventory/ProductRecord.md) — `InstalledBy` (FK)
-- [QuantityChanges](/entities/Inventory/QuantityChange.md) — `DeliveredByPersonId` (FK)
-- [QuantityChanges](/entities/Inventory/QuantityChange.md) — `PickingByPersonId` (FK)
+- [CaseEntry](../Inventory/CaseEntry.md) — `OurReferenceId` (FK)
+- [PartPlanningInformation](../Inventory/PartPlanningInformation.md) — `ContactId` (FK)
+- [PartTemplates](../Inventory/PartTemplate.md) — `PreparerId` (FK)
+- [Parts](../Inventory/Part.md) — `Preparer` (expand)
+- [Parts](../Inventory/Part.md) — `PreparerId` (FK)
+- [ProductRecords](../Inventory/ProductRecord.md) — `CustomerOrderOurReferenceId` (FK)
+- [ProductRecords](../Inventory/ProductRecord.md) — `InstalledBy` (FK)
+- [QuantityChanges](../Inventory/QuantityChange.md) — `DeliveredByPersonId` (FK)
+- [QuantityChanges](../Inventory/QuantityChange.md) — `PickingByPersonId` (FK)
 
 **Manufacturing**
 
-- [MaintenanceReportings](/entities/Manufacturing/MaintenanceReporting.md) — `ReportedBy` (expand)
-- [MaintenanceReportings](/entities/Manufacturing/MaintenanceReporting.md) — `ReportedById` (FK)
-- [ManufacturingOrderOperationReportings](/entities/Manufacturing/ManufacturingOrderOperationReporting.md) — `EmployeeId` (FK)
-- [ManufacturingOrderOperationReportings](/entities/Manufacturing/ManufacturingOrderOperationReporting.md) — `ReportingEmployeeId` (FK)
-- [ManufacturingPickingLists](/entities/Manufacturing/ManufacturingPickingList.md) — `CreatedByPersonId` (FK)
-- [ManufacturingPickingLists](/entities/Manufacturing/ManufacturingPickingList.md) — `PrintedByPersonId` (FK)
+- [MaintenanceReportings](../Manufacturing/MaintenanceReporting.md) — `ReportedBy` (expand)
+- [MaintenanceReportings](../Manufacturing/MaintenanceReporting.md) — `ReportedById` (FK)
+- [ManufacturingOrderOperationReportings](../Manufacturing/ManufacturingOrderOperationReporting.md) — `EmployeeId` (FK)
+- [ManufacturingOrderOperationReportings](../Manufacturing/ManufacturingOrderOperationReporting.md) — `ReportingEmployeeId` (FK)
+- [ManufacturingPickingLists](../Manufacturing/ManufacturingPickingList.md) — `CreatedByPersonId` (FK)
+- [ManufacturingPickingLists](../Manufacturing/ManufacturingPickingList.md) — `PrintedByPersonId` (FK)
 
 **Purchase**
 
-- [BlanketOrderPurchases](/entities/Purchase/BlanketOrderPurchase.md) — `OurReference` (expand)
-- [BlanketOrderPurchases](/entities/Purchase/BlanketOrderPurchase.md) — `OurReferenceId` (FK)
-- [Inquiries](/entities/Purchase/Inquiry.md) — `BusinessContactReferenceId` (FK)
-- [Inquiries](/entities/Purchase/Inquiry.md) — `CreatedById` (FK)
-- [Inquiries](/entities/Purchase/Inquiry.md) — `OurReferenceId` (FK)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `OurReference` (expand)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `OurReferenceId` (FK)
-- [Suppliers](/entities/Purchase/Supplier.md) — `AuthorizedSignerPerson` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `AuthorizedSignerPersonId` (FK)
-- [Suppliers](/entities/Purchase/Supplier.md) — `PurchaseManager` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `PurchaseManagerId` (FK)
+- [BlanketOrderPurchases](../Purchase/BlanketOrderPurchase.md) — `OurReference` (expand)
+- [BlanketOrderPurchases](../Purchase/BlanketOrderPurchase.md) — `OurReferenceId` (FK)
+- [Inquiries](../Purchase/Inquiry.md) — `BusinessContactReferenceId` (FK)
+- [Inquiries](../Purchase/Inquiry.md) — `CreatedById` (FK)
+- [Inquiries](../Purchase/Inquiry.md) — `OurReferenceId` (FK)
+- [PurchaseOrders](../Purchase/PurchaseOrder.md) — `OurReference` (expand)
+- [PurchaseOrders](../Purchase/PurchaseOrder.md) — `OurReferenceId` (FK)
+- [Suppliers](../Purchase/Supplier.md) — `AuthorizedSignerPerson` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `AuthorizedSignerPersonId` (FK)
+- [Suppliers](../Purchase/Supplier.md) — `PurchaseManager` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `PurchaseManagerId` (FK)
 
 **Sales**
 
-- [BlanketOrderSales](/entities/Sales/BlanketOrderSales.md) — `OurReference` (expand)
-- [BlanketOrderSales](/entities/Sales/BlanketOrderSales.md) — `OurReferenceId` (FK)
-- [BlanketOrderSales](/entities/Sales/BlanketOrderSales.md) — `Seller` (expand)
-- [BlanketOrderSales](/entities/Sales/BlanketOrderSales.md) — `SellerId` (FK)
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `OurReference` (expand)
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `OurReferenceId` (FK)
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `Seller` (expand)
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `SellerId` (FK)
-- [BusinessOpportunityActivities](/entities/Sales/BusinessOpportunityActivity.md) — `ReferenceId` (FK)
-- [BusinessOpportunitySalesProcessSteps](/entities/Sales/BusinessOpportunitySalesProcessStep.md) — `ResponsibleSellerId` (FK)
-- [BusinessOpportunityTypes](/entities/Sales/BusinessOpportunityType.md) — `ResponsibleSeller` (expand)
-- [BusinessOpportunityTypes](/entities/Sales/BusinessOpportunityType.md) — `ResponsibleSellerId` (FK)
-- [CreateSalesPickingList](/entities/Sales/CreateSalesPickingList.md) — `CreatedByPersonId` (FK)
-- [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) — `OurReferenceId` (FK)
-- [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) — `SellerId` (FK)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `OurReferenceId` (FK)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `SellerId` (FK)
-- [Customers](/entities/Sales/Customer.md) — `AccountManager` (expand)
-- [Customers](/entities/Sales/Customer.md) — `AccountManagerId` (FK)
-- [Customers](/entities/Sales/Customer.md) — `ResellerId` (FK)
-- [Customers](/entities/Sales/Customer.md) — `Seller` (expand)
-- [Customers](/entities/Sales/Customer.md) — `SellerId` (FK)
-- [Quotes](/entities/Sales/Quote.md) — `OurReferenceId` (FK)
-- [Quotes](/entities/Sales/Quote.md) — `SellerId` (FK)
-- [SalesAgreements](/entities/Sales/SalesAgreement.md) — `OurReferenceId` (FK)
-- [SalesAgreements](/entities/Sales/SalesAgreement.md) — `ResponsibleId` (FK)
-- [SalesAgreements](/entities/Sales/SalesAgreement.md) — `SellerId` (FK)
-- [SalesPickingLists](/entities/Sales/SalesPickingList.md) — `PrintedByPersonId` (FK)
-- [SalesProcessTemplateRows](/entities/Sales/SalesProcessTemplateRow.md) — `ResponsibleSeller` (expand)
-- [SalesProcessTemplateRows](/entities/Sales/SalesProcessTemplateRow.md) — `ResponsibleSellerId` (FK)
-- [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) — `Declarant` (expand)
-- [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) — `DeclarantId` (FK)
+- [BlanketOrderSales](../Sales/BlanketOrderSales.md) — `OurReference` (expand)
+- [BlanketOrderSales](../Sales/BlanketOrderSales.md) — `OurReferenceId` (FK)
+- [BlanketOrderSales](../Sales/BlanketOrderSales.md) — `Seller` (expand)
+- [BlanketOrderSales](../Sales/BlanketOrderSales.md) — `SellerId` (FK)
+- [BusinessOpportunities](../Sales/BusinessOpportunity.md) — `OurReference` (expand)
+- [BusinessOpportunities](../Sales/BusinessOpportunity.md) — `OurReferenceId` (FK)
+- [BusinessOpportunities](../Sales/BusinessOpportunity.md) — `Seller` (expand)
+- [BusinessOpportunities](../Sales/BusinessOpportunity.md) — `SellerId` (FK)
+- [BusinessOpportunityActivities](../Sales/BusinessOpportunityActivity.md) — `ReferenceId` (FK)
+- [BusinessOpportunitySalesProcessSteps](../Sales/BusinessOpportunitySalesProcessStep.md) — `ResponsibleSellerId` (FK)
+- [BusinessOpportunityTypes](../Sales/BusinessOpportunityType.md) — `ResponsibleSeller` (expand)
+- [BusinessOpportunityTypes](../Sales/BusinessOpportunityType.md) — `ResponsibleSellerId` (FK)
+- [CreateSalesPickingList](../Sales/CreateSalesPickingList.md) — `CreatedByPersonId` (FK)
+- [CustomerOrderInvoices](../Sales/CustomerOrderInvoice.md) — `OurReferenceId` (FK)
+- [CustomerOrderInvoices](../Sales/CustomerOrderInvoice.md) — `SellerId` (FK)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `OurReferenceId` (FK)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `SellerId` (FK)
+- [Customers](../Sales/Customer.md) — `AccountManager` (expand)
+- [Customers](../Sales/Customer.md) — `AccountManagerId` (FK)
+- [Customers](../Sales/Customer.md) — `ResellerId` (FK)
+- [Customers](../Sales/Customer.md) — `Seller` (expand)
+- [Customers](../Sales/Customer.md) — `SellerId` (FK)
+- [Quotes](../Sales/Quote.md) — `OurReferenceId` (FK)
+- [Quotes](../Sales/Quote.md) — `SellerId` (FK)
+- [SalesAgreements](../Sales/SalesAgreement.md) — `OurReferenceId` (FK)
+- [SalesAgreements](../Sales/SalesAgreement.md) — `ResponsibleId` (FK)
+- [SalesAgreements](../Sales/SalesAgreement.md) — `SellerId` (FK)
+- [SalesPickingLists](../Sales/SalesPickingList.md) — `PrintedByPersonId` (FK)
+- [SalesProcessTemplateRows](../Sales/SalesProcessTemplateRow.md) — `ResponsibleSeller` (expand)
+- [SalesProcessTemplateRows](../Sales/SalesProcessTemplateRow.md) — `ResponsibleSellerId` (FK)
+- [ShipmentCustoms](../Sales/ShipmentCustoms.md) — `Declarant` (expand)
+- [ShipmentCustoms](../Sales/ShipmentCustoms.md) — `DeclarantId` (FK)
 
 **TimeRecording**
 
-- [AttendanceChart](/entities/TimeRecording/AttendanceChart.md) — `EmployeeId` (FK)
-- [PersonTimeBanks](/entities/TimeRecording/PersonTimeBank.md) — `PersonId` (FK)
-- [PersonWorkCenters](/entities/TimeRecording/PersonWorkCenter.md) — `PersonId` (FK)
-- [RecordingDays](/entities/TimeRecording/RecordingDay.md) — `PersonId` (FK)
-- [StandbyWorks](/entities/TimeRecording/StandbyWork.md) — `EmployeeId` (FK)
-- [WorkIntervals](/entities/TimeRecording/WorkInterval.md) — `ReportingEmployeeId` (FK)
+- [AttendanceChart](../TimeRecording/AttendanceChart.md) — `EmployeeId` (FK)
+- [PersonTimeBanks](../TimeRecording/PersonTimeBank.md) — `PersonId` (FK)
+- [PersonWorkCenters](../TimeRecording/PersonWorkCenter.md) — `PersonId` (FK)
+- [RecordingDays](../TimeRecording/RecordingDay.md) — `PersonId` (FK)
+- [StandbyWorks](../TimeRecording/StandbyWork.md) — `EmployeeId` (FK)
+- [WorkIntervals](../TimeRecording/WorkInterval.md) — `ReportingEmployeeId` (FK)
 
 
 ## Example

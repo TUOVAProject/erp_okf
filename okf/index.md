@@ -35,7 +35,7 @@ Two things are deliberately outside that scope, and you will not find them here:
 - **How to authenticate and how to shape a request.** The source documentation
   contains no authentication, `$filter`/`$expand`/paging or status-code
   reference, so neither does this bundle. See
-  [Querying the Monitor API](/guides/querying.md) for exactly what the source
+  [Querying the Monitor API](guides/querying.md) for exactly what the source
   does and does not say.
 
 Use this to work out *which resource and which field* you need. You will need
@@ -53,27 +53,27 @@ Monitor's own operational documentation to make the call.
 
 ## If you read only two pages
 
-1. [Core entities](/guides/core-entities.md) — the 20 entities
+1. [Core entities](guides/core-entities.md) — the 20 entities
    the rest of the model hangs off, ranked by how much of the API points at them.
-2. [How entities relate](/guides/relationships.md) — foreign keys vs. navigation
+2. [How entities relate](guides/relationships.md) — foreign keys vs. navigation
    properties, which is the one concept you need to traverse anything here.
 
 ## Start here
 
-- [Guides](/guides/index.md) — how the API is shaped and how entities relate
-- [Modules](/modules/index.md) — the 8 top-level modules
-- [Entities](/entities/index.md) — every documented page
+- [Guides](guides/index.md) — how the API is shaped and how entities relate
+- [Modules](modules/index.md) — the 8 top-level modules
+- [Entities](entities/index.md) — every documented page
 
 ## Modules
 
-- [Accounting](/modules/Accounting.md) — 41 queryable, 0 commands, 2 types
-- [Common](/modules/Common.md) — 110 queryable, 0 commands, 3 types
-- [Infrastructure](/modules/Infrastructure.md) — 0 queryable, 0 commands, 18 types
-- [Inventory](/modules/Inventory.md) — 50 queryable, 0 commands, 0 types
-- [Manufacturing](/modules/Manufacturing.md) — 30 queryable, 0 commands, 0 types
-- [Purchase](/modules/Purchase.md) — 30 queryable, 0 commands, 0 types
-- [Sales](/modules/Sales.md) — 70 queryable, 4 commands, 2 types
-- [TimeRecording](/modules/TimeRecording.md) — 20 queryable, 0 commands, 0 types
+- [Accounting](modules/Accounting.md) — 41 queryable, 0 commands, 2 types
+- [Common](modules/Common.md) — 110 queryable, 0 commands, 3 types
+- [Infrastructure](modules/Infrastructure.md) — 0 queryable, 0 commands, 18 types
+- [Inventory](modules/Inventory.md) — 50 queryable, 0 commands, 0 types
+- [Manufacturing](modules/Manufacturing.md) — 30 queryable, 0 commands, 0 types
+- [Purchase](modules/Purchase.md) — 30 queryable, 0 commands, 0 types
+- [Sales](modules/Sales.md) — 70 queryable, 4 commands, 2 types
+- [TimeRecording](modules/TimeRecording.md) — 20 queryable, 0 commands, 0 types
 
 ## How to use this bundle
 

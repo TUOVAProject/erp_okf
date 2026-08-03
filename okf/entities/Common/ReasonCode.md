@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a reason code.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ReasonCode`
 - **Endpoint:** `GET /api/v1/Common/ReasonCodes`
 - **Required permission:** Show cause codes
@@ -62,8 +62,8 @@ Represents a reason code.
 
 **Purchase**
 
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `DelayReason` (expand)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `DelayReasonId` (FK)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `DelayReason` (expand)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `DelayReasonId` (FK)
 
 
 ## Example

@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a overtime type.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `OvertimeType`
 - **Endpoint:** `GET /api/v1/TimeRecording/OvertimeTypes`
 - **Required permission:** Show basic data for attendance
@@ -50,10 +50,10 @@ Represents a overtime type.
 
 **TimeRecording**
 
-- [AttendanceGroupSettings](/entities/TimeRecording/AttendanceGroupSettings.md) — `OvertimeTypes` (expand)
-- [AttendanceIntervals](/entities/TimeRecording/AttendanceInterval.md) — `OvertimeTypeAfterId` (FK)
-- [AttendanceIntervals](/entities/TimeRecording/AttendanceInterval.md) — `OvertimeTypeBeforeId` (FK)
-- [WorkshopScheduleSalaryTypes](/entities/TimeRecording/WorkshopScheduleSalaryType.md) — `OvertimeTypeId` (FK)
+- [AttendanceGroupSettings](AttendanceGroupSettings.md) — `OvertimeTypes` (expand)
+- [AttendanceIntervals](AttendanceInterval.md) — `OvertimeTypeAfterId` (FK)
+- [AttendanceIntervals](AttendanceInterval.md) — `OvertimeTypeBeforeId` (FK)
+- [WorkshopScheduleSalaryTypes](WorkshopScheduleSalaryType.md) — `OvertimeTypeId` (FK)
 
 
 ## Example

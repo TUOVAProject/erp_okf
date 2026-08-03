@@ -46,7 +46,7 @@ referenced_by:
 
 Represents a quote row.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `QuoteRow`
 - **Endpoint:** `GET /api/v1/Sales/QuoteRows`
 - **Required permission:** Show quote
@@ -60,33 +60,33 @@ Represents a quote row.
 | `Id` | `Int64` | no |  |  | The business key identifier of the row. |
 | `Position` | `Int64?` | yes |  |  | The position of the row. |
 | `OrderRowType` | `Int32` | no |  | enum | The row type. |
-| `PartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the row's part. |
+| `PartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the row's part. |
 | `EntityIdentityString` | `String` | no |  | max length 20 | The human readable identifier of the row's entity. |
 | `AdditionalRowDescription` | `String` | no |  | max length 80 | The additional row description of the row. |
 | `FreeTextHtml` | `String` | no |  | max length 0 | The free text row's rich text HTML data. |
 | `FreeText` | `String` | no |  | max length 0 | The free text row's raw text data. |
-| `ParentRowId` | `Int64?` | yes | [QuoteRows](/entities/Sales/QuoteRow.md) |  | The business key identifier of the row's parent. |
+| `ParentRowId` | `Int64?` | yes | [QuoteRows](QuoteRow.md) |  | The business key identifier of the row's parent. |
 | `DeliveryDate` | `DateTimeOffset?` | yes |  |  | The delivery date of the row. |
-| `RevisionId` | `Int64?` | yes | [Revisions](/entities/Common/Revision.md) |  | The business key identifier of the row's revision. |
-| `Revision` | `Revisions` | no | [Revisions](/entities/Common/Revision.md) | expandable | The revision of the row. |
+| `RevisionId` | `Int64?` | yes | [Revisions](../Common/Revision.md) |  | The business key identifier of the row's revision. |
+| `Revision` | `Revisions` | no | [Revisions](../Common/Revision.md) | expandable | The revision of the row. |
 | `OrderedQuantity` | `Decimal` | no |  |  | The ordered quantity of the row. |
 | `Price` | `Decimal?` | yes |  |  | The price of the row. |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row's price currency. |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row's price currency. |
 | `Discount` | `Decimal` | no |  |  | The discount specified on the row. |
 | `ToolId` | `Int64?` | yes |  | **deprecated since 2.48** | The business key identifier of the row's tool. _(Replaced by Part)_ |
-| `UnitId` | `Int64?` | yes | [Units](/entities/Common/Unit.md) |  | The business key identifier of the row's unit. |
-| `Unit` | `Units` | no | [Units](/entities/Common/Unit.md) | expandable | The unit of the row. |
-| `VatRateId` | `Int64` | no | [VatRates](/entities/Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the row's warehouse. |
+| `UnitId` | `Int64?` | yes | [Units](../Common/Unit.md) |  | The business key identifier of the row's unit. |
+| `Unit` | `Units` | no | [Units](../Common/Unit.md) | expandable | The unit of the row. |
+| `VatRateId` | `Int64` | no | [VatRates](../Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the row's warehouse. |
 | `WeightPerUnit` | `Decimal?` | yes |  |  | The weight per unit of the row. |
 | `OrderDate` | `DateTimeOffset` | no |  |  | The order date of the row. |
 | `ConversionFactor` | `Decimal` | no |  |  | The conversion factor of the row. |
 | `PriceInCompanyCurrency` | `Decimal?` | yes |  |  | The row's price in the company currency. |
-| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the company currency. |
+| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the company currency. |
 | `SetupPriceInCompanyCurrency` | `Decimal?` | yes |  |  | The row's setup price in the company currency. |
-| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the company currency. |
+| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the company currency. |
 | `StandardPrice` | `Decimal?` | yes |  |  | The standard price of the row. |
-| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row's standard price currency. |
+| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row's standard price currency. |
 | `SetupPrice` | `Decimal?` | yes |  |  | The setup price of the row. |
 | `SetupPriceCurrencyId` | `Int64?` | yes |  |  | The business key identifier of the row's setup price currency. |
 | `ShowPrice` | `Boolean` | no |  |  | Specifies if price should be shown for the row. |
@@ -96,19 +96,19 @@ Represents a quote row.
 | `OrderedQuantityInOrderUnit` | `Decimal` | no |  |  | The ordered quantity of the row in the order unit. |
 | `AlternatePreparationCode` | `String` | no |  |  | The alternate preparation code of the row. |
 | `ShowFreeTextIn` | `Int32` | no |  | bitmask, enum | Specifies which documents the free text data of the row should be projected on. |
-| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](/entities/Common/StatisticalGoodsCode.md) |  | The business key identifier of the row's statistical goods code. |
-| `CustomerOrderId` | `Int64?` | yes | [CustomerOrder](/entities/Sales/CustomerOrder.md) |  | The business key identifier of the customer order that was created as a result of the row. |
+| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](../Common/StatisticalGoodsCode.md) |  | The business key identifier of the row's statistical goods code. |
+| `CustomerOrderId` | `Int64?` | yes | [CustomerOrder](CustomerOrder.md) |  | The business key identifier of the customer order that was created as a result of the row. |
 | `ExemptFromStatistics` | `Boolean` | no |  |  | Specifies if the row should be exempted from statistics. |
-| `ParentOrderId` | `Int64` | no | [Quotes](/entities/Sales/Quote.md) | since 2.27 | The business key identifier of the rows parent quote. |
+| `ParentOrderId` | `Int64` | no | [Quotes](Quote.md) | since 2.27 | The business key identifier of the rows parent quote. |
 | `CodingId` | `Int64?` | yes |  | since 2.33 | The business key identifier of the rows coding. |
-| `Coding` | `Codings` | no | [Codings](/entities/Accounting/Coding.md) | expandable, since 2.33 | The coding of the row. |
+| `Coding` | `Codings` | no | [Codings](../Accounting/Coding.md) | expandable, since 2.33 | The coding of the row. |
 | `RowsGoodsLabel` | `String` | no |  | expandable, since 2.40 | The goods label of the row |
 | `PartConfigurationId` | `Int64?` | yes |  | since 2.46 | The business key identifier of the row's part configuration. |
 | `RowIndex` | `Int32?` | yes |  | since 2.54 | The index of the row. |
-| `TransferProfileId` | `Int64?` | yes | [TransferProfiles](/entities/Common/TransferProfile.md) | since 23.2 | The business key identifier of the row's transfer profile. |
-| `PartConfigurationIdInRemoteCompany` | `Int64?` | yes | [PartConfigurations](/entities/Common/PartConfiguration.md) | since 23.2 | The business key identifier of the row's part configuration in the remote company. |
+| `TransferProfileId` | `Int64?` | yes | [TransferProfiles](../Common/TransferProfile.md) | since 23.2 | The business key identifier of the row's transfer profile. |
+| `PartConfigurationIdInRemoteCompany` | `Int64?` | yes | [PartConfigurations](../Common/PartConfiguration.md) | since 23.2 | The business key identifier of the row's part configuration in the remote company. |
 | `CreateCustomerOrder` | `Boolean` | no |  | since 24.5 | The create customer order option for the row |
-| `DiscountRows` | `QuoteOrderRowDiscounts[]` | no | [QuoteOrderRowDiscounts](/entities/Sales/QuoteOrderRowDiscount.md) | expandable, collection, since 24.8 | The discount rows for the row. |
+| `DiscountRows` | `QuoteOrderRowDiscounts[]` | no | [QuoteOrderRowDiscounts](QuoteOrderRowDiscount.md) | expandable, collection, since 24.8 | The discount rows for the row. |
 
 ## Enumerations
 
@@ -171,9 +171,9 @@ Represents a quote row.
 
 **Sales**
 
-- [QuoteOrderRowDiscounts](/entities/Sales/QuoteOrderRowDiscount.md) — `OrderRowId` (FK)
-- [QuoteRows](/entities/Sales/QuoteRow.md) — `ParentRowId` (FK)
-- [Quotes](/entities/Sales/Quote.md) — `Rows` (expand)
+- [QuoteOrderRowDiscounts](QuoteOrderRowDiscount.md) — `OrderRowId` (FK)
+- [QuoteRows](QuoteRow.md) — `ParentRowId` (FK)
+- [Quotes](Quote.md) — `Rows` (expand)
 
 
 ## Example

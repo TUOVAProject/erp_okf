@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a project phase type.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ProjectPhaseType`
 - **Endpoint:** `GET /api/v1/Common/ProjectPhaseTypes`
 - **Required permission:** Show basic data for project
@@ -45,14 +45,14 @@ Represents a project phase type.
 | `Id` | `Int64` | no |  |  | The business key identifier of the type. |
 | `Number` | `Int32` | no |  |  | The number of the type. |
 | `Description` | `String` | no |  |  | The translated description of the type. |
-| `ManagerId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the manager of the type. References ApplicationUsers . |
+| `ManagerId` | `Int64?` | yes | [ApplicationUsers](ApplicationUser.md) |  | The business key identifier of the manager of the type. References ApplicationUsers . |
 
 ## Referenced by
 
 **Common**
 
-- [ProjectPhases](/entities/Common/ProjectPhase.md) — `PhaseType` (expand)
-- [ProjectPhases](/entities/Common/ProjectPhase.md) — `PhaseTypeId` (FK)
+- [ProjectPhases](ProjectPhase.md) — `PhaseType` (expand)
+- [ProjectPhases](ProjectPhase.md) — `PhaseTypeId` (FK)
 
 
 ## Example

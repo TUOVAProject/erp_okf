@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a coding entry element.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `CodingEntryElement`
 - **Endpoint:** `GET /api/v1/Accounting/CodingEntryElements`
 - **Required permission:** Show dimensions/dimension codes
@@ -45,16 +45,16 @@ Represents a coding entry element.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the coding entry element. |
-| `CodingEntryId` | `Int64` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the coding entry that the element belongs to. |
-| `CodingDimensionId` | `Int64` | no | [CodingDimensions](/entities/Accounting/CodingDimension.md) |  | The business key identifier of the element's coding dimension. |
-| `CodingDimension` | `CodingDimensions` | no | [CodingDimensions](/entities/Accounting/CodingDimension.md) | expandable | The coding dimension of the coding entry element. |
-| `ReferencingEntityId` | `Int64?` | yes | [CodingElements](/entities/Accounting/CodingElement.md) |  | The business key identifier of the referencing entity. References an entity of type according to the coding dimension's ReferenceEntityType, or CodingElements if None. |
+| `CodingEntryId` | `Int64` | no | [CodingEntries](CodingEntry.md) |  | The business key identifier of the coding entry that the element belongs to. |
+| `CodingDimensionId` | `Int64` | no | [CodingDimensions](CodingDimension.md) |  | The business key identifier of the element's coding dimension. |
+| `CodingDimension` | `CodingDimensions` | no | [CodingDimensions](CodingDimension.md) | expandable | The coding dimension of the coding entry element. |
+| `ReferencingEntityId` | `Int64?` | yes | [CodingElements](CodingElement.md) |  | The business key identifier of the referencing entity. References an entity of type according to the coding dimension's ReferenceEntityType, or CodingElements if None. |
 
 ## Referenced by
 
 **Accounting**
 
-- [CodingEntries](/entities/Accounting/CodingEntry.md) — `CodingEntryElements` (expand)
+- [CodingEntries](CodingEntry.md) — `CodingEntryElements` (expand)
 
 
 ## Example

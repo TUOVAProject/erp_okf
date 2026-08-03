@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a measuring or maintenance form template.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `FormTemplate`
 - **Endpoint:** `GET /api/v1/Common/FormTemplates`
 - **GUID:** `A11F4598-EC23-4BE4-88C5-E4E9899678F7`
@@ -46,8 +46,8 @@ Represents a measuring or maintenance form template.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the entity. |
 | `Code` | `String` | no |  | unique, max length 40 | The human readable identifier of the form template. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the form template. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the form template's comment. |
+| `Comment` | `Comments` | no | [Comments](Comment.md) | expandable | The comment of the form template. |
+| `CommentId` | `Int64?` | yes | [Comments](Comment.md) |  | The business key identifier of the form template's comment. |
 | `Description` | `String` | no |  |  | The translated description of the form template. |
 | `ControlDataType` | `Int32` | no |  | enum | The type of the template form which specifices in which apps the form can be used. |
 | `Type` | `Int32` | no |  | bitmask, enum | The usage type of the measuring template form that restricts in which module the measuring form template can be used. |
@@ -74,17 +74,17 @@ Represents a measuring or maintenance form template.
 
 **Common**
 
-- [FormTemplateSelectionRows](/entities/Common/FormTemplateSelectionRow.md) — `FormTemplateId` (FK)
-- [MeasuringTemplates](/entities/Common/MeasuringTemplate.md) — `FormTemplateId` (FK)
+- [FormTemplateSelectionRows](FormTemplateSelectionRow.md) — `FormTemplateId` (FK)
+- [MeasuringTemplates](MeasuringTemplate.md) — `FormTemplateId` (FK)
 
 **Inventory**
 
-- [PartPurchaseControlDataRows](/entities/Inventory/PartPurchaseControlDataRow.md) — `OverriddenFormTemplateId` (FK)
+- [PartPurchaseControlDataRows](../Inventory/PartPurchaseControlDataRow.md) — `OverriddenFormTemplateId` (FK)
 
 **Manufacturing**
 
-- [ManufacturingOrderOperationControlDataRows](/entities/Manufacturing/ManufacturingOrderOperationControlDataRow.md) — `OverridenFormTemplateId` (FK)
-- [OperationRowControlDataRows](/entities/Manufacturing/OperationRowControlDataRow.md) — `OverriddenFormTemplateId` (FK)
+- [ManufacturingOrderOperationControlDataRows](../Manufacturing/ManufacturingOrderOperationControlDataRow.md) — `OverridenFormTemplateId` (FK)
+- [OperationRowControlDataRows](../Manufacturing/OperationRowControlDataRow.md) — `OverriddenFormTemplateId` (FK)
 
 
 ## Example

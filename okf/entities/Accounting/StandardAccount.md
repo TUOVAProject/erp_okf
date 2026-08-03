@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a standard account.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `StandardAccount`
 - **Endpoint:** `GET /api/v1/Accounting/StandardAccounts`
 - **Required permission:** Show chart of accounts
@@ -45,7 +45,7 @@ Represents a standard account.
 | `Id` | `Int64` | no |  |  | The business key identifier of the standard account (mirrors AccountType). |
 | `AccountType` | `Int32` | no |  | enum | The business key identifier of the standard account. |
 | `Version` | `Int32` | no |  |  | The version of the account. |
-| `CodingEntryId` | `Int64?` | yes | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the account's coding entry. |
+| `CodingEntryId` | `Int64?` | yes | [CodingEntries](CodingEntry.md) |  | The business key identifier of the account's coding entry. |
 | `StandardAccountCategory` | `Int32` | no |  | enum | The category of the account. |
 
 ## Enumerations
@@ -123,8 +123,8 @@ Represents a standard account.
 
 **Purchase**
 
-- [SupplierAccounts](/entities/Purchase/SupplierAccount.md) — `StandardAccount` (expand)
-- [SupplierAccounts](/entities/Purchase/SupplierAccount.md) — `StandardAccountId` (FK)
+- [SupplierAccounts](../Purchase/SupplierAccount.md) — `StandardAccount` (expand)
+- [SupplierAccounts](../Purchase/SupplierAccount.md) — `StandardAccountId` (FK)
 
 
 ## Example

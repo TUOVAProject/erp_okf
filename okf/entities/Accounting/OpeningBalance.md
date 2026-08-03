@@ -33,7 +33,7 @@ referenced_by:
 
 Represents an opening balance.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `OpeningBalance`
 - **Endpoint:** `GET /api/v1/Accounting/OpeningBalances`
 - **Required permission:** Show opening balance
@@ -45,16 +45,16 @@ Represents an opening balance.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the opening balance. |
-| `AccountingYearId` | `Int64` | no | [AccountingYears](/entities/Accounting/AccountingYear.md) |  | The business key identifier of the accounting year the opening balance belongs to. |
-| `CodingEntryId` | `Int64` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the coding entry the opening balance belongs to. |
+| `AccountingYearId` | `Int64` | no | [AccountingYears](AccountingYear.md) |  | The business key identifier of the accounting year the opening balance belongs to. |
+| `CodingEntryId` | `Int64` | no | [CodingEntries](CodingEntry.md) |  | The business key identifier of the coding entry the opening balance belongs to. |
 | `Credit` | `Decimal` | no |  |  | The credit amount of the opening balance. |
-| `CreditCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency of the credit amount. |
+| `CreditCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency of the credit amount. |
 | `CreditInCompanyCurrency` | `Decimal` | no |  |  | The credit amount in company currency of the opening balance. |
-| `CreditInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency of the credit amount in company currency. |
+| `CreditInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency of the credit amount in company currency. |
 | `Debit` | `Decimal` | no |  |  | The debit amount of the opening balance. |
-| `DebitCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency of the debit amount. |
+| `DebitCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency of the debit amount. |
 | `DebitInCompanyCurrency` | `Decimal` | no |  |  | The debit amount in company currency of the opening balance. |
-| `DebitInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency of the debit amount in company currency. |
+| `DebitInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency of the debit amount in company currency. |
 | `ExchangeRate` | `Decimal` | no |  |  | The exchange rate on the opening balance. |
 | `Quantity` | `Decimal` | no |  |  | The recorded quantity of the opening balance. |
 
@@ -62,7 +62,7 @@ Represents an opening balance.
 
 **Accounting**
 
-- [Balances](/entities/Accounting/Balance.md) — `OpeningBalanceId` (FK)
+- [Balances](Balance.md) — `OpeningBalanceId` (FK)
 
 
 ## Example

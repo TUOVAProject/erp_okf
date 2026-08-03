@@ -32,7 +32,7 @@ referenced_by:
 
 Represent an allocation key.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AllocationKey`
 - **Endpoint:** `GET /api/v1/Accounting/AllocationKeys`
 - **Required permission:** Show allocation keys
@@ -46,15 +46,15 @@ Represent an allocation key.
 | `Id` | `Int64` | no |  |  | The business key identifier of the allocation key. |
 | `Number` | `Int64` | no |  | unique | The human readable identifier of the allocation key. |
 | `Name` | `String` | no |  | max length 64 | The name of the allocation key. |
-| `AllocationKeyResultRow` | `AllocationKeyResultRows[]` | no | [AllocationKeyResultRows](/entities/Accounting/AllocationKeyResultRow.md) | expandable, collection | The result rows of the allocation key. |
+| `AllocationKeyResultRow` | `AllocationKeyResultRows[]` | no | [AllocationKeyResultRows](AllocationKeyResultRow.md) | expandable, collection | The result rows of the allocation key. |
 
 ## Referenced by
 
 **Accounting**
 
-- [AllocationKeyResultRows](/entities/Accounting/AllocationKeyResultRow.md) — `AllocationKeyId` (FK)
-- [AutoAllocations](/entities/Accounting/AutoAllocation.md) — `AllocationKey` (expand)
-- [AutoAllocations](/entities/Accounting/AutoAllocation.md) — `AllocationKeyId` (FK)
+- [AllocationKeyResultRows](AllocationKeyResultRow.md) — `AllocationKeyId` (FK)
+- [AutoAllocations](AutoAllocation.md) — `AllocationKey` (expand)
+- [AutoAllocations](AutoAllocation.md) — `AllocationKeyId` (FK)
 
 
 ## Example

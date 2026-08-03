@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a time bank.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `TimeBank`
 - **Endpoint:** `GET /api/v1/TimeRecording/TimeBanks`
 - **Required permission:** Show recording items
@@ -51,13 +51,13 @@ Represents a time bank.
 
 **TimeRecording**
 
-- [AdditionRecordings](/entities/TimeRecording/AdditionRecording.md) — `TimeBank` (expand)
-- [AdditionRecordings](/entities/TimeRecording/AdditionRecording.md) — `TimeBankId` (FK)
-- [AttendanceAdditions](/entities/TimeRecording/AttendanceAddition.md) — `TimeBank` (expand)
-- [AttendanceAdditions](/entities/TimeRecording/AttendanceAddition.md) — `TimeBankId` (FK)
-- [AttendanceGroupSettings](/entities/TimeRecording/AttendanceGroupSettings.md) — `RoundOffOvertimeTimebankId` (FK)
-- [AttendanceGroupSettings](/entities/TimeRecording/AttendanceGroupSettings.md) — `ShorterWorkingHoursTimeBankId` (FK)
-- [PersonTimeBanks](/entities/TimeRecording/PersonTimeBank.md) — `TimeBankId` (FK)
+- [AdditionRecordings](AdditionRecording.md) — `TimeBank` (expand)
+- [AdditionRecordings](AdditionRecording.md) — `TimeBankId` (FK)
+- [AttendanceAdditions](AttendanceAddition.md) — `TimeBank` (expand)
+- [AttendanceAdditions](AttendanceAddition.md) — `TimeBankId` (FK)
+- [AttendanceGroupSettings](AttendanceGroupSettings.md) — `RoundOffOvertimeTimebankId` (FK)
+- [AttendanceGroupSettings](AttendanceGroupSettings.md) — `ShorterWorkingHoursTimeBankId` (FK)
+- [PersonTimeBanks](PersonTimeBank.md) — `TimeBankId` (FK)
 
 
 ## Example

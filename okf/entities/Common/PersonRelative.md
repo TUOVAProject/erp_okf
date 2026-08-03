@@ -29,7 +29,7 @@ referenced_by:
 
 Represents the relative of a person.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PersonRelative`
 - **Endpoint:** `GET /api/v1/Common/PersonRelatives`
 - **Required permission:** Show person
@@ -48,7 +48,7 @@ Represents the relative of a person.
 
 **Common**
 
-- [Persons](/entities/Common/Person.md) — `Relatives` (expand)
+- [Persons](Person.md) — `Relatives` (expand)
 
 
 ## Example

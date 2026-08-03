@@ -37,7 +37,7 @@ referenced_by:
 
 Represents a part template.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PartTemplate`
 - **Endpoint:** `GET /api/v1/Inventory/PartTemplates`
 - **Required permission:** Show basic data for part
@@ -49,12 +49,12 @@ Represents a part template.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the part template. |
-| `AbcCodeId` | `Int64?` | yes | [AbcCodes](/entities/Inventory/AbcCode.md) |  | The business key identifier of the ABC code that the part template applies. |
+| `AbcCodeId` | `Int64?` | yes | [AbcCodes](AbcCode.md) |  | The business key identifier of the ABC code that the part template applies. |
 | `AnnualVolume` | `Decimal?` | yes |  |  | The annual volume that the part template applies. |
 | `AutomaticReportingMode` | `Int32?` | yes |  | enum | The automatic reporting mode that the part template applies. |
 | `CategoryString` | `String` | no |  | max length 15 | The category string that the part template applies. |
 | `Code` | `String` | no |  | unique, max length 20 | The human readable identifier of the part template. |
-| `CountryOfOriginId` | `Int64?` | yes | [Countries](/entities/Common/Country.md) |  | The business key identifier of the country of origin that the part template applies. |
+| `CountryOfOriginId` | `Int64?` | yes | [Countries](../Common/Country.md) |  | The business key identifier of the country of origin that the part template applies. |
 | `DeductSalesForecast` | `Int32?` | yes |  | enum | The sales forecast deduction type that the part template applies. |
 | `DeductionMethod` | `Int32?` | yes |  | enum | The sales deduction method that the part template applies if a deduct sales forecast type is defined. |
 | `Description` | `String` | no |  |  | The description of the part template. |
@@ -72,10 +72,10 @@ Represents a part template.
 | `SalesLabelType` | `Int32?` | yes |  | enum | The sales transport label type that the part template applies. |
 | `PurchaseLabelType` | `Int32?` | yes |  | enum | The purchase transport label type that the part template applies. |
 | `UseInCalculation` | `Boolean` | no |  |  | Whether or not the parts that derive from the part template should be used in calculations. |
-| `PartCodeId` | `Int64?` | yes | [PartCodes](/entities/Inventory/PartCode.md) |  | The business key identifier of the part code that the part template applies. |
+| `PartCodeId` | `Int64?` | yes | [PartCodes](PartCode.md) |  | The business key identifier of the part code that the part template applies. |
 | `PartType` | `Int32?` | yes |  | enum | The part template type that the part template applies. |
-| `PreparerId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the preparer that the part template applies. |
-| `ProductGroupId` | `Int64?` | yes | [ProductGroups](/entities/Common/ProductGroup.md) |  | The business key identifier of the product group that the part template applies. |
+| `PreparerId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the preparer that the part template applies. |
+| `ProductGroupId` | `Int64?` | yes | [ProductGroups](../Common/ProductGroup.md) |  | The business key identifier of the product group that the part template applies. |
 | `ReorderPoint` | `Decimal?` | yes |  |  | The reorder point that the part template applies. |
 | `SafetyStock` | `Decimal?` | yes |  |  | The safety stock that the part template applies. |
 | `SafetyTime` | `TimeSpan?` | yes |  |  | The safety time that the part template applies. |
@@ -83,8 +83,8 @@ Represents a part template.
 | `SerialNumberGenerationSource` | `Int32?` | yes |  | enum | The serial number generation source that the part template applies. |
 | `TemplateType` | `Int32` | no |  | enum | The template type of the part template. |
 | `TraceabilityMode` | `Int32?` | yes |  | enum | The traceability mode that the part template applies. |
-| `ProfitMarkupId` | `Int64?` | yes | [ProfitMarkups](/entities/Inventory/ProfitMarkup.md) |  | The business key identifier of the profit markup that the part template applies. |
-| `SalesOverheadMarkupId` | `Int64?` | yes | [SalesOverheadMarkups](/entities/Inventory/SalesOverheadMarkup.md) |  | The business key identifier of the sales overhead markup that the part template applies. |
+| `ProfitMarkupId` | `Int64?` | yes | [ProfitMarkups](ProfitMarkup.md) |  | The business key identifier of the profit markup that the part template applies. |
+| `SalesOverheadMarkupId` | `Int64?` | yes | [SalesOverheadMarkups](SalesOverheadMarkup.md) |  | The business key identifier of the sales overhead markup that the part template applies. |
 | `PartActivityTemplateId` | `Int64?` | yes |  |  | The business key identifier of the part activity template that the part template applies. References PartActivityTemplate. |
 | `PartStatus` | `Int32?` | yes |  | enum | The part status that the part template applies. |
 | `LithuanianCountyOfOrigin` | `Int32?` | yes |  | enum, since 25.8 | The county of origin that the part template applies. Only used in the Lithuanian country package. |
@@ -238,8 +238,8 @@ Represents a part template.
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `PartTemplate` (expand)
-- [Parts](/entities/Inventory/Part.md) — `PartTemplateId` (FK)
+- [Parts](Part.md) — `PartTemplate` (expand)
+- [Parts](Part.md) — `PartTemplateId` (FK)
 
 
 ## Example

@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a project activity type.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ProjectActivityType`
 - **Endpoint:** `GET /api/v1/Common/ProjectActivityTypes`
 - **Required permission:** Show basic data for project
@@ -44,14 +44,14 @@ Represents a project activity type.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the type. |
-| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the type's responsible user. References ApplicationUsers . |
+| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](ApplicationUser.md) |  | The business key identifier of the type's responsible user. References ApplicationUsers . |
 | `PlannedTimeInHours` | `Decimal` | no |  |  | The planned time in hours of the type. |
 | `LeadTimeInDays` | `Int32` | no |  |  | The lead time in days of the type. |
 | `QueueTimeInDays` | `Int32` | no |  |  | The queue time in days of the type. |
 | `CostTypeId` | `Int64` | no |  |  | The business key identifier of type's project cost type. References ProjectCostType. |
 | `IsActive` | `Boolean` | no |  |  | Specifies if the project activity type is active. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of type's comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the type. |
+| `CommentId` | `Int64?` | yes | [Comments](Comment.md) |  | The business key identifier of type's comment. |
+| `Comment` | `Comments` | no | [Comments](Comment.md) | expandable | The comment of the type. |
 | `UseReminder` | `Boolean` | no |  |  | Specifies if the project activity type should use reminder. |
 | `ShowInProjectReport` | `Boolean` | no |  |  | Specifies if the project activity type be shown in the project report. |
 | `Code` | `Int64` | no |  | unique | The code of the activity type. |
@@ -62,8 +62,8 @@ Represents a project activity type.
 
 **Common**
 
-- [ProjectActivities](/entities/Common/ProjectActivity.md) — `ActivityType` (expand)
-- [ProjectActivities](/entities/Common/ProjectActivity.md) — `ActivityTypeId` (FK)
+- [ProjectActivities](ProjectActivity.md) — `ActivityType` (expand)
+- [ProjectActivities](ProjectActivity.md) — `ActivityTypeId` (FK)
 
 
 ## Example

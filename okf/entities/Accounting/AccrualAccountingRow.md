@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a accrual accounting row.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccrualAccountingRow`
 - **Endpoint:** `GET /api/v1/Accounting/AccrualAccountingRows`
 - **Required permission:** Show accrual
@@ -46,23 +46,23 @@ Represents a accrual accounting row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the accounting row. |
-| `PeriodId` | `Int64` | no | [AccountingYearPeriods](/entities/Accounting/AccountingYearPeriod.md) |  | The business key identifier of the accrual accounting row's accounting year period. |
-| `Period` | `AccountingYearPeriods` | no | [AccountingYearPeriods](/entities/Accounting/AccountingYearPeriod.md) | expandable | The accounting year period on the accrual accounting row. |
+| `PeriodId` | `Int64` | no | [AccountingYearPeriods](AccountingYearPeriod.md) |  | The business key identifier of the accrual accounting row's accounting year period. |
+| `Period` | `AccountingYearPeriods` | no | [AccountingYearPeriods](AccountingYearPeriod.md) | expandable | The accounting year period on the accrual accounting row. |
 | `PeriodAmountInCompanyCurrency` | `Decimal` | no |  |  | Amount in company currency |
 | `AccrualAccountingId` | `Int64` | no |  |  | The business key identifier of the accrual accounting. |
 | `IsReleased` | `Boolean` | no |  |  | Specifies if the accrual accounting is released. |
-| `LedgerId` | `Int64?` | yes | [AccrualAccountingLedgers](/entities/Accounting/AccrualAccountingLedger.md) |  | The business key identifier of the accrual accounting row's ledger. |
-| `Ledger` | `AccrualAccountingLedgers` | no | [AccrualAccountingLedgers](/entities/Accounting/AccrualAccountingLedger.md) | expandable | The accrual accounting ledger. |
+| `LedgerId` | `Int64?` | yes | [AccrualAccountingLedgers](AccrualAccountingLedger.md) |  | The business key identifier of the accrual accounting row's ledger. |
+| `Ledger` | `AccrualAccountingLedgers` | no | [AccrualAccountingLedgers](AccrualAccountingLedger.md) | expandable | The accrual accounting ledger. |
 | `BookingId` | `Int64?` | yes |  |  | The business key identifier of the booking. |
 | `RowIndex` | `Int32` | no |  |  | The row index of the accrual accounting. |
-| `BookingRows` | `BookingRows[]` | no | [BookingRows](/entities/Accounting/BookingRow.md) | expandable, collection | Booking rows on the accrual accounting. |
+| `BookingRows` | `BookingRows[]` | no | [BookingRows](BookingRow.md) | expandable, collection | Booking rows on the accrual accounting. |
 
 ## Referenced by
 
 **Accounting**
 
-- [AccrualAccountings](/entities/Accounting/AccrualAccounting.md) — `Rows` (expand)
-- [Vouchers](/entities/Accounting/Voucher.md) — `AccrualAccountingRowId` (FK)
+- [AccrualAccountings](AccrualAccounting.md) — `Rows` (expand)
+- [Vouchers](Voucher.md) — `AccrualAccountingRowId` (FK)
 
 
 ## Example

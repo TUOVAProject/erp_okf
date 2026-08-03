@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a project aggregate.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ProjectAggregate`
 - **Endpoint:** `GET /api/v1/Common/ProjectAggregates`
 - **Required permission:** Show projects
@@ -44,8 +44,8 @@ Represents a project aggregate.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the project aggregate. |
-| `ProjectId` | `Int64?` | yes | [Projects](/entities/Common/Project.md) |  | The business key identifier of the project the project aggregate belongs to. |
-| `CostTypeId` | `Int64?` | yes | [ProjectCostTypes](/entities/Common/ProjectCostType.md) |  | The business key identifier of the project cost type the project aggregate belongs to. |
+| `ProjectId` | `Int64?` | yes | [Projects](Project.md) |  | The business key identifier of the project the project aggregate belongs to. |
+| `CostTypeId` | `Int64?` | yes | [ProjectCostTypes](ProjectCostType.md) |  | The business key identifier of the project cost type the project aggregate belongs to. |
 | `ExpectedResultCost` | `Decimal` | no |  |  | The expected result cost. |
 | `ExpectedResultIncome` | `Decimal` | no |  |  | The expected result income. |
 | `ExpectedResultTime` | `Decimal` | no |  |  | The expected result time in hours. |
@@ -57,7 +57,7 @@ Represents a project aggregate.
 
 **Common**
 
-- [Projects](/entities/Common/Project.md) — `ProjectAggregates` (expand)
+- [Projects](Project.md) — `ProjectAggregates` (expand)
 
 
 ## Example

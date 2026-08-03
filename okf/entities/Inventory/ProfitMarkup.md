@@ -30,7 +30,7 @@ referenced_by:
 
 Represents profit markup.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `ProfitMarkup`
 - **Endpoint:** `GET /api/v1/Inventory/ProfitMarkups`
 - **Required permission:** Show calculation mark-up
@@ -50,9 +50,9 @@ Represents profit markup.
 
 **Inventory**
 
-- [PartTemplates](/entities/Inventory/PartTemplate.md) — `ProfitMarkupId` (FK)
-- [Parts](/entities/Inventory/Part.md) — `ProfitMarkup` (expand)
-- [Parts](/entities/Inventory/Part.md) — `ProfitMarkupId` (FK)
+- [PartTemplates](PartTemplate.md) — `ProfitMarkupId` (FK)
+- [Parts](Part.md) — `ProfitMarkup` (expand)
+- [Parts](Part.md) — `ProfitMarkupId` (FK)
 
 
 ## Example

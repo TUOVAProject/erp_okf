@@ -39,7 +39,7 @@ referenced_by:
 
 Represents a booking row.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `BookingRow`
 - **Endpoint:** `GET /api/v1/Accounting/BookingRows`
 - **GUID:** `6C01AE3F-3CEA-4A92-899A-04E23F8FBD46`
@@ -52,23 +52,23 @@ Represents a booking row.
 | `Id` | `Int64` | no |  |  | The business key identifier of the booking row. |
 | `Type` | `Int32` | no |  | enum | The type of booking row. |
 | `AuthorizedWhen` | `DateTimeOffset?` | yes |  | **deprecated since 2.49** | When the booking row was authorized. Property is obsolete, it gives last value from new list of row authorizations _(Now returns AuthorizedWhen from last row authorization)_ |
-| `PurchaseOrderDeliveryRowId` | `Int64?` | yes | [PurchaseOrderDeliveryRows](/entities/Purchase/PurchaseOrderDeliveryRow.md) |  | The business key identifier of the booking rows purchase order delivery row. |
-| `BookingId` | `Int64` | no | [Bookings](/entities/Accounting/Booking.md) |  | The business key identifier of the booking. |
-| `VatRateId` | `Int64?` | yes | [VatRates](/entities/Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
-| `AccrualAccountingId` | `Int64?` | yes | [AccrualAccountings](/entities/Accounting/AccrualAccounting.md) |  | The business key identifier of the accrual accounting. |
+| `PurchaseOrderDeliveryRowId` | `Int64?` | yes | [PurchaseOrderDeliveryRows](../Purchase/PurchaseOrderDeliveryRow.md) |  | The business key identifier of the booking rows purchase order delivery row. |
+| `BookingId` | `Int64` | no | [Bookings](Booking.md) |  | The business key identifier of the booking. |
+| `VatRateId` | `Int64?` | yes | [VatRates](../Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
+| `AccrualAccountingId` | `Int64?` | yes | [AccrualAccountings](AccrualAccounting.md) |  | The business key identifier of the accrual accounting. |
 | `OrderNumber` | `String` | no |  | max length 50 | The human readable identifier of the order number |
 | `DebitInCompanyCurrency` | `Decimal` | no |  |  | Debit in the company currency. |
-| `DebitInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the debit in the company currency. |
+| `DebitInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the debit in the company currency. |
 | `CreditInCompanyCurrency` | `Decimal` | no |  |  | Credit in the company currency. |
-| `CreditInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the credit in the company currency. |
+| `CreditInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the credit in the company currency. |
 | `Debit` | `Decimal` | no |  |  | Debit on the booking row. |
-| `DebitCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the debit currency. |
+| `DebitCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the debit currency. |
 | `Credit` | `Decimal` | no |  |  | Credit on the booking row. |
-| `CreditCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the credit currency. |
+| `CreditCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the credit currency. |
 | `Quantity` | `Decimal` | no |  |  | Quantity on the booking row. |
 | `RowIndex` | `Int32` | no |  |  | Row index of the booking row. |
-| `CodingEntryId` | `Int64` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the coding entry. |
-| `NetAmountBookingRowId` | `Int64?` | yes | [BookingRows](/entities/Accounting/BookingRow.md) | since 25.6 | The business key identifier of the net amount row that the VAT row belongs to. |
+| `CodingEntryId` | `Int64` | no | [CodingEntries](CodingEntry.md) |  | The business key identifier of the coding entry. |
+| `NetAmountBookingRowId` | `Int64?` | yes | [BookingRows](BookingRow.md) | since 25.6 | The business key identifier of the net amount row that the VAT row belongs to. |
 
 ## Enumerations
 
@@ -111,11 +111,11 @@ Represents a booking row.
 
 **Accounting**
 
-- [AccrualAccountingRows](/entities/Accounting/AccrualAccountingRow.md) — `BookingRows` (expand)
-- [AccrualAccountings](/entities/Accounting/AccrualAccounting.md) — `AccountsPayableBookingRow` (expand)
-- [AccrualAccountings](/entities/Accounting/AccrualAccounting.md) — `BookingRows` (expand)
-- [BookingRows](/entities/Accounting/BookingRow.md) — `NetAmountBookingRowId` (FK)
-- [Bookings](/entities/Accounting/Booking.md) — `Rows` (expand)
+- [AccrualAccountingRows](AccrualAccountingRow.md) — `BookingRows` (expand)
+- [AccrualAccountings](AccrualAccounting.md) — `AccountsPayableBookingRow` (expand)
+- [AccrualAccountings](AccrualAccounting.md) — `BookingRows` (expand)
+- [BookingRows](BookingRow.md) — `NetAmountBookingRowId` (FK)
+- [Bookings](Booking.md) — `Rows` (expand)
 
 
 ## Example

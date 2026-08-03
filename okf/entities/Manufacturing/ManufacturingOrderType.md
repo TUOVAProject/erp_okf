@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a manufacturing order type.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ManufacturingOrderType`
 - **Endpoint:** `GET /api/v1/Manufacturing/ManufacturingOrderTypes`
 - **Required permission:** Show order types
@@ -61,8 +61,8 @@ Represents a manufacturing order type.
 
 **Manufacturing**
 
-- [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) — `OrderType` (expand)
-- [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) — `OrderTypeId` (FK)
+- [ManufacturingOrders](ManufacturingOrder.md) — `OrderType` (expand)
+- [ManufacturingOrders](ManufacturingOrder.md) — `OrderTypeId` (FK)
 
 
 ## Example

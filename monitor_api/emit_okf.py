@@ -5,18 +5,50 @@ Only ``type`` is required; ``index.md`` and ``log.md`` are the reserved
 filenames; relationships are expressed as ordinary markdown links, which is what
 turns the directory into a graph.
 
-Every cross-entity reference in a properties table is emitted as a bundle-relative
+Every cross-entity reference in a properties table is emitted as a markdown
 link, so an agent can answer "what does CustomerOrders reference, and what
 references Currencies?" by following links instead of loading the whole model.
+
+Link targets are built as bundle-root-absolute paths (``/entities/Common/X.md``)
+throughout this module -- that is the simplest thing for entity_path/module_path
+to produce, since a page never needs to know who is linking to it. ``write()``
+rewrites them to paths relative to the file being written just before it hits
+disk, via ``relativize_links``. That happens in exactly one place because a
+leading ``/`` only resolves against ``okf/`` if something serves ``okf/`` as the
+web root; GitHub, a plain file manager and most editors resolve it against the
+repo root instead, one directory too high.
 """
 
 import json
+import posixpath
+import re
 import shutil
 from collections import defaultdict
 
 import yaml
 
 from .paths import OKF_DIR, OKF_TMP_DIR
+
+ABSOLUTE_LINK = re.compile(r"\]\((/[^)\s]+)\)")
+
+
+def relativize_links(body: str, from_path: str) -> str:
+    """Rewrite every ``](/...)`` link target in body to be relative to from_path.
+
+    from_path and the recorded targets are both bundle-root-absolute strings
+    like "/entities/Sales/CustomerOrder.md" -- posixpath math on them, no
+    filesystem access needed. A "#fragment" (used by emit_compact.py's
+    per-entity anchors) is carried through untouched.
+    """
+    from_dir = posixpath.dirname(from_path)
+
+    def replace(match: re.Match) -> str:
+        file_part, _, fragment = match.group(1).partition("#")
+        relative = posixpath.relpath(file_part, from_dir)
+
+        return f"]({relative}#{fragment})" if fragment else f"]({relative})"
+
+    return ABSOLUTE_LINK.sub(replace, body)
 
 OKF_VERSION = "0.2"
 GENERATOR = "process:monitor-okf-build"
@@ -104,6 +136,7 @@ def frontmatter(fields: dict) -> str:
 def write(relative_path: str, fields: dict, body: str) -> None:
     path = OKF_TMP_DIR / relative_path.lstrip("/")
     path.parent.mkdir(parents=True, exist_ok=True)
+    body = relativize_links(body, relative_path)
     path.write_text(frontmatter(fields) + "\n" + body.rstrip() + "\n", encoding="utf-8")
 
 

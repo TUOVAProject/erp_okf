@@ -36,7 +36,7 @@ referenced_by:
 
 Represents a work interval.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `WorkInterval`
 - **Endpoint:** `GET /api/v1/TimeRecording/WorkIntervals`
 - **Required permission:** Show recording items
@@ -53,18 +53,18 @@ Represents a work interval.
 | `IsClosedInterval` | `Boolean` | no |  |  | Indicatates if the interval was ended. If false the interval is considered an active interval on the day which a future work recording is supposed to end. |
 | `BundleId` | `Guid` | no |  |  | Identifier to detect what work was recorded in the same bundle. |
 | `WorkRecordingType` | `Int32` | no |  | enum | What type of work this recording represents. Indicates which id is relevant on the interval. |
-| `IndirectWorkCodeId` | `Int64?` | yes | [IndirectWorkCodes](/entities/TimeRecording/IndirectWorkCode.md) |  | The business key identifier to an indirect work code. Defined if is indirect work. |
-| `OperationId` | `Int64?` | yes | [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) |  | The business key identifier to a manufacturing order operation. Defined if it is an operation unit or a setup recording. |
+| `IndirectWorkCodeId` | `Int64?` | yes | [IndirectWorkCodes](IndirectWorkCode.md) |  | The business key identifier to an indirect work code. Defined if is indirect work. |
+| `OperationId` | `Int64?` | yes | [ManufacturingOrderOperations](../Manufacturing/ManufacturingOrderOperation.md) |  | The business key identifier to a manufacturing order operation. Defined if it is an operation unit or a setup recording. |
 | `TimeCalculationType` | `Int32` | no |  | enum | The time calculation type for this interval. |
-| `ReportingEmployeeId` | `Int64` | no | [Persons](/entities/Common/Person.md) |  | The business key identifier to the employee making the recording. When machine recording this key will represent the operator if defined. Otherwise this will be the same as the person owning the recording day. |
-| `WorkCenterId` | `Int64?` | yes | [WorkCenters](/entities/Manufacturing/WorkCenter.md) |  | The business key identifier to the workcenter associated with the recording. |
+| `ReportingEmployeeId` | `Int64` | no | [Persons](../Common/Person.md) |  | The business key identifier to the employee making the recording. When machine recording this key will represent the operator if defined. Otherwise this will be the same as the person owning the recording day. |
+| `WorkCenterId` | `Int64?` | yes | [WorkCenters](../Manufacturing/WorkCenter.md) |  | The business key identifier to the workcenter associated with the recording. |
 | `WorkedTime` | `TimeSpan` | no |  |  | The calculated work time for this interval. |
 | `OfWichOvertime` | `TimeSpan` | no |  |  | How much of the worked time that was considered overtime. |
 | `ReportedQuantity` | `Decimal` | no |  |  | The reported quantity for this recording. |
 | `RejectedQuantity` | `Decimal` | no |  |  | The rejected quantity for this recording. |
-| `ActivityId` | `Int64?` | yes | [ProjectActivities](/entities/Common/ProjectActivity.md) | since 22.6 | The business key identifier to a project activity. Defined if it is a project activity. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) | since 23.8 | The business key identifier of the work interval comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable, since 23.8 | The comment of the work interval. |
+| `ActivityId` | `Int64?` | yes | [ProjectActivities](../Common/ProjectActivity.md) | since 22.6 | The business key identifier to a project activity. Defined if it is a project activity. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) | since 23.8 | The business key identifier of the work interval comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable, since 23.8 | The comment of the work interval. |
 
 ## Enumerations
 
@@ -90,7 +90,7 @@ Represents a work interval.
 
 **TimeRecording**
 
-- [RecordingDays](/entities/TimeRecording/RecordingDay.md) — `WorkIntervals` (expand)
+- [RecordingDays](RecordingDay.md) — `WorkIntervals` (expand)
 
 
 ## Example

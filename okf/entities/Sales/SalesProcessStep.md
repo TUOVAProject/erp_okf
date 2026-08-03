@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a sales process step.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `SalesProcessStep`
 - **Endpoint:** `GET /api/v1/Sales/SalesProcessSteps`
 - **Required permission:** Show business opportunity
@@ -50,8 +50,8 @@ Represents a sales process step.
 
 **Sales**
 
-- [SalesProcessTemplateRows](/entities/Sales/SalesProcessTemplateRow.md) — `SalesProcessStep` (expand)
-- [SalesProcessTemplateRows](/entities/Sales/SalesProcessTemplateRow.md) — `SalesProcessStepId` (FK)
+- [SalesProcessTemplateRows](SalesProcessTemplateRow.md) — `SalesProcessStep` (expand)
+- [SalesProcessTemplateRows](SalesProcessTemplateRow.md) — `SalesProcessStepId` (FK)
 
 
 ## Example

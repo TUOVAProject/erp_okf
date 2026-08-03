@@ -46,7 +46,7 @@ referenced_by:
 
 Represents a manufacturing work center.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `WorkCenter`
 - **Endpoint:** `GET /api/v1/Manufacturing/WorkCenters`
 - **Required permission:** Show work center
@@ -63,12 +63,12 @@ Represents a manufacturing work center.
 | `OperationDescription` | `String` | no |  |  | The translated operation description of the work center. |
 | `Type` | `Int32` | no |  | enum | The work center type. |
 | `DepartmentId` | `Int64` | no |  |  | The business key identifier of the department that the work center belongs to. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse that the work center belongs to. References Warehouses . |
-| `Warehouse` | `Warehouses` | no | [Warehouses](/entities/Common/Warehouse.md) | expandable | The warehouse that the work center belongs to. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the work center comment. References Comments . |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The work center comment. |
-| `ManufacturingPrintSettings` | `WorkCenterManufacturingPrintSettings[]` | no | [WorkCenterManufacturingPrintSettings](/entities/Manufacturing/WorkCenterManufacturingPrintSettings.md) | expandable, collection, since 2.28 | The print settings for manufacturing order documents. |
-| `CostFactorGroups` | `WorkCenterCostFactorGroups[]` | no | [WorkCenterCostFactorGroups](/entities/Manufacturing/WorkCenterCostFactorGroup.md) | expandable, collection, since 2.46 | The cost factor groups that belong to the work center. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse that the work center belongs to. References Warehouses . |
+| `Warehouse` | `Warehouses` | no | [Warehouses](../Common/Warehouse.md) | expandable | The warehouse that the work center belongs to. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the work center comment. References Comments . |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The work center comment. |
+| `ManufacturingPrintSettings` | `WorkCenterManufacturingPrintSettings[]` | no | [WorkCenterManufacturingPrintSettings](WorkCenterManufacturingPrintSettings.md) | expandable, collection, since 2.28 | The print settings for manufacturing order documents. |
+| `CostFactorGroups` | `WorkCenterCostFactorGroups[]` | no | [WorkCenterCostFactorGroups](WorkCenterCostFactorGroup.md) | expandable, collection, since 2.46 | The cost factor groups that belong to the work center. |
 | `TimePrecision` | `Int32` | no |  | enum, since 24.3 | Time precision for the work center |
 | `BasicTime` | `TimeSpan` | no |  | since 24.3 | Basic time (capacity per day) |
 | `NumberOfPlanningUnits` | `Decimal` | no |  | since 24.3 | Number of planning units, can be machines or persons depending on the work center type. |
@@ -77,8 +77,8 @@ Represents a manufacturing work center.
 | `SimulationFactor` | `Decimal` | no |  | since 24.3 | Simulation factor in percent for the work center. |
 | `UnitStaffFactor` | `Decimal` | no |  | since 24.3 | Indicates how large (in percent) a share of the operating unit time that is staffed for the work center. |
 | `SetupStaffFactor` | `Decimal` | no |  | since 24.3 | Indicates how large (in percent) a share of the operating setup time that is staffed for the work center. |
-| `Employees` | `PersonWorkCenters[]` | no | [PersonWorkCenters](/entities/TimeRecording/PersonWorkCenter.md) | expandable, collection, since 24.3 | Specifies the persons that should be allowed to select work from this work center. |
-| `ProductionCalendarExceptions` | `ProductionCalendarExceptions[]` | no | [ProductionCalendarExceptions](/entities/Manufacturing/ProductionCalendarException.md) | expandable, collection, since 24.3 | Specifies the production calendar exceptions for this work center. |
+| `Employees` | `PersonWorkCenters[]` | no | [PersonWorkCenters](../TimeRecording/PersonWorkCenter.md) | expandable, collection, since 24.3 | Specifies the persons that should be allowed to select work from this work center. |
+| `ProductionCalendarExceptions` | `ProductionCalendarExceptions[]` | no | [ProductionCalendarExceptions](ProductionCalendarException.md) | expandable, collection, since 24.3 | Specifies the production calendar exceptions for this work center. |
 
 ## Enumerations
 
@@ -106,26 +106,26 @@ Represents a manufacturing work center.
 
 **Accounting**
 
-- [FixedAssets](/entities/Accounting/FixedAsset.md) — `WorkCenterId` (FK)
+- [FixedAssets](../Accounting/FixedAsset.md) — `WorkCenterId` (FK)
 
 **Inventory**
 
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `ReasonWorkCenterId` (FK)
+- [CaseEntry](../Inventory/CaseEntry.md) — `ReasonWorkCenterId` (FK)
 
 **Manufacturing**
 
-- [AlternativeOperationRows](/entities/Manufacturing/AlternativeOperationRow.md) — `WorkCenterId` (FK)
-- [ManufacturingOrderOperationControlDataRows](/entities/Manufacturing/ManufacturingOrderOperationControlDataRow.md) — `WorkCenterId` (FK)
-- [ManufacturingOrderOperationReportings](/entities/Manufacturing/ManufacturingOrderOperationReporting.md) — `WorkCenterId` (FK)
-- [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) — `WorkCenterId` (FK)
-- [OperationRowControlDataRows](/entities/Manufacturing/OperationRowControlDataRow.md) — `WorkCenterId` (FK)
-- [ProductionCalendarExceptions](/entities/Manufacturing/ProductionCalendarException.md) — `WorkCenterId` (FK)
-- [WorkCenterCostFactorGroups](/entities/Manufacturing/WorkCenterCostFactorGroup.md) — `ParentId` (FK)
+- [AlternativeOperationRows](AlternativeOperationRow.md) — `WorkCenterId` (FK)
+- [ManufacturingOrderOperationControlDataRows](ManufacturingOrderOperationControlDataRow.md) — `WorkCenterId` (FK)
+- [ManufacturingOrderOperationReportings](ManufacturingOrderOperationReporting.md) — `WorkCenterId` (FK)
+- [ManufacturingOrderOperations](ManufacturingOrderOperation.md) — `WorkCenterId` (FK)
+- [OperationRowControlDataRows](OperationRowControlDataRow.md) — `WorkCenterId` (FK)
+- [ProductionCalendarExceptions](ProductionCalendarException.md) — `WorkCenterId` (FK)
+- [WorkCenterCostFactorGroups](WorkCenterCostFactorGroup.md) — `ParentId` (FK)
 
 **TimeRecording**
 
-- [PersonWorkCenters](/entities/TimeRecording/PersonWorkCenter.md) — `WorkCenterId` (FK)
-- [WorkIntervals](/entities/TimeRecording/WorkInterval.md) — `WorkCenterId` (FK)
+- [PersonWorkCenters](../TimeRecording/PersonWorkCenter.md) — `WorkCenterId` (FK)
+- [WorkIntervals](../TimeRecording/WorkInterval.md) — `WorkCenterId` (FK)
 
 
 ## Example

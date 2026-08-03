@@ -34,7 +34,7 @@ referenced_by:
 
 Represents an attendance addition
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `AttendanceAddition`
 - **Endpoint:** `GET /api/v1/TimeRecording/AttendanceAdditions`
 - **Required permission:** Show basic data for attendance
@@ -53,14 +53,14 @@ Represents an attendance addition
 | `EnterFromTo` | `Boolean` | no |  |  | Specifies whether Enter from/to is enabled. |
 | `MandatoryComment` | `Boolean` | no |  |  | Specifies whether comment is mandatory or not. |
 | `LinkToProjectType` | `Int32` | no |  | enum | Type of link to project. |
-| `TimeBankId` | `Int64?` | yes | [TimeBanks](/entities/TimeRecording/TimeBank.md) |  | The business key identifier of time bank. |
-| `TimeBank` | `TimeBanks` | no | [TimeBanks](/entities/TimeRecording/TimeBank.md) | expandable | Time bank. |
+| `TimeBankId` | `Int64?` | yes | [TimeBanks](TimeBank.md) |  | The business key identifier of time bank. |
+| `TimeBank` | `TimeBanks` | no | [TimeBanks](TimeBank.md) | expandable | Time bank. |
 | `TimeBankTransaction` | `Int32` | no |  | enum | Type of time bank transaction. |
 | `Cost` | `Decimal` | no |  |  | The cost of the attendance addition. |
-| `CostCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the attendance addition cost currency. |
-| `SalaryTypes` | `SalaryTypes[]` | no | [SalaryTypes](/entities/TimeRecording/SalaryType.md) | expandable, collection, since 24.9 | The salary types of the attendance addition cost. |
-| `CostTypeId` | `Int64?` | yes | [ProjectCostTypes](/entities/Common/ProjectCostType.md) | since 24.9 | The business key identifier of the project cost type of the attendance addition. |
-| `CostType` | `ProjectCostTypes` | no | [ProjectCostTypes](/entities/Common/ProjectCostType.md) | expandable, since 24.9 | The project cost type of the attendance addition. |
+| `CostCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the attendance addition cost currency. |
+| `SalaryTypes` | `SalaryTypes[]` | no | [SalaryTypes](SalaryType.md) | expandable, collection, since 24.9 | The salary types of the attendance addition cost. |
+| `CostTypeId` | `Int64?` | yes | [ProjectCostTypes](../Common/ProjectCostType.md) | since 24.9 | The business key identifier of the project cost type of the attendance addition. |
+| `CostType` | `ProjectCostTypes` | no | [ProjectCostTypes](../Common/ProjectCostType.md) | expandable, since 24.9 | The project cost type of the attendance addition. |
 | `CostVisibility` | `Int32` | no |  | enum, since 24.9 | The visibility or editability of the cost of the attendance addition. |
 
 ## Enumerations
@@ -100,8 +100,8 @@ Represents an attendance addition
 
 **TimeRecording**
 
-- [AdditionRecordings](/entities/TimeRecording/AdditionRecording.md) — `AttendanceAddition` (expand)
-- [AdditionRecordings](/entities/TimeRecording/AdditionRecording.md) — `AttendanceAdditionId` (FK)
+- [AdditionRecordings](AdditionRecording.md) — `AttendanceAddition` (expand)
+- [AdditionRecordings](AdditionRecording.md) — `AttendanceAdditionId` (FK)
 
 
 ## Example

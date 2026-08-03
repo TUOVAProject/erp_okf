@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a supplier account.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `SupplierAccount`
 - **Endpoint:** `GET /api/v1/Purchase/SupplierAccounts`
 - **Required permission:** Show supplier
@@ -45,16 +45,16 @@ Represents a supplier account.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the supplier account. |
-| `SupplierId` | `Int64?` | yes | [Suppliers](/entities/Purchase/Supplier.md) |  | The business key identifier of the accounts supplier. |
-| `StandardAccountId` | `Int64?` | yes | [StandardAccounts](/entities/Accounting/StandardAccount.md) |  | The business key identifier of the standard account for the account. |
-| `StandardAccount` | `StandardAccounts` | no | [StandardAccounts](/entities/Accounting/StandardAccount.md) | expandable | The standard account for the account. |
-| `CodingEntryId` | `Int64?` | yes | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the coding entry for the account. |
+| `SupplierId` | `Int64?` | yes | [Suppliers](Supplier.md) |  | The business key identifier of the accounts supplier. |
+| `StandardAccountId` | `Int64?` | yes | [StandardAccounts](../Accounting/StandardAccount.md) |  | The business key identifier of the standard account for the account. |
+| `StandardAccount` | `StandardAccounts` | no | [StandardAccounts](../Accounting/StandardAccount.md) | expandable | The standard account for the account. |
+| `CodingEntryId` | `Int64?` | yes | [CodingEntries](../Accounting/CodingEntry.md) |  | The business key identifier of the coding entry for the account. |
 
 ## Referenced by
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `SupplierAccounts` (expand)
+- [Suppliers](Supplier.md) — `SupplierAccounts` (expand)
 
 
 ## Example

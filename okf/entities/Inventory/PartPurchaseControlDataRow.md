@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a purchase measuring plan for a part.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PartPurchaseControlDataRow`
 - **Endpoint:** `GET /api/v1/Inventory/PartPurchaseControlDataRows`
 - **Required permission:** Show part
@@ -46,19 +46,19 @@ Represents a purchase measuring plan for a part.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the entity. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part that the row relates to. |
-| `MeasuringTemplateId` | `Int64` | no | [MeasuringTemplates](/entities/Common/MeasuringTemplate.md) |  | The business key identifier of the measuring template that the row relates to. |
-| `OverriddenFormTemplateId` | `Int64?` | yes | [FormTemplates](/entities/Common/FormTemplate.md) |  | The business key identifier of the form template specified for this row. |
+| `PartId` | `Int64` | no | [Parts](Part.md) |  | The business key identifier of the part that the row relates to. |
+| `MeasuringTemplateId` | `Int64` | no | [MeasuringTemplates](../Common/MeasuringTemplate.md) |  | The business key identifier of the measuring template that the row relates to. |
+| `OverriddenFormTemplateId` | `Int64?` | yes | [FormTemplates](../Common/FormTemplate.md) |  | The business key identifier of the form template specified for this row. |
 | `OverriddenFrequencyText` | `String` | no |  | max length 80 | The frequency text specified for this row. |
 | `OverriddenIntervalAmount` | `Int32?` | yes |  |  | The quantity value specified for this row. |
 | `OverriddenInterval` | `Int32?` | yes |  |  | The interval value specified for this row. |
-| `SupplierId` | `Int64?` | yes | [Suppliers](/entities/Purchase/Supplier.md) |  | The business key identifier of the supplier that the row relates to. |
+| `SupplierId` | `Int64?` | yes | [Suppliers](../Purchase/Supplier.md) |  | The business key identifier of the supplier that the row relates to. |
 
 ## Referenced by
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `ControlDataRows` (expand)
+- [Parts](Part.md) — `ControlDataRows` (expand)
 
 
 ## Example

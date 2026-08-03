@@ -31,7 +31,7 @@ references_out:
 
 Represents a work put on standby.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `StandbyWork`
 - **Endpoint:** `GET /api/v1/TimeRecording/StandbyWorks`
 - **Required permission:** Show recording items
@@ -43,13 +43,13 @@ Represents a work put on standby.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the standby work. |
-| `EmployeeId` | `Int64` | no | [Persons](/entities/Common/Person.md) |  | The business key identifier of the employee who has this work on standby. |
+| `EmployeeId` | `Int64` | no | [Persons](../Common/Person.md) |  | The business key identifier of the employee who has this work on standby. |
 | `BundleId` | `Guid` | no |  |  | The bundle id of the work. Used to identify if work should be started as a bundle when restarting. |
 | `WorkRecordingType` | `Int32` | no |  | enum | What type of work this represents. |
-| `IndirectWorkCodeId` | `Int64?` | yes | [IndirectWorkCodes](/entities/TimeRecording/IndirectWorkCode.md) |  | The business key identifier of the indirect work code, defined when WorkRecordingType is Indirect. |
-| `IndirectWorkCode` | `IndirectWorkCodes` | no | [IndirectWorkCodes](/entities/TimeRecording/IndirectWorkCode.md) | expandable | The indirect work code, available when WorkRecordingType is Indirect. |
-| `OperationId` | `Int64?` | yes | [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) |  | The business key identifier of the operation, defined when WorkRecordingType is OperationSetup or OperationUnit. |
-| `Operation` | `ManufacturingOrderOperations` | no | [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) | expandable | The operation for this work, available when WorkRecordingType is OperationSetup or OperationUnit. |
+| `IndirectWorkCodeId` | `Int64?` | yes | [IndirectWorkCodes](IndirectWorkCode.md) |  | The business key identifier of the indirect work code, defined when WorkRecordingType is Indirect. |
+| `IndirectWorkCode` | `IndirectWorkCodes` | no | [IndirectWorkCodes](IndirectWorkCode.md) | expandable | The indirect work code, available when WorkRecordingType is Indirect. |
+| `OperationId` | `Int64?` | yes | [ManufacturingOrderOperations](../Manufacturing/ManufacturingOrderOperation.md) |  | The business key identifier of the operation, defined when WorkRecordingType is OperationSetup or OperationUnit. |
+| `Operation` | `ManufacturingOrderOperations` | no | [ManufacturingOrderOperations](../Manufacturing/ManufacturingOrderOperation.md) | expandable | The operation for this work, available when WorkRecordingType is OperationSetup or OperationUnit. |
 | `ActivityId` | `Int64?` | yes |  |  | The business key identifier of the activity, defined when WorkRecordingType is Activity. References a project activity. |
 
 ## Enumerations

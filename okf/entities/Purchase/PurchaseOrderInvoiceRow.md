@@ -37,7 +37,7 @@ referenced_by:
 
 Represents a purchase order invoice row entry
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `PurchaseOrderInvoiceRow`
 - **Endpoint:** `GET /api/v1/Purchase/PurchaseOrderInvoiceRows`
 - **Required permission:** Show purchase orders
@@ -49,32 +49,32 @@ Represents a purchase order invoice row entry
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the purchase order invoice row. |
-| `PurchaseOrderDeliveryRowId` | `Int64` | no | [PurchaseOrderDeliveryRows](/entities/Purchase/PurchaseOrderDeliveryRow.md) |  | The business key identifier of the purchase order delivery row. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the purchase order's invoice row comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The internal comment of the purchase order invoice row. |
+| `PurchaseOrderDeliveryRowId` | `Int64` | no | [PurchaseOrderDeliveryRows](PurchaseOrderDeliveryRow.md) |  | The business key identifier of the purchase order delivery row. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the purchase order's invoice row comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The internal comment of the purchase order invoice row. |
 | `Price` | `Decimal?` | yes |  |  | The price of the row. |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row price currency. |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row price currency. |
 | `PriceLockedFromAutomaticChanges` | `Boolean` | no |  |  | Specifies if price is locked from automatic changes. |
 | `PriceIsFuturePrice` | `Boolean` | no |  |  | Specifies if price is a future price. |
 | `PriceInCompanyCurrency` | `Decimal?` | yes |  |  | The price of the row in company currency. |
-| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for the row price in the company currency. |
+| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency for the row price in the company currency. |
 | `SetupPrice` | `Decimal?` | yes |  |  | The setup price of the row. |
-| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for the row setup price. |
+| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency for the row setup price. |
 | `SetupPriceInCompanyCurrency` | `Decimal?` | yes |  |  | The setup price of the row in company currency. |
-| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for row setup price in company currency. |
-| `VatRateId` | `Int64` | no | [VatRates](/entities/Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
+| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency for row setup price in company currency. |
+| `VatRateId` | `Int64` | no | [VatRates](../Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
 | `Discount` | `Decimal` | no |  |  | The discount in percent set for the row. |
 | `StandardPrice` | `Decimal?` | yes |  |  | The standard price of the row. |
-| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for the row standard price. |
-| `CodingId` | `Int64?` | yes | [CodingEntries](/entities/Accounting/CodingEntry.md) | since 2.30 | The business key identifier of the row's coding. |
-| `Coding` | `Codings` | no | [Codings](/entities/Accounting/Coding.md) | expandable, since 2.30 | The coding of the row. |
-| `LedgerId` | `Int64?` | yes | [AccountsPayables](/entities/Accounting/AccountsPayable.md) | since 22.5 | The business key identifier of the invoice row's ledger. |
+| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency for the row standard price. |
+| `CodingId` | `Int64?` | yes | [CodingEntries](../Accounting/CodingEntry.md) | since 2.30 | The business key identifier of the row's coding. |
+| `Coding` | `Codings` | no | [Codings](../Accounting/Coding.md) | expandable, since 2.30 | The coding of the row. |
+| `LedgerId` | `Int64?` | yes | [AccountsPayables](../Accounting/AccountsPayable.md) | since 22.5 | The business key identifier of the invoice row's ledger. |
 
 ## Referenced by
 
 **Purchase**
 
-- [PurchaseOrderInvoices](/entities/Purchase/PurchaseOrderInvoice.md) — `Rows` (expand)
+- [PurchaseOrderInvoices](PurchaseOrderInvoice.md) — `Rows` (expand)
 
 
 ## Example

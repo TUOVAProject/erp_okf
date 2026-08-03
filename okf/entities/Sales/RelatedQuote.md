@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a placeholder for related quotes.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `RelatedQuote`
 - **Endpoint:** `GET /api/v1/Sales/RelatedQuotes`
 - **Required permission:** Show quote
@@ -47,8 +47,8 @@ Represents a placeholder for related quotes.
 
 **Sales**
 
-- [Quotes](/entities/Sales/Quote.md) — `RelatedQuotesId` (FK)
-- [RelatedQuoteEntries](/entities/Sales/RelatedQuoteEntry.md) — `RelatedQuotesId` (FK)
+- [Quotes](Quote.md) — `RelatedQuotesId` (FK)
+- [RelatedQuoteEntries](RelatedQuoteEntry.md) — `RelatedQuotesId` (FK)
 
 
 ## Example

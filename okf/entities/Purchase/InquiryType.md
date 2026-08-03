@@ -31,7 +31,7 @@ referenced_by:
 
 Represents an inquiry type.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `InquiryType`
 - **Endpoint:** `GET /api/v1/Purchase/InquiryTypes`
 - **Required permission:** Show order types
@@ -52,7 +52,7 @@ Represents an inquiry type.
 | `BaseType` | `Int32` | no |  | enum | The base type of inquiries created from this type. |
 | `CodingGroupId` | `Int64` | no |  |  | The business key identifier of the type's coding group. |
 | `RateTypeSetting` | `Int32` | no |  | enum, since 22.9 | The rate type setting of the inquiry type. |
-| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the inquiry type's currency exchange type. |
+| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the inquiry type's currency exchange type. |
 
 ## Enumerations
 
@@ -74,8 +74,8 @@ Represents an inquiry type.
 
 **Purchase**
 
-- [Inquiries](/entities/Purchase/Inquiry.md) — `OrderType` (expand)
-- [Inquiries](/entities/Purchase/Inquiry.md) — `OrderTypeId` (FK)
+- [Inquiries](Inquiry.md) — `OrderType` (expand)
+- [Inquiries](Inquiry.md) — `OrderTypeId` (FK)
 
 
 ## Example

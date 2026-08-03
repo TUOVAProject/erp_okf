@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a part code.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PartCode`
 - **Endpoint:** `GET /api/v1/Inventory/PartCodes`
 - **Required permission:** Show basic data for part
@@ -51,13 +51,13 @@ Represents a part code.
 
 **Common**
 
-- [DiscountCategoryRows](/entities/Common/DiscountCategoryRow.md) — `PartCodeId` (FK)
+- [DiscountCategoryRows](../Common/DiscountCategoryRow.md) — `PartCodeId` (FK)
 
 **Inventory**
 
-- [PartTemplates](/entities/Inventory/PartTemplate.md) — `PartCodeId` (FK)
-- [Parts](/entities/Inventory/Part.md) — `PartCode` (expand)
-- [Parts](/entities/Inventory/Part.md) — `PartCodeId` (FK)
+- [PartTemplates](PartTemplate.md) — `PartCodeId` (FK)
+- [Parts](Part.md) — `PartCode` (expand)
+- [Parts](Part.md) — `PartCodeId` (FK)
 
 
 ## Example

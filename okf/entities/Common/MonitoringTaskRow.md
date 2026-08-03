@@ -30,7 +30,7 @@ references_out:
 
 Represents a monitoring task row.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `MonitoringTaskRow`
 - **Endpoint:** `GET /api/v1/Common/MonitoringTaskRows`
 - **Required permission:** Create and handle all monitoring tasks
@@ -42,13 +42,13 @@ Represents a monitoring task row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the monitoring task row. |
-| `TaskId` | `Int64` | no | [MonitoringTasks](/entities/Common/MonitoringTask.md) |  | The business key identifier of the monitoring task that the row belongs to. |
+| `TaskId` | `Int64` | no | [MonitoringTasks](MonitoringTask.md) |  | The business key identifier of the monitoring task that the row belongs to. |
 | `EntityId` | `Int64` | no |  |  | The business key identifier of the entity type that the row belongs to. |
 | `EntityType` | `Guid` | no |  |  | The type of entity that the row belongs to. |
 | `ConditionType` | `Int32` | no |  |  | The condition type of the monitoring task row. |
 | `Value` | `String` | no |  | max length 2500 | The threshold balance of stock. Applicable to monitoring task type of StockBalance |
 | `Message` | `String` | no |  |  | The message of row to be sent to recipient. |
-| `Warehouses` | `Warehouses[]` | no | [Warehouses](/entities/Common/Warehouse.md) | expandable, collection | Specifies the warehouse of the monitoring task row. |
+| `Warehouses` | `Warehouses[]` | no | [Warehouses](Warehouse.md) | expandable, collection | Specifies the warehouse of the monitoring task row. |
 
 ## Example
 

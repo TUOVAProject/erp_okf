@@ -30,7 +30,7 @@ references_out:
 
 Represents a part configuration preset.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PartConfigurationPreset`
 - **Endpoint:** `GET /api/v1/Common/PartConfigurationPresets`
 - **Required permission:** Show part
@@ -44,10 +44,10 @@ Represents a part configuration preset.
 | `Id` | `Int64` | no |  |  | The business key identifier of the part configuration preset. |
 | `Name` | `String` | no |  | max length 50 | The name of the preset. |
 | `ChangedDate` | `DateTimeOffset?` | yes |  |  | The date and time the preset was last changed. |
-| `ChangedBy` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user who last changed the preset. |
+| `ChangedBy` | `Int64?` | yes | [ApplicationUsers](ApplicationUser.md) |  | The business key identifier of the application user who last changed the preset. |
 | `CreatedDate` | `DateTimeOffset` | no |  |  | The date and time the preset was created. |
-| `CreatedBy` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user who created the preset. |
-| `PartConfigurationId` | `Int64?` | yes | [PartConfigurations](/entities/Common/PartConfiguration.md) |  | The business key identifier of the preset's configuration. |
+| `CreatedBy` | `Int64?` | yes | [ApplicationUsers](ApplicationUser.md) |  | The business key identifier of the application user who created the preset. |
+| `PartConfigurationId` | `Int64?` | yes | [PartConfigurations](PartConfiguration.md) |  | The business key identifier of the preset's configuration. |
 | `Type` | `Int32` | no |  | enum, since 23.7 | The type of part configuration preset. |
 
 ## Enumerations

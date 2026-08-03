@@ -48,7 +48,7 @@ referenced_by:
 
 Represents a quantity unit.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `Unit`
 - **Endpoint:** `GET /api/v1/Common/Units`
 - **Required permission:** Show units
@@ -68,51 +68,51 @@ Represents a quantity unit.
 
 **Common**
 
-- [CompanyEmissionDetails](/entities/Common/CompanyEmissionDetail.md) — `Unit` (expand)
-- [FormTemplateRows](/entities/Common/FormTemplateRow.md) — `UnitId` (FK)
-- [PartUnitUsages](/entities/Common/PartUnitUsage.md) — `UnitId` (FK)
+- [CompanyEmissionDetails](CompanyEmissionDetail.md) — `Unit` (expand)
+- [FormTemplateRows](FormTemplateRow.md) — `UnitId` (FK)
+- [PartUnitUsages](PartUnitUsage.md) — `UnitId` (FK)
 
 **Inventory**
 
-- [Alloys](/entities/Inventory/Alloy.md) — `UnitId` (FK)
-- [Parts](/entities/Inventory/Part.md) — `StandardUnitId` (FK)
-- [SalesForecastRows](/entities/Inventory/SalesForecastRow.md) — `UnitId` (FK)
+- [Alloys](../Inventory/Alloy.md) — `UnitId` (FK)
+- [Parts](../Inventory/Part.md) — `StandardUnitId` (FK)
+- [SalesForecastRows](../Inventory/SalesForecastRow.md) — `UnitId` (FK)
 
 **Manufacturing**
 
-- [MaintenanceReportingRows](/entities/Manufacturing/MaintenanceReportingRow.md) — `UnitId` (FK)
+- [MaintenanceReportingRows](../Manufacturing/MaintenanceReportingRow.md) — `UnitId` (FK)
 
 **Purchase**
 
-- [BlanketOrderPurchaseRows](/entities/Purchase/BlanketOrderPurchaseRow.md) — `Unit` (expand)
-- [BlanketOrderPurchaseRows](/entities/Purchase/BlanketOrderPurchaseRow.md) — `UnitId` (FK)
-- [InquiryRows](/entities/Purchase/InquiryRow.md) — `Unit` (expand)
-- [InquiryRows](/entities/Purchase/InquiryRow.md) — `UnitId` (FK)
-- [PurchaseOrderAdviceRows](/entities/Purchase/PurchaseOrderAdviceRow.md) — `UnitId` (FK)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `Unit` (expand)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `UnitId` (FK)
-- [SupplierPartLinks](/entities/Purchase/SupplierPartLink.md) — `Unit` (expand)
-- [SupplierPartLinks](/entities/Purchase/SupplierPartLink.md) — `UnitId` (FK)
+- [BlanketOrderPurchaseRows](../Purchase/BlanketOrderPurchaseRow.md) — `Unit` (expand)
+- [BlanketOrderPurchaseRows](../Purchase/BlanketOrderPurchaseRow.md) — `UnitId` (FK)
+- [InquiryRows](../Purchase/InquiryRow.md) — `Unit` (expand)
+- [InquiryRows](../Purchase/InquiryRow.md) — `UnitId` (FK)
+- [PurchaseOrderAdviceRows](../Purchase/PurchaseOrderAdviceRow.md) — `UnitId` (FK)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `Unit` (expand)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `UnitId` (FK)
+- [SupplierPartLinks](../Purchase/SupplierPartLink.md) — `Unit` (expand)
+- [SupplierPartLinks](../Purchase/SupplierPartLink.md) — `UnitId` (FK)
 
 **Sales**
 
-- [BlanketOrderSalesRows](/entities/Sales/BlanketOrderSalesRow.md) — `Unit` (expand)
-- [BlanketOrderSalesRows](/entities/Sales/BlanketOrderSalesRow.md) — `UnitId` (FK)
-- [CustomerOrderRowInflows](/entities/Sales/CustomerOrderRowInflow.md) — `Unit` (expand)
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `Unit` (expand)
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `UnitId` (FK)
-- [CustomerPartLinks](/entities/Sales/CustomerPartLink.md) — `Unit` (expand)
-- [CustomerPartLinks](/entities/Sales/CustomerPartLink.md) — `UnitId` (FK)
-- [QuoteRows](/entities/Sales/QuoteRow.md) — `Unit` (expand)
-- [QuoteRows](/entities/Sales/QuoteRow.md) — `UnitId` (FK)
-- [SalesAgreementBasisRows](/entities/Sales/SalesAgreementBasisRow.md) — `Unit` (expand)
-- [SalesAgreementBasisRows](/entities/Sales/SalesAgreementBasisRow.md) — `UnitId` (FK)
-- [SalesAgreementRows](/entities/Sales/SalesAgreementRow.md) — `Unit` (expand)
-- [SalesAgreementRows](/entities/Sales/SalesAgreementRow.md) — `UnitId` (FK)
-- [ShipmentCustomsRows](/entities/Sales/ShipmentCustomsRow.md) — `OtherUnit` (expand)
-- [ShipmentCustomsRows](/entities/Sales/ShipmentCustomsRow.md) — `OtherUnitId` (FK)
-- [ShipmentCustomsRows](/entities/Sales/ShipmentCustomsRow.md) — `Unit` (expand)
-- [ShipmentCustomsRows](/entities/Sales/ShipmentCustomsRow.md) — `UnitId` (FK)
+- [BlanketOrderSalesRows](../Sales/BlanketOrderSalesRow.md) — `Unit` (expand)
+- [BlanketOrderSalesRows](../Sales/BlanketOrderSalesRow.md) — `UnitId` (FK)
+- [CustomerOrderRowInflows](../Sales/CustomerOrderRowInflow.md) — `Unit` (expand)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `Unit` (expand)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `UnitId` (FK)
+- [CustomerPartLinks](../Sales/CustomerPartLink.md) — `Unit` (expand)
+- [CustomerPartLinks](../Sales/CustomerPartLink.md) — `UnitId` (FK)
+- [QuoteRows](../Sales/QuoteRow.md) — `Unit` (expand)
+- [QuoteRows](../Sales/QuoteRow.md) — `UnitId` (FK)
+- [SalesAgreementBasisRows](../Sales/SalesAgreementBasisRow.md) — `Unit` (expand)
+- [SalesAgreementBasisRows](../Sales/SalesAgreementBasisRow.md) — `UnitId` (FK)
+- [SalesAgreementRows](../Sales/SalesAgreementRow.md) — `Unit` (expand)
+- [SalesAgreementRows](../Sales/SalesAgreementRow.md) — `UnitId` (FK)
+- [ShipmentCustomsRows](../Sales/ShipmentCustomsRow.md) — `OtherUnit` (expand)
+- [ShipmentCustomsRows](../Sales/ShipmentCustomsRow.md) — `OtherUnitId` (FK)
+- [ShipmentCustomsRows](../Sales/ShipmentCustomsRow.md) — `Unit` (expand)
+- [ShipmentCustomsRows](../Sales/ShipmentCustomsRow.md) — `UnitId` (FK)
 
 
 ## Example

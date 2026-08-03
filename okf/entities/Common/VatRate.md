@@ -49,7 +49,7 @@ referenced_by:
 
 Represents a VAT rate.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `VatRate`
 - **Endpoint:** `GET /api/v1/Common/VatRates`
 - **Required permission:** Show VAT settings
@@ -65,12 +65,12 @@ Represents a VAT rate.
 | `Percentage` | `Decimal` | no |  |  | The VAT percentage of the rate. |
 | `Description` | `String` | no |  |  | The translated description of the rate. |
 | `ReversedTax` | `Boolean` | no |  |  | Specifies if reverse tax responsibility is applicable for the rate. |
-| `OutputVatAccountId` | `Int64?` | yes | [Accounts](/entities/Accounting/Account.md) |  | The business key identifier of the output account for the rate. |
-| `InputVatAccountId` | `Int64?` | yes | [Accounts](/entities/Accounting/Account.md) |  | The business key identifier of the input account for the rate. |
+| `OutputVatAccountId` | `Int64?` | yes | [Accounts](../Accounting/Account.md) |  | The business key identifier of the output account for the rate. |
+| `InputVatAccountId` | `Int64?` | yes | [Accounts](../Accounting/Account.md) |  | The business key identifier of the input account for the rate. |
 | `Active` | `Boolean` | no |  |  | Specifies if the rate is active. |
 | `ReversedTaxPercentage` | `Decimal` | no |  |  | Specifies the reverse VAT percentage of the rate. |
-| `ReferenceTextId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) | **deprecated since 24.5** | The business key identifier of the rate reference text. References Comments . _(Replaced by Reference.)_ |
-| `ReferenceText` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable, **deprecated since 24.5** | The rate reference text. _(Replaced by Reference.)_ |
+| `ReferenceTextId` | `Int64?` | yes | [Comments](Comment.md) | **deprecated since 24.5** | The business key identifier of the rate reference text. References Comments . _(Replaced by Reference.)_ |
+| `ReferenceText` | `Comments` | no | [Comments](Comment.md) | expandable, **deprecated since 24.5** | The rate reference text. _(Replaced by Reference.)_ |
 | `Reference` | `String` | no |  | since 24.5 | The translated reference text of the rate. |
 | `EcSalesType` | `Int32?` | yes |  | enum | Specifies the European Commission sales type of the VAT rate. |
 | `CodeType` | `Int32` | no |  | bitmask, enum, since 24.5 | Specifies the VAT code type of the VAT rate. |
@@ -102,43 +102,43 @@ Represents a VAT rate.
 
 **Accounting**
 
-- [AccountYearSettings](/entities/Accounting/AccountYearSetting.md) — `VatRateId` (FK)
-- [BookingRows](/entities/Accounting/BookingRow.md) — `VatRateId` (FK)
-- [VoucherRows](/entities/Accounting/VoucherRow.md) — `VatRateId` (FK)
+- [AccountYearSettings](../Accounting/AccountYearSetting.md) — `VatRateId` (FK)
+- [BookingRows](../Accounting/BookingRow.md) — `VatRateId` (FK)
+- [VoucherRows](../Accounting/VoucherRow.md) — `VatRateId` (FK)
 
 **Common**
 
-- [DeliveryAddresses](/entities/Common/DeliveryAddress.md) — `VatRateId` (FK)
-- [VatGroups](/entities/Common/VatGroup.md) — `DefaultVatRateForPurchaseId` (FK)
-- [VatGroups](/entities/Common/VatGroup.md) — `DefaultVatRateForSalesId` (FK)
-- [VatGroups](/entities/Common/VatGroup.md) — `DefaultVatRateId` (FK)
+- [DeliveryAddresses](DeliveryAddress.md) — `VatRateId` (FK)
+- [VatGroups](VatGroup.md) — `DefaultVatRateForPurchaseId` (FK)
+- [VatGroups](VatGroup.md) — `DefaultVatRateForSalesId` (FK)
+- [VatGroups](VatGroup.md) — `DefaultVatRateId` (FK)
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `VatRate` (expand)
-- [Parts](/entities/Inventory/Part.md) — `VatRateId` (FK)
+- [Parts](../Inventory/Part.md) — `VatRate` (expand)
+- [Parts](../Inventory/Part.md) — `VatRateId` (FK)
 
 **Purchase**
 
-- [BlanketOrderPurchaseRows](/entities/Purchase/BlanketOrderPurchaseRow.md) — `VatRate` (expand)
-- [BlanketOrderPurchaseRows](/entities/Purchase/BlanketOrderPurchaseRow.md) — `VatRateId` (FK)
-- [InquiryRows](/entities/Purchase/InquiryRow.md) — `VatRateId` (FK)
-- [PurchaseOrderInvoiceRows](/entities/Purchase/PurchaseOrderInvoiceRow.md) — `VatRateId` (FK)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `VatRate` (expand)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `VatRateId` (FK)
+- [BlanketOrderPurchaseRows](../Purchase/BlanketOrderPurchaseRow.md) — `VatRate` (expand)
+- [BlanketOrderPurchaseRows](../Purchase/BlanketOrderPurchaseRow.md) — `VatRateId` (FK)
+- [InquiryRows](../Purchase/InquiryRow.md) — `VatRateId` (FK)
+- [PurchaseOrderInvoiceRows](../Purchase/PurchaseOrderInvoiceRow.md) — `VatRateId` (FK)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `VatRate` (expand)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `VatRateId` (FK)
 
 **Sales**
 
-- [BlanketOrderSalesRows](/entities/Sales/BlanketOrderSalesRow.md) — `VatRate` (expand)
-- [BlanketOrderSalesRows](/entities/Sales/BlanketOrderSalesRow.md) — `VatRateId` (FK)
-- [CustomerOrderInvoiceRows](/entities/Sales/CustomerOrderInvoiceRow.md) — `VatRateId` (FK)
-- [CustomerOrderPaymentPlanRows](/entities/Sales/CustomerOrderPaymentPlanRow.md) — `VatRateId` (FK)
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `VatRateId` (FK)
-- [Customers](/entities/Sales/Customer.md) — `VatRate` (expand)
-- [Customers](/entities/Sales/Customer.md) — `VatRateId` (FK)
-- [QuoteRows](/entities/Sales/QuoteRow.md) — `VatRateId` (FK)
-- [SalesAgreementBasisRows](/entities/Sales/SalesAgreementBasisRow.md) — `VatRateId` (FK)
-- [SalesAgreementRows](/entities/Sales/SalesAgreementRow.md) — `VatRateId` (FK)
+- [BlanketOrderSalesRows](../Sales/BlanketOrderSalesRow.md) — `VatRate` (expand)
+- [BlanketOrderSalesRows](../Sales/BlanketOrderSalesRow.md) — `VatRateId` (FK)
+- [CustomerOrderInvoiceRows](../Sales/CustomerOrderInvoiceRow.md) — `VatRateId` (FK)
+- [CustomerOrderPaymentPlanRows](../Sales/CustomerOrderPaymentPlanRow.md) — `VatRateId` (FK)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `VatRateId` (FK)
+- [Customers](../Sales/Customer.md) — `VatRate` (expand)
+- [Customers](../Sales/Customer.md) — `VatRateId` (FK)
+- [QuoteRows](../Sales/QuoteRow.md) — `VatRateId` (FK)
+- [SalesAgreementBasisRows](../Sales/SalesAgreementBasisRow.md) — `VatRateId` (FK)
+- [SalesAgreementRows](../Sales/SalesAgreementRow.md) — `VatRateId` (FK)
 
 
 ## Example

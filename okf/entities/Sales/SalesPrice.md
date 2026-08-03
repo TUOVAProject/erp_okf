@@ -33,7 +33,7 @@ references_out:
 
 Represents a sales price.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `SalesPrice`
 - **Endpoint:** `GET /api/v1/Sales/SalesPrices`
 - **Required permission:** Show part
@@ -45,25 +45,25 @@ Represents a sales price.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the sales price. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part the sales price belongs to. |
-| `PriceListId` | `Int64` | no | [PriceLists](/entities/Common/PriceList.md) |  | The business key identifier of the price list the sales price belongs to. |
+| `PartId` | `Int64` | no | [Parts](../Inventory/Part.md) |  | The business key identifier of the part the sales price belongs to. |
+| `PriceListId` | `Int64` | no | [PriceLists](../Common/PriceList.md) |  | The business key identifier of the price list the sales price belongs to. |
 | `Price` | `Decimal?` | yes |  |  | The price on the sales price. |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for the price on the sales price. |
-| `PriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The currency for the price on the sales price. |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency for the price on the sales price. |
+| `PriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The currency for the price on the sales price. |
 | `SetupPrice` | `Decimal?` | yes |  |  | The setup price on the sales price. |
-| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for the setup price on the sales price. |
-| `SetupPriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The currency for the setup price on the sales price. |
+| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency for the setup price on the sales price. |
+| `SetupPriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The currency for the setup price on the sales price. |
 | `ValidThrough` | `DateTimeOffset?` | yes |  |  | The valid through date on the sales price. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the sales price's comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the sales price. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the sales price's comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment of the sales price. |
 | `FuturePrice` | `Decimal?` | yes |  |  | The future price on the sales price. |
-| `FuturePriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for the future price on the sales price. |
-| `FuturePriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The currency for the future price on the sales price. |
+| `FuturePriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency for the future price on the sales price. |
+| `FuturePriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The currency for the future price on the sales price. |
 | `FutureSetupPrice` | `Decimal?` | yes |  |  | The future setup price on the sales price. |
-| `FutureSetupPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for the future setup price on the sales price. |
-| `FutureSetupPriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The currency for the future setup price on the sales price. |
+| `FutureSetupPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency for the future setup price on the sales price. |
+| `FutureSetupPriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The currency for the future setup price on the sales price. |
 | `FuturePriceValidThrough` | `DateTimeOffset?` | yes |  |  | The future valid through date on the sales price. |
-| `StaggeredPrices` | `StaggeredPrices[]` | no | [StaggeredPrices](/entities/Common/StaggeredPrice.md) | expandable, collection | The staggered prices on the sales price. |
+| `StaggeredPrices` | `StaggeredPrices[]` | no | [StaggeredPrices](../Common/StaggeredPrice.md) | expandable, collection | The staggered prices on the sales price. |
 
 ## Example
 

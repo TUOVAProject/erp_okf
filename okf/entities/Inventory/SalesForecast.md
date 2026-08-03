@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a sales forecast.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `SalesForecast`
 - **Endpoint:** `GET /api/v1/Inventory/SalesForecasts`
 - **Required permission:** Show basic data for part
@@ -49,19 +49,19 @@ Represents a sales forecast.
 | `Id` | `Int64` | no |  |  | The business key identifier of the sales forecast. |
 | `ForecastCode` | `String` | no |  | unique, max length 8, min length 1 | The human readbale identifier of the sales forecast. |
 | `Description` | `String` | no |  |  | The translated description of the sales forecast. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse that the sales forecast belongs to. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse that the sales forecast belongs to. |
 | `TimeSpan` | `TimeSpan` | no |  |  | The interval time span of the sales forecast. |
 | `IsActive` | `Boolean` | no |  |  | The flag that indicates if the sales forecast is active. |
-| `CustomerId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) |  | The business key identifier for the customer of the sales forecast. |
-| `CustomerAccountGroupId` | `Int64?` | yes | [CustomerAccountGroups](/entities/Sales/CustomerAccountGroup.md) |  | The business key identifier for the customer account group of the sales forecast. |
-| `CustomerDistrictId` | `Int64?` | yes | [CustomerDistricts](/entities/Sales/CustomerDistrict.md) |  | The business key identifier for the customer district of the sales forecast. |
-| `SalesForecastRows` | `SalesForecastRows[]` | no | [SalesForecastRows](/entities/Inventory/SalesForecastRow.md) | expandable, collection, since 23.2 | The rows of the sales forecast. |
+| `CustomerId` | `Int64?` | yes | [Customers](../Sales/Customer.md) |  | The business key identifier for the customer of the sales forecast. |
+| `CustomerAccountGroupId` | `Int64?` | yes | [CustomerAccountGroups](../Sales/CustomerAccountGroup.md) |  | The business key identifier for the customer account group of the sales forecast. |
+| `CustomerDistrictId` | `Int64?` | yes | [CustomerDistricts](../Sales/CustomerDistrict.md) |  | The business key identifier for the customer district of the sales forecast. |
+| `SalesForecastRows` | `SalesForecastRows[]` | no | [SalesForecastRows](SalesForecastRow.md) | expandable, collection, since 23.2 | The rows of the sales forecast. |
 
 ## Referenced by
 
 **Inventory**
 
-- [SalesForecastRows](/entities/Inventory/SalesForecastRow.md) — `SalesForecastId` (FK)
+- [SalesForecastRows](SalesForecastRow.md) — `SalesForecastId` (FK)
 
 
 ## Example

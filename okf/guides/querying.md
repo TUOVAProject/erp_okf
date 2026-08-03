@@ -30,7 +30,7 @@ is the `endpoint` value recorded on every entity page in this bundle.
 
 - **351 queryable entities** — `GET`, returning a collection.
 - **4 commands** — `POST`, listed in
-  [Modules](/modules/index.md). Their properties table is the **request body**,
+  [Modules](../modules/index.md). Their properties table is the **request body**,
   not a response shape.
 - **25 payload types** — no endpoint of their own; they appear
   nested inside other responses or command bodies.
@@ -61,7 +61,7 @@ the docs give to query semantics:
   of them) are navigation properties — the docs flag them as expandable, which
   implies an expand mechanism exists.
 - One property summary
-  ([FormReportConfigurations](/entities/Common/FormReportConfiguration.md) `Type`)
+  ([FormReportConfigurations](../entities/Common/FormReportConfiguration.md) `Type`)
   notes that `$filter` and `$orderby` cannot be used with it, which confirms both
   options exist in some form.
 
@@ -69,6 +69,6 @@ Treat anything beyond that as unverified: it is not in the source documentation.
 
 ## Related
 
-- [Naming conventions](/guides/naming-conventions.md)
-- [Relationships](/guides/relationships.md)
-- [Permissions](/guides/permissions.md)
+- [Naming conventions](naming-conventions.md)
+- [Relationships](relationships.md)
+- [Permissions](permissions.md)

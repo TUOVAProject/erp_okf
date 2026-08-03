@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a sales process template row.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `SalesProcessTemplateRow`
 - **Endpoint:** `GET /api/v1/Sales/SalesProcessTemplateRows`
 - **Required permission:** Show business opportunity
@@ -47,16 +47,16 @@ Represents a sales process template row.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the sales process template row. |
 | `Code` | `Int64` | no |  |  | The human readable identifier of the sales process template row. |
-| `SalesProcessStepId` | `Int64` | no | [SalesProcessSteps](/entities/Sales/SalesProcessStep.md) |  | The business key identifier of the sales process template row's sales process step. |
-| `SalesProcessStep` | `SalesProcessSteps` | no | [SalesProcessSteps](/entities/Sales/SalesProcessStep.md) | expandable | The sales process step of the sales process template row. |
+| `SalesProcessStepId` | `Int64` | no | [SalesProcessSteps](SalesProcessStep.md) |  | The business key identifier of the sales process template row's sales process step. |
+| `SalesProcessStep` | `SalesProcessSteps` | no | [SalesProcessSteps](SalesProcessStep.md) | expandable | The sales process step of the sales process template row. |
 | `Probability` | `Int32` | no |  |  | The probability of the sales process template row. |
 | `LeadTime` | `Int32` | no |  |  | The lead time of the sales process template row. |
 | `Responsibility` | `Int32` | no |  | enum | The responsibility of the sales process template row. |
-| `ResponsibleSellerId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the sales process template row's responsible seller. |
-| `ResponsibleSeller` | `Persons` | no | [Persons](/entities/Common/Person.md) | expandable | The sales process template row's responsible seller. |
-| `ResponsibleSellerGroupId` | `Int64?` | yes | [SellerGroups](/entities/Sales/SellerGroup.md) |  | The business key identifier of the sales process template row's seller group. |
-| `ResponsibleSellerGroup` | `SellerGroups` | no | [SellerGroups](/entities/Sales/SellerGroup.md) | expandable | The sales process template row's seller group. |
-| `ParentId` | `Int64` | no | [SalesProcessTemplates](/entities/Sales/SalesProcessTemplate.md) |  | The business key identifier of the sales process template row's parent. |
+| `ResponsibleSellerId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the sales process template row's responsible seller. |
+| `ResponsibleSeller` | `Persons` | no | [Persons](../Common/Person.md) | expandable | The sales process template row's responsible seller. |
+| `ResponsibleSellerGroupId` | `Int64?` | yes | [SellerGroups](SellerGroup.md) |  | The business key identifier of the sales process template row's seller group. |
+| `ResponsibleSellerGroup` | `SellerGroups` | no | [SellerGroups](SellerGroup.md) | expandable | The sales process template row's seller group. |
+| `ParentId` | `Int64` | no | [SalesProcessTemplates](SalesProcessTemplate.md) |  | The business key identifier of the sales process template row's parent. |
 
 ## Enumerations
 
@@ -72,7 +72,7 @@ Represents a sales process template row.
 
 **Sales**
 
-- [SalesProcessTemplates](/entities/Sales/SalesProcessTemplate.md) — `Rows` (expand)
+- [SalesProcessTemplates](SalesProcessTemplate.md) — `Rows` (expand)
 
 
 ## Example

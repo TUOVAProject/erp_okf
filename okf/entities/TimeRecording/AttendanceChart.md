@@ -29,7 +29,7 @@ references_out:
 
 Represents an attendance chart.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `AttendanceChart`
 - **Endpoint:** `GET /api/v1/TimeRecording/AttendanceChart`
 - **Required permission:** Show recording items
@@ -39,9 +39,9 @@ Represents an attendance chart.
 
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
-| `Id` | `Int64` | no | [RecordingDays](/entities/TimeRecording/RecordingDay.md) |  | The business key identifier of the latest recording day. |
+| `Id` | `Int64` | no | [RecordingDays](RecordingDay.md) |  | The business key identifier of the latest recording day. |
 | `RecordingDate` | `DateTime` | no |  |  | The date of the last recording. |
-| `EmployeeId` | `Int64` | no | [Persons](/entities/Common/Person.md) |  | The business key identifier of the employee that the recording belongs to. |
+| `EmployeeId` | `Int64` | no | [Persons](../Common/Person.md) |  | The business key identifier of the employee that the recording belongs to. |
 | `EmployeeNumber` | `String` | no |  | max length 10 | The employee number of the recording employee. |
 | `FirstName` | `String` | no |  | max length 35 | The first name of the recording employee. |
 | `LastName` | `String` | no |  | max length 35 | The last name of the recording employee. |

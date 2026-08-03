@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a staggered price.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `StaggeredPrice`
 - **Endpoint:** `GET /api/v1/Common/StaggeredPrices`
 - **Required permission:** Show part
@@ -44,7 +44,7 @@ Represents a staggered price.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the staggered price. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part the staggered price belongs to. |
+| `PartId` | `Int64` | no | [Parts](../Inventory/Part.md) |  | The business key identifier of the part the staggered price belongs to. |
 | `Price` | `Decimal` | no |  |  | The price on the staggered price in the parent's currency. |
 | `LowerBoundaryQuantity` | `Decimal` | no |  |  | The lower boundary quantity on the staggered price. |
 | `FuturePrice` | `Decimal?` | yes |  |  | The future price on the staggered price in the parent's currency. |
@@ -56,8 +56,8 @@ Represents a staggered price.
 
 **Sales**
 
-- [CustomerPartLinks](/entities/Sales/CustomerPartLink.md) — `StaggeredPrices` (expand)
-- [SalesPrices](/entities/Sales/SalesPrice.md) — `StaggeredPrices` (expand)
+- [CustomerPartLinks](../Sales/CustomerPartLink.md) — `StaggeredPrices` (expand)
+- [SalesPrices](../Sales/SalesPrice.md) — `StaggeredPrices` (expand)
 
 
 ## Example

@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a packing term.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `PackingTerm`
 - **Endpoint:** `GET /api/v1/Purchase/PackingTerms`
 - **Required permission:** Show terms
@@ -50,10 +50,10 @@ Represents a packing term.
 
 **Purchase**
 
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `PackingTerm` (expand)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `PackingTermId` (FK)
-- [Suppliers](/entities/Purchase/Supplier.md) — `PackingTerm` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `PackingTermId` (FK)
+- [PurchaseOrders](PurchaseOrder.md) — `PackingTerm` (expand)
+- [PurchaseOrders](PurchaseOrder.md) — `PackingTermId` (FK)
+- [Suppliers](Supplier.md) — `PackingTerm` (expand)
+- [Suppliers](Supplier.md) — `PackingTermId` (FK)
 
 
 ## Example

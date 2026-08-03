@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a voucher series.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `VoucherSeries`
 - **Endpoint:** `GET /api/v1/Accounting/VoucherSeries`
 - **Required permission:** Show voucher
@@ -49,11 +49,11 @@ Represents a voucher series.
 
 **Accounting**
 
-- [Vouchers](/entities/Accounting/Voucher.md) — `SeriesId` (FK)
+- [Vouchers](Voucher.md) — `SeriesId` (FK)
 
 **Common**
 
-- [ApplicationUsers](/entities/Common/ApplicationUser.md) — `DefaultVoucherSeriesId` (FK)
+- [ApplicationUsers](../Common/ApplicationUser.md) — `DefaultVoucherSeriesId` (FK)
 
 
 ## Example

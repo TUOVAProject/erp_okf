@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a package type.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PackageType`
 - **Endpoint:** `GET /api/v1/Inventory/PackageTypes`
 - **Required permission:** Show basic data for part
@@ -52,14 +52,14 @@ Represents a package type.
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `PackageType` (expand)
-- [Parts](/entities/Inventory/Part.md) — `PackageTypeId` (FK)
+- [Parts](Part.md) — `PackageType` (expand)
+- [Parts](Part.md) — `PackageTypeId` (FK)
 
 **Sales**
 
-- [CustomerOrderShippingInformationRows](/entities/Sales/CustomerOrderShippingInformationRow.md) — `PackageType` (expand)
-- [CustomerOrderShippingInformationRows](/entities/Sales/CustomerOrderShippingInformationRow.md) — `PackageTypeId` (FK)
-- [ShipmentPackageInformations](/entities/Sales/ShipmentPackageInformation.md) — `PackageType` (FK)
+- [CustomerOrderShippingInformationRows](../Sales/CustomerOrderShippingInformationRow.md) — `PackageType` (expand)
+- [CustomerOrderShippingInformationRows](../Sales/CustomerOrderShippingInformationRow.md) — `PackageTypeId` (FK)
+- [ShipmentPackageInformations](../Sales/ShipmentPackageInformation.md) — `PackageType` (FK)
 
 
 ## Example

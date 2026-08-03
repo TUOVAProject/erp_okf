@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a customer order type.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerOrderType`
 - **Endpoint:** `GET /api/v1/Sales/CustomerOrderTypes`
 - **Required permission:** Show order types
@@ -54,17 +54,17 @@ Represents a customer order type.
 | `Visible` | `Boolean` | no |  |  | Specifies if the type is visible. |
 | `IsPreset` | `Boolean` | no |  |  | Specifies if the type is a preset type. |
 | `PriceSetting` | `Int32` | no |  | enum | The price settings of the type. |
-| `PriceListId` | `Int64?` | yes | [PriceLists](/entities/Common/PriceList.md) |  | The business key identifier of the type's price list. |
+| `PriceListId` | `Int64?` | yes | [PriceLists](../Common/PriceList.md) |  | The business key identifier of the type's price list. |
 | `IncludeInDeliveryAnalysis` | `Boolean` | no |  |  | Specifies if customer orders of this type should be included in delivery analysis. |
 | `IncludeInStatistics` | `Boolean` | no |  |  | Specifies if customer orders of this type should be included in statistics. |
 | `InvoiceType` | `Int32?` | yes |  | enum | The default invoice type of customer orders created with this type. |
-| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](/entities/Common/PaymentTerm.md) |  | The business key identifier of the type's default payment term. References a PaymentTerms |
+| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](../Common/PaymentTerm.md) |  | The business key identifier of the type's default payment term. References a PaymentTerms |
 | `PurchaseOrderAddressStrategy` | `Int32` | no |  | enum | The purchase order from customer order address strategy to use for customer orders of this type. |
 | `BaseType` | `Int32` | no |  | enum | The base type of customer orders created using this type. |
 | `CodingGroupId` | `Int64` | no |  |  | The business key identifier of the type's coding group. |
 | `RateTypeSetting` | `Int32` | no |  | enum, since 22.9 | The rate type setting of the customer order type. |
-| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the customer order type's currency exchange type. |
-| `DefaultTransferProfileId` | `Int64?` | yes | [TransferProfiles](/entities/Common/TransferProfile.md) | since 23.2 | The business key identifier of the customer order's default transfer profile. |
+| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the customer order type's currency exchange type. |
+| `DefaultTransferProfileId` | `Int64?` | yes | [TransferProfiles](../Common/TransferProfile.md) | since 23.2 | The business key identifier of the customer order's default transfer profile. |
 
 ## Enumerations
 
@@ -117,10 +117,10 @@ Represents a customer order type.
 
 **Sales**
 
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `OrderType` (expand)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `OrderTypeId` (FK)
-- [QuoteTypes](/entities/Sales/QuoteType.md) — `CustomerOrderType` (expand)
-- [QuoteTypes](/entities/Sales/QuoteType.md) — `CustomerOrderTypeId` (FK)
+- [CustomerOrders](CustomerOrder.md) — `OrderType` (expand)
+- [CustomerOrders](CustomerOrder.md) — `OrderTypeId` (FK)
+- [QuoteTypes](QuoteType.md) — `CustomerOrderType` (expand)
+- [QuoteTypes](QuoteType.md) — `CustomerOrderTypeId` (FK)
 
 
 ## Example

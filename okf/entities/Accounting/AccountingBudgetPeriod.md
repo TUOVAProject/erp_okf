@@ -32,7 +32,7 @@ referenced_by:
 
 Represents an accounting budget period.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccountingBudgetPeriod`
 - **Endpoint:** `GET /api/v1/Accounting/AccountingBudgetPeriods`
 - **Required permission:** Show budget
@@ -44,8 +44,8 @@ Represents an accounting budget period.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the accounting budget period. |
-| `BudgetId` | `Int64` | no | [AccountingBudgets](/entities/Accounting/AccountingBudget.md) |  | The business key identifier of the budget the accounting budget period belongs to. |
-| `PeriodId` | `Int64` | no | [AccountingYearPeriods](/entities/Accounting/AccountingYearPeriod.md) |  | The business key identifier of the period the accounting budget period belongs to. |
+| `BudgetId` | `Int64` | no | [AccountingBudgets](AccountingBudget.md) |  | The business key identifier of the budget the accounting budget period belongs to. |
+| `PeriodId` | `Int64` | no | [AccountingYearPeriods](AccountingYearPeriod.md) |  | The business key identifier of the period the accounting budget period belongs to. |
 | `Amount` | `Decimal` | no |  |  | The amount of the accounting budget period. |
 | `Quantity` | `Decimal` | no |  |  | The quantity of the accounting budget period. |
 
@@ -53,7 +53,7 @@ Represents an accounting budget period.
 
 **Accounting**
 
-- [AccountingBudgets](/entities/Accounting/AccountingBudget.md) — `Periods` (expand)
+- [AccountingBudgets](AccountingBudget.md) — `Periods` (expand)
 
 
 ## Example

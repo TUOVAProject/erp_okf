@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a shipping service.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `ShippingService`
 - **Endpoint:** `GET /api/v1/Sales/ShippingServices`
 - **Required permission:** Show shipment
@@ -53,17 +53,17 @@ Represents a shipping service.
 | `UseSellerAddress` | `Boolean` | no |  |  | Indicates if the shipping service use seller address. |
 | `UsePurchaserAddress` | `Boolean` | no |  |  | Indicates if the shipping service use purchaser address. |
 | `UseFrieghtPayerAddress` | `Boolean` | no |  |  | Indicates if the shipping service use frieght payer address. |
-| `ShippingTemplateId` | `Int64?` | yes | [ShippingTemplates](/entities/Sales/ShippingTemplate.md) |  | The business key identifier of the shipping template of the shipping service. |
+| `ShippingTemplateId` | `Int64?` | yes | [ShippingTemplates](ShippingTemplate.md) |  | The business key identifier of the shipping template of the shipping service. |
 | `SenderQuickId` | `String` | no |  | max length 30 | The sender quick id of the shipping service. |
-| `SupplierId` | `Int64?` | yes | [Suppliers](/entities/Purchase/Supplier.md) |  | The business key identifier of the supplier of the shipping service. |
+| `SupplierId` | `Int64?` | yes | [Suppliers](../Purchase/Supplier.md) |  | The business key identifier of the supplier of the shipping service. |
 | `SellerQuickId` | `String` | no |  | max length 30 | The seller quick id of the shipping service. |
 
 ## Referenced by
 
 **Sales**
 
-- [Shipments](/entities/Sales/Shipment.md) — `ShippingService` (expand)
-- [Shipments](/entities/Sales/Shipment.md) — `ShippingServiceId` (FK)
+- [Shipments](Shipment.md) — `ShippingService` (expand)
+- [Shipments](Shipment.md) — `ShippingServiceId` (FK)
 
 
 ## Example

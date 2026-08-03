@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a business contact note history entry.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `BusinessContactNoteHistory`
 - **Endpoint:** `GET /api/v1/Common/BusinessContactNoteHistories`
 - **GUID:** `d3610d12-29bb-44b8-9871-137873f0fb98`
@@ -46,8 +46,8 @@ Represents a business contact note history entry.
 | `Id` | `Int64` | no |  |  | The business key identifier of the business contact note. |
 | `Subject` | `String` | no |  | max length 64 | The subject of the business contact note. |
 | `BodyId` | `Int64?` | yes |  |  | The business key identifier for the body of the business contact note. |
-| `Body` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The body of the business contact note. |
-| `CreatedByUserId` | `Int64` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that created the business contact note. |
+| `Body` | `Comments` | no | [Comments](Comment.md) | expandable | The body of the business contact note. |
+| `CreatedByUserId` | `Int64` | no | [ApplicationUsers](ApplicationUser.md) |  | The business key identifier of the application user that created the business contact note. |
 | `CreatedTimestamp` | `DateTimeOffset` | no |  |  | The date the business contact note was created. |
 | `ParentId` | `Int64` | no |  |  | The business key identifier of the parent. |
 | `ParentClass` | `Guid` | no |  |  | The GUID of the parent type. |
@@ -56,12 +56,12 @@ Represents a business contact note history entry.
 
 **Inventory**
 
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `Notes` (expand)
-- [Parts](/entities/Inventory/Part.md) — `Notes` (expand)
+- [CaseEntry](../Inventory/CaseEntry.md) — `Notes` (expand)
+- [Parts](../Inventory/Part.md) — `Notes` (expand)
 
 **Sales**
 
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `BusinessContactNoteHistories` (expand)
+- [BusinessOpportunities](../Sales/BusinessOpportunity.md) — `BusinessContactNoteHistories` (expand)
 
 
 ## Example

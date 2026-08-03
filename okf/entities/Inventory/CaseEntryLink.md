@@ -29,7 +29,7 @@ references_out:
 
 Represents a case link.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `CaseEntryLink`
 - **Endpoint:** `GET /api/v1/Inventory/CaseEntryLinks`
 - **Required permission:** Show case
@@ -41,8 +41,8 @@ Represents a case link.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the case link. |
-| `ParentId` | `Int64` | no | [CaseEntry](/entities/Inventory/CaseEntry.md) |  | The business key identifier of the parent case entry of this case link. |
-| `ChildId` | `Int64` | no | [CaseEntry](/entities/Inventory/CaseEntry.md) |  | The business key identifier of the child case entry of this case link. |
+| `ParentId` | `Int64` | no | [CaseEntry](CaseEntry.md) |  | The business key identifier of the parent case entry of this case link. |
+| `ChildId` | `Int64` | no | [CaseEntry](CaseEntry.md) |  | The business key identifier of the child case entry of this case link. |
 
 ## Example
 

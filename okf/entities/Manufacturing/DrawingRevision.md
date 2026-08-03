@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a drawing revision.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `DrawingRevision`
 - **Endpoint:** `GET /api/v1/Manufacturing/DrawingRevisions`
 - **Required permission:** Show part
@@ -45,16 +45,16 @@ Represents a drawing revision.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the revision. |
 | `Number` | `String` | no |  | unique (per per Drawing), max length 25 | The human readable number of the revision. |
-| `ParentId` | `Int64?` | yes | [Drawings](/entities/Manufacturing/Drawing.md) |  | The business key identifier of the drawing that the revision belongs to. |
-| `RevisionCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the revision comment. |
-| `RevisionComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The revision comment. |
+| `ParentId` | `Int64?` | yes | [Drawings](Drawing.md) |  | The business key identifier of the drawing that the revision belongs to. |
+| `RevisionCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the revision comment. |
+| `RevisionComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The revision comment. |
 
 ## Referenced by
 
 **Manufacturing**
 
-- [Drawings](/entities/Manufacturing/Drawing.md) — `ActiveDrawingRevisionId` (FK)
-- [Drawings](/entities/Manufacturing/Drawing.md) — `Revisions` (expand)
+- [Drawings](Drawing.md) — `ActiveDrawingRevisionId` (FK)
+- [Drawings](Drawing.md) — `Revisions` (expand)
 
 
 ## Example

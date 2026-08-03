@@ -29,7 +29,7 @@ references_out:
 
 Represents a depreciation for a fixed assets object.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `FixedAssetDepreciation`
 - **Endpoint:** `GET /api/v1/Accounting/FixedAssetDepreciations`
 - **Required permission:** Show depreciation
@@ -45,7 +45,7 @@ Represents a depreciation for a fixed assets object.
 | `DepreciationDate` | `DateTimeOffset` | no |  |  | The depreciation date of the depreciation. |
 | `VoucherDate` | `DateTimeOffset` | no |  |  | The voucher date of the depreciation. |
 | `VoucherText` | `String` | no |  | max length 100 | The voucher date of the depreciation. |
-| `ParentId` | `Int64` | no | [FixedAssets](/entities/Accounting/FixedAsset.md) |  | The fixed assets object to which the depreciation belongs. |
+| `ParentId` | `Int64` | no | [FixedAssets](FixedAsset.md) |  | The fixed assets object to which the depreciation belongs. |
 
 ## Example
 

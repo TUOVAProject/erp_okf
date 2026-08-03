@@ -29,7 +29,7 @@ references_out:
 
 Represents a purchase order advice row product record.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `PurchaseOrderAdviceRowProductRecord`
 - **Endpoint:** `GET /api/v1/Purchase/PurchaseOrderAdviceRowProductRecords`
 - **Required permission:** Show arrival
@@ -41,7 +41,7 @@ Represents a purchase order advice row product record.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the purchase order advice row product record. |
-| `ParentId` | `Int64?` | yes | [PurchaseOrderAdviceRows](/entities/Purchase/PurchaseOrderAdviceRow.md) |  | The business key identifier of the purchase order advice row that this product record belongs to. |
+| `ParentId` | `Int64?` | yes | [PurchaseOrderAdviceRows](PurchaseOrderAdviceRow.md) |  | The business key identifier of the purchase order advice row that this product record belongs to. |
 | `TraceabilityMode` | `Int32` | no |  | enum | The traceability mode for the product record. |
 | `BatchNumber` | `String` | no |  | max length 60 | The batch number for the product record. |
 | `BatchQuantity` | `Decimal` | no |  |  | The batch quantity for the product record. |

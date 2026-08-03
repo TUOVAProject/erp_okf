@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a connection profile.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ConnectionProfile`
 - **Endpoint:** `GET /api/v1/Common/ConnectionProfiles`
 - **Required permission:** Show connection
@@ -66,7 +66,7 @@ Represents a connection profile.
 
 **Common**
 
-- [TransferProfiles](/entities/Common/TransferProfile.md) — `ConnectionProfileId` (FK)
+- [TransferProfiles](TransferProfile.md) — `ConnectionProfileId` (FK)
 
 
 ## Example

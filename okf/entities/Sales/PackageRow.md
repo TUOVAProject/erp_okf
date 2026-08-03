@@ -36,7 +36,7 @@ referenced_by:
 
 Represents a package row.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `PackageRow`
 - **Endpoint:** `GET /api/v1/Sales/PackageRows`
 - **Required permission:** Show customer orders
@@ -48,10 +48,10 @@ Represents a package row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the package row. |
-| `ParentId` | `Int64?` | yes | [SalesPickingLists](/entities/Sales/SalesPickingList.md) |  | The business key identifier of the row's picking list. |
-| `ParentRowId` | `Int64?` | yes | [PackageRows](/entities/Sales/PackageRow.md) |  | The business key identifier of the row's parent row. |
-| `CustomerOrderDeliveryRowId` | `Int64?` | yes | [CustomerOrderDeliveryRows](/entities/Sales/CustomerOrderDeliveryRow.md) |  | The business key identifier of the row's delivery row. |
-| `PackagingPartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the packing part. |
+| `ParentId` | `Int64?` | yes | [SalesPickingLists](SalesPickingList.md) |  | The business key identifier of the row's picking list. |
+| `ParentRowId` | `Int64?` | yes | [PackageRows](PackageRow.md) |  | The business key identifier of the row's parent row. |
+| `CustomerOrderDeliveryRowId` | `Int64?` | yes | [CustomerOrderDeliveryRows](CustomerOrderDeliveryRow.md) |  | The business key identifier of the row's delivery row. |
+| `PackagingPartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the packing part. |
 | `Cleared` | `Boolean` | no |  |  | Specifies if the row is cleared. |
 | `ContainerNumber` | `String` | no |  | max length 80 | The container number of the row. |
 | `SealNumber` | `String` | no |  | max length 80 | The seal number of the row. |
@@ -66,10 +66,10 @@ Represents a package row.
 | `VolumeCalculated` | `Decimal` | no |  |  | The calculated volume of the row's content. |
 | `GrossWeight` | `Decimal?` | yes |  |  | The gross weight of the row's content. |
 | `GrossWeightCalculated` | `Decimal` | no |  |  | The calculated gross weight of the row's content. |
-| `ExternalCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the row's external comment. |
-| `ExternalComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The external comment of the row. |
-| `InternalCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the row's internal comment. |
-| `InternalComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The internal comment of the row. |
+| `ExternalCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the row's external comment. |
+| `ExternalComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The external comment of the row. |
+| `InternalCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the row's internal comment. |
+| `InternalComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The internal comment of the row. |
 | `PackageComplete` | `Boolean` | no |  |  | Specifies if the package row is complete. |
 | `BalanceChange` | `Decimal` | no |  |  | The balance change of the row. |
 | `TemplateCode` | `String` | no |  |  | The template code of the row. |
@@ -159,8 +159,8 @@ Represents a package row.
 
 **Sales**
 
-- [PackageRowPartLocations](/entities/Sales/PackageRowPartLocation.md) — `ParentPackageRowId` (FK)
-- [PackageRows](/entities/Sales/PackageRow.md) — `ParentRowId` (FK)
+- [PackageRowPartLocations](PackageRowPartLocation.md) — `ParentPackageRowId` (FK)
+- [PackageRows](PackageRow.md) — `ParentRowId` (FK)
 
 
 ## Example

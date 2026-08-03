@@ -25,7 +25,7 @@ property_count: 4
 
 A batch command entity is used to create command batches, allowing transactional continuity across multiple commands.
 
-- **Module:** [Infrastructure](/modules/Infrastructure.md)
+- **Module:** [Infrastructure](../../modules/Infrastructure.md)
 - **API class:** `BatchCommandEntity`
 - **Endpoint:** none — this is a payload type, not a queryable resource.
 - **Introduced in:** 2.18

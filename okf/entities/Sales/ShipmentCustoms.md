@@ -39,7 +39,7 @@ referenced_by:
 
 Represents a shipments customs information.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `ShipmentCustoms`
 - **Endpoint:** `GET /api/v1/Sales/ShipmentCustoms`
 - **Required permission:** Show shipment
@@ -51,20 +51,20 @@ Represents a shipments customs information.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the shipments customs information. |
-| `ParentId` | `Int64` | no | [Shipments](/entities/Sales/Shipment.md) |  | The business key identifier of the customs informations shipment. |
+| `ParentId` | `Int64` | no | [Shipments](Shipment.md) |  | The business key identifier of the customs informations shipment. |
 | `Dutiable` | `Boolean` | no |  |  | Indicates if the shipment is dutiable. |
 | `InvoiceNumber` | `String` | no |  | max length 20 | The invoice number on the customs information. |
 | `InvoiceDate` | `DateTimeOffset?` | yes |  |  | The invoice date on the customs information. |
-| `CurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the customs informations currency. |
-| `Currency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The customs informations currency. |
-| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) |  | The business key identifier of the customs informations currency exchange type. |
-| `CurrencyExchangeType` | `CurrencyExchangeTypes` | no | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) | expandable | The customs informations currency exchange type. |
-| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](/entities/Common/DeliveryMethod.md) |  | The business key identifier of the customs informations delivery method. |
-| `DeliveryMethod` | `DeliveryMethods` | no | [DeliveryMethods](/entities/Common/DeliveryMethod.md) | expandable | The customs informations delivery method. |
-| `ForeignDeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](/entities/Common/DeliveryMethod.md) |  | The business key identifier of the customs informations foreign delivery method. |
-| `ForeignDeliveryMethod` | `DeliveryMethods` | no | [DeliveryMethods](/entities/Common/DeliveryMethod.md) | expandable | The customs informations foreign delivery method. |
-| `DeclarantId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the customs informations declarant person. |
-| `Declarant` | `Persons` | no | [Persons](/entities/Common/Person.md) | expandable | The customs informations declarant person. |
+| `CurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the customs informations currency. |
+| `Currency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The customs informations currency. |
+| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) |  | The business key identifier of the customs informations currency exchange type. |
+| `CurrencyExchangeType` | `CurrencyExchangeTypes` | no | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) | expandable | The customs informations currency exchange type. |
+| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](../Common/DeliveryMethod.md) |  | The business key identifier of the customs informations delivery method. |
+| `DeliveryMethod` | `DeliveryMethods` | no | [DeliveryMethods](../Common/DeliveryMethod.md) | expandable | The customs informations delivery method. |
+| `ForeignDeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](../Common/DeliveryMethod.md) |  | The business key identifier of the customs informations foreign delivery method. |
+| `ForeignDeliveryMethod` | `DeliveryMethods` | no | [DeliveryMethods](../Common/DeliveryMethod.md) | expandable | The customs informations foreign delivery method. |
+| `DeclarantId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the customs informations declarant person. |
+| `Declarant` | `Persons` | no | [Persons](../Common/Person.md) | expandable | The customs informations declarant person. |
 | `DeclarantName` | `String` | no |  | max length 71 | The customs informations declarant name. |
 | `NumberOfPackages` | `Int32` | no |  |  | The number of packages on the customs information. |
 | `Comment1` | `String` | no |  | max length 80 | The comment row 1 on the customs information. |
@@ -97,8 +97,8 @@ Represents a shipments customs information.
 | `CorporationIdentificationNumberCustomsPayer` | `String` | no |  | max length 30 | The corporation identification number of the customs payer. |
 | `VatNumberCustomsPayer` | `String` | no |  | max length 30 | The VAT number of the customs payer. |
 | `CustomsPayer` | `String` | no |  | max length 50 | The customs informations customs payer. |
-| `Rows` | `ShipmentCustomsRows[]` | no | [ShipmentCustomsRows](/entities/Sales/ShipmentCustomsRow.md) | expandable, collection | The rows of the customs information. |
-| `Documents` | `ShipmentCustomsDocuments[]` | no | [ShipmentCustomsDocuments](/entities/Sales/ShipmentCustomsDocument.md) | expandable, collection | The documents of the customs information. |
+| `Rows` | `ShipmentCustomsRows[]` | no | [ShipmentCustomsRows](ShipmentCustomsRow.md) | expandable, collection | The rows of the customs information. |
+| `Documents` | `ShipmentCustomsDocuments[]` | no | [ShipmentCustomsDocuments](ShipmentCustomsDocument.md) | expandable, collection | The documents of the customs information. |
 
 ## Enumerations
 
@@ -143,9 +143,9 @@ Represents a shipments customs information.
 
 **Sales**
 
-- [ShipmentCustomsDocuments](/entities/Sales/ShipmentCustomsDocument.md) — `ParentId` (FK)
-- [ShipmentCustomsRows](/entities/Sales/ShipmentCustomsRow.md) — `ParentId` (FK)
-- [Shipments](/entities/Sales/Shipment.md) — `Customs` (expand)
+- [ShipmentCustomsDocuments](ShipmentCustomsDocument.md) — `ParentId` (FK)
+- [ShipmentCustomsRows](ShipmentCustomsRow.md) — `ParentId` (FK)
+- [Shipments](Shipment.md) — `Customs` (expand)
 
 
 ## Example

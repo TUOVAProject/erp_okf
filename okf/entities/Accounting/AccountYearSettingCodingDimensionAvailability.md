@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a coding dimension available on a account for a specific year setting.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccountYearSettingCodingDimensionAvailability`
 - **Endpoint:** `GET /api/v1/Accounting/AccountYearSettingCodingDimensionAvailabilities`
 - **Required permission:** Show accounting year
@@ -45,10 +45,10 @@ Represents a coding dimension available on a account for a specific year setting
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the Account year setting coding dimension availability. |
-| `CodingDimensionId` | `Int64` | no | [CodingDimensions](/entities/Accounting/CodingDimension.md) |  | The business key identifier of the coding dimension. |
-| `CodingDimension` | `CodingDimensions` | no | [CodingDimensions](/entities/Accounting/CodingDimension.md) | expandable | The coding dimension. |
+| `CodingDimensionId` | `Int64` | no | [CodingDimensions](CodingDimension.md) |  | The business key identifier of the coding dimension. |
+| `CodingDimension` | `CodingDimensions` | no | [CodingDimensions](CodingDimension.md) | expandable | The coding dimension. |
 | `CodingDimensionAvailability` | `Int32` | no |  | enum | The coding dimension availability state. |
-| `AccountYearSettingId` | `Int64` | no | [AccountYearSettings](/entities/Accounting/AccountYearSetting.md) |  | The business key identifier of the account year setting. |
+| `AccountYearSettingId` | `Int64` | no | [AccountYearSettings](AccountYearSetting.md) |  | The business key identifier of the account year setting. |
 
 ## Enumerations
 
@@ -65,7 +65,7 @@ Represents a coding dimension available on a account for a specific year setting
 
 **Accounting**
 
-- [AccountYearSettings](/entities/Accounting/AccountYearSetting.md) — `AccountCodingDimensions` (expand)
+- [AccountYearSettings](AccountYearSetting.md) — `AccountCodingDimensions` (expand)
 
 
 ## Example

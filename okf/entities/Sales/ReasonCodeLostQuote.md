@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a reason code for a lost quote.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `ReasonCodeLostQuote`
 - **Endpoint:** `GET /api/v1/Sales/ReasonCodeLostQuotes`
 - **Required permission:** Show cause codes
@@ -51,10 +51,10 @@ Represents a reason code for a lost quote.
 
 **Sales**
 
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `ReasonCodeLostQuote` (expand)
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `ReasonCodeLostQuoteId` (FK)
-- [Quotes](/entities/Sales/Quote.md) — `ReasonCodeLostQuote` (expand)
-- [Quotes](/entities/Sales/Quote.md) — `ReasonCodeLostQuoteId` (FK)
+- [BusinessOpportunities](BusinessOpportunity.md) — `ReasonCodeLostQuote` (expand)
+- [BusinessOpportunities](BusinessOpportunity.md) — `ReasonCodeLostQuoteId` (FK)
+- [Quotes](Quote.md) — `ReasonCodeLostQuote` (expand)
+- [Quotes](Quote.md) — `ReasonCodeLostQuoteId` (FK)
 
 
 ## Example

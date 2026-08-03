@@ -31,7 +31,7 @@ references_out:
 
 Represent a workshop schedule salary type
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `WorkshopScheduleSalaryType`
 - **Endpoint:** `GET /api/v1/TimeRecording/WorkshopScheduleSalaryTypes`
 - **Required permission:** Show basic data for attendance
@@ -43,11 +43,11 @@ Represent a workshop schedule salary type
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of workshop schedule salary type |
-| `WorkshopScheduleSalaryTypeRowId` | `Int64` | no | [WorkshopScheduleSalaryTypeRows](/entities/TimeRecording/WorkshopScheduleSalaryTypeRow.md) |  | The business key identifier of workshop schedule salary type row |
-| `OvertimeTypeId` | `Int64?` | yes | [OvertimeTypes](/entities/TimeRecording/OvertimeType.md) |  | The business key identifier of overtime type |
+| `WorkshopScheduleSalaryTypeRowId` | `Int64` | no | [WorkshopScheduleSalaryTypeRows](WorkshopScheduleSalaryTypeRow.md) |  | The business key identifier of workshop schedule salary type row |
+| `OvertimeTypeId` | `Int64?` | yes | [OvertimeTypes](OvertimeType.md) |  | The business key identifier of overtime type |
 | `Factor` | `Decimal?` | yes |  |  | The factor of workshop schedule salary type |
 | `RowIndex` | `Int32?` | yes |  |  | The row index of workshop schedule salary type |
-| `SalaryTypes` | `SalaryTypes[]` | no | [SalaryTypes](/entities/TimeRecording/SalaryType.md) | expandable, collection | List of salary type |
+| `SalaryTypes` | `SalaryTypes[]` | no | [SalaryTypes](SalaryType.md) | expandable, collection | List of salary type |
 
 ## Example
 

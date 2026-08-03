@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a bank account.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `BankAccount`
 - **Endpoint:** `GET /api/v1/Accounting/BankAccounts`
 - **Required permission:** Show bank settings
@@ -52,9 +52,9 @@ Represents a bank account.
 | `BgNumber` | `String` | no |  | max length 9 | The bank account's bankgiro number. |
 | `PgNumber` | `String` | no |  | max length 9 | The bank account's plusgiro number. |
 | `BankIdentifierCode` | `String` | no |  | max length 20 | The bank account's bank identifier code. |
-| `CurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the bank account's currency. |
-| `AccountingAccountId` | `Int64` | no | [Accounts](/entities/Accounting/Account.md) |  | The business key identifier of the bank account's accounting account. |
-| `BankAddressId` | `Int64` | no | [Addresses](/entities/Common/Address.md) |  | The business key identifier of the bank account's bank address. |
+| `CurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the bank account's currency. |
+| `AccountingAccountId` | `Int64` | no | [Accounts](Account.md) |  | The business key identifier of the bank account's accounting account. |
+| `BankAddressId` | `Int64` | no | [Addresses](../Common/Address.md) |  | The business key identifier of the bank account's bank address. |
 
 ## Enumerations
 
@@ -72,7 +72,7 @@ Represents a bank account.
 
 **Accounting**
 
-- [OutgoingPayments](/entities/Accounting/OutgoingPayment.md) — `SendingBankAccountId` (FK)
+- [OutgoingPayments](OutgoingPayment.md) — `SendingBankAccountId` (FK)
 
 
 ## Example

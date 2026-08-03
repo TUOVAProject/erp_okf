@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a part configuration component snapshot.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PartConfigurationComponentSnapshot`
 - **Endpoint:** `GET /api/v1/Common/PartConfigurationComponentSnapshots`
 - **Required permission:** Show part
@@ -47,7 +47,7 @@ Represents a part configuration component snapshot.
 | `ComponentType` | `Int32` | no |  | enum | The component type discriminator. |
 | `ParentId` | `Int64` | no |  |  | The business key identifier of the template snapshot this component belongs to. |
 | `OriginComponentId` | `Int64?` | yes |  |  | The business key identifier of the origin configuration component. |
-| `ParentRowId` | `Int64?` | yes | [PartConfigurationComponentSnapshots](/entities/Common/PartConfigurationComponentSnapshot.md) |  | The business key identifier of the parent component within the same template (self-referencing hierarchy). For example, a variable nested under a section. |
+| `ParentRowId` | `Int64?` | yes | [PartConfigurationComponentSnapshots](PartConfigurationComponentSnapshot.md) |  | The business key identifier of the parent component within the same template (self-referencing hierarchy). For example, a variable nested under a section. |
 | `RowIndex` | `Int32?` | yes |  |  | The row index for ordering. |
 | `ShowOnDocument` | `Int32?` | yes |  |  | Document types to show the section on. Only applicable for Section components. |
 | `ShowOnFooter` | `Int32?` | yes |  |  | Document types to show the section footer on. Only applicable for Section components. |
@@ -107,8 +107,8 @@ Represents a part configuration component snapshot.
 
 **Common**
 
-- [PartConfigurationComponentSnapshots](/entities/Common/PartConfigurationComponentSnapshot.md) — `ParentRowId` (FK)
-- [PartConfigurationSelectionGroupResults](/entities/Common/PartConfigurationSelectionGroupResult.md) — `SelectionGroupTemplateId` (FK)
+- [PartConfigurationComponentSnapshots](PartConfigurationComponentSnapshot.md) — `ParentRowId` (FK)
+- [PartConfigurationSelectionGroupResults](PartConfigurationSelectionGroupResult.md) — `SelectionGroupTemplateId` (FK)
 
 
 ## Example

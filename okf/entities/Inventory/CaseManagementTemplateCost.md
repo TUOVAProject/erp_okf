@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a case management template cost.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `CaseManagementTemplateCost`
 - **Endpoint:** `GET /api/v1/Inventory/CaseManagementTemplateCosts`
 - **Required permission:** Show basic data for case
@@ -47,9 +47,9 @@ Represents a case management template cost.
 | `Id` | `Int64` | no |  |  | The business key identifier of the case management template cost. |
 | `Description` | `String` | no |  |  | The description of the case management template cost. |
 | `Cost` | `Decimal` | no |  |  | The cost of the case management template cost. |
-| `CostCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the case management template cost currency. |
-| `CostId` | `Int64?` | yes | [CaseManagementCost](/entities/Inventory/CaseManagementCost.md) |  | The business key identifier of the case management cost. |
-| `ParentId` | `Int64?` | yes | [CaseManagementTemplates](/entities/Inventory/CaseManagementTemplate.md) |  | The business key identifier of the case management template. |
+| `CostCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the case management template cost currency. |
+| `CostId` | `Int64?` | yes | [CaseManagementCost](CaseManagementCost.md) |  | The business key identifier of the case management cost. |
+| `ParentId` | `Int64?` | yes | [CaseManagementTemplates](CaseManagementTemplate.md) |  | The business key identifier of the case management template. |
 | `IsChargeable` | `Boolean` | no |  |  | Specifies if the case management template cost is chargeable. |
 | `RowIndex` | `Int32?` | yes |  |  | The row index of the case management template cost. |
 
@@ -57,7 +57,7 @@ Represents a case management template cost.
 
 **Inventory**
 
-- [CaseManagementTemplates](/entities/Inventory/CaseManagementTemplate.md) — `CaseManagementTemplateCost` (expand)
+- [CaseManagementTemplates](CaseManagementTemplate.md) — `CaseManagementTemplateCost` (expand)
 
 
 ## Example

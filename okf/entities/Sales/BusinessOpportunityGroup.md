@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a business opportunity group.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `BusinessOpportunityGroup`
 - **Endpoint:** `GET /api/v1/Sales/BusinessOpportunityGroups`
 - **Required permission:** Show business opportunity
@@ -50,10 +50,10 @@ Represents a business opportunity group.
 
 **Sales**
 
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `BusinessOpportunityGroup` (expand)
-- [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) — `BusinessOpportunityGroupId` (FK)
-- [BusinessOpportunityTypes](/entities/Sales/BusinessOpportunityType.md) — `BusinessOpportunityGroup` (expand)
-- [BusinessOpportunityTypes](/entities/Sales/BusinessOpportunityType.md) — `BusinessOpportunityGroupId` (FK)
+- [BusinessOpportunities](BusinessOpportunity.md) — `BusinessOpportunityGroup` (expand)
+- [BusinessOpportunities](BusinessOpportunity.md) — `BusinessOpportunityGroupId` (FK)
+- [BusinessOpportunityTypes](BusinessOpportunityType.md) — `BusinessOpportunityGroup` (expand)
+- [BusinessOpportunityTypes](BusinessOpportunityType.md) — `BusinessOpportunityGroupId` (FK)
 
 
 ## Example

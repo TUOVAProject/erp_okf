@@ -68,7 +68,7 @@ referenced_by:
 
 Represents a queryable MONITOR application user.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ApplicationUser`
 - **Endpoint:** `GET /api/v1/Common/ApplicationUsers`
 - **Required permission:** Show user
@@ -86,18 +86,18 @@ Represents a queryable MONITOR application user.
 | `IsInvisible` | `Boolean` | no |  | since 2.52 | Specifies if the application user is hidden from general use in the MONITOR system. |
 | `DefaultRole` | `Int64` | no |  | since 2.52 | The default role of the application user. |
 | `DefaultGroup` | `Int64?` | yes |  | since 2.52 | The business key identifier of the application user's default permission group. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) | since 2.52 | The business key identifier of the application user's default warehouse. References Warehouses . |
-| `LanguageId` | `Int64` | no | [LanguageCodes](/entities/Common/LanguageCode.md) | since 2.52 | The business key identifier of the application user's default language code. References LanguageCodes . |
+| `WarehouseId` | `Int64` | no | [Warehouses](Warehouse.md) | since 2.52 | The business key identifier of the application user's default warehouse. References Warehouses . |
+| `LanguageId` | `Int64` | no | [LanguageCodes](LanguageCode.md) | since 2.52 | The business key identifier of the application user's default language code. References LanguageCodes . |
 | `MailAddress` | `String` | no |  | max length 80, since 2.52 | The email address of the user. |
 | `MailMethod` | `Int32?` | yes |  | enum, since 2.52 | The email method of the user. |
-| `Printers` | `ApplicationUserPrinters[]` | no | [ApplicationUserPrinters](/entities/Common/ApplicationUserPrinter.md) | expandable, collection, since 2.52 | The printers that have been assigned to the user. |
+| `Printers` | `ApplicationUserPrinters[]` | no | [ApplicationUserPrinters](ApplicationUserPrinter.md) | expandable, collection, since 2.52 | The printers that have been assigned to the user. |
 | `DefaultPrinter` | `String` | no |  | since 2.52 | The name of the default printer that have been assigned to the user. |
 | `External1Printer` | `String` | no |  | max length 300, **deprecated since 26.3**, since 2.52 | The name of the external 1 printer that has been assigned to the user. _(Use the Printers collection with FormReportType = FilesExternal1 instead)_ |
 | `External2Printer` | `String` | no |  | max length 300, **deprecated since 26.3**, since 2.52 | The name of the external 2 printer that has been assigned to the user. _(Use the Printers collection with FormReportType = FilesExternal2 instead)_ |
 | `External3Printer` | `String` | no |  | max length 300, **deprecated since 26.3**, since 2.52 | The name of the external 3 printer that has been assigned to the user. _(Use the Printers collection with FormReportType = FilesExternal3 instead)_ |
 | `PrintoutFormatForParcel` | `Int32` | no |  | enum, since 2.52 | The printout document format type that have been assigned to the user. |
-| `WarehousePermissions` | `WarehousePermissions[]` | no | [WarehousePermissions](/entities/Common/WarehousePermission.md) | expandable, collection, since 22.3 | The warehouse permissions that apply to the application user. |
-| `DefaultVoucherSeriesId` | `Int64?` | yes | [VoucherSeries](/entities/Accounting/VoucherSeries.md) | since 22.3 | The business key identifier of the application user's default voucher series. |
+| `WarehousePermissions` | `WarehousePermissions[]` | no | [WarehousePermissions](WarehousePermission.md) | expandable, collection, since 22.3 | The warehouse permissions that apply to the application user. |
+| `DefaultVoucherSeriesId` | `Int64?` | yes | [VoucherSeries](../Accounting/VoucherSeries.md) | since 22.3 | The business key identifier of the application user's default voucher series. |
 | `UserAuthenticationMethod` | `Int32` | no |  | enum, since 25.3 | The selected authentication method of the application user. |
 | `Culture` | `String` | no |  | since 25.7 | The culture setting of the user in .NET format. |
 
@@ -139,69 +139,69 @@ Represents a queryable MONITOR application user.
 
 **Accounting**
 
-- [AccountsPayables](/entities/Accounting/AccountsPayable.md) — `BlockedBy` (expand)
-- [AccountsPayables](/entities/Accounting/AccountsPayable.md) — `BlockedById` (FK)
-- [IncomingPayments](/entities/Accounting/IncomingPayment.md) — `CancelledByUserId` (FK)
-- [OutgoingPayments](/entities/Accounting/OutgoingPayment.md) — `CancelledByUserId` (FK)
+- [AccountsPayables](../Accounting/AccountsPayable.md) — `BlockedBy` (expand)
+- [AccountsPayables](../Accounting/AccountsPayable.md) — `BlockedById` (FK)
+- [IncomingPayments](../Accounting/IncomingPayment.md) — `CancelledByUserId` (FK)
+- [OutgoingPayments](../Accounting/OutgoingPayment.md) — `CancelledByUserId` (FK)
 
 **Common**
 
-- [ApplicationUserPrinters](/entities/Common/ApplicationUserPrinter.md) — `ApplicationUserId` (FK)
-- [BusinessContactNoteHistories](/entities/Common/BusinessContactNoteHistory.md) — `CreatedByUserId` (FK)
-- [DelegatedWork](/entities/Common/DelegatedWork.md) — `DelegatedBy` (FK)
-- [MonitoringTaskRecipients](/entities/Common/MonitoringTaskRecipient.md) — `ApplicationUserId` (FK)
-- [MonitoringTasks](/entities/Common/MonitoringTask.md) — `ApplicationUser` (expand)
-- [MonitoringTasks](/entities/Common/MonitoringTask.md) — `ApplicationUserId` (FK)
-- [PartConfigurationPresets](/entities/Common/PartConfigurationPreset.md) — `ChangedBy` (FK)
-- [PartConfigurationPresets](/entities/Common/PartConfigurationPreset.md) — `CreatedBy` (FK)
-- [Persons](/entities/Common/Person.md) — `ApplicationUserId` (FK)
-- [ProjectActivities](/entities/Common/ProjectActivity.md) — `CompletedByUserId` (FK)
-- [ProjectActivities](/entities/Common/ProjectActivity.md) — `ResponsibleUserId` (FK)
-- [ProjectActivityTypes](/entities/Common/ProjectActivityType.md) — `ResponsibleUserId` (FK)
-- [ProjectPhaseTypes](/entities/Common/ProjectPhaseType.md) — `ManagerId` (FK)
-- [ProjectPhases](/entities/Common/ProjectPhase.md) — `ResponsibleUserId` (FK)
+- [ApplicationUserPrinters](ApplicationUserPrinter.md) — `ApplicationUserId` (FK)
+- [BusinessContactNoteHistories](BusinessContactNoteHistory.md) — `CreatedByUserId` (FK)
+- [DelegatedWork](DelegatedWork.md) — `DelegatedBy` (FK)
+- [MonitoringTaskRecipients](MonitoringTaskRecipient.md) — `ApplicationUserId` (FK)
+- [MonitoringTasks](MonitoringTask.md) — `ApplicationUser` (expand)
+- [MonitoringTasks](MonitoringTask.md) — `ApplicationUserId` (FK)
+- [PartConfigurationPresets](PartConfigurationPreset.md) — `ChangedBy` (FK)
+- [PartConfigurationPresets](PartConfigurationPreset.md) — `CreatedBy` (FK)
+- [Persons](Person.md) — `ApplicationUserId` (FK)
+- [ProjectActivities](ProjectActivity.md) — `CompletedByUserId` (FK)
+- [ProjectActivities](ProjectActivity.md) — `ResponsibleUserId` (FK)
+- [ProjectActivityTypes](ProjectActivityType.md) — `ResponsibleUserId` (FK)
+- [ProjectPhaseTypes](ProjectPhaseType.md) — `ManagerId` (FK)
+- [ProjectPhases](ProjectPhase.md) — `ResponsibleUserId` (FK)
 
 **Inventory**
 
-- [CaseEntryActivities](/entities/Inventory/CaseEntryActivity.md) — `CompletedByUserId` (FK)
-- [CaseEntryActivities](/entities/Inventory/CaseEntryActivity.md) — `ResponsibleUserId` (FK)
-- [CaseEntryPhases](/entities/Inventory/CaseEntryPhase.md) — `ResponsibleUserId` (FK)
-- [CaseManagementTemplateNodes](/entities/Inventory/CaseManagementTemplateNode.md) — `UserId` (FK)
-- [Locations](/entities/Inventory/Location.md) — `BlockedBy` (expand)
-- [Locations](/entities/Inventory/Location.md) — `BlockedById` (FK)
-- [PartActivities](/entities/Inventory/PartActivity.md) — `ResponsibleUserId` (FK)
-- [Parts](/entities/Inventory/Part.md) — `BlockedBy` (expand)
-- [Parts](/entities/Inventory/Part.md) — `BlockedById` (FK)
-- [ProductRecords](/entities/Inventory/ProductRecord.md) — `BlockedById` (FK)
-- [QuantityChanges](/entities/Inventory/QuantityChange.md) — `DeliveredByUserId` (FK)
-- [QuantityChanges](/entities/Inventory/QuantityChange.md) — `PickingByUserId` (FK)
+- [CaseEntryActivities](../Inventory/CaseEntryActivity.md) — `CompletedByUserId` (FK)
+- [CaseEntryActivities](../Inventory/CaseEntryActivity.md) — `ResponsibleUserId` (FK)
+- [CaseEntryPhases](../Inventory/CaseEntryPhase.md) — `ResponsibleUserId` (FK)
+- [CaseManagementTemplateNodes](../Inventory/CaseManagementTemplateNode.md) — `UserId` (FK)
+- [Locations](../Inventory/Location.md) — `BlockedBy` (expand)
+- [Locations](../Inventory/Location.md) — `BlockedById` (FK)
+- [PartActivities](../Inventory/PartActivity.md) — `ResponsibleUserId` (FK)
+- [Parts](../Inventory/Part.md) — `BlockedBy` (expand)
+- [Parts](../Inventory/Part.md) — `BlockedById` (FK)
+- [ProductRecords](../Inventory/ProductRecord.md) — `BlockedById` (FK)
+- [QuantityChanges](../Inventory/QuantityChange.md) — `DeliveredByUserId` (FK)
+- [QuantityChanges](../Inventory/QuantityChange.md) — `PickingByUserId` (FK)
 
 **Manufacturing**
 
-- [ManufacturingPickingLists](/entities/Manufacturing/ManufacturingPickingList.md) — `CreatedByApplicationUserId` (FK)
-- [ManufacturingPickingLists](/entities/Manufacturing/ManufacturingPickingList.md) — `PrintedByApplicationUserId` (FK)
+- [ManufacturingPickingLists](../Manufacturing/ManufacturingPickingList.md) — `CreatedByApplicationUserId` (FK)
+- [ManufacturingPickingLists](../Manufacturing/ManufacturingPickingList.md) — `PrintedByApplicationUserId` (FK)
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `BlockedBy` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `BlockedById` (FK)
+- [Suppliers](../Purchase/Supplier.md) — `BlockedBy` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `BlockedById` (FK)
 
 **Sales**
 
-- [BusinessOpportunityActivities](/entities/Sales/BusinessOpportunityActivity.md) — `CompletedByUserId` (FK)
-- [BusinessOpportunityActivities](/entities/Sales/BusinessOpportunityActivity.md) — `ResponsibleUserId` (FK)
-- [BusinessOpportunityActivityTemplateRows](/entities/Sales/BusinessOpportunityActivityTemplateRow.md) — `ResponsibleUserId` (FK)
-- [BusinessOpportunitySalesProcessSteps](/entities/Sales/BusinessOpportunitySalesProcessStep.md) — `ResponsibleUserId` (FK)
-- [CustomerOrderActivities](/entities/Sales/CustomerOrderActivity.md) — `ResponsibleUserId` (FK)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `PrintoutBy` (FK)
-- [CustomerRelationshipManagementActivities](/entities/Sales/CustomerRelationshipManagementActivity.md) — `CompletedByUserId` (FK)
-- [CustomerRelationshipManagementActivities](/entities/Sales/CustomerRelationshipManagementActivity.md) — `ResponsibleUserId` (FK)
-- [Customers](/entities/Sales/Customer.md) — `BlockedBy` (expand)
-- [Customers](/entities/Sales/Customer.md) — `BlockedById` (FK)
-- [InvoiceLogs](/entities/Sales/InvoiceLog.md) — `UserId` (FK)
-- [QuoteActivities](/entities/Sales/QuoteActivity.md) — `CompletedByUserId` (FK)
-- [QuoteActivities](/entities/Sales/QuoteActivity.md) — `ResponsibleUserId` (FK)
-- [SalesPickingLists](/entities/Sales/SalesPickingList.md) — `PrintedByApplicationUserId` (FK)
+- [BusinessOpportunityActivities](../Sales/BusinessOpportunityActivity.md) — `CompletedByUserId` (FK)
+- [BusinessOpportunityActivities](../Sales/BusinessOpportunityActivity.md) — `ResponsibleUserId` (FK)
+- [BusinessOpportunityActivityTemplateRows](../Sales/BusinessOpportunityActivityTemplateRow.md) — `ResponsibleUserId` (FK)
+- [BusinessOpportunitySalesProcessSteps](../Sales/BusinessOpportunitySalesProcessStep.md) — `ResponsibleUserId` (FK)
+- [CustomerOrderActivities](../Sales/CustomerOrderActivity.md) — `ResponsibleUserId` (FK)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `PrintoutBy` (FK)
+- [CustomerRelationshipManagementActivities](../Sales/CustomerRelationshipManagementActivity.md) — `CompletedByUserId` (FK)
+- [CustomerRelationshipManagementActivities](../Sales/CustomerRelationshipManagementActivity.md) — `ResponsibleUserId` (FK)
+- [Customers](../Sales/Customer.md) — `BlockedBy` (expand)
+- [Customers](../Sales/Customer.md) — `BlockedById` (FK)
+- [InvoiceLogs](../Sales/InvoiceLog.md) — `UserId` (FK)
+- [QuoteActivities](../Sales/QuoteActivity.md) — `CompletedByUserId` (FK)
+- [QuoteActivities](../Sales/QuoteActivity.md) — `ResponsibleUserId` (FK)
+- [SalesPickingLists](../Sales/SalesPickingList.md) — `PrintedByApplicationUserId` (FK)
 
 
 ## Example

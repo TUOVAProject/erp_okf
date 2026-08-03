@@ -29,7 +29,7 @@ references_out:
 
 Used to provide the suggested withdrawal information of a customer order row.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `WithdrawalInformationRow`
 - **Endpoint:** none — this is a payload type, not a queryable resource.
 - **Introduced in:** 2.53
@@ -38,11 +38,11 @@ Used to provide the suggested withdrawal information of a customer order row.
 
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
-| `CustomerOrderRowId` | `Int64` | no | [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) |  | The business key identifier of the customer order row that the withdrawal information is for. |
-| `PickingListId` | `Int64` | no | [SalesPickingLists](/entities/Sales/SalesPickingList.md) |  | The business key identifier of the picking list that the withdrawal information is for. |
-| `Locations` | `WithdrawalInformationLocation[]` | no | [WithdrawalInformationLocation](/entities/Sales/WithdrawalInformationLocation.md) | collection | The location withdrawal information. |
+| `CustomerOrderRowId` | `Int64` | no | [CustomerOrderRows](CustomerOrderRow.md) |  | The business key identifier of the customer order row that the withdrawal information is for. |
+| `PickingListId` | `Int64` | no | [SalesPickingLists](SalesPickingList.md) |  | The business key identifier of the picking list that the withdrawal information is for. |
+| `Locations` | `WithdrawalInformationLocation[]` | no | [WithdrawalInformationLocation](WithdrawalInformationLocation.md) | collection | The location withdrawal information. |
 | `SuggestedQuantity` | `Decimal` | no |  | since 22.2 | The suggested quantity to withdraw. |
-| `ParentCustomerOrderRowId` | `Int64?` | yes | [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) | since 22.2 | The business key identifier of the customer order row's parent row that the withdrawal information is for. |
+| `ParentCustomerOrderRowId` | `Int64?` | yes | [CustomerOrderRows](CustomerOrderRow.md) | since 22.2 | The business key identifier of the customer order row's parent row that the withdrawal information is for. |
 
 ## Example
 

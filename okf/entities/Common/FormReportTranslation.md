@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a form report translation.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `FormReportTranslation`
 - **Endpoint:** `GET /api/v1/Common/FormReportTranslations`
 - **GUID:** `3A02B90D-B1E2-4E64-BC3F-E31AC1B41E9C`
@@ -43,13 +43,13 @@ Represents a form report translation.
 | `Id` | `Int64` | no |  |  | The business key identifier of the translation. |
 | `Phrase` | `String` | no |  | max length 800 | The overriding phrase text for the translation. |
 | `PhraseId` | `Int64` | no |  |  | The identifier of the phrase that the translation overrides. |
-| `FormReportTranslationGroupId` | `Int64` | no | [FormReportTranslationGroups](/entities/Common/FormReportTranslationGroup.md) |  | The business key identifier of the translation group that the translation belongs to. |
+| `FormReportTranslationGroupId` | `Int64` | no | [FormReportTranslationGroups](FormReportTranslationGroup.md) |  | The business key identifier of the translation group that the translation belongs to. |
 
 ## Referenced by
 
 **Common**
 
-- [FormReportTranslationGroups](/entities/Common/FormReportTranslationGroup.md) — `Translations` (expand)
+- [FormReportTranslationGroups](FormReportTranslationGroup.md) — `Translations` (expand)
 
 
 ## Example

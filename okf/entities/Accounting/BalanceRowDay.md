@@ -29,7 +29,7 @@ references_out:
 
 Represents a balance row day.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `BalanceRowDay`
 - **Endpoint:** `GET /api/v1/Accounting/BalanceRowDays`
 - **Required permission:** Show balance information
@@ -41,7 +41,7 @@ Represents a balance row day.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the balance row day. |
-| `BalanceId` | `Int64` | no | [Balances](/entities/Accounting/Balance.md) |  | The business key identifier of the balance the balance row day belongs to. |
+| `BalanceId` | `Int64` | no | [Balances](Balance.md) |  | The business key identifier of the balance the balance row day belongs to. |
 | `Credit` | `Decimal` | no |  |  | The credit amount in the account's currency. |
 | `CreditInCompanyCurrency` | `Decimal` | no |  |  | The credit amount in company currency. |
 | `Date` | `DateTimeOffset` | no |  |  | The date of the balance row day. |

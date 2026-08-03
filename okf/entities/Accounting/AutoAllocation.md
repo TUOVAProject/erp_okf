@@ -29,7 +29,7 @@ references_out:
 
 Represent an auto allocation.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AutoAllocation`
 - **Endpoint:** `GET /api/v1/Accounting/AutoAllocations`
 - **Required permission:** Show automatic allocations
@@ -45,8 +45,8 @@ Represent an auto allocation.
 | `Description` | `String` | no |  | max length 35 | The description of the auto allocation. |
 | `Type` | `Int32` | no |  | enum | The type of the auto allocation |
 | `Active` | `Boolean` | no |  |  | Specifies whether the auto allocation is active or not. |
-| `AllocationKeyId` | `Int64?` | yes | [AllocationKeys](/entities/Accounting/AllocationKey.md) | expandable | The business key identifier of the allocation key linked to the auto allocation. |
-| `AllocationKey` | `AllocationKeys` | no | [AllocationKeys](/entities/Accounting/AllocationKey.md) |  | The allocation key linked to the auto allocation. |
+| `AllocationKeyId` | `Int64?` | yes | [AllocationKeys](AllocationKey.md) | expandable | The business key identifier of the allocation key linked to the auto allocation. |
+| `AllocationKey` | `AllocationKeys` | no | [AllocationKeys](AllocationKey.md) |  | The allocation key linked to the auto allocation. |
 | `AccountFrom` | `String` | no |  | max length 10 | The account number from which the auto allocation applies. |
 | `AccountTo` | `String` | no |  | max length 10 | The account number to which the auto allocation applies. |
 

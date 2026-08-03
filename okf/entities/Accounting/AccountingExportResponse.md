@@ -24,7 +24,7 @@ property_count: 3
 
 The response object used by accounting exports.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccountingExportResponse`
 - **Endpoint:** none — this is a payload type, not a queryable resource.
 - **Introduced in:** 23.9

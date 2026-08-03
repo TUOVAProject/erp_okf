@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a business opportunity activity template.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `BusinessOpportunityActivityTemplate`
 - **Endpoint:** `GET /api/v1/Sales/BusinessOpportunityActivityTemplates`
 - **Required permission:** Show business opportunity
@@ -46,15 +46,15 @@ Represents a business opportunity activity template.
 | `Id` | `Int64` | no |  |  | The business key identifier of the business opportunity activity template. |
 | `Code` | `Int64` | no |  |  | The human readable identifier of the business opportunity activity template. |
 | `Description` | `String` | no |  | max length 400 | The translated description of the business opportunity activity template. |
-| `Rows` | `BusinessOpportunityActivityTemplateRows[]` | no | [BusinessOpportunityActivityTemplateRows](/entities/Sales/BusinessOpportunityActivityTemplateRow.md) | expandable, collection | The rows of the business opportunity activity template. |
+| `Rows` | `BusinessOpportunityActivityTemplateRows[]` | no | [BusinessOpportunityActivityTemplateRows](BusinessOpportunityActivityTemplateRow.md) | expandable, collection | The rows of the business opportunity activity template. |
 
 ## Referenced by
 
 **Sales**
 
-- [BusinessOpportunityActivityTemplateRows](/entities/Sales/BusinessOpportunityActivityTemplateRow.md) — `ActivityTemplateId` (FK)
-- [BusinessOpportunityTypes](/entities/Sales/BusinessOpportunityType.md) — `BusinessOpportunityActivityTemplate` (expand)
-- [BusinessOpportunityTypes](/entities/Sales/BusinessOpportunityType.md) — `BusinessOpportunityActivityTemplateId` (FK)
+- [BusinessOpportunityActivityTemplateRows](BusinessOpportunityActivityTemplateRow.md) — `ActivityTemplateId` (FK)
+- [BusinessOpportunityTypes](BusinessOpportunityType.md) — `BusinessOpportunityActivityTemplate` (expand)
+- [BusinessOpportunityTypes](BusinessOpportunityType.md) — `BusinessOpportunityActivityTemplateId` (FK)
 
 
 ## Example

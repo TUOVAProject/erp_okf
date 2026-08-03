@@ -28,7 +28,7 @@ referenced_by:
 
 Used to provide the suggested withdrawal information of a location.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `WithdrawalInformationLocation`
 - **Endpoint:** none — this is a payload type, not a queryable resource.
 - **Introduced in:** 2.53
@@ -37,8 +37,8 @@ Used to provide the suggested withdrawal information of a location.
 
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
-| `PartLocationId` | `Int64` | no | [PartLocations](/entities/Inventory/PartLocation.md) |  | The business key identifier of the part location. |
-| `ProductRecordId` | `Int64?` | yes | [PartLocations](/entities/Inventory/PartLocation.md) |  | The business key identifier of the product record. |
+| `PartLocationId` | `Int64` | no | [PartLocations](../Inventory/PartLocation.md) |  | The business key identifier of the part location. |
+| `ProductRecordId` | `Int64?` | yes | [PartLocations](../Inventory/PartLocation.md) |  | The business key identifier of the product record. |
 | `ReservedQuantity` | `Decimal` | no |  |  | The reserved quantity for the location. |
 | `AvailableQuantity` | `Decimal` | no |  |  | The available quantity for the location. |
 | `SuggestedQuantity` | `Decimal` | no |  |  | The suggested quantity to withdraw from the location. |
@@ -47,7 +47,7 @@ Used to provide the suggested withdrawal information of a location.
 
 **Sales**
 
-- [WithdrawalInformationRow](/entities/Sales/WithdrawalInformationRow.md) — `Locations` (expand)
+- [WithdrawalInformationRow](WithdrawalInformationRow.md) — `Locations` (expand)
 
 
 ## Example

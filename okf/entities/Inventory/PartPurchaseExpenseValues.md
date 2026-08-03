@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a part purchase expense values entity.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PartPurchaseExpenseValues`
 - **Endpoint:** `GET /api/v1/Inventory/PartPurchaseExpenseValues`
 - **Required permission:** Show basic data for part
@@ -89,8 +89,8 @@ Represents a part purchase expense values entity.
 
 **Purchase**
 
-- [SupplierPartLinks](/entities/Purchase/SupplierPartLink.md) — `PartPurchaseExpenseValues` (expand)
-- [SupplierPartLinks](/entities/Purchase/SupplierPartLink.md) — `PartPurchaseExpenseValuesId` (FK)
+- [SupplierPartLinks](../Purchase/SupplierPartLink.md) — `PartPurchaseExpenseValues` (expand)
+- [SupplierPartLinks](../Purchase/SupplierPartLink.md) — `PartPurchaseExpenseValuesId` (FK)
 
 
 ## Example

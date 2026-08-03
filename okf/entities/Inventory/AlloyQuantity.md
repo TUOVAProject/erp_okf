@@ -30,7 +30,7 @@ references_out:
 
 Represents Alloy Quantities of an alloy.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `AlloyQuantity`
 - **Endpoint:** `GET /api/v1/Inventory/AlloyQuantities`
 - **Required permission:** Create new alloy codes
@@ -42,9 +42,9 @@ Represents Alloy Quantities of an alloy.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the alloy quantity. |
-| `AlloyId` | `Int64` | no | [Alloys](/entities/Inventory/Alloy.md) |  | The business key identifier of the alloy quantity. |
+| `AlloyId` | `Int64` | no | [Alloys](Alloy.md) |  | The business key identifier of the alloy quantity. |
 | `Quantity` | `Decimal` | no |  |  | The quantity of the alloy. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the alloy part. |
+| `PartId` | `Int64` | no | [Parts](Part.md) |  | The business key identifier of the alloy part. |
 
 ## Example
 

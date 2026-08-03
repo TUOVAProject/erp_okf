@@ -27,7 +27,7 @@ references_out:
 
 This is the response type returned when adding /Validate after the command path.
 
-- **Module:** [Infrastructure](/modules/Infrastructure.md)
+- **Module:** [Infrastructure](../../modules/Infrastructure.md)
 - **API class:** `ValidationCommandResponse`
 - **Endpoint:** none — this is a payload type, not a queryable resource.
 - **Introduced in:** 2.18
@@ -38,7 +38,7 @@ This is the response type returned when adding /Validate after the command path.
 | --- | --- | --- | --- | --- | --- |
 | `IsValid` | `Boolean` | no |  |  | Specifies if the command was validated or not. |
 | `ErrorMessage` | `String` | no |  |  | The error message thrown by the command if any. |
-| `Results` | `ApiValidationResult[]` | no | [ApiValidationResult](/entities/Infrastructure/ApiValidationResult.md) | collection | The validation results of the command. |
+| `Results` | `ApiValidationResult[]` | no | [ApiValidationResult](ApiValidationResult.md) | collection | The validation results of the command. |
 
 ## Example
 

@@ -30,7 +30,7 @@ Operation `Create` on the Monitor API.
 
 Creates picking lists.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CreateSalesPickingList`
 - **Endpoint:** `POST /api/v1/Sales/SalesPickingLists/Create`
 - **Required permission:** Show customer orders
@@ -45,7 +45,7 @@ Creates picking lists.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `DeliveryRows` | `DeliveryRow[]` | no |  | collection | Collection of the customer order rows that should be added to the picking list. |
-| `CreatedByPersonId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the person that created the picking list. |
+| `CreatedByPersonId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the person that created the picking list. |
 | `OutgoingDeliveryLocationName` | `String` | no |  | max length 35 | The name of the outgoing delivery location for the picking list. |
 
 ## Example

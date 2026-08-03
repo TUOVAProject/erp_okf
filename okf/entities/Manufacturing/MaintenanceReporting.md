@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a maintenance reporting.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `MaintenanceReporting`
 - **Endpoint:** `GET /api/v1/Manufacturing/MaintenanceReportings`
 - **Required permission:** Show maintenance plan
@@ -48,25 +48,25 @@ Represents a maintenance reporting.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the maintenance reporting. |
 | `SerialNumber` | `String` | no |  | unique | The serial number of the maintenance reporting. |
-| `ManufacturingOrderId` | `Int64` | no | [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) |  | The business key identifier of the manufacturing order. |
-| `ManufacturingOrder` | `ManufacturingOrders` | no | [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) | expandable | The maintenance reporting manufacturing order. |
+| `ManufacturingOrderId` | `Int64` | no | [ManufacturingOrders](ManufacturingOrder.md) |  | The business key identifier of the manufacturing order. |
+| `ManufacturingOrder` | `ManufacturingOrders` | no | [ManufacturingOrders](ManufacturingOrder.md) | expandable | The maintenance reporting manufacturing order. |
 | `ProductRecordId` | `Int64` | no |  |  | The business key identifier of product record. |
-| `ProductRecord` | `ProductRecords` | no | [ProductRecords](/entities/Inventory/ProductRecord.md) | expandable | The product record of the maintenance reporting. |
+| `ProductRecord` | `ProductRecords` | no | [ProductRecords](../Inventory/ProductRecord.md) | expandable | The product record of the maintenance reporting. |
 | `MaintenanceRowId` | `Int64` | no |  |  | The business key identifier of the maintenance row. |
 | `ShortComment` | `String` | no |  |  | The short comment of the maintenance reporting. |
-| `CommentId` | `Int64` | no | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the maintenance reporting. |
+| `CommentId` | `Int64` | no | [Comments](../Common/Comment.md) |  | The business key identifier of the comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment of the maintenance reporting. |
 | `MaintenanceStatus` | `Int32?` | yes |  | enum | The maintenance status of the maintenance reporting. |
-| `ReportedById` | `Int64` | no | [Persons](/entities/Common/Person.md) |  | The business key identifier of person that reported on the maintenance reporting. |
-| `ReportedBy` | `Persons` | no | [Persons](/entities/Common/Person.md) | expandable | The person that reported in the maintenance reporting. |
+| `ReportedById` | `Int64` | no | [Persons](../Common/Person.md) |  | The business key identifier of person that reported on the maintenance reporting. |
+| `ReportedBy` | `Persons` | no | [Persons](../Common/Person.md) | expandable | The person that reported in the maintenance reporting. |
 | `ReportingStatus` | `Int32` | no |  | enum | The reporting status of the maintenance reporting. |
 | `ActualDate` | `DateTimeOffset?` | yes |  |  | The actual date of the maintenance reporting. |
 | `Status` | `Int32` | no |  | enum | The serial number status of the maintenance reporting. |
 | `NextOccurrence` | `DateTimeOffset?` | yes |  |  | The next occurrence of the maintenance reporting. |
 | `ColorCode` | `Int32?` | yes |  |  | The color code of the maintenance reporting. |
 | `InstructionId` | `Int64` | no |  |  | The business key identifier of the instruction. |
-| `Instruction` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The instruction of the maintenance reporting. |
-| `MaintenanceReportingSelectionRows` | `MaintenanceReportingSelectionRows[]` | no | [MaintenanceReportingSelectionRows](/entities/Manufacturing/MaintenanceReportingSelectionRow.md) | expandable, collection, since 25.7 | The maintenance reporting selection rows. |
+| `Instruction` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The instruction of the maintenance reporting. |
+| `MaintenanceReportingSelectionRows` | `MaintenanceReportingSelectionRows[]` | no | [MaintenanceReportingSelectionRows](MaintenanceReportingSelectionRow.md) | expandable, collection, since 25.7 | The maintenance reporting selection rows. |
 
 ## Enumerations
 
@@ -104,7 +104,7 @@ Represents a maintenance reporting.
 
 **Manufacturing**
 
-- [MaintenanceReportingSelectionRows](/entities/Manufacturing/MaintenanceReportingSelectionRow.md) — `MaintenanceReportingId` (FK)
+- [MaintenanceReportingSelectionRows](MaintenanceReportingSelectionRow.md) — `MaintenanceReportingId` (FK)
 
 
 ## Example

@@ -29,7 +29,7 @@ references_out:
 
 Calculates and returns the suggested withdrawal information for a picking list.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `GetWithdrawalInformation`
 - **Endpoint:** `POST /api/v1/Sales/SalesPickingLists/GetWithdrawalInformation`
 - **Required permission:** Show customer orders
@@ -43,7 +43,7 @@ Calculates and returns the suggested withdrawal information for a picking list.
 
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
-| `PickingListId` | `Int64` | no | [SalesPickingLists](/entities/Sales/SalesPickingList.md) | mandatory | The business key identifier of the picking list. |
+| `PickingListId` | `Int64` | no | [SalesPickingLists](SalesPickingList.md) | mandatory | The business key identifier of the picking list. |
 
 ## Example
 

@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a case entry additional cost.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `CaseEntryAdditionalCost`
 - **Endpoint:** `GET /api/v1/Inventory/CaseEntryAdditionalCost`
 - **Required permission:** Show basic data for case
@@ -46,17 +46,17 @@ Represents a case entry additional cost.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the case entry additional cost. |
-| `CaseEntryId` | `Int64` | no | [CaseEntry](/entities/Inventory/CaseEntry.md) | since 22.8 | The business key identifier of the case entry. |
-| `CaseManagementCostId` | `Int64` | no | [CaseManagementCost](/entities/Inventory/CaseManagementCost.md) |  | The business key identifier of the case management cost for the case entry additional cost. |
-| `CaseManagementCost` | `CaseManagementCost` | no | [CaseManagementCost](/entities/Inventory/CaseManagementCost.md) | expandable | The case management cost of the case entry additional cost. |
+| `CaseEntryId` | `Int64` | no | [CaseEntry](CaseEntry.md) | since 22.8 | The business key identifier of the case entry. |
+| `CaseManagementCostId` | `Int64` | no | [CaseManagementCost](CaseManagementCost.md) |  | The business key identifier of the case management cost for the case entry additional cost. |
+| `CaseManagementCost` | `CaseManagementCost` | no | [CaseManagementCost](CaseManagementCost.md) | expandable | The case management cost of the case entry additional cost. |
 | `Cost` | `Decimal` | no |  |  | The cost of the case entry additional cost. |
-| `CostCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the case entry additional cost currency. |
+| `CostCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the case entry additional cost currency. |
 | `CostType` | `Int32` | no |  | enum | The cost type of the case additional cost. |
 | `Chargeable` | `Boolean` | no |  |  | Specifies if the case additional cost is chargeable. |
 | `CostPerEach` | `Decimal?` | yes |  | since 24.7 | The cost per unit of the case entry additional. |
 | `Quantity` | `Decimal?` | yes |  | since 24.7 | The quantity of the case entry additional cost. |
-| `PartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) | since 25.1 | The business key identifier of the part for the case entry additional cost. |
-| `Part` | `Parts` | no | [Parts](/entities/Inventory/Part.md) | expandable, since 25.1 | The part of the case entry additional cost. |
+| `PartId` | `Int64?` | yes | [Parts](Part.md) | since 25.1 | The business key identifier of the part for the case entry additional cost. |
+| `Part` | `Parts` | no | [Parts](Part.md) | expandable, since 25.1 | The part of the case entry additional cost. |
 
 ## Enumerations
 
@@ -72,7 +72,7 @@ Represents a case entry additional cost.
 
 **Inventory**
 
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `Costs` (expand)
+- [CaseEntry](CaseEntry.md) — `Costs` (expand)
 
 
 ## Example

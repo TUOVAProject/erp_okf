@@ -31,7 +31,7 @@ referenced_by:
 
 Represents an alternative supplier code mainly used for EDI.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `OtherSupplierNumber`
 - **Endpoint:** `GET /api/v1/Purchase/OtherSupplierNumbers`
 - **Required permission:** Show supplier
@@ -45,13 +45,13 @@ Represents an alternative supplier code mainly used for EDI.
 | `Id` | `Int64` | no |  |  | The business key identifier of the other supplier number. |
 | `IsDefault` | `Boolean` | no |  |  | Specifies if this is the default/active other supplier number. |
 | `Number` | `String` | no |  | max length 25 | The human readable identifier of the other supplier number. |
-| `SupplierId` | `Int64` | no | [Suppliers](/entities/Purchase/Supplier.md) |  | The business key identifier of the owning supplier. |
+| `SupplierId` | `Int64` | no | [Suppliers](Supplier.md) |  | The business key identifier of the owning supplier. |
 
 ## Referenced by
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `OtherSupplierNumbers` (expand)
+- [Suppliers](Supplier.md) — `OtherSupplierNumbers` (expand)
 
 
 ## Example

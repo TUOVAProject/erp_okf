@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a server printer that can be used to print documents via the MONITOR server.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ServerPrinter`
 - **Endpoint:** `GET /api/v1/Common/ServerPrinters`
 - **GUID:** `33D557AF-A625-45EF-87FB-0B07DED04BFD`
@@ -51,9 +51,9 @@ Represents a server printer that can be used to print documents via the MONITOR 
 | `Width` | `Int32` | no |  |  | The paper width in millimeters to use if the paper size is "custom". |
 | `Height` | `Int32` | no |  |  | The paper height in millimeters to use if the paper size is "custom". |
 | `ColorMode` | `Int32` | no |  | enum | The color mode to apply to the server printer. |
-| `FilePathId` | `Int64?` | yes | [FilePaths](/entities/Common/FilePath.md) | since 26.4 | The business key identifier of the file path used as output path of a Microsoft Print To PDF Printer References FilePaths . |
-| `FilePath` | `FilePaths` | no | [FilePaths](/entities/Common/FilePath.md) | expandable, since 26.4 | The file path used as output path of a Microsoft Print To PDF Printer References FilePaths . |
-| `SubPath` | `String` | no | [FilePaths](/entities/Common/FilePath.md) | max length 300, since 26.4 | The sub path applied to used as output path of a Microsoft Print To PDF Printer |
+| `FilePathId` | `Int64?` | yes | [FilePaths](FilePath.md) | since 26.4 | The business key identifier of the file path used as output path of a Microsoft Print To PDF Printer References FilePaths . |
+| `FilePath` | `FilePaths` | no | [FilePaths](FilePath.md) | expandable, since 26.4 | The file path used as output path of a Microsoft Print To PDF Printer References FilePaths . |
+| `SubPath` | `String` | no | [FilePaths](FilePath.md) | max length 300, since 26.4 | The sub path applied to used as output path of a Microsoft Print To PDF Printer |
 
 ## Enumerations
 
@@ -96,7 +96,7 @@ Represents a server printer that can be used to print documents via the MONITOR 
 
 **Common**
 
-- [ApplicationUserPrinters](/entities/Common/ApplicationUserPrinter.md) — `ServerPrinterId` (FK)
+- [ApplicationUserPrinters](ApplicationUserPrinter.md) — `ServerPrinterId` (FK)
 
 
 ## Example

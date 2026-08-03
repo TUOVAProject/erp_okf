@@ -35,7 +35,7 @@ referenced_by:
 
 Represents an additional recording
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `AdditionRecording`
 - **Endpoint:** `GET /api/v1/TimeRecording/AdditionRecordings`
 - **Required permission:** Show basic data for attendance
@@ -48,18 +48,18 @@ Represents an additional recording
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the additional recording. |
 | `AdditionType` | `Int32` | no |  | enum | Type of attendance addition |
-| `AttendanceAdditionId` | `Int64` | no | [AttendanceAdditions](/entities/TimeRecording/AttendanceAddition.md) |  | The business key identifier of attendance addition id. |
-| `AttendanceAddition` | `AttendanceAdditions` | no | [AttendanceAdditions](/entities/TimeRecording/AttendanceAddition.md) | expandable | Attendance addition. |
-| `TimeBankId` | `Int64?` | yes | [TimeBanks](/entities/TimeRecording/TimeBank.md) |  | The business key identifier of time bank. |
-| `TimeBank` | `TimeBanks` | no | [TimeBanks](/entities/TimeRecording/TimeBank.md) | expandable | Time bank |
+| `AttendanceAdditionId` | `Int64` | no | [AttendanceAdditions](AttendanceAddition.md) |  | The business key identifier of attendance addition id. |
+| `AttendanceAddition` | `AttendanceAdditions` | no | [AttendanceAdditions](AttendanceAddition.md) | expandable | Attendance addition. |
+| `TimeBankId` | `Int64?` | yes | [TimeBanks](TimeBank.md) |  | The business key identifier of time bank. |
+| `TimeBank` | `TimeBanks` | no | [TimeBanks](TimeBank.md) | expandable | Time bank |
 | `TimeBankTransaction` | `Int32` | no |  | enum | Type of time bank transaction |
 | `MandatoryComment` | `Boolean` | no |  |  | Specifies whether comment is mandatory or not. |
 | `CommentId` | `Int64?` | yes |  |  | The comment id on the additional recording. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment on the additional recording. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment on the additional recording. |
 | `Amount` | `Decimal` | no |  |  | The amount of the additional recording. |
 | `Cost` | `Decimal?` | yes |  |  | The cost of the additional recording. |
-| `CostCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the additional recording cost currency. |
-| `ProjectId` | `Int64?` | yes | [Projects](/entities/Common/Project.md) |  | The business key identifier of the project this additional recording belongs to. |
+| `CostCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the additional recording cost currency. |
+| `ProjectId` | `Int64?` | yes | [Projects](../Common/Project.md) |  | The business key identifier of the project this additional recording belongs to. |
 | `IntervalStart` | `DateTimeOffset?` | yes |  |  | The start of the interval. |
 | `IntervalEnd` | `DateTimeOffset?` | yes |  |  | The end of the interval. |
 
@@ -84,7 +84,7 @@ Represents an additional recording
 
 **TimeRecording**
 
-- [RecordingDays](/entities/TimeRecording/RecordingDay.md) — `Additions` (expand)
+- [RecordingDays](RecordingDay.md) — `Additions` (expand)
 
 
 ## Example

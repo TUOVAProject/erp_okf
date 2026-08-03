@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a Coding dimension.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `CodingDimension`
 - **Endpoint:** `GET /api/v1/Accounting/CodingDimensions`
 - **Required permission:** Show dimensions/dimension codes
@@ -49,7 +49,7 @@ Represents a Coding dimension.
 | `Description` | `String` | no |  |  | The description of the coding dimension. |
 | `CodeDescription` | `String` | no |  |  | The description of the coding dimension code. |
 | `ReferenceEntityType` | `Int32` | no |  | enum | The coding dimension reference type of the coding dimension. |
-| `CodingElements` | `CodingElements[]` | no | [CodingElements](/entities/Accounting/CodingElement.md) | expandable, collection | The coding elements of the coding dimension. |
+| `CodingElements` | `CodingElements[]` | no | [CodingElements](CodingElement.md) | expandable, collection | The coding elements of the coding dimension. |
 
 ## Enumerations
 
@@ -80,11 +80,11 @@ Represents a Coding dimension.
 
 **Accounting**
 
-- [AccountYearSettingCodingDimensionAvailabilities](/entities/Accounting/AccountYearSettingCodingDimensionAvailability.md) — `CodingDimension` (expand)
-- [AccountYearSettingCodingDimensionAvailabilities](/entities/Accounting/AccountYearSettingCodingDimensionAvailability.md) — `CodingDimensionId` (FK)
-- [CodingElements](/entities/Accounting/CodingElement.md) — `CodingDimensionId` (FK)
-- [CodingEntryElements](/entities/Accounting/CodingEntryElement.md) — `CodingDimension` (expand)
-- [CodingEntryElements](/entities/Accounting/CodingEntryElement.md) — `CodingDimensionId` (FK)
+- [AccountYearSettingCodingDimensionAvailabilities](AccountYearSettingCodingDimensionAvailability.md) — `CodingDimension` (expand)
+- [AccountYearSettingCodingDimensionAvailabilities](AccountYearSettingCodingDimensionAvailability.md) — `CodingDimensionId` (FK)
+- [CodingElements](CodingElement.md) — `CodingDimensionId` (FK)
+- [CodingEntryElements](CodingEntryElement.md) — `CodingDimension` (expand)
+- [CodingEntryElements](CodingEntryElement.md) — `CodingDimensionId` (FK)
 
 
 ## Example

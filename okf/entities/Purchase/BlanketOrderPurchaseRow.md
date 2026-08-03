@@ -40,7 +40,7 @@ referenced_by:
 
 Represents a blanket order row for purchase.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `BlanketOrderPurchaseRow`
 - **Endpoint:** `GET /api/v1/Purchase/BlanketOrderPurchaseRows`
 - **Required permission:** Show blanket order
@@ -53,37 +53,37 @@ Represents a blanket order row for purchase.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the blanket order row. |
 | `LifeCycleState` | `Int32` | no |  | enum | The life cycle state of the row. |
-| `ParentOrderId` | `Int64?` | yes | [BlanketOrderPurchases](/entities/Purchase/BlanketOrderPurchase.md) |  | The business key identifier of the row's blanket order. |
-| `ParentRowId` | `Int64?` | yes | [BlanketOrderPurchaseRows](/entities/Purchase/BlanketOrderPurchaseRow.md) |  | The business key identifier of the row's parent row. |
+| `ParentOrderId` | `Int64?` | yes | [BlanketOrderPurchases](BlanketOrderPurchase.md) |  | The business key identifier of the row's blanket order. |
+| `ParentRowId` | `Int64?` | yes | [BlanketOrderPurchaseRows](BlanketOrderPurchaseRow.md) |  | The business key identifier of the row's parent row. |
 | `SupplierPartNumber` | `String` | no |  | max length 50 | The supplier's part number of the row. |
 | `Position` | `Int64?` | yes |  |  | The position of the row. |
 | `OrderRowType` | `Int32` | no |  | enum | The order row type of the row. |
-| `PartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the row's part. |
-| `Part` | `Parts` | no | [Parts](/entities/Inventory/Part.md) | expandable | The part of the row. |
+| `PartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the row's part. |
+| `Part` | `Parts` | no | [Parts](../Inventory/Part.md) | expandable | The part of the row. |
 | `PartRowType` | `Int32` | no |  | enum | The part row type of the row. |
 | `Quantity` | `Decimal` | no |  |  | The quantity of the row. |
-| `UnitId` | `Int64?` | yes | [Units](/entities/Common/Unit.md) |  | The business key identifier of the row's unit. |
-| `Unit` | `Units` | no | [Units](/entities/Common/Unit.md) | expandable | The unit of the row. |
+| `UnitId` | `Int64?` | yes | [Units](../Common/Unit.md) |  | The business key identifier of the row's unit. |
+| `Unit` | `Units` | no | [Units](../Common/Unit.md) | expandable | The unit of the row. |
 | `Price` | `Decimal?` | yes |  |  | The price of the row. |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row's price currency. |
-| `PriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The price currency of the row. |
-| `PriceOriginPriceListId` | `Int64?` | yes | [PriceLists](/entities/Common/PriceList.md) |  | The business key identifier of the row's price origin price list. |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row's price currency. |
+| `PriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The price currency of the row. |
+| `PriceOriginPriceListId` | `Int64?` | yes | [PriceLists](../Common/PriceList.md) |  | The business key identifier of the row's price origin price list. |
 | `PriceLockedFromAutomaticChanges` | `Boolean?` | yes |  |  | Specifies if the row have price locked from automatic changes. |
 | `PriceIsFuturePrice` | `Boolean?` | yes |  |  | Specifies if the row's price is future price. |
 | `PriceInCompanyCurrency` | `Decimal?` | yes |  |  | The price in company currency of the row. |
-| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row's company currency used in price in company currency. |
-| `PriceInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The company currency used in price in company currency of the row. |
+| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row's company currency used in price in company currency. |
+| `PriceInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The company currency used in price in company currency of the row. |
 | `Discount` | `Decimal` | no |  |  | The discount of the row. |
 | `SetupPrice` | `Decimal?` | yes |  |  | The setup price of the row. |
-| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row's setup price currency. |
-| `SetupPriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The setup price currency of the row. |
+| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row's setup price currency. |
+| `SetupPriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The setup price currency of the row. |
 | `SetupPriceInCompanyCurrency` | `Decimal?` | yes |  |  | The setup price in company currency of the row. |
-| `VatRateId` | `Int64?` | yes | [VatRates](/entities/Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
-| `VatRate` | `VatRates` | no | [VatRates](/entities/Common/VatRate.md) | expandable | The VAT rate of the row. |
+| `VatRateId` | `Int64?` | yes | [VatRates](../Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
+| `VatRate` | `VatRates` | no | [VatRates](../Common/VatRate.md) | expandable | The VAT rate of the row. |
 | `ShowFreeTextIn` | `Int32` | no |  | bitmask, enum | Specifies where the row's free text should be visible. |
 | `ValidThrough` | `DateTimeOffset?` | yes |  |  | The requirement date of the row. |
-| `RevisionId` | `Int64?` | yes | [Revisions](/entities/Common/Revision.md) |  | The business key identifier of the row's revision. |
-| `Revision` | `Revisions` | no | [Revisions](/entities/Common/Revision.md) | expandable | The revision of the row. |
+| `RevisionId` | `Int64?` | yes | [Revisions](../Common/Revision.md) |  | The business key identifier of the row's revision. |
+| `Revision` | `Revisions` | no | [Revisions](../Common/Revision.md) | expandable | The revision of the row. |
 | `FreeTextHtml` | `String` | no |  |  | The free text in HTML format of the row. |
 | `FreeText` | `String` | no |  |  | The free text of the row. |
 | `ConversionFactor` | `Decimal` | no |  |  | The conversion factor of the row. |
@@ -136,9 +136,9 @@ Represents a blanket order row for purchase.
 
 **Purchase**
 
-- [BlanketOrderPurchaseRows](/entities/Purchase/BlanketOrderPurchaseRow.md) — `ParentRowId` (FK)
-- [BlanketOrderPurchases](/entities/Purchase/BlanketOrderPurchase.md) — `Rows` (expand)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `BlanketOrderPurchaseRowId` (FK)
+- [BlanketOrderPurchaseRows](BlanketOrderPurchaseRow.md) — `ParentRowId` (FK)
+- [BlanketOrderPurchases](BlanketOrderPurchase.md) — `Rows` (expand)
+- [PurchaseOrderRows](PurchaseOrderRow.md) — `BlanketOrderPurchaseRowId` (FK)
 
 
 ## Example

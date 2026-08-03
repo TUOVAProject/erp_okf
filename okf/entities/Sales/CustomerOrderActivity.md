@@ -31,7 +31,7 @@ references_out:
 
 Represents a customer order activity.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerOrderActivity`
 - **Endpoint:** `GET /api/v1/Sales/CustomerOrderActivities`
 - **Required permission:** Show customer orders
@@ -43,10 +43,10 @@ Represents a customer order activity.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the customer order activity. |
-| `OrderId` | `Int64` | no | [CustomerOrders](/entities/Sales/CustomerOrder.md) |  | The business key identifier of the customer order to add the activity to. |
-| `ActivityTypeId` | `Int64` | no | [CustomerRelationshipActivityTypes](/entities/Sales/CustomerRelationshipActivityType.md) |  | The business key identifier of the customer order activity type that the activity is based on. |
+| `OrderId` | `Int64` | no | [CustomerOrders](CustomerOrder.md) |  | The business key identifier of the customer order to add the activity to. |
+| `ActivityTypeId` | `Int64` | no | [CustomerRelationshipActivityTypes](CustomerRelationshipActivityType.md) |  | The business key identifier of the customer order activity type that the activity is based on. |
 | `Description` | `String` | no |  | default: From the activity type | The description of the activity. |
-| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that is responsible for the activity. |
+| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the application user that is responsible for the activity. |
 | `PlannedCompletionDate` | `DateTimeOffset` | no |  |  | The planned completion date of the activity. |
 | `Reminder` | `Boolean?` | yes |  |  | Sets whether or not a reminder should be created for the activity. |
 

@@ -29,7 +29,7 @@ referenced_by:
 
 Represents an accounting budget type.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccountingBudgetType`
 - **Endpoint:** `GET /api/v1/Accounting/AccountingBudgetTypes`
 - **Required permission:** Show basic data for budget
@@ -49,7 +49,7 @@ Represents an accounting budget type.
 
 **Accounting**
 
-- [AccountingBudgets](/entities/Accounting/AccountingBudget.md) — `BudgetTypeId` (FK)
+- [AccountingBudgets](AccountingBudget.md) — `BudgetTypeId` (FK)
 
 
 ## Example

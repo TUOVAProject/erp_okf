@@ -32,7 +32,7 @@ referenced_by:
 
 Represents an alternate identity for a part.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PartOtherIdentity`
 - **Endpoint:** `GET /api/v1/Inventory/PartOtherIdentities`
 - **Required permission:** Show part
@@ -44,16 +44,16 @@ Represents an alternate identity for a part.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the alternate identity. |
-| `TypeId` | `Int64` | no | [PartIdentityTypes](/entities/Inventory/PartIdentityType.md) |  | The business key identifier of the identity type of the alternate identity. |
+| `TypeId` | `Int64` | no | [PartIdentityTypes](PartIdentityType.md) |  | The business key identifier of the identity type of the alternate identity. |
 | `Value` | `String` | no |  |  | The value of the alternate identity. |
 | `IsActive` | `Boolean` | no |  |  | Whether or not the alternate identity is active. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part that the alternate identity belongs to. |
+| `PartId` | `Int64` | no | [Parts](Part.md) |  | The business key identifier of the part that the alternate identity belongs to. |
 
 ## Referenced by
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `OtherIdentities` (expand)
+- [Parts](Part.md) — `OtherIdentities` (expand)
 
 
 ## Example

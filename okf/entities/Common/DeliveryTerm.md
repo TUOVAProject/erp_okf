@@ -37,7 +37,7 @@ referenced_by:
 
 Represents a queryable delivery term.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `DeliveryTerm`
 - **Endpoint:** `GET /api/v1/Common/DeliveryTerms`
 - **Required permission:** Show terms
@@ -75,22 +75,22 @@ Represents a queryable delivery term.
 
 **Common**
 
-- [DeliveryAddressWarehouseInformations](/entities/Common/DeliveryAddressWarehouseInformation.md) — `DeliveryTermId` (FK)
+- [DeliveryAddressWarehouseInformations](DeliveryAddressWarehouseInformation.md) — `DeliveryTermId` (FK)
 
 **Purchase**
 
-- [Inquiries](/entities/Purchase/Inquiry.md) — `DeliveryTermId` (FK)
-- [PurchaseOrderInvoices](/entities/Purchase/PurchaseOrderInvoice.md) — `DeliveryTermId` (FK)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `DeliveryTerm` (expand)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `DeliveryTermId` (FK)
+- [Inquiries](../Purchase/Inquiry.md) — `DeliveryTermId` (FK)
+- [PurchaseOrderInvoices](../Purchase/PurchaseOrderInvoice.md) — `DeliveryTermId` (FK)
+- [PurchaseOrders](../Purchase/PurchaseOrder.md) — `DeliveryTerm` (expand)
+- [PurchaseOrders](../Purchase/PurchaseOrder.md) — `DeliveryTermId` (FK)
 
 **Sales**
 
-- [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) — `DeliveryTermId` (FK)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `DeliveryTermId` (FK)
-- [Quotes](/entities/Sales/Quote.md) — `DeliveryTermId` (FK)
-- [SalesAgreements](/entities/Sales/SalesAgreement.md) — `DeliveryTermId` (FK)
-- [Shipments](/entities/Sales/Shipment.md) — `DeliveryTermId` (FK)
+- [CustomerOrderInvoices](../Sales/CustomerOrderInvoice.md) — `DeliveryTermId` (FK)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `DeliveryTermId` (FK)
+- [Quotes](../Sales/Quote.md) — `DeliveryTermId` (FK)
+- [SalesAgreements](../Sales/SalesAgreement.md) — `DeliveryTermId` (FK)
+- [Shipments](../Sales/Shipment.md) — `DeliveryTermId` (FK)
 
 
 ## Example

@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a customer order invoice row.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerOrderInvoiceRow`
 - **Endpoint:** `GET /api/v1/Sales/CustomerOrderInvoiceRows`
 - **Required permission:** Show customer orders
@@ -57,9 +57,9 @@ Represents a customer order invoice row.
 | `OverrideStandardPrice` | `Decimal?` | yes |  |  | The value of the overridden standard price. |
 | `OverrideStandardPriceCurrencyId` | `Int64?` | yes |  |  | The business key identifier of the override standard price currency |
 | `Price` | `Decimal?` | yes |  |  | The price of the row. |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row's price currency. |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row's price currency. |
 | `PriceInCompanyCurrency` | `Decimal?` | yes |  |  | The row's price in the company currency. |
-| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the company currency. |
+| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the company currency. |
 | `PriceIsFuturePrice` | `Boolean?` | yes |  |  | Specifies if the price is a future price. |
 | `PriceLockedFromAutomaticChanges` | `Boolean?` | yes |  |  | Specifies if price is locked from automatic changes. |
 | `PriceOrigin` | `Int32?` | yes |  | enum | The price origin of the row. |
@@ -67,11 +67,11 @@ Represents a customer order invoice row.
 | `SetupPrice` | `Decimal?` | yes |  |  | The setup price of the row. |
 | `SetupPriceCurrencyId` | `Int64?` | yes |  |  | The business key identifier of the row's setup price currency. |
 | `SetupPriceInCompanyCurrency` | `Decimal?` | yes |  |  | The row's setup price in the company currency. |
-| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the company currency. |
+| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the company currency. |
 | `StandardPrice` | `Decimal?` | yes |  |  | The standard price of the row. |
-| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the row's standard price currency. |
-| `VatRateId` | `Int64?` | yes | [VatRates](/entities/Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
-| `DiscountRows` | `CustomerOrderInvoiceOrderRowDiscounts[]` | no | [CustomerOrderInvoiceOrderRowDiscounts](/entities/Sales/CustomerOrderInvoiceOrderRowDiscount.md) | expandable, collection, since 24.8 | The discount rows for the row. |
+| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the row's standard price currency. |
+| `VatRateId` | `Int64?` | yes | [VatRates](../Common/VatRate.md) |  | The business key identifier of the row's VAT rate. |
+| `DiscountRows` | `CustomerOrderInvoiceOrderRowDiscounts[]` | no | [CustomerOrderInvoiceOrderRowDiscounts](CustomerOrderInvoiceOrderRowDiscount.md) | expandable, collection, since 24.8 | The discount rows for the row. |
 
 ## Enumerations
 
@@ -95,9 +95,9 @@ Represents a customer order invoice row.
 
 **Sales**
 
-- [CustomerOrderDeliveryRows](/entities/Sales/CustomerOrderDeliveryRow.md) — `InvoiceRow` (expand)
-- [CustomerOrderDeliveryRows](/entities/Sales/CustomerOrderDeliveryRow.md) — `InvoiceRowId` (FK)
-- [CustomerOrderInvoiceOrderRowDiscounts](/entities/Sales/CustomerOrderInvoiceOrderRowDiscount.md) — `OrderRowId` (FK)
+- [CustomerOrderDeliveryRows](CustomerOrderDeliveryRow.md) — `InvoiceRow` (expand)
+- [CustomerOrderDeliveryRows](CustomerOrderDeliveryRow.md) — `InvoiceRowId` (FK)
+- [CustomerOrderInvoiceOrderRowDiscounts](CustomerOrderInvoiceOrderRowDiscount.md) — `OrderRowId` (FK)
 
 
 ## Example

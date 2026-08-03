@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a table that contains exceptions from the production calendar. Only used when using daily planning.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ProductionCalendarException`
 - **Endpoint:** `GET /api/v1/Manufacturing/ProductionCalendarExceptions`
 - **Required permission:** Show work center
@@ -49,17 +49,17 @@ Represents a table that contains exceptions from the production calendar. Only u
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the production calendar exception. |
-| `WorkCenterId` | `Int64` | no | [WorkCenters](/entities/Manufacturing/WorkCenter.md) |  | The business key identifier of the work center that is linked to the production calendar exception. |
+| `WorkCenterId` | `Int64` | no | [WorkCenters](WorkCenter.md) |  | The business key identifier of the work center that is linked to the production calendar exception. |
 | `NumberOfPlanningUnits` | `Decimal?` | yes |  |  | Number of persons or number of machines depending on the work center type. |
 | `ExceptionDate` | `DateTime` | no |  |  | Day of the production calendar exception. |
 | `BasicTime` | `TimeSpan?` | yes |  |  | Basic time used on this production calendar exception date. |
-| `ScheduleId` | `Int64?` | yes | [Schedules](/entities/TimeRecording/Schedule.md) |  | The business key identifier of the schedule used on this production calendar exception date. |
+| `ScheduleId` | `Int64?` | yes | [Schedules](../TimeRecording/Schedule.md) |  | The business key identifier of the schedule used on this production calendar exception date. |
 
 ## Referenced by
 
 **Manufacturing**
 
-- [WorkCenters](/entities/Manufacturing/WorkCenter.md) — `ProductionCalendarExceptions` (expand)
+- [WorkCenters](WorkCenter.md) — `ProductionCalendarExceptions` (expand)
 
 
 ## Example

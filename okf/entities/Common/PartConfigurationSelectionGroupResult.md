@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a part configuration selection group result
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PartConfigurationSelectionGroupResult`
 - **Endpoint:** `GET /api/v1/Common/PartConfigurationSelectionGroupResults`
 - **Required permission:** Show part
@@ -46,17 +46,17 @@ Represents a part configuration selection group result
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the part configuration selection group result. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part. |
+| `PartId` | `Int64` | no | [Parts](../Inventory/Part.md) |  | The business key identifier of the part. |
 | `SelectionGroupTemplateRowId` | `Int64` | no |  |  | The business key identifier of the selection group row snapshot. |
 | `RowIndex` | `Int32` | no |  |  | The row of the result. |
-| `SelectionGroupTemplateId` | `Int64` | no | [PartConfigurationComponentSnapshots](/entities/Common/PartConfigurationComponentSnapshot.md) |  | The business key identifier of the selection group snapshot. |
-| `PartConfigurationResultId` | `Int64` | no | [PartConfigurationResults](/entities/Common/PartConfigurationResult.md) |  | The business key identifier of the part configuration result. |
+| `SelectionGroupTemplateId` | `Int64` | no | [PartConfigurationComponentSnapshots](PartConfigurationComponentSnapshot.md) |  | The business key identifier of the selection group snapshot. |
+| `PartConfigurationResultId` | `Int64` | no | [PartConfigurationResults](PartConfigurationResult.md) |  | The business key identifier of the part configuration result. |
 | `Quantity` | `Decimal` | no |  | since 25.9 | The quantity of the result row. |
 | `SetupQuantity` | `Decimal` | no |  | since 26.3 | The setup quantity of the result row. |
 | `UnitPrice` | `Decimal?` | yes |  | since 26.3 | The unit price amount. |
-| `UnitPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) | since 26.3 | The business key identifier of the currency for the unit price. |
+| `UnitPriceCurrencyId` | `Int64?` | yes | [Currencies](Currency.md) | since 26.3 | The business key identifier of the currency for the unit price. |
 | `UnitPriceInCompanyCurrency` | `Decimal?` | yes |  | since 26.3 | The unit price amount in company currency. |
-| `UnitPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) | since 26.3 | The business key identifier of the currency for the unit price in company currency. |
+| `UnitPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Currency.md) | since 26.3 | The business key identifier of the currency for the unit price in company currency. |
 | `DiscountPercentage` | `Decimal` | no |  | since 26.3 | The discount percentage. |
 | `PriceFormulaFactor` | `Decimal` | no |  | since 26.3 | The price formula factor. |
 | `LockedUnitPrice` | `Boolean` | no |  | since 26.3 | Whether the unit price is locked. |
@@ -65,7 +65,7 @@ Represents a part configuration selection group result
 | `SelectedByName` | `String` | no |  | since 26.3 | The name indicating who or what selected the row. |
 | `SelectionType` | `Int32` | no |  | enum, since 26.3 | The selection type. |
 | `ToOperation` | `Int32?` | yes |  | since 26.3 | The target operation number. |
-| `MainPartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) | since 26.3 | The business key identifier of the main part. |
+| `MainPartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) | since 26.3 | The business key identifier of the main part. |
 | `Position` | `String` | no |  | since 26.3 | The position string. |
 
 ## Enumerations
@@ -95,7 +95,7 @@ Represents a part configuration selection group result
 
 **Common**
 
-- [PartConfigurationResults](/entities/Common/PartConfigurationResult.md) — `PartConfigurationSelectionGroupResults` (expand)
+- [PartConfigurationResults](PartConfigurationResult.md) — `PartConfigurationSelectionGroupResults` (expand)
 
 
 ## Example

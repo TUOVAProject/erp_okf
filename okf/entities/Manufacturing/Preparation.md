@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a part preparation
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `Preparation`
 - **Endpoint:** `GET /api/v1/Manufacturing/Preparations`
 - **Required permission:** Show part
@@ -48,18 +48,18 @@ Represents a part preparation
 | `PartNumber` | `String` | no |  | unique, max length 20 | The part number of the part that the part preparation represents. |
 | `Description` | `String` | no |  |  | The translated description of the part preparation. |
 | `UseVariantManagement` | `Boolean` | no |  |  | Specifies if variant management is applied for the preparation. |
-| `VariantXAxisId` | `Int64?` | yes | [ExtraFieldTemplates](/entities/Common/ExtraFieldTemplate.md) |  | The business key identifier of the extra field template used for the X axis of the variant management system. |
-| `VariantXAxis` | `ExtraFieldTemplates` | no | [ExtraFieldTemplates](/entities/Common/ExtraFieldTemplate.md) | expandable | The extra field template that is applied for the X axis of the variant management system. |
-| `VariantYAxisId` | `Int64?` | yes | [ExtraFieldTemplates](/entities/Common/ExtraFieldTemplate.md) |  | The business key identifier of the extra field template used for the Y axis of the variant management system. References ExtraFieldTemplates . |
-| `VariantYAxis` | `ExtraFieldTemplates` | no | [ExtraFieldTemplates](/entities/Common/ExtraFieldTemplate.md) | expandable | The extra field template that is applied for the Y axis of the variant management system. |
-| `Materials` | `MaterialRows[]` | no | [MaterialRows](/entities/Manufacturing/MaterialRow.md) | expandable, collection | The material rows of the preparation. |
-| `Operations` | `OperationRows[]` | no | [OperationRows](/entities/Manufacturing/OperationRow.md) | expandable, collection | The operation rows of the preparation. |
+| `VariantXAxisId` | `Int64?` | yes | [ExtraFieldTemplates](../Common/ExtraFieldTemplate.md) |  | The business key identifier of the extra field template used for the X axis of the variant management system. |
+| `VariantXAxis` | `ExtraFieldTemplates` | no | [ExtraFieldTemplates](../Common/ExtraFieldTemplate.md) | expandable | The extra field template that is applied for the X axis of the variant management system. |
+| `VariantYAxisId` | `Int64?` | yes | [ExtraFieldTemplates](../Common/ExtraFieldTemplate.md) |  | The business key identifier of the extra field template used for the Y axis of the variant management system. References ExtraFieldTemplates . |
+| `VariantYAxis` | `ExtraFieldTemplates` | no | [ExtraFieldTemplates](../Common/ExtraFieldTemplate.md) | expandable | The extra field template that is applied for the Y axis of the variant management system. |
+| `Materials` | `MaterialRows[]` | no | [MaterialRows](MaterialRow.md) | expandable, collection | The material rows of the preparation. |
+| `Operations` | `OperationRows[]` | no | [OperationRows](OperationRow.md) | expandable, collection | The operation rows of the preparation. |
 
 ## Referenced by
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `PreparationId` (FK)
+- [Parts](../Inventory/Part.md) — `PreparationId` (FK)
 
 
 ## Example

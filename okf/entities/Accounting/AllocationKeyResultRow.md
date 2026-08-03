@@ -32,7 +32,7 @@ referenced_by:
 
 Represent an allocation key result row.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AllocationKeyResultRow`
 - **Endpoint:** `GET /api/v1/Accounting/AllocationKeyResultRows`
 - **Required permission:** Show allocation keys
@@ -44,9 +44,9 @@ Represent an allocation key result row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the allocation key result row. |
-| `AllocationKeyId` | `Int64` | no | [AllocationKeys](/entities/Accounting/AllocationKey.md) |  | The business key identifier of the allocation key the result row belongs to. |
-| `CodingEntryId` | `Int64` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) | expandable | The business key identifier of the coding entry of the allocation key result row. |
-| `CodingEntry` | `CodingEntries` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The coding entry of the allocation key result row. |
+| `AllocationKeyId` | `Int64` | no | [AllocationKeys](AllocationKey.md) |  | The business key identifier of the allocation key the result row belongs to. |
+| `CodingEntryId` | `Int64` | no | [CodingEntries](CodingEntry.md) | expandable | The business key identifier of the coding entry of the allocation key result row. |
+| `CodingEntry` | `CodingEntries` | no | [CodingEntries](CodingEntry.md) |  | The coding entry of the allocation key result row. |
 | `Percentage` | `Decimal` | no |  |  | The percentage value of the allocation key result row. |
 | `RowIndex` | `Int32` | no |  |  | The row index of the allocation key result row. |
 
@@ -54,7 +54,7 @@ Represent an allocation key result row.
 
 **Accounting**
 
-- [AllocationKeys](/entities/Accounting/AllocationKey.md) — `AllocationKeyResultRow` (expand)
+- [AllocationKeys](AllocationKey.md) — `AllocationKeyResultRow` (expand)
 
 
 ## Example

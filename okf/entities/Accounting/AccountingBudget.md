@@ -37,7 +37,7 @@ referenced_by:
 
 Represents an accounting budget.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccountingBudget`
 - **Endpoint:** `GET /api/v1/Accounting/AccountingBudgets`
 - **Required permission:** Show budget
@@ -49,20 +49,20 @@ Represents an accounting budget.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the accounting budget. |
-| `AccountYearSettingId` | `Int64` | no | [AccountYearSettings](/entities/Accounting/AccountYearSetting.md) |  | The business key identifier of the account year setting the budget belongs to. |
-| `AccountingYearId` | `Int64` | no | [AccountingYears](/entities/Accounting/AccountingYear.md) |  | The business key identifier of the accounting year the budget belongs to. |
-| `BalanceId` | `Int64` | no | [Balances](/entities/Accounting/Balance.md) |  | The business key identifier of the budget's balance. |
-| `BudgetChartId` | `Int64` | no | [BudgetCharts](/entities/Accounting/BudgetChart.md) |  | The business key identifier of the budget's budget chart. |
-| `BudgetTypeId` | `Int64` | no | [AccountingBudgetTypes](/entities/Accounting/AccountingBudgetType.md) |  | The business key identifier of the budget type. |
-| `CodingEntryId` | `Int64` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the budget's coding entry. |
-| `CodingEntry` | `CodingEntries` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) | expandable | The coding entry of the budget. |
-| `Periods` | `AccountingBudgetPeriods[]` | no | [AccountingBudgetPeriods](/entities/Accounting/AccountingBudgetPeriod.md) | expandable, collection | The periods of the accounting budget. |
+| `AccountYearSettingId` | `Int64` | no | [AccountYearSettings](AccountYearSetting.md) |  | The business key identifier of the account year setting the budget belongs to. |
+| `AccountingYearId` | `Int64` | no | [AccountingYears](AccountingYear.md) |  | The business key identifier of the accounting year the budget belongs to. |
+| `BalanceId` | `Int64` | no | [Balances](Balance.md) |  | The business key identifier of the budget's balance. |
+| `BudgetChartId` | `Int64` | no | [BudgetCharts](BudgetChart.md) |  | The business key identifier of the budget's budget chart. |
+| `BudgetTypeId` | `Int64` | no | [AccountingBudgetTypes](AccountingBudgetType.md) |  | The business key identifier of the budget type. |
+| `CodingEntryId` | `Int64` | no | [CodingEntries](CodingEntry.md) |  | The business key identifier of the budget's coding entry. |
+| `CodingEntry` | `CodingEntries` | no | [CodingEntries](CodingEntry.md) | expandable | The coding entry of the budget. |
+| `Periods` | `AccountingBudgetPeriods[]` | no | [AccountingBudgetPeriods](AccountingBudgetPeriod.md) | expandable, collection | The periods of the accounting budget. |
 
 ## Referenced by
 
 **Accounting**
 
-- [AccountingBudgetPeriods](/entities/Accounting/AccountingBudgetPeriod.md) — `BudgetId` (FK)
+- [AccountingBudgetPeriods](AccountingBudgetPeriod.md) — `BudgetId` (FK)
 
 
 ## Example

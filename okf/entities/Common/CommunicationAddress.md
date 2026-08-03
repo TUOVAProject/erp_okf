@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a queryable communication address. A communication address is used to store either phone, cellphone, email or fax information in MONITOR.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `CommunicationAddress`
 - **Endpoint:** `GET /api/v1/Common/CommunicationAddresses`
 - **GUID:** `65BC336B-BD64-46B5-947C-894031B8CE33`
@@ -105,16 +105,16 @@ Represents a queryable communication address. A communication address is used to
 
 **Purchase**
 
-- [Inquiries](/entities/Purchase/Inquiry.md) — `CommunicationAddresses` (expand)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `CommunicationAddresses` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `CommunicationAddresses` (expand)
+- [Inquiries](../Purchase/Inquiry.md) — `CommunicationAddresses` (expand)
+- [PurchaseOrders](../Purchase/PurchaseOrder.md) — `CommunicationAddresses` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `CommunicationAddresses` (expand)
 
 **Sales**
 
-- [BusinessOpportunityReferences](/entities/Sales/BusinessOpportunityReference.md) — `CommunicationAddresses` (expand)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `CommunicationAddresses` (expand)
-- [Customers](/entities/Sales/Customer.md) — `CommunicationAddresses` (expand)
-- [Quotes](/entities/Sales/Quote.md) — `CommunicationAddresses` (expand)
+- [BusinessOpportunityReferences](../Sales/BusinessOpportunityReference.md) — `CommunicationAddresses` (expand)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `CommunicationAddresses` (expand)
+- [Customers](../Sales/Customer.md) — `CommunicationAddresses` (expand)
+- [Quotes](../Sales/Quote.md) — `CommunicationAddresses` (expand)
 
 
 ## Example

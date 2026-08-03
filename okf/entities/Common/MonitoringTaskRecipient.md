@@ -31,7 +31,7 @@ references_out:
 
 Represents a recipient for monitoring task.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `MonitoringTaskRecipient`
 - **Endpoint:** `GET /api/v1/Common/MonitoringTaskRecipients`
 - **Required permission:** Create and handle all monitoring tasks
@@ -43,11 +43,11 @@ Represents a recipient for monitoring task.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier key of the monitoring task recipient. |
-| `TaskId` | `Int64` | no | [MonitoringTasks](/entities/Common/MonitoringTask.md) |  | The business key identifier of the monitoring task that the recipient belongs to. |
-| `LanguageCodeId` | `Int64` | no | [LanguageCodes](/entities/Common/LanguageCode.md) |  | The business key identifier of the language code used in the recipient. |
+| `TaskId` | `Int64` | no | [MonitoringTasks](MonitoringTask.md) |  | The business key identifier of the monitoring task that the recipient belongs to. |
+| `LanguageCodeId` | `Int64` | no | [LanguageCodes](LanguageCode.md) |  | The business key identifier of the language code used in the recipient. |
 | `RecipientType` | `Int32` | no |  | enum | Specifies the type of the monitoring task's recipient. |
 | `Email` | `String` | no |  | max length 2500 | Specifies the mail of recipient if recipient type is email. |
-| `ApplicationUserId` | `Int64` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user of the monitoring task's recipient. |
+| `ApplicationUserId` | `Int64` | no | [ApplicationUsers](ApplicationUser.md) |  | The business key identifier of the application user of the monitoring task's recipient. |
 
 ## Enumerations
 

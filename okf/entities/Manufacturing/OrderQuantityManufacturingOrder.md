@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a order quantity template on part that holds many partial quantities.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `OrderQuantityManufacturingOrder`
 - **Endpoint:** `GET /api/v1/Manufacturing/OrderQuantityManufacturingOrders`
 - **Required permission:** Show manufacturing orders
@@ -44,14 +44,14 @@ Represents a order quantity template on part that holds many partial quantities.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the entity. |
-| `PartialQuantities` | `PartialQuantities[]` | no | [PartialQuantities](/entities/Common/PartialQuantity.md) | expandable, collection | The partial quantities for the order quantity. |
+| `PartialQuantities` | `PartialQuantities[]` | no | [PartialQuantities](../Common/PartialQuantity.md) | expandable, collection | The partial quantities for the order quantity. |
 
 ## Referenced by
 
 **Manufacturing**
 
-- [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) — `OrderQuantity` (expand)
-- [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) — `OrderQuantityId` (FK)
+- [ManufacturingOrders](ManufacturingOrder.md) — `OrderQuantity` (expand)
+- [ManufacturingOrders](ManufacturingOrder.md) — `OrderQuantityId` (FK)
 
 
 ## Example

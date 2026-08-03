@@ -32,7 +32,7 @@ references_out:
 
 Represents a physical inventory row.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PhysicalInventoryRow`
 - **Endpoint:** `GET /api/v1/Inventory/PhysicalInventoryRows`
 - **Required permission:** Report stock count
@@ -44,10 +44,10 @@ Represents a physical inventory row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the physical inventory row. |
-| `PhysicalInventoryListId` | `Int64` | no | [PhysicalInventoryLists](/entities/Inventory/PhysicalInventoryList.md) |  | The business key identifier of the physical inventory list that the row belongs to. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part of the physical inventory row. |
-| `LocationId` | `Int64` | no | [PartLocations](/entities/Inventory/PartLocation.md) |  | The business key identifier of the part location of the physical inventory row. |
-| `ProductRecordId` | `Int64` | no | [ProductRecords](/entities/Inventory/ProductRecord.md) |  | The business key identifier of the product record of the physical inventory row. |
+| `PhysicalInventoryListId` | `Int64` | no | [PhysicalInventoryLists](PhysicalInventoryList.md) |  | The business key identifier of the physical inventory list that the row belongs to. |
+| `PartId` | `Int64` | no | [Parts](Part.md) |  | The business key identifier of the part of the physical inventory row. |
+| `LocationId` | `Int64` | no | [PartLocations](PartLocation.md) |  | The business key identifier of the part location of the physical inventory row. |
+| `ProductRecordId` | `Int64` | no | [ProductRecords](ProductRecord.md) |  | The business key identifier of the product record of the physical inventory row. |
 | `Reported` | `Boolean` | no |  | **deprecated since 23.3** | Indicates if the physical inventory row is reported. _(Use ReportingState to get current state and see if row is reported, pending approval or rejected)_ |
 | `ReportingState` | `Int32` | no |  | enum, since 23.3 | Reporting state of the physical inventory row. |
 | `Version` | `Int32` | no |  |  | The version of the physical inventory row. |

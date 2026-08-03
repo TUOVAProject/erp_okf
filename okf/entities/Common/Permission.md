@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a permission node.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `Permission`
 - **Endpoint:** `GET /api/v1/Common/Permissions`
 - **Required permission:** Show user
@@ -51,8 +51,8 @@ Represents a permission node.
 
 **Common**
 
-- [PermissionGroups](/entities/Common/PermissionGroup.md) — `Permissions` (expand)
-- [WarehousePermissions](/entities/Common/WarehousePermission.md) — `Permissions` (expand)
+- [PermissionGroups](PermissionGroup.md) — `Permissions` (expand)
+- [WarehousePermissions](WarehousePermission.md) — `Permissions` (expand)
 
 
 ## Example

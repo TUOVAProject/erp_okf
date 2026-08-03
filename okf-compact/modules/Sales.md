@@ -18,17 +18,17 @@ Represents a blanket order for sales.
 | `Id` | `Int64` | no |  |
 | `LifeCycleState` | `Int32` | no |  |
 | `OrderNumber` | `String` | no |  |
-| `OrderTypeId` | `Int64?` | yes | [BlanketOrderSalesTypes](/modules/Sales.md#Sales.BlanketOrderSalesType) |
-| `OrderType` | `BlanketOrderSalesTypes` | no | [BlanketOrderSalesTypes](/modules/Sales.md#Sales.BlanketOrderSalesType) |
-| `BusinessContactId` | `Int64?` | yes | [Customers](/modules/Sales.md#Sales.Customer) |
-| `BusinessContact` | `Customers` | no | [Customers](/modules/Sales.md#Sales.Customer) |
+| `OrderTypeId` | `Int64?` | yes | [BlanketOrderSalesTypes](Sales.md#Sales.BlanketOrderSalesType) |
+| `OrderType` | `BlanketOrderSalesTypes` | no | [BlanketOrderSalesTypes](Sales.md#Sales.BlanketOrderSalesType) |
+| `BusinessContactId` | `Int64?` | yes | [Customers](Sales.md#Sales.Customer) |
+| `BusinessContact` | `Customers` | no | [Customers](Sales.md#Sales.Customer) |
 | `CustomersOrderNumber` | `String` | no |  |
-| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
-| `BusinessContactReference` | `BusinessContactReferences` | no | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
+| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
+| `BusinessContactReference` | `BusinessContactReferences` | no | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
 | `IncludeInNetRequirementCalculation` | `Boolean` | no |  |
 | `BusinessContactReferenceName` | `String` | no |  |
-| `OurReferenceId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
-| `OurReference` | `Persons` | no | [Persons](/modules/Common.md#Common.Person) |
+| `OurReferenceId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
+| `OurReference` | `Persons` | no | [Persons](Common.md#Common.Person) |
 | `OurReferenceName` | `String` | no |  |
 | `ValidationPeriod` | `Int32` | no |  |
 | `ValidFrom` | `DateTimeOffset` | no |  |
@@ -39,29 +39,29 @@ Represents a blanket order for sales.
 | `CategoryString` | `String` | no |  |
 | `UseForwardRate` | `Boolean` | no |  |
 | `ExchangeRate` | `Decimal` | no |  |
-| `CurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `Currency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `CurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `Currency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `OrderDate` | `DateTimeOffset` | no |  |
 | `DefaultOrderPrintoutVia` | `Int32` | no |  |
-| `MailingAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `MailingAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
-| `InternalCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `InternalComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
-| `ExternalCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `ExternalComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
-| `SellerId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
-| `Seller` | `Persons` | no | [Persons](/modules/Common.md#Common.Person) |
-| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType) |
-| `CurrencyExchangeType` | `CurrencyExchangeTypes` | no | [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType) |
-| `Rows` | `BlanketOrderSalesRows[]` | no | [BlanketOrderSalesRows](/modules/Sales.md#Sales.BlanketOrderSalesRow) |
+| `MailingAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `MailingAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
+| `InternalCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `InternalComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| `ExternalCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `ExternalComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| `SellerId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
+| `Seller` | `Persons` | no | [Persons](Common.md#Common.Person) |
+| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType) |
+| `CurrencyExchangeType` | `CurrencyExchangeTypes` | no | [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType) |
+| `Rows` | `BlanketOrderSalesRows[]` | no | [BlanketOrderSalesRows](Sales.md#Sales.BlanketOrderSalesRow) |
 
 - `LifeCycleState` — Transient=1, Persistent=10, History=20, RemovableCandidate=99
 - `ValidationPeriod` — OrderDate=0, DeliveryDate=1
 - `Status` — Registered=1, Printed=2, PartiallyCalledOf=7, FullyCalledOf=8, History=9
 - `DefaultOrderPrintoutVia` — Printer=0, Email=1, Edi=2, None=9
 
-**References out:** [Addresses](/modules/Common.md#Common.Address), [BlanketOrderSalesRows](/modules/Sales.md#Sales.BlanketOrderSalesRow), [BlanketOrderSalesTypes](/modules/Sales.md#Sales.BlanketOrderSalesType), [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference), [Comments](/modules/Common.md#Common.Comment), [Currencies](/modules/Common.md#Common.Currency), [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType), [Customers](/modules/Sales.md#Sales.Customer), [Persons](/modules/Common.md#Common.Person)
-**Referenced by:** [BlanketOrderSalesRows](/modules/Sales.md#Sales.BlanketOrderSalesRow)
+**References out:** [Addresses](Common.md#Common.Address), [BlanketOrderSalesRows](Sales.md#Sales.BlanketOrderSalesRow), [BlanketOrderSalesTypes](Sales.md#Sales.BlanketOrderSalesType), [BusinessContactReferences](Common.md#Common.BusinessContactReference), [Comments](Common.md#Common.Comment), [Currencies](Common.md#Common.Currency), [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType), [Customers](Sales.md#Sales.Customer), [Persons](Common.md#Common.Person)
+**Referenced by:** [BlanketOrderSalesRows](Sales.md#Sales.BlanketOrderSalesRow)
 
 <a id="Sales.BlanketOrderSalesRow"></a>
 ### BlanketOrderSalesRows
@@ -76,37 +76,37 @@ Represents a blanket order row for sales.
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
 | `LifeCycleState` | `Int32` | no |  |
-| `ParentOrderId` | `Int64?` | yes | [BlanketOrderSales](/modules/Sales.md#Sales.BlanketOrderSales) |
-| `ParentRowId` | `Int64?` | yes | [BlanketOrderSalesRows](/modules/Sales.md#Sales.BlanketOrderSalesRow) |
+| `ParentOrderId` | `Int64?` | yes | [BlanketOrderSales](Sales.md#Sales.BlanketOrderSales) |
+| `ParentRowId` | `Int64?` | yes | [BlanketOrderSalesRows](Sales.md#Sales.BlanketOrderSalesRow) |
 | `CustomerPartNumber` | `String` | no |  |
 | `Position` | `Int64?` | yes |  |
 | `OrderRowType` | `Int32` | no |  |
-| `PartId` | `Int64?` | yes | [Parts](/modules/Inventory.md#Inventory.Part) |
-| `Part` | `Parts` | no | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `PartId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
+| `Part` | `Parts` | no | [Parts](Inventory.md#Inventory.Part) |
 | `PartRowType` | `Int32` | no |  |
 | `Quantity` | `Decimal` | no |  |
-| `UnitId` | `Int64?` | yes | [Units](/modules/Common.md#Common.Unit) |
-| `Unit` | `Units` | no | [Units](/modules/Common.md#Common.Unit) |
+| `UnitId` | `Int64?` | yes | [Units](Common.md#Common.Unit) |
+| `Unit` | `Units` | no | [Units](Common.md#Common.Unit) |
 | `Price` | `Decimal?` | yes |  |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `PriceCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
-| `PriceOriginPriceListId` | `Int64?` | yes | [PriceLists](/modules/Common.md#Common.PriceList) |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `PriceCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
+| `PriceOriginPriceListId` | `Int64?` | yes | [PriceLists](Common.md#Common.PriceList) |
 | `PriceLockedFromAutomaticChanges` | `Boolean?` | yes |  |
 | `PriceIsFuturePrice` | `Boolean?` | yes |  |
 | `PriceInCompanyCurrency` | `Decimal?` | yes |  |
-| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `PriceInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `PriceInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `Discount` | `Decimal` | no |  |
 | `SetupPrice` | `Decimal?` | yes |  |
-| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `SetupPriceCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `SetupPriceCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `SetupPriceInCompanyCurrency` | `Decimal?` | yes |  |
-| `VatRateId` | `Int64?` | yes | [VatRates](/modules/Common.md#Common.VatRate) |
-| `VatRate` | `VatRates` | no | [VatRates](/modules/Common.md#Common.VatRate) |
+| `VatRateId` | `Int64?` | yes | [VatRates](Common.md#Common.VatRate) |
+| `VatRate` | `VatRates` | no | [VatRates](Common.md#Common.VatRate) |
 | `ShowFreeTextIn` | `Int32` | no |  |
 | `ValidThrough` | `DateTimeOffset?` | yes |  |
-| `RevisionId` | `Int64?` | yes | [Revisions](/modules/Common.md#Common.Revision) |
-| `Revision` | `Revisions` | no | [Revisions](/modules/Common.md#Common.Revision) |
+| `RevisionId` | `Int64?` | yes | [Revisions](Common.md#Common.Revision) |
+| `Revision` | `Revisions` | no | [Revisions](Common.md#Common.Revision) |
 | `FreeTextHtml` | `String` | no |  |
 | `FreeText` | `String` | no |  |
 | `ConversionFactor` | `Decimal` | no |  |
@@ -120,8 +120,8 @@ Represents a blanket order row for sales.
 - `PartRowType` — NotPartRow=0, RegularRow=1, SubPartRow=2, SetupPriceRow=3, AlloyCostRow=4, PaymentPlanRow=5, PackagingRow=6
 - `ShowFreeTextIn` (bitmask) — None=0, Quote=1, Acknowledgement=2, DeliveryNote=4, Invoice=8, ProFormaInvoice=16
 
-**References out:** [BlanketOrderSales](/modules/Sales.md#Sales.BlanketOrderSales), [BlanketOrderSalesRows](/modules/Sales.md#Sales.BlanketOrderSalesRow), [Currencies](/modules/Common.md#Common.Currency), [Parts](/modules/Inventory.md#Inventory.Part), [PriceLists](/modules/Common.md#Common.PriceList), [Revisions](/modules/Common.md#Common.Revision), [Units](/modules/Common.md#Common.Unit), [VatRates](/modules/Common.md#Common.VatRate)
-**Referenced by:** [BlanketOrderSales](/modules/Sales.md#Sales.BlanketOrderSales), [BlanketOrderSalesRows](/modules/Sales.md#Sales.BlanketOrderSalesRow), [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow)
+**References out:** [BlanketOrderSales](Sales.md#Sales.BlanketOrderSales), [BlanketOrderSalesRows](Sales.md#Sales.BlanketOrderSalesRow), [Currencies](Common.md#Common.Currency), [Parts](Inventory.md#Inventory.Part), [PriceLists](Common.md#Common.PriceList), [Revisions](Common.md#Common.Revision), [Units](Common.md#Common.Unit), [VatRates](Common.md#Common.VatRate)
+**Referenced by:** [BlanketOrderSales](Sales.md#Sales.BlanketOrderSales), [BlanketOrderSalesRows](Sales.md#Sales.BlanketOrderSalesRow), [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow)
 
 <a id="Sales.BlanketOrderSalesType"></a>
 ### BlanketOrderSalesTypes
@@ -142,20 +142,20 @@ Represents a blanket order type for sales.
 | `Visible` | `Boolean` | no |  |
 | `IsPreset` | `Boolean` | no |  |
 | `BaseType` | `Int32` | no |  |
-| `WarehouseId` | `Int64` | no | [Warehouses](/modules/Common.md#Common.Warehouse) |
+| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) |
 | `PriceSetting` | `Int32` | no |  |
-| `PriceListId` | `Int64?` | yes | [PriceLists](/modules/Common.md#Common.PriceList) |
+| `PriceListId` | `Int64?` | yes | [PriceLists](Common.md#Common.PriceList) |
 | `RateTypeSetting` | `Int32` | no |  |
 | `BlanketOrderSalesActivityTemplateId` | `Int64?` | yes |  |
-| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType) |
+| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType) |
 | `DefaultValidDays` | `Int32` | no |  |
 
 - `BaseType` — BlanketOrder=0
 - `PriceSetting` — Customer=1, PriceList=2, StandardPrice=3
 - `RateTypeSetting` — Customer=1, OrderType=2
 
-**References out:** [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType), [PriceLists](/modules/Common.md#Common.PriceList), [Warehouses](/modules/Common.md#Common.Warehouse)
-**Referenced by:** [BlanketOrderSales](/modules/Sales.md#Sales.BlanketOrderSales)
+**References out:** [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType), [PriceLists](Common.md#Common.PriceList), [Warehouses](Common.md#Common.Warehouse)
+**Referenced by:** [BlanketOrderSales](Sales.md#Sales.BlanketOrderSales)
 
 <a id="Sales.BusinessOpportunity"></a>
 ### BusinessOpportunities
@@ -173,36 +173,36 @@ Represents a business opportunity.
 | `StartDate` | `DateTimeOffset` | no |  |
 | `PlannedEndDate` | `DateTimeOffset?` | yes |  |
 | `ActualEndDate` | `DateTimeOffset?` | yes |  |
-| `BusinessOpportunityGroupId` | `Int64?` | yes | [BusinessOpportunityGroups](/modules/Sales.md#Sales.BusinessOpportunityGroup) |
-| `BusinessOpportunityGroup` | `BusinessOpportunityGroups` | no | [BusinessOpportunityGroups](/modules/Sales.md#Sales.BusinessOpportunityGroup) |
+| `BusinessOpportunityGroupId` | `Int64?` | yes | [BusinessOpportunityGroups](Sales.md#Sales.BusinessOpportunityGroup) |
+| `BusinessOpportunityGroup` | `BusinessOpportunityGroups` | no | [BusinessOpportunityGroups](Sales.md#Sales.BusinessOpportunityGroup) |
 | `BusinessOpportunityCategory` | `String` | no |  |
-| `SalesProcessTemplateId` | `Int64?` | yes | [SalesProcessTemplates](/modules/Sales.md#Sales.SalesProcessTemplate) |
-| `SalesProcessTemplate` | `SalesProcessTemplates` | no | [SalesProcessTemplates](/modules/Sales.md#Sales.SalesProcessTemplate) |
-| `OurReferenceId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
-| `OurReference` | `Persons` | no | [Persons](/modules/Common.md#Common.Person) |
+| `SalesProcessTemplateId` | `Int64?` | yes | [SalesProcessTemplates](Sales.md#Sales.SalesProcessTemplate) |
+| `SalesProcessTemplate` | `SalesProcessTemplates` | no | [SalesProcessTemplates](Sales.md#Sales.SalesProcessTemplate) |
+| `OurReferenceId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
+| `OurReference` | `Persons` | no | [Persons](Common.md#Common.Person) |
 | `Description` | `String` | no |  |
 | `Status` | `Int32` | no |  |
 | `Priority` | `Int32` | no |  |
-| `BusinessOpportunityTypeId` | `Int64?` | yes | [BusinessOpportunityTypes](/modules/Sales.md#Sales.BusinessOpportunityType) |
-| `BusinessOpportunityType` | `BusinessOpportunityTypes` | no | [BusinessOpportunityTypes](/modules/Sales.md#Sales.BusinessOpportunityType) |
-| `CommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
-| `ReasonLostCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `ReasonLostComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `BusinessOpportunityTypeId` | `Int64?` | yes | [BusinessOpportunityTypes](Sales.md#Sales.BusinessOpportunityType) |
+| `BusinessOpportunityType` | `BusinessOpportunityTypes` | no | [BusinessOpportunityTypes](Sales.md#Sales.BusinessOpportunityType) |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| `ReasonLostCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `ReasonLostComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 | `TotalValue` | `Decimal?` | yes |  |
-| `SellerId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
-| `Seller` | `Persons` | no | [Persons](/modules/Common.md#Common.Person) |
+| `SellerId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
+| `Seller` | `Persons` | no | [Persons](Common.md#Common.Person) |
 | `Name` | `String` | no |  |
 | `ReferenceName` | `String` | no |  |
-| `ReasonCodeLostQuoteId` | `Int64?` | yes | [ReasonCodeLostQuotes](/modules/Sales.md#Sales.ReasonCodeLostQuote) |
-| `ReasonCodeLostQuote` | `ReasonCodeLostQuotes` | no | [ReasonCodeLostQuotes](/modules/Sales.md#Sales.ReasonCodeLostQuote) |
-| `BusinessContactNoteHistories` | `BusinessContactNoteHistories[]` | no | [BusinessContactNoteHistories](/modules/Common.md#Common.BusinessContactNoteHistory) |
-| `Customers` | `Customers[]` | no | [Customers](/modules/Sales.md#Sales.Customer) |
+| `ReasonCodeLostQuoteId` | `Int64?` | yes | [ReasonCodeLostQuotes](Sales.md#Sales.ReasonCodeLostQuote) |
+| `ReasonCodeLostQuote` | `ReasonCodeLostQuotes` | no | [ReasonCodeLostQuotes](Sales.md#Sales.ReasonCodeLostQuote) |
+| `BusinessContactNoteHistories` | `BusinessContactNoteHistories[]` | no | [BusinessContactNoteHistories](Common.md#Common.BusinessContactNoteHistory) |
+| `Customers` | `Customers[]` | no | [Customers](Sales.md#Sales.Customer) |
 
 - `Status` — Registered=1, InProgress=3, Finished=4, Cancelled=5, Pending=6, Historical=9
 
-**References out:** [BusinessContactNoteHistories](/modules/Common.md#Common.BusinessContactNoteHistory), [BusinessOpportunityGroups](/modules/Sales.md#Sales.BusinessOpportunityGroup), [BusinessOpportunityTypes](/modules/Sales.md#Sales.BusinessOpportunityType), [Comments](/modules/Common.md#Common.Comment), [Customers](/modules/Sales.md#Sales.Customer), [Persons](/modules/Common.md#Common.Person), [ReasonCodeLostQuotes](/modules/Sales.md#Sales.ReasonCodeLostQuote), [SalesProcessTemplates](/modules/Sales.md#Sales.SalesProcessTemplate)
-**Referenced by:** [BusinessOpportunityActivities](/modules/Sales.md#Sales.BusinessOpportunityActivity), [BusinessOpportunityReferences](/modules/Sales.md#Sales.BusinessOpportunityReference), [BusinessOpportunitySalesProcessSteps](/modules/Sales.md#Sales.BusinessOpportunitySalesProcessStep), [Quotes](/modules/Sales.md#Sales.Quote)
+**References out:** [BusinessContactNoteHistories](Common.md#Common.BusinessContactNoteHistory), [BusinessOpportunityGroups](Sales.md#Sales.BusinessOpportunityGroup), [BusinessOpportunityTypes](Sales.md#Sales.BusinessOpportunityType), [Comments](Common.md#Common.Comment), [Customers](Sales.md#Sales.Customer), [Persons](Common.md#Common.Person), [ReasonCodeLostQuotes](Sales.md#Sales.ReasonCodeLostQuote), [SalesProcessTemplates](Sales.md#Sales.SalesProcessTemplate)
+**Referenced by:** [BusinessOpportunityActivities](Sales.md#Sales.BusinessOpportunityActivity), [BusinessOpportunityReferences](Sales.md#Sales.BusinessOpportunityReference), [BusinessOpportunitySalesProcessSteps](Sales.md#Sales.BusinessOpportunitySalesProcessStep), [Quotes](Sales.md#Sales.Quote)
 
 <a id="Sales.BusinessOpportunityActivity"></a>
 ### BusinessOpportunityActivities
@@ -216,7 +216,7 @@ Represents a business opportunity activity.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `OrderId` | `Int64?` | yes | [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity) |
+| `OrderId` | `Int64?` | yes | [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity) |
 | `RowIndex` | `Int32?` | yes |  |
 | `ActivityTypeId` | `Int64?` | yes |  |
 | `IsMandatory` | `Boolean` | no |  |
@@ -224,25 +224,25 @@ Represents a business opportunity activity.
 | `IsAdministratorResponsibleUser` | `Boolean` | no |  |
 | `Description` | `String` | no |  |
 | `PlannedStartDate` | `DateTimeOffset?` | yes |  |
-| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
-| `CustomerId` | `Int64?` | yes | [Customers](/modules/Sales.md#Sales.Customer) |
-| `ReferenceId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
+| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](Common.md#Common.ApplicationUser) |
+| `CustomerId` | `Int64?` | yes | [Customers](Sales.md#Sales.Customer) |
+| `ReferenceId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
 | `DueDateType` | `Int32` | no |  |
-| `CommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 | `Status` | `Int32` | no |  |
 | `NumberDaysFromDueDate` | `Int32?` | yes |  |
 | `PlannedCompletionDate` | `DateTimeOffset` | no |  |
 | `ActualStartDate` | `DateTimeOffset?` | yes |  |
 | `CompletionDate` | `DateTimeOffset?` | yes |  |
-| `CompletedByUserId` | `Int64?` | yes | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
+| `CompletedByUserId` | `Int64?` | yes | [ApplicationUsers](Common.md#Common.ApplicationUser) |
 | `ReminderId` | `Int64?` | yes |  |
 | `CalendarAppointmentId` | `String` | no |  |
 
 - `DueDateType` — RegistrationDate=0, ValidThrough=1
 - `Status` — Registered=1, InProgress=2, History=9
 
-**References out:** [ApplicationUsers](/modules/Common.md#Common.ApplicationUser), [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity), [Comments](/modules/Common.md#Common.Comment), [Customers](/modules/Sales.md#Sales.Customer), [Persons](/modules/Common.md#Common.Person)
+**References out:** [ApplicationUsers](Common.md#Common.ApplicationUser), [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity), [Comments](Common.md#Common.Comment), [Customers](Sales.md#Sales.Customer), [Persons](Common.md#Common.Person)
 
 <a id="Sales.BusinessOpportunityActivityTemplateRow"></a>
 ### BusinessOpportunityActivityTemplateRows
@@ -256,13 +256,13 @@ Represents a business opportunity activity template row.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `ActivityTemplateId` | `Int64?` | yes | [BusinessOpportunityActivityTemplates](/modules/Sales.md#Sales.BusinessOpportunityActivityTemplate) |
-| `ActivityTypeId` | `Int64?` | yes | [CustomerRelationshipActivityTypes](/modules/Sales.md#Sales.CustomerRelationshipActivityType) |
-| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
+| `ActivityTemplateId` | `Int64?` | yes | [BusinessOpportunityActivityTemplates](Sales.md#Sales.BusinessOpportunityActivityTemplate) |
+| `ActivityTypeId` | `Int64?` | yes | [CustomerRelationshipActivityTypes](Sales.md#Sales.CustomerRelationshipActivityType) |
+| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](Common.md#Common.ApplicationUser) |
 | `Code` | `Int64` | no |  |
 | `IsAdministratorResponsible` | `Boolean` | no |  |
-| `CommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 | `DueDateType` | `Int32` | no |  |
 | `NumberDaysFromDueDate` | `Int32` | no |  |
 | `Status` | `Int32` | no |  |
@@ -273,8 +273,8 @@ Represents a business opportunity activity template row.
 - `DueDateType` — RegistrationDate=0, ValidThrough=1
 - `Status` — Registered=1, InProgress=2, History=9
 
-**References out:** [ApplicationUsers](/modules/Common.md#Common.ApplicationUser), [BusinessOpportunityActivityTemplates](/modules/Sales.md#Sales.BusinessOpportunityActivityTemplate), [Comments](/modules/Common.md#Common.Comment), [CustomerRelationshipActivityTypes](/modules/Sales.md#Sales.CustomerRelationshipActivityType)
-**Referenced by:** [BusinessOpportunityActivityTemplates](/modules/Sales.md#Sales.BusinessOpportunityActivityTemplate)
+**References out:** [ApplicationUsers](Common.md#Common.ApplicationUser), [BusinessOpportunityActivityTemplates](Sales.md#Sales.BusinessOpportunityActivityTemplate), [Comments](Common.md#Common.Comment), [CustomerRelationshipActivityTypes](Sales.md#Sales.CustomerRelationshipActivityType)
+**Referenced by:** [BusinessOpportunityActivityTemplates](Sales.md#Sales.BusinessOpportunityActivityTemplate)
 
 <a id="Sales.BusinessOpportunityActivityTemplate"></a>
 ### BusinessOpportunityActivityTemplates
@@ -290,10 +290,10 @@ Represents a business opportunity activity template.
 | `Id` | `Int64` | no |  |
 | `Code` | `Int64` | no |  |
 | `Description` | `String` | no |  |
-| `Rows` | `BusinessOpportunityActivityTemplateRows[]` | no | [BusinessOpportunityActivityTemplateRows](/modules/Sales.md#Sales.BusinessOpportunityActivityTemplateRow) |
+| `Rows` | `BusinessOpportunityActivityTemplateRows[]` | no | [BusinessOpportunityActivityTemplateRows](Sales.md#Sales.BusinessOpportunityActivityTemplateRow) |
 
-**References out:** [BusinessOpportunityActivityTemplateRows](/modules/Sales.md#Sales.BusinessOpportunityActivityTemplateRow)
-**Referenced by:** [BusinessOpportunityActivityTemplateRows](/modules/Sales.md#Sales.BusinessOpportunityActivityTemplateRow), [BusinessOpportunityTypes](/modules/Sales.md#Sales.BusinessOpportunityType)
+**References out:** [BusinessOpportunityActivityTemplateRows](Sales.md#Sales.BusinessOpportunityActivityTemplateRow)
+**Referenced by:** [BusinessOpportunityActivityTemplateRows](Sales.md#Sales.BusinessOpportunityActivityTemplateRow), [BusinessOpportunityTypes](Sales.md#Sales.BusinessOpportunityType)
 
 <a id="Sales.BusinessOpportunityGroup"></a>
 ### BusinessOpportunityGroups
@@ -311,7 +311,7 @@ Represents a business opportunity group.
 | `IsActive` | `Boolean` | no |  |
 | `Description` | `String` | no |  |
 
-**Referenced by:** [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity), [BusinessOpportunityTypes](/modules/Sales.md#Sales.BusinessOpportunityType)
+**Referenced by:** [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity), [BusinessOpportunityTypes](Sales.md#Sales.BusinessOpportunityType)
 
 <a id="Sales.BusinessOpportunityReference"></a>
 ### BusinessOpportunityReferences
@@ -326,18 +326,18 @@ Represents a business opportunity reference.
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
 | `Name` | `String` | no |  |
-| `ParentId` | `Int64` | no | [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity) |
+| `ParentId` | `Int64` | no | [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity) |
 | `ShouldFilterLogPosts` | `Boolean` | no |  |
 | `IsDefault` | `Boolean` | no |  |
-| `CustomerId` | `Int64?` | yes | [Customers](/modules/Sales.md#Sales.Customer) |
+| `CustomerId` | `Int64?` | yes | [Customers](Sales.md#Sales.Customer) |
 | `ReferenceCode` | `String` | no |  |
-| `CommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 | `Remark` | `String` | no |  |
 | `ReferenceCategory` | `String` | no |  |
-| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](/modules/Common.md#Common.CommunicationAddress) |
+| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](Common.md#Common.CommunicationAddress) |
 
-**References out:** [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity), [Comments](/modules/Common.md#Common.Comment), [CommunicationAddresses](/modules/Common.md#Common.CommunicationAddress), [Customers](/modules/Sales.md#Sales.Customer)
+**References out:** [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity), [Comments](Common.md#Common.Comment), [CommunicationAddresses](Common.md#Common.CommunicationAddress), [Customers](Sales.md#Sales.Customer)
 
 <a id="Sales.BusinessOpportunitySalesProcessStep"></a>
 ### BusinessOpportunitySalesProcessSteps
@@ -356,10 +356,10 @@ Represents a business opportunity sales process step.
 | `Probability` | `Int32` | no |  |
 | `LeadTime` | `Int32` | no |  |
 | `Responsibility` | `Int32` | no |  |
-| `ResponsibleSellerId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
-| `ResponsibleSellerGroupId` | `Int64?` | yes | [SellerGroups](/modules/Sales.md#Sales.SellerGroup) |
-| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
-| `ParentId` | `Int64?` | yes | [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity) |
+| `ResponsibleSellerId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
+| `ResponsibleSellerGroupId` | `Int64?` | yes | [SellerGroups](Sales.md#Sales.SellerGroup) |
+| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](Common.md#Common.ApplicationUser) |
+| `ParentId` | `Int64?` | yes | [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity) |
 | `RowIndex` | `Int32?` | yes |  |
 | `Status` | `Int32` | no |  |
 | `IsActive` | `Boolean` | no |  |
@@ -367,7 +367,7 @@ Represents a business opportunity sales process step.
 - `Responsibility` — Seller=0, Group=1
 - `Status` — NotStarted=0, Started=1, Finished=2
 
-**References out:** [ApplicationUsers](/modules/Common.md#Common.ApplicationUser), [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity), [Persons](/modules/Common.md#Common.Person), [SellerGroups](/modules/Sales.md#Sales.SellerGroup)
+**References out:** [ApplicationUsers](Common.md#Common.ApplicationUser), [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity), [Persons](Common.md#Common.Person), [SellerGroups](Sales.md#Sales.SellerGroup)
 
 <a id="Sales.BusinessOpportunityType"></a>
 ### BusinessOpportunityTypes
@@ -387,19 +387,19 @@ Represents a business opportunity type.
 | `Prefix` | `String` | no |  |
 | `IsDefault` | `Boolean` | no |  |
 | `Priority` | `Int32` | no |  |
-| `BusinessOpportunityGroupId` | `Int64?` | yes | [BusinessOpportunityGroups](/modules/Sales.md#Sales.BusinessOpportunityGroup) |
-| `BusinessOpportunityGroup` | `BusinessOpportunityGroups` | no | [BusinessOpportunityGroups](/modules/Sales.md#Sales.BusinessOpportunityGroup) |
-| `ResponsibleSellerId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
-| `ResponsibleSeller` | `Persons` | no | [Persons](/modules/Common.md#Common.Person) |
-| `SalesProcessTemplateId` | `Int64?` | yes | [SalesProcessTemplates](/modules/Sales.md#Sales.SalesProcessTemplate) |
-| `SalesProcessTemplate` | `SalesProcessTemplates` | no | [SalesProcessTemplates](/modules/Sales.md#Sales.SalesProcessTemplate) |
-| `BusinessOpportunityActivityTemplateId` | `Int64?` | yes | [BusinessOpportunityActivityTemplates](/modules/Sales.md#Sales.BusinessOpportunityActivityTemplate) |
-| `BusinessOpportunityActivityTemplate` | `BusinessOpportunityActivityTemplates` | no | [BusinessOpportunityActivityTemplates](/modules/Sales.md#Sales.BusinessOpportunityActivityTemplate) |
-| `CommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `BusinessOpportunityGroupId` | `Int64?` | yes | [BusinessOpportunityGroups](Sales.md#Sales.BusinessOpportunityGroup) |
+| `BusinessOpportunityGroup` | `BusinessOpportunityGroups` | no | [BusinessOpportunityGroups](Sales.md#Sales.BusinessOpportunityGroup) |
+| `ResponsibleSellerId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
+| `ResponsibleSeller` | `Persons` | no | [Persons](Common.md#Common.Person) |
+| `SalesProcessTemplateId` | `Int64?` | yes | [SalesProcessTemplates](Sales.md#Sales.SalesProcessTemplate) |
+| `SalesProcessTemplate` | `SalesProcessTemplates` | no | [SalesProcessTemplates](Sales.md#Sales.SalesProcessTemplate) |
+| `BusinessOpportunityActivityTemplateId` | `Int64?` | yes | [BusinessOpportunityActivityTemplates](Sales.md#Sales.BusinessOpportunityActivityTemplate) |
+| `BusinessOpportunityActivityTemplate` | `BusinessOpportunityActivityTemplates` | no | [BusinessOpportunityActivityTemplates](Sales.md#Sales.BusinessOpportunityActivityTemplate) |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 
-**References out:** [BusinessOpportunityActivityTemplates](/modules/Sales.md#Sales.BusinessOpportunityActivityTemplate), [BusinessOpportunityGroups](/modules/Sales.md#Sales.BusinessOpportunityGroup), [Comments](/modules/Common.md#Common.Comment), [Persons](/modules/Common.md#Common.Person), [SalesProcessTemplates](/modules/Sales.md#Sales.SalesProcessTemplate)
-**Referenced by:** [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity)
+**References out:** [BusinessOpportunityActivityTemplates](Sales.md#Sales.BusinessOpportunityActivityTemplate), [BusinessOpportunityGroups](Sales.md#Sales.BusinessOpportunityGroup), [Comments](Common.md#Common.Comment), [Persons](Common.md#Common.Person), [SalesProcessTemplates](Sales.md#Sales.SalesProcessTemplate)
+**Referenced by:** [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity)
 
 <a id="Sales.CountryDocumentSettings"></a>
 ### CountryDocumentSettings
@@ -414,7 +414,7 @@ Represents a country document setting.
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
 | `RowIndex` | `Int32?` | yes |  |
-| `CountryId` | `Int64` | no | [Countries](/modules/Common.md#Common.Country) |
+| `CountryId` | `Int64` | no | [Countries](Common.md#Common.Country) |
 | `ShowInSalesForm` | `Int32` | no |  |
 | `ShowCountryOfOrigin` | `Boolean` | no |  |
 | `ShowNetWeight` | `Boolean` | no |  |
@@ -432,7 +432,7 @@ Represents a country document setting.
 - `ShowInSalesForm` (bitmask) — None=0, Quote=1, Acknowledgement=2, DeliveryNote=4, Invoice=8, ProFormaInvoice=16
 - `TotalByCombCode` — CN=0, HS=1, Taric=2, HTS=3, NCM=4, ECCN=5, SITC=6
 
-**References out:** [Countries](/modules/Common.md#Common.Country)
+**References out:** [Countries](Common.md#Common.Country)
 
 <a id="Sales.CustomerAccountGroup"></a>
 ### CustomerAccountGroups
@@ -451,7 +451,7 @@ Represents a customer account group.
 | `Description` | `String` | no |  |
 | `CompanyIds` | `Int64[]` | no |  |
 
-**Referenced by:** [AccountsReceivables](/modules/Accounting.md#Accounting.AccountsReceivable), [Countries](/modules/Common.md#Common.Country), [CustomerOrderInvoices](/modules/Sales.md#Sales.CustomerOrderInvoice), [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder), [Customers](/modules/Sales.md#Sales.Customer), [DeliveryAddresses](/modules/Common.md#Common.DeliveryAddress), [Quotes](/modules/Sales.md#Sales.Quote), [SalesAgreements](/modules/Sales.md#Sales.SalesAgreement), [SalesForecasts](/modules/Inventory.md#Inventory.SalesForecast)
+**Referenced by:** [AccountsReceivables](Accounting.md#Accounting.AccountsReceivable), [Countries](Common.md#Common.Country), [CustomerOrderInvoices](Sales.md#Sales.CustomerOrderInvoice), [CustomerOrders](Sales.md#Sales.CustomerOrder), [Customers](Sales.md#Sales.Customer), [DeliveryAddresses](Common.md#Common.DeliveryAddress), [Quotes](Sales.md#Sales.Quote), [SalesAgreements](Sales.md#Sales.SalesAgreement), [SalesForecasts](Inventory.md#Inventory.SalesForecast)
 
 <a id="Sales.CustomerCountryDocumentSettings"></a>
 ### CustomerCountryDocumentSettings
@@ -466,8 +466,8 @@ Represents a customer country document setting.
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
 | `RowIndex` | `Int32?` | yes |  |
-| `CustomerId` | `Int64?` | yes | [Customers](/modules/Sales.md#Sales.Customer) |
-| `CountryId` | `Int64` | no | [Countries](/modules/Common.md#Common.Country) |
+| `CustomerId` | `Int64?` | yes | [Customers](Sales.md#Sales.Customer) |
+| `CountryId` | `Int64` | no | [Countries](Common.md#Common.Country) |
 | `ShowInSalesForm` | `Int32` | no |  |
 | `ShowCountryOfOrigin` | `Boolean?` | yes |  |
 | `ShowNetWeight` | `Boolean?` | yes |  |
@@ -485,7 +485,7 @@ Represents a customer country document setting.
 - `ShowInSalesForm` (bitmask) — None=0, Quote=1, Acknowledgement=2, DeliveryNote=4, Invoice=8, ProFormaInvoice=16
 - `TotalByCombCode` — CN=0, HS=1, Taric=2, HTS=3, NCM=4, ECCN=5, SITC=6
 
-**References out:** [Countries](/modules/Common.md#Common.Country), [Customers](/modules/Sales.md#Sales.Customer)
+**References out:** [Countries](Common.md#Common.Country), [Customers](Sales.md#Sales.Customer)
 
 <a id="Sales.CustomerDistrict"></a>
 ### CustomerDistricts
@@ -503,7 +503,7 @@ Represents a customer district.
 | `Description` | `String` | no |  |
 | `CompanyIds` | `Int64[]` | no |  |
 
-**Referenced by:** [Customers](/modules/Sales.md#Sales.Customer), [Persons](/modules/Common.md#Common.Person), [SalesForecasts](/modules/Inventory.md#Inventory.SalesForecast)
+**Referenced by:** [Customers](Sales.md#Sales.Customer), [Persons](Common.md#Common.Person), [SalesForecasts](Inventory.md#Inventory.SalesForecast)
 
 <a id="Sales.CustomerEmployeeSpan"></a>
 ### CustomerEmployeeSpans
@@ -520,7 +520,7 @@ Represents a customer employee span.
 | `Code` | `Int64` | no |  |
 | `Description` | `String` | no |  |
 
-**Referenced by:** [Customers](/modules/Sales.md#Sales.Customer)
+**Referenced by:** [Customers](Sales.md#Sales.Customer)
 
 <a id="Sales.CustomerOrderActivity"></a>
 ### CustomerOrderActivities
@@ -534,14 +534,14 @@ Represents a customer order activity.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `OrderId` | `Int64` | no | [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder) |
-| `ActivityTypeId` | `Int64` | no | [CustomerRelationshipActivityTypes](/modules/Sales.md#Sales.CustomerRelationshipActivityType) |
+| `OrderId` | `Int64` | no | [CustomerOrders](Sales.md#Sales.CustomerOrder) |
+| `ActivityTypeId` | `Int64` | no | [CustomerRelationshipActivityTypes](Sales.md#Sales.CustomerRelationshipActivityType) |
 | `Description` | `String` | no |  |
-| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
+| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](Common.md#Common.ApplicationUser) |
 | `PlannedCompletionDate` | `DateTimeOffset` | no |  |
 | `Reminder` | `Boolean?` | yes |  |
 
-**References out:** [ApplicationUsers](/modules/Common.md#Common.ApplicationUser), [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder), [CustomerRelationshipActivityTypes](/modules/Sales.md#Sales.CustomerRelationshipActivityType)
+**References out:** [ApplicationUsers](Common.md#Common.ApplicationUser), [CustomerOrders](Sales.md#Sales.CustomerOrder), [CustomerRelationshipActivityTypes](Sales.md#Sales.CustomerRelationshipActivityType)
 
 <a id="Sales.CustomerOrderDeliveryRow"></a>
 ### CustomerOrderDeliveryRows
@@ -557,23 +557,23 @@ Represents a customer delivery order row.
 | `Id` | `Int64` | no |  |
 | `AffectStockBalance` | `Boolean` | no |  |
 | `BusinessTransactionContextType` | `Int32` | no |  |
-| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder) |
-| `CustomerOrderRowId` | `Int64?` | yes | [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow) |
+| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](Sales.md#Sales.CustomerOrder) |
+| `CustomerOrderRowId` | `Int64?` | yes | [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow) |
 | `DeliveryDate` | `DateTimeOffset` | no |  |
 | `FreeTextHtml` | `String` | no |  |
 | `FreeText` | `String` | no |  |
-| `InvoiceId` | `Int64?` | yes | [CustomerOrderInvoices](/modules/Sales.md#Sales.CustomerOrderInvoice) |
+| `InvoiceId` | `Int64?` | yes | [CustomerOrderInvoices](Sales.md#Sales.CustomerOrderInvoice) |
 | `ParentId` | `Int64?` | yes |  |
 | `ParentInvoiceId` | `Int64?` | yes |  |
 | `PickListDeliveryDate` | `DateTimeOffset?` | yes |  |
 | `QuantityChangeId` | `Int64?` | yes |  |
-| `InvoiceRowId` | `Int64?` | yes | [CustomerOrderInvoiceRows](/modules/Sales.md#Sales.CustomerOrderInvoiceRow) |
-| `InvoiceRow` | `CustomerOrderInvoiceRows` | no | [CustomerOrderInvoiceRows](/modules/Sales.md#Sales.CustomerOrderInvoiceRow) |
+| `InvoiceRowId` | `Int64?` | yes | [CustomerOrderInvoiceRows](Sales.md#Sales.CustomerOrderInvoiceRow) |
+| `InvoiceRow` | `CustomerOrderInvoiceRows` | no | [CustomerOrderInvoiceRows](Sales.md#Sales.CustomerOrderInvoiceRow) |
 
 - `BusinessTransactionContextType` — NotInitialized=0, ArrivalReporting=1, ManufacturingOrderReporting=2, DeliveryReporting=3, PhysicalInventory=4, UnplannedStockWithdrawal=5, MoveBetweenWarehouse=6, MoveStockBalance=7, NonconformityPosteriorRejection=8, DirectlyRegisteredInvoice=9, RemovalOfPartLocation=10, ManufacturingOrderMaterialReporting=11, UnplannedStockArrivalReporting=12, StockImport=13, DeliveryReportingStockOrder=14, ArrivalReportingStockOrder=15, UndoManufacturingOrderMaterialReporting=16, UndoManufacturingOrderReporting=17, UndoArrivalReporting=18, UndoDeliveryReporting=19, UndoArrivalReportingStockOrder=20, UndoDeliveryReportingStockOrder=21, OutgoingReusable=22, ArrivalReusable=23, UndoOutgoingReusable=24, UndoArrivalReusable=25, ToolWithdrawal=26, ToolReturn=27, CreditSupplierInvoice=28, CreditCustomerInvoice=29, ReturnPurchaseOrder=30, SplitInvoiceBasis=31, CreationOfPartLocation=32, ArrivalsCorrection=33, ArrivalRejection=34, UndoReturnPurchaseOrder=35
 
-**References out:** [CustomerOrderInvoiceRows](/modules/Sales.md#Sales.CustomerOrderInvoiceRow), [CustomerOrderInvoices](/modules/Sales.md#Sales.CustomerOrderInvoice), [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow), [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder)
-**Referenced by:** [CustomerOrderInvoices](/modules/Sales.md#Sales.CustomerOrderInvoice), [InvoiceLogs](/modules/Sales.md#Sales.InvoiceLog), [PackageRows](/modules/Sales.md#Sales.PackageRow), [ProductRecords](/modules/Inventory.md#Inventory.ProductRecord), [SalesPickingListRowQuantities](/modules/Sales.md#Sales.SalesPickingListRowQuantity)
+**References out:** [CustomerOrderInvoiceRows](Sales.md#Sales.CustomerOrderInvoiceRow), [CustomerOrderInvoices](Sales.md#Sales.CustomerOrderInvoice), [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow), [CustomerOrders](Sales.md#Sales.CustomerOrder)
+**Referenced by:** [CustomerOrderInvoices](Sales.md#Sales.CustomerOrderInvoice), [InvoiceLogs](Sales.md#Sales.InvoiceLog), [PackageRows](Sales.md#Sales.PackageRow), [ProductRecords](Inventory.md#Inventory.ProductRecord), [SalesPickingListRowQuantities](Sales.md#Sales.SalesPickingListRowQuantity)
 
 <a id="Sales.CustomerOrderInvoiceOrderRowDiscount"></a>
 ### CustomerOrderInvoiceOrderRowDiscounts
@@ -587,17 +587,17 @@ Represents a discount row for a customer order invoice row.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `OrderRowId` | `Int64` | no | [CustomerOrderInvoiceRows](/modules/Sales.md#Sales.CustomerOrderInvoiceRow) |
-| `DiscountId` | `Int64?` | yes | [Discounts](/modules/Common.md#Common.Discount) |
+| `OrderRowId` | `Int64` | no | [CustomerOrderInvoiceRows](Sales.md#Sales.CustomerOrderInvoiceRow) |
+| `DiscountId` | `Int64?` | yes | [Discounts](Common.md#Common.Discount) |
 | `AsPercent` | `Decimal?` | yes |  |
 | `DiscountLockedFromAutomaticChanges` | `Boolean` | no |  |
 | `AsAmount` | `Decimal?` | yes |  |
-| `AsAmountCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `AsAmountCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `DiscountType` | `Int32` | no |  |
 | `GrossPrice` | `Decimal?` | yes |  |
-| `GrossPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `GrossPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `NetPrice` | `Decimal?` | yes |  |
-| `NetPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `NetPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `DiscountCalculationType` | `Int32` | no |  |
 | `Priority` | `Int32` | no |  |
 | `ReplacesDiscountFieldOnOrderRow` | `Boolean` | no |  |
@@ -605,8 +605,8 @@ Represents a discount row for a customer order invoice row.
 - `DiscountType` — Discount=0, OrderDiscount=1, TotalRowDiscount=2, ProjectDiscount=3, CustomerDiscountOnDiscount=4, OrderTypeDiscount=5, ManualDiscount=99
 - `DiscountCalculationType` — Percent=1, Amount=2
 
-**References out:** [Currencies](/modules/Common.md#Common.Currency), [CustomerOrderInvoiceRows](/modules/Sales.md#Sales.CustomerOrderInvoiceRow), [Discounts](/modules/Common.md#Common.Discount)
-**Referenced by:** [CustomerOrderInvoiceRows](/modules/Sales.md#Sales.CustomerOrderInvoiceRow)
+**References out:** [Currencies](Common.md#Common.Currency), [CustomerOrderInvoiceRows](Sales.md#Sales.CustomerOrderInvoiceRow), [Discounts](Common.md#Common.Discount)
+**Referenced by:** [CustomerOrderInvoiceRows](Sales.md#Sales.CustomerOrderInvoiceRow)
 
 <a id="Sales.CustomerOrderInvoiceRow"></a>
 ### CustomerOrderInvoiceRows
@@ -627,9 +627,9 @@ Represents a customer order invoice row.
 | `OverrideStandardPrice` | `Decimal?` | yes |  |
 | `OverrideStandardPriceCurrencyId` | `Int64?` | yes |  |
 | `Price` | `Decimal?` | yes |  |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `PriceInCompanyCurrency` | `Decimal?` | yes |  |
-| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `PriceIsFuturePrice` | `Boolean?` | yes |  |
 | `PriceLockedFromAutomaticChanges` | `Boolean?` | yes |  |
 | `PriceOrigin` | `Int32?` | yes |  |
@@ -637,16 +637,16 @@ Represents a customer order invoice row.
 | `SetupPrice` | `Decimal?` | yes |  |
 | `SetupPriceCurrencyId` | `Int64?` | yes |  |
 | `SetupPriceInCompanyCurrency` | `Decimal?` | yes |  |
-| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `StandardPrice` | `Decimal?` | yes |  |
-| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `VatRateId` | `Int64?` | yes | [VatRates](/modules/Common.md#Common.VatRate) |
-| `DiscountRows` | `CustomerOrderInvoiceOrderRowDiscounts[]` | no | [CustomerOrderInvoiceOrderRowDiscounts](/modules/Sales.md#Sales.CustomerOrderInvoiceOrderRowDiscount) |
+| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `VatRateId` | `Int64?` | yes | [VatRates](Common.md#Common.VatRate) |
+| `DiscountRows` | `CustomerOrderInvoiceOrderRowDiscounts[]` | no | [CustomerOrderInvoiceOrderRowDiscounts](Sales.md#Sales.CustomerOrderInvoiceOrderRowDiscount) |
 
 - `PriceOrigin` — Undefined=0, UserDefined=1, PriceList=2, PriceListStaggered=3, BusinessPartLink=4, BusinessPartLinkStaggered=5, StandardPrice=6, PartConfiguration=7, PostCalculatedAverage=8, BusinessPartLinkFuturePrice=9
 
-**References out:** [Currencies](/modules/Common.md#Common.Currency), [CustomerOrderInvoiceOrderRowDiscounts](/modules/Sales.md#Sales.CustomerOrderInvoiceOrderRowDiscount), [VatRates](/modules/Common.md#Common.VatRate)
-**Referenced by:** [CustomerOrderDeliveryRows](/modules/Sales.md#Sales.CustomerOrderDeliveryRow), [CustomerOrderInvoiceOrderRowDiscounts](/modules/Sales.md#Sales.CustomerOrderInvoiceOrderRowDiscount)
+**References out:** [Currencies](Common.md#Common.Currency), [CustomerOrderInvoiceOrderRowDiscounts](Sales.md#Sales.CustomerOrderInvoiceOrderRowDiscount), [VatRates](Common.md#Common.VatRate)
+**Referenced by:** [CustomerOrderDeliveryRows](Sales.md#Sales.CustomerOrderDeliveryRow), [CustomerOrderInvoiceOrderRowDiscounts](Sales.md#Sales.CustomerOrderInvoiceOrderRowDiscount)
 
 <a id="Sales.CustomerOrderInvoice"></a>
 ### CustomerOrderInvoices
@@ -665,23 +665,23 @@ Represents a customer order invoice.
 | `DeliveryIndex` | `Int32` | no |  |
 | `OrderDeliveryNumber` | `String` | no |  |
 | `PickingListId` | `Int64?` | yes |  |
-| `WarehouseId` | `Int64` | no | [Warehouses](/modules/Common.md#Common.Warehouse) |
+| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) |
 | `Version` | `Int32` | no |  |
-| `ActiveDeliveryAddressCustomerId` | `Int64?` | yes | [Customers](/modules/Sales.md#Sales.Customer) |
-| `ActiveDeliveryAddressSupplierId` | `Int64?` | yes | [Suppliers](/modules/Purchase.md#Purchase.Supplier) |
+| `ActiveDeliveryAddressCustomerId` | `Int64?` | yes | [Customers](Sales.md#Sales.Customer) |
+| `ActiveDeliveryAddressSupplierId` | `Int64?` | yes | [Suppliers](Purchase.md#Purchase.Supplier) |
 | `ActiveDeliveryAddressCompanyId` | `Int64?` | yes |  |
 | `SourceOfAlternativeDeliveryAddresses` | `Int32` | no |  |
-| `ConsigneeReferenceId` | `Int64?` | yes | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
-| `ConsigneeReference` | `BusinessContactReferences` | no | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
+| `ConsigneeReferenceId` | `Int64?` | yes | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
+| `ConsigneeReference` | `BusinessContactReferences` | no | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
 | `ProformaStatus` | `Int32` | no |  |
-| `ProjectId` | `Int64?` | yes | [Projects](/modules/Common.md#Common.Project) |
-| `DeliveryAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `DeliveryAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
-| `InvoiceAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `InvoiceAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
-| `OurReferenceId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
+| `ProjectId` | `Int64?` | yes | [Projects](Common.md#Common.Project) |
+| `DeliveryAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `DeliveryAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
+| `InvoiceAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `InvoiceAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
+| `OurReferenceId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
 | `OurReferenceName` | `String` | no |  |
-| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
+| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
 | `BusinessContactReferenceName` | `String` | no |  |
 | `GoodsLabel` | `String` | no |  |
 | `InvoiceStatusPending` | `Boolean` | no |  |
@@ -699,10 +699,10 @@ Represents a customer order invoice.
 | `Priority` | `Int32` | no |  |
 | `DirectlyRegistered` | `Boolean` | no |  |
 | `PartialInvoiceType` | `Int32?` | yes |  |
-| `FormReportConfigurationId` | `Int64?` | yes | [FormReportConfigurations](/modules/Common.md#Common.FormReportConfiguration) |
+| `FormReportConfigurationId` | `Int64?` | yes | [FormReportConfigurations](Common.md#Common.FormReportConfiguration) |
 | `DeliveryNoteCreationDate` | `DateTimeOffset?` | yes |  |
 | `ExcludeFromEdi` | `Boolean` | no |  |
-| `SellerId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
+| `SellerId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
 | `ShippingInformationId` | `Int64?` | yes |  |
 | `ProformaNumber` | `Int64?` | yes |  |
 | `ProformaDate` | `DateTimeOffset?` | yes |  |
@@ -710,24 +710,24 @@ Represents a customer order invoice.
 | `CandidateDebitInvoiceId` | `Int64?` | yes |  |
 | `ConsigneeReferenceName` | `String` | no |  |
 | `LedgerId` | `Int64?` | yes |  |
-| `BusinessContactOrderId` | `Int64` | no | [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder) |
-| `InvoiceBusinessContactId` | `Int64` | no | [Customers](/modules/Sales.md#Sales.Customer) |
-| `AccountGroupId` | `Int64` | no | [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup) |
-| `AccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup) |
-| `VatGroupId` | `Int64` | no | [VatGroups](/modules/Common.md#Common.VatGroup) |
-| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](/modules/Common.md#Common.PaymentTerm) |
-| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](/modules/Common.md#Common.PaymentTerm) |
+| `BusinessContactOrderId` | `Int64` | no | [CustomerOrders](Sales.md#Sales.CustomerOrder) |
+| `InvoiceBusinessContactId` | `Int64` | no | [Customers](Sales.md#Sales.Customer) |
+| `AccountGroupId` | `Int64` | no | [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup) |
+| `AccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup) |
+| `VatGroupId` | `Int64` | no | [VatGroups](Common.md#Common.VatGroup) |
+| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](Common.md#Common.PaymentTerm) |
+| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](Common.md#Common.PaymentTerm) |
 | `PaymentTermDescription` | `String` | no |  |
 | `GracePeriodInDays` | `Int32?` | yes |  |
-| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod) |
-| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](/modules/Common.md#Common.DeliveryTerm) |
+| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](Common.md#Common.DeliveryMethod) |
+| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](Common.md#Common.DeliveryTerm) |
 | `DeliveryTermDescription` | `String` | no |  |
 | `DeliveryMethodDescription` | `String` | no |  |
 | `ShipmentPayer` | `Int32` | no |  |
-| `DeliveryRows` | `CustomerOrderDeliveryRows[]` | no | [CustomerOrderDeliveryRows](/modules/Sales.md#Sales.CustomerOrderDeliveryRow) |
+| `DeliveryRows` | `CustomerOrderDeliveryRows[]` | no | [CustomerOrderDeliveryRows](Sales.md#Sales.CustomerOrderDeliveryRow) |
 | `InvoiceType` | `Int32` | no |  |
 | `EditedOrderAmountExcludingVat` | `Decimal?` | yes |  |
-| `EditedOrderAmountExcludingVatCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `EditedOrderAmountExcludingVatCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `EditedOrderAmountDiscount` | `Decimal?` | yes |  |
 | `TypeOfOrderAmountEntered` | `Int32?` | yes |  |
 | `Factoring` | `Boolean` | no |  |
@@ -744,8 +744,8 @@ Represents a customer order invoice.
 - `InvoiceType` — Standard=1, Internal=2, CashReceipt=3, Interest=4, OnAccount=5, DebitNote=6, ServiceTax=7, CorrectionInvoice=8, CollectiveCorrectionInvoice=9
 - `TypeOfOrderAmountEntered` — Percent=1, Amount=2
 
-**References out:** [Addresses](/modules/Common.md#Common.Address), [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference), [Currencies](/modules/Common.md#Common.Currency), [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup), [CustomerOrderDeliveryRows](/modules/Sales.md#Sales.CustomerOrderDeliveryRow), [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder), [Customers](/modules/Sales.md#Sales.Customer), [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod), [DeliveryTerms](/modules/Common.md#Common.DeliveryTerm), [FormReportConfigurations](/modules/Common.md#Common.FormReportConfiguration), [PaymentTerms](/modules/Common.md#Common.PaymentTerm), [Persons](/modules/Common.md#Common.Person), [Projects](/modules/Common.md#Common.Project), [Suppliers](/modules/Purchase.md#Purchase.Supplier), [VatGroups](/modules/Common.md#Common.VatGroup), [Warehouses](/modules/Common.md#Common.Warehouse)
-**Referenced by:** [CustomerOrderDeliveryRows](/modules/Sales.md#Sales.CustomerOrderDeliveryRow), [SalesAgreementBases](/modules/Sales.md#Sales.SalesAgreementBasis), [SalesPickingLists](/modules/Sales.md#Sales.SalesPickingList), [ShipmentInformationSources](/modules/Sales.md#Sales.ShipmentInformationSource)
+**References out:** [Addresses](Common.md#Common.Address), [BusinessContactReferences](Common.md#Common.BusinessContactReference), [Currencies](Common.md#Common.Currency), [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup), [CustomerOrderDeliveryRows](Sales.md#Sales.CustomerOrderDeliveryRow), [CustomerOrders](Sales.md#Sales.CustomerOrder), [Customers](Sales.md#Sales.Customer), [DeliveryMethods](Common.md#Common.DeliveryMethod), [DeliveryTerms](Common.md#Common.DeliveryTerm), [FormReportConfigurations](Common.md#Common.FormReportConfiguration), [PaymentTerms](Common.md#Common.PaymentTerm), [Persons](Common.md#Common.Person), [Projects](Common.md#Common.Project), [Suppliers](Purchase.md#Purchase.Supplier), [VatGroups](Common.md#Common.VatGroup), [Warehouses](Common.md#Common.Warehouse)
+**Referenced by:** [CustomerOrderDeliveryRows](Sales.md#Sales.CustomerOrderDeliveryRow), [SalesAgreementBases](Sales.md#Sales.SalesAgreementBasis), [SalesPickingLists](Sales.md#Sales.SalesPickingList), [ShipmentInformationSources](Sales.md#Sales.ShipmentInformationSource)
 
 <a id="Sales.CustomerOrderOrderRowDiscount"></a>
 ### CustomerOrderOrderRowDiscounts
@@ -759,17 +759,17 @@ Represents a discount row for a customer order row.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `OrderRowId` | `Int64` | no | [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow) |
-| `DiscountId` | `Int64?` | yes | [Discounts](/modules/Common.md#Common.Discount) |
+| `OrderRowId` | `Int64` | no | [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow) |
+| `DiscountId` | `Int64?` | yes | [Discounts](Common.md#Common.Discount) |
 | `AsPercent` | `Decimal?` | yes |  |
 | `DiscountLockedFromAutomaticChanges` | `Boolean` | no |  |
 | `AsAmount` | `Decimal?` | yes |  |
-| `AsAmountCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `AsAmountCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `DiscountType` | `Int32` | no |  |
 | `GrossPrice` | `Decimal?` | yes |  |
-| `GrossPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `GrossPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `NetPrice` | `Decimal?` | yes |  |
-| `NetPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `NetPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `DiscountCalculationType` | `Int32` | no |  |
 | `Priority` | `Int32` | no |  |
 | `ReplacesDiscountFieldOnOrderRow` | `Boolean` | no |  |
@@ -777,8 +777,8 @@ Represents a discount row for a customer order row.
 - `DiscountType` — Discount=0, OrderDiscount=1, TotalRowDiscount=2, ProjectDiscount=3, CustomerDiscountOnDiscount=4, OrderTypeDiscount=5, ManualDiscount=99
 - `DiscountCalculationType` — Percent=1, Amount=2
 
-**References out:** [Currencies](/modules/Common.md#Common.Currency), [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow), [Discounts](/modules/Common.md#Common.Discount)
-**Referenced by:** [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow)
+**References out:** [Currencies](Common.md#Common.Currency), [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow), [Discounts](Common.md#Common.Discount)
+**Referenced by:** [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow)
 
 <a id="Sales.CustomerOrderPaymentPlanRow"></a>
 ### CustomerOrderPaymentPlanRows
@@ -792,27 +792,27 @@ Represents a customer order payment plan row.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `CustomerOrderId` | `Int64` | no | [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder) |
+| `CustomerOrderId` | `Int64` | no | [CustomerOrders](Sales.md#Sales.CustomerOrder) |
 | `InvoicingPeriod` | `DateTimeOffset?` | yes |  |
-| `VatRateId` | `Int64?` | yes | [VatRates](/modules/Common.md#Common.VatRate) |
+| `VatRateId` | `Int64?` | yes | [VatRates](Common.md#Common.VatRate) |
 | `Amount` | `Decimal` | no |  |
-| `AmountCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `AmountCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `AmountInCompanyCurrency` | `Decimal` | no |  |
-| `AmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `AmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `ReducedAmountInCompanyCurrency` | `Decimal?` | yes |  |
-| `ReducedAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `ReducedAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `IsReset` | `Boolean` | no |  |
-| `CodingEntryId` | `Int64?` | yes | [CodingEntries](/modules/Accounting.md#Accounting.CodingEntry) |
+| `CodingEntryId` | `Int64?` | yes | [CodingEntries](Accounting.md#Accounting.CodingEntry) |
 | `PartialInvoiceType` | `Int32` | no |  |
-| `PartId` | `Int64?` | yes | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `PartId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
 | `OverrideDescription` | `String` | no |  |
 | `FractionOfTotal` | `Decimal` | no |  |
-| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](/modules/Common.md#Common.PaymentTerm) |
+| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](Common.md#Common.PaymentTerm) |
 | `RowIndex` | `Int32?` | yes |  |
 
 - `PartialInvoiceType` — NotInitialized=0, InAdvance=1, Delivery=2, InArrears=3, Text=4
 
-**References out:** [CodingEntries](/modules/Accounting.md#Accounting.CodingEntry), [Currencies](/modules/Common.md#Common.Currency), [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder), [Parts](/modules/Inventory.md#Inventory.Part), [PaymentTerms](/modules/Common.md#Common.PaymentTerm), [VatRates](/modules/Common.md#Common.VatRate)
+**References out:** [CodingEntries](Accounting.md#Accounting.CodingEntry), [Currencies](Common.md#Common.Currency), [CustomerOrders](Sales.md#Sales.CustomerOrder), [Parts](Inventory.md#Inventory.Part), [PaymentTerms](Common.md#Common.PaymentTerm), [VatRates](Common.md#Common.VatRate)
 
 <a id="Sales.CustomerOrderRowInflow"></a>
 ### CustomerOrderRowInflows
@@ -826,34 +826,34 @@ Represents a customer order inflow row.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `OrderRowId` | `Int64?` | yes | [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow) |
-| `OrderRow` | `CustomerOrderRows` | no | [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow) |
+| `OrderRowId` | `Int64?` | yes | [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow) |
+| `OrderRow` | `CustomerOrderRows` | no | [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow) |
 | `BlanketOrderSalesRowId` | `Int64?` | yes |  |
-| `PartId` | `Int64?` | yes | [Parts](/modules/Inventory.md#Inventory.Part) |
-| `Part` | `Parts` | no | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `PartId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
+| `Part` | `Parts` | no | [Parts](Inventory.md#Inventory.Part) |
 | `EntityIdentityString` | `String` | no |  |
 | `AdditionalRowDescription` | `String` | no |  |
 | `Status` | `Int32` | no |  |
 | `LoggingTimeStamp` | `DateTimeOffset` | no |  |
 | `OrderedQuantityChange` | `Decimal?` | yes |  |
 | `UnitId` | `Int64?` | yes |  |
-| `Unit` | `Units` | no | [Units](/modules/Common.md#Common.Unit) |
+| `Unit` | `Units` | no | [Units](Common.md#Common.Unit) |
 | `PriceChange` | `Decimal?` | yes |  |
-| `PriceChangeCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `PriceChangeCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceChangeCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `PriceChangeCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `SetupPriceChange` | `Decimal?` | yes |  |
-| `SetupPriceChangeCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `SetupPriceChangeCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `SetupPriceChangeCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `SetupPriceChangeCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `DiscountChange` | `Decimal?` | yes |  |
 | `TotalValueChange` | `Decimal` | no |  |
-| `TotalValueChangeCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `TotalValueChangeCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `TotalValueChangeCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `TotalValueChangeCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `OrderRowType` | `Int32` | no |  |
 
 - `Status` — New=0, Changed=1, Removed=2
 - `OrderRowType` — Part=1, Additional=2, Sum=3, FreeText=4
 
-**References out:** [Currencies](/modules/Common.md#Common.Currency), [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow), [Parts](/modules/Inventory.md#Inventory.Part), [Units](/modules/Common.md#Common.Unit)
+**References out:** [Currencies](Common.md#Common.Currency), [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow), [Parts](Inventory.md#Inventory.Part), [Units](Common.md#Common.Unit)
 
 <a id="Sales.CustomerOrderRow"></a>
 ### CustomerOrderRows
@@ -869,36 +869,36 @@ Represents a customer order row.
 | `Id` | `Int64` | no |  |
 | `Position` | `Int64?` | yes |  |
 | `OrderRowType` | `Int32` | no |  |
-| `PartId` | `Int64?` | yes | [Parts](/modules/Inventory.md#Inventory.Part) |
-| `Part` | `Parts` | no | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `PartId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
+| `Part` | `Parts` | no | [Parts](Inventory.md#Inventory.Part) |
 | `EntityIdentityString` | `String` | no |  |
 | `AdditionalRowDescription` | `String` | no |  |
 | `FreeTextHtml` | `String` | no |  |
 | `FreeText` | `String` | no |  |
-| `ParentRowId` | `Int64?` | yes | [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow) |
+| `ParentRowId` | `Int64?` | yes | [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow) |
 | `DeliveryDate` | `DateTimeOffset?` | yes |  |
-| `RevisionId` | `Int64?` | yes | [Revisions](/modules/Common.md#Common.Revision) |
-| `Revision` | `Revisions` | no | [Revisions](/modules/Common.md#Common.Revision) |
+| `RevisionId` | `Int64?` | yes | [Revisions](Common.md#Common.Revision) |
+| `Revision` | `Revisions` | no | [Revisions](Common.md#Common.Revision) |
 | `OrderedQuantity` | `Decimal` | no |  |
 | `Price` | `Decimal?` | yes |  |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `Discount` | `Decimal` | no |  |
 | `ToolId` | `Int64?` | yes |  |
-| `UnitId` | `Int64?` | yes | [Units](/modules/Common.md#Common.Unit) |
-| `Unit` | `Units` | no | [Units](/modules/Common.md#Common.Unit) |
-| `VatRateId` | `Int64` | no | [VatRates](/modules/Common.md#Common.VatRate) |
-| `WarehouseId` | `Int64` | no | [Warehouses](/modules/Common.md#Common.Warehouse) |
+| `UnitId` | `Int64?` | yes | [Units](Common.md#Common.Unit) |
+| `Unit` | `Units` | no | [Units](Common.md#Common.Unit) |
+| `VatRateId` | `Int64` | no | [VatRates](Common.md#Common.VatRate) |
+| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) |
 | `WeightPerUnit` | `Decimal?` | yes |  |
 | `OrderDate` | `DateTimeOffset` | no |  |
 | `ConversionFactor` | `Decimal` | no |  |
 | `PriceInCompanyCurrency` | `Decimal?` | yes |  |
-| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `SetupPriceInCompanyCurrency` | `Decimal?` | yes |  |
 | `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes |  |
 | `StandardPrice` | `Decimal?` | yes |  |
-| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `SetupPrice` | `Decimal?` | yes |  |
-| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `ShowPrice` | `Boolean` | no |  |
 | `PartRowType` | `Int32` | no |  |
 | `LifeCycleState` | `Int32` | no |  |
@@ -918,14 +918,14 @@ Represents a customer order row.
 | `ShowFreeTextIn` | `Int32` | no |  |
 | `CreateManufacturingOrder` | `Boolean` | no |  |
 | `CreatePurchaseOrder` | `Boolean` | no |  |
-| `LinkedPurchaseOrderRowId` | `Int64?` | yes | [PurchaseOrderRows](/modules/Purchase.md#Purchase.PurchaseOrderRow) |
-| `LinkedManufacturingOrderId` | `Int64?` | yes | [ManufacturingOrders](/modules/Manufacturing.md#Manufacturing.ManufacturingOrder) |
+| `LinkedPurchaseOrderRowId` | `Int64?` | yes | [PurchaseOrderRows](Purchase.md#Purchase.PurchaseOrderRow) |
+| `LinkedManufacturingOrderId` | `Int64?` | yes | [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder) |
 | `LinkedWithdrawalReservationId` | `Int64?` | yes |  |
 | `PlannedDateOfArrival` | `DateTimeOffset?` | yes |  |
 | `BacklogAmount` | `Decimal` | no |  |
-| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](/modules/Common.md#Common.StatisticalGoodsCode) |
+| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](Common.md#Common.StatisticalGoodsCode) |
 | `RowStatus` | `Int32` | no |  |
-| `ParentOrderId` | `Int64` | no | [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder) |
+| `ParentOrderId` | `Int64` | no | [CustomerOrders](Sales.md#Sales.CustomerOrder) |
 | `Dock` | `String` | no |  |
 | `DockName` | `String` | no |  |
 | `KanbanNumber` | `String` | no |  |
@@ -934,45 +934,45 @@ Represents a customer order row.
 | `ReferenceNumberDelivery` | `String` | no |  |
 | `ShowDeliveryDate` | `Boolean` | no |  |
 | `CreatedFrom` | `Int32` | no |  |
-| `FixedAssetId` | `Int64?` | yes | [FixedAssets](/modules/Accounting.md#Accounting.FixedAsset) |
-| `LinkedStockOrderRowId` | `Int64?` | yes | [PurchaseOrderRows](/modules/Purchase.md#Purchase.PurchaseOrderRow) |
-| `LinkedStockOrderRow` | `PurchaseOrderRows` | no | [PurchaseOrderRows](/modules/Purchase.md#Purchase.PurchaseOrderRow) |
+| `FixedAssetId` | `Int64?` | yes | [FixedAssets](Accounting.md#Accounting.FixedAsset) |
+| `LinkedStockOrderRowId` | `Int64?` | yes | [PurchaseOrderRows](Purchase.md#Purchase.PurchaseOrderRow) |
+| `LinkedStockOrderRow` | `PurchaseOrderRows` | no | [PurchaseOrderRows](Purchase.md#Purchase.PurchaseOrderRow) |
 | `NewFinishDate` | `DateTimeOffset?` | yes |  |
 | `TransferStatus` | `Int32` | no |  |
-| `TransferProfileId` | `Int64?` | yes | [TransferProfiles](/modules/Common.md#Common.TransferProfile) |
+| `TransferProfileId` | `Int64?` | yes | [TransferProfiles](Common.md#Common.TransferProfile) |
 | `OrderNumberInRemoteCompany` | `String` | no |  |
 | `PositionInRemoteCompany` | `Int64?` | yes |  |
 | `CodingId` | `Int64?` | yes |  |
-| `Coding` | `Codings` | no | [Codings](/modules/Accounting.md#Accounting.Coding) |
+| `Coding` | `Codings` | no | [Codings](Accounting.md#Accounting.Coding) |
 | `PaymentPlanRowId` | `Int64?` | yes |  |
 | `IsCreditedPaymentPlanRow` | `Boolean` | no |  |
 | `IsIncludedInPaymentPlan` | `Boolean` | no |  |
 | `Status` | `Int32` | no |  |
 | `ProformaStatus` | `Int32` | no |  |
 | `ProformaNumber` | `Int64?` | yes |  |
-| `SubPartParentRowId` | `Int64?` | yes | [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow) |
+| `SubPartParentRowId` | `Int64?` | yes | [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow) |
 | `QuantityRatio` | `Decimal?` | yes |  |
 | `RowIndex` | `Int32?` | yes |  |
-| `SumRowId` | `Int64?` | yes | [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow) |
+| `SumRowId` | `Int64?` | yes | [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow) |
 | `PriceOrigin` | `Int32?` | yes |  |
 | `PriceOriginPriceListId` | `Int64?` | yes |  |
 | `DiscountIsLockedFromAutomaticChanges` | `Boolean` | no |  |
-| `IntrastatTransactionTypeId` | `Int64?` | yes | [TransactionTypeIntrastats](/modules/Common.md#Common.TransactionTypeIntrastat) |
-| `IntrastatTransactionType` | `TransactionTypeIntrastats` | no | [TransactionTypeIntrastats](/modules/Common.md#Common.TransactionTypeIntrastat) |
-| `TariffAndServiceCodeId` | `Int64?` | yes | [TariffAndServiceCodes](/modules/Common.md#Common.TariffAndServiceCode) |
-| `TariffAndServiceCode` | `TariffAndServiceCodes` | no | [TariffAndServiceCodes](/modules/Common.md#Common.TariffAndServiceCode) |
+| `IntrastatTransactionTypeId` | `Int64?` | yes | [TransactionTypeIntrastats](Common.md#Common.TransactionTypeIntrastat) |
+| `IntrastatTransactionType` | `TransactionTypeIntrastats` | no | [TransactionTypeIntrastats](Common.md#Common.TransactionTypeIntrastat) |
+| `TariffAndServiceCodeId` | `Int64?` | yes | [TariffAndServiceCodes](Common.md#Common.TariffAndServiceCode) |
+| `TariffAndServiceCode` | `TariffAndServiceCodes` | no | [TariffAndServiceCodes](Common.md#Common.TariffAndServiceCode) |
 | `PartConfigurationId` | `Int64?` | yes |  |
 | `RowsGoodsLabel` | `String` | no |  |
-| `OrderQuantityId` | `Int64?` | yes | [OrderQuantityCustomerOrders](/modules/Sales.md#Sales.OrderQuantityCustomerOrder) |
-| `OrderQuantity` | `OrderQuantityCustomerOrders` | no | [OrderQuantityCustomerOrders](/modules/Sales.md#Sales.OrderQuantityCustomerOrder) |
+| `OrderQuantityId` | `Int64?` | yes | [OrderQuantityCustomerOrders](Sales.md#Sales.OrderQuantityCustomerOrder) |
+| `OrderQuantity` | `OrderQuantityCustomerOrders` | no | [OrderQuantityCustomerOrders](Sales.md#Sales.OrderQuantityCustomerOrder) |
 | `CustomerOrderTransferRowIdentifier` | `Guid?` | yes |  |
-| `PartConfigurationIdInRemoteCompany` | `Int64?` | yes | [PartConfigurations](/modules/Common.md#Common.PartConfiguration) |
+| `PartConfigurationIdInRemoteCompany` | `Int64?` | yes | [PartConfigurations](Common.md#Common.PartConfiguration) |
 | `PriceLockedFromAutomaticChanges` | `Boolean?` | yes |  |
 | `SerialNumberInformation` | `SerialNumberOrderRowInformation[]` | no |  |
-| `DiscountRows` | `CustomerOrderOrderRowDiscounts[]` | no | [CustomerOrderOrderRowDiscounts](/modules/Sales.md#Sales.CustomerOrderOrderRowDiscount) |
+| `DiscountRows` | `CustomerOrderOrderRowDiscounts[]` | no | [CustomerOrderOrderRowDiscounts](Sales.md#Sales.CustomerOrderOrderRowDiscount) |
 | `ComparativePrice` | `Decimal?` | yes |  |
-| `ComparativePriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `BlanketOrderSalesRowId` | `Int64?` | yes | [BlanketOrderSalesRows](/modules/Sales.md#Sales.BlanketOrderSalesRow) |
+| `ComparativePriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `BlanketOrderSalesRowId` | `Int64?` | yes | [BlanketOrderSalesRows](Sales.md#Sales.BlanketOrderSalesRow) |
 
 - `OrderRowType` — Part=1, Additional=2, Sum=3, FreeText=4
 - `PartRowType` — NotPartRow=0, RegularRow=1, SubPartRow=2, SetupPriceRow=3, AlloyCostRow=4, PaymentPlanRow=5, PackagingRow=6
@@ -988,8 +988,8 @@ Represents a customer order row.
 - `ProformaStatus` — None=0, ApprovedForPrint=1, Printed=2
 - `PriceOrigin` — Undefined=0, UserDefined=1, PriceList=2, PriceListStaggered=3, BusinessPartLink=4, BusinessPartLinkStaggered=5, StandardPrice=6, PartConfiguration=7, PostCalculatedAverage=8, BusinessPartLinkFuturePrice=9
 
-**References out:** [BlanketOrderSalesRows](/modules/Sales.md#Sales.BlanketOrderSalesRow), [Codings](/modules/Accounting.md#Accounting.Coding), [Currencies](/modules/Common.md#Common.Currency), [CustomerOrderOrderRowDiscounts](/modules/Sales.md#Sales.CustomerOrderOrderRowDiscount), [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow), [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder), [FixedAssets](/modules/Accounting.md#Accounting.FixedAsset), [ManufacturingOrders](/modules/Manufacturing.md#Manufacturing.ManufacturingOrder), [OrderQuantityCustomerOrders](/modules/Sales.md#Sales.OrderQuantityCustomerOrder), [PartConfigurations](/modules/Common.md#Common.PartConfiguration), [Parts](/modules/Inventory.md#Inventory.Part), [PurchaseOrderRows](/modules/Purchase.md#Purchase.PurchaseOrderRow), [Revisions](/modules/Common.md#Common.Revision), [StatisticalGoodsCodes](/modules/Common.md#Common.StatisticalGoodsCode), [TariffAndServiceCodes](/modules/Common.md#Common.TariffAndServiceCode), [TransactionTypeIntrastats](/modules/Common.md#Common.TransactionTypeIntrastat), [TransferProfiles](/modules/Common.md#Common.TransferProfile), [Units](/modules/Common.md#Common.Unit), [VatRates](/modules/Common.md#Common.VatRate), [Warehouses](/modules/Common.md#Common.Warehouse)
-**Referenced by:** [CustomerOrderDeliveryRows](/modules/Sales.md#Sales.CustomerOrderDeliveryRow), [CustomerOrderOrderRowDiscounts](/modules/Sales.md#Sales.CustomerOrderOrderRowDiscount), [CustomerOrderRowInflows](/modules/Sales.md#Sales.CustomerOrderRowInflow), [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow), [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder), [PurchaseOrderRows](/modules/Purchase.md#Purchase.PurchaseOrderRow), [SalesAgreementBasisRows](/modules/Sales.md#Sales.SalesAgreementBasisRow), [WithdrawalInformationRow](/modules/Sales.md#Sales.WithdrawalInformationRow)
+**References out:** [BlanketOrderSalesRows](Sales.md#Sales.BlanketOrderSalesRow), [Codings](Accounting.md#Accounting.Coding), [Currencies](Common.md#Common.Currency), [CustomerOrderOrderRowDiscounts](Sales.md#Sales.CustomerOrderOrderRowDiscount), [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow), [CustomerOrders](Sales.md#Sales.CustomerOrder), [FixedAssets](Accounting.md#Accounting.FixedAsset), [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder), [OrderQuantityCustomerOrders](Sales.md#Sales.OrderQuantityCustomerOrder), [PartConfigurations](Common.md#Common.PartConfiguration), [Parts](Inventory.md#Inventory.Part), [PurchaseOrderRows](Purchase.md#Purchase.PurchaseOrderRow), [Revisions](Common.md#Common.Revision), [StatisticalGoodsCodes](Common.md#Common.StatisticalGoodsCode), [TariffAndServiceCodes](Common.md#Common.TariffAndServiceCode), [TransactionTypeIntrastats](Common.md#Common.TransactionTypeIntrastat), [TransferProfiles](Common.md#Common.TransferProfile), [Units](Common.md#Common.Unit), [VatRates](Common.md#Common.VatRate), [Warehouses](Common.md#Common.Warehouse)
+**Referenced by:** [CustomerOrderDeliveryRows](Sales.md#Sales.CustomerOrderDeliveryRow), [CustomerOrderOrderRowDiscounts](Sales.md#Sales.CustomerOrderOrderRowDiscount), [CustomerOrderRowInflows](Sales.md#Sales.CustomerOrderRowInflow), [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow), [CustomerOrders](Sales.md#Sales.CustomerOrder), [PurchaseOrderRows](Purchase.md#Purchase.PurchaseOrderRow), [SalesAgreementBasisRows](Sales.md#Sales.SalesAgreementBasisRow), [WithdrawalInformationRow](Sales.md#Sales.WithdrawalInformationRow)
 
 <a id="Sales.CustomerOrder"></a>
 ### CustomerOrders
@@ -1003,32 +1003,32 @@ Represents a customer order.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](/modules/Common.md#Common.PaymentTerm) |
-| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](/modules/Common.md#Common.PaymentTerm) |
+| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](Common.md#Common.PaymentTerm) |
+| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](Common.md#Common.PaymentTerm) |
 | `PaymentTermDescription` | `String` | no |  |
 | `GracePeriodInDays` | `Int32?` | yes |  |
-| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod) |
-| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](/modules/Common.md#Common.DeliveryTerm) |
+| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](Common.md#Common.DeliveryMethod) |
+| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](Common.md#Common.DeliveryTerm) |
 | `DeliveryTermDescription` | `String` | no |  |
 | `DeliveryMethodDescription` | `String` | no |  |
 | `ShipmentPayer` | `Int32` | no |  |
 | `BusinessContactOrderNumber` | `String` | no |  |
-| `OurReferenceId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
+| `OurReferenceId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
 | `OurReferenceName` | `String` | no |  |
-| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
+| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
 | `BusinessContactReferenceName` | `String` | no |  |
 | `GoodsLabel` | `String` | no |  |
-| `CurrencyId` | `Int64` | no | [Currencies](/modules/Common.md#Common.Currency) |
-| `VatGroupId` | `Int64` | no | [VatGroups](/modules/Common.md#Common.VatGroup) |
-| `WarehouseId` | `Int64` | no | [Warehouses](/modules/Common.md#Common.Warehouse) |
+| `CurrencyId` | `Int64` | no | [Currencies](Common.md#Common.Currency) |
+| `VatGroupId` | `Int64` | no | [VatGroups](Common.md#Common.VatGroup) |
+| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) |
 | `Priority` | `Int32` | no |  |
 | `ProjectId` | `Int64?` | yes |  |
 | `SendMethod` | `Int32` | no |  |
 | `InvoicePrintoutMethod` | `Int32` | no |  |
-| `InternalCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `InternalComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
-| `ExternalCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `ExternalComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `InternalCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `InternalComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| `ExternalCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `ExternalComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 | `TransportTime` | `Int32?` | yes |  |
 | `LifeCycleState` | `Int32` | no |  |
 | `Version` | `Int32` | no |  |
@@ -1036,39 +1036,39 @@ Represents a customer order.
 | `ExchangeRate` | `Decimal` | no |  |
 | `OrderAmount` | `Decimal` | no |  |
 | `OrderAmountInCompanyCurrency` | `Decimal` | no |  |
-| `CustomerId` | `Int64` | no | [Customers](/modules/Sales.md#Sales.Customer) |
-| `InvoiceCustomerId` | `Int64` | no | [Customers](/modules/Sales.md#Sales.Customer) |
+| `CustomerId` | `Int64` | no | [Customers](Sales.md#Sales.Customer) |
+| `InvoiceCustomerId` | `Int64` | no | [Customers](Sales.md#Sales.Customer) |
 | `OrderNumber` | `String` | no |  |
 | `OrderDate` | `DateTimeOffset` | no |  |
-| `Rows` | `CustomerOrderRows[]` | no | [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow) |
-| `SellerId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
+| `Rows` | `CustomerOrderRows[]` | no | [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow) |
+| `SellerId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
 | `ShowPriceInAcknowledgement` | `Boolean` | no |  |
 | `ShowTotalInAcknowledgement` | `Boolean` | no |  |
 | `ThirdPartyTrading` | `Boolean` | no |  |
 | `DeliveryInstruction` | `String` | no |  |
-| `ActiveDeliveryAddressCustomerId` | `Int64?` | yes | [Customers](/modules/Sales.md#Sales.Customer) |
-| `ActiveDeliveryAddressSupplierId` | `Int64?` | yes | [Suppliers](/modules/Purchase.md#Purchase.Supplier) |
+| `ActiveDeliveryAddressCustomerId` | `Int64?` | yes | [Customers](Sales.md#Sales.Customer) |
+| `ActiveDeliveryAddressSupplierId` | `Int64?` | yes | [Suppliers](Purchase.md#Purchase.Supplier) |
 | `ActiveDeliveryAddressCompanyId` | `Int64?` | yes |  |
 | `SourceOfAlternativeDeliveryAddresses` | `Int32` | no |  |
 | `IsCredit` | `Boolean` | no |  |
 | `InvoiceType` | `Int32` | no |  |
-| `PaymentMethodId` | `Int64?` | yes | [PaymentMethods](/modules/Common.md#Common.PaymentMethod) |
-| `PaymentMethod` | `PaymentMethods` | no | [PaymentMethods](/modules/Common.md#Common.PaymentMethod) |
+| `PaymentMethodId` | `Int64?` | yes | [PaymentMethods](Common.md#Common.PaymentMethod) |
+| `PaymentMethod` | `PaymentMethods` | no | [PaymentMethods](Common.md#Common.PaymentMethod) |
 | `PrintoutTimeStamp` | `DateTimeOffset` | no |  |
-| `ConsigneeReferenceId` | `Int64?` | yes | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
-| `ConsigneeReference` | `BusinessContactReferences` | no | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
-| `PrintoutBy` | `String` | no | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
+| `ConsigneeReferenceId` | `Int64?` | yes | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
+| `ConsigneeReference` | `BusinessContactReferences` | no | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
+| `PrintoutBy` | `String` | no | [ApplicationUsers](Common.md#Common.ApplicationUser) |
 | `Preliminary` | `Boolean` | no |  |
 | `ConsigneeReferenceName` | `String` | no |  |
 | `DestinationForDeliveryTerm` | `String` | no |  |
-| `CustomerAccountGroupId` | `Int64?` | yes | [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup) |
+| `CustomerAccountGroupId` | `Int64?` | yes | [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup) |
 | `SupplierAccountGroupId` | `Int64?` | yes |  |
-| `DeliveryAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `DeliveryAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
-| `MailingAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `MailingAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
-| `InvoiceAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `InvoiceAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
+| `DeliveryAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `DeliveryAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
+| `MailingAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `MailingAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
+| `InvoiceAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `InvoiceAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
 | `InvoiceStatusPending` | `Boolean` | no |  |
 | `IsPartOfComprehensiveInvoice` | `Boolean` | no |  |
 | `ComprehensiveInvoiceGroupingMode` | `Int32` | no |  |
@@ -1078,45 +1078,45 @@ Represents a customer order.
 | `Dock` | `String` | no |  |
 | `FromQuoteNumber` | `String` | no |  |
 | `Status` | `Int32` | no |  |
-| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](/modules/Common.md#Common.CommunicationAddress) |
+| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](Common.md#Common.CommunicationAddress) |
 | `PrintProformaInvoiceVia` | `Int32?` | yes |  |
-| `OrderTypeId` | `Int64?` | yes | [CustomerOrderTypes](/modules/Sales.md#Sales.CustomerOrderType) |
-| `OrderType` | `CustomerOrderTypes` | no | [CustomerOrderTypes](/modules/Sales.md#Sales.CustomerOrderType) |
+| `OrderTypeId` | `Int64?` | yes | [CustomerOrderTypes](Sales.md#Sales.CustomerOrderType) |
+| `OrderType` | `CustomerOrderTypes` | no | [CustomerOrderTypes](Sales.md#Sales.CustomerOrderType) |
 | `IsStockOrder` | `Boolean` | no |  |
 | `ExcludeFromEdi` | `Boolean` | no |  |
 | `IncludeInDeliveryAnalysis` | `Boolean?` | yes |  |
 | `PartialDeliveryType` | `Int32` | no |  |
 | `DeliveryHorizon` | `TimeSpan?` | yes |  |
 | `DeliveryNoteNumberWhenDeliveryPlanning` | `Boolean` | no |  |
-| `AftermarketProductRecordId` | `Int64?` | yes | [ProductRecords](/modules/Inventory.md#Inventory.ProductRecord) |
-| `PurchaseOrderId` | `Int64?` | yes | [PurchaseOrders](/modules/Purchase.md#Purchase.PurchaseOrder) |
-| `PurchaseOrder` | `PurchaseOrders` | no | [PurchaseOrders](/modules/Purchase.md#Purchase.PurchaseOrder) |
-| `PaymentPlanTemplateId` | `Int64?` | yes | [PaymentPlanTemplates](/modules/Common.md#Common.PaymentPlanTemplate) |
-| `PaymentPlanTemplate` | `PaymentPlanTemplates` | no | [PaymentPlanTemplates](/modules/Common.md#Common.PaymentPlanTemplate) |
+| `AftermarketProductRecordId` | `Int64?` | yes | [ProductRecords](Inventory.md#Inventory.ProductRecord) |
+| `PurchaseOrderId` | `Int64?` | yes | [PurchaseOrders](Purchase.md#Purchase.PurchaseOrder) |
+| `PurchaseOrder` | `PurchaseOrders` | no | [PurchaseOrders](Purchase.md#Purchase.PurchaseOrder) |
+| `PaymentPlanTemplateId` | `Int64?` | yes | [PaymentPlanTemplates](Common.md#Common.PaymentPlanTemplate) |
+| `PaymentPlanTemplate` | `PaymentPlanTemplates` | no | [PaymentPlanTemplates](Common.md#Common.PaymentPlanTemplate) |
 | `UnpaidAdvanceWarningType` | `Int32` | no |  |
 | `CreatedFrom` | `Int32` | no |  |
 | `ShippingInformationId` | `Int64?` | yes |  |
-| `ShippingInformationRows` | `CustomerOrderShippingInformationRows[]` | no | [CustomerOrderShippingInformationRows](/modules/Sales.md#Sales.CustomerOrderShippingInformationRow) |
+| `ShippingInformationRows` | `CustomerOrderShippingInformationRows[]` | no | [CustomerOrderShippingInformationRows](Sales.md#Sales.CustomerOrderShippingInformationRow) |
 | `ExcludeFromPaymentPlanReconciliation` | `Boolean` | no |  |
 | `ResetPaymentPlanDifferenceAmount` | `Decimal?` | yes |  |
-| `ResetPaymentPlanDifferenceAmountCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `ResetPaymentPlanDifferenceAmountCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `ResetPaymentPlanDifferenceAmountCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `ResetPaymentPlanDifferenceAmountCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `TransferStatus` | `Int32` | no |  |
 | `CreatedInCompanyWithRole` | `Int32?` | yes |  |
-| `AccountGroupId` | `Int64` | no | [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup) |
-| `AccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup) |
+| `AccountGroupId` | `Int64` | no | [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup) |
+| `AccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup) |
 | `CategoryString` | `String` | no |  |
-| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType) |
+| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType) |
 | `EditedOrderAmountExcludingVat` | `Decimal?` | yes |  |
-| `EditedOrderAmountExcludingVatCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `EditedOrderAmountExcludingVatCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `EditedOrderAmountDiscount` | `Decimal?` | yes |  |
 | `TypeOfOrderAmountEntered` | `Int32?` | yes |  |
-| `ReasonCodeDebitNoteId` | `Int64?` | yes | [ReasonCodeDebitNotes](/modules/Common.md#Common.ReasonCodeDebitNote) |
-| `ReasonCodeDebitNote` | `ReasonCodeDebitNotes` | no | [ReasonCodeDebitNotes](/modules/Common.md#Common.ReasonCodeDebitNote) |
+| `ReasonCodeDebitNoteId` | `Int64?` | yes | [ReasonCodeDebitNotes](Common.md#Common.ReasonCodeDebitNote) |
+| `ReasonCodeDebitNote` | `ReasonCodeDebitNotes` | no | [ReasonCodeDebitNotes](Common.md#Common.ReasonCodeDebitNote) |
 | `Factoring` | `Boolean` | no |  |
 | `ReferenceCode` | `String` | no |  |
-| `PickInstructionId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `PickInstruction` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `PickInstructionId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `PickInstruction` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 
 - `ShipmentPayer` — BuyerPays=1, SellerPays=2, OtherPayer=3, Incoterms=4
 - `SendMethod` — Printer=0, Email=1, Edi=2, None=9
@@ -1134,8 +1134,8 @@ Represents a customer order.
 - `CreatedInCompanyWithRole` — ManufacturingCompany=0, SalesCompany=1
 - `TypeOfOrderAmountEntered` — Percent=1, Amount=2
 
-**References out:** [Addresses](/modules/Common.md#Common.Address), [ApplicationUsers](/modules/Common.md#Common.ApplicationUser), [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference), [Comments](/modules/Common.md#Common.Comment), [CommunicationAddresses](/modules/Common.md#Common.CommunicationAddress), [Currencies](/modules/Common.md#Common.Currency), [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType), [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup), [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow), [CustomerOrderShippingInformationRows](/modules/Sales.md#Sales.CustomerOrderShippingInformationRow), [CustomerOrderTypes](/modules/Sales.md#Sales.CustomerOrderType), [Customers](/modules/Sales.md#Sales.Customer), [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod), [DeliveryTerms](/modules/Common.md#Common.DeliveryTerm), [PaymentMethods](/modules/Common.md#Common.PaymentMethod), [PaymentPlanTemplates](/modules/Common.md#Common.PaymentPlanTemplate), [PaymentTerms](/modules/Common.md#Common.PaymentTerm), [Persons](/modules/Common.md#Common.Person), [ProductRecords](/modules/Inventory.md#Inventory.ProductRecord), [PurchaseOrders](/modules/Purchase.md#Purchase.PurchaseOrder), [ReasonCodeDebitNotes](/modules/Common.md#Common.ReasonCodeDebitNote), [Suppliers](/modules/Purchase.md#Purchase.Supplier), [VatGroups](/modules/Common.md#Common.VatGroup), [Warehouses](/modules/Common.md#Common.Warehouse)
-**Referenced by:** [CaseEntry](/modules/Inventory.md#Inventory.CaseEntry), [CaseEntryPartLinks](/modules/Inventory.md#Inventory.CasePartLink), [CustomerOrderActivities](/modules/Sales.md#Sales.CustomerOrderActivity), [CustomerOrderDeliveryRows](/modules/Sales.md#Sales.CustomerOrderDeliveryRow), [CustomerOrderInvoices](/modules/Sales.md#Sales.CustomerOrderInvoice), [CustomerOrderPaymentPlanRows](/modules/Sales.md#Sales.CustomerOrderPaymentPlanRow), [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow), [CustomerRelationshipManagementActivities](/modules/Sales.md#Sales.CustomerRelationshipManagementActivity), [InvoiceLogs](/modules/Sales.md#Sales.InvoiceLog), [Locations](/modules/Inventory.md#Inventory.Location), [ManufacturingOrders](/modules/Manufacturing.md#Manufacturing.ManufacturingOrder), [ProductRecords](/modules/Inventory.md#Inventory.ProductRecord), [Projects](/modules/Common.md#Common.Project), [PurchaseOrders](/modules/Purchase.md#Purchase.PurchaseOrder), [QuoteRows](/modules/Sales.md#Sales.QuoteRow), [SalesAgreementBases](/modules/Sales.md#Sales.SalesAgreementBasis), [ShipmentInformationSources](/modules/Sales.md#Sales.ShipmentInformationSource)
+**References out:** [Addresses](Common.md#Common.Address), [ApplicationUsers](Common.md#Common.ApplicationUser), [BusinessContactReferences](Common.md#Common.BusinessContactReference), [Comments](Common.md#Common.Comment), [CommunicationAddresses](Common.md#Common.CommunicationAddress), [Currencies](Common.md#Common.Currency), [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType), [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup), [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow), [CustomerOrderShippingInformationRows](Sales.md#Sales.CustomerOrderShippingInformationRow), [CustomerOrderTypes](Sales.md#Sales.CustomerOrderType), [Customers](Sales.md#Sales.Customer), [DeliveryMethods](Common.md#Common.DeliveryMethod), [DeliveryTerms](Common.md#Common.DeliveryTerm), [PaymentMethods](Common.md#Common.PaymentMethod), [PaymentPlanTemplates](Common.md#Common.PaymentPlanTemplate), [PaymentTerms](Common.md#Common.PaymentTerm), [Persons](Common.md#Common.Person), [ProductRecords](Inventory.md#Inventory.ProductRecord), [PurchaseOrders](Purchase.md#Purchase.PurchaseOrder), [ReasonCodeDebitNotes](Common.md#Common.ReasonCodeDebitNote), [Suppliers](Purchase.md#Purchase.Supplier), [VatGroups](Common.md#Common.VatGroup), [Warehouses](Common.md#Common.Warehouse)
+**Referenced by:** [CaseEntry](Inventory.md#Inventory.CaseEntry), [CaseEntryPartLinks](Inventory.md#Inventory.CasePartLink), [CustomerOrderActivities](Sales.md#Sales.CustomerOrderActivity), [CustomerOrderDeliveryRows](Sales.md#Sales.CustomerOrderDeliveryRow), [CustomerOrderInvoices](Sales.md#Sales.CustomerOrderInvoice), [CustomerOrderPaymentPlanRows](Sales.md#Sales.CustomerOrderPaymentPlanRow), [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow), [CustomerRelationshipManagementActivities](Sales.md#Sales.CustomerRelationshipManagementActivity), [InvoiceLogs](Sales.md#Sales.InvoiceLog), [Locations](Inventory.md#Inventory.Location), [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder), [ProductRecords](Inventory.md#Inventory.ProductRecord), [Projects](Common.md#Common.Project), [PurchaseOrders](Purchase.md#Purchase.PurchaseOrder), [QuoteRows](Sales.md#Sales.QuoteRow), [SalesAgreementBases](Sales.md#Sales.SalesAgreementBasis), [ShipmentInformationSources](Sales.md#Sales.ShipmentInformationSource)
 
 <a id="Sales.CustomerOrderShippingInformationRow"></a>
 ### CustomerOrderShippingInformationRows
@@ -1157,16 +1157,16 @@ Represents a customer order shipping information row.
 | `Length` | `Decimal` | no |  |
 | `Width` | `Decimal` | no |  |
 | `Height` | `Decimal` | no |  |
-| `PackageTypeId` | `Int64` | no | [PackageTypes](/modules/Inventory.md#Inventory.PackageType) |
-| `PackageType` | `PackageTypes` | no | [PackageTypes](/modules/Inventory.md#Inventory.PackageType) |
-| `GoodsTypeId` | `Int64` | no | [GoodsTypes](/modules/Inventory.md#Inventory.GoodsType) |
-| `GoodsType` | `GoodsTypes` | no | [GoodsTypes](/modules/Inventory.md#Inventory.GoodsType) |
-| `PackagingPartId` | `Int64?` | yes | [Parts](/modules/Inventory.md#Inventory.Part) |
-| `PackagingPart` | `Parts` | no | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `PackageTypeId` | `Int64` | no | [PackageTypes](Inventory.md#Inventory.PackageType) |
+| `PackageType` | `PackageTypes` | no | [PackageTypes](Inventory.md#Inventory.PackageType) |
+| `GoodsTypeId` | `Int64` | no | [GoodsTypes](Inventory.md#Inventory.GoodsType) |
+| `GoodsType` | `GoodsTypes` | no | [GoodsTypes](Inventory.md#Inventory.GoodsType) |
+| `PackagingPartId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
+| `PackagingPart` | `Parts` | no | [Parts](Inventory.md#Inventory.Part) |
 | `ParentId` | `Int64?` | yes |  |
 
-**References out:** [GoodsTypes](/modules/Inventory.md#Inventory.GoodsType), [PackageTypes](/modules/Inventory.md#Inventory.PackageType), [Parts](/modules/Inventory.md#Inventory.Part)
-**Referenced by:** [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder)
+**References out:** [GoodsTypes](Inventory.md#Inventory.GoodsType), [PackageTypes](Inventory.md#Inventory.PackageType), [Parts](Inventory.md#Inventory.Part)
+**Referenced by:** [CustomerOrders](Sales.md#Sales.CustomerOrder)
 
 <a id="Sales.CustomerOrderType"></a>
 ### CustomerOrderTypes
@@ -1187,17 +1187,17 @@ Represents a customer order type.
 | `Visible` | `Boolean` | no |  |
 | `IsPreset` | `Boolean` | no |  |
 | `PriceSetting` | `Int32` | no |  |
-| `PriceListId` | `Int64?` | yes | [PriceLists](/modules/Common.md#Common.PriceList) |
+| `PriceListId` | `Int64?` | yes | [PriceLists](Common.md#Common.PriceList) |
 | `IncludeInDeliveryAnalysis` | `Boolean` | no |  |
 | `IncludeInStatistics` | `Boolean` | no |  |
 | `InvoiceType` | `Int32?` | yes |  |
-| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](/modules/Common.md#Common.PaymentTerm) |
+| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](Common.md#Common.PaymentTerm) |
 | `PurchaseOrderAddressStrategy` | `Int32` | no |  |
 | `BaseType` | `Int32` | no |  |
 | `CodingGroupId` | `Int64` | no |  |
 | `RateTypeSetting` | `Int32` | no |  |
-| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType) |
-| `DefaultTransferProfileId` | `Int64?` | yes | [TransferProfiles](/modules/Common.md#Common.TransferProfile) |
+| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType) |
+| `DefaultTransferProfileId` | `Int64?` | yes | [TransferProfiles](Common.md#Common.TransferProfile) |
 
 - `PriceSetting` — Customer=1, PriceList=2, StandardPrice=3
 - `InvoiceType` — Standard=1, Internal=2, CashReceipt=3, Interest=4, OnAccount=5, DebitNote=6, ServiceTax=7, CorrectionInvoice=8, CollectiveCorrectionInvoice=9
@@ -1205,8 +1205,8 @@ Represents a customer order type.
 - `BaseType` — NewSales=0, StockOrder=1, Agreement=2
 - `RateTypeSetting` — Customer=1, OrderType=2
 
-**References out:** [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType), [PaymentTerms](/modules/Common.md#Common.PaymentTerm), [PriceLists](/modules/Common.md#Common.PriceList), [TransferProfiles](/modules/Common.md#Common.TransferProfile)
-**Referenced by:** [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder), [QuoteTypes](/modules/Sales.md#Sales.QuoteType)
+**References out:** [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType), [PaymentTerms](Common.md#Common.PaymentTerm), [PriceLists](Common.md#Common.PriceList), [TransferProfiles](Common.md#Common.TransferProfile)
+**Referenced by:** [CustomerOrders](Sales.md#Sales.CustomerOrder), [QuoteTypes](Sales.md#Sales.QuoteType)
 
 <a id="Sales.CustomerPartLink"></a>
 ### CustomerPartLinks
@@ -1220,13 +1220,13 @@ Represents a customer part link.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `CustomerId` | `Int64` | no | [Customers](/modules/Sales.md#Sales.Customer) |
+| `CustomerId` | `Int64` | no | [Customers](Sales.md#Sales.Customer) |
 | `CustomerPartNumber` | `String` | no |  |
-| `PackagingPartId` | `Int64?` | yes | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `PackagingPartId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
 | `Gs1Code` | `String` | no |  |
 | `SalesCommentShowInForms` | `Int32` | no |  |
 | `QuantityForLeadTimeToCustomer` | `Decimal?` | yes |  |
-| `PartId` | `Int64` | no | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `PartId` | `Int64` | no | [Parts](Inventory.md#Inventory.Part) |
 | `Price` | `Decimal?` | yes |  |
 | `SetupPrice` | `Decimal?` | yes |  |
 | `LeadTime` | `TimeSpan?` | yes |  |
@@ -1236,22 +1236,22 @@ Represents a customer part link.
 | `FuturePriceValidThrough` | `DateTimeOffset?` | yes |  |
 | `FutureSetupPrice` | `Decimal?` | yes |  |
 | `QuantityPerPackage` | `Decimal?` | yes |  |
-| `PickingCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `PickingComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
-| `OverrideSalesCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `OverrideSalesComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
-| `UnitId` | `Int64` | no | [Units](/modules/Common.md#Common.Unit) |
-| `Unit` | `Units` | no | [Units](/modules/Common.md#Common.Unit) |
-| `PriceCurrencyId` | `Int64` | no | [Currencies](/modules/Common.md#Common.Currency) |
-| `PriceCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
-| `PriceCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `PriceComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
-| `StaggeredPrices` | `StaggeredPrices[]` | no | [StaggeredPrices](/modules/Common.md#Common.StaggeredPrice) |
+| `PickingCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `PickingComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| `OverrideSalesCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `OverrideSalesComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| `UnitId` | `Int64` | no | [Units](Common.md#Common.Unit) |
+| `Unit` | `Units` | no | [Units](Common.md#Common.Unit) |
+| `PriceCurrencyId` | `Int64` | no | [Currencies](Common.md#Common.Currency) |
+| `PriceCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
+| `PriceCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `PriceComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| `StaggeredPrices` | `StaggeredPrices[]` | no | [StaggeredPrices](Common.md#Common.StaggeredPrice) |
 
 - `SalesCommentShowInForms` (bitmask) — None=0, Quote=1, Acknowledgement=2, DeliveryNote=4, Invoice=8, ProFormaInvoice=16
 
-**References out:** [Comments](/modules/Common.md#Common.Comment), [Currencies](/modules/Common.md#Common.Currency), [Customers](/modules/Sales.md#Sales.Customer), [Parts](/modules/Inventory.md#Inventory.Part), [StaggeredPrices](/modules/Common.md#Common.StaggeredPrice), [Units](/modules/Common.md#Common.Unit)
-**Referenced by:** [Customers](/modules/Sales.md#Sales.Customer), [Parts](/modules/Inventory.md#Inventory.Part)
+**References out:** [Comments](Common.md#Common.Comment), [Currencies](Common.md#Common.Currency), [Customers](Sales.md#Sales.Customer), [Parts](Inventory.md#Inventory.Part), [StaggeredPrices](Common.md#Common.StaggeredPrice), [Units](Common.md#Common.Unit)
+**Referenced by:** [Customers](Sales.md#Sales.Customer), [Parts](Inventory.md#Inventory.Part)
 
 <a id="Sales.CustomerRelationshipActivityType"></a>
 ### CustomerRelationshipActivityTypes
@@ -1271,7 +1271,7 @@ Represents a customer relationship activity type.
 
 - `Sources` (bitmask) — Part=1, Quote=2, CustomerOrder=4, Customer=8, PurchaseOrder=16, Inquiry=32, BlanketOrderPurchase=64, Supplier=128, BlanketOrderSales=256, SalesAgreement=512, PurchaseAgreement=1024, BusinessOpportunity=2048
 
-**Referenced by:** [BusinessOpportunityActivityTemplateRows](/modules/Sales.md#Sales.BusinessOpportunityActivityTemplateRow), [CustomerOrderActivities](/modules/Sales.md#Sales.CustomerOrderActivity), [CustomerRelationshipManagementActivities](/modules/Sales.md#Sales.CustomerRelationshipManagementActivity), [QuoteActivities](/modules/Sales.md#Sales.QuoteActivity)
+**Referenced by:** [BusinessOpportunityActivityTemplateRows](Sales.md#Sales.BusinessOpportunityActivityTemplateRow), [CustomerOrderActivities](Sales.md#Sales.CustomerOrderActivity), [CustomerRelationshipManagementActivities](Sales.md#Sales.CustomerRelationshipManagementActivity), [QuoteActivities](Sales.md#Sales.QuoteActivity)
 
 <a id="Sales.CustomerRelationshipManagementActivity"></a>
 ### CustomerRelationshipManagementActivities
@@ -1285,20 +1285,20 @@ Represents a customer relationship management activity.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `CustomerId` | `Int64` | no | [Customers](/modules/Sales.md#Sales.Customer) |
+| `CustomerId` | `Int64` | no | [Customers](Sales.md#Sales.Customer) |
 | `IsMandatory` | `Boolean` | no |  |
 | `AdministratorType` | `Int32?` | yes |  |
-| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
-| `BusinessContactReference` | `BusinessContactReferences` | no | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
-| `OrderId` | `Int64?` | yes | [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder) |
-| `ActivityTypeId` | `Int64?` | yes | [CustomerRelationshipActivityTypes](/modules/Sales.md#Sales.CustomerRelationshipActivityType) |
-| `ActivityType` | `CustomerRelationshipActivityTypes` | no | [CustomerRelationshipActivityTypes](/modules/Sales.md#Sales.CustomerRelationshipActivityType) |
+| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
+| `BusinessContactReference` | `BusinessContactReferences` | no | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
+| `OrderId` | `Int64?` | yes | [CustomerOrders](Sales.md#Sales.CustomerOrder) |
+| `ActivityTypeId` | `Int64?` | yes | [CustomerRelationshipActivityTypes](Sales.md#Sales.CustomerRelationshipActivityType) |
+| `ActivityType` | `CustomerRelationshipActivityTypes` | no | [CustomerRelationshipActivityTypes](Sales.md#Sales.CustomerRelationshipActivityType) |
 | `CalendarAppointmentId` | `String` | no |  |
-| `CompletedByUserId` | `Int64?` | yes | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
-| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
+| `CompletedByUserId` | `Int64?` | yes | [ApplicationUsers](Common.md#Common.ApplicationUser) |
+| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](Common.md#Common.ApplicationUser) |
 | `Description` | `String` | no |  |
-| `CommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 | `Status` | `Int32` | no |  |
 | `ReminderId` | `Int64?` | yes |  |
 | `PlannedCompletionDate` | `DateTimeOffset` | no |  |
@@ -1312,7 +1312,7 @@ Represents a customer relationship management activity.
 - `AdministratorType` — CustomerResponsible=0, Seller=1
 - `Status` — Registered=1, InProgress=2, History=9
 
-**References out:** [ApplicationUsers](/modules/Common.md#Common.ApplicationUser), [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference), [Comments](/modules/Common.md#Common.Comment), [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder), [CustomerRelationshipActivityTypes](/modules/Sales.md#Sales.CustomerRelationshipActivityType), [Customers](/modules/Sales.md#Sales.Customer)
+**References out:** [ApplicationUsers](Common.md#Common.ApplicationUser), [BusinessContactReferences](Common.md#Common.BusinessContactReference), [Comments](Common.md#Common.Comment), [CustomerOrders](Sales.md#Sales.CustomerOrder), [CustomerRelationshipActivityTypes](Sales.md#Sales.CustomerRelationshipActivityType), [Customers](Sales.md#Sales.Customer)
 
 <a id="Sales.Customer"></a>
 ### Customers
@@ -1333,23 +1333,23 @@ Represents a customer.
 | `PersonalNumber` | `String` | no |  |
 | `IsPrivateCustomer` | `Boolean` | no |  |
 | `VatNumber` | `String` | no |  |
-| `DeliveryAddresses` | `DeliveryAddresses[]` | no | [DeliveryAddresses](/modules/Common.md#Common.DeliveryAddress) |
-| `ActiveDeliveryAddressId` | `Int64` | no | [DeliveryAddresses](/modules/Common.md#Common.DeliveryAddress) |
-| `ActiveDeliveryAddress` | `DeliveryAddresses` | no | [DeliveryAddresses](/modules/Common.md#Common.DeliveryAddress) |
-| `References` | `BusinessContactReferences[]` | no | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
-| `DefaultReferenceId` | `Int64?` | yes | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
-| `DefaultReference` | `BusinessContactReferences` | no | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
+| `DeliveryAddresses` | `DeliveryAddresses[]` | no | [DeliveryAddresses](Common.md#Common.DeliveryAddress) |
+| `ActiveDeliveryAddressId` | `Int64` | no | [DeliveryAddresses](Common.md#Common.DeliveryAddress) |
+| `ActiveDeliveryAddress` | `DeliveryAddresses` | no | [DeliveryAddresses](Common.md#Common.DeliveryAddress) |
+| `References` | `BusinessContactReferences[]` | no | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
+| `DefaultReferenceId` | `Int64?` | yes | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
+| `DefaultReference` | `BusinessContactReferences` | no | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
 | `Alias` | `String` | no |  |
 | `AlloyCost` | `Int32` | no |  |
 | `ApplyBankCharge` | `Boolean` | no |  |
 | `ApplyInvoicingCharge` | `Boolean` | no |  |
 | `ApplyReminderCharge` | `Boolean` | no |  |
-| `AccountManagerId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
-| `AccountManager` | `Persons` | no | [Persons](/modules/Common.md#Common.Person) |
-| `ActiveDeliveryAddressAccountGroupId` | `Int64?` | yes | [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup) |
-| `ActiveDeliveryAddressAccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup) |
-| `ActualCustomerProbabilityId` | `Int64?` | yes | [Probabilities](/modules/Common.md#Common.Probability) |
-| `ActualCustomerProbability` | `Probabilities` | no | [Probabilities](/modules/Common.md#Common.Probability) |
+| `AccountManagerId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
+| `AccountManager` | `Persons` | no | [Persons](Common.md#Common.Person) |
+| `ActiveDeliveryAddressAccountGroupId` | `Int64?` | yes | [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup) |
+| `ActiveDeliveryAddressAccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup) |
+| `ActualCustomerProbabilityId` | `Int64?` | yes | [Probabilities](Common.md#Common.Probability) |
+| `ActualCustomerProbability` | `Probabilities` | no | [Probabilities](Common.md#Common.Probability) |
 | `AttachDatafileWithOrder` | `Boolean` | no |  |
 | `AttachDatafileWithInvoice` | `Boolean` | no |  |
 | `AttachDatafileWithCase` | `Boolean` | no |  |
@@ -1357,32 +1357,32 @@ Represents a customer.
 | `AttachDatafileWithDispatchAdvice` | `Boolean` | no |  |
 | `BankChargeAmount` | `Decimal` | no |  |
 | `BankGiroNo` | `String` | no |  |
-| `BlockedById` | `Int64?` | yes | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
-| `BlockedBy` | `ApplicationUsers` | no | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
+| `BlockedById` | `Int64?` | yes | [ApplicationUsers](Common.md#Common.ApplicationUser) |
+| `BlockedBy` | `ApplicationUsers` | no | [ApplicationUsers](Common.md#Common.ApplicationUser) |
 | `BlockedStatus` | `Int32` | no |  |
 | `BlockedContextType` | `Int32` | no |  |
-| `BlockMessageId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `BlockMessage` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `BlockMessageId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `BlockMessage` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 | `BlockedFromDate` | `DateTimeOffset?` | yes |  |
 | `BlockedToDate` | `DateTimeOffset?` | yes |  |
 | `CategoryString` | `String` | no |  |
-| `CommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 | `CompanyId` | `Int64` | no |  |
-| `ConfigurationPriceListId` | `Int64?` | yes | [PriceLists](/modules/Common.md#Common.PriceList) |
+| `ConfigurationPriceListId` | `Int64?` | yes | [PriceLists](Common.md#Common.PriceList) |
 | `CreditLimit` | `Decimal` | no |  |
-| `CurrencyId` | `Int64` | no | [Currencies](/modules/Common.md#Common.Currency) |
-| `Currency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `CurrencyId` | `Int64` | no | [Currencies](Common.md#Common.Currency) |
+| `Currency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `DateDisplayFormat` | `Int32` | no |  |
 | `DecimalSymbol` | `String` | no |  |
 | `DeliveryHorizon` | `Int64?` | yes |  |
 | `DeliveryNoteNumberWhenDeliveryPlanning` | `Boolean` | no |  |
-| `DistrictId` | `Int64?` | yes | [CustomerDistricts](/modules/Sales.md#Sales.CustomerDistrict) |
-| `District` | `CustomerDistricts` | no | [CustomerDistricts](/modules/Sales.md#Sales.CustomerDistrict) |
+| `DistrictId` | `Int64?` | yes | [CustomerDistricts](Sales.md#Sales.CustomerDistrict) |
+| `District` | `CustomerDistricts` | no | [CustomerDistricts](Sales.md#Sales.CustomerDistrict) |
 | `DateForTransitionToActualContact` | `DateTimeOffset?` | yes |  |
 | `Discount` | `Decimal?` | yes |  |
-| `DiscountCategoryId` | `Int64?` | yes | [DiscountCategories](/modules/Common.md#Common.DiscountCategory) |
-| `DiscountCategory` | `DiscountCategories` | no | [DiscountCategories](/modules/Common.md#Common.DiscountCategory) |
+| `DiscountCategoryId` | `Int64?` | yes | [DiscountCategories](Common.md#Common.DiscountCategory) |
+| `DiscountCategory` | `DiscountCategories` | no | [DiscountCategories](Common.md#Common.DiscountCategory) |
 | `DefaultOrderPrintoutVia` | `Int32` | no |  |
 | `PrintProformaInvoiceVia` | `Int32` | no |  |
 | `PrintPaymentReminderVia` | `Int32` | no |  |
@@ -1396,54 +1396,54 @@ Represents a customer.
 | `GracePeriod` | `TimeSpan?` | yes |  |
 | `HideDiscountOnProformaInvoice` | `Boolean` | no |  |
 | `IncludeInDeliveryAnalysis` | `Boolean?` | yes |  |
-| `InvoiceAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `InvoiceAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
+| `InvoiceAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `InvoiceAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
 | `InterestType` | `Int32` | no |  |
 | `IsCasualCustomer` | `Boolean` | no |  |
 | `InterestInvoiceDays` | `Int32?` | yes |  |
 | `InsuranceCost` | `Decimal` | no |  |
-| `InvoiceCustomerId` | `Int64?` | yes | [Customers](/modules/Sales.md#Sales.Customer) |
+| `InvoiceCustomerId` | `Int64?` | yes | [Customers](Sales.md#Sales.Customer) |
 | `InvoicePrintoutMethod` | `Int32` | no |  |
 | `InvoicePrintoutOccasion` | `Int32` | no |  |
 | `IsInternal` | `Boolean` | no |  |
-| `LanguageId` | `Int64` | no | [LanguageCodes](/modules/Common.md#Common.LanguageCode) |
-| `Language` | `LanguageCodes` | no | [LanguageCodes](/modules/Common.md#Common.LanguageCode) |
+| `LanguageId` | `Int64` | no | [LanguageCodes](Common.md#Common.LanguageCode) |
+| `Language` | `LanguageCodes` | no | [LanguageCodes](Common.md#Common.LanguageCode) |
 | `LatePaymentFee` | `Decimal?` | yes |  |
-| `MailingAddressId` | `Int64` | no | [Addresses](/modules/Common.md#Common.Address) |
-| `MailingAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
+| `MailingAddressId` | `Int64` | no | [Addresses](Common.md#Common.Address) |
+| `MailingAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
 | `NumberOfInvoiceCopies` | `Int32?` | yes |  |
 | `OurCodeByYou` | `String` | no |  |
 | `PalletRegistrationNo` | `String` | no |  |
 | `PartialDeliveryType` | `Int32` | no |  |
-| `PaymentPlanTemplateId` | `Int64?` | yes | [PaymentPlanTemplates](/modules/Common.md#Common.PaymentPlanTemplate) |
-| `PaymentPlanTemplate` | `PaymentPlanTemplates` | no | [PaymentPlanTemplates](/modules/Common.md#Common.PaymentPlanTemplate) |
-| `PaymentTermId` | `Int64` | no | [PaymentTerms](/modules/Common.md#Common.PaymentTerm) |
-| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](/modules/Common.md#Common.PaymentTerm) |
+| `PaymentPlanTemplateId` | `Int64?` | yes | [PaymentPlanTemplates](Common.md#Common.PaymentPlanTemplate) |
+| `PaymentPlanTemplate` | `PaymentPlanTemplates` | no | [PaymentPlanTemplates](Common.md#Common.PaymentPlanTemplate) |
+| `PaymentTermId` | `Int64` | no | [PaymentTerms](Common.md#Common.PaymentTerm) |
+| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](Common.md#Common.PaymentTerm) |
 | `PlusGiroNo` | `String` | no |  |
-| `PriceListId` | `Int64` | no | [PriceLists](/modules/Common.md#Common.PriceList) |
+| `PriceListId` | `Int64` | no | [PriceLists](Common.md#Common.PriceList) |
 | `Priority` | `Int32` | no |  |
-| `PickingListCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `PickingListComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `PickingListCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `PickingListComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 | `ProformaInvoicePrintoutOccasion` | `Int32` | no |  |
-| `ResellerId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
-| `Reseller` | `Resellers` | no | [Resellers](/modules/Common.md#Common.Reseller) |
+| `ResellerId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
+| `Reseller` | `Resellers` | no | [Resellers](Common.md#Common.Reseller) |
 | `RoundOff` | `Boolean` | no |  |
-| `SellerId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
-| `Seller` | `Persons` | no | [Persons](/modules/Common.md#Common.Person) |
+| `SellerId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
+| `Seller` | `Persons` | no | [Persons](Common.md#Common.Person) |
 | `ServiceAgreementId` | `Int64?` | yes |  |
 | `ServiceTaxNumber` | `String` | no |  |
 | `ShowPartStatisticalGoodsCodeAndCountryOfOriginInForms` | `Int32` | no |  |
 | `ShowPartStatisticalGoodsCodeInForms` | `Int32` | no |  |
 | `ShowCountryOfOriginInForms` | `Int32` | no |  |
 | `ShowPartWeightInForms` | `Int32` | no |  |
-| `StatusId` | `Int64` | no | [CustomerStatuses](/modules/Sales.md#Sales.CustomerStatus) |
-| `Status` | `CustomerStatuses` | no | [CustomerStatuses](/modules/Sales.md#Sales.CustomerStatus) |
+| `StatusId` | `Int64` | no | [CustomerStatuses](Sales.md#Sales.CustomerStatus) |
+| `Status` | `CustomerStatuses` | no | [CustomerStatuses](Sales.md#Sales.CustomerStatus) |
 | `TimeZone` | `String` | no |  |
 | `TimeZoneOffset` | `Decimal` | no |  |
 | `ToleranceForLateDelivery` | `TimeSpan?` | yes |  |
 | `ToleranceForEarlyDelivery` | `TimeSpan?` | yes |  |
-| `TypeId` | `Int64?` | yes | [CustomerTypes](/modules/Sales.md#Sales.CustomerType) |
-| `Type` | `CustomerTypes` | no | [CustomerTypes](/modules/Sales.md#Sales.CustomerType) |
+| `TypeId` | `Int64?` | yes | [CustomerTypes](Sales.md#Sales.CustomerType) |
+| `Type` | `CustomerTypes` | no | [CustomerTypes](Sales.md#Sales.CustomerType) |
 | `Url` | `String` | no |  |
 | `UseBundling` | `Boolean?` | yes |  |
 | `UseComprehensiveInvoices` | `Boolean` | no |  |
@@ -1454,23 +1454,23 @@ Represents a customer.
 | `UseInvoiceCustomersVatNumber` | `Boolean` | no |  |
 | `UsePackageSpecification` | `Boolean?` | yes |  |
 | `UseReminder` | `Boolean` | no |  |
-| `VatRateId` | `Int64?` | yes | [VatRates](/modules/Common.md#Common.VatRate) |
-| `VatRate` | `VatRates` | no | [VatRates](/modules/Common.md#Common.VatRate) |
-| `ValidityTimeId` | `Int64` | no | [ValidityTimes](/modules/Sales.md#Sales.ValidityTime) |
-| `ValidityTime` | `ValidityTimes` | no | [ValidityTimes](/modules/Sales.md#Sales.ValidityTime) |
+| `VatRateId` | `Int64?` | yes | [VatRates](Common.md#Common.VatRate) |
+| `VatRate` | `VatRates` | no | [VatRates](Common.md#Common.VatRate) |
+| `ValidityTimeId` | `Int64` | no | [ValidityTimes](Sales.md#Sales.ValidityTime) |
+| `ValidityTime` | `ValidityTimes` | no | [ValidityTimes](Sales.md#Sales.ValidityTime) |
 | `Version` | `Int32` | no |  |
-| `VisitingAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `VisitingAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
-| `CustomerPartLinks` | `CustomerPartLinks[]` | no | [CustomerPartLinks](/modules/Sales.md#Sales.CustomerPartLink) |
-| `CaseEntries` | `CaseEntry[]` | no | [CaseEntry](/modules/Inventory.md#Inventory.CaseEntry) |
-| `OtherCustomerNumbers` | `OtherCustomerNumbers[]` | no | [OtherCustomerNumbers](/modules/Sales.md#Sales.OtherCustomerNumber) |
-| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](/modules/Common.md#Common.CommunicationAddress) |
-| `ExtraFields` | `ExtraFields[]` | no | [ExtraFields](/modules/Common.md#Common.ExtraField) |
+| `VisitingAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `VisitingAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
+| `CustomerPartLinks` | `CustomerPartLinks[]` | no | [CustomerPartLinks](Sales.md#Sales.CustomerPartLink) |
+| `CaseEntries` | `CaseEntry[]` | no | [CaseEntry](Inventory.md#Inventory.CaseEntry) |
+| `OtherCustomerNumbers` | `OtherCustomerNumbers[]` | no | [OtherCustomerNumbers](Sales.md#Sales.OtherCustomerNumber) |
+| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](Common.md#Common.CommunicationAddress) |
+| `ExtraFields` | `ExtraFields[]` | no | [ExtraFields](Common.md#Common.ExtraField) |
 | `PreliminaryPickingList` | `Boolean` | no |  |
-| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType) |
+| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType) |
 | `RootId` | `Int64` | no |  |
 | `EmployeeSpanId` | `Int64?` | yes |  |
-| `EmployeeSpan` | `CustomerEmployeeSpans` | no | [CustomerEmployeeSpans](/modules/Sales.md#Sales.CustomerEmployeeSpan) |
+| `EmployeeSpan` | `CustomerEmployeeSpans` | no | [CustomerEmployeeSpans](Sales.md#Sales.CustomerEmployeeSpan) |
 | `TinNumber` | `String` | no |  |
 
 - `BlockedStatus` — None=0, Message=1, Blocked=2
@@ -1490,8 +1490,8 @@ Represents a customer.
 - `ShowPartWeightInForms` (bitmask) — None=0, Quote=1, Acknowledgement=2, DeliveryNote=4, Invoice=8, ProFormaInvoice=16
 - `ComprehensiveInvoiceGroupingMode` — None=0, Customer=1, Order=2, DeliveryNote=3
 
-**References out:** [Addresses](/modules/Common.md#Common.Address), [ApplicationUsers](/modules/Common.md#Common.ApplicationUser), [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference), [CaseEntry](/modules/Inventory.md#Inventory.CaseEntry), [Comments](/modules/Common.md#Common.Comment), [CommunicationAddresses](/modules/Common.md#Common.CommunicationAddress), [Currencies](/modules/Common.md#Common.Currency), [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType), [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup), [CustomerDistricts](/modules/Sales.md#Sales.CustomerDistrict), [CustomerEmployeeSpans](/modules/Sales.md#Sales.CustomerEmployeeSpan), [CustomerPartLinks](/modules/Sales.md#Sales.CustomerPartLink), [Customers](/modules/Sales.md#Sales.Customer), [CustomerStatuses](/modules/Sales.md#Sales.CustomerStatus), [CustomerTypes](/modules/Sales.md#Sales.CustomerType), [DeliveryAddresses](/modules/Common.md#Common.DeliveryAddress), [DiscountCategories](/modules/Common.md#Common.DiscountCategory), [ExtraFields](/modules/Common.md#Common.ExtraField), [LanguageCodes](/modules/Common.md#Common.LanguageCode), [OtherCustomerNumbers](/modules/Sales.md#Sales.OtherCustomerNumber), [PaymentPlanTemplates](/modules/Common.md#Common.PaymentPlanTemplate), [PaymentTerms](/modules/Common.md#Common.PaymentTerm), [Persons](/modules/Common.md#Common.Person), [PriceLists](/modules/Common.md#Common.PriceList), [Probabilities](/modules/Common.md#Common.Probability), [Resellers](/modules/Common.md#Common.Reseller), [ValidityTimes](/modules/Sales.md#Sales.ValidityTime), [VatRates](/modules/Common.md#Common.VatRate)
-**Referenced by:** [AccountsReceivables](/modules/Accounting.md#Accounting.AccountsReceivable), [BlanketOrderSales](/modules/Sales.md#Sales.BlanketOrderSales), [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity), [BusinessOpportunityActivities](/modules/Sales.md#Sales.BusinessOpportunityActivity), [BusinessOpportunityReferences](/modules/Sales.md#Sales.BusinessOpportunityReference), [CaseEntry](/modules/Inventory.md#Inventory.CaseEntry), [CustomerCountryDocumentSettings](/modules/Sales.md#Sales.CustomerCountryDocumentSettings), [CustomerOrderInvoices](/modules/Sales.md#Sales.CustomerOrderInvoice), [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder), [CustomerPartLinks](/modules/Sales.md#Sales.CustomerPartLink), [CustomerRelationshipManagementActivities](/modules/Sales.md#Sales.CustomerRelationshipManagementActivity), [Customers](/modules/Sales.md#Sales.Customer), [EdiBehaviors](/modules/Common.md#Common.EdiBehavior), [FixedAssetSales](/modules/Accounting.md#Accounting.FixedAssetSale), [InvoiceLogs](/modules/Sales.md#Sales.InvoiceLog), [ManufacturingOrders](/modules/Manufacturing.md#Manufacturing.ManufacturingOrder), [OtherCustomerNumbers](/modules/Sales.md#Sales.OtherCustomerNumber), [PriceChangeLogs](/modules/Inventory.md#Inventory.PriceChangeLog), [ProductRecords](/modules/Inventory.md#Inventory.ProductRecord), [Projects](/modules/Common.md#Common.Project), [PurchaseOrders](/modules/Purchase.md#Purchase.PurchaseOrder), [Quotes](/modules/Sales.md#Sales.Quote), [SalesAgreements](/modules/Sales.md#Sales.SalesAgreement), [SalesForecasts](/modules/Inventory.md#Inventory.SalesForecast), [ShipmentInformationSources](/modules/Sales.md#Sales.ShipmentInformationSource), [Shipments](/modules/Sales.md#Sales.Shipment)
+**References out:** [Addresses](Common.md#Common.Address), [ApplicationUsers](Common.md#Common.ApplicationUser), [BusinessContactReferences](Common.md#Common.BusinessContactReference), [CaseEntry](Inventory.md#Inventory.CaseEntry), [Comments](Common.md#Common.Comment), [CommunicationAddresses](Common.md#Common.CommunicationAddress), [Currencies](Common.md#Common.Currency), [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType), [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup), [CustomerDistricts](Sales.md#Sales.CustomerDistrict), [CustomerEmployeeSpans](Sales.md#Sales.CustomerEmployeeSpan), [CustomerPartLinks](Sales.md#Sales.CustomerPartLink), [Customers](Sales.md#Sales.Customer), [CustomerStatuses](Sales.md#Sales.CustomerStatus), [CustomerTypes](Sales.md#Sales.CustomerType), [DeliveryAddresses](Common.md#Common.DeliveryAddress), [DiscountCategories](Common.md#Common.DiscountCategory), [ExtraFields](Common.md#Common.ExtraField), [LanguageCodes](Common.md#Common.LanguageCode), [OtherCustomerNumbers](Sales.md#Sales.OtherCustomerNumber), [PaymentPlanTemplates](Common.md#Common.PaymentPlanTemplate), [PaymentTerms](Common.md#Common.PaymentTerm), [Persons](Common.md#Common.Person), [PriceLists](Common.md#Common.PriceList), [Probabilities](Common.md#Common.Probability), [Resellers](Common.md#Common.Reseller), [ValidityTimes](Sales.md#Sales.ValidityTime), [VatRates](Common.md#Common.VatRate)
+**Referenced by:** [AccountsReceivables](Accounting.md#Accounting.AccountsReceivable), [BlanketOrderSales](Sales.md#Sales.BlanketOrderSales), [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity), [BusinessOpportunityActivities](Sales.md#Sales.BusinessOpportunityActivity), [BusinessOpportunityReferences](Sales.md#Sales.BusinessOpportunityReference), [CaseEntry](Inventory.md#Inventory.CaseEntry), [CustomerCountryDocumentSettings](Sales.md#Sales.CustomerCountryDocumentSettings), [CustomerOrderInvoices](Sales.md#Sales.CustomerOrderInvoice), [CustomerOrders](Sales.md#Sales.CustomerOrder), [CustomerPartLinks](Sales.md#Sales.CustomerPartLink), [CustomerRelationshipManagementActivities](Sales.md#Sales.CustomerRelationshipManagementActivity), [Customers](Sales.md#Sales.Customer), [EdiBehaviors](Common.md#Common.EdiBehavior), [FixedAssetSales](Accounting.md#Accounting.FixedAssetSale), [InvoiceLogs](Sales.md#Sales.InvoiceLog), [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder), [OtherCustomerNumbers](Sales.md#Sales.OtherCustomerNumber), [PriceChangeLogs](Inventory.md#Inventory.PriceChangeLog), [ProductRecords](Inventory.md#Inventory.ProductRecord), [Projects](Common.md#Common.Project), [PurchaseOrders](Purchase.md#Purchase.PurchaseOrder), [Quotes](Sales.md#Sales.Quote), [SalesAgreements](Sales.md#Sales.SalesAgreement), [SalesForecasts](Inventory.md#Inventory.SalesForecast), [ShipmentInformationSources](Sales.md#Sales.ShipmentInformationSource), [Shipments](Sales.md#Sales.Shipment)
 
 <a id="Sales.CustomerStatus"></a>
 ### CustomerStatuses
@@ -1509,7 +1509,7 @@ Represents a customer status.
 | `Description` | `String` | no |  |
 | `CompanyIds` | `Int64[]` | no |  |
 
-**Referenced by:** [Customers](/modules/Sales.md#Sales.Customer)
+**Referenced by:** [Customers](Sales.md#Sales.Customer)
 
 <a id="Sales.CustomerType"></a>
 ### CustomerTypes
@@ -1527,7 +1527,7 @@ Represents a customer type.
 | `Description` | `String` | no |  |
 | `CompanyIds` | `Int64[]` | no |  |
 
-**Referenced by:** [Customers](/modules/Sales.md#Sales.Customer)
+**Referenced by:** [Customers](Sales.md#Sales.Customer)
 
 <a id="Sales.InvoiceLog"></a>
 ### InvoiceLogs
@@ -1541,22 +1541,22 @@ Represents an invoice log entry.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `InvoiceId` | `Int64?` | yes | [AccountsReceivables](/modules/Accounting.md#Accounting.AccountsReceivable) |
+| `InvoiceId` | `Int64?` | yes | [AccountsReceivables](Accounting.md#Accounting.AccountsReceivable) |
 | `LoggingTimestamp` | `DateTimeOffset` | no |  |
 | `InvoiceDate` | `DateTimeOffset` | no |  |
 | `InvoiceNumber` | `Int64` | no |  |
-| `DeliveryRowId` | `Int64?` | yes | [CustomerOrderDeliveryRows](/modules/Sales.md#Sales.CustomerOrderDeliveryRow) |
-| `PartId` | `Int64?` | yes | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `DeliveryRowId` | `Int64?` | yes | [CustomerOrderDeliveryRows](Sales.md#Sales.CustomerOrderDeliveryRow) |
+| `PartId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
 | `PartNumber` | `String` | no |  |
 | `PartCategory` | `String` | no |  |
 | `PartCode` | `String` | no |  |
-| `CustomerId` | `Int64?` | yes | [Customers](/modules/Sales.md#Sales.Customer) |
+| `CustomerId` | `Int64?` | yes | [Customers](Sales.md#Sales.Customer) |
 | `CustomerCode` | `String` | no |  |
 | `CustomerGroup` | `Int64?` | yes |  |
-| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder) |
+| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](Sales.md#Sales.CustomerOrder) |
 | `CustomerOrderNumber` | `String` | no |  |
-| `WarehouseId` | `Int64?` | yes | [Warehouses](/modules/Common.md#Common.Warehouse) |
-| `UserId` | `Int64?` | yes | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
+| `WarehouseId` | `Int64?` | yes | [Warehouses](Common.md#Common.Warehouse) |
+| `UserId` | `Int64?` | yes | [ApplicationUsers](Common.md#Common.ApplicationUser) |
 | `UserName` | `String` | no |  |
 | `Seller` | `String` | no |  |
 | `OrderedQuantity` | `Decimal` | no |  |
@@ -1588,7 +1588,7 @@ Represents an invoice log entry.
 
 - `OrderRowType` — Part=1, Additional=2, Sum=3, FreeText=4
 
-**References out:** [AccountsReceivables](/modules/Accounting.md#Accounting.AccountsReceivable), [ApplicationUsers](/modules/Common.md#Common.ApplicationUser), [CustomerOrderDeliveryRows](/modules/Sales.md#Sales.CustomerOrderDeliveryRow), [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder), [Customers](/modules/Sales.md#Sales.Customer), [Parts](/modules/Inventory.md#Inventory.Part), [Warehouses](/modules/Common.md#Common.Warehouse)
+**References out:** [AccountsReceivables](Accounting.md#Accounting.AccountsReceivable), [ApplicationUsers](Common.md#Common.ApplicationUser), [CustomerOrderDeliveryRows](Sales.md#Sales.CustomerOrderDeliveryRow), [CustomerOrders](Sales.md#Sales.CustomerOrder), [Customers](Sales.md#Sales.Customer), [Parts](Inventory.md#Inventory.Part), [Warehouses](Common.md#Common.Warehouse)
 
 <a id="Sales.OrderQuantityCustomerOrder"></a>
 ### OrderQuantityCustomerOrders
@@ -1602,10 +1602,10 @@ Represents a order quantity template on part that holds many partial quantities.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `PartialQuantities` | `PartialQuantities[]` | no | [PartialQuantities](/modules/Common.md#Common.PartialQuantity) |
+| `PartialQuantities` | `PartialQuantities[]` | no | [PartialQuantities](Common.md#Common.PartialQuantity) |
 
-**References out:** [PartialQuantities](/modules/Common.md#Common.PartialQuantity)
-**Referenced by:** [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow)
+**References out:** [PartialQuantities](Common.md#Common.PartialQuantity)
+**Referenced by:** [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow)
 
 <a id="Sales.OtherCustomerNumber"></a>
 ### OtherCustomerNumbers
@@ -1621,11 +1621,11 @@ Represents an alternative customer code mainly used for EDI.
 | `Id` | `Int64` | no |  |
 | `IsDefault` | `Boolean` | no |  |
 | `Number` | `String` | no |  |
-| `CustomerId` | `Int64` | no | [Customers](/modules/Sales.md#Sales.Customer) |
+| `CustomerId` | `Int64` | no | [Customers](Sales.md#Sales.Customer) |
 | `CompanyIds` | `Int64[]` | no |  |
 
-**References out:** [Customers](/modules/Sales.md#Sales.Customer)
-**Referenced by:** [Customers](/modules/Sales.md#Sales.Customer)
+**References out:** [Customers](Sales.md#Sales.Customer)
+**Referenced by:** [Customers](Sales.md#Sales.Customer)
 
 <a id="Sales.PackageRowPartLocation"></a>
 ### PackageRowPartLocations
@@ -1639,12 +1639,12 @@ Represents a package row's location.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `ParentPackageRowId` | `Int64` | no | [PackageRows](/modules/Sales.md#Sales.PackageRow) |
-| `PartLocationId` | `Int64` | no | [PartLocations](/modules/Inventory.md#Inventory.PartLocation) |
-| `ProductRecordId` | `Int64?` | yes | [ProductRecords](/modules/Inventory.md#Inventory.ProductRecord) |
+| `ParentPackageRowId` | `Int64` | no | [PackageRows](Sales.md#Sales.PackageRow) |
+| `PartLocationId` | `Int64` | no | [PartLocations](Inventory.md#Inventory.PartLocation) |
+| `ProductRecordId` | `Int64?` | yes | [ProductRecords](Inventory.md#Inventory.ProductRecord) |
 | `BalanceChange` | `Decimal` | no |  |
 
-**References out:** [PackageRows](/modules/Sales.md#Sales.PackageRow), [PartLocations](/modules/Inventory.md#Inventory.PartLocation), [ProductRecords](/modules/Inventory.md#Inventory.ProductRecord)
+**References out:** [PackageRows](Sales.md#Sales.PackageRow), [PartLocations](Inventory.md#Inventory.PartLocation), [ProductRecords](Inventory.md#Inventory.ProductRecord)
 
 <a id="Sales.PackageRow"></a>
 ### PackageRows
@@ -1658,10 +1658,10 @@ Represents a package row.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `ParentId` | `Int64?` | yes | [SalesPickingLists](/modules/Sales.md#Sales.SalesPickingList) |
-| `ParentRowId` | `Int64?` | yes | [PackageRows](/modules/Sales.md#Sales.PackageRow) |
-| `CustomerOrderDeliveryRowId` | `Int64?` | yes | [CustomerOrderDeliveryRows](/modules/Sales.md#Sales.CustomerOrderDeliveryRow) |
-| `PackagingPartId` | `Int64?` | yes | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `ParentId` | `Int64?` | yes | [SalesPickingLists](Sales.md#Sales.SalesPickingList) |
+| `ParentRowId` | `Int64?` | yes | [PackageRows](Sales.md#Sales.PackageRow) |
+| `CustomerOrderDeliveryRowId` | `Int64?` | yes | [CustomerOrderDeliveryRows](Sales.md#Sales.CustomerOrderDeliveryRow) |
+| `PackagingPartId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
 | `Cleared` | `Boolean` | no |  |
 | `ContainerNumber` | `String` | no |  |
 | `SealNumber` | `String` | no |  |
@@ -1676,18 +1676,18 @@ Represents a package row.
 | `VolumeCalculated` | `Decimal` | no |  |
 | `GrossWeight` | `Decimal?` | yes |  |
 | `GrossWeightCalculated` | `Decimal` | no |  |
-| `ExternalCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `ExternalComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
-| `InternalCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `InternalComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `ExternalCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `ExternalComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| `InternalCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `InternalComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 | `PackageComplete` | `Boolean` | no |  |
 | `BalanceChange` | `Decimal` | no |  |
 | `TemplateCode` | `String` | no |  |
 
 - `OtherPackageNumberNumberSeriesType` — NotInitalized=0, CustomerOrderNumber=2, PurchaseOrderNumber=3, AccountsReceivableNumber=4, SupplierCode=5, CustomerCode=6, AccountsPayableNumber=7, InventoryLogPriceId=13, PickingListNumber=14, AccountsReceivableLedgerNumber=15, RejectionLogId=16, ReportNumberForMaterial=17, ReportNumberForOperation=18, ManufacturingOrderNumber=19, AccountsReceivableNumberCashReceipt=20, AccountsReceivableNumberInterest=21, AccountsReceivableNumberInternal=22, AccountsReceivableNumberCredit=23, ProformaInvoiceNumber=24, DeliveryNoteNumber=25, PhysicalInventoryList=27, VoucherNumber=28, AutoCoding=29, AutoAllocation=30, ManufacturingPickingListNumber=31, AccountsReceivableNumberOnAccount=32, IncomingPaymentsBundleNumber=33, AccrualAccountingNumber=34, ShipmentNumber=35, AccountsPayableNumberOnAccount=36, OutgoingPaymentsBundleNumber=37, CaseNumber=38, TransactionList=39, Quote=40, Inquiry=41, Project=43, ProjectCostReportingEntry=44, FixedAsset=45, EdiFileTransaction=46, ServerPrinterNumber=47, AgentTaskNumber=48, MonitoringTaskNumber=49, DeliverySchedule=50, AccountsReceivableNumberDebitNote=51, AccountsReceivableNumberServiceTax=52, CodingMethod=53, TransferTask=54, BlanketOrderPurchase=55, ArrivalNote=56, GS1Code=57, AccountsReceivableNumberCorrectionInvoice=58, PackageNumber=59, MaintenanceReportingServiceNumber=60, BlanketOrderSales=61, AccountingReport=62, VatReport=63, PaymentBundleNumber=64, PackagingTemplateNumber=65, AllocationKeyNumber=66, PurchaseDeliverySchedule=67, SalesAgreement=68, AccountsReceivableNumberAdvance=69, SsccPackage=70, SalesForecast=71, BankAccountReconciliationReport=72, AccountsReceivableNumberCollectiveCorrectionInvoice=73, OscarPackage=74, DunsPackage=75, JipdecPackage=76, AccountsPayableNumberCorrectionInvoice=77, BusinessOpportunity=78, DeliveryNoteSubcontract=79, SupplierAgreement=80
 
-**References out:** [Comments](/modules/Common.md#Common.Comment), [CustomerOrderDeliveryRows](/modules/Sales.md#Sales.CustomerOrderDeliveryRow), [PackageRows](/modules/Sales.md#Sales.PackageRow), [Parts](/modules/Inventory.md#Inventory.Part), [SalesPickingLists](/modules/Sales.md#Sales.SalesPickingList)
-**Referenced by:** [PackageRowPartLocations](/modules/Sales.md#Sales.PackageRowPartLocation), [PackageRows](/modules/Sales.md#Sales.PackageRow)
+**References out:** [Comments](Common.md#Common.Comment), [CustomerOrderDeliveryRows](Sales.md#Sales.CustomerOrderDeliveryRow), [PackageRows](Sales.md#Sales.PackageRow), [Parts](Inventory.md#Inventory.Part), [SalesPickingLists](Sales.md#Sales.SalesPickingList)
+**Referenced by:** [PackageRowPartLocations](Sales.md#Sales.PackageRowPartLocation), [PackageRows](Sales.md#Sales.PackageRow)
 
 <a id="Sales.QuoteActivity"></a>
 ### QuoteActivities
@@ -1701,15 +1701,15 @@ Represents a quote activity.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `QuoteId` | `Int64` | no | [Quotes](/modules/Sales.md#Sales.Quote) |
+| `QuoteId` | `Int64` | no | [Quotes](Sales.md#Sales.Quote) |
 | `IsMandatory` | `Boolean` | no |  |
-| `ActivityTypeId` | `Int64` | no | [CustomerRelationshipActivityTypes](/modules/Sales.md#Sales.CustomerRelationshipActivityType) |
+| `ActivityTypeId` | `Int64` | no | [CustomerRelationshipActivityTypes](Sales.md#Sales.CustomerRelationshipActivityType) |
 | `CalendarAppointmentId` | `String` | no |  |
-| `CompletedByUserId` | `Int64?` | yes | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
-| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
+| `CompletedByUserId` | `Int64?` | yes | [ApplicationUsers](Common.md#Common.ApplicationUser) |
+| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](Common.md#Common.ApplicationUser) |
 | `Description` | `String` | no |  |
-| `CommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 | `Status` | `Int32` | no |  |
 | `ReminderId` | `Int64?` | yes |  |
 | `PlannedCompletionDate` | `DateTimeOffset` | no |  |
@@ -1724,7 +1724,7 @@ Represents a quote activity.
 - `Status` — Registered=1, InProgress=2, History=9
 - `DueDateType` — RegistrationDate=0, ValidThrough=1
 
-**References out:** [ApplicationUsers](/modules/Common.md#Common.ApplicationUser), [Comments](/modules/Common.md#Common.Comment), [CustomerRelationshipActivityTypes](/modules/Sales.md#Sales.CustomerRelationshipActivityType), [Quotes](/modules/Sales.md#Sales.Quote)
+**References out:** [ApplicationUsers](Common.md#Common.ApplicationUser), [Comments](Common.md#Common.Comment), [CustomerRelationshipActivityTypes](Sales.md#Sales.CustomerRelationshipActivityType), [Quotes](Sales.md#Sales.Quote)
 
 <a id="Sales.QuoteOrderRowDiscount"></a>
 ### QuoteOrderRowDiscounts
@@ -1738,17 +1738,17 @@ Represents a discount row for a quote row.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `OrderRowId` | `Int64` | no | [QuoteRows](/modules/Sales.md#Sales.QuoteRow) |
-| `DiscountId` | `Int64?` | yes | [Discounts](/modules/Common.md#Common.Discount) |
+| `OrderRowId` | `Int64` | no | [QuoteRows](Sales.md#Sales.QuoteRow) |
+| `DiscountId` | `Int64?` | yes | [Discounts](Common.md#Common.Discount) |
 | `AsPercent` | `Decimal?` | yes |  |
 | `DiscountLockedFromAutomaticChanges` | `Boolean` | no |  |
 | `AsAmount` | `Decimal?` | yes |  |
-| `AsAmountCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `AsAmountCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `DiscountType` | `Int32` | no |  |
 | `GrossPrice` | `Decimal?` | yes |  |
-| `GrossPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `GrossPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `NetPrice` | `Decimal?` | yes |  |
-| `NetPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `NetPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `DiscountCalculationType` | `Int32` | no |  |
 | `Priority` | `Int32` | no |  |
 | `ReplacesDiscountFieldOnOrderRow` | `Boolean` | no |  |
@@ -1756,8 +1756,8 @@ Represents a discount row for a quote row.
 - `DiscountType` — Discount=0, OrderDiscount=1, TotalRowDiscount=2, ProjectDiscount=3, CustomerDiscountOnDiscount=4, OrderTypeDiscount=5, ManualDiscount=99
 - `DiscountCalculationType` — Percent=1, Amount=2
 
-**References out:** [Currencies](/modules/Common.md#Common.Currency), [Discounts](/modules/Common.md#Common.Discount), [QuoteRows](/modules/Sales.md#Sales.QuoteRow)
-**Referenced by:** [QuoteRows](/modules/Sales.md#Sales.QuoteRow)
+**References out:** [Currencies](Common.md#Common.Currency), [Discounts](Common.md#Common.Discount), [QuoteRows](Sales.md#Sales.QuoteRow)
+**Referenced by:** [QuoteRows](Sales.md#Sales.QuoteRow)
 
 <a id="Sales.QuoteRow"></a>
 ### QuoteRows
@@ -1773,33 +1773,33 @@ Represents a quote row.
 | `Id` | `Int64` | no |  |
 | `Position` | `Int64?` | yes |  |
 | `OrderRowType` | `Int32` | no |  |
-| `PartId` | `Int64?` | yes | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `PartId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
 | `EntityIdentityString` | `String` | no |  |
 | `AdditionalRowDescription` | `String` | no |  |
 | `FreeTextHtml` | `String` | no |  |
 | `FreeText` | `String` | no |  |
-| `ParentRowId` | `Int64?` | yes | [QuoteRows](/modules/Sales.md#Sales.QuoteRow) |
+| `ParentRowId` | `Int64?` | yes | [QuoteRows](Sales.md#Sales.QuoteRow) |
 | `DeliveryDate` | `DateTimeOffset?` | yes |  |
-| `RevisionId` | `Int64?` | yes | [Revisions](/modules/Common.md#Common.Revision) |
-| `Revision` | `Revisions` | no | [Revisions](/modules/Common.md#Common.Revision) |
+| `RevisionId` | `Int64?` | yes | [Revisions](Common.md#Common.Revision) |
+| `Revision` | `Revisions` | no | [Revisions](Common.md#Common.Revision) |
 | `OrderedQuantity` | `Decimal` | no |  |
 | `Price` | `Decimal?` | yes |  |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `Discount` | `Decimal` | no |  |
 | `ToolId` | `Int64?` | yes |  |
-| `UnitId` | `Int64?` | yes | [Units](/modules/Common.md#Common.Unit) |
-| `Unit` | `Units` | no | [Units](/modules/Common.md#Common.Unit) |
-| `VatRateId` | `Int64` | no | [VatRates](/modules/Common.md#Common.VatRate) |
-| `WarehouseId` | `Int64` | no | [Warehouses](/modules/Common.md#Common.Warehouse) |
+| `UnitId` | `Int64?` | yes | [Units](Common.md#Common.Unit) |
+| `Unit` | `Units` | no | [Units](Common.md#Common.Unit) |
+| `VatRateId` | `Int64` | no | [VatRates](Common.md#Common.VatRate) |
+| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) |
 | `WeightPerUnit` | `Decimal?` | yes |  |
 | `OrderDate` | `DateTimeOffset` | no |  |
 | `ConversionFactor` | `Decimal` | no |  |
 | `PriceInCompanyCurrency` | `Decimal?` | yes |  |
-| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `SetupPriceInCompanyCurrency` | `Decimal?` | yes |  |
-| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `StandardPrice` | `Decimal?` | yes |  |
-| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `SetupPrice` | `Decimal?` | yes |  |
 | `SetupPriceCurrencyId` | `Int64?` | yes |  |
 | `ShowPrice` | `Boolean` | no |  |
@@ -1809,19 +1809,19 @@ Represents a quote row.
 | `OrderedQuantityInOrderUnit` | `Decimal` | no |  |
 | `AlternatePreparationCode` | `String` | no |  |
 | `ShowFreeTextIn` | `Int32` | no |  |
-| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](/modules/Common.md#Common.StatisticalGoodsCode) |
-| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder) |
+| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](Common.md#Common.StatisticalGoodsCode) |
+| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](Sales.md#Sales.CustomerOrder) |
 | `ExemptFromStatistics` | `Boolean` | no |  |
-| `ParentOrderId` | `Int64` | no | [Quotes](/modules/Sales.md#Sales.Quote) |
+| `ParentOrderId` | `Int64` | no | [Quotes](Sales.md#Sales.Quote) |
 | `CodingId` | `Int64?` | yes |  |
-| `Coding` | `Codings` | no | [Codings](/modules/Accounting.md#Accounting.Coding) |
+| `Coding` | `Codings` | no | [Codings](Accounting.md#Accounting.Coding) |
 | `RowsGoodsLabel` | `String` | no |  |
 | `PartConfigurationId` | `Int64?` | yes |  |
 | `RowIndex` | `Int32?` | yes |  |
-| `TransferProfileId` | `Int64?` | yes | [TransferProfiles](/modules/Common.md#Common.TransferProfile) |
-| `PartConfigurationIdInRemoteCompany` | `Int64?` | yes | [PartConfigurations](/modules/Common.md#Common.PartConfiguration) |
+| `TransferProfileId` | `Int64?` | yes | [TransferProfiles](Common.md#Common.TransferProfile) |
+| `PartConfigurationIdInRemoteCompany` | `Int64?` | yes | [PartConfigurations](Common.md#Common.PartConfiguration) |
 | `CreateCustomerOrder` | `Boolean` | no |  |
-| `DiscountRows` | `QuoteOrderRowDiscounts[]` | no | [QuoteOrderRowDiscounts](/modules/Sales.md#Sales.QuoteOrderRowDiscount) |
+| `DiscountRows` | `QuoteOrderRowDiscounts[]` | no | [QuoteOrderRowDiscounts](Sales.md#Sales.QuoteOrderRowDiscount) |
 
 - `OrderRowType` — Part=1, Additional=2, Sum=3, FreeText=4
 - `PartRowType` — NotPartRow=0, RegularRow=1, SubPartRow=2, SetupPriceRow=3, AlloyCostRow=4, PaymentPlanRow=5, PackagingRow=6
@@ -1829,8 +1829,8 @@ Represents a quote row.
 - `PartStatus` — Quote=1, Prototype=2, New=3, Normal=4, NewRevision=5, PhasingOut=6, Expired=9, Inactive=99
 - `ShowFreeTextIn` (bitmask) — None=0, Quote=1, Acknowledgement=2, DeliveryNote=4, Invoice=8, ProFormaInvoice=16
 
-**References out:** [Codings](/modules/Accounting.md#Accounting.Coding), [Currencies](/modules/Common.md#Common.Currency), [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder), [PartConfigurations](/modules/Common.md#Common.PartConfiguration), [Parts](/modules/Inventory.md#Inventory.Part), [QuoteOrderRowDiscounts](/modules/Sales.md#Sales.QuoteOrderRowDiscount), [QuoteRows](/modules/Sales.md#Sales.QuoteRow), [Quotes](/modules/Sales.md#Sales.Quote), [Revisions](/modules/Common.md#Common.Revision), [StatisticalGoodsCodes](/modules/Common.md#Common.StatisticalGoodsCode), [TransferProfiles](/modules/Common.md#Common.TransferProfile), [Units](/modules/Common.md#Common.Unit), [VatRates](/modules/Common.md#Common.VatRate), [Warehouses](/modules/Common.md#Common.Warehouse)
-**Referenced by:** [QuoteOrderRowDiscounts](/modules/Sales.md#Sales.QuoteOrderRowDiscount), [QuoteRows](/modules/Sales.md#Sales.QuoteRow), [Quotes](/modules/Sales.md#Sales.Quote)
+**References out:** [Codings](Accounting.md#Accounting.Coding), [Currencies](Common.md#Common.Currency), [CustomerOrders](Sales.md#Sales.CustomerOrder), [PartConfigurations](Common.md#Common.PartConfiguration), [Parts](Inventory.md#Inventory.Part), [QuoteOrderRowDiscounts](Sales.md#Sales.QuoteOrderRowDiscount), [QuoteRows](Sales.md#Sales.QuoteRow), [Quotes](Sales.md#Sales.Quote), [Revisions](Common.md#Common.Revision), [StatisticalGoodsCodes](Common.md#Common.StatisticalGoodsCode), [TransferProfiles](Common.md#Common.TransferProfile), [Units](Common.md#Common.Unit), [VatRates](Common.md#Common.VatRate), [Warehouses](Common.md#Common.Warehouse)
+**Referenced by:** [QuoteOrderRowDiscounts](Sales.md#Sales.QuoteOrderRowDiscount), [QuoteRows](Sales.md#Sales.QuoteRow), [Quotes](Sales.md#Sales.Quote)
 
 <a id="Sales.Quote"></a>
 ### Quotes
@@ -1844,32 +1844,32 @@ Represents a quote.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](/modules/Common.md#Common.PaymentTerm) |
-| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](/modules/Common.md#Common.PaymentTerm) |
+| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](Common.md#Common.PaymentTerm) |
+| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](Common.md#Common.PaymentTerm) |
 | `PaymentTermDescription` | `String` | no |  |
 | `GracePeriodInDays` | `Int32?` | yes |  |
-| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod) |
-| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](/modules/Common.md#Common.DeliveryTerm) |
+| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](Common.md#Common.DeliveryMethod) |
+| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](Common.md#Common.DeliveryTerm) |
 | `DeliveryTermDescription` | `String` | no |  |
 | `DeliveryMethodDescription` | `String` | no |  |
 | `ShipmentPayer` | `Int32` | no |  |
 | `BusinessContactOrderNumber` | `String` | no |  |
-| `OurReferenceId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
+| `OurReferenceId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
 | `OurReferenceName` | `String` | no |  |
-| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
+| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
 | `BusinessContactReferenceName` | `String` | no |  |
 | `GoodsLabel` | `String` | no |  |
-| `CurrencyId` | `Int64` | no | [Currencies](/modules/Common.md#Common.Currency) |
-| `VatGroupId` | `Int64` | no | [VatGroups](/modules/Common.md#Common.VatGroup) |
-| `WarehouseId` | `Int64` | no | [Warehouses](/modules/Common.md#Common.Warehouse) |
+| `CurrencyId` | `Int64` | no | [Currencies](Common.md#Common.Currency) |
+| `VatGroupId` | `Int64` | no | [VatGroups](Common.md#Common.VatGroup) |
+| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) |
 | `Priority` | `Int32` | no |  |
 | `ProjectId` | `Int64?` | yes |  |
 | `SendMethod` | `Int32` | no |  |
 | `InvoicePrintoutMethod` | `Int32` | no |  |
-| `InternalCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `InternalComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
-| `ExternalCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `ExternalComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `InternalCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `InternalComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| `ExternalCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `ExternalComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 | `TransportTime` | `Int32?` | yes |  |
 | `LifeCycleState` | `Int32` | no |  |
 | `Version` | `Int32` | no |  |
@@ -1877,52 +1877,52 @@ Represents a quote.
 | `ExchangeRate` | `Decimal` | no |  |
 | `OrderAmount` | `Decimal` | no |  |
 | `OrderAmountInCompanyCurrency` | `Decimal` | no |  |
-| `CustomerId` | `Int64` | no | [Customers](/modules/Sales.md#Sales.Customer) |
+| `CustomerId` | `Int64` | no | [Customers](Sales.md#Sales.Customer) |
 | `OrderNumber` | `String` | no |  |
 | `OrderDate` | `DateTimeOffset?` | yes |  |
-| `Rows` | `QuoteRows[]` | no | [QuoteRows](/modules/Sales.md#Sales.QuoteRow) |
-| `SellerId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
-| `DeliveryAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `DeliveryAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
-| `MailingAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `MailingAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
+| `Rows` | `QuoteRows[]` | no | [QuoteRows](Sales.md#Sales.QuoteRow) |
+| `SellerId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
+| `DeliveryAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `DeliveryAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
+| `MailingAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `MailingAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
 | `VatNumber` | `String` | no |  |
 | `Status` | `Int32` | no |  |
-| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](/modules/Common.md#Common.CommunicationAddress) |
+| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](Common.md#Common.CommunicationAddress) |
 | `QuoteDate` | `DateTimeOffset` | no |  |
 | `QuoteDescription` | `String` | no |  |
 | `LatestContactDate` | `DateTimeOffset?` | yes |  |
 | `RequestForQuoteDate` | `DateTimeOffset` | no |  |
-| `ValidityTimeId` | `Int64?` | yes | [ValidityTimes](/modules/Sales.md#Sales.ValidityTime) |
-| `ValidityTime` | `ValidityTimes` | no | [ValidityTimes](/modules/Sales.md#Sales.ValidityTime) |
+| `ValidityTimeId` | `Int64?` | yes | [ValidityTimes](Sales.md#Sales.ValidityTime) |
+| `ValidityTime` | `ValidityTimes` | no | [ValidityTimes](Sales.md#Sales.ValidityTime) |
 | `ValidityTimeDescription` | `String` | no |  |
 | `ValidityTimeInDays` | `Int32` | no |  |
 | `ValidThroughDate` | `DateTimeOffset` | no |  |
-| `ProbabilityId` | `Int64` | no | [Probabilities](/modules/Common.md#Common.Probability) |
-| `Probability` | `Probabilities` | no | [Probabilities](/modules/Common.md#Common.Probability) |
-| `ReasonCodeLostQuoteId` | `Int64?` | yes | [ReasonCodeLostQuotes](/modules/Sales.md#Sales.ReasonCodeLostQuote) |
-| `ReasonCodeLostQuote` | `ReasonCodeLostQuotes` | no | [ReasonCodeLostQuotes](/modules/Sales.md#Sales.ReasonCodeLostQuote) |
-| `ReasonLostCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `ReasonLostComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
-| `OrderTypeId` | `Int64?` | yes | [QuoteTypes](/modules/Sales.md#Sales.QuoteType) |
-| `OrderType` | `QuoteTypes` | no | [QuoteTypes](/modules/Sales.md#Sales.QuoteType) |
+| `ProbabilityId` | `Int64` | no | [Probabilities](Common.md#Common.Probability) |
+| `Probability` | `Probabilities` | no | [Probabilities](Common.md#Common.Probability) |
+| `ReasonCodeLostQuoteId` | `Int64?` | yes | [ReasonCodeLostQuotes](Sales.md#Sales.ReasonCodeLostQuote) |
+| `ReasonCodeLostQuote` | `ReasonCodeLostQuotes` | no | [ReasonCodeLostQuotes](Sales.md#Sales.ReasonCodeLostQuote) |
+| `ReasonLostCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `ReasonLostComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| `OrderTypeId` | `Int64?` | yes | [QuoteTypes](Sales.md#Sales.QuoteType) |
+| `OrderType` | `QuoteTypes` | no | [QuoteTypes](Sales.md#Sales.QuoteType) |
 | `Preliminary` | `Boolean` | no |  |
-| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType) |
-| `DeliveryTimeId` | `Int64?` | yes | [DeliveryTimes](/modules/Common.md#Common.DeliveryTime) |
-| `DeliveryTime` | `DeliveryTimes` | no | [DeliveryTimes](/modules/Common.md#Common.DeliveryTime) |
+| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType) |
+| `DeliveryTimeId` | `Int64?` | yes | [DeliveryTimes](Common.md#Common.DeliveryTime) |
+| `DeliveryTime` | `DeliveryTimes` | no | [DeliveryTimes](Common.md#Common.DeliveryTime) |
 | `DeliveryTimeInDays` | `Int32?` | yes |  |
-| `AccountGroupId` | `Int64` | no | [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup) |
-| `AccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup) |
+| `AccountGroupId` | `Int64` | no | [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup) |
+| `AccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup) |
 | `CategoryString` | `String` | no |  |
 | `DestinationForDeliveryTerm` | `String` | no |  |
 | `EditedOrderAmountExcludingVat` | `Decimal?` | yes |  |
-| `EditedOrderAmountExcludingVatCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `EditedOrderAmountExcludingVatCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `EditedOrderAmountDiscount` | `Decimal?` | yes |  |
 | `TypeOfOrderAmountEntered` | `Int32?` | yes |  |
 | `Factoring` | `Boolean` | no |  |
-| `BusinessOpportunityId` | `Int64?` | yes | [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity) |
-| `BusinessOpportunity` | `BusinessOpportunities` | no | [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity) |
-| `RelatedQuotesId` | `Int64?` | yes | [RelatedQuotes](/modules/Sales.md#Sales.RelatedQuote) |
+| `BusinessOpportunityId` | `Int64?` | yes | [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity) |
+| `BusinessOpportunity` | `BusinessOpportunities` | no | [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity) |
+| `RelatedQuotesId` | `Int64?` | yes | [RelatedQuotes](Sales.md#Sales.RelatedQuote) |
 
 - `ShipmentPayer` — BuyerPays=1, SellerPays=2, OtherPayer=3, Incoterms=4
 - `SendMethod` — Printer=0, Email=1, Edi=2, None=9
@@ -1931,8 +1931,8 @@ Represents a quote.
 - `Status` — Registered=1, Printed=2, Closed=6, PartialOrder=7, OrderViaRelatedQuote=8, Order=9
 - `TypeOfOrderAmountEntered` — Percent=1, Amount=2
 
-**References out:** [Addresses](/modules/Common.md#Common.Address), [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference), [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity), [Comments](/modules/Common.md#Common.Comment), [CommunicationAddresses](/modules/Common.md#Common.CommunicationAddress), [Currencies](/modules/Common.md#Common.Currency), [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType), [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup), [Customers](/modules/Sales.md#Sales.Customer), [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod), [DeliveryTerms](/modules/Common.md#Common.DeliveryTerm), [DeliveryTimes](/modules/Common.md#Common.DeliveryTime), [PaymentTerms](/modules/Common.md#Common.PaymentTerm), [Persons](/modules/Common.md#Common.Person), [Probabilities](/modules/Common.md#Common.Probability), [QuoteRows](/modules/Sales.md#Sales.QuoteRow), [QuoteTypes](/modules/Sales.md#Sales.QuoteType), [ReasonCodeLostQuotes](/modules/Sales.md#Sales.ReasonCodeLostQuote), [RelatedQuotes](/modules/Sales.md#Sales.RelatedQuote), [ValidityTimes](/modules/Sales.md#Sales.ValidityTime), [VatGroups](/modules/Common.md#Common.VatGroup), [Warehouses](/modules/Common.md#Common.Warehouse)
-**Referenced by:** [QuoteActivities](/modules/Sales.md#Sales.QuoteActivity), [QuoteRows](/modules/Sales.md#Sales.QuoteRow), [RelatedQuoteEntries](/modules/Sales.md#Sales.RelatedQuoteEntry)
+**References out:** [Addresses](Common.md#Common.Address), [BusinessContactReferences](Common.md#Common.BusinessContactReference), [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity), [Comments](Common.md#Common.Comment), [CommunicationAddresses](Common.md#Common.CommunicationAddress), [Currencies](Common.md#Common.Currency), [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType), [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup), [Customers](Sales.md#Sales.Customer), [DeliveryMethods](Common.md#Common.DeliveryMethod), [DeliveryTerms](Common.md#Common.DeliveryTerm), [DeliveryTimes](Common.md#Common.DeliveryTime), [PaymentTerms](Common.md#Common.PaymentTerm), [Persons](Common.md#Common.Person), [Probabilities](Common.md#Common.Probability), [QuoteRows](Sales.md#Sales.QuoteRow), [QuoteTypes](Sales.md#Sales.QuoteType), [ReasonCodeLostQuotes](Sales.md#Sales.ReasonCodeLostQuote), [RelatedQuotes](Sales.md#Sales.RelatedQuote), [ValidityTimes](Sales.md#Sales.ValidityTime), [VatGroups](Common.md#Common.VatGroup), [Warehouses](Common.md#Common.Warehouse)
+**Referenced by:** [QuoteActivities](Sales.md#Sales.QuoteActivity), [QuoteRows](Sales.md#Sales.QuoteRow), [RelatedQuoteEntries](Sales.md#Sales.RelatedQuoteEntry)
 
 <a id="Sales.QuoteType"></a>
 ### QuoteTypes
@@ -1953,21 +1953,21 @@ Represents a quote type.
 | `Visible` | `Boolean` | no |  |
 | `IsPreset` | `Boolean` | no |  |
 | `PriceSetting` | `Int32` | no |  |
-| `PriceListId` | `Int64?` | yes | [PriceLists](/modules/Common.md#Common.PriceList) |
+| `PriceListId` | `Int64?` | yes | [PriceLists](Common.md#Common.PriceList) |
 | `BaseType` | `Int32` | no |  |
 | `CodingGroupId` | `Int64` | no |  |
-| `FormReportConfigurationId` | `Int64?` | yes | [FormReportConfigurations](/modules/Common.md#Common.FormReportConfiguration) |
+| `FormReportConfigurationId` | `Int64?` | yes | [FormReportConfigurations](Common.md#Common.FormReportConfiguration) |
 | `RateTypeSetting` | `Int32` | no |  |
-| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType) |
-| `CustomerOrderTypeId` | `Int64?` | yes | [CustomerOrderTypes](/modules/Sales.md#Sales.CustomerOrderType) |
-| `CustomerOrderType` | `CustomerOrderTypes` | no | [CustomerOrderTypes](/modules/Sales.md#Sales.CustomerOrderType) |
+| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType) |
+| `CustomerOrderTypeId` | `Int64?` | yes | [CustomerOrderTypes](Sales.md#Sales.CustomerOrderType) |
+| `CustomerOrderType` | `CustomerOrderTypes` | no | [CustomerOrderTypes](Sales.md#Sales.CustomerOrderType) |
 
 - `PriceSetting` — Customer=1, PriceList=2, StandardPrice=3
 - `BaseType` — Quote=0
 - `RateTypeSetting` — Customer=1, OrderType=2
 
-**References out:** [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType), [CustomerOrderTypes](/modules/Sales.md#Sales.CustomerOrderType), [FormReportConfigurations](/modules/Common.md#Common.FormReportConfiguration), [PriceLists](/modules/Common.md#Common.PriceList)
-**Referenced by:** [Quotes](/modules/Sales.md#Sales.Quote)
+**References out:** [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType), [CustomerOrderTypes](Sales.md#Sales.CustomerOrderType), [FormReportConfigurations](Common.md#Common.FormReportConfiguration), [PriceLists](Common.md#Common.PriceList)
+**Referenced by:** [Quotes](Sales.md#Sales.Quote)
 
 <a id="Sales.ReasonCodeLostQuote"></a>
 ### ReasonCodeLostQuotes
@@ -1986,7 +1986,7 @@ Represents a reason code for a lost quote.
 | `CommentMandatory` | `Boolean` | no |  |
 | `Active` | `Boolean` | no |  |
 
-**Referenced by:** [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity), [Quotes](/modules/Sales.md#Sales.Quote)
+**Referenced by:** [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity), [Quotes](Sales.md#Sales.Quote)
 
 <a id="Sales.RelatedQuoteEntry"></a>
 ### RelatedQuoteEntries
@@ -2000,11 +2000,11 @@ Represents a related quote entry.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `QuoteId` | `Int64?` | yes | [Quotes](/modules/Sales.md#Sales.Quote) |
+| `QuoteId` | `Int64?` | yes | [Quotes](Sales.md#Sales.Quote) |
 | `IsPrimary` | `Boolean` | no |  |
-| `RelatedQuotesId` | `Int64?` | yes | [RelatedQuotes](/modules/Sales.md#Sales.RelatedQuote) |
+| `RelatedQuotesId` | `Int64?` | yes | [RelatedQuotes](Sales.md#Sales.RelatedQuote) |
 
-**References out:** [Quotes](/modules/Sales.md#Sales.Quote), [RelatedQuotes](/modules/Sales.md#Sales.RelatedQuote)
+**References out:** [Quotes](Sales.md#Sales.Quote), [RelatedQuotes](Sales.md#Sales.RelatedQuote)
 
 <a id="Sales.RelatedQuote"></a>
 ### RelatedQuotes
@@ -2019,7 +2019,7 @@ Represents a placeholder for related quotes.
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
 
-**Referenced by:** [Quotes](/modules/Sales.md#Sales.Quote), [RelatedQuoteEntries](/modules/Sales.md#Sales.RelatedQuoteEntry)
+**Referenced by:** [Quotes](Sales.md#Sales.Quote), [RelatedQuoteEntries](Sales.md#Sales.RelatedQuoteEntry)
 
 <a id="Sales.SalesAgreementBasis"></a>
 ### SalesAgreementBases
@@ -2033,10 +2033,10 @@ Represents a sales agreement basis.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `SalesAgreementId` | `Int64` | no | [SalesAgreements](/modules/Sales.md#Sales.SalesAgreement) |
-| `CustomerOrderId` | `Int64` | no | [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder) |
-| `InvoiceId` | `Int64?` | yes | [CustomerOrderInvoices](/modules/Sales.md#Sales.CustomerOrderInvoice) |
-| `AccrualAccountId` | `Int64?` | yes | [Accounts](/modules/Accounting.md#Accounting.Account) |
+| `SalesAgreementId` | `Int64` | no | [SalesAgreements](Sales.md#Sales.SalesAgreement) |
+| `CustomerOrderId` | `Int64` | no | [CustomerOrders](Sales.md#Sales.CustomerOrder) |
+| `InvoiceId` | `Int64?` | yes | [CustomerOrderInvoices](Sales.md#Sales.CustomerOrderInvoice) |
+| `AccrualAccountId` | `Int64?` | yes | [Accounts](Accounting.md#Accounting.Account) |
 | `IsAccrual` | `Boolean` | no |  |
 | `IsOneTimeCost` | `Boolean` | no |  |
 | `IsRemoved` | `Boolean` | no |  |
@@ -2047,15 +2047,15 @@ Represents a sales agreement basis.
 | `PlannedInvoiceDate` | `DateTimeOffset` | no |  |
 | `PeriodStartOnAgreementWhenCreated` | `DateTimeOffset?` | yes |  |
 | `ExchangeRate` | `Decimal` | no |  |
-| `CurrencyId` | `Int64` | no | [Currencies](/modules/Common.md#Common.Currency) |
-| `Currency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `CurrencyId` | `Int64` | no | [Currencies](Common.md#Common.Currency) |
+| `Currency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `UseForwardRate` | `Boolean` | no |  |
-| `Rows` | `SalesAgreementBasisRows[]` | no | [SalesAgreementBasisRows](/modules/Sales.md#Sales.SalesAgreementBasisRow) |
+| `Rows` | `SalesAgreementBasisRows[]` | no | [SalesAgreementBasisRows](Sales.md#Sales.SalesAgreementBasisRow) |
 
 - `InvoicingMethod` — InAdvance=1, InArrears=2
 
-**References out:** [Accounts](/modules/Accounting.md#Accounting.Account), [Currencies](/modules/Common.md#Common.Currency), [CustomerOrderInvoices](/modules/Sales.md#Sales.CustomerOrderInvoice), [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder), [SalesAgreementBasisRows](/modules/Sales.md#Sales.SalesAgreementBasisRow), [SalesAgreements](/modules/Sales.md#Sales.SalesAgreement)
-**Referenced by:** [SalesAgreementBasisRows](/modules/Sales.md#Sales.SalesAgreementBasisRow), [SalesAgreements](/modules/Sales.md#Sales.SalesAgreement)
+**References out:** [Accounts](Accounting.md#Accounting.Account), [Currencies](Common.md#Common.Currency), [CustomerOrderInvoices](Sales.md#Sales.CustomerOrderInvoice), [CustomerOrders](Sales.md#Sales.CustomerOrder), [SalesAgreementBasisRows](Sales.md#Sales.SalesAgreementBasisRow), [SalesAgreements](Sales.md#Sales.SalesAgreement)
+**Referenced by:** [SalesAgreementBasisRows](Sales.md#Sales.SalesAgreementBasisRow), [SalesAgreements](Sales.md#Sales.SalesAgreement)
 
 <a id="Sales.SalesAgreementBasisRow"></a>
 ### SalesAgreementBasisRows
@@ -2069,42 +2069,42 @@ Represents a sales agreement basis row.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `ParentRowId` | `Int64?` | yes | [SalesAgreementBasisRows](/modules/Sales.md#Sales.SalesAgreementBasisRow) |
-| `ParentAgreementBasisId` | `Int64` | no | [SalesAgreementBases](/modules/Sales.md#Sales.SalesAgreementBasis) |
-| `AgreementRowId` | `Int64` | no | [SalesAgreementRows](/modules/Sales.md#Sales.SalesAgreementRow) |
-| `CustomerOrderRowId` | `Int64` | no | [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow) |
+| `ParentRowId` | `Int64?` | yes | [SalesAgreementBasisRows](Sales.md#Sales.SalesAgreementBasisRow) |
+| `ParentAgreementBasisId` | `Int64` | no | [SalesAgreementBases](Sales.md#Sales.SalesAgreementBasis) |
+| `AgreementRowId` | `Int64` | no | [SalesAgreementRows](Sales.md#Sales.SalesAgreementRow) |
+| `CustomerOrderRowId` | `Int64` | no | [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow) |
 | `OrderRowType` | `Int32` | no |  |
-| `PartId` | `Int64?` | yes | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `PartId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
 | `EntityIdentityString` | `String` | no |  |
 | `AdditionalRowDescription` | `String` | no |  |
 | `FreeTextHtml` | `String` | no |  |
 | `FreeText` | `String` | no |  |
 | `Quantity` | `Decimal` | no |  |
 | `ConversionFactor` | `Decimal` | no |  |
-| `UnitId` | `Int64?` | yes | [Units](/modules/Common.md#Common.Unit) |
-| `Unit` | `Units` | no | [Units](/modules/Common.md#Common.Unit) |
+| `UnitId` | `Int64?` | yes | [Units](Common.md#Common.Unit) |
+| `Unit` | `Units` | no | [Units](Common.md#Common.Unit) |
 | `MileageHours` | `Decimal` | no |  |
 | `Price` | `Decimal?` | yes |  |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `PriceCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `PriceCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `PriceInCompanyCurrency` | `Decimal?` | yes |  |
-| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `PriceInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `PriceInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `Discount` | `Decimal` | no |  |
 | `StandardPrice` | `Decimal?` | yes |  |
-| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `StandardPriceCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `StandardPriceCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `Amount` | `Decimal` | no |  |
 | `AmountInCompanyCurrency` | `Decimal` | no |  |
-| `VatRateId` | `Int64` | no | [VatRates](/modules/Common.md#Common.VatRate) |
+| `VatRateId` | `Int64` | no | [VatRates](Common.md#Common.VatRate) |
 | `IsOneTimeCost` | `Boolean` | no |  |
 | `PeriodStart` | `DateTimeOffset?` | yes |  |
 | `PeriodEnd` | `DateTimeOffset?` | yes |  |
 
 - `OrderRowType` — Part=1, Additional=2, Sum=3, FreeText=4
 
-**References out:** [Currencies](/modules/Common.md#Common.Currency), [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow), [Parts](/modules/Inventory.md#Inventory.Part), [SalesAgreementBases](/modules/Sales.md#Sales.SalesAgreementBasis), [SalesAgreementBasisRows](/modules/Sales.md#Sales.SalesAgreementBasisRow), [SalesAgreementRows](/modules/Sales.md#Sales.SalesAgreementRow), [Units](/modules/Common.md#Common.Unit), [VatRates](/modules/Common.md#Common.VatRate)
-**Referenced by:** [SalesAgreementBases](/modules/Sales.md#Sales.SalesAgreementBasis), [SalesAgreementBasisRows](/modules/Sales.md#Sales.SalesAgreementBasisRow)
+**References out:** [Currencies](Common.md#Common.Currency), [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow), [Parts](Inventory.md#Inventory.Part), [SalesAgreementBases](Sales.md#Sales.SalesAgreementBasis), [SalesAgreementBasisRows](Sales.md#Sales.SalesAgreementBasisRow), [SalesAgreementRows](Sales.md#Sales.SalesAgreementRow), [Units](Common.md#Common.Unit), [VatRates](Common.md#Common.VatRate)
+**Referenced by:** [SalesAgreementBases](Sales.md#Sales.SalesAgreementBasis), [SalesAgreementBasisRows](Sales.md#Sales.SalesAgreementBasisRow)
 
 <a id="Sales.SalesAgreementRowInflow"></a>
 ### SalesAgreementRowInflows
@@ -2121,41 +2121,41 @@ Represents a sales agreement inflow row.
 | `CreationTime` | `DateTimeOffset?` | yes |  |
 | `LoggingTimeStamp` | `DateTimeOffset` | no |  |
 | `OrderRowType` | `Int32` | no |  |
-| `PartId` | `Int64?` | yes | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `PartId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
 | `AdditionalRowDescription` | `String` | no |  |
-| `SalesAgreementId` | `Int64?` | yes | [SalesAgreements](/modules/Sales.md#Sales.SalesAgreement) |
-| `SalesAgreementRowId` | `Int64?` | yes | [SalesAgreementRows](/modules/Sales.md#Sales.SalesAgreementRow) |
+| `SalesAgreementId` | `Int64?` | yes | [SalesAgreements](Sales.md#Sales.SalesAgreement) |
+| `SalesAgreementRowId` | `Int64?` | yes | [SalesAgreementRows](Sales.md#Sales.SalesAgreementRow) |
 | `OrderedQuantityChange` | `Decimal?` | yes |  |
 | `PriceChange` | `Decimal?` | yes |  |
-| `PriceChangeCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `PriceChangeCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceChangeCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `PriceChangeCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `PriceChangeInCompanyCurrency` | `Decimal?` | yes |  |
-| `PriceChangeInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `PriceChangeInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceChangeInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `PriceChangeInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `DiscountChange` | `Decimal?` | yes |  |
 | `TotalValueChange` | `Decimal` | no |  |
-| `TotalValueChangeCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `TotalValueChangeCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `TotalValueChangeCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `TotalValueChangeCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `TotalValueChangeInCompanyCurrency` | `Decimal` | no |  |
-| `TotalValueChangeInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `TotalValueChangeInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `TotalValueChangeInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `TotalValueChangeInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `RowTotalValue` | `Decimal` | no |  |
-| `RowTotalValueCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `RowTotalValueCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `RowTotalValueCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `RowTotalValueCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `RowTotalValueInCompanyCurrency` | `Decimal` | no |  |
-| `RowTotalValueInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `RowTotalValueInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `RowTotalValueInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `RowTotalValueInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `RowTotalQuantity` | `Decimal` | no |  |
 | `IsOneTimeCost` | `Boolean` | no |  |
 | `SalesAgreementInvoicingInterval` | `Int32` | no |  |
 | `TypeOfChange` | `Int32` | no |  |
 | `PriceDefinition` | `Int32` | no |  |
 | `PriceChangePerInterval` | `Decimal?` | yes |  |
-| `PriceChangePerIntervalCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `PriceChangePerIntervalCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceChangePerIntervalCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `PriceChangePerIntervalCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `PriceChangePerIntervalInCompanyCurrency` | `Decimal?` | yes |  |
-| `PriceChangePerIntervalInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `PriceChangePerIntervalInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceChangePerIntervalInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `PriceChangePerIntervalInCompanyCurrencyCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `TotalValueChangePerInterval` | `Decimal` | no |  |
 | `TotalValueChangePerIntervalInCompanyCurrency` | `Decimal` | no |  |
 | `RowTotalValuePerInterval` | `Decimal` | no |  |
@@ -2166,7 +2166,7 @@ Represents a sales agreement inflow row.
 - `TypeOfChange` — NewRow=0, Upgrade=1, Downgrade=2, Churn=3, PriceChange=4
 - `PriceDefinition` — AccordingToInvoicingInterval=0, Day=1, Week=2, Month=3, TwoMonths=4, Quarter=5, FourMonths=6, SixMonths=7, Annual=8
 
-**References out:** [Currencies](/modules/Common.md#Common.Currency), [Parts](/modules/Inventory.md#Inventory.Part), [SalesAgreementRows](/modules/Sales.md#Sales.SalesAgreementRow), [SalesAgreements](/modules/Sales.md#Sales.SalesAgreement)
+**References out:** [Currencies](Common.md#Common.Currency), [Parts](Inventory.md#Inventory.Part), [SalesAgreementRows](Sales.md#Sales.SalesAgreementRow), [SalesAgreements](Sales.md#Sales.SalesAgreement)
 
 <a id="Sales.SalesAgreementRow"></a>
 ### SalesAgreementRows
@@ -2180,51 +2180,51 @@ Represents an agreement row.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `ParentRowId` | `Int64?` | yes | [SalesAgreementRows](/modules/Sales.md#Sales.SalesAgreementRow) |
-| `ParentOrderId` | `Int64` | no | [SalesAgreements](/modules/Sales.md#Sales.SalesAgreement) |
+| `ParentRowId` | `Int64?` | yes | [SalesAgreementRows](Sales.md#Sales.SalesAgreementRow) |
+| `ParentOrderId` | `Int64` | no | [SalesAgreements](Sales.md#Sales.SalesAgreement) |
 | `Position` | `Int64?` | yes |  |
 | `OrderRowType` | `Int32` | no |  |
-| `PartId` | `Int64?` | yes | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `PartId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
 | `AdditionalRowDescription` | `String` | no |  |
 | `Quantity` | `Decimal` | no |  |
 | `FutureQuantity` | `Decimal?` | yes |  |
 | `PreviousQuantity` | `Decimal?` | yes |  |
 | `ConversionFactor` | `Decimal` | no |  |
-| `UnitId` | `Int64?` | yes | [Units](/modules/Common.md#Common.Unit) |
-| `Unit` | `Units` | no | [Units](/modules/Common.md#Common.Unit) |
+| `UnitId` | `Int64?` | yes | [Units](Common.md#Common.Unit) |
+| `Unit` | `Units` | no | [Units](Common.md#Common.Unit) |
 | `Price` | `Decimal?` | yes |  |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `PriceInCompanyCurrency` | `Decimal?` | yes |  |
-| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `FuturePriceAmount` | `Decimal?` | yes |  |
 | `PreviousPriceAmount` | `Decimal?` | yes |  |
 | `Discount` | `Decimal` | no |  |
-| `VatRateId` | `Int64` | no | [VatRates](/modules/Common.md#Common.VatRate) |
+| `VatRateId` | `Int64` | no | [VatRates](Common.md#Common.VatRate) |
 | `FutureValidFrom` | `DateTimeOffset?` | yes |  |
 | `PreviousValidThrough` | `DateTimeOffset?` | yes |  |
 | `CustomerPartNumber` | `String` | no |  |
 | `PartRowType` | `Int32` | no |  |
 | `SetupPrice` | `Decimal?` | yes |  |
-| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `SetupPriceInCompanyCurrency` | `Decimal?` | yes |  |
-| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `SetupPriceInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `ShowFreeTextIn` | `Int32` | no |  |
-| `RevisionId` | `Int64?` | yes | [Revisions](/modules/Common.md#Common.Revision) |
-| `Revision` | `Revisions` | no | [Revisions](/modules/Common.md#Common.Revision) |
+| `RevisionId` | `Int64?` | yes | [Revisions](Common.md#Common.Revision) |
+| `Revision` | `Revisions` | no | [Revisions](Common.md#Common.Revision) |
 | `FreeTextHtml` | `String` | no |  |
 | `FreeText` | `String` | no |  |
 | `LifeCycleState` | `Int32` | no |  |
 | `QuantityRatio` | `Decimal?` | yes |  |
-| `CodingId` | `Int64?` | yes | [Codings](/modules/Accounting.md#Accounting.Coding) |
-| `Coding` | `Codings` | no | [Codings](/modules/Accounting.md#Accounting.Coding) |
+| `CodingId` | `Int64?` | yes | [Codings](Accounting.md#Accounting.Coding) |
+| `Coding` | `Codings` | no | [Codings](Accounting.md#Accounting.Coding) |
 | `DeliveryDate` | `DateTimeOffset?` | yes |  |
-| `CompensatedRowId` | `Int64?` | yes | [SalesAgreementRows](/modules/Sales.md#Sales.SalesAgreementRow) |
+| `CompensatedRowId` | `Int64?` | yes | [SalesAgreementRows](Sales.md#Sales.SalesAgreementRow) |
 | `OneTimeCostType` | `Int32` | no |  |
 | `PeriodStart` | `DateTimeOffset?` | yes |  |
 | `PeriodEnd` | `DateTimeOffset?` | yes |  |
 | `PlannedInvoiceDate` | `DateTimeOffset?` | yes |  |
 | `StandardPrice` | `Decimal?` | yes |  |
-| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
+| `StandardPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
 | `FutureDiscount` | `Decimal?` | yes |  |
 | `PreviousDiscount` | `Decimal?` | yes |  |
 | `IsAccrual` | `Boolean` | no |  |
@@ -2245,8 +2245,8 @@ Represents an agreement row.
 - `LifeCycleState` — Transient=1, Persistent=10, History=20, RemovableCandidate=99
 - `OneTimeCostType` — No=0, AddToExistingAgreementBasis=1, CreateNewAgreementBasis=2
 
-**References out:** [Codings](/modules/Accounting.md#Accounting.Coding), [Currencies](/modules/Common.md#Common.Currency), [Parts](/modules/Inventory.md#Inventory.Part), [Revisions](/modules/Common.md#Common.Revision), [SalesAgreementRows](/modules/Sales.md#Sales.SalesAgreementRow), [SalesAgreements](/modules/Sales.md#Sales.SalesAgreement), [Units](/modules/Common.md#Common.Unit), [VatRates](/modules/Common.md#Common.VatRate)
-**Referenced by:** [SalesAgreementBasisRows](/modules/Sales.md#Sales.SalesAgreementBasisRow), [SalesAgreementRowInflows](/modules/Sales.md#Sales.SalesAgreementRowInflow), [SalesAgreementRows](/modules/Sales.md#Sales.SalesAgreementRow), [SalesAgreements](/modules/Sales.md#Sales.SalesAgreement)
+**References out:** [Codings](Accounting.md#Accounting.Coding), [Currencies](Common.md#Common.Currency), [Parts](Inventory.md#Inventory.Part), [Revisions](Common.md#Common.Revision), [SalesAgreementRows](Sales.md#Sales.SalesAgreementRow), [SalesAgreements](Sales.md#Sales.SalesAgreement), [Units](Common.md#Common.Unit), [VatRates](Common.md#Common.VatRate)
+**Referenced by:** [SalesAgreementBasisRows](Sales.md#Sales.SalesAgreementBasisRow), [SalesAgreementRowInflows](Sales.md#Sales.SalesAgreementRowInflow), [SalesAgreementRows](Sales.md#Sales.SalesAgreementRow), [SalesAgreements](Sales.md#Sales.SalesAgreement)
 
 <a id="Sales.SalesAgreement"></a>
 ### SalesAgreements
@@ -2261,7 +2261,7 @@ Represents an agreement.
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
 | `OrderNumber` | `String` | no |  |
-| `OrderTypeId` | `Int64` | no | [SalesAgreementTypes](/modules/Sales.md#Sales.SalesAgreementType) |
+| `OrderTypeId` | `Int64` | no | [SalesAgreementTypes](Sales.md#Sales.SalesAgreementType) |
 | `PeriodStart` | `DateTimeOffset` | no |  |
 | `PeriodEnd` | `DateTimeOffset?` | yes |  |
 | `AgreementDate` | `DateTimeOffset?` | yes |  |
@@ -2270,47 +2270,47 @@ Represents an agreement.
 | `ExtensionPeriod` | `Int32?` | yes |  |
 | `CustomerAgreementNumber` | `String` | no |  |
 | `Status` | `Int32` | no |  |
-| `ResponsibleId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
-| `BusinessContactId` | `Int64` | no | [Customers](/modules/Sales.md#Sales.Customer) |
-| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference) |
+| `ResponsibleId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
+| `BusinessContactId` | `Int64` | no | [Customers](Sales.md#Sales.Customer) |
+| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](Common.md#Common.BusinessContactReference) |
 | `BusinessContactReferenceName` | `String` | no |  |
-| `OurReferenceId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
+| `OurReferenceId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
 | `OurReferenceName` | `String` | no |  |
 | `Description` | `String` | no |  |
 | `UseForwardRate` | `Boolean` | no |  |
 | `ExchangeRate` | `Decimal` | no |  |
-| `InternalCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `InternalComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
-| `ExternalCommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `ExternalComment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
-| `CurrencyId` | `Int64` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `InternalCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `InternalComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| `ExternalCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `ExternalComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| `CurrencyId` | `Int64` | no | [Currencies](Common.md#Common.Currency) |
 | `TermLocation` | `String` | no |  |
 | `InvoicingMethod` | `Int32` | no |  |
-| `VatGroupId` | `Int64` | no | [VatGroups](/modules/Common.md#Common.VatGroup) |
+| `VatGroupId` | `Int64` | no | [VatGroups](Common.md#Common.VatGroup) |
 | `IsAccrual` | `Boolean` | no |  |
 | `DefaultOrderPrintoutVia` | `Int32` | no |  |
-| `MailingAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `MailingAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
-| `DeliveryAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `DeliveryAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
-| `CustomerAccountGroupId` | `Int64?` | yes | [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup) |
-| `InvoiceBusinessContactId` | `Int64` | no | [Customers](/modules/Sales.md#Sales.Customer) |
-| `ProjectId` | `Int64?` | yes | [Projects](/modules/Common.md#Common.Project) |
-| `AftermarketProductRecordId` | `Int64?` | yes | [ProductRecords](/modules/Inventory.md#Inventory.ProductRecord) |
-| `SellerId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
+| `MailingAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `MailingAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
+| `DeliveryAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `DeliveryAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
+| `CustomerAccountGroupId` | `Int64?` | yes | [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup) |
+| `InvoiceBusinessContactId` | `Int64` | no | [Customers](Sales.md#Sales.Customer) |
+| `ProjectId` | `Int64?` | yes | [Projects](Common.md#Common.Project) |
+| `AftermarketProductRecordId` | `Int64?` | yes | [ProductRecords](Inventory.md#Inventory.ProductRecord) |
+| `SellerId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
 | `Priority` | `Int32` | no |  |
-| `AccrualAccountId` | `Int64?` | yes | [Accounts](/modules/Accounting.md#Accounting.Account) |
+| `AccrualAccountId` | `Int64?` | yes | [Accounts](Accounting.md#Accounting.Account) |
 | `InvoiceCurrentMonth` | `Boolean` | no |  |
 | `InvoicingInterval` | `Int32` | no |  |
 | `ComprehensiveInvoiceChoice` | `Int32` | no |  |
 | `ReleaseAgreementBasisAutomatically` | `Boolean` | no |  |
-| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](/modules/Common.md#Common.PaymentTerm) |
+| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](Common.md#Common.PaymentTerm) |
 | `PaymentTermDescription` | `String` | no |  |
 | `DestinationForDeliveryTerm` | `String` | no |  |
 | `GracePeriodInDays` | `Int32?` | yes |  |
-| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod) |
+| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](Common.md#Common.DeliveryMethod) |
 | `DeliveryMethodDescription` | `String` | no |  |
-| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](/modules/Common.md#Common.DeliveryTerm) |
+| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](Common.md#Common.DeliveryTerm) |
 | `DeliveryTermDescription` | `String` | no |  |
 | `PriceDefinition` | `Int32` | no |  |
 | `UpdateStatusAutomatically` | `Boolean` | no |  |
@@ -2319,10 +2319,10 @@ Represents an agreement.
 | `PlannedInvoiceDateOffset` | `Int32` | no |  |
 | `NumberOfYearsToCreateBasisFor` | `Int32` | no |  |
 | `CreateAgreementBasis` | `Boolean` | no |  |
-| `Rows` | `SalesAgreementRows[]` | no | [SalesAgreementRows](/modules/Sales.md#Sales.SalesAgreementRow) |
+| `Rows` | `SalesAgreementRows[]` | no | [SalesAgreementRows](Sales.md#Sales.SalesAgreementRow) |
 | `LifeCycleState` | `Int32` | no |  |
 | `Factoring` | `Boolean` | no |  |
-| `Bases` | `SalesAgreementBases[]` | no | [SalesAgreementBases](/modules/Sales.md#Sales.SalesAgreementBasis) |
+| `Bases` | `SalesAgreementBases[]` | no | [SalesAgreementBases](Sales.md#Sales.SalesAgreementBasis) |
 
 - `Status` — Negotiation=1, SignedValid=2, Active=3, Terminated=4, Closed=6, Historic=9
 - `InvoicingMethod` — InAdvance=1, InArrears=2
@@ -2332,8 +2332,8 @@ Represents an agreement.
 - `PriceDefinition` — AccordingToInvoicingInterval=0, Day=1, Week=2, Month=3, TwoMonths=4, Quarter=5, FourMonths=6, SixMonths=7, Annual=8
 - `LifeCycleState` — Transient=1, Persistent=10, History=20, RemovableCandidate=99
 
-**References out:** [Accounts](/modules/Accounting.md#Accounting.Account), [Addresses](/modules/Common.md#Common.Address), [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference), [Comments](/modules/Common.md#Common.Comment), [Currencies](/modules/Common.md#Common.Currency), [CustomerAccountGroups](/modules/Sales.md#Sales.CustomerAccountGroup), [Customers](/modules/Sales.md#Sales.Customer), [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod), [DeliveryTerms](/modules/Common.md#Common.DeliveryTerm), [PaymentTerms](/modules/Common.md#Common.PaymentTerm), [Persons](/modules/Common.md#Common.Person), [ProductRecords](/modules/Inventory.md#Inventory.ProductRecord), [Projects](/modules/Common.md#Common.Project), [SalesAgreementBases](/modules/Sales.md#Sales.SalesAgreementBasis), [SalesAgreementRows](/modules/Sales.md#Sales.SalesAgreementRow), [SalesAgreementTypes](/modules/Sales.md#Sales.SalesAgreementType), [VatGroups](/modules/Common.md#Common.VatGroup)
-**Referenced by:** [SalesAgreementBases](/modules/Sales.md#Sales.SalesAgreementBasis), [SalesAgreementRowInflows](/modules/Sales.md#Sales.SalesAgreementRowInflow), [SalesAgreementRows](/modules/Sales.md#Sales.SalesAgreementRow)
+**References out:** [Accounts](Accounting.md#Accounting.Account), [Addresses](Common.md#Common.Address), [BusinessContactReferences](Common.md#Common.BusinessContactReference), [Comments](Common.md#Common.Comment), [Currencies](Common.md#Common.Currency), [CustomerAccountGroups](Sales.md#Sales.CustomerAccountGroup), [Customers](Sales.md#Sales.Customer), [DeliveryMethods](Common.md#Common.DeliveryMethod), [DeliveryTerms](Common.md#Common.DeliveryTerm), [PaymentTerms](Common.md#Common.PaymentTerm), [Persons](Common.md#Common.Person), [ProductRecords](Inventory.md#Inventory.ProductRecord), [Projects](Common.md#Common.Project), [SalesAgreementBases](Sales.md#Sales.SalesAgreementBasis), [SalesAgreementRows](Sales.md#Sales.SalesAgreementRow), [SalesAgreementTypes](Sales.md#Sales.SalesAgreementType), [VatGroups](Common.md#Common.VatGroup)
+**Referenced by:** [SalesAgreementBases](Sales.md#Sales.SalesAgreementBasis), [SalesAgreementRowInflows](Sales.md#Sales.SalesAgreementRowInflow), [SalesAgreementRows](Sales.md#Sales.SalesAgreementRow)
 
 <a id="Sales.SalesAgreementType"></a>
 ### SalesAgreementTypes
@@ -2348,7 +2348,7 @@ Represents an agreement type.
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
 | `PriceSetting` | `Int32` | no |  |
-| `PriceListId` | `Int64?` | yes | [PriceLists](/modules/Common.md#Common.PriceList) |
+| `PriceListId` | `Int64?` | yes | [PriceLists](Common.md#Common.PriceList) |
 | `Number` | `Int64` | no |  |
 | `Prefix` | `String` | no |  |
 | `Description` | `String` | no |  |
@@ -2371,8 +2371,8 @@ Represents an agreement type.
 - `AgreementValidFromSetting` — Today=1, Empty=2
 - `RateTypeSetting` — Customer=1, OrderType=2
 
-**References out:** [PriceLists](/modules/Common.md#Common.PriceList)
-**Referenced by:** [SalesAgreements](/modules/Sales.md#Sales.SalesAgreement)
+**References out:** [PriceLists](Common.md#Common.PriceList)
+**Referenced by:** [SalesAgreements](Sales.md#Sales.SalesAgreement)
 
 <a id="Sales.SalesPickingListRowQuantity"></a>
 ### SalesPickingListRowQuantities
@@ -2387,14 +2387,14 @@ Represents sales picking list row quantity information used by the web-client pr
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
 | `PickingListRowKey` | `String` | no |  |
-| `CustomerOrderDeliveryRowId` | `Int64` | no | [CustomerOrderDeliveryRows](/modules/Sales.md#Sales.CustomerOrderDeliveryRow) |
-| `PartLocationId` | `Int64?` | yes | [PartLocations](/modules/Inventory.md#Inventory.PartLocation) |
-| `ProductRecordId` | `Int64?` | yes | [ProductRecords](/modules/Inventory.md#Inventory.ProductRecord) |
-| `PartId` | `Int64?` | yes | [Parts](/modules/Inventory.md#Inventory.Part) |
+| `CustomerOrderDeliveryRowId` | `Int64` | no | [CustomerOrderDeliveryRows](Sales.md#Sales.CustomerOrderDeliveryRow) |
+| `PartLocationId` | `Int64?` | yes | [PartLocations](Inventory.md#Inventory.PartLocation) |
+| `ProductRecordId` | `Int64?` | yes | [ProductRecords](Inventory.md#Inventory.ProductRecord) |
+| `PartId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
 | `Quantity` | `Decimal` | no |  |
 | `Included` | `Boolean?` | yes |  |
 
-**References out:** [CustomerOrderDeliveryRows](/modules/Sales.md#Sales.CustomerOrderDeliveryRow), [PartLocations](/modules/Inventory.md#Inventory.PartLocation), [Parts](/modules/Inventory.md#Inventory.Part), [ProductRecords](/modules/Inventory.md#Inventory.ProductRecord)
+**References out:** [CustomerOrderDeliveryRows](Sales.md#Sales.CustomerOrderDeliveryRow), [PartLocations](Inventory.md#Inventory.PartLocation), [Parts](Inventory.md#Inventory.Part), [ProductRecords](Inventory.md#Inventory.ProductRecord)
 
 <a id="Sales.SalesPickingList"></a>
 ### SalesPickingLists
@@ -2409,21 +2409,21 @@ Represents a sales picking list.
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
 | `Number` | `Int64` | no |  |
-| `PrintedByApplicationUserId` | `Int64?` | yes | [ApplicationUsers](/modules/Common.md#Common.ApplicationUser) |
-| `PrintedByPersonId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
+| `PrintedByApplicationUserId` | `Int64?` | yes | [ApplicationUsers](Common.md#Common.ApplicationUser) |
+| `PrintedByPersonId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
 | `PrintedTimestamp` | `DateTimeOffset?` | yes |  |
 | `State` | `Int32` | no |  |
 | `Status` | `Int32` | no |  |
-| `WarehouseId` | `Int64` | no | [Warehouses](/modules/Common.md#Common.Warehouse) |
-| `CustomerOrderInvoices` | `CustomerOrderInvoices[]` | no | [CustomerOrderInvoices](/modules/Sales.md#Sales.CustomerOrderInvoice) |
+| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) |
+| `CustomerOrderInvoices` | `CustomerOrderInvoices[]` | no | [CustomerOrderInvoices](Sales.md#Sales.CustomerOrderInvoice) |
 | `LifeCycleState` | `Int32` | no |  |
 
 - `State` — Registered=0, ReadyForInvoicing=1
 - `Status` — ReadyForDelivery=1, ReadyForDeliveryCreditLimitExceeded=2, ReadyForDeliveryUnpaidAdvance=3, Pending=4, Shortage=5, UnConfirmed=6, Preliminary=7, PreliminaryCreditLimitExceeded=8, PreliminaryUnpaidAdvance=9
 - `LifeCycleState` — Transient=1, Persistent=10, History=20, RemovableCandidate=99
 
-**References out:** [ApplicationUsers](/modules/Common.md#Common.ApplicationUser), [CustomerOrderInvoices](/modules/Sales.md#Sales.CustomerOrderInvoice), [Persons](/modules/Common.md#Common.Person), [Warehouses](/modules/Common.md#Common.Warehouse)
-**Referenced by:** [GetWithdrawalInformation](/modules/Sales.md#Sales.GetWithdrawalInformation), [PackageRows](/modules/Sales.md#Sales.PackageRow), [RemoveSalesPickingList](/modules/Sales.md#Sales.RemoveSalesPickingList), [ShipmentInformationSources](/modules/Sales.md#Sales.ShipmentInformationSource), [WithdrawalInformationRow](/modules/Sales.md#Sales.WithdrawalInformationRow)
+**References out:** [ApplicationUsers](Common.md#Common.ApplicationUser), [CustomerOrderInvoices](Sales.md#Sales.CustomerOrderInvoice), [Persons](Common.md#Common.Person), [Warehouses](Common.md#Common.Warehouse)
+**Referenced by:** [GetWithdrawalInformation](Sales.md#Sales.GetWithdrawalInformation), [PackageRows](Sales.md#Sales.PackageRow), [RemoveSalesPickingList](Sales.md#Sales.RemoveSalesPickingList), [ShipmentInformationSources](Sales.md#Sales.ShipmentInformationSource), [WithdrawalInformationRow](Sales.md#Sales.WithdrawalInformationRow)
 
 <a id="Sales.SalesPrice"></a>
 ### SalesPrices
@@ -2437,27 +2437,27 @@ Represents a sales price.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `PartId` | `Int64` | no | [Parts](/modules/Inventory.md#Inventory.Part) |
-| `PriceListId` | `Int64` | no | [PriceLists](/modules/Common.md#Common.PriceList) |
+| `PartId` | `Int64` | no | [Parts](Inventory.md#Inventory.Part) |
+| `PriceListId` | `Int64` | no | [PriceLists](Common.md#Common.PriceList) |
 | `Price` | `Decimal?` | yes |  |
-| `PriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `PriceCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `PriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `PriceCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `SetupPrice` | `Decimal?` | yes |  |
-| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `SetupPriceCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `SetupPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `SetupPriceCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `ValidThrough` | `DateTimeOffset?` | yes |  |
-| `CommentId` | `Int64?` | yes | [Comments](/modules/Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](/modules/Common.md#Common.Comment) |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
 | `FuturePrice` | `Decimal?` | yes |  |
-| `FuturePriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `FuturePriceCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `FuturePriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `FuturePriceCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `FutureSetupPrice` | `Decimal?` | yes |  |
-| `FutureSetupPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `FutureSetupPriceCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `FutureSetupPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `FutureSetupPriceCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `FuturePriceValidThrough` | `DateTimeOffset?` | yes |  |
-| `StaggeredPrices` | `StaggeredPrices[]` | no | [StaggeredPrices](/modules/Common.md#Common.StaggeredPrice) |
+| `StaggeredPrices` | `StaggeredPrices[]` | no | [StaggeredPrices](Common.md#Common.StaggeredPrice) |
 
-**References out:** [Comments](/modules/Common.md#Common.Comment), [Currencies](/modules/Common.md#Common.Currency), [Parts](/modules/Inventory.md#Inventory.Part), [PriceLists](/modules/Common.md#Common.PriceList), [StaggeredPrices](/modules/Common.md#Common.StaggeredPrice)
+**References out:** [Comments](Common.md#Common.Comment), [Currencies](Common.md#Common.Currency), [Parts](Inventory.md#Inventory.Part), [PriceLists](Common.md#Common.PriceList), [StaggeredPrices](Common.md#Common.StaggeredPrice)
 
 <a id="Sales.SalesProcessStep"></a>
 ### SalesProcessSteps
@@ -2476,7 +2476,7 @@ Represents a sales process step.
 | `IsActive` | `Boolean` | no |  |
 | `Description` | `String` | no |  |
 
-**Referenced by:** [SalesProcessTemplateRows](/modules/Sales.md#Sales.SalesProcessTemplateRow)
+**Referenced by:** [SalesProcessTemplateRows](Sales.md#Sales.SalesProcessTemplateRow)
 
 <a id="Sales.SalesProcessTemplateRow"></a>
 ### SalesProcessTemplateRows
@@ -2491,21 +2491,21 @@ Represents a sales process template row.
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
 | `Code` | `Int64` | no |  |
-| `SalesProcessStepId` | `Int64` | no | [SalesProcessSteps](/modules/Sales.md#Sales.SalesProcessStep) |
-| `SalesProcessStep` | `SalesProcessSteps` | no | [SalesProcessSteps](/modules/Sales.md#Sales.SalesProcessStep) |
+| `SalesProcessStepId` | `Int64` | no | [SalesProcessSteps](Sales.md#Sales.SalesProcessStep) |
+| `SalesProcessStep` | `SalesProcessSteps` | no | [SalesProcessSteps](Sales.md#Sales.SalesProcessStep) |
 | `Probability` | `Int32` | no |  |
 | `LeadTime` | `Int32` | no |  |
 | `Responsibility` | `Int32` | no |  |
-| `ResponsibleSellerId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
-| `ResponsibleSeller` | `Persons` | no | [Persons](/modules/Common.md#Common.Person) |
-| `ResponsibleSellerGroupId` | `Int64?` | yes | [SellerGroups](/modules/Sales.md#Sales.SellerGroup) |
-| `ResponsibleSellerGroup` | `SellerGroups` | no | [SellerGroups](/modules/Sales.md#Sales.SellerGroup) |
-| `ParentId` | `Int64` | no | [SalesProcessTemplates](/modules/Sales.md#Sales.SalesProcessTemplate) |
+| `ResponsibleSellerId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
+| `ResponsibleSeller` | `Persons` | no | [Persons](Common.md#Common.Person) |
+| `ResponsibleSellerGroupId` | `Int64?` | yes | [SellerGroups](Sales.md#Sales.SellerGroup) |
+| `ResponsibleSellerGroup` | `SellerGroups` | no | [SellerGroups](Sales.md#Sales.SellerGroup) |
+| `ParentId` | `Int64` | no | [SalesProcessTemplates](Sales.md#Sales.SalesProcessTemplate) |
 
 - `Responsibility` — Seller=0, Group=1
 
-**References out:** [Persons](/modules/Common.md#Common.Person), [SalesProcessSteps](/modules/Sales.md#Sales.SalesProcessStep), [SalesProcessTemplates](/modules/Sales.md#Sales.SalesProcessTemplate), [SellerGroups](/modules/Sales.md#Sales.SellerGroup)
-**Referenced by:** [SalesProcessTemplates](/modules/Sales.md#Sales.SalesProcessTemplate)
+**References out:** [Persons](Common.md#Common.Person), [SalesProcessSteps](Sales.md#Sales.SalesProcessStep), [SalesProcessTemplates](Sales.md#Sales.SalesProcessTemplate), [SellerGroups](Sales.md#Sales.SellerGroup)
+**Referenced by:** [SalesProcessTemplates](Sales.md#Sales.SalesProcessTemplate)
 
 <a id="Sales.SalesProcessTemplate"></a>
 ### SalesProcessTemplates
@@ -2522,10 +2522,10 @@ Represents a sales process template.
 | `Code` | `String` | no |  |
 | `IsActive` | `Boolean` | no |  |
 | `Description` | `String` | no |  |
-| `Rows` | `SalesProcessTemplateRows[]` | no | [SalesProcessTemplateRows](/modules/Sales.md#Sales.SalesProcessTemplateRow) |
+| `Rows` | `SalesProcessTemplateRows[]` | no | [SalesProcessTemplateRows](Sales.md#Sales.SalesProcessTemplateRow) |
 
-**References out:** [SalesProcessTemplateRows](/modules/Sales.md#Sales.SalesProcessTemplateRow)
-**Referenced by:** [BusinessOpportunities](/modules/Sales.md#Sales.BusinessOpportunity), [BusinessOpportunityTypes](/modules/Sales.md#Sales.BusinessOpportunityType), [SalesProcessTemplateRows](/modules/Sales.md#Sales.SalesProcessTemplateRow)
+**References out:** [SalesProcessTemplateRows](Sales.md#Sales.SalesProcessTemplateRow)
+**Referenced by:** [BusinessOpportunities](Sales.md#Sales.BusinessOpportunity), [BusinessOpportunityTypes](Sales.md#Sales.BusinessOpportunityType), [SalesProcessTemplateRows](Sales.md#Sales.SalesProcessTemplateRow)
 
 <a id="Sales.SellerGroup"></a>
 ### SellerGroups
@@ -2543,7 +2543,7 @@ Represents a seller group.
 | `IsActive` | `Boolean` | no |  |
 | `Description` | `String` | no |  |
 
-**Referenced by:** [BusinessOpportunitySalesProcessSteps](/modules/Sales.md#Sales.BusinessOpportunitySalesProcessStep), [SalesProcessTemplateRows](/modules/Sales.md#Sales.SalesProcessTemplateRow)
+**Referenced by:** [BusinessOpportunitySalesProcessSteps](Sales.md#Sales.BusinessOpportunitySalesProcessStep), [SalesProcessTemplateRows](Sales.md#Sales.SalesProcessTemplateRow)
 
 <a id="Sales.ShipmentCustoms"></a>
 ### ShipmentCustoms
@@ -2557,20 +2557,20 @@ Represents a shipments customs information.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `ParentId` | `Int64` | no | [Shipments](/modules/Sales.md#Sales.Shipment) |
+| `ParentId` | `Int64` | no | [Shipments](Sales.md#Sales.Shipment) |
 | `Dutiable` | `Boolean` | no |  |
 | `InvoiceNumber` | `String` | no |  |
 | `InvoiceDate` | `DateTimeOffset?` | yes |  |
-| `CurrencyId` | `Int64` | no | [Currencies](/modules/Common.md#Common.Currency) |
-| `Currency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
-| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType) |
-| `CurrencyExchangeType` | `CurrencyExchangeTypes` | no | [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType) |
-| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod) |
-| `DeliveryMethod` | `DeliveryMethods` | no | [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod) |
-| `ForeignDeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod) |
-| `ForeignDeliveryMethod` | `DeliveryMethods` | no | [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod) |
-| `DeclarantId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
-| `Declarant` | `Persons` | no | [Persons](/modules/Common.md#Common.Person) |
+| `CurrencyId` | `Int64` | no | [Currencies](Common.md#Common.Currency) |
+| `Currency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
+| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType) |
+| `CurrencyExchangeType` | `CurrencyExchangeTypes` | no | [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType) |
+| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](Common.md#Common.DeliveryMethod) |
+| `DeliveryMethod` | `DeliveryMethods` | no | [DeliveryMethods](Common.md#Common.DeliveryMethod) |
+| `ForeignDeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](Common.md#Common.DeliveryMethod) |
+| `ForeignDeliveryMethod` | `DeliveryMethods` | no | [DeliveryMethods](Common.md#Common.DeliveryMethod) |
+| `DeclarantId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
+| `Declarant` | `Persons` | no | [Persons](Common.md#Common.Person) |
 | `DeclarantName` | `String` | no |  |
 | `NumberOfPackages` | `Int32` | no |  |
 | `Comment1` | `String` | no |  |
@@ -2603,16 +2603,16 @@ Represents a shipments customs information.
 | `CorporationIdentificationNumberCustomsPayer` | `String` | no |  |
 | `VatNumberCustomsPayer` | `String` | no |  |
 | `CustomsPayer` | `String` | no |  |
-| `Rows` | `ShipmentCustomsRows[]` | no | [ShipmentCustomsRows](/modules/Sales.md#Sales.ShipmentCustomsRow) |
-| `Documents` | `ShipmentCustomsDocuments[]` | no | [ShipmentCustomsDocuments](/modules/Sales.md#Sales.ShipmentCustomsDocument) |
+| `Rows` | `ShipmentCustomsRows[]` | no | [ShipmentCustomsRows](Sales.md#Sales.ShipmentCustomsRow) |
+| `Documents` | `ShipmentCustomsDocuments[]` | no | [ShipmentCustomsDocuments](Sales.md#Sales.ShipmentCustomsDocument) |
 
 - `InvoiceType` — Proforma=1, Commercial=2
 - `ImportExportType` — Permanent=1, Temporary=2, Reexport=3
 - `StatisticalGoodsCodeType` — CN=0, HS=1, Taric=2, HTS=3, NCM=4, ECCN=5, SITC=6
 - `CustomsPayingParty` — BuyerPays=1, SellerPays=2, OtherPayer=3, Incoterms=4
 
-**References out:** [Currencies](/modules/Common.md#Common.Currency), [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType), [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod), [Persons](/modules/Common.md#Common.Person), [ShipmentCustomsDocuments](/modules/Sales.md#Sales.ShipmentCustomsDocument), [ShipmentCustomsRows](/modules/Sales.md#Sales.ShipmentCustomsRow), [Shipments](/modules/Sales.md#Sales.Shipment)
-**Referenced by:** [ShipmentCustomsDocuments](/modules/Sales.md#Sales.ShipmentCustomsDocument), [ShipmentCustomsRows](/modules/Sales.md#Sales.ShipmentCustomsRow), [Shipments](/modules/Sales.md#Sales.Shipment)
+**References out:** [Currencies](Common.md#Common.Currency), [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType), [DeliveryMethods](Common.md#Common.DeliveryMethod), [Persons](Common.md#Common.Person), [ShipmentCustomsDocuments](Sales.md#Sales.ShipmentCustomsDocument), [ShipmentCustomsRows](Sales.md#Sales.ShipmentCustomsRow), [Shipments](Sales.md#Sales.Shipment)
+**Referenced by:** [ShipmentCustomsDocuments](Sales.md#Sales.ShipmentCustomsDocument), [ShipmentCustomsRows](Sales.md#Sales.ShipmentCustomsRow), [Shipments](Sales.md#Sales.Shipment)
 
 <a id="Sales.ShipmentCustomsDocument"></a>
 ### ShipmentCustomsDocuments
@@ -2626,13 +2626,13 @@ Represents a shipments customs information document.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `ParentId` | `Int64` | no | [ShipmentCustoms](/modules/Sales.md#Sales.ShipmentCustoms) |
+| `ParentId` | `Int64` | no | [ShipmentCustoms](Sales.md#Sales.ShipmentCustoms) |
 | `Code` | `String` | no |  |
 | `Name` | `String` | no |  |
 | `RowIndex` | `Int32?` | yes |  |
 
-**References out:** [ShipmentCustoms](/modules/Sales.md#Sales.ShipmentCustoms)
-**Referenced by:** [ShipmentCustoms](/modules/Sales.md#Sales.ShipmentCustoms)
+**References out:** [ShipmentCustoms](Sales.md#Sales.ShipmentCustoms)
+**Referenced by:** [ShipmentCustoms](Sales.md#Sales.ShipmentCustoms)
 
 <a id="Sales.ShipmentCustomsRow"></a>
 ### ShipmentCustomsRows
@@ -2646,14 +2646,14 @@ Represents a shipments customs information row.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `ParentId` | `Int64` | no | [ShipmentCustoms](/modules/Sales.md#Sales.ShipmentCustoms) |
+| `ParentId` | `Int64` | no | [ShipmentCustoms](Sales.md#Sales.ShipmentCustoms) |
 | `RowIndex` | `Int32?` | yes |  |
-| `CountryOfOriginId` | `Int64?` | yes | [Countries](/modules/Common.md#Common.Country) |
-| `CountryOfOrigin` | `Countries` | no | [Countries](/modules/Common.md#Common.Country) |
-| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](/modules/Common.md#Common.StatisticalGoodsCode) |
-| `StatisticalGoodsCode` | `StatisticalGoodsCodes` | no | [StatisticalGoodsCodes](/modules/Common.md#Common.StatisticalGoodsCode) |
-| `UnitId` | `Int64?` | yes | [Units](/modules/Common.md#Common.Unit) |
-| `Unit` | `Units` | no | [Units](/modules/Common.md#Common.Unit) |
+| `CountryOfOriginId` | `Int64?` | yes | [Countries](Common.md#Common.Country) |
+| `CountryOfOrigin` | `Countries` | no | [Countries](Common.md#Common.Country) |
+| `StatisticalGoodsCodeId` | `Int64?` | yes | [StatisticalGoodsCodes](Common.md#Common.StatisticalGoodsCode) |
+| `StatisticalGoodsCode` | `StatisticalGoodsCodes` | no | [StatisticalGoodsCodes](Common.md#Common.StatisticalGoodsCode) |
+| `UnitId` | `Int64?` | yes | [Units](Common.md#Common.Unit) |
+| `Unit` | `Units` | no | [Units](Common.md#Common.Unit) |
 | `AdditionalCode` | `String` | no |  |
 | `Amount` | `Decimal` | no |  |
 | `AmountInCompanyCurrency` | `Decimal` | no |  |
@@ -2662,14 +2662,14 @@ Represents a shipments customs information row.
 | `NetWeight` | `Decimal?` | yes |  |
 | `GoodsLabel` | `String` | no |  |
 | `OtherQuantity` | `Decimal?` | yes |  |
-| `OtherUnitId` | `Int64?` | yes | [Units](/modules/Common.md#Common.Unit) |
-| `OtherUnit` | `Units` | no | [Units](/modules/Common.md#Common.Unit) |
+| `OtherUnitId` | `Int64?` | yes | [Units](Common.md#Common.Unit) |
+| `OtherUnit` | `Units` | no | [Units](Common.md#Common.Unit) |
 | `OtherUnitCode` | `String` | no |  |
 | `Procedure` | `String` | no |  |
 | `Quantity` | `Int32` | no |  |
 
-**References out:** [Countries](/modules/Common.md#Common.Country), [ShipmentCustoms](/modules/Sales.md#Sales.ShipmentCustoms), [StatisticalGoodsCodes](/modules/Common.md#Common.StatisticalGoodsCode), [Units](/modules/Common.md#Common.Unit)
-**Referenced by:** [ShipmentCustoms](/modules/Sales.md#Sales.ShipmentCustoms)
+**References out:** [Countries](Common.md#Common.Country), [ShipmentCustoms](Sales.md#Sales.ShipmentCustoms), [StatisticalGoodsCodes](Common.md#Common.StatisticalGoodsCode), [Units](Common.md#Common.Unit)
+**Referenced by:** [ShipmentCustoms](Sales.md#Sales.ShipmentCustoms)
 
 <a id="Sales.ShipmentInformationSource"></a>
 ### ShipmentInformationSources
@@ -2683,19 +2683,19 @@ Represents a shipment information source.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `ShipmentId` | `Int64?` | yes | [Shipments](/modules/Sales.md#Sales.Shipment) |
+| `ShipmentId` | `Int64?` | yes | [Shipments](Sales.md#Sales.Shipment) |
 | `ShipmentInformationSourceType` | `Int32` | no |  |
-| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder) |
-| `PickingListId` | `Int64?` | yes | [SalesPickingLists](/modules/Sales.md#Sales.SalesPickingList) |
-| `SupplierId` | `Int64?` | yes | [Suppliers](/modules/Purchase.md#Purchase.Supplier) |
-| `CustomerId` | `Int64?` | yes | [Customers](/modules/Sales.md#Sales.Customer) |
-| `CustomerOrderInvoiceId` | `Int64?` | yes | [CustomerOrderInvoices](/modules/Sales.md#Sales.CustomerOrderInvoice) |
+| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](Sales.md#Sales.CustomerOrder) |
+| `PickingListId` | `Int64?` | yes | [SalesPickingLists](Sales.md#Sales.SalesPickingList) |
+| `SupplierId` | `Int64?` | yes | [Suppliers](Purchase.md#Purchase.Supplier) |
+| `CustomerId` | `Int64?` | yes | [Customers](Sales.md#Sales.Customer) |
+| `CustomerOrderInvoiceId` | `Int64?` | yes | [CustomerOrderInvoices](Sales.md#Sales.CustomerOrderInvoice) |
 | `RowIndex` | `Int32` | no |  |
 
 - `ShipmentInformationSourceType` — CustomerOrder=0, Supplier=1, PickingList=2, Customer=3, PickingListWithPackageStructure=4, Subcontract=5, ReturnOrder=6
 
-**References out:** [CustomerOrderInvoices](/modules/Sales.md#Sales.CustomerOrderInvoice), [CustomerOrders](/modules/Sales.md#Sales.CustomerOrder), [Customers](/modules/Sales.md#Sales.Customer), [SalesPickingLists](/modules/Sales.md#Sales.SalesPickingList), [Shipments](/modules/Sales.md#Sales.Shipment), [Suppliers](/modules/Purchase.md#Purchase.Supplier)
-**Referenced by:** [ShipmentPackageInformations](/modules/Sales.md#Sales.ShipmentPackageInformation)
+**References out:** [CustomerOrderInvoices](Sales.md#Sales.CustomerOrderInvoice), [CustomerOrders](Sales.md#Sales.CustomerOrder), [Customers](Sales.md#Sales.Customer), [SalesPickingLists](Sales.md#Sales.SalesPickingList), [Shipments](Sales.md#Sales.Shipment), [Suppliers](Purchase.md#Purchase.Supplier)
+**Referenced by:** [ShipmentPackageInformations](Sales.md#Sales.ShipmentPackageInformation)
 
 <a id="Sales.ShipmentPackageInformationPackageNumber"></a>
 ### ShipmentPackageInformationPackageNumbers
@@ -2709,11 +2709,11 @@ Represents a shipping agents real package number for a shipment package informat
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `ParentId` | `Int64` | no | [ShipmentPackageInformations](/modules/Sales.md#Sales.ShipmentPackageInformation) |
+| `ParentId` | `Int64` | no | [ShipmentPackageInformations](Sales.md#Sales.ShipmentPackageInformation) |
 | `ShippingAgentsPackageNumber` | `String` | no |  |
 
-**References out:** [ShipmentPackageInformations](/modules/Sales.md#Sales.ShipmentPackageInformation)
-**Referenced by:** [ShipmentPackageInformations](/modules/Sales.md#Sales.ShipmentPackageInformation)
+**References out:** [ShipmentPackageInformations](Sales.md#Sales.ShipmentPackageInformation)
+**Referenced by:** [ShipmentPackageInformations](Sales.md#Sales.ShipmentPackageInformation)
 
 <a id="Sales.ShipmentPackageInformation"></a>
 ### ShipmentPackageInformations
@@ -2727,12 +2727,12 @@ Represents a shipment package information.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |
-| `InformationSourceId` | `Int64?` | yes | [ShipmentInformationSources](/modules/Sales.md#Sales.ShipmentInformationSource) |
+| `InformationSourceId` | `Int64?` | yes | [ShipmentInformationSources](Sales.md#Sales.ShipmentInformationSource) |
 | `Count` | `Int32` | no |  |
 | `PackageTypeName` | `String` | no |  |
-| `PackageType` | `Int64?` | yes | [PackageTypes](/modules/Inventory.md#Inventory.PackageType) |
+| `PackageType` | `Int64?` | yes | [PackageTypes](Inventory.md#Inventory.PackageType) |
 | `GoodsTypeName` | `String` | no |  |
-| `GoodsType` | `Int64?` | yes | [GoodsTypes](/modules/Inventory.md#Inventory.GoodsType) |
+| `GoodsType` | `Int64?` | yes | [GoodsTypes](Inventory.md#Inventory.GoodsType) |
 | `PackageIdentification` | `String` | no |  |
 | `PackageTypeCode` | `String` | no |  |
 | `Volume` | `Decimal` | no |  |
@@ -2743,12 +2743,12 @@ Represents a shipment package information.
 | `Height` | `Decimal` | no |  |
 | `GoodsLabel` | `String` | no |  |
 | `PackageNumber` | `String` | no |  |
-| `ShippingAgentsPackageNumbers` | `ShipmentPackageInformationPackageNumbers[]` | no | [ShipmentPackageInformationPackageNumbers](/modules/Sales.md#Sales.ShipmentPackageInformationPackageNumber) |
-| `ShipmentId` | `Int64?` | yes | [Shipments](/modules/Sales.md#Sales.Shipment) |
+| `ShippingAgentsPackageNumbers` | `ShipmentPackageInformationPackageNumbers[]` | no | [ShipmentPackageInformationPackageNumbers](Sales.md#Sales.ShipmentPackageInformationPackageNumber) |
+| `ShipmentId` | `Int64?` | yes | [Shipments](Sales.md#Sales.Shipment) |
 | `RowIndex` | `Int32?` | yes |  |
 
-**References out:** [GoodsTypes](/modules/Inventory.md#Inventory.GoodsType), [PackageTypes](/modules/Inventory.md#Inventory.PackageType), [ShipmentInformationSources](/modules/Sales.md#Sales.ShipmentInformationSource), [ShipmentPackageInformationPackageNumbers](/modules/Sales.md#Sales.ShipmentPackageInformationPackageNumber), [Shipments](/modules/Sales.md#Sales.Shipment)
-**Referenced by:** [ShipmentPackageInformationPackageNumbers](/modules/Sales.md#Sales.ShipmentPackageInformationPackageNumber)
+**References out:** [GoodsTypes](Inventory.md#Inventory.GoodsType), [PackageTypes](Inventory.md#Inventory.PackageType), [ShipmentInformationSources](Sales.md#Sales.ShipmentInformationSource), [ShipmentPackageInformationPackageNumbers](Sales.md#Sales.ShipmentPackageInformationPackageNumber), [Shipments](Sales.md#Sales.Shipment)
+**Referenced by:** [ShipmentPackageInformationPackageNumbers](Sales.md#Sales.ShipmentPackageInformationPackageNumber)
 
 <a id="Sales.Shipment"></a>
 ### Shipments
@@ -2767,8 +2767,8 @@ Represents a shipment.
 | `UnifaunOnlineFirstParcelNo` | `String` | no |  |
 | `UnifaunOnlineFirstPrintLink` | `String` | no |  |
 | `LogTradeTrackingNo` | `String` | no |  |
-| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod) |
-| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](/modules/Common.md#Common.DeliveryTerm) |
+| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](Common.md#Common.DeliveryMethod) |
+| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](Common.md#Common.DeliveryTerm) |
 | `DeliveryTermStandardCode` | `String` | no |  |
 | `DeliveryTermLocation` | `String` | no |  |
 | `ShippingAgentType` | `Int32` | no |  |
@@ -2790,23 +2790,23 @@ Represents a shipment.
 | `TotalEurPallets` | `Int32` | no |  |
 | `CurrentInformationSourceType` | `Int32` | no |  |
 | `Status` | `Int32` | no |  |
-| `ShippingAgentId` | `Int64` | no | [Suppliers](/modules/Purchase.md#Purchase.Supplier) |
-| `RecipientAdressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `RecipientAdress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
-| `RecipientInvoiceAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `RecipientInvoiceAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
-| `FreightPayerAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `FreightPayerAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
+| `ShippingAgentId` | `Int64` | no | [Suppliers](Purchase.md#Purchase.Supplier) |
+| `RecipientAdressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `RecipientAdress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
+| `RecipientInvoiceAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `RecipientInvoiceAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
+| `FreightPayerAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `FreightPayerAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
 | `ConsignmentId` | `String` | no |  |
 | `ConsignmentIdForReturn` | `String` | no |  |
 | `OurReferenceName` | `String` | no |  |
 | `OurReferencePhoneNumber` | `String` | no |  |
 | `OurReferenceMobilePhoneNumber` | `String` | no |  |
 | `OurReferenceMail` | `String` | no |  |
-| `OurPickUpAddressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `OurPickUpAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
-| `OurInvoiceAdressId` | `Int64?` | yes | [Addresses](/modules/Common.md#Common.Address) |
-| `OurInvoiceAddress` | `Addresses` | no | [Addresses](/modules/Common.md#Common.Address) |
+| `OurPickUpAddressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `OurPickUpAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
+| `OurInvoiceAdressId` | `Int64?` | yes | [Addresses](Common.md#Common.Address) |
+| `OurInvoiceAddress` | `Addresses` | no | [Addresses](Common.md#Common.Address) |
 | `PalletRegistrationNo` | `String` | no |  |
 | `OurPalletRegistrationNo` | `String` | no |  |
 | `BusinessContactReferenceName` | `String` | no |  |
@@ -2814,9 +2814,9 @@ Represents a shipment.
 | `BusinessContactReferenceMobilePhoneNumber` | `String` | no |  |
 | `BusinessContactReferenceMail` | `String` | no |  |
 | `ShippingTemplate` | `String` | no |  |
-| `ShippingTemplateId` | `Int64?` | yes | [ShippingTemplates](/modules/Sales.md#Sales.ShippingTemplate) |
-| `ShippingServiceId` | `Int64?` | yes | [ShippingServices](/modules/Sales.md#Sales.ShippingService) |
-| `ShippingService` | `ShippingServices` | no | [ShippingServices](/modules/Sales.md#Sales.ShippingService) |
+| `ShippingTemplateId` | `Int64?` | yes | [ShippingTemplates](Sales.md#Sales.ShippingTemplate) |
+| `ShippingServiceId` | `Int64?` | yes | [ShippingServices](Sales.md#Sales.ShippingService) |
+| `ShippingService` | `ShippingServices` | no | [ShippingServices](Sales.md#Sales.ShippingService) |
 | `ShippingServiceCode` | `String` | no |  |
 | `SenderQuickId` | `String` | no |  |
 | `SellerQuickId` | `String` | no |  |
@@ -2830,26 +2830,26 @@ Represents a shipment.
 | `BookTransport` | `Boolean` | no |  |
 | `ReturnLabel` | `Boolean` | no |  |
 | `ShipmentPrintSetting` | `Int32` | no |  |
-| `ActiveDeliveryAddressCustomerId` | `Int64?` | yes | [Customers](/modules/Sales.md#Sales.Customer) |
-| `ActiveDeliveryAddressSupplierId` | `Int64?` | yes | [Suppliers](/modules/Purchase.md#Purchase.Supplier) |
+| `ActiveDeliveryAddressCustomerId` | `Int64?` | yes | [Customers](Sales.md#Sales.Customer) |
+| `ActiveDeliveryAddressSupplierId` | `Int64?` | yes | [Suppliers](Purchase.md#Purchase.Supplier) |
 | `ActiveDeliveryAddressCompanyId` | `Int64?` | yes |  |
-| `ActiveDeliveryAddressDeliveryAddressId` | `Int64?` | yes | [DeliveryAddresses](/modules/Common.md#Common.DeliveryAddress) |
-| `ActiveDeliveryAddressDeliveryAddress` | `DeliveryAddresses` | no | [DeliveryAddresses](/modules/Common.md#Common.DeliveryAddress) |
-| `ActiveFallbackDeliveryAddressDeliveryAddressId` | `Int64?` | yes | [DeliveryAddresses](/modules/Common.md#Common.DeliveryAddress) |
-| `ActiveFallbackDeliveryAddressDeliveryAddress` | `DeliveryAddresses` | no | [DeliveryAddresses](/modules/Common.md#Common.DeliveryAddress) |
+| `ActiveDeliveryAddressDeliveryAddressId` | `Int64?` | yes | [DeliveryAddresses](Common.md#Common.DeliveryAddress) |
+| `ActiveDeliveryAddressDeliveryAddress` | `DeliveryAddresses` | no | [DeliveryAddresses](Common.md#Common.DeliveryAddress) |
+| `ActiveFallbackDeliveryAddressDeliveryAddressId` | `Int64?` | yes | [DeliveryAddresses](Common.md#Common.DeliveryAddress) |
+| `ActiveFallbackDeliveryAddressDeliveryAddress` | `DeliveryAddresses` | no | [DeliveryAddresses](Common.md#Common.DeliveryAddress) |
 | `SourceOfAlternativeDeliveryAddresses` | `Int32` | no |  |
 | `WarehouseShippingAgentCode` | `String` | no |  |
 | `CustomerGoodsAddressNumber` | `String` | no |  |
 | `CustomerShippingAgentCode` | `String` | no |  |
-| `WarehouseId` | `Int64` | no | [Warehouses](/modules/Common.md#Common.Warehouse) |
+| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) |
 | `ShippingAgentAccountName` | `String` | no |  |
 | `CalculatedFreightPrice` | `Decimal?` | yes |  |
-| `CalculatedFreightPriceCurrencyId` | `Int64?` | yes | [Currencies](/modules/Common.md#Common.Currency) |
-| `CalculatedFreightPriceCurrency` | `Currencies` | no | [Currencies](/modules/Common.md#Common.Currency) |
+| `CalculatedFreightPriceCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
+| `CalculatedFreightPriceCurrency` | `Currencies` | no | [Currencies](Common.md#Common.Currency) |
 | `MobilePhoneNotificationNumber` | `String` | no |  |
 | `GoodsTrackingUrl` | `String` | no |  |
 | `CustomsId` | `Int64?` | yes |  |
-| `Customs` | `ShipmentCustoms` | no | [ShipmentCustoms](/modules/Sales.md#Sales.ShipmentCustoms) |
+| `Customs` | `ShipmentCustoms` | no | [ShipmentCustoms](Sales.md#Sales.ShipmentCustoms) |
 
 - `ShippingAgentType` — Other=0, DHL=1, Schenker=2, PostNord=3, DSV=4
 - `ShipmentPayer` — BuyerPays=1, SellerPays=2, OtherPayer=3, Incoterms=4
@@ -2858,8 +2858,8 @@ Represents a shipment.
 - `ShipmentPrintSetting` — WaybillAndParcel=0, Waybill=1, Parcel=2
 - `SourceOfAlternativeDeliveryAddresses` — CurrentCustomer=0, Customer=1, Supplier=2, Company=3, CurrentSupplier=4
 
-**References out:** [Addresses](/modules/Common.md#Common.Address), [Currencies](/modules/Common.md#Common.Currency), [Customers](/modules/Sales.md#Sales.Customer), [DeliveryAddresses](/modules/Common.md#Common.DeliveryAddress), [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod), [DeliveryTerms](/modules/Common.md#Common.DeliveryTerm), [ShipmentCustoms](/modules/Sales.md#Sales.ShipmentCustoms), [ShippingServices](/modules/Sales.md#Sales.ShippingService), [ShippingTemplates](/modules/Sales.md#Sales.ShippingTemplate), [Suppliers](/modules/Purchase.md#Purchase.Supplier), [Warehouses](/modules/Common.md#Common.Warehouse)
-**Referenced by:** [ShipmentCustoms](/modules/Sales.md#Sales.ShipmentCustoms), [ShipmentInformationSources](/modules/Sales.md#Sales.ShipmentInformationSource), [ShipmentPackageInformations](/modules/Sales.md#Sales.ShipmentPackageInformation)
+**References out:** [Addresses](Common.md#Common.Address), [Currencies](Common.md#Common.Currency), [Customers](Sales.md#Sales.Customer), [DeliveryAddresses](Common.md#Common.DeliveryAddress), [DeliveryMethods](Common.md#Common.DeliveryMethod), [DeliveryTerms](Common.md#Common.DeliveryTerm), [ShipmentCustoms](Sales.md#Sales.ShipmentCustoms), [ShippingServices](Sales.md#Sales.ShippingService), [ShippingTemplates](Sales.md#Sales.ShippingTemplate), [Suppliers](Purchase.md#Purchase.Supplier), [Warehouses](Common.md#Common.Warehouse)
+**Referenced by:** [ShipmentCustoms](Sales.md#Sales.ShipmentCustoms), [ShipmentInformationSources](Sales.md#Sales.ShipmentInformationSource), [ShipmentPackageInformations](Sales.md#Sales.ShipmentPackageInformation)
 
 <a id="Sales.ShippingService"></a>
 ### ShippingServices
@@ -2882,13 +2882,13 @@ Represents a shipping service.
 | `UseSellerAddress` | `Boolean` | no |  |
 | `UsePurchaserAddress` | `Boolean` | no |  |
 | `UseFrieghtPayerAddress` | `Boolean` | no |  |
-| `ShippingTemplateId` | `Int64?` | yes | [ShippingTemplates](/modules/Sales.md#Sales.ShippingTemplate) |
+| `ShippingTemplateId` | `Int64?` | yes | [ShippingTemplates](Sales.md#Sales.ShippingTemplate) |
 | `SenderQuickId` | `String` | no |  |
-| `SupplierId` | `Int64?` | yes | [Suppliers](/modules/Purchase.md#Purchase.Supplier) |
+| `SupplierId` | `Int64?` | yes | [Suppliers](Purchase.md#Purchase.Supplier) |
 | `SellerQuickId` | `String` | no |  |
 
-**References out:** [ShippingTemplates](/modules/Sales.md#Sales.ShippingTemplate), [Suppliers](/modules/Purchase.md#Purchase.Supplier)
-**Referenced by:** [Shipments](/modules/Sales.md#Sales.Shipment)
+**References out:** [ShippingTemplates](Sales.md#Sales.ShippingTemplate), [Suppliers](Purchase.md#Purchase.Supplier)
+**Referenced by:** [Shipments](Sales.md#Sales.Shipment)
 
 <a id="Sales.ShippingTemplate"></a>
 ### ShippingTemplates
@@ -2908,10 +2908,10 @@ Represents a shipping service.
 | `ExportDeliveryAddress` | `Boolean` | no |  |
 | `ConsignorId` | `String` | no |  |
 | `PickupId` | `String` | no |  |
-| `SupplierId` | `Int64?` | yes | [Suppliers](/modules/Purchase.md#Purchase.Supplier) |
+| `SupplierId` | `Int64?` | yes | [Suppliers](Purchase.md#Purchase.Supplier) |
 
-**References out:** [Suppliers](/modules/Purchase.md#Purchase.Supplier)
-**Referenced by:** [Shipments](/modules/Sales.md#Sales.Shipment), [ShippingServices](/modules/Sales.md#Sales.ShippingService)
+**References out:** [Suppliers](Purchase.md#Purchase.Supplier)
+**Referenced by:** [Shipments](Sales.md#Sales.Shipment), [ShippingServices](Sales.md#Sales.ShippingService)
 
 <a id="Sales.ValidityTime"></a>
 ### ValidityTimes
@@ -2931,7 +2931,7 @@ Represents a validity time.
 | `Description` | `String` | no |  |
 | `CompanyIds` | `Int64[]` | no |  |
 
-**Referenced by:** [Customers](/modules/Sales.md#Sales.Customer), [Quotes](/modules/Sales.md#Sales.Quote)
+**Referenced by:** [Customers](Sales.md#Sales.Customer), [Quotes](Sales.md#Sales.Quote)
 
 
 ## Commands
@@ -2963,10 +2963,10 @@ Creates picking lists.
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `DeliveryRows` | `DeliveryRow[]` | no |  |
-| `CreatedByPersonId` | `Int64?` | yes | [Persons](/modules/Common.md#Common.Person) |
+| `CreatedByPersonId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
 | `OutgoingDeliveryLocationName` | `String` | no |  |
 
-**References out:** [Persons](/modules/Common.md#Common.Person)
+**References out:** [Persons](Common.md#Common.Person)
 
 <a id="Sales.GetWithdrawalInformation"></a>
 ### GetWithdrawalInformation
@@ -2979,9 +2979,9 @@ Calculates and returns the suggested withdrawal information for a picking list.
 
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
-| `PickingListId` | `Int64` | no | [SalesPickingLists](/modules/Sales.md#Sales.SalesPickingList) |
+| `PickingListId` | `Int64` | no | [SalesPickingLists](Sales.md#Sales.SalesPickingList) |
 
-**References out:** [SalesPickingLists](/modules/Sales.md#Sales.SalesPickingList)
+**References out:** [SalesPickingLists](Sales.md#Sales.SalesPickingList)
 
 <a id="Sales.RemoveSalesPickingList"></a>
 ### RemoveSalesPickingList
@@ -2994,9 +2994,9 @@ Deletes a picking list.
 
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
-| `PickingListId` | `Int64` | no | [SalesPickingLists](/modules/Sales.md#Sales.SalesPickingList) |
+| `PickingListId` | `Int64` | no | [SalesPickingLists](Sales.md#Sales.SalesPickingList) |
 
-**References out:** [SalesPickingLists](/modules/Sales.md#Sales.SalesPickingList)
+**References out:** [SalesPickingLists](Sales.md#Sales.SalesPickingList)
 
 
 ## Payload types
@@ -3010,14 +3010,14 @@ Used to provide the suggested withdrawal information of a location.
 
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
-| `PartLocationId` | `Int64` | no | [PartLocations](/modules/Inventory.md#Inventory.PartLocation) |
-| `ProductRecordId` | `Int64?` | yes | [PartLocations](/modules/Inventory.md#Inventory.PartLocation) |
+| `PartLocationId` | `Int64` | no | [PartLocations](Inventory.md#Inventory.PartLocation) |
+| `ProductRecordId` | `Int64?` | yes | [PartLocations](Inventory.md#Inventory.PartLocation) |
 | `ReservedQuantity` | `Decimal` | no |  |
 | `AvailableQuantity` | `Decimal` | no |  |
 | `SuggestedQuantity` | `Decimal` | no |  |
 
-**References out:** [PartLocations](/modules/Inventory.md#Inventory.PartLocation)
-**Referenced by:** [WithdrawalInformationRow](/modules/Sales.md#Sales.WithdrawalInformationRow)
+**References out:** [PartLocations](Inventory.md#Inventory.PartLocation)
+**Referenced by:** [WithdrawalInformationRow](Sales.md#Sales.WithdrawalInformationRow)
 
 <a id="Sales.WithdrawalInformationRow"></a>
 ### WithdrawalInformationRow
@@ -3028,19 +3028,19 @@ Used to provide the suggested withdrawal information of a customer order row.
 
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
-| `CustomerOrderRowId` | `Int64` | no | [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow) |
-| `PickingListId` | `Int64` | no | [SalesPickingLists](/modules/Sales.md#Sales.SalesPickingList) |
-| `Locations` | `WithdrawalInformationLocation[]` | no | [WithdrawalInformationLocation](/modules/Sales.md#Sales.WithdrawalInformationLocation) |
+| `CustomerOrderRowId` | `Int64` | no | [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow) |
+| `PickingListId` | `Int64` | no | [SalesPickingLists](Sales.md#Sales.SalesPickingList) |
+| `Locations` | `WithdrawalInformationLocation[]` | no | [WithdrawalInformationLocation](Sales.md#Sales.WithdrawalInformationLocation) |
 | `SuggestedQuantity` | `Decimal` | no |  |
-| `ParentCustomerOrderRowId` | `Int64?` | yes | [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow) |
+| `ParentCustomerOrderRowId` | `Int64?` | yes | [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow) |
 
-**References out:** [CustomerOrderRows](/modules/Sales.md#Sales.CustomerOrderRow), [SalesPickingLists](/modules/Sales.md#Sales.SalesPickingList), [WithdrawalInformationLocation](/modules/Sales.md#Sales.WithdrawalInformationLocation)
+**References out:** [CustomerOrderRows](Sales.md#Sales.CustomerOrderRow), [SalesPickingLists](Sales.md#Sales.SalesPickingList), [WithdrawalInformationLocation](Sales.md#Sales.WithdrawalInformationLocation)
 
 
 ## Depends on other modules
 
-- [Accounting](/modules/Accounting.md): [Accounts](/modules/Accounting.md#Accounting.Account), [AccountsReceivables](/modules/Accounting.md#Accounting.AccountsReceivable), [Codings](/modules/Accounting.md#Accounting.Coding), [CodingEntries](/modules/Accounting.md#Accounting.CodingEntry), [FixedAssets](/modules/Accounting.md#Accounting.FixedAsset)
-- [Common](/modules/Common.md): [Addresses](/modules/Common.md#Common.Address), [ApplicationUsers](/modules/Common.md#Common.ApplicationUser), [BusinessContactNoteHistories](/modules/Common.md#Common.BusinessContactNoteHistory), [BusinessContactReferences](/modules/Common.md#Common.BusinessContactReference), [Comments](/modules/Common.md#Common.Comment), [CommunicationAddresses](/modules/Common.md#Common.CommunicationAddress), [Countries](/modules/Common.md#Common.Country), [Currencies](/modules/Common.md#Common.Currency), [CurrencyExchangeTypes](/modules/Common.md#Common.CurrencyExchangeType), [DeliveryAddresses](/modules/Common.md#Common.DeliveryAddress), [DeliveryMethods](/modules/Common.md#Common.DeliveryMethod), [DeliveryTerms](/modules/Common.md#Common.DeliveryTerm), [DeliveryTimes](/modules/Common.md#Common.DeliveryTime), [Discounts](/modules/Common.md#Common.Discount), [DiscountCategories](/modules/Common.md#Common.DiscountCategory), [ExtraFields](/modules/Common.md#Common.ExtraField), [FormReportConfigurations](/modules/Common.md#Common.FormReportConfiguration), [LanguageCodes](/modules/Common.md#Common.LanguageCode), [PartConfigurations](/modules/Common.md#Common.PartConfiguration), [PartialQuantities](/modules/Common.md#Common.PartialQuantity), [PaymentMethods](/modules/Common.md#Common.PaymentMethod), [PaymentPlanTemplates](/modules/Common.md#Common.PaymentPlanTemplate), [PaymentTerms](/modules/Common.md#Common.PaymentTerm), [Persons](/modules/Common.md#Common.Person), [PriceLists](/modules/Common.md#Common.PriceList), [Probabilities](/modules/Common.md#Common.Probability), [Projects](/modules/Common.md#Common.Project), [ReasonCodeDebitNotes](/modules/Common.md#Common.ReasonCodeDebitNote), [Resellers](/modules/Common.md#Common.Reseller), [Revisions](/modules/Common.md#Common.Revision), [StaggeredPrices](/modules/Common.md#Common.StaggeredPrice), [StatisticalGoodsCodes](/modules/Common.md#Common.StatisticalGoodsCode), [TariffAndServiceCodes](/modules/Common.md#Common.TariffAndServiceCode), [TransactionTypeIntrastats](/modules/Common.md#Common.TransactionTypeIntrastat), [TransferProfiles](/modules/Common.md#Common.TransferProfile), [Units](/modules/Common.md#Common.Unit), [VatGroups](/modules/Common.md#Common.VatGroup), [VatRates](/modules/Common.md#Common.VatRate), [Warehouses](/modules/Common.md#Common.Warehouse)
-- [Inventory](/modules/Inventory.md): [CaseEntry](/modules/Inventory.md#Inventory.CaseEntry), [GoodsTypes](/modules/Inventory.md#Inventory.GoodsType), [PackageTypes](/modules/Inventory.md#Inventory.PackageType), [Parts](/modules/Inventory.md#Inventory.Part), [PartLocations](/modules/Inventory.md#Inventory.PartLocation), [ProductRecords](/modules/Inventory.md#Inventory.ProductRecord)
-- [Manufacturing](/modules/Manufacturing.md): [ManufacturingOrders](/modules/Manufacturing.md#Manufacturing.ManufacturingOrder)
-- [Purchase](/modules/Purchase.md): [PurchaseOrders](/modules/Purchase.md#Purchase.PurchaseOrder), [PurchaseOrderRows](/modules/Purchase.md#Purchase.PurchaseOrderRow), [Suppliers](/modules/Purchase.md#Purchase.Supplier)
+- [Accounting](Accounting.md): [Accounts](Accounting.md#Accounting.Account), [AccountsReceivables](Accounting.md#Accounting.AccountsReceivable), [Codings](Accounting.md#Accounting.Coding), [CodingEntries](Accounting.md#Accounting.CodingEntry), [FixedAssets](Accounting.md#Accounting.FixedAsset)
+- [Common](Common.md): [Addresses](Common.md#Common.Address), [ApplicationUsers](Common.md#Common.ApplicationUser), [BusinessContactNoteHistories](Common.md#Common.BusinessContactNoteHistory), [BusinessContactReferences](Common.md#Common.BusinessContactReference), [Comments](Common.md#Common.Comment), [CommunicationAddresses](Common.md#Common.CommunicationAddress), [Countries](Common.md#Common.Country), [Currencies](Common.md#Common.Currency), [CurrencyExchangeTypes](Common.md#Common.CurrencyExchangeType), [DeliveryAddresses](Common.md#Common.DeliveryAddress), [DeliveryMethods](Common.md#Common.DeliveryMethod), [DeliveryTerms](Common.md#Common.DeliveryTerm), [DeliveryTimes](Common.md#Common.DeliveryTime), [Discounts](Common.md#Common.Discount), [DiscountCategories](Common.md#Common.DiscountCategory), [ExtraFields](Common.md#Common.ExtraField), [FormReportConfigurations](Common.md#Common.FormReportConfiguration), [LanguageCodes](Common.md#Common.LanguageCode), [PartConfigurations](Common.md#Common.PartConfiguration), [PartialQuantities](Common.md#Common.PartialQuantity), [PaymentMethods](Common.md#Common.PaymentMethod), [PaymentPlanTemplates](Common.md#Common.PaymentPlanTemplate), [PaymentTerms](Common.md#Common.PaymentTerm), [Persons](Common.md#Common.Person), [PriceLists](Common.md#Common.PriceList), [Probabilities](Common.md#Common.Probability), [Projects](Common.md#Common.Project), [ReasonCodeDebitNotes](Common.md#Common.ReasonCodeDebitNote), [Resellers](Common.md#Common.Reseller), [Revisions](Common.md#Common.Revision), [StaggeredPrices](Common.md#Common.StaggeredPrice), [StatisticalGoodsCodes](Common.md#Common.StatisticalGoodsCode), [TariffAndServiceCodes](Common.md#Common.TariffAndServiceCode), [TransactionTypeIntrastats](Common.md#Common.TransactionTypeIntrastat), [TransferProfiles](Common.md#Common.TransferProfile), [Units](Common.md#Common.Unit), [VatGroups](Common.md#Common.VatGroup), [VatRates](Common.md#Common.VatRate), [Warehouses](Common.md#Common.Warehouse)
+- [Inventory](Inventory.md): [CaseEntry](Inventory.md#Inventory.CaseEntry), [GoodsTypes](Inventory.md#Inventory.GoodsType), [PackageTypes](Inventory.md#Inventory.PackageType), [Parts](Inventory.md#Inventory.Part), [PartLocations](Inventory.md#Inventory.PartLocation), [ProductRecords](Inventory.md#Inventory.ProductRecord)
+- [Manufacturing](Manufacturing.md): [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder)
+- [Purchase](Purchase.md): [PurchaseOrders](Purchase.md#Purchase.PurchaseOrder), [PurchaseOrderRows](Purchase.md#Purchase.PurchaseOrderRow), [Suppliers](Purchase.md#Purchase.Supplier)

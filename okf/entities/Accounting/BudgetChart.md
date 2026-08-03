@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a budget chart.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `BudgetChart`
 - **Endpoint:** `GET /api/v1/Accounting/BudgetCharts`
 - **Required permission:** Show basic data for budget
@@ -48,7 +48,7 @@ Represents a budget chart.
 
 **Accounting**
 
-- [AccountingBudgets](/entities/Accounting/AccountingBudget.md) — `BudgetChartId` (FK)
+- [AccountingBudgets](AccountingBudget.md) — `BudgetChartId` (FK)
 
 
 ## Example

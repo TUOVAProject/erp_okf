@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a queryable discount.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `Discount`
 - **Endpoint:** `GET /api/v1/Common/Discounts`
 - **Required permission:** Show discounts
@@ -84,9 +84,9 @@ Represents a queryable discount.
 
 **Sales**
 
-- [CustomerOrderInvoiceOrderRowDiscounts](/entities/Sales/CustomerOrderInvoiceOrderRowDiscount.md) — `DiscountId` (FK)
-- [CustomerOrderOrderRowDiscounts](/entities/Sales/CustomerOrderOrderRowDiscount.md) — `DiscountId` (FK)
-- [QuoteOrderRowDiscounts](/entities/Sales/QuoteOrderRowDiscount.md) — `DiscountId` (FK)
+- [CustomerOrderInvoiceOrderRowDiscounts](../Sales/CustomerOrderInvoiceOrderRowDiscount.md) — `DiscountId` (FK)
+- [CustomerOrderOrderRowDiscounts](../Sales/CustomerOrderOrderRowDiscount.md) — `DiscountId` (FK)
+- [QuoteOrderRowDiscounts](../Sales/QuoteOrderRowDiscount.md) — `DiscountId` (FK)
 
 
 ## Example

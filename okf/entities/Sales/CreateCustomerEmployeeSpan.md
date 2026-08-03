@@ -28,7 +28,7 @@ Operation `Create` on the Monitor API.
 
 Creates a new customer employee span object.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CreateCustomerEmployeeSpan`
 - **Endpoint:** `POST /api/v1/Sales/CustomerEmployeeSpans/Create`
 - **Required permission:** Create new customer

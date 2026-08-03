@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a queryable department.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `Department`
 - **Endpoint:** `GET /api/v1/Common/Departments`
 - **Required permission:** Show departments
@@ -50,15 +50,15 @@ Represents a queryable department.
 
 **Accounting**
 
-- [FixedAssets](/entities/Accounting/FixedAsset.md) — `DepartmentId` (FK)
+- [FixedAssets](../Accounting/FixedAsset.md) — `DepartmentId` (FK)
 
 **Common**
 
-- [Persons](/entities/Common/Person.md) — `DepartmentId` (FK)
+- [Persons](Person.md) — `DepartmentId` (FK)
 
 **Inventory**
 
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `ReasonDepartmentId` (FK)
+- [CaseEntry](../Inventory/CaseEntry.md) — `ReasonDepartmentId` (FK)
 
 
 ## Example

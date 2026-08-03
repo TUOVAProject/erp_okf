@@ -37,7 +37,7 @@ referenced_by:
 
 Represents a customer part link.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerPartLink`
 - **Endpoint:** `GET /api/v1/Sales/CustomerPartLinks`
 - **Required permission:** Show customer
@@ -49,13 +49,13 @@ Represents a customer part link.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the customer part link. |
-| `CustomerId` | `Int64` | no | [Customers](/entities/Sales/Customer.md) |  | The business key identifier of the customer part link customer. References Customers . |
+| `CustomerId` | `Int64` | no | [Customers](Customer.md) |  | The business key identifier of the customer part link customer. References Customers . |
 | `CustomerPartNumber` | `String` | no |  |  | The part number that the customer uses to identify the part. |
-| `PackagingPartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the customer part link packaging part. References Parts . |
+| `PackagingPartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the customer part link packaging part. References Parts . |
 | `Gs1Code` | `String` | no |  |  | The GS1 code of the customer part link. |
 | `SalesCommentShowInForms` | `Int32` | no |  | bitmask, enum | Specifies which documents the sales comment of the part link will be shown on. |
 | `QuantityForLeadTimeToCustomer` | `Decimal?` | yes |  |  | The quantity for lead time. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the customer part link's part. |
+| `PartId` | `Int64` | no | [Parts](../Inventory/Part.md) |  | The business key identifier of the customer part link's part. |
 | `Price` | `Decimal?` | yes |  |  | The price of the customer part link. |
 | `SetupPrice` | `Decimal?` | yes |  |  | The setup price of the customer part link. |
 | `LeadTime` | `TimeSpan?` | yes |  |  | The lead time of the customer part link. |
@@ -65,17 +65,17 @@ Represents a customer part link.
 | `FuturePriceValidThrough` | `DateTimeOffset?` | yes |  |  | The date/time offset that the future customer part link price is valid through. |
 | `FutureSetupPrice` | `Decimal?` | yes |  |  | The future setup price of the customer part link. |
 | `QuantityPerPackage` | `Decimal?` | yes |  |  | The quantity per package of the customer part link. |
-| `PickingCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the customer part link picking comment. References Comments . |
-| `PickingComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The customer part link picking comment. |
-| `OverrideSalesCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the customer part link override sales comment. References Comments . |
-| `OverrideSalesComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The customer part link override sales comment. |
-| `UnitId` | `Int64` | no | [Units](/entities/Common/Unit.md) |  | The business key identifier of the customer part link unit. References Units . |
-| `Unit` | `Units` | no | [Units](/entities/Common/Unit.md) | expandable | The customer part link unit. |
-| `PriceCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the customer part link price currency. References Currencies . |
-| `PriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The customer part link price currency. |
-| `PriceCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifer of the customer part link price comment. References Comments . |
-| `PriceComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The customer part link price comment. |
-| `StaggeredPrices` | `StaggeredPrices[]` | no | [StaggeredPrices](/entities/Common/StaggeredPrice.md) | expandable, collection, since 24.3 | The staggered prices on the part link. |
+| `PickingCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the customer part link picking comment. References Comments . |
+| `PickingComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The customer part link picking comment. |
+| `OverrideSalesCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the customer part link override sales comment. References Comments . |
+| `OverrideSalesComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The customer part link override sales comment. |
+| `UnitId` | `Int64` | no | [Units](../Common/Unit.md) |  | The business key identifier of the customer part link unit. References Units . |
+| `Unit` | `Units` | no | [Units](../Common/Unit.md) | expandable | The customer part link unit. |
+| `PriceCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the customer part link price currency. References Currencies . |
+| `PriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The customer part link price currency. |
+| `PriceCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifer of the customer part link price comment. References Comments . |
+| `PriceComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The customer part link price comment. |
+| `StaggeredPrices` | `StaggeredPrices[]` | no | [StaggeredPrices](../Common/StaggeredPrice.md) | expandable, collection, since 24.3 | The staggered prices on the part link. |
 
 ## Enumerations
 
@@ -95,11 +95,11 @@ Represents a customer part link.
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `CustomerPartLinks` (expand)
+- [Parts](../Inventory/Part.md) — `CustomerPartLinks` (expand)
 
 **Sales**
 
-- [Customers](/entities/Sales/Customer.md) — `CustomerPartLinks` (expand)
+- [Customers](Customer.md) — `CustomerPartLinks` (expand)
 
 
 ## Example

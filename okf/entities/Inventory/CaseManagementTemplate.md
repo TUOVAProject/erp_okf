@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a case management template.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `CaseManagementTemplate`
 - **Endpoint:** `GET /api/v1/Inventory/CaseManagementTemplates`
 - **Required permission:** Show basic data for case
@@ -49,16 +49,16 @@ Represents a case management template.
 | `Number` | `Int32` | no |  |  | The human readable identifier of the case management template. |
 | `Description` | `String` | no |  |  | The description of the case management template. |
 | `IsDefault` | `Boolean` | no |  |  | Specifies if the case management template is default. |
-| `CaseManagementTypeId` | `Int64?` | yes | [CaseManagementType](/entities/Inventory/CaseManagementType.md) |  | The business key identifier of the case management type. |
-| `CaseManagementTemplateNode` | `CaseManagementTemplateNodes[]` | no | [CaseManagementTemplateNodes](/entities/Inventory/CaseManagementTemplateNode.md) | expandable, collection | The case management template node of the case management template. |
-| `CaseManagementTemplateCost` | `CaseManagementTemplateCosts[]` | no | [CaseManagementTemplateCosts](/entities/Inventory/CaseManagementTemplateCost.md) | expandable, collection | The case management template cost of the case management template. |
+| `CaseManagementTypeId` | `Int64?` | yes | [CaseManagementType](CaseManagementType.md) |  | The business key identifier of the case management type. |
+| `CaseManagementTemplateNode` | `CaseManagementTemplateNodes[]` | no | [CaseManagementTemplateNodes](CaseManagementTemplateNode.md) | expandable, collection | The case management template node of the case management template. |
+| `CaseManagementTemplateCost` | `CaseManagementTemplateCosts[]` | no | [CaseManagementTemplateCosts](CaseManagementTemplateCost.md) | expandable, collection | The case management template cost of the case management template. |
 
 ## Referenced by
 
 **Inventory**
 
-- [CaseManagementTemplateCosts](/entities/Inventory/CaseManagementTemplateCost.md) — `ParentId` (FK)
-- [CaseManagementTemplateNodes](/entities/Inventory/CaseManagementTemplateNode.md) — `ParentId` (FK)
+- [CaseManagementTemplateCosts](CaseManagementTemplateCost.md) — `ParentId` (FK)
+- [CaseManagementTemplateNodes](CaseManagementTemplateNode.md) — `ParentId` (FK)
 
 
 ## Example

@@ -40,7 +40,7 @@ referenced_by:
 
 Represents a language code. Language codes are the language definitions in MONITOR.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `LanguageCode`
 - **Endpoint:** `GET /api/v1/Common/LanguageCodes`
 - **Required permission:** Show languages
@@ -59,30 +59,30 @@ Represents a language code. Language codes are the language definitions in MONIT
 
 **Accounting**
 
-- [AccountsPayables](/entities/Accounting/AccountsPayable.md) — `Language` (expand)
-- [AccountsPayables](/entities/Accounting/AccountsPayable.md) — `LanguageId` (FK)
+- [AccountsPayables](../Accounting/AccountsPayable.md) — `Language` (expand)
+- [AccountsPayables](../Accounting/AccountsPayable.md) — `LanguageId` (FK)
 
 **Common**
 
-- [Addresses](/entities/Common/Address.md) — `LanguageId` (FK)
-- [ApplicationUsers](/entities/Common/ApplicationUser.md) — `LanguageId` (FK)
-- [Companies](/entities/Common/Company.md) — `Language` (expand)
-- [Companies](/entities/Common/Company.md) — `LanguageId` (FK)
-- [Countries](/entities/Common/Country.md) — `LanguageId` (FK)
-- [DeliveryAddresses](/entities/Common/DeliveryAddress.md) — `LanguageId` (FK)
-- [MonitoringTaskRecipients](/entities/Common/MonitoringTaskRecipient.md) — `LanguageCodeId` (FK)
-- [Persons](/entities/Common/Person.md) — `LanguageId` (FK)
-- [Warehouses](/entities/Common/Warehouse.md) — `LanguageId` (FK)
+- [Addresses](Address.md) — `LanguageId` (FK)
+- [ApplicationUsers](ApplicationUser.md) — `LanguageId` (FK)
+- [Companies](Company.md) — `Language` (expand)
+- [Companies](Company.md) — `LanguageId` (FK)
+- [Countries](Country.md) — `LanguageId` (FK)
+- [DeliveryAddresses](DeliveryAddress.md) — `LanguageId` (FK)
+- [MonitoringTaskRecipients](MonitoringTaskRecipient.md) — `LanguageCodeId` (FK)
+- [Persons](Person.md) — `LanguageId` (FK)
+- [Warehouses](Warehouse.md) — `LanguageId` (FK)
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `Language` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `LanguageId` (FK)
+- [Suppliers](../Purchase/Supplier.md) — `Language` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `LanguageId` (FK)
 
 **Sales**
 
-- [Customers](/entities/Sales/Customer.md) — `Language` (expand)
-- [Customers](/entities/Sales/Customer.md) — `LanguageId` (FK)
+- [Customers](../Sales/Customer.md) — `Language` (expand)
+- [Customers](../Sales/Customer.md) — `LanguageId` (FK)
 
 
 ## Example

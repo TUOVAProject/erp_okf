@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a part identity type.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PartIdentityType`
 - **Endpoint:** `GET /api/v1/Inventory/PartIdentityTypes`
 - **Required permission:** Show basic data for part
@@ -64,7 +64,7 @@ Represents a part identity type.
 
 **Inventory**
 
-- [PartOtherIdentities](/entities/Inventory/PartOtherIdentity.md) — `TypeId` (FK)
+- [PartOtherIdentities](PartOtherIdentity.md) — `TypeId` (FK)
 
 
 ## Example

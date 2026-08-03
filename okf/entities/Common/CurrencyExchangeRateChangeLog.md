@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a currency exchange rate entry.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `CurrencyExchangeRateChangeLog`
 - **Endpoint:** `GET /api/v1/Common/CurrencyExchangeRateChangeLogs`
 - **Required permission:** Show currencies
@@ -42,16 +42,16 @@ Represents a currency exchange rate entry.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the currency exchange rate change log entry. |
-| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) |  | The currency exchange type of the entry. |
+| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](CurrencyExchangeType.md) |  | The currency exchange type of the entry. |
 | `Rate` | `Decimal` | no |  |  | The exchange rate of the entry. |
 | `ValidUntilDate` | `DateTimeOffset` | no |  |  | The date when entry was changed. |
-| `CurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) | since 24.6 | The business key identifier of the currency the exchange rate log entry belongs to. |
+| `CurrencyId` | `Int64` | no | [Currencies](Currency.md) | since 24.6 | The business key identifier of the currency the exchange rate log entry belongs to. |
 
 ## Referenced by
 
 **Common**
 
-- [Currencies](/entities/Common/Currency.md) — `ExchangeRatesChangeLog` (expand)
+- [Currencies](Currency.md) — `ExchangeRatesChangeLog` (expand)
 
 
 ## Example

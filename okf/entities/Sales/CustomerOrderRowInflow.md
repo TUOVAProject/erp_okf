@@ -32,7 +32,7 @@ references_out:
 
 Represents a customer order inflow row.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerOrderRowInflow`
 - **Endpoint:** `GET /api/v1/Sales/CustomerOrderRowInflows`
 - **Required permission:** Show customer orders
@@ -44,28 +44,28 @@ Represents a customer order inflow row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the inflow row. |
-| `OrderRowId` | `Int64?` | yes | [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) |  | The business key identifier of the inflow rows customer order row. |
-| `OrderRow` | `CustomerOrderRows` | no | [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) | expandable | The inflow rows customer order row. |
+| `OrderRowId` | `Int64?` | yes | [CustomerOrderRows](CustomerOrderRow.md) |  | The business key identifier of the inflow rows customer order row. |
+| `OrderRow` | `CustomerOrderRows` | no | [CustomerOrderRows](CustomerOrderRow.md) | expandable | The inflow rows customer order row. |
 | `BlanketOrderSalesRowId` | `Int64?` | yes |  |  | The business key identifier of the inflow rows blanket order sales row. |
-| `PartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the inflow rows part. |
-| `Part` | `Parts` | no | [Parts](/entities/Inventory/Part.md) | expandable | The inflow rows part. |
+| `PartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the inflow rows part. |
+| `Part` | `Parts` | no | [Parts](../Inventory/Part.md) | expandable | The inflow rows part. |
 | `EntityIdentityString` | `String` | no |  | max length 20 | The human readable identifier of the entity subject of the inflow row. |
 | `AdditionalRowDescription` | `String` | no |  | max length 80 | The additional row description of the inflow row. |
 | `Status` | `Int32` | no |  | enum | The status of the inflow row. |
 | `LoggingTimeStamp` | `DateTimeOffset` | no |  |  | The logging timestamp of the inflow row. |
 | `OrderedQuantityChange` | `Decimal?` | yes |  |  | The ordered quantity change of the inflow row. |
 | `UnitId` | `Int64?` | yes |  |  | The business key identifier of the inflow rows unit. |
-| `Unit` | `Units` | no | [Units](/entities/Common/Unit.md) | expandable | The inflow rows unit. |
+| `Unit` | `Units` | no | [Units](../Common/Unit.md) | expandable | The inflow rows unit. |
 | `PriceChange` | `Decimal?` | yes |  |  | The price change of the inflow row. |
-| `PriceChangeCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the inflow rows price changes currency. |
-| `PriceChangeCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The inflow rows price changes currency. |
+| `PriceChangeCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the inflow rows price changes currency. |
+| `PriceChangeCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The inflow rows price changes currency. |
 | `SetupPriceChange` | `Decimal?` | yes |  |  | The setup price change of the inflow row. |
-| `SetupPriceChangeCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the inflow rows setup price changes currency. |
-| `SetupPriceChangeCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The inflow rows setup price changes currency. |
+| `SetupPriceChangeCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the inflow rows setup price changes currency. |
+| `SetupPriceChangeCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The inflow rows setup price changes currency. |
 | `DiscountChange` | `Decimal?` | yes |  |  | The discount change of the inflow row. |
 | `TotalValueChange` | `Decimal` | no |  |  | The total value change of the inflow row. |
-| `TotalValueChangeCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the inflow rows total value changes currency. |
-| `TotalValueChangeCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The inflow rows total value changes currency. |
+| `TotalValueChangeCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the inflow rows total value changes currency. |
+| `TotalValueChangeCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The inflow rows total value changes currency. |
 | `OrderRowType` | `Int32` | no |  | enum | The order row type of the inflow row. |
 
 ## Enumerations

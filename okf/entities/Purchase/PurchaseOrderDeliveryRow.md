@@ -39,7 +39,7 @@ referenced_by:
 
 Represents a purchase order delivery row entry
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `PurchaseOrderDeliveryRow`
 - **Endpoint:** `GET /api/v1/Purchase/PurchaseOrderDeliveryRows`
 - **Required permission:** Show purchase orders
@@ -52,33 +52,33 @@ Represents a purchase order delivery row entry
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the purchase order delivery row. |
 | `Version` | `Int32` | no |  |  | The version of the purchase order delivery row. |
-| `PurchaseOrderId` | `Int64` | no | [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) |  | The business key identifier of the purchase order. |
-| `PurchaseOrderRowId` | `Int64` | no | [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) |  | The business key identifier of the purchase order row. |
-| `PurchaseOrderRow` | `PurchaseOrderRows` | no | [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) | expandable | The purchase order row. |
+| `PurchaseOrderId` | `Int64` | no | [PurchaseOrders](PurchaseOrder.md) |  | The business key identifier of the purchase order. |
+| `PurchaseOrderRowId` | `Int64` | no | [PurchaseOrderRows](PurchaseOrderRow.md) |  | The business key identifier of the purchase order row. |
+| `PurchaseOrderRow` | `PurchaseOrderRows` | no | [PurchaseOrderRows](PurchaseOrderRow.md) | expandable | The purchase order row. |
 | `DeliveryDate` | `DateTimeOffset` | no |  |  | The delivery date of the of order delivery row. |
 | `GoodsLocation` | `String` | no |  | max length 40 | The human readable goods location of the order delivery row. |
 | `GoodsMessage` | `String` | no |  | max length 100 | The human readable good message on the order delivery row. |
 | `ArrivedQuantity` | `Decimal` | no |  |  | The arrived qty on the order delivery row. |
 | `ApprovedQuantity` | `Decimal` | no |  |  | The approved qty on the order delivery row. |
-| `AccountsPayableId` | `Int64?` | yes | [AccountsPayables](/entities/Accounting/AccountsPayable.md) | since 22.5 | The business key identifier of the accounts payable the delivery row is linked to. |
-| `PurchaseOrderDeliveryRowQuantities` | `PurchaseOrderDeliveryRowQuantities[]` | no | [PurchaseOrderDeliveryRowQuantities](/entities/Purchase/PurchaseOrderDeliveryRowQuantity.md) | collection, since 26.4 | The quantities of the order delivery row. |
+| `AccountsPayableId` | `Int64?` | yes | [AccountsPayables](../Accounting/AccountsPayable.md) | since 22.5 | The business key identifier of the accounts payable the delivery row is linked to. |
+| `PurchaseOrderDeliveryRowQuantities` | `PurchaseOrderDeliveryRowQuantities[]` | no | [PurchaseOrderDeliveryRowQuantities](PurchaseOrderDeliveryRowQuantity.md) | collection, since 26.4 | The quantities of the order delivery row. |
 
 ## Referenced by
 
 **Accounting**
 
-- [BookingRows](/entities/Accounting/BookingRow.md) — `PurchaseOrderDeliveryRowId` (FK)
+- [BookingRows](../Accounting/BookingRow.md) — `PurchaseOrderDeliveryRowId` (FK)
 
 **Manufacturing**
 
-- [ManufacturingOrderOperationReportings](/entities/Manufacturing/ManufacturingOrderOperationReporting.md) — `PurchaseOrderDeliveryRowId` (FK)
+- [ManufacturingOrderOperationReportings](../Manufacturing/ManufacturingOrderOperationReporting.md) — `PurchaseOrderDeliveryRowId` (FK)
 
 **Purchase**
 
-- [PurchaseOrderDeliveries](/entities/Purchase/PurchaseOrderDelivery.md) — `Rows` (expand)
-- [PurchaseOrderDeliveryRowQuantities](/entities/Purchase/PurchaseOrderDeliveryRowQuantity.md) — `ParentId` (FK)
-- [PurchaseOrderInvoiceRows](/entities/Purchase/PurchaseOrderInvoiceRow.md) — `PurchaseOrderDeliveryRowId` (FK)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `OriginatingPurchaseOrderDeliveryRowId` (FK)
+- [PurchaseOrderDeliveries](PurchaseOrderDelivery.md) — `Rows` (expand)
+- [PurchaseOrderDeliveryRowQuantities](PurchaseOrderDeliveryRowQuantity.md) — `ParentId` (FK)
+- [PurchaseOrderInvoiceRows](PurchaseOrderInvoiceRow.md) — `PurchaseOrderDeliveryRowId` (FK)
+- [PurchaseOrderRows](PurchaseOrderRow.md) — `OriginatingPurchaseOrderDeliveryRowId` (FK)
 
 
 ## Example

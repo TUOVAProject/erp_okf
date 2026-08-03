@@ -30,7 +30,7 @@ referenced_by:
 
 Represents an ABC code.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `AbcCode`
 - **Endpoint:** `GET /api/v1/Inventory/AbcCodes`
 - **Required permission:** Show ABC codes
@@ -49,8 +49,8 @@ Represents an ABC code.
 
 **Inventory**
 
-- [PartPlanningInformation](/entities/Inventory/PartPlanningInformation.md) — `AbcCodeId` (FK)
-- [PartTemplates](/entities/Inventory/PartTemplate.md) — `AbcCodeId` (FK)
+- [PartPlanningInformation](PartPlanningInformation.md) — `AbcCodeId` (FK)
+- [PartTemplates](PartTemplate.md) — `AbcCodeId` (FK)
 
 
 ## Example

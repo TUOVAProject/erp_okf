@@ -37,7 +37,7 @@ referenced_by:
 
 Represents a sales agreement basis.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `SalesAgreementBasis`
 - **Endpoint:** `GET /api/v1/Sales/SalesAgreementBases`
 - **Required permission:** Show agreement
@@ -49,10 +49,10 @@ Represents a sales agreement basis.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the agreement basis. |
-| `SalesAgreementId` | `Int64` | no | [SalesAgreements](/entities/Sales/SalesAgreement.md) |  | The business key identifier of the parent agreement. |
-| `CustomerOrderId` | `Int64` | no | [CustomerOrders](/entities/Sales/CustomerOrder.md) |  | The business key identifier of the customer order generated from this agreement basis. |
-| `InvoiceId` | `Int64?` | yes | [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) |  | The business key identifier of the invoice for this agreement basis. |
-| `AccrualAccountId` | `Int64?` | yes | [Accounts](/entities/Accounting/Account.md) |  | The business key identifier of the accrual account for this agreement basis. |
+| `SalesAgreementId` | `Int64` | no | [SalesAgreements](SalesAgreement.md) |  | The business key identifier of the parent agreement. |
+| `CustomerOrderId` | `Int64` | no | [CustomerOrders](CustomerOrder.md) |  | The business key identifier of the customer order generated from this agreement basis. |
+| `InvoiceId` | `Int64?` | yes | [CustomerOrderInvoices](CustomerOrderInvoice.md) |  | The business key identifier of the invoice for this agreement basis. |
+| `AccrualAccountId` | `Int64?` | yes | [Accounts](../Accounting/Account.md) |  | The business key identifier of the accrual account for this agreement basis. |
 | `IsAccrual` | `Boolean` | no |  |  | Indicates if this agreement basis uses accrual accounting. |
 | `IsOneTimeCost` | `Boolean` | no |  |  | Indicates if this agreement basis is a one-time cost. |
 | `IsRemoved` | `Boolean` | no |  |  | Indicates if the agreement basis and the linked customer order has been set as removed. |
@@ -63,10 +63,10 @@ Represents a sales agreement basis.
 | `PlannedInvoiceDate` | `DateTimeOffset` | no |  |  | The planned invoice date of the agreement basis. |
 | `PeriodStartOnAgreementWhenCreated` | `DateTimeOffset?` | yes |  |  | The period start on the agreement when this basis was created. |
 | `ExchangeRate` | `Decimal` | no |  |  | The exchange rate of the agreement basis. |
-| `CurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency of the agreement basis. |
-| `Currency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The currency of the agreement basis. |
+| `CurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency of the agreement basis. |
+| `Currency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The currency of the agreement basis. |
 | `UseForwardRate` | `Boolean` | no |  |  | Indicates if the agreement basis uses forward rate. |
-| `Rows` | `SalesAgreementBasisRows[]` | no | [SalesAgreementBasisRows](/entities/Sales/SalesAgreementBasisRow.md) | expandable, collection | The rows of the agreement basis. |
+| `Rows` | `SalesAgreementBasisRows[]` | no | [SalesAgreementBasisRows](SalesAgreementBasisRow.md) | expandable, collection | The rows of the agreement basis. |
 
 ## Enumerations
 
@@ -82,8 +82,8 @@ Represents a sales agreement basis.
 
 **Sales**
 
-- [SalesAgreementBasisRows](/entities/Sales/SalesAgreementBasisRow.md) — `ParentAgreementBasisId` (FK)
-- [SalesAgreements](/entities/Sales/SalesAgreement.md) — `Bases` (expand)
+- [SalesAgreementBasisRows](SalesAgreementBasisRow.md) — `ParentAgreementBasisId` (FK)
+- [SalesAgreements](SalesAgreement.md) — `Bases` (expand)
 
 
 ## Example

@@ -24,7 +24,7 @@ Specifies a command validation result.
 
 - `Kind` — Valid=0, Warning=1, Error=2
 
-**Referenced by:** [ValidationCommandResponse](/modules/Infrastructure.md#Infrastructure.ValidationCommandResponse)
+**Referenced by:** [ValidationCommandResponse](Infrastructure.md#Infrastructure.ValidationCommandResponse)
 
 <a id="Infrastructure.BatchCommandEntity"></a>
 ### BatchCommandEntity
@@ -51,11 +51,11 @@ The response object used by the batching system to return the complete result of
 | Property | Type | Nullable | References |
 | --- | --- | --- | --- |
 | `IsSuccessful` | `Boolean` | no |  |
-| `Response` | `EntityCommandResponse[]` | no | [EntityCommandResponse](/modules/Infrastructure.md#Infrastructure.EntityCommandResponse) |
+| `Response` | `EntityCommandResponse[]` | no | [EntityCommandResponse](Infrastructure.md#Infrastructure.EntityCommandResponse) |
 | `FailingIndex` | `Int32?` | yes |  |
 | `ErrorMessage` | `String` | no |  |
 
-**References out:** [EntityCommandResponse](/modules/Infrastructure.md#Infrastructure.EntityCommandResponse)
+**References out:** [EntityCommandResponse](Infrastructure.md#Infrastructure.EntityCommandResponse)
 
 <a id="Infrastructure.BooleanInput"></a>
 ### BooleanInput
@@ -107,7 +107,7 @@ This is the response type of all state commands available in the system. As long
 | `CommandName` | `String` | no |  |
 | `Data` | `String` | no |  |
 
-**Referenced by:** [BatchResponse](/modules/Infrastructure.md#Infrastructure.BatchResponse)
+**Referenced by:** [BatchResponse](Infrastructure.md#Infrastructure.BatchResponse)
 
 <a id="Infrastructure.ErrorCommandResponse"></a>
 ### ErrorCommandResponse
@@ -228,6 +228,6 @@ This is the response type returned when adding /Validate after the command path.
 | --- | --- | --- | --- |
 | `IsValid` | `Boolean` | no |  |
 | `ErrorMessage` | `String` | no |  |
-| `Results` | `ApiValidationResult[]` | no | [ApiValidationResult](/modules/Infrastructure.md#Infrastructure.ApiValidationResult) |
+| `Results` | `ApiValidationResult[]` | no | [ApiValidationResult](Infrastructure.md#Infrastructure.ApiValidationResult) |
 
-**References out:** [ApiValidationResult](/modules/Infrastructure.md#Infrastructure.ApiValidationResult)
+**References out:** [ApiValidationResult](Infrastructure.md#Infrastructure.ApiValidationResult)

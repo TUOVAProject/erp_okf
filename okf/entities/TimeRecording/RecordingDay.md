@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a Recording Day, which holds the attendance and work recordings which belongs to an employee for a specific date.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `RecordingDay`
 - **Endpoint:** `GET /api/v1/TimeRecording/RecordingDays`
 - **Required permission:** Show recording items
@@ -48,7 +48,7 @@ Represents a Recording Day, which holds the attendance and work recordings which
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the recording day. |
 | `RecordingDate` | `DateTime` | no |  |  | The date this recording day belongs to. |
-| `PersonId` | `Int64` | no | [Persons](/entities/Common/Person.md) |  | The business key identifier of the Employee that this recording day belongs to. |
+| `PersonId` | `Int64` | no | [Persons](../Common/Person.md) |  | The business key identifier of the Employee that this recording day belongs to. |
 | `ScheduleId` | `Int64?` | yes |  |  | The business key identifier of the workshop schedule assigned to this day. Null if recording without schedule. |
 | `OvertimeScheduleId` | `Int64?` | yes |  |  | The business key identifier of the workshop overtime schedule assigned to this day. Null if recording without overtime schedule. |
 | `CalculatedScheduleDiff` | `TimeSpan` | no |  |  | The calculated difference between the schedule length and the sum of recorded attendance and absence on the day. |
@@ -58,9 +58,9 @@ Represents a Recording Day, which holds the attendance and work recordings which
 | `CalculatedAttendance` | `TimeSpan` | no |  |  | The days calculated total attendance. |
 | `Exported` | `Boolean` | no |  |  | Indicatates if the day has been exported by the salary export system. When true the creation of new or modification of existing attendance recordings is not allowed. |
 | `Authorized` | `Boolean` | no |  |  | Indicatates if the day has been authorized. |
-| `AttendanceIntervals` | `AttendanceIntervals[]` | no | [AttendanceIntervals](/entities/TimeRecording/AttendanceInterval.md) | expandable, collection | The recorded attendance intervals belonging to this day. |
-| `WorkIntervals` | `WorkIntervals[]` | no | [WorkIntervals](/entities/TimeRecording/WorkInterval.md) | expandable, collection | The recorded work intervals belonging to this day. |
-| `Additions` | `AdditionRecordings[]` | no | [AdditionRecordings](/entities/TimeRecording/AdditionRecording.md) | expandable, collection | Additional recordings belonging to this day. |
+| `AttendanceIntervals` | `AttendanceIntervals[]` | no | [AttendanceIntervals](AttendanceInterval.md) | expandable, collection | The recorded attendance intervals belonging to this day. |
+| `WorkIntervals` | `WorkIntervals[]` | no | [WorkIntervals](WorkInterval.md) | expandable, collection | The recorded work intervals belonging to this day. |
+| `Additions` | `AdditionRecordings[]` | no | [AdditionRecordings](AdditionRecording.md) | expandable, collection | Additional recordings belonging to this day. |
 | `Approved` | `Boolean` | no |  | since 22.1 | Indicates that the employee is finished with the adding or adjustments. |
 | `CommentText` | `String` | no |  | since 22.7 | Recording comment |
 
@@ -68,7 +68,7 @@ Represents a Recording Day, which holds the attendance and work recordings which
 
 **TimeRecording**
 
-- [AttendanceChart](/entities/TimeRecording/AttendanceChart.md) — `Id` (FK)
+- [AttendanceChart](AttendanceChart.md) — `Id` (FK)
 
 
 ## Example

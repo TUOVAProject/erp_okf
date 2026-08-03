@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a customer status.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerStatus`
 - **Endpoint:** `GET /api/v1/Sales/CustomerStatuses`
 - **Required permission:** Show customer
@@ -49,8 +49,8 @@ Represents a customer status.
 
 **Sales**
 
-- [Customers](/entities/Sales/Customer.md) — `Status` (expand)
-- [Customers](/entities/Sales/Customer.md) — `StatusId` (FK)
+- [Customers](Customer.md) — `Status` (expand)
+- [Customers](Customer.md) — `StatusId` (FK)
 
 
 ## Example

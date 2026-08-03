@@ -33,7 +33,7 @@ references_out:
 
 Represents an attendance group setting.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `AttendanceGroupSettings`
 - **Endpoint:** `GET /api/v1/TimeRecording/AttendanceGroupSettings`
 - **Required permission:** Show basic data for attendance
@@ -61,10 +61,10 @@ Represents an attendance group setting.
 | `CalculationFactor` | `TimeSpan` | no |  |  | The calculation factor. |
 | `CalculateOvertime` | `Int32` | no |  | enum | Indicates how overtime is calculated. |
 | `FlexTime` | `Boolean` | no |  |  | Indicates if flex time is allowed. |
-| `SalaryTypeForPositiveFlex` | `Int64?` | yes | [SalaryTypes](/entities/TimeRecording/SalaryType.md) |  | The salary type for positive flex. |
-| `SalaryTypeForNegativeFlex` | `Int64?` | yes | [SalaryTypes](/entities/TimeRecording/SalaryType.md) |  | The salary type for negative flex. |
+| `SalaryTypeForPositiveFlex` | `Int64?` | yes | [SalaryTypes](SalaryType.md) |  | The salary type for positive flex. |
+| `SalaryTypeForNegativeFlex` | `Int64?` | yes | [SalaryTypes](SalaryType.md) |  | The salary type for negative flex. |
 | `CalculateFlextime` | `Int32` | no |  | enum, since 24.8 | Indicates how flex is calculated. |
-| `SalaryTypeForScheduleLessRecording` | `Int64?` | yes | [SalaryTypes](/entities/TimeRecording/SalaryType.md) |  | The salary type for schedule less recordings. |
+| `SalaryTypeForScheduleLessRecording` | `Int64?` | yes | [SalaryTypes](SalaryType.md) |  | The salary type for schedule less recordings. |
 | `MinTimePerDay` | `TimeSpan` | no |  |  | The minimum time the employee has to work for shorter working hours to apply when using per day calculation. |
 | `NegativeFlexIncludedInDailyHours` | `Boolean` | no |  |  | Indicates if negative flex should be included in daily hours. |
 | `NumberOfDaysBackInTimeThatCanBeAdjusted` | `Int32` | no |  |  | Determains how many days are adjustable back in time. |
@@ -74,15 +74,15 @@ Represents an attendance group setting.
 | `OvertimeLimitBefore` | `TimeSpan` | no |  |  | The overtime limit before the start of the schedule. |
 | `PlanAbsenceViaRecordingTerminal` | `Boolean` | no |  |  | Indicates if planned absence is allowed from the recording terminal. |
 | `RoundOffOvertime` | `Boolean` | no |  |  | Indicates if round off overtime should be used. |
-| `RoundOffOvertimeTimebankId` | `Int64?` | yes | [TimeBanks](/entities/TimeRecording/TimeBank.md) |  | The timebank to use for round off overtime. |
+| `RoundOffOvertimeTimebankId` | `Int64?` | yes | [TimeBanks](TimeBank.md) |  | The timebank to use for round off overtime. |
 | `RoundOffTo` | `TimeSpan` | no |  |  | The time to round off overtime to. |
 | `SalaryTypeAccordingToOvertime` | `Boolean` | no |  |  | Indicates if salary type should be calculated from the start of the overtime schedule, not from where it was recorded. |
-| `ShorterWorkingHoursTimeBankId` | `Int64?` | yes | [TimeBanks](/entities/TimeRecording/TimeBank.md) |  | The time bank to use for shorter working hours. |
+| `ShorterWorkingHoursTimeBankId` | `Int64?` | yes | [TimeBanks](TimeBank.md) |  | The time bank to use for shorter working hours. |
 | `TimeAfterScheduleEnd` | `TimeSpan` | no |  |  | Threshold for automatic overtime question after schedule end in recording terminal. |
 | `TimeBeforeScheduleStart` | `TimeSpan` | no |  |  | Threshold for automatic overtime question before schedule start in recording terminal. |
-| `UnavailableAbsenceCodes` | `AbsenceCodes[]` | no | [AbsenceCodes](/entities/TimeRecording/AbsenceCode.md) | expandable, collection, since 22.3 | Unavailable absence codes for the attendance group setting. |
-| `OvertimeTypes` | `OvertimeTypes[]` | no | [OvertimeTypes](/entities/TimeRecording/OvertimeType.md) | expandable, collection, since 23.4 | The overtime types for the attendance group setting. |
-| `IndirectWorkCodeId` | `Int64?` | yes | [IndirectWorkCodes](/entities/TimeRecording/IndirectWorkCode.md) | since 23.4 | The business key identifier of the indirect work. |
+| `UnavailableAbsenceCodes` | `AbsenceCodes[]` | no | [AbsenceCodes](AbsenceCode.md) | expandable, collection, since 22.3 | Unavailable absence codes for the attendance group setting. |
+| `OvertimeTypes` | `OvertimeTypes[]` | no | [OvertimeTypes](OvertimeType.md) | expandable, collection, since 23.4 | The overtime types for the attendance group setting. |
+| `IndirectWorkCodeId` | `Int64?` | yes | [IndirectWorkCodes](IndirectWorkCode.md) | since 23.4 | The business key identifier of the indirect work. |
 
 ## Enumerations
 

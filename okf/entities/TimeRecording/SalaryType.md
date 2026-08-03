@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a salary type.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `SalaryType`
 - **Endpoint:** `GET /api/v1/TimeRecording/SalaryTypes`
 - **Required permission:** Show basic data for attendance
@@ -50,11 +50,11 @@ Represents a salary type.
 
 **TimeRecording**
 
-- [AttendanceAdditions](/entities/TimeRecording/AttendanceAddition.md) — `SalaryTypes` (expand)
-- [AttendanceGroupSettings](/entities/TimeRecording/AttendanceGroupSettings.md) — `SalaryTypeForNegativeFlex` (FK)
-- [AttendanceGroupSettings](/entities/TimeRecording/AttendanceGroupSettings.md) — `SalaryTypeForPositiveFlex` (FK)
-- [AttendanceGroupSettings](/entities/TimeRecording/AttendanceGroupSettings.md) — `SalaryTypeForScheduleLessRecording` (FK)
-- [WorkshopScheduleSalaryTypes](/entities/TimeRecording/WorkshopScheduleSalaryType.md) — `SalaryTypes` (expand)
+- [AttendanceAdditions](AttendanceAddition.md) — `SalaryTypes` (expand)
+- [AttendanceGroupSettings](AttendanceGroupSettings.md) — `SalaryTypeForNegativeFlex` (FK)
+- [AttendanceGroupSettings](AttendanceGroupSettings.md) — `SalaryTypeForPositiveFlex` (FK)
+- [AttendanceGroupSettings](AttendanceGroupSettings.md) — `SalaryTypeForScheduleLessRecording` (FK)
+- [WorkshopScheduleSalaryTypes](WorkshopScheduleSalaryType.md) — `SalaryTypes` (expand)
 
 
 ## Example

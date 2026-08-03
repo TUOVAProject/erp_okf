@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a purchase order type.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `PurchaseOrderType`
 - **Endpoint:** `GET /api/v1/Purchase/PurchaseOrderTypes`
 - **Required permission:** Show order types
@@ -53,7 +53,7 @@ Represents a purchase order type.
 | `BaseType` | `Int32` | no |  | enum | The base type of purchase orders created using this type. |
 | `CodingGroupId` | `Int64` | no |  |  | The business key identifier of the type's coding group. |
 | `RateTypeSetting` | `Int32` | no |  | enum, since 22.9 | The rate type setting of the purchase order type. |
-| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the purchase order type's currency exchange type. |
+| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the purchase order type's currency exchange type. |
 
 ## Enumerations
 
@@ -79,8 +79,8 @@ Represents a purchase order type.
 
 **Purchase**
 
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `OrderType` (expand)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `OrderTypeId` (FK)
+- [PurchaseOrders](PurchaseOrder.md) — `OrderType` (expand)
+- [PurchaseOrders](PurchaseOrder.md) — `OrderTypeId` (FK)
 
 
 ## Example

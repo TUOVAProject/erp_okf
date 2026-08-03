@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a schedule used for time recording.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `Schedule`
 - **Endpoint:** `GET /api/v1/TimeRecording/Schedules`
 - **Required permission:** Show basic data for attendance
@@ -52,7 +52,7 @@ Represents a schedule used for time recording.
 | `ScheduleLength` | `Int64` | no |  | since 23.1 | The length of the schedule. |
 | `Start` | `Int64` | no |  | since 23.1 | Information about the start of the schedule. |
 | `End` | `Int64` | no |  | since 23.1 | Information about the end of the schedule. |
-| `OvertimeScheduleId` | `Int64?` | yes | [Schedules](/entities/TimeRecording/Schedule.md) | since 23.1 | The business key identifier of the Overtime schedule. |
+| `OvertimeScheduleId` | `Int64?` | yes | [Schedules](Schedule.md) | since 23.1 | The business key identifier of the Overtime schedule. |
 | `FlexInStart` | `Int64?` | yes |  | since 23.1 | The flex in start of the schedule. |
 | `FlexInEnd` | `Int64?` | yes |  | since 23.1 | The flex in end of the schedule. |
 | `FlexOutStart` | `Int64?` | yes |  | since 23.1 | The flex out start of the schedule. |
@@ -66,8 +66,8 @@ Represents a schedule used for time recording.
 | `BlockedFromDate` | `DateTimeOffset?` | yes |  | since 24.4 | The date when the entity starts being blocked. |
 | `BlockedToDate` | `DateTimeOffset?` | yes |  | since 24.4 | The date when the entity stops being blocked. |
 | `BlockedStatus` | `Int32` | no |  | enum, since 24.4 | The block status of the entity. |
-| `BlockMessageId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) | since 24.4 | The business key identifier of the entity block message comment. References Comments . |
-| `BlockMessage` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable, since 24.4 | The entity block message comment |
+| `BlockMessageId` | `Int64?` | yes | [Comments](../Common/Comment.md) | since 24.4 | The business key identifier of the entity block message comment. References Comments . |
+| `BlockMessage` | `Comments` | no | [Comments](../Common/Comment.md) | expandable, since 24.4 | The entity block message comment |
 
 ## Enumerations
 
@@ -100,16 +100,16 @@ Represents a schedule used for time recording.
 
 **Common**
 
-- [Persons](/entities/Common/Person.md) — `AvailableWorkshopSchedules` (expand)
+- [Persons](../Common/Person.md) — `AvailableWorkshopSchedules` (expand)
 
 **Manufacturing**
 
-- [ProductionCalendarExceptions](/entities/Manufacturing/ProductionCalendarException.md) — `ScheduleId` (FK)
+- [ProductionCalendarExceptions](../Manufacturing/ProductionCalendarException.md) — `ScheduleId` (FK)
 
 **TimeRecording**
 
-- [Schedules](/entities/TimeRecording/Schedule.md) — `OvertimeScheduleId` (FK)
-- [WorkshopScheduleSalaryTypeRows](/entities/TimeRecording/WorkshopScheduleSalaryTypeRow.md) — `ScheduleId` (FK)
+- [Schedules](Schedule.md) — `OvertimeScheduleId` (FK)
+- [WorkshopScheduleSalaryTypeRows](WorkshopScheduleSalaryTypeRow.md) — `ScheduleId` (FK)
 
 
 ## Example

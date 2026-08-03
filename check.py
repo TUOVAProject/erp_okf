@@ -56,7 +56,7 @@ FIXTURES = [
     },
 ]
 
-LINK_PATTERN = re.compile(r"\]\((/[^)\s]+)\)")
+LINK_PATTERN = re.compile(r"\]\(([^)\s]+)\)")
 
 
 def check_fixtures():
@@ -177,16 +177,23 @@ def check_baseline():
 
 
 def check_links():
-    """Every bundle-relative link resolves to a file that exists.
+    """Every link resolves to a file that exists, relative to the file it's in.
 
     Relationships in this bundle *are* the links, so a broken one is a broken
-    fact, not a cosmetic problem.
+    fact, not a cosmetic problem. Links are file-relative (e.g. "../Common/X.md")
+    so they work when the bundle is browsed as a plain directory -- GitHub, an
+    editor, a file manager -- not only when something serves okf/ as a web root.
     """
     broken = []
 
     for path in sorted(OKF_DIR.rglob("*.md")):
         for target in LINK_PATTERN.findall(path.read_text(encoding="utf-8")):
-            if not (OKF_DIR / target.lstrip("/")).exists():
+            if target.startswith(("http://", "https://", "mailto:")):
+                continue
+
+            file_part, _, _ = target.partition("#")
+
+            if file_part and not (path.parent / file_part).resolve().exists():
                 broken.append(f"{path.relative_to(OKF_DIR)} -> {target}")
 
     assert not broken, f"{len(broken)} broken links, e.g. " + "; ".join(broken[:5])
@@ -198,14 +205,18 @@ def check_compact_links():
     Compact links carry a '#entity-key' fragment instead of pointing at a
     separate per-entity file, so the file part and the anchor must both be
     verified -- a broken in-module reference would otherwise pass silently.
+    Links are file-relative, same as check_links().
     """
     broken = []
     anchors_by_file = {}
 
     for path in sorted(OKF_COMPACT_DIR.rglob("*.md")):
         for target in LINK_PATTERN.findall(path.read_text(encoding="utf-8")):
+            if target.startswith(("http://", "https://", "mailto:")):
+                continue
+
             file_part, _, fragment = target.partition("#")
-            resolved = OKF_COMPACT_DIR / file_part.lstrip("/")
+            resolved = (path.parent / file_part).resolve() if file_part else path
 
             if not resolved.exists():
                 broken.append(f"{path.relative_to(OKF_COMPACT_DIR)} -> {target} (missing file)")

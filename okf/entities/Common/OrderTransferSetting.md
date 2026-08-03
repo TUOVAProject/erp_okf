@@ -29,7 +29,7 @@ referenced_by:
 
 Represents an order transfer setting.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `OrderTransferSetting`
 - **Endpoint:** `GET /api/v1/Common/OrderTransferSettings`
 - **Required permission:** Show setting
@@ -49,7 +49,7 @@ Represents an order transfer setting.
 
 **Common**
 
-- [TransferProfiles](/entities/Common/TransferProfile.md) — `OrderTransferSettingsId` (FK)
+- [TransferProfiles](TransferProfile.md) — `OrderTransferSettingsId` (FK)
 
 
 ## Example

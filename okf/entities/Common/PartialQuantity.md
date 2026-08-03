@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a partial quantity.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PartialQuantity`
 - **Endpoint:** `GET /api/v1/Common/PartialQuantities`
 - **GUID:** `5B9F4E40-CD73-4F03-AB24-90409BF48FA0`
@@ -47,27 +47,27 @@ Represents a partial quantity.
 | `Id` | `Int64` | no |  |  | The business key identifier of the partial quantity. |
 | `Quantity` | `Decimal` | no |  |  | Quantity, can be a length or weight. |
 | `NumberOf` | `Decimal` | no |  |  | Number of Quantity. Total amount of quantities is NumberOf * Quantity |
-| `PackagePartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the package part id for this partial quantity. |
+| `PackagePartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the package part id for this partial quantity. |
 | `RowIndex` | `Int32` | no |  |  | The ordered row index of the partial quantity. |
 
 ## Referenced by
 
 **Inventory**
 
-- [OrderQuantityTemplates](/entities/Inventory/OrderQuantityTemplate.md) — `PartialQuantities` (expand)
+- [OrderQuantityTemplates](../Inventory/OrderQuantityTemplate.md) — `PartialQuantities` (expand)
 
 **Manufacturing**
 
-- [OrderQuantityManufacturingOrderOperations](/entities/Manufacturing/OrderQuantityManufacturingOrderOperation.md) — `PartialQuantities` (expand)
-- [OrderQuantityManufacturingOrders](/entities/Manufacturing/OrderQuantityManufacturingOrder.md) — `PartialQuantities` (expand)
+- [OrderQuantityManufacturingOrderOperations](../Manufacturing/OrderQuantityManufacturingOrderOperation.md) — `PartialQuantities` (expand)
+- [OrderQuantityManufacturingOrders](../Manufacturing/OrderQuantityManufacturingOrder.md) — `PartialQuantities` (expand)
 
 **Purchase**
 
-- [OrderQuantityPurchaseOrders](/entities/Purchase/OrderQuantityPurchaseOrder.md) — `PartialQuantities` (expand)
+- [OrderQuantityPurchaseOrders](../Purchase/OrderQuantityPurchaseOrder.md) — `PartialQuantities` (expand)
 
 **Sales**
 
-- [OrderQuantityCustomerOrders](/entities/Sales/OrderQuantityCustomerOrder.md) — `PartialQuantities` (expand)
+- [OrderQuantityCustomerOrders](../Sales/OrderQuantityCustomerOrder.md) — `PartialQuantities` (expand)
 
 
 ## Example

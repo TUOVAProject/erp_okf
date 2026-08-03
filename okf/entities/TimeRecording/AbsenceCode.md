@@ -31,7 +31,7 @@ referenced_by:
 
 Represents an absence code. Used in time recording to represent a period of absence.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `AbsenceCode`
 - **Endpoint:** `GET /api/v1/TimeRecording/AbsenceCodes`
 - **Required permission:** Show basic data for attendance
@@ -50,8 +50,8 @@ Represents an absence code. Used in time recording to represent a period of abse
 
 **TimeRecording**
 
-- [AttendanceGroupSettings](/entities/TimeRecording/AttendanceGroupSettings.md) — `UnavailableAbsenceCodes` (expand)
-- [AttendanceIntervals](/entities/TimeRecording/AttendanceInterval.md) — `AbsenceCodeId` (FK)
+- [AttendanceGroupSettings](AttendanceGroupSettings.md) — `UnavailableAbsenceCodes` (expand)
+- [AttendanceIntervals](AttendanceInterval.md) — `AbsenceCodeId` (FK)
 
 
 ## Example

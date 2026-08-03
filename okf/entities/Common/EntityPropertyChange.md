@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a queryable entity property change entry.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `EntityPropertyChange`
 - **Endpoint:** `GET /api/v1/Common/EntityPropertyChanges`
 - **Required permission:** Show changelog
@@ -62,7 +62,7 @@ Represents a queryable entity property change entry.
 
 **Common**
 
-- [EntityChangeLogs](/entities/Common/EntityChangeLog.md) — `Changes` (expand)
+- [EntityChangeLogs](EntityChangeLog.md) — `Changes` (expand)
 
 
 ## Example

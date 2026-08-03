@@ -29,7 +29,7 @@ referenced_by:
 
 Represents manufacturing print settings for a work center.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `WorkCenterManufacturingPrintSettings`
 - **Endpoint:** `GET /api/v1/Common/WorkCenterManufacturingPrintSettings`
 - **Required permission:** Show work center
@@ -49,7 +49,7 @@ Represents manufacturing print settings for a work center.
 
 **Manufacturing**
 
-- [WorkCenters](/entities/Manufacturing/WorkCenter.md) — `ManufacturingPrintSettings` (expand)
+- [WorkCenters](WorkCenter.md) — `ManufacturingPrintSettings` (expand)
 
 
 ## Example

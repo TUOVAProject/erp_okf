@@ -25,7 +25,7 @@ references_out:
 
 Represents form report data from MONITOR.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `FormReportData`
 - **Endpoint:** none — this is a payload type, not a queryable resource.
 
@@ -39,7 +39,7 @@ Represents form report data from MONITOR.
 | --- | --- | --- | --- | --- | --- |
 | `Name` | `String` | no |  |  | The name of the form report. |
 | `Data` | `String` | no |  |  | The form report PDF data represented as a Base64 string. |
-| `FileLinkIds` | `Int64[]` | no | [FileLink](/entities/Common/FileLink.md) | collection, since 2.41 | The business key identifiers of the file links associated with this report. References FileLink . |
+| `FileLinkIds` | `Int64[]` | no | [FileLink](FileLink.md) | collection, since 2.41 | The business key identifiers of the file links associated with this report. References FileLink . |
 
 ## Example
 

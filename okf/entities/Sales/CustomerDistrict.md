@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a customer district.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerDistrict`
 - **Endpoint:** `GET /api/v1/Sales/CustomerDistricts`
 - **Required permission:** Show customer
@@ -51,16 +51,16 @@ Represents a customer district.
 
 **Common**
 
-- [Persons](/entities/Common/Person.md) — `DistrictId` (FK)
+- [Persons](../Common/Person.md) — `DistrictId` (FK)
 
 **Inventory**
 
-- [SalesForecasts](/entities/Inventory/SalesForecast.md) — `CustomerDistrictId` (FK)
+- [SalesForecasts](../Inventory/SalesForecast.md) — `CustomerDistrictId` (FK)
 
 **Sales**
 
-- [Customers](/entities/Sales/Customer.md) — `District` (expand)
-- [Customers](/entities/Sales/Customer.md) — `DistrictId` (FK)
+- [Customers](Customer.md) — `District` (expand)
+- [Customers](Customer.md) — `DistrictId` (FK)
 
 
 ## Example

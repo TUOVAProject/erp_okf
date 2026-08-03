@@ -37,7 +37,7 @@ referenced_by:
 
 Represents a manufacturing order material.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ManufacturingOrderMaterial`
 - **Endpoint:** `GET /api/v1/Manufacturing/ManufacturingOrderMaterials`
 - **Required permission:** Show manufacturing orders
@@ -51,22 +51,22 @@ Represents a manufacturing order material.
 | `Id` | `Int64` | no |  |  | The business key identifier of the manufacturing order material. |
 | `ReportNumber` | `Int64` | no |  |  | The report number of the manufacturing order material. |
 | `RowNumber` | `Int32` | no |  |  | The row number of the manufacturing order material. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the manufacturing order material part. |
-| `Part` | `Parts` | no | [Parts](/entities/Inventory/Part.md) | expandable | The manufacturing order material part. |
+| `PartId` | `Int64` | no | [Parts](../Inventory/Part.md) |  | The business key identifier of the manufacturing order material part. |
+| `Part` | `Parts` | no | [Parts](../Inventory/Part.md) | expandable | The manufacturing order material part. |
 | `ToOperationNumber` | `Int32` | no |  |  | The manufacturing order operation number that the manufacturing order material belongs to. |
 | `ReportedQuantity` | `Decimal` | no |  |  | The reported quantity of the manufacturing order material. |
 | `RestQuantity` | `Decimal` | no |  |  | The remaining quantity of the manufacturing order material. |
 | `PlannedQuantity` | `Decimal` | no |  |  | The planned quantity of the manufacturing order material. |
-| `ManufacturingOrderId` | `Int64` | no | [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) |  | The business key identifier of the manufacturing order that the manufacturing order material belongs to. |
-| `ManufacturingOrderNodeId` | `Int64` | no | [ManufacturingOrderNodes](/entities/Manufacturing/ManufacturingOrderNode.md) | since 2.30 | The business key identifier of the manufacturing order node that the manufacturing order material belongs to. |
+| `ManufacturingOrderId` | `Int64` | no | [ManufacturingOrders](ManufacturingOrder.md) |  | The business key identifier of the manufacturing order that the manufacturing order material belongs to. |
+| `ManufacturingOrderNodeId` | `Int64` | no | [ManufacturingOrderNodes](ManufacturingOrderNode.md) | since 2.30 | The business key identifier of the manufacturing order node that the manufacturing order material belongs to. |
 | `PositionNumber` | `String` | no |  | since 2.49 | The position number of the material. |
-| `InstructionCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) | since 2.49 | The business key identifier of the manufacturing order material's instruction comment. |
-| `InstructionComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable, since 2.49 | The manufacturing order material's instruction comment. |
+| `InstructionCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) | since 2.49 | The business key identifier of the manufacturing order material's instruction comment. |
+| `InstructionComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable, since 2.49 | The manufacturing order material's instruction comment. |
 | `QuantityPerUnit` | `Decimal` | no |  | since 22.9 | Quantity per unit of the manufacturing order material. |
 | `CycleTime` | `TimeSpan?` | yes |  | since 22.9 | Cycle time of the manufacturing order material. |
 | `EditedStatus` | `Int32` | no |  | bitmask, enum, since 22.9 | Edited status of the manufacturing order material. |
 | `ExtraQuantityProcent` | `Decimal` | no |  | since 22.9 | Extra quantity procent of the manufacturing order material. |
-| `LinkedPurchaseOrderRowId` | `Int64?` | yes | [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) | since 22.9 | The business key identifier of the purchase order row that the manufacturing order material belongs to. |
+| `LinkedPurchaseOrderRowId` | `Int64?` | yes | [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) | since 22.9 | The business key identifier of the purchase order row that the manufacturing order material belongs to. |
 | `LockedToBatchNo` | `String` | no |  | max length 35, since 22.9 | Locked To batch number of the manufacturing order material. |
 | `QuantityPerCycle` | `Decimal?` | yes |  | since 22.9 | Quantity per cycle of the manufacturing order material. |
 | `RejectedQuantity` | `Decimal` | no |  | since 22.9 | Rejected quantity of the manufacturing order material. |
@@ -90,10 +90,10 @@ Represents a manufacturing order material.
 
 **Manufacturing**
 
-- [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) — `Materials` (expand)
-- [ManufacturingOrders](/entities/Manufacturing/ManufacturingOrder.md) — `Materials` (expand)
-- [ManufacturingPickingListMaterials](/entities/Manufacturing/ManufacturingPickingListMaterial.md) — `Material` (expand)
-- [ManufacturingPickingListMaterials](/entities/Manufacturing/ManufacturingPickingListMaterial.md) — `MaterialId` (FK)
+- [ManufacturingOrderOperations](ManufacturingOrderOperation.md) — `Materials` (expand)
+- [ManufacturingOrders](ManufacturingOrder.md) — `Materials` (expand)
+- [ManufacturingPickingListMaterials](ManufacturingPickingListMaterial.md) — `Material` (expand)
+- [ManufacturingPickingListMaterials](ManufacturingPickingListMaterial.md) — `MaterialId` (FK)
 
 
 ## Example

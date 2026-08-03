@@ -41,7 +41,7 @@ referenced_by:
 
 Represents a part location.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PartLocation`
 - **Endpoint:** `GET /api/v1/Inventory/PartLocations`
 - **Required permission:** Show part
@@ -53,9 +53,9 @@ Represents a part location.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the location. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part to which the location belong. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse where the location is located. |
-| `Warehouse` | `Warehouses` | no | [Warehouses](/entities/Common/Warehouse.md) | expandable | The warehouse of the location. |
+| `PartId` | `Int64` | no | [Parts](Part.md) |  | The business key identifier of the part to which the location belong. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse where the location is located. |
+| `Warehouse` | `Warehouses` | no | [Warehouses](../Common/Warehouse.md) | expandable | The warehouse of the location. |
 | `Name` | `String` | no |  | max length 35 | The name of the location. |
 | `Balance` | `Decimal` | no |  |  | The balance in standard unit. |
 | `LifeCycleState` | `Int32` | no |  | enum | The life cycle state of the location. |
@@ -70,10 +70,10 @@ Represents a part location.
 | `SerialNumber` | `String` | no |  |  | Serial number when part has traceability of type serial number. |
 | `InventoryStatus` | `Int32` | no |  | enum | The inventory status of the location. |
 | `IsOngoingRefill` | `Boolean` | no |  |  | Specifies if the location is currently being refilled. |
-| `RevisionId` | `Int64?` | yes | [Revisions](/entities/Common/Revision.md) |  | The business key identifier of the revision of the location. |
-| `Revision` | `Revisions` | no | [Revisions](/entities/Common/Revision.md) | expandable | The revision of the location. |
+| `RevisionId` | `Int64?` | yes | [Revisions](../Common/Revision.md) |  | The business key identifier of the revision of the location. |
+| `Revision` | `Revisions` | no | [Revisions](../Common/Revision.md) | expandable | The revision of the location. |
 | `IgnoredBalance` | `Boolean` | no |  |  | Specifies if the balance of the location is to be ignored when calculating Net Requirement and CDT. |
-| `PartLocationProductRecords` | `PartLocationProductRecords[]` | no | [PartLocationProductRecords](/entities/Inventory/PartLocationProductRecord.md) | expandable, collection, since 2.29 | A collection of quantity items that holds the quantity of each batch/serial number. |
+| `PartLocationProductRecords` | `PartLocationProductRecords[]` | no | [PartLocationProductRecords](PartLocationProductRecord.md) | expandable, collection, since 2.29 | A collection of quantity items that holds the quantity of each batch/serial number. |
 
 ## Enumerations
 
@@ -99,18 +99,18 @@ Represents a part location.
 
 **Inventory**
 
-- [PartLocationProductRecords](/entities/Inventory/PartLocationProductRecord.md) — `PartLocationId` (FK)
-- [Parts](/entities/Inventory/Part.md) — `PartLocations` (expand)
-- [PhysicalInventoryRows](/entities/Inventory/PhysicalInventoryRow.md) — `LocationId` (FK)
-- [StockBalanceChanges](/entities/Inventory/StockBalanceChange.md) — `PartLocationId` (FK)
-- [StockTransactions](/entities/Inventory/StockTransaction.md) — `PartLocationId` (FK)
+- [PartLocationProductRecords](PartLocationProductRecord.md) — `PartLocationId` (FK)
+- [Parts](Part.md) — `PartLocations` (expand)
+- [PhysicalInventoryRows](PhysicalInventoryRow.md) — `LocationId` (FK)
+- [StockBalanceChanges](StockBalanceChange.md) — `PartLocationId` (FK)
+- [StockTransactions](StockTransaction.md) — `PartLocationId` (FK)
 
 **Sales**
 
-- [PackageRowPartLocations](/entities/Sales/PackageRowPartLocation.md) — `PartLocationId` (FK)
-- [SalesPickingListRowQuantities](/entities/Sales/SalesPickingListRowQuantity.md) — `PartLocationId` (FK)
-- [WithdrawalInformationLocation](/entities/Sales/WithdrawalInformationLocation.md) — `PartLocationId` (FK)
-- [WithdrawalInformationLocation](/entities/Sales/WithdrawalInformationLocation.md) — `ProductRecordId` (FK)
+- [PackageRowPartLocations](../Sales/PackageRowPartLocation.md) — `PartLocationId` (FK)
+- [SalesPickingListRowQuantities](../Sales/SalesPickingListRowQuantity.md) — `PartLocationId` (FK)
+- [WithdrawalInformationLocation](../Sales/WithdrawalInformationLocation.md) — `PartLocationId` (FK)
+- [WithdrawalInformationLocation](../Sales/WithdrawalInformationLocation.md) — `ProductRecordId` (FK)
 
 
 ## Example

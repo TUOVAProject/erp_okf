@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a project cost budget.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ProjectCostBudget`
 - **Endpoint:** `GET /api/v1/Common/ProjectCostBudgets`
 - **Required permission:** Show projects
@@ -45,19 +45,19 @@ Represents a project cost budget.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the project cost budget. |
-| `ProjectId` | `Int64?` | yes | [Projects](/entities/Common/Project.md) |  | The business key identifier of the project this project cost budget belongs to. |
-| `CostTypeId` | `Int64?` | yes | [ProjectCostTypes](/entities/Common/ProjectCostType.md) |  | The business key identifier of the project cost type this project cost budget belongs to. |
+| `ProjectId` | `Int64?` | yes | [Projects](Project.md) |  | The business key identifier of the project this project cost budget belongs to. |
+| `CostTypeId` | `Int64?` | yes | [ProjectCostTypes](ProjectCostType.md) |  | The business key identifier of the project cost type this project cost budget belongs to. |
 | `Hours` | `Decimal` | no |  |  | The time in hours of the project cost budget. |
 | `Cost` | `Decimal` | no |  |  | The cost of the project cost budget. |
 | `Income` | `Decimal` | no |  |  | The income of the project cost budget. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the project cost budget's comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the project cost budget. |
+| `CommentId` | `Int64?` | yes | [Comments](Comment.md) |  | The business key identifier of the project cost budget's comment. |
+| `Comment` | `Comments` | no | [Comments](Comment.md) | expandable | The comment of the project cost budget. |
 
 ## Referenced by
 
 **Common**
 
-- [Projects](/entities/Common/Project.md) — `ProjectCostBudgets` (expand)
+- [Projects](Project.md) — `ProjectCostBudgets` (expand)
 
 
 ## Example

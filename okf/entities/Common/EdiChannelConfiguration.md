@@ -28,7 +28,7 @@ referenced_by:
 
 Represents an Edi Channel Configuration.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `EdiChannelConfiguration`
 - **Endpoint:** `GET /api/v1/Common/EdiChannelConfigurations`
 - **GUID:** `4c3dc5d5-fad2-4d63-a3cf-61565b1e8196`
@@ -48,7 +48,7 @@ Represents an Edi Channel Configuration.
 
 **Common**
 
-- [EdiBehaviors](/entities/Common/EdiBehavior.md) — `EdiChannelConfigurations` (expand)
+- [EdiBehaviors](EdiBehavior.md) — `EdiChannelConfigurations` (expand)
 
 
 ## Example

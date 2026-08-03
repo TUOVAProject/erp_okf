@@ -31,7 +31,7 @@ references_out:
 
 Represents an Edi Behavior
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `EdiBehavior`
 - **Endpoint:** `GET /api/v1/Common/EdiBehaviors`
 - **Required permission:** Show EDI settings
@@ -45,11 +45,11 @@ Represents an Edi Behavior
 | `Id` | `Int64` | no |  |  | The business key identifier of the edi behaviour. |
 | `Name` | `String` | no |  | unique, max length 80 | The name of the edi behaviour. |
 | `Module` | `Int32` | no |  | enum | The module of the edi behaviour. |
-| `EdiChannelConfigurations` | `EdiChannelConfigurations[]` | no | [EdiChannelConfigurations](/entities/Common/EdiChannelConfiguration.md) | expandable, collection | The edi channel configurations of edi behavior. |
-| `Customers` | `Customers[]` | no | [Customers](/entities/Sales/Customer.md) | expandable, collection | The customer of edi behavior. |
-| `InvoiceCustomers` | `Customers[]` | no | [Customers](/entities/Sales/Customer.md) | expandable, collection | The invoice customers of edi behavior. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse. |
-| `Warehouse` | `Warehouses` | no | [Warehouses](/entities/Common/Warehouse.md) | expandable | The warehouse of the edi behavior. |
+| `EdiChannelConfigurations` | `EdiChannelConfigurations[]` | no | [EdiChannelConfigurations](EdiChannelConfiguration.md) | expandable, collection | The edi channel configurations of edi behavior. |
+| `Customers` | `Customers[]` | no | [Customers](../Sales/Customer.md) | expandable, collection | The customer of edi behavior. |
+| `InvoiceCustomers` | `Customers[]` | no | [Customers](../Sales/Customer.md) | expandable, collection | The invoice customers of edi behavior. |
+| `WarehouseId` | `Int64` | no | [Warehouses](Warehouse.md) |  | The business key identifier of the warehouse. |
+| `Warehouse` | `Warehouses` | no | [Warehouses](Warehouse.md) | expandable | The warehouse of the edi behavior. |
 
 ## Enumerations
 

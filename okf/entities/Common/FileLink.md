@@ -27,7 +27,7 @@ referenced_by:
 
 Represents a file that has been linked to a comment.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `FileLink`
 - **Endpoint:** none — this is a payload type, not a queryable resource.
 - **Introduced in:** 2.18
@@ -79,8 +79,8 @@ Represents a file that has been linked to a comment.
 
 **Common**
 
-- [Comments](/entities/Common/Comment.md) — `FileLinks` (expand)
-- [FormReportData](/entities/Common/FormReportData.md) — `FileLinkIds` (FK)
+- [Comments](Comment.md) — `FileLinks` (expand)
+- [FormReportData](FormReportData.md) — `FileLinkIds` (FK)
 
 
 ## Example

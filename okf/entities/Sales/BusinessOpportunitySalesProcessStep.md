@@ -32,7 +32,7 @@ references_out:
 
 Represents a business opportunity sales process step.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `BusinessOpportunitySalesProcessStep`
 - **Endpoint:** `GET /api/v1/Sales/BusinessOpportunitySalesProcessSteps`
 - **Required permission:** Show business opportunity
@@ -49,10 +49,10 @@ Represents a business opportunity sales process step.
 | `Probability` | `Int32` | no |  |  | The probability of the sales process step. |
 | `LeadTime` | `Int32` | no |  |  | The lead time of the sales process step. |
 | `Responsibility` | `Int32` | no |  | enum | Specifies what is responsibel for the sales process step. |
-| `ResponsibleSellerId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The responsible seller of the sales process step. |
-| `ResponsibleSellerGroupId` | `Int64?` | yes | [SellerGroups](/entities/Sales/SellerGroup.md) |  | The responsible seller group of the sales process step. |
-| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The responsible application user of the sales process step. |
-| `ParentId` | `Int64?` | yes | [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) |  | The business opportunity the sales process step belongs to. |
+| `ResponsibleSellerId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The responsible seller of the sales process step. |
+| `ResponsibleSellerGroupId` | `Int64?` | yes | [SellerGroups](SellerGroup.md) |  | The responsible seller group of the sales process step. |
+| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](../Common/ApplicationUser.md) |  | The responsible application user of the sales process step. |
+| `ParentId` | `Int64?` | yes | [BusinessOpportunities](BusinessOpportunity.md) |  | The business opportunity the sales process step belongs to. |
 | `RowIndex` | `Int32?` | yes |  |  | The row index of the sales process step. |
 | `Status` | `Int32` | no |  | enum | The status of the sales process step. |
 | `IsActive` | `Boolean` | no |  |  | Specifies if the sales process step is active. |

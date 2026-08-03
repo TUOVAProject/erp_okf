@@ -45,7 +45,7 @@ referenced_by:
 
 Represents an inquiry.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `Inquiry`
 - **Endpoint:** `GET /api/v1/Purchase/Inquiries`
 - **Required permission:** Show inquiry
@@ -57,54 +57,54 @@ Represents an inquiry.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the inquiry. |
-| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](/entities/Common/PaymentTerm.md) |  | The business key identifier of the inquiry's payment term. |
-| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](/entities/Common/PaymentTerm.md) | expandable | The payment term of the inquiry. |
+| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](../Common/PaymentTerm.md) |  | The business key identifier of the inquiry's payment term. |
+| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](../Common/PaymentTerm.md) | expandable | The payment term of the inquiry. |
 | `PaymentTermDescription` | `String` | no |  | max length 35 | The payment term description of the inquiry. |
 | `GracePeriodInDays` | `Int32?` | yes |  |  | The inquiry's grace period in days. |
-| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](/entities/Common/DeliveryMethod.md) |  | The business key identifier of the inquiry's delivery method. |
-| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](/entities/Common/DeliveryTerm.md) |  | The business key identifier of the inquiry's delivery term. |
+| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](../Common/DeliveryMethod.md) |  | The business key identifier of the inquiry's delivery method. |
+| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](../Common/DeliveryTerm.md) |  | The business key identifier of the inquiry's delivery term. |
 | `DeliveryTermDescription` | `String` | no |  | max length 35 | The delivery term description of the inquiry. |
 | `DeliveryMethodDescription` | `String` | no |  | max length 35 | The delivery method description of the inquiry. |
 | `BusinessContactOrderNumber` | `String` | no |  | max length 30 | The supplier's inquiry number. |
-| `OurReferenceId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of our reference on the inquiry. Reference Persons |
+| `OurReferenceId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of our reference on the inquiry. Reference Persons |
 | `OurReferenceName` | `String` | no |  | max length 80 | The name of our reference on the inquiry. |
-| `BusinessContactReferenceId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the supplier's reference on the inquiry. Reference Persons |
+| `BusinessContactReferenceId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the supplier's reference on the inquiry. Reference Persons |
 | `BusinessContactReferenceName` | `String` | no |  | max length 80 | The name of the supplier's reference on the inquiry. |
 | `GoodsLabel` | `String` | no |  | max length 80 | The goods label of the inquiry. |
-| `CurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the inquiry's currency. |
-| `VatGroupId` | `Int64` | no | [VatGroups](/entities/Common/VatGroup.md) |  | The business key identifier of the inquiry's VAT group. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the inquiry's warehouse. |
+| `CurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the inquiry's currency. |
+| `VatGroupId` | `Int64` | no | [VatGroups](../Common/VatGroup.md) |  | The business key identifier of the inquiry's VAT group. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the inquiry's warehouse. |
 | `Priority` | `Int32` | no |  |  | The priority of the inquiry. |
-| `ProjectId` | `Int64?` | yes | [Projects](/entities/Common/Project.md) |  | The business key identifier of the inquiry's project. |
+| `ProjectId` | `Int64?` | yes | [Projects](../Common/Project.md) |  | The business key identifier of the inquiry's project. |
 | `SendMethod` | `Int32` | no |  | enum | Specifies the method of the inquiry printout. |
-| `InternalCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the inquiry's internal comment. |
-| `InternalComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The internal comment of the inquiry. |
-| `ExternalCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the inquiry's external comment. |
-| `ExternalComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The external comment of the inquiry. |
+| `InternalCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the inquiry's internal comment. |
+| `InternalComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The internal comment of the inquiry. |
+| `ExternalCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the inquiry's external comment. |
+| `ExternalComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The external comment of the inquiry. |
 | `TransportTime` | `Int32?` | yes |  |  | The transport time of the inquiry. |
 | `LifeCycleState` | `Int32` | no |  | enum | The life cycle state of the inquiry. |
 | `Version` | `Int32` | no |  |  | The version of the inquiry. |
 | `UseForwardRate` | `Boolean` | no |  |  | Specifies if forward rate should be used. |
 | `ExchangeRate` | `Decimal` | no |  |  | The exchange rate to use for the inquiry. |
-| `SupplierId` | `Int64` | no | [Suppliers](/entities/Purchase/Supplier.md) | mandatory | The business key identifier of the supplier that the inquiry belongs to. |
+| `SupplierId` | `Int64` | no | [Suppliers](Supplier.md) | mandatory | The business key identifier of the supplier that the inquiry belongs to. |
 | `OrderNumber` | `String` | no |  | max length 15 | The order number of the purchase order created as a result of the inquiry. |
 | `OrderDate` | `DateTimeOffset?` | yes |  |  | The date/time when the inquiry was made. |
-| `Rows` | `InquiryRows[]` | no | [InquiryRows](/entities/Purchase/InquiryRow.md) | expandable, collection | The rows of the inquiry. |
-| `CreatedById` | `Int64?` | yes | [Persons](/entities/Common/Person.md) | **deprecated since 24.3** | The business key identifier of the inquiry's creator. _(Unavailable)_ |
-| `DeliveryAddressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) |  | The business key identifier of the inquiry's delivery address. |
-| `DeliveryAddress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable | The delivery address of the inquiry. |
-| `MailingAddressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) |  | The business key identifier of the inquiry's mailing address. |
-| `MailingAddress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable | The mailing address of the inquiry. |
+| `Rows` | `InquiryRows[]` | no | [InquiryRows](InquiryRow.md) | expandable, collection | The rows of the inquiry. |
+| `CreatedById` | `Int64?` | yes | [Persons](../Common/Person.md) | **deprecated since 24.3** | The business key identifier of the inquiry's creator. _(Unavailable)_ |
+| `DeliveryAddressId` | `Int64?` | yes | [Addresses](../Common/Address.md) |  | The business key identifier of the inquiry's delivery address. |
+| `DeliveryAddress` | `Addresses` | no | [Addresses](../Common/Address.md) | expandable | The delivery address of the inquiry. |
+| `MailingAddressId` | `Int64?` | yes | [Addresses](../Common/Address.md) |  | The business key identifier of the inquiry's mailing address. |
+| `MailingAddress` | `Addresses` | no | [Addresses](../Common/Address.md) | expandable | The mailing address of the inquiry. |
 | `VatNumber` | `String` | no |  | max length 80, **deprecated since 24.3** | The VAT number on the inquiry. _(Unavailable)_ |
 | `Status` | `Int32` | no |  | enum | The status of the inquiry. |
-| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](/entities/Common/CommunicationAddress.md) | expandable, collection | The communication addresses registered on the inquiry. |
+| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](../Common/CommunicationAddress.md) | expandable, collection | The communication addresses registered on the inquiry. |
 | `InquiryDate` | `DateTimeOffset` | no |  |  | The date when the inquiry was made to the supplier. |
 | `InquiryDescription` | `String` | no |  | max length 200 | The description of the inquiry. |
 | `LatestContactDate` | `DateTimeOffset?` | yes |  |  | The last contact date on the inquiry. |
 | `ValidThroughDate` | `DateTimeOffset?` | yes |  |  | The valid through date of the inquiry. |
-| `OrderTypeId` | `Int64?` | yes | [InquiryTypes](/entities/Purchase/InquiryType.md) | since 2.30 | The business key identifier of the inquiry's inquiry type. |
-| `OrderType` | `InquiryTypes` | no | [InquiryTypes](/entities/Purchase/InquiryType.md) | expandable, since 2.30 | The inquiry type used on the inquiry. |
-| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the inquiry's currency exchange type. |
+| `OrderTypeId` | `Int64?` | yes | [InquiryTypes](InquiryType.md) | since 2.30 | The business key identifier of the inquiry's inquiry type. |
+| `OrderType` | `InquiryTypes` | no | [InquiryTypes](InquiryType.md) | expandable, since 2.30 | The inquiry type used on the inquiry. |
+| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the inquiry's currency exchange type. |
 
 ## Enumerations
 
@@ -143,7 +143,7 @@ Represents an inquiry.
 
 **Purchase**
 
-- [InquiryRows](/entities/Purchase/InquiryRow.md) — `ParentOrderId` (FK)
+- [InquiryRows](InquiryRow.md) — `ParentOrderId` (FK)
 
 
 ## Example

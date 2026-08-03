@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a planned absence.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `PlannedAbsence`
 - **Endpoint:** `GET /api/v1/TimeRecording/PlannedAbsences`
 - **Required permission:** Show person
@@ -66,7 +66,7 @@ Represents a planned absence.
 
 **Common**
 
-- [Persons](/entities/Common/Person.md) — `PlannedAbsences` (expand)
+- [Persons](../Common/Person.md) — `PlannedAbsences` (expand)
 
 
 ## Example

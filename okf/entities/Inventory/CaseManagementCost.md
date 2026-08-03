@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a case management cost.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `CaseManagementCost`
 - **Endpoint:** `GET /api/v1/Inventory/CaseManagementCost`
 - **Required permission:** Show basic data for case
@@ -47,16 +47,16 @@ Represents a case management cost.
 | `Number` | `Int32` | no |  |  | The human readable identifier of the case management cost. |
 | `Description` | `String` | no |  |  | The translated description of the case management cost. |
 | `Cost` | `Decimal` | no |  |  | The cost of the case management. |
-| `CostCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the case management cost currency. |
+| `CostCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the case management cost currency. |
 | `Chargeable` | `Boolean` | no |  |  | Specifies if the case management cost is chargeable. |
 
 ## Referenced by
 
 **Inventory**
 
-- [CaseEntryAdditionalCost](/entities/Inventory/CaseEntryAdditionalCost.md) — `CaseManagementCost` (expand)
-- [CaseEntryAdditionalCost](/entities/Inventory/CaseEntryAdditionalCost.md) — `CaseManagementCostId` (FK)
-- [CaseManagementTemplateCosts](/entities/Inventory/CaseManagementTemplateCost.md) — `CostId` (FK)
+- [CaseEntryAdditionalCost](CaseEntryAdditionalCost.md) — `CaseManagementCost` (expand)
+- [CaseEntryAdditionalCost](CaseEntryAdditionalCost.md) — `CaseManagementCostId` (FK)
+- [CaseManagementTemplateCosts](CaseManagementTemplateCost.md) — `CostId` (FK)
 
 
 ## Example

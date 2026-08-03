@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a payment plan template row.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PaymentPlanTemplateRow`
 - **Endpoint:** `GET /api/v1/Common/PaymentPlanTemplateRows`
 - **Required permission:** Show invoicing plan
@@ -46,14 +46,14 @@ Represents a payment plan template row.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the payment plan template row. |
 | `UnpaidAdvanceWarningType` | `Int32?` | yes |  | enum | The unpaid advance warning type of the payment plan template row. |
-| `PaymentPlanTemplateId` | `Int64` | no | [PaymentPlanTemplates](/entities/Common/PaymentPlanTemplate.md) |  | The business key identifier of the payment plan template of the payment plan template row. |
+| `PaymentPlanTemplateId` | `Int64` | no | [PaymentPlanTemplates](PaymentPlanTemplate.md) |  | The business key identifier of the payment plan template of the payment plan template row. |
 | `PartialInvoiceType` | `Int32` | no |  | enum | The partial invoice type of the payment plan template row. |
-| `PartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part of the payment plan template row. |
-| `Part` | `Parts` | no | [Parts](/entities/Inventory/Part.md) | expandable | The part of the payment plan template row. |
+| `PartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the part of the payment plan template row. |
+| `Part` | `Parts` | no | [Parts](../Inventory/Part.md) | expandable | The part of the payment plan template row. |
 | `OverrideDescription` | `String` | no |  | max length 80 | The override description of the payment plan template row. |
 | `FractionOfTotal` | `Decimal` | no |  |  | The fraction of total of the payment plan template row. |
-| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](/entities/Common/PaymentTerm.md) |  | The business key identifier of the payment term of the payment plan template row. |
-| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](/entities/Common/PaymentTerm.md) | expandable | The payment term of the payment plan template row. |
+| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](PaymentTerm.md) |  | The business key identifier of the payment term of the payment plan template row. |
+| `PaymentTerm` | `PaymentTerms` | no | [PaymentTerms](PaymentTerm.md) | expandable | The payment term of the payment plan template row. |
 | `RowIndex` | `Int32?` | yes |  |  | The row index of the payment plan template row. |
 
 ## Enumerations
@@ -81,7 +81,7 @@ Represents a payment plan template row.
 
 **Common**
 
-- [PaymentPlanTemplates](/entities/Common/PaymentPlanTemplate.md) — `PaymentPlanTemplateRows` (expand)
+- [PaymentPlanTemplates](PaymentPlanTemplate.md) — `PaymentPlanTemplateRows` (expand)
 
 
 ## Example

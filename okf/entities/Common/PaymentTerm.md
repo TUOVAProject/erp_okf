@@ -44,7 +44,7 @@ referenced_by:
 
 Represents a queryable payment term.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PaymentTerm`
 - **Endpoint:** `GET /api/v1/Common/PaymentTerms`
 - **Required permission:** Show terms
@@ -64,7 +64,7 @@ Represents a queryable payment term.
 | `AddDaysToEOM` | `Int32` | no |  | since 22.4 | The number of days to add to the due date when using the end of month method. |
 | `IsDefault` | `Boolean` | no |  |  | Specifies if the payment term is the default. |
 | `InvoiceType` | `Int32` | no |  | enum | The invoice type of the payment term. |
-| `PaymentMethodId` | `Int64?` | yes | [PaymentMethods](/entities/Common/PaymentMethod.md) |  | The business key identifier of the payment method of the payment term. References PaymentMethods . |
+| `PaymentMethodId` | `Int64?` | yes | [PaymentMethods](PaymentMethod.md) |  | The business key identifier of the payment method of the payment term. References PaymentMethods . |
 | `CompanyIds` | `Int64[]` | no |  | collection | The business key identifiers of the companies that this entity is available for. |
 | `Code` | `String` | no |  | max length 15, since 24.8 | The code of the payment term. |
 
@@ -97,39 +97,39 @@ Represents a queryable payment term.
 
 **Accounting**
 
-- [AccountsPayables](/entities/Accounting/AccountsPayable.md) — `PaymentTerm` (expand)
-- [AccountsPayables](/entities/Accounting/AccountsPayable.md) — `PaymentTermId` (FK)
-- [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) — `PaymentTermId` (FK)
+- [AccountsPayables](../Accounting/AccountsPayable.md) — `PaymentTerm` (expand)
+- [AccountsPayables](../Accounting/AccountsPayable.md) — `PaymentTermId` (FK)
+- [AccountsReceivables](../Accounting/AccountsReceivable.md) — `PaymentTermId` (FK)
 
 **Common**
 
-- [PaymentPlanTemplateRows](/entities/Common/PaymentPlanTemplateRow.md) — `PaymentTerm` (expand)
-- [PaymentPlanTemplateRows](/entities/Common/PaymentPlanTemplateRow.md) — `PaymentTermId` (FK)
+- [PaymentPlanTemplateRows](PaymentPlanTemplateRow.md) — `PaymentTerm` (expand)
+- [PaymentPlanTemplateRows](PaymentPlanTemplateRow.md) — `PaymentTermId` (FK)
 
 **Purchase**
 
-- [Inquiries](/entities/Purchase/Inquiry.md) — `PaymentTerm` (expand)
-- [Inquiries](/entities/Purchase/Inquiry.md) — `PaymentTermId` (FK)
-- [PurchaseOrderInvoices](/entities/Purchase/PurchaseOrderInvoice.md) — `PaymentTerm` (expand)
-- [PurchaseOrderInvoices](/entities/Purchase/PurchaseOrderInvoice.md) — `PaymentTermId` (FK)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `PaymentTerm` (expand)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `PaymentTermId` (FK)
-- [Suppliers](/entities/Purchase/Supplier.md) — `PaymentTerm` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `PaymentTermId` (FK)
+- [Inquiries](../Purchase/Inquiry.md) — `PaymentTerm` (expand)
+- [Inquiries](../Purchase/Inquiry.md) — `PaymentTermId` (FK)
+- [PurchaseOrderInvoices](../Purchase/PurchaseOrderInvoice.md) — `PaymentTerm` (expand)
+- [PurchaseOrderInvoices](../Purchase/PurchaseOrderInvoice.md) — `PaymentTermId` (FK)
+- [PurchaseOrders](../Purchase/PurchaseOrder.md) — `PaymentTerm` (expand)
+- [PurchaseOrders](../Purchase/PurchaseOrder.md) — `PaymentTermId` (FK)
+- [Suppliers](../Purchase/Supplier.md) — `PaymentTerm` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `PaymentTermId` (FK)
 
 **Sales**
 
-- [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) — `PaymentTerm` (expand)
-- [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) — `PaymentTermId` (FK)
-- [CustomerOrderPaymentPlanRows](/entities/Sales/CustomerOrderPaymentPlanRow.md) — `PaymentTermId` (FK)
-- [CustomerOrderTypes](/entities/Sales/CustomerOrderType.md) — `PaymentTermId` (FK)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `PaymentTerm` (expand)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `PaymentTermId` (FK)
-- [Customers](/entities/Sales/Customer.md) — `PaymentTerm` (expand)
-- [Customers](/entities/Sales/Customer.md) — `PaymentTermId` (FK)
-- [Quotes](/entities/Sales/Quote.md) — `PaymentTerm` (expand)
-- [Quotes](/entities/Sales/Quote.md) — `PaymentTermId` (FK)
-- [SalesAgreements](/entities/Sales/SalesAgreement.md) — `PaymentTermId` (FK)
+- [CustomerOrderInvoices](../Sales/CustomerOrderInvoice.md) — `PaymentTerm` (expand)
+- [CustomerOrderInvoices](../Sales/CustomerOrderInvoice.md) — `PaymentTermId` (FK)
+- [CustomerOrderPaymentPlanRows](../Sales/CustomerOrderPaymentPlanRow.md) — `PaymentTermId` (FK)
+- [CustomerOrderTypes](../Sales/CustomerOrderType.md) — `PaymentTermId` (FK)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `PaymentTerm` (expand)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `PaymentTermId` (FK)
+- [Customers](../Sales/Customer.md) — `PaymentTerm` (expand)
+- [Customers](../Sales/Customer.md) — `PaymentTermId` (FK)
+- [Quotes](../Sales/Quote.md) — `PaymentTerm` (expand)
+- [Quotes](../Sales/Quote.md) — `PaymentTermId` (FK)
+- [SalesAgreements](../Sales/SalesAgreement.md) — `PaymentTermId` (FK)
 
 
 ## Example

@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a rejection code.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `RejectionCodeItem`
 - **Endpoint:** `GET /api/v1/Common/RejectionCodeItems`
 - **Required permission:** Show rejection codes/cause codes
@@ -67,12 +67,12 @@ Represents a rejection code.
 
 **Inventory**
 
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `ActualRejectionCode` (expand)
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `ActualRejectionCodeId` (FK)
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `ReasonRejectionCodeId` (FK)
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `RejectionCodeItem` (expand)
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `RejectionCodeItemId` (FK)
-- [CaseEntryPartLinks](/entities/Inventory/CasePartLink.md) — `RejectionCodeItemId` (FK)
+- [CaseEntry](../Inventory/CaseEntry.md) — `ActualRejectionCode` (expand)
+- [CaseEntry](../Inventory/CaseEntry.md) — `ActualRejectionCodeId` (FK)
+- [CaseEntry](../Inventory/CaseEntry.md) — `ReasonRejectionCodeId` (FK)
+- [CaseEntry](../Inventory/CaseEntry.md) — `RejectionCodeItem` (expand)
+- [CaseEntry](../Inventory/CaseEntry.md) — `RejectionCodeItemId` (FK)
+- [CaseEntryPartLinks](../Inventory/CasePartLink.md) — `RejectionCodeItemId` (FK)
 
 
 ## Example

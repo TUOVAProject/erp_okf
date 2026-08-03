@@ -40,7 +40,7 @@ referenced_by:
 
 Represents a queryable delivery method.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `DeliveryMethod`
 - **Endpoint:** `GET /api/v1/Common/DeliveryMethods`
 - **Required permission:** Show terms
@@ -55,7 +55,7 @@ Represents a queryable delivery method.
 | `IsDefault` | `Boolean` | no |  |  | Specifies if the delivery method is the default method. |
 | `Number` | `Int64` | no |  |  | The delivery method number. |
 | `Description` | `String` | no |  |  | The translated description of the delivery method. |
-| `SupplierId` | `Int64?` | yes | [Suppliers](/entities/Purchase/Supplier.md) |  | The business key identifier of the delivery method supplier. References Suppliers . |
+| `SupplierId` | `Int64?` | yes | [Suppliers](../Purchase/Supplier.md) |  | The business key identifier of the delivery method supplier. References Suppliers . |
 | `CompanyIds` | `Int64[]` | no |  | collection | The business key identifiers of the companies that this entity is available for. |
 | `ShippingServiceId` | `Int64?` | yes |  |  | The business key identifier of the delivery method shipping service. References ShippingService. |
 | `ShippingTemplateId` | `Int64?` | yes |  |  | The business key identifier of the delivery method shipping template. References ShippingTemplate. |
@@ -65,26 +65,26 @@ Represents a queryable delivery method.
 
 **Common**
 
-- [DeliveryAddressWarehouseInformations](/entities/Common/DeliveryAddressWarehouseInformation.md) — `DeliveryMethodId` (FK)
+- [DeliveryAddressWarehouseInformations](DeliveryAddressWarehouseInformation.md) — `DeliveryMethodId` (FK)
 
 **Purchase**
 
-- [Inquiries](/entities/Purchase/Inquiry.md) — `DeliveryMethodId` (FK)
-- [PurchaseOrderInvoices](/entities/Purchase/PurchaseOrderInvoice.md) — `DeliveryMethodId` (FK)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `DeliveryMethod` (expand)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `DeliveryMethodId` (FK)
+- [Inquiries](../Purchase/Inquiry.md) — `DeliveryMethodId` (FK)
+- [PurchaseOrderInvoices](../Purchase/PurchaseOrderInvoice.md) — `DeliveryMethodId` (FK)
+- [PurchaseOrders](../Purchase/PurchaseOrder.md) — `DeliveryMethod` (expand)
+- [PurchaseOrders](../Purchase/PurchaseOrder.md) — `DeliveryMethodId` (FK)
 
 **Sales**
 
-- [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) — `DeliveryMethodId` (FK)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `DeliveryMethodId` (FK)
-- [Quotes](/entities/Sales/Quote.md) — `DeliveryMethodId` (FK)
-- [SalesAgreements](/entities/Sales/SalesAgreement.md) — `DeliveryMethodId` (FK)
-- [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) — `DeliveryMethod` (expand)
-- [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) — `DeliveryMethodId` (FK)
-- [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) — `ForeignDeliveryMethod` (expand)
-- [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) — `ForeignDeliveryMethodId` (FK)
-- [Shipments](/entities/Sales/Shipment.md) — `DeliveryMethodId` (FK)
+- [CustomerOrderInvoices](../Sales/CustomerOrderInvoice.md) — `DeliveryMethodId` (FK)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `DeliveryMethodId` (FK)
+- [Quotes](../Sales/Quote.md) — `DeliveryMethodId` (FK)
+- [SalesAgreements](../Sales/SalesAgreement.md) — `DeliveryMethodId` (FK)
+- [ShipmentCustoms](../Sales/ShipmentCustoms.md) — `DeliveryMethod` (expand)
+- [ShipmentCustoms](../Sales/ShipmentCustoms.md) — `DeliveryMethodId` (FK)
+- [ShipmentCustoms](../Sales/ShipmentCustoms.md) — `ForeignDeliveryMethod` (expand)
+- [ShipmentCustoms](../Sales/ShipmentCustoms.md) — `ForeignDeliveryMethodId` (FK)
+- [Shipments](../Sales/Shipment.md) — `DeliveryMethodId` (FK)
 
 
 ## Example

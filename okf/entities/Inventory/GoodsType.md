@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a goods type.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `GoodsType`
 - **Endpoint:** `GET /api/v1/Inventory/GoodsTypes`
 - **Required permission:** Show package type/goods type
@@ -51,14 +51,14 @@ Represents a goods type.
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `ExpGoodsType` (expand)
-- [Parts](/entities/Inventory/Part.md) — `GoodsTypeId` (FK)
+- [Parts](Part.md) — `ExpGoodsType` (expand)
+- [Parts](Part.md) — `GoodsTypeId` (FK)
 
 **Sales**
 
-- [CustomerOrderShippingInformationRows](/entities/Sales/CustomerOrderShippingInformationRow.md) — `GoodsType` (expand)
-- [CustomerOrderShippingInformationRows](/entities/Sales/CustomerOrderShippingInformationRow.md) — `GoodsTypeId` (FK)
-- [ShipmentPackageInformations](/entities/Sales/ShipmentPackageInformation.md) — `GoodsType` (FK)
+- [CustomerOrderShippingInformationRows](../Sales/CustomerOrderShippingInformationRow.md) — `GoodsType` (expand)
+- [CustomerOrderShippingInformationRows](../Sales/CustomerOrderShippingInformationRow.md) — `GoodsTypeId` (FK)
+- [ShipmentPackageInformations](../Sales/ShipmentPackageInformation.md) — `GoodsType` (FK)
 
 
 ## Example

@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a payment plan template.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PaymentPlanTemplate`
 - **Endpoint:** `GET /api/v1/Common/PaymentPlanTemplates`
 - **Required permission:** Show invoicing plan
@@ -50,7 +50,7 @@ Represents a payment plan template.
 | `Description` | `String` | no |  |  | The description of the payment plan template. |
 | `IsActive` | `Boolean` | no |  |  | The is active of the payment plan template. |
 | `InvoiceTextTypes` | `Int32` | no |  | bitmask, enum | The invoice text types of the payment plan template. |
-| `PaymentPlanTemplateRows` | `PaymentPlanTemplateRows[]` | no | [PaymentPlanTemplateRows](/entities/Common/PaymentPlanTemplateRow.md) | expandable, collection | A collection of payment plan template rows that belong to the payment plan template. |
+| `PaymentPlanTemplateRows` | `PaymentPlanTemplateRows[]` | no | [PaymentPlanTemplateRows](PaymentPlanTemplateRow.md) | expandable, collection | A collection of payment plan template rows that belong to the payment plan template. |
 
 ## Enumerations
 
@@ -80,14 +80,14 @@ Represents a payment plan template.
 
 **Common**
 
-- [PaymentPlanTemplateRows](/entities/Common/PaymentPlanTemplateRow.md) — `PaymentPlanTemplateId` (FK)
+- [PaymentPlanTemplateRows](PaymentPlanTemplateRow.md) — `PaymentPlanTemplateId` (FK)
 
 **Sales**
 
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `PaymentPlanTemplate` (expand)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `PaymentPlanTemplateId` (FK)
-- [Customers](/entities/Sales/Customer.md) — `PaymentPlanTemplate` (expand)
-- [Customers](/entities/Sales/Customer.md) — `PaymentPlanTemplateId` (FK)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `PaymentPlanTemplate` (expand)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `PaymentPlanTemplateId` (FK)
+- [Customers](../Sales/Customer.md) — `PaymentPlanTemplate` (expand)
+- [Customers](../Sales/Customer.md) — `PaymentPlanTemplateId` (FK)
 
 
 ## Example

@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a booking.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `Booking`
 - **Endpoint:** `GET /api/v1/Accounting/Bookings`
 - **GUID:** `9c0f59b7-6d48-4099-8e4b-c95ced9cd87d`
@@ -47,20 +47,20 @@ Represents a booking.
 | `Id` | `Int64` | no |  |  | The business key identifier of the booking. |
 | `ParentClass` | `Guid` | no |  |  | The GUID of the booking’s owner type. |
 | `ParentId` | `Int64` | no |  |  | The business key identifier of the booking owner. |
-| `Rows` | `BookingRows[]` | no | [BookingRows](/entities/Accounting/BookingRow.md) | expandable, collection | The rows that belong to the booking. |
+| `Rows` | `BookingRows[]` | no | [BookingRows](BookingRow.md) | expandable, collection | The rows that belong to the booking. |
 
 ## Referenced by
 
 **Accounting**
 
-- [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) — `Booking` (expand)
-- [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) — `BookingId` (FK)
-- [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) — `CancelBooking` (expand)
-- [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) — `CancelBookingId` (FK)
-- [BookingRows](/entities/Accounting/BookingRow.md) — `BookingId` (FK)
-- [FixedAssetSales](/entities/Accounting/FixedAssetSale.md) — `BookingId` (FK)
-- [IncomingPayments](/entities/Accounting/IncomingPayment.md) — `BookingId` (FK)
-- [OutgoingPayments](/entities/Accounting/OutgoingPayment.md) — `BookingId` (FK)
+- [AccountsReceivables](AccountsReceivable.md) — `Booking` (expand)
+- [AccountsReceivables](AccountsReceivable.md) — `BookingId` (FK)
+- [AccountsReceivables](AccountsReceivable.md) — `CancelBooking` (expand)
+- [AccountsReceivables](AccountsReceivable.md) — `CancelBookingId` (FK)
+- [BookingRows](BookingRow.md) — `BookingId` (FK)
+- [FixedAssetSales](FixedAssetSale.md) — `BookingId` (FK)
+- [IncomingPayments](IncomingPayment.md) — `BookingId` (FK)
+- [OutgoingPayments](OutgoingPayment.md) — `BookingId` (FK)
 
 
 ## Example

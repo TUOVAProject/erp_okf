@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a supplier status.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `SupplierStatus`
 - **Endpoint:** `GET /api/v1/Purchase/SupplierStatuses`
 - **Required permission:** Show supplier
@@ -48,8 +48,8 @@ Represents a supplier status.
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `Status` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `StatusId` (FK)
+- [Suppliers](Supplier.md) — `Status` (expand)
+- [Suppliers](Supplier.md) — `StatusId` (FK)
 
 
 ## Example

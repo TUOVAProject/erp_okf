@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a supplier account group.
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `SupplierAccountGroup`
 - **Endpoint:** `GET /api/v1/Purchase/SupplierAccountGroups`
 - **Required permission:** Show chart of accounts
@@ -53,14 +53,14 @@ Represents a supplier account group.
 
 **Accounting**
 
-- [AccountsPayables](/entities/Accounting/AccountsPayable.md) — `SupplierAccountGroupId` (FK)
+- [AccountsPayables](../Accounting/AccountsPayable.md) — `SupplierAccountGroupId` (FK)
 
 **Purchase**
 
-- [PurchaseOrderInvoices](/entities/Purchase/PurchaseOrderInvoice.md) — `AccountGroupId` (FK)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `AccountGroup` (expand)
-- [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) — `AccountGroupId` (FK)
-- [Suppliers](/entities/Purchase/Supplier.md) — `SupplierAccountGroupId` (FK)
+- [PurchaseOrderInvoices](PurchaseOrderInvoice.md) — `AccountGroupId` (FK)
+- [PurchaseOrders](PurchaseOrder.md) — `AccountGroup` (expand)
+- [PurchaseOrders](PurchaseOrder.md) — `AccountGroupId` (FK)
+- [Suppliers](Supplier.md) — `SupplierAccountGroupId` (FK)
 
 
 ## Example

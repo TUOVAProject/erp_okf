@@ -33,7 +33,7 @@ references_out:
 
 Represents a price change log entity.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PriceChangeLog`
 - **Endpoint:** `GET /api/v1/Inventory/PriceChangeLogs`
 - **Required permission:** Show part
@@ -47,18 +47,18 @@ Represents a price change log entity.
 | `Id` | `Int64` | no |  |  | The business key identifier of the price change log. |
 | `Context` | `Int32` | no |  | enum | The context of the price change in the price change log. |
 | `PriceType` | `Int32` | no |  | enum | The type of the price in the price change log. |
-| `PriceListId` | `Int64?` | yes | [PriceLists](/entities/Common/PriceList.md) |  | The business key identifier of the price changes log's price list. |
+| `PriceListId` | `Int64?` | yes | [PriceLists](../Common/PriceList.md) |  | The business key identifier of the price changes log's price list. |
 | `Timestamp` | `DateTimeOffset` | no |  |  | The timestamp of the price change log. |
 | `UserCode` | `String` | no |  |  | The user code of the price change log. |
 | `NewPriceAmount` | `Decimal?` | yes |  |  | The new price amount of the price change log. |
-| `NewPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier for the new price currency of the price change log. |
+| `NewPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier for the new price currency of the price change log. |
 | `OldPriceAmount` | `Decimal?` | yes |  |  | The old price amount of the price change log. |
-| `OldPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier for the old price currency of the price change log. |
+| `OldPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier for the old price currency of the price change log. |
 | `Balance` | `Decimal?` | yes |  |  | The balance of the price change log. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The part id of the price change log. |
+| `PartId` | `Int64` | no | [Parts](Part.md) |  | The part id of the price change log. |
 | `CalculationId` | `Int64?` | yes |  |  | The calculation id of the price change log. |
-| `SupplierId` | `Int64?` | yes | [Suppliers](/entities/Purchase/Supplier.md) |  | The supplier id of the price change log. |
-| `CustomerId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) |  | The customer id of the price change log. |
+| `SupplierId` | `Int64?` | yes | [Suppliers](../Purchase/Supplier.md) |  | The supplier id of the price change log. |
+| `CustomerId` | `Int64?` | yes | [Customers](../Sales/Customer.md) |  | The customer id of the price change log. |
 | `StaggeredQuantity` | `Decimal?` | yes |  |  | The staggered quantity of the price change log. |
 | `IsSetupPrice` | `Boolean` | no |  |  | Is the price in the price change log a setup price. |
 | `Discount` | `Decimal?` | yes |  |  | The discount of the price change log. |

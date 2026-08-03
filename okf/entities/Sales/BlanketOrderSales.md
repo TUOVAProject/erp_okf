@@ -39,7 +39,7 @@ referenced_by:
 
 Represents a blanket order for sales.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `BlanketOrderSales`
 - **Endpoint:** `GET /api/v1/Sales/BlanketOrderSales`
 - **Required permission:** Show blanket order
@@ -53,17 +53,17 @@ Represents a blanket order for sales.
 | `Id` | `Int64` | no |  |  | The business key identifier of the blanket order. |
 | `LifeCycleState` | `Int32` | no |  | enum | The life cycle state of the blanket order. |
 | `OrderNumber` | `String` | no |  | unique, max length 15 | The human readable identifier of the blanket order. |
-| `OrderTypeId` | `Int64?` | yes | [BlanketOrderSalesTypes](/entities/Sales/BlanketOrderSalesType.md) |  | The business key identifier of the blanket order's type. |
-| `OrderType` | `BlanketOrderSalesTypes` | no | [BlanketOrderSalesTypes](/entities/Sales/BlanketOrderSalesType.md) | expandable | The type of the blanket order. |
-| `BusinessContactId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) |  | The business key identifier of the blanket order's customer. |
-| `BusinessContact` | `Customers` | no | [Customers](/entities/Sales/Customer.md) | expandable | The customer of the blanket order. |
+| `OrderTypeId` | `Int64?` | yes | [BlanketOrderSalesTypes](BlanketOrderSalesType.md) |  | The business key identifier of the blanket order's type. |
+| `OrderType` | `BlanketOrderSalesTypes` | no | [BlanketOrderSalesTypes](BlanketOrderSalesType.md) | expandable | The type of the blanket order. |
+| `BusinessContactId` | `Int64?` | yes | [Customers](Customer.md) |  | The business key identifier of the blanket order's customer. |
+| `BusinessContact` | `Customers` | no | [Customers](Customer.md) | expandable | The customer of the blanket order. |
 | `CustomersOrderNumber` | `String` | no |  | max length 30 | The customer's order number of the blanket order. |
-| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](/entities/Common/BusinessContactReference.md) |  | The business key identifier of the blanket order's business contact reference. |
-| `BusinessContactReference` | `BusinessContactReferences` | no | [BusinessContactReferences](/entities/Common/BusinessContactReference.md) | expandable | The business contact reference of the blanket order. |
+| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](../Common/BusinessContactReference.md) |  | The business key identifier of the blanket order's business contact reference. |
+| `BusinessContactReference` | `BusinessContactReferences` | no | [BusinessContactReferences](../Common/BusinessContactReference.md) | expandable | The business contact reference of the blanket order. |
 | `IncludeInNetRequirementCalculation` | `Boolean` | no |  |  | Specifies if the blanket order is included in net requirement calculation. |
 | `BusinessContactReferenceName` | `String` | no |  | max length 80 | The business contact reference name of the blanket order. |
-| `OurReferenceId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the blanket order's our reference. |
-| `OurReference` | `Persons` | no | [Persons](/entities/Common/Person.md) | expandable | Our reference of the blanket order. |
+| `OurReferenceId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the blanket order's our reference. |
+| `OurReference` | `Persons` | no | [Persons](../Common/Person.md) | expandable | Our reference of the blanket order. |
 | `OurReferenceName` | `String` | no |  | max length 80 | Our reference name of the blanket order. |
 | `ValidationPeriod` | `Int32` | no |  | enum | Specifies the validation period of the blanket order. |
 | `ValidFrom` | `DateTimeOffset` | no |  |  | The valid from date of the blanket order. |
@@ -74,21 +74,21 @@ Represents a blanket order for sales.
 | `CategoryString` | `String` | no |  | max length 20 | The category string of the blanket order. |
 | `UseForwardRate` | `Boolean` | no |  |  | Specifies if the blanket order use forward rate. |
 | `ExchangeRate` | `Decimal` | no |  |  | The exchange rate of the blanket order. |
-| `CurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the blanket order's currency. |
-| `Currency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The currency of the blanket order. |
+| `CurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the blanket order's currency. |
+| `Currency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The currency of the blanket order. |
 | `OrderDate` | `DateTimeOffset` | no |  |  | The order date of the blanket order. |
 | `DefaultOrderPrintoutVia` | `Int32` | no |  | enum | The default order printout method of the blanket order. |
-| `MailingAddressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) |  | The business key identifier of the blanket order's mailing address. |
-| `MailingAddress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable | The mailing address of the blanket order. |
-| `InternalCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the blanket order's internal comment. |
-| `InternalComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The internal comment of the blanket order. |
-| `ExternalCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the blanket order's external comment. |
-| `ExternalComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The external comment of the blanket order. |
-| `SellerId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the blanket order's seller. |
-| `Seller` | `Persons` | no | [Persons](/entities/Common/Person.md) | expandable | The seller of the blanket order. |
-| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) |  | The business key identifier of the blanket order's currency exchange type. |
-| `CurrencyExchangeType` | `CurrencyExchangeTypes` | no | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) | expandable | The currency exchange type of the blanket order. |
-| `Rows` | `BlanketOrderSalesRows[]` | no | [BlanketOrderSalesRows](/entities/Sales/BlanketOrderSalesRow.md) | expandable, collection | The rows of the blanket order. |
+| `MailingAddressId` | `Int64?` | yes | [Addresses](../Common/Address.md) |  | The business key identifier of the blanket order's mailing address. |
+| `MailingAddress` | `Addresses` | no | [Addresses](../Common/Address.md) | expandable | The mailing address of the blanket order. |
+| `InternalCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the blanket order's internal comment. |
+| `InternalComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The internal comment of the blanket order. |
+| `ExternalCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the blanket order's external comment. |
+| `ExternalComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The external comment of the blanket order. |
+| `SellerId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the blanket order's seller. |
+| `Seller` | `Persons` | no | [Persons](../Common/Person.md) | expandable | The seller of the blanket order. |
+| `CurrencyExchangeTypeId` | `Int64?` | yes | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) |  | The business key identifier of the blanket order's currency exchange type. |
+| `CurrencyExchangeType` | `CurrencyExchangeTypes` | no | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) | expandable | The currency exchange type of the blanket order. |
+| `Rows` | `BlanketOrderSalesRows[]` | no | [BlanketOrderSalesRows](BlanketOrderSalesRow.md) | expandable, collection | The rows of the blanket order. |
 
 ## Enumerations
 
@@ -132,7 +132,7 @@ Represents a blanket order for sales.
 
 **Sales**
 
-- [BlanketOrderSalesRows](/entities/Sales/BlanketOrderSalesRow.md) — `ParentOrderId` (FK)
+- [BlanketOrderSalesRows](BlanketOrderSalesRow.md) — `ParentOrderId` (FK)
 
 
 ## Example

@@ -39,11 +39,11 @@ incoming edges grouped by module. Both directions are also in the frontmatter as
 The most heavily referenced entities are the shared basic-data tables. Follow
 **Referenced by** on any of these to see how widely they are used:
 
-- [Comments](/modules/Common.md#Common.Comment) — referenced by 214 properties
-- [Currencies](/modules/Common.md#Common.Currency) — referenced by 198 properties
-- [Persons](/modules/Common.md#Common.Person) — referenced by 72 properties
-- [Parts](/modules/Inventory.md#Inventory.Part) — referenced by 70 properties
-- [Addresses](/modules/Common.md#Common.Address) — referenced by 57 properties
+- [Comments](../modules/Common.md#Common.Comment) — referenced by 214 properties
+- [Currencies](../modules/Common.md#Common.Currency) — referenced by 198 properties
+- [Persons](../modules/Common.md#Common.Person) — referenced by 72 properties
+- [Parts](../modules/Inventory.md#Inventory.Part) — referenced by 70 properties
+- [Addresses](../modules/Common.md#Common.Address) — referenced by 57 properties
 
 ## Module coupling
 

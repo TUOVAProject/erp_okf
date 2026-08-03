@@ -34,7 +34,7 @@ references_out:
 
 Represents a customer relationship management activity.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerRelationshipManagementActivity`
 - **Endpoint:** `GET /api/v1/Sales/CustomerRelationshipManagementActivities`
 - **Required permission:** Show customer
@@ -46,20 +46,20 @@ Represents a customer relationship management activity.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the customer relationship management activity. |
-| `CustomerId` | `Int64` | no | [Customers](/entities/Sales/Customer.md) |  | The business key identifier of the activity's customer. |
+| `CustomerId` | `Int64` | no | [Customers](Customer.md) |  | The business key identifier of the activity's customer. |
 | `IsMandatory` | `Boolean` | no |  |  | Specify if the activity is mandatory. |
 | `AdministratorType` | `Int32?` | yes |  | enum | The administrator type of the activity. |
-| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](/entities/Common/BusinessContactReference.md) |  | The business key identifier of the activity's business contact reference. |
-| `BusinessContactReference` | `BusinessContactReferences` | no | [BusinessContactReferences](/entities/Common/BusinessContactReference.md) | expandable | The activity's business contact reference. |
-| `OrderId` | `Int64?` | yes | [CustomerOrders](/entities/Sales/CustomerOrder.md) |  | The business key identifier of the activity's customer order. |
-| `ActivityTypeId` | `Int64?` | yes | [CustomerRelationshipActivityTypes](/entities/Sales/CustomerRelationshipActivityType.md) |  | The business key identifier of the activity's customer relationship activity type. |
-| `ActivityType` | `CustomerRelationshipActivityTypes` | no | [CustomerRelationshipActivityTypes](/entities/Sales/CustomerRelationshipActivityType.md) | expandable | The type of the activity. |
+| `BusinessContactReferenceId` | `Int64?` | yes | [BusinessContactReferences](../Common/BusinessContactReference.md) |  | The business key identifier of the activity's business contact reference. |
+| `BusinessContactReference` | `BusinessContactReferences` | no | [BusinessContactReferences](../Common/BusinessContactReference.md) | expandable | The activity's business contact reference. |
+| `OrderId` | `Int64?` | yes | [CustomerOrders](CustomerOrder.md) |  | The business key identifier of the activity's customer order. |
+| `ActivityTypeId` | `Int64?` | yes | [CustomerRelationshipActivityTypes](CustomerRelationshipActivityType.md) |  | The business key identifier of the activity's customer relationship activity type. |
+| `ActivityType` | `CustomerRelationshipActivityTypes` | no | [CustomerRelationshipActivityTypes](CustomerRelationshipActivityType.md) | expandable | The type of the activity. |
 | `CalendarAppointmentId` | `String` | no |  | max length 256 | The unique identifier of the appointment created in the user's calendar program for the activity. |
-| `CompletedByUserId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that has completed the activity. |
-| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the application user that is responsible for the activity. |
+| `CompletedByUserId` | `Int64?` | yes | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the application user that has completed the activity. |
+| `ResponsibleUserId` | `Int64?` | yes | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the application user that is responsible for the activity. |
 | `Description` | `String` | no |  |  | The description of the activity. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the activity's comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the activity. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the activity's comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment of the activity. |
 | `Status` | `Int32` | no |  | enum | The status of the activity. |
 | `ReminderId` | `Int64?` | yes |  |  | The business key identifier of the activity's reminder. |
 | `PlannedCompletionDate` | `DateTimeOffset` | no |  |  | The planned completion date of the activity. |

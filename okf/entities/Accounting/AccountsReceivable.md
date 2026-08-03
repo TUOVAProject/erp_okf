@@ -47,7 +47,7 @@ referenced_by:
 
 Represents an accounts receivable.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccountsReceivable`
 - **Endpoint:** `GET /api/v1/Accounting/AccountsReceivables`
 - **Required permission:** Show accounts receivable
@@ -60,8 +60,8 @@ Represents an accounts receivable.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the accounts receivable. |
 | `Version` | `Int32` | no |  |  | The version of the accounts receivable. |
-| `BookingId` | `Int64?` | yes | [Bookings](/entities/Accounting/Booking.md) |  | The business key identifier of the booking that the accounts receivable belongs to. |
-| `Booking` | `Bookings` | no | [Bookings](/entities/Accounting/Booking.md) | expandable | The booking that the accounts receivable belongs to. |
+| `BookingId` | `Int64?` | yes | [Bookings](Booking.md) |  | The business key identifier of the booking that the accounts receivable belongs to. |
+| `Booking` | `Bookings` | no | [Bookings](Booking.md) | expandable | The booking that the accounts receivable belongs to. |
 | `InvoiceType` | `Int32` | no |  | enum | The invoice type of the accounts receivable. |
 | `LatestReminderDate` | `DateTimeOffset?` | yes |  |  | The latest reminder date of the accounts receivable. |
 | `PaymentReminder` | `Boolean` | no |  |  | Specifies if the accounts receivable has payment reminders. |
@@ -71,9 +71,9 @@ Represents an accounts receivable.
 | `InterestType` | `Int32` | no |  | enum | The interest type of the accounts receivable. |
 | `IsComprehensive` | `Boolean` | no |  |  | Specifies if the accounts receivable is comprehensive or not. |
 | `PartialInvoiceType` | `Int32` | no |  | enum | Specifies how partial invoicing works for the accounts receivable. |
-| `CustomerAccountGroupId` | `Int64` | no | [CustomerAccountGroups](/entities/Sales/CustomerAccountGroup.md) |  | The business key identifier of the customer account group for the accounts receivable. |
-| `CustomerAccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](/entities/Sales/CustomerAccountGroup.md) | expandable | The customer account group of the accounts receivable. |
-| `DebitInvoiceId` | `Int64?` | yes | [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) |  | The business key identifier of the debit invoice that the accounts receivable belongs to. |
+| `CustomerAccountGroupId` | `Int64` | no | [CustomerAccountGroups](../Sales/CustomerAccountGroup.md) |  | The business key identifier of the customer account group for the accounts receivable. |
+| `CustomerAccountGroup` | `CustomerAccountGroups` | no | [CustomerAccountGroups](../Sales/CustomerAccountGroup.md) | expandable | The customer account group of the accounts receivable. |
+| `DebitInvoiceId` | `Int64?` | yes | [AccountsReceivables](AccountsReceivable.md) |  | The business key identifier of the debit invoice that the accounts receivable belongs to. |
 | `OnAccountIncomingPaymentLedgerId` | `Int64?` | yes |  |  | The business key identifier of the incoming payment ledger for the accounts receivable. |
 | `OnAccountCancelledIncomingPaymentLedgerId` | `Int64?` | yes |  |  | The business key identifier of the cancelled incoming payment ledger for the accounts receivable. |
 | `IsEInvoiceExported` | `Boolean` | no |  |  | Specifies if an e-invoice has been exported for the accounts receivable. |
@@ -81,42 +81,42 @@ Represents an accounts receivable.
 | `CancelledAccountsReceivableLedgerId` | `Int64?` | yes |  |  | The business key identifier of the cancelled accounts receivable ledger. |
 | `Status` | `Int32` | no |  | enum | The status of the accounts receivable. |
 | `LatePaymentFee` | `Decimal?` | yes |  |  | The late payment fee of the accounts receivable in percent. |
-| `CancelCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the cancel comment of the accounts receivable. |
-| `CancelComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The cancel comment of the accounts receivable. |
+| `CancelCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the cancel comment of the accounts receivable. |
+| `CancelComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The cancel comment of the accounts receivable. |
 | `CancelDate` | `DateTimeOffset` | no |  |  | The cancel date of the accounts receivable. |
-| `CancelBookingId` | `Int64?` | yes | [Bookings](/entities/Accounting/Booking.md) |  | The business key identifier of the cancel booking that the accounts receivable belongs to. |
-| `CancelBooking` | `Bookings` | no | [Bookings](/entities/Accounting/Booking.md) | expandable | The cancel booking that the accounts receivable belongs to. |
-| `BusinessContactId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) |  | The business key identifier of the customer that the accounts receivable belongs to. |
+| `CancelBookingId` | `Int64?` | yes | [Bookings](Booking.md) |  | The business key identifier of the cancel booking that the accounts receivable belongs to. |
+| `CancelBooking` | `Bookings` | no | [Bookings](Booking.md) | expandable | The cancel booking that the accounts receivable belongs to. |
+| `BusinessContactId` | `Int64?` | yes | [Customers](../Sales/Customer.md) |  | The business key identifier of the customer that the accounts receivable belongs to. |
 | `InvoiceNumber` | `Int64` | no |  | unique | The human readable identifier of the accounts receivable. |
 | `InvoiceDate` | `DateTimeOffset` | no |  |  | The invoice date of the accounts receivable. |
 | `DueDate` | `DateTimeOffset` | no |  |  | The due date of the accounts receivable. |
 | `IsCredit` | `Boolean` | no |  |  | Specifies if the accounts receivable is on credit or not. |
 | `InvoiceAmount` | `Decimal` | no |  |  | The invoice amount of the accounts receivable. |
-| `InvoiceAmountCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the accounts receivable’s invoice amount currency. |
+| `InvoiceAmountCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the accounts receivable’s invoice amount currency. |
 | `InvoiceAmountInCompanyCurrency` | `Decimal` | no |  |  | The invoice amount of the accounts receivable in the company currency. |
-| `InvoiceAmountInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the accounts receivable’s invoice amount company currency. |
+| `InvoiceAmountInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the accounts receivable’s invoice amount company currency. |
 | `VatAmount` | `Decimal` | no |  |  | The VAT amount of the accounts receivable. |
-| `VatAmountCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the accounts receivable’s VAT amount currency. |
+| `VatAmountCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the accounts receivable’s VAT amount currency. |
 | `VatAmountInCompanyCurrency` | `Decimal` | no |  |  | The VAT amount of the accounts receivable in the company currency. |
-| `VatAmountInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the accounts receivable’s VAT amount company currency. |
+| `VatAmountInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the accounts receivable’s VAT amount company currency. |
 | `RestAmount` | `Decimal` | no |  |  | The rest amount of the accounts receivable. |
-| `RestAmountCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the accounts receivable’s rest amount currency. |
+| `RestAmountCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the accounts receivable’s rest amount currency. |
 | `RestAmountInCompanyCurrency` | `Decimal` | no |  |  | The rest amount of the accounts receivable in the company currency. |
-| `RestAmountInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the accounts receivable’s rest amount company currency. |
+| `RestAmountInCompanyCurrencyCurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the accounts receivable’s rest amount company currency. |
 | `OrderedRestAmount` | `Decimal` | no |  |  | The ordered rest amount of the accounts receivable. |
-| `OrderedRestAmountCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the accounts receivable’s ordered rest amount currency. |
-| `CurrencyId` | `Int64` | no | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the accounts receivable currency. |
+| `OrderedRestAmountCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the accounts receivable’s ordered rest amount currency. |
+| `CurrencyId` | `Int64` | no | [Currencies](../Common/Currency.md) |  | The business key identifier of the accounts receivable currency. |
 | `ExchangeRate` | `Decimal` | no |  |  | The exchange rate applicable to the accounts receivable. |
 | `PaidInFullDate` | `DateTimeOffset?` | yes |  |  | Specifies when the accounts receivable was paid in full. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the accounts receivable comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the accounts receivable. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the accounts receivable comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment of the accounts receivable. |
 | `ReferenceNumber` | `String` | no |  |  | The reference number of the accounts receivable. |
 | `UseFixedDueDate` | `Boolean` | no |  |  | Specifies if the accounts receivable uses a fixed due date. |
-| `VatGroupId` | `Int64` | no | [VatGroups](/entities/Common/VatGroup.md) |  | The business key identifier of the VAT group that the accounts receivable belongs to. |
-| `PaymentTermId` | `Int64` | no | [PaymentTerms](/entities/Common/PaymentTerm.md) |  | The business key identifier of the payment term that the accounts receivable belongs to. |
+| `VatGroupId` | `Int64` | no | [VatGroups](../Common/VatGroup.md) |  | The business key identifier of the VAT group that the accounts receivable belongs to. |
+| `PaymentTermId` | `Int64` | no | [PaymentTerms](../Common/PaymentTerm.md) |  | The business key identifier of the payment term that the accounts receivable belongs to. |
 | `ChineseVatInvoiceNumber` | `String` | no |  |  | The Chinese VAT invoice number of the accounts receivable. |
 | `ChineseVatInvoiceDate` | `DateTimeOffset?` | yes |  |  | The Chinese VAT invoice date of the accounts receivable. |
-| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](/entities/Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the accounts receivable's currency exchange type. |
+| `CurrencyExchangeTypeId` | `Int64` | no | [CurrencyExchangeTypes](../Common/CurrencyExchangeType.md) | since 22.9 | The business key identifier of the accounts receivable's currency exchange type. |
 | `CTCReportingInvoiceNumber` | `String` | no |  | since 25.6 | The invoice number for accounts receivable from CTC reporting system. |
 | `CTCReportingReasonForRejection` | `String` | no |  | since 25.6 | The reason for rejection accounts receivable in CTC reporting system. |
 | `CTCReportingStatus` | `Int32?` | yes |  | enum, since 25.6 | The accounts receivable's status from CTC reporting system. |
@@ -182,22 +182,22 @@ Represents an accounts receivable.
 
 **Accounting**
 
-- [AccountsReceivableCashDiscountLevels](/entities/Accounting/AccountsReceivableCashDiscountLevel.md) — `ParentId` (FK)
-- [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) — `DebitInvoiceId` (FK)
-- [FixedAssetSales](/entities/Accounting/FixedAssetSale.md) — `AccountsReceivableId` (FK)
-- [IncomingPayments](/entities/Accounting/IncomingPayment.md) — `ParentId` (FK)
-- [SetOffDestination](/entities/Accounting/SetOffDestination.md) — `AccountsReceivableId` (FK)
-- [VoucherRows](/entities/Accounting/VoucherRow.md) — `AccountsReceivableId` (FK)
+- [AccountsReceivableCashDiscountLevels](AccountsReceivableCashDiscountLevel.md) — `ParentId` (FK)
+- [AccountsReceivables](AccountsReceivable.md) — `DebitInvoiceId` (FK)
+- [FixedAssetSales](FixedAssetSale.md) — `AccountsReceivableId` (FK)
+- [IncomingPayments](IncomingPayment.md) — `ParentId` (FK)
+- [SetOffDestination](SetOffDestination.md) — `AccountsReceivableId` (FK)
+- [VoucherRows](VoucherRow.md) — `AccountsReceivableId` (FK)
 
 **Inventory**
 
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `AccountReciveableId` (FK)
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `AccountsReceivable` (expand)
-- [CaseEntryPartLinks](/entities/Inventory/CasePartLink.md) — `CompensationAccountsReceivableId` (FK)
+- [CaseEntry](../Inventory/CaseEntry.md) — `AccountReciveableId` (FK)
+- [CaseEntry](../Inventory/CaseEntry.md) — `AccountsReceivable` (expand)
+- [CaseEntryPartLinks](../Inventory/CasePartLink.md) — `CompensationAccountsReceivableId` (FK)
 
 **Sales**
 
-- [InvoiceLogs](/entities/Sales/InvoiceLog.md) — `InvoiceId` (FK)
+- [InvoiceLogs](../Sales/InvoiceLog.md) — `InvoiceId` (FK)
 
 
 ## Example

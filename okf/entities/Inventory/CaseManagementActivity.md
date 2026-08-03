@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a case management activity.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `CaseManagementActivity`
 - **Endpoint:** `GET /api/v1/Inventory/CaseManagementActivities`
 - **Required permission:** Show case
@@ -46,7 +46,7 @@ Represents a case management activity.
 | `Id` | `Int64` | no |  |  | The business key identifier of the case management activity. |
 | `PlannedTime` | `TimeSpan` | no |  |  | The planned time of the case management activity. |
 | `CostPerHour` | `Decimal` | no |  |  | The cost per hour of the case management activity. |
-| `CostPerHourCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency that applies to the cost per hour of the case management activity. |
+| `CostPerHourCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency that applies to the cost per hour of the case management activity. |
 | `Chargeable` | `Boolean` | no |  |  | Specifies if the case management activity is chargeable or not. |
 | `Code` | `Int64` | no |  |  | The human readable identifier of the case management activity. |
 | `Description` | `String` | no |  |  | The description of the case management activity. |
@@ -55,8 +55,8 @@ Represents a case management activity.
 
 **Inventory**
 
-- [CaseEntryActivities](/entities/Inventory/CaseEntryActivity.md) — `ActivityTypeId` (FK)
-- [CaseManagementTemplateNodes](/entities/Inventory/CaseManagementTemplateNode.md) — `ActivityId` (FK)
+- [CaseEntryActivities](CaseEntryActivity.md) — `ActivityTypeId` (FK)
+- [CaseManagementTemplateNodes](CaseManagementTemplateNode.md) — `ActivityId` (FK)
 
 
 ## Example

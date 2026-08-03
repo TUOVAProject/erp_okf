@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a part configuration template.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `PartConfigurationTemplate`
 - **Endpoint:** `GET /api/v1/Common/PartConfigurationTemplates`
 - **Required permission:** Show part
@@ -47,18 +47,18 @@ Represents a part configuration template.
 | `Version` | `Int32` | no |  |  | The version of the template. |
 | `Code` | `String` | no |  | max length 20 | The human readable identifier of the template. |
 | `Description` | `String` | no |  |  | The decription of the template. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the comment that belongs to the template. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment that belongs to the template. |
+| `CommentId` | `Int64?` | yes | [Comments](Comment.md) |  | The business key identifier of the comment that belongs to the template. |
+| `Comment` | `Comments` | no | [Comments](Comment.md) | expandable | The comment that belongs to the template. |
 
 ## Referenced by
 
 **Common**
 
-- [PartConfigurationResults](/entities/Common/PartConfigurationResult.md) — `TemplateId` (FK)
+- [PartConfigurationResults](PartConfigurationResult.md) — `TemplateId` (FK)
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `ConfigurationTemplate` (expand)
+- [Parts](../Inventory/Part.md) — `ConfigurationTemplate` (expand)
 
 
 ## Example

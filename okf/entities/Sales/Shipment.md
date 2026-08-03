@@ -43,7 +43,7 @@ referenced_by:
 
 Represents a shipment.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `Shipment`
 - **Endpoint:** `GET /api/v1/Sales/Shipments`
 - **Required permission:** Show shipment
@@ -60,8 +60,8 @@ Represents a shipment.
 | `UnifaunOnlineFirstParcelNo` | `String` | no |  | max length 35 | The unifaun online first parcel number of the shipment. |
 | `UnifaunOnlineFirstPrintLink` | `String` | no |  | max length 4000 | The unifaun online first print link of the shipment. |
 | `LogTradeTrackingNo` | `String` | no |  | max length 400 | The log trade tracking number of the shipment. |
-| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](/entities/Common/DeliveryMethod.md) |  | The business key identifier of the shipments delivery method. |
-| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](/entities/Common/DeliveryTerm.md) |  | The business key identifier of the shipments delivery term. |
+| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](../Common/DeliveryMethod.md) |  | The business key identifier of the shipments delivery method. |
+| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](../Common/DeliveryTerm.md) |  | The business key identifier of the shipments delivery term. |
 | `DeliveryTermStandardCode` | `String` | no |  | max length 10 | The delivery term standard code of the shipment. |
 | `DeliveryTermLocation` | `String` | no |  | max length 80 | The delivery term location of the shipment. |
 | `ShippingAgentType` | `Int32` | no |  | enum | The shipping agent type of the shipment. |
@@ -83,23 +83,23 @@ Represents a shipment.
 | `TotalEurPallets` | `Int32` | no |  |  | The total number of euro pallets on the shipment. |
 | `CurrentInformationSourceType` | `Int32` | no |  | enum | The current shipment information source type of the shipment. |
 | `Status` | `Int32` | no |  | enum | The status of the shipment. |
-| `ShippingAgentId` | `Int64` | no | [Suppliers](/entities/Purchase/Supplier.md) |  | The business key identifier of the shipping agent of the shipment. |
-| `RecipientAdressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) |  | The business key identifier of the recipient adress of the shipment. |
-| `RecipientAdress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable | The recipient adress of the shipment. |
-| `RecipientInvoiceAddressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) |  | The business key identifier of the recipient invoice adress of the shipment. |
-| `RecipientInvoiceAddress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable | The recipient invoice adress of the shipment. |
-| `FreightPayerAddressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) |  | The business key identifier of the freight payer adress of the shipment. |
-| `FreightPayerAddress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable | The freight payer adress of the shipment. |
+| `ShippingAgentId` | `Int64` | no | [Suppliers](../Purchase/Supplier.md) |  | The business key identifier of the shipping agent of the shipment. |
+| `RecipientAdressId` | `Int64?` | yes | [Addresses](../Common/Address.md) |  | The business key identifier of the recipient adress of the shipment. |
+| `RecipientAdress` | `Addresses` | no | [Addresses](../Common/Address.md) | expandable | The recipient adress of the shipment. |
+| `RecipientInvoiceAddressId` | `Int64?` | yes | [Addresses](../Common/Address.md) |  | The business key identifier of the recipient invoice adress of the shipment. |
+| `RecipientInvoiceAddress` | `Addresses` | no | [Addresses](../Common/Address.md) | expandable | The recipient invoice adress of the shipment. |
+| `FreightPayerAddressId` | `Int64?` | yes | [Addresses](../Common/Address.md) |  | The business key identifier of the freight payer adress of the shipment. |
+| `FreightPayerAddress` | `Addresses` | no | [Addresses](../Common/Address.md) | expandable | The freight payer adress of the shipment. |
 | `ConsignmentId` | `String` | no |  | max length 25 | The consignment id of the shipment. |
 | `ConsignmentIdForReturn` | `String` | no |  | max length 25 | The consignment id for return of the shipment. |
 | `OurReferenceName` | `String` | no |  | max length 80 | Our reference name of the shipment. |
 | `OurReferencePhoneNumber` | `String` | no |  | max length 80 | Our reference phone number of the shipment. |
 | `OurReferenceMobilePhoneNumber` | `String` | no |  | max length 80 | Our reference mobile phone number of the shipment. |
 | `OurReferenceMail` | `String` | no |  | max length 80 | Our reference mail of the shipment. |
-| `OurPickUpAddressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) |  | The business key identifier of our pick up address of the shipment. |
-| `OurPickUpAddress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable | Our pick up adress of the shipment. |
-| `OurInvoiceAdressId` | `Int64?` | yes | [Addresses](/entities/Common/Address.md) |  | The business key identifier of our invoce address of the shipment. |
-| `OurInvoiceAddress` | `Addresses` | no | [Addresses](/entities/Common/Address.md) | expandable | Our invoice adress of the shipment. |
+| `OurPickUpAddressId` | `Int64?` | yes | [Addresses](../Common/Address.md) |  | The business key identifier of our pick up address of the shipment. |
+| `OurPickUpAddress` | `Addresses` | no | [Addresses](../Common/Address.md) | expandable | Our pick up adress of the shipment. |
+| `OurInvoiceAdressId` | `Int64?` | yes | [Addresses](../Common/Address.md) |  | The business key identifier of our invoce address of the shipment. |
+| `OurInvoiceAddress` | `Addresses` | no | [Addresses](../Common/Address.md) | expandable | Our invoice adress of the shipment. |
 | `PalletRegistrationNo` | `String` | no |  | max length 35 | The pallet registration number of the shipment. |
 | `OurPalletRegistrationNo` | `String` | no |  | max length 35 | Our pallet registration number of the shipment. |
 | `BusinessContactReferenceName` | `String` | no |  | max length 80 | The business contact reference name of the shipment. |
@@ -107,9 +107,9 @@ Represents a shipment.
 | `BusinessContactReferenceMobilePhoneNumber` | `String` | no |  | max length 80 | The business contact reference mobile phone number of the shipment. |
 | `BusinessContactReferenceMail` | `String` | no |  | max length 80 | The business contact reference mail of the shipment. |
 | `ShippingTemplate` | `String` | no |  | max length 35 | The shipping template code of the shipment. |
-| `ShippingTemplateId` | `Int64?` | yes | [ShippingTemplates](/entities/Sales/ShippingTemplate.md) |  | The business key identifier of the shipping template of the shipment. |
-| `ShippingServiceId` | `Int64?` | yes | [ShippingServices](/entities/Sales/ShippingService.md) |  | The business key identifier of shipping service of the shipment. |
-| `ShippingService` | `ShippingServices` | no | [ShippingServices](/entities/Sales/ShippingService.md) | expandable | The shipping service of the shipment. |
+| `ShippingTemplateId` | `Int64?` | yes | [ShippingTemplates](ShippingTemplate.md) |  | The business key identifier of the shipping template of the shipment. |
+| `ShippingServiceId` | `Int64?` | yes | [ShippingServices](ShippingService.md) |  | The business key identifier of shipping service of the shipment. |
+| `ShippingService` | `ShippingServices` | no | [ShippingServices](ShippingService.md) | expandable | The shipping service of the shipment. |
 | `ShippingServiceCode` | `String` | no |  | max length 35 | The shipping service code of the shipment. |
 | `SenderQuickId` | `String` | no |  | max length 30 | The sender quick id of the shipment. |
 | `SellerQuickId` | `String` | no |  | max length 30 | The seller quick id of the shipment. |
@@ -123,26 +123,26 @@ Represents a shipment.
 | `BookTransport` | `Boolean` | no |  |  | Indicates if the shipment has booked transport. |
 | `ReturnLabel` | `Boolean` | no |  |  | Indicates if the shipment has return label. |
 | `ShipmentPrintSetting` | `Int32` | no |  | enum | The print setting of the shipment. |
-| `ActiveDeliveryAddressCustomerId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) |  | The business key identifier of the active delivery address customer of the shipment. |
-| `ActiveDeliveryAddressSupplierId` | `Int64?` | yes | [Suppliers](/entities/Purchase/Supplier.md) |  | The business key identifier of the active delivery address supplier of the shipment. |
+| `ActiveDeliveryAddressCustomerId` | `Int64?` | yes | [Customers](Customer.md) |  | The business key identifier of the active delivery address customer of the shipment. |
+| `ActiveDeliveryAddressSupplierId` | `Int64?` | yes | [Suppliers](../Purchase/Supplier.md) |  | The business key identifier of the active delivery address supplier of the shipment. |
 | `ActiveDeliveryAddressCompanyId` | `Int64?` | yes |  |  | The business key identifier of the active delivery address company of the shipment. |
-| `ActiveDeliveryAddressDeliveryAddressId` | `Int64?` | yes | [DeliveryAddresses](/entities/Common/DeliveryAddress.md) |  | The business key identifier of the active delivery address delivery address of the shipment. |
-| `ActiveDeliveryAddressDeliveryAddress` | `DeliveryAddresses` | no | [DeliveryAddresses](/entities/Common/DeliveryAddress.md) | expandable | The active delivery address delivery address of the shipment. |
-| `ActiveFallbackDeliveryAddressDeliveryAddressId` | `Int64?` | yes | [DeliveryAddresses](/entities/Common/DeliveryAddress.md) |  | The business key identifier of the active fallback delivery address delivery address of the shipment. |
-| `ActiveFallbackDeliveryAddressDeliveryAddress` | `DeliveryAddresses` | no | [DeliveryAddresses](/entities/Common/DeliveryAddress.md) | expandable | The active fallback delivery address delivery address of the shipment. |
+| `ActiveDeliveryAddressDeliveryAddressId` | `Int64?` | yes | [DeliveryAddresses](../Common/DeliveryAddress.md) |  | The business key identifier of the active delivery address delivery address of the shipment. |
+| `ActiveDeliveryAddressDeliveryAddress` | `DeliveryAddresses` | no | [DeliveryAddresses](../Common/DeliveryAddress.md) | expandable | The active delivery address delivery address of the shipment. |
+| `ActiveFallbackDeliveryAddressDeliveryAddressId` | `Int64?` | yes | [DeliveryAddresses](../Common/DeliveryAddress.md) |  | The business key identifier of the active fallback delivery address delivery address of the shipment. |
+| `ActiveFallbackDeliveryAddressDeliveryAddress` | `DeliveryAddresses` | no | [DeliveryAddresses](../Common/DeliveryAddress.md) | expandable | The active fallback delivery address delivery address of the shipment. |
 | `SourceOfAlternativeDeliveryAddresses` | `Int32` | no |  | enum | The source of alternative delivery addresses of the shipment. |
 | `WarehouseShippingAgentCode` | `String` | no |  | max length 20 | The warehouse shipping agent code of the shipment. |
 | `CustomerGoodsAddressNumber` | `String` | no |  | max length 80 | The customer goods address number of the shipment. |
 | `CustomerShippingAgentCode` | `String` | no |  | max length 20 | The customer shipping agent code of the shipment. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the shipments warehouse. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the shipments warehouse. |
 | `ShippingAgentAccountName` | `String` | no |  | max length 35 | The shipping agent account name of the shipment. |
 | `CalculatedFreightPrice` | `Decimal?` | yes |  |  | The calculated freight price of the shipment. |
-| `CalculatedFreightPriceCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the calculated freight price currency of the shipment. |
-| `CalculatedFreightPriceCurrency` | `Currencies` | no | [Currencies](/entities/Common/Currency.md) | expandable | The calculated freight price currency of the shipment. |
+| `CalculatedFreightPriceCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the calculated freight price currency of the shipment. |
+| `CalculatedFreightPriceCurrency` | `Currencies` | no | [Currencies](../Common/Currency.md) | expandable | The calculated freight price currency of the shipment. |
 | `MobilePhoneNotificationNumber` | `String` | no |  | max length 35 | The mobile phone notification number for phone advice of the shipment. |
 | `GoodsTrackingUrl` | `String` | no |  | max length 4000, since 24.7 | The goods tracking URL of the shipment. |
 | `CustomsId` | `Int64?` | yes |  | since 26.4 | The business key identifier of the customs information of the shipment. |
-| `Customs` | `ShipmentCustoms` | no | [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) | expandable, since 26.4 | The customs information of the shipment. |
+| `Customs` | `ShipmentCustoms` | no | [ShipmentCustoms](ShipmentCustoms.md) | expandable, since 26.4 | The customs information of the shipment. |
 
 ## Enumerations
 
@@ -212,9 +212,9 @@ Represents a shipment.
 
 **Sales**
 
-- [ShipmentCustoms](/entities/Sales/ShipmentCustoms.md) — `ParentId` (FK)
-- [ShipmentInformationSources](/entities/Sales/ShipmentInformationSource.md) — `ShipmentId` (FK)
-- [ShipmentPackageInformations](/entities/Sales/ShipmentPackageInformation.md) — `ShipmentId` (FK)
+- [ShipmentCustoms](ShipmentCustoms.md) — `ParentId` (FK)
+- [ShipmentInformationSources](ShipmentInformationSource.md) — `ShipmentId` (FK)
+- [ShipmentPackageInformations](ShipmentPackageInformation.md) — `ShipmentId` (FK)
 
 
 ## Example

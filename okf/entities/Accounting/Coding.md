@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a coding.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `Coding`
 - **Endpoint:** `GET /api/v1/Accounting/Codings`
 - **GUID:** `BD4591A5-1FDC-46E3-89E5-6521DAE74C9B`
@@ -46,23 +46,23 @@ Represents a coding.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the coding. |
-| `CodingRows` | `CodingRows[]` | no | [CodingRows](/entities/Accounting/CodingRow.md) | expandable, collection | The coding rows belonging to the coding. |
+| `CodingRows` | `CodingRows[]` | no | [CodingRows](CodingRow.md) | expandable, collection | The coding rows belonging to the coding. |
 
 ## Referenced by
 
 **Purchase**
 
-- [InquiryRows](/entities/Purchase/InquiryRow.md) — `Coding` (expand)
-- [InquiryRows](/entities/Purchase/InquiryRow.md) — `CodingId` (FK)
-- [PurchaseOrderInvoiceRows](/entities/Purchase/PurchaseOrderInvoiceRow.md) — `Coding` (expand)
-- [PurchaseOrderRows](/entities/Purchase/PurchaseOrderRow.md) — `Coding` (expand)
+- [InquiryRows](../Purchase/InquiryRow.md) — `Coding` (expand)
+- [InquiryRows](../Purchase/InquiryRow.md) — `CodingId` (FK)
+- [PurchaseOrderInvoiceRows](../Purchase/PurchaseOrderInvoiceRow.md) — `Coding` (expand)
+- [PurchaseOrderRows](../Purchase/PurchaseOrderRow.md) — `Coding` (expand)
 
 **Sales**
 
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `Coding` (expand)
-- [QuoteRows](/entities/Sales/QuoteRow.md) — `Coding` (expand)
-- [SalesAgreementRows](/entities/Sales/SalesAgreementRow.md) — `Coding` (expand)
-- [SalesAgreementRows](/entities/Sales/SalesAgreementRow.md) — `CodingId` (FK)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `Coding` (expand)
+- [QuoteRows](../Sales/QuoteRow.md) — `Coding` (expand)
+- [SalesAgreementRows](../Sales/SalesAgreementRow.md) — `Coding` (expand)
+- [SalesAgreementRows](../Sales/SalesAgreementRow.md) — `CodingId` (FK)
 
 
 ## Example

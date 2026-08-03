@@ -35,7 +35,7 @@ references_out:
 
 Represents an invoice log entry.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `InvoiceLog`
 - **Endpoint:** `GET /api/v1/Sales/InvoiceLogs`
 - **Required permission:** Show customer orders
@@ -47,22 +47,22 @@ Represents an invoice log entry.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the invoice log entry. |
-| `InvoiceId` | `Int64?` | yes | [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) |  | The business key identifier of accounts receivable of the log entry. |
+| `InvoiceId` | `Int64?` | yes | [AccountsReceivables](../Accounting/AccountsReceivable.md) |  | The business key identifier of accounts receivable of the log entry. |
 | `LoggingTimestamp` | `DateTimeOffset` | no |  |  | The date when the log entry was created. |
 | `InvoiceDate` | `DateTimeOffset` | no |  |  | The invoice date of the log entry. |
 | `InvoiceNumber` | `Int64` | no |  |  | The invoice number of the log entry. |
-| `DeliveryRowId` | `Int64?` | yes | [CustomerOrderDeliveryRows](/entities/Sales/CustomerOrderDeliveryRow.md) |  | The business key identifier for the customer order delivery row of the log entry. |
-| `PartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier for the part of the log entry. |
+| `DeliveryRowId` | `Int64?` | yes | [CustomerOrderDeliveryRows](CustomerOrderDeliveryRow.md) |  | The business key identifier for the customer order delivery row of the log entry. |
+| `PartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier for the part of the log entry. |
 | `PartNumber` | `String` | no |  | max length 20 | The part number of the log entry. |
 | `PartCategory` | `String` | no |  | max length 20 | The part category of the log entry. |
 | `PartCode` | `String` | no |  | max length 20 | The part code of the log entry. |
-| `CustomerId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) |  | The business key identifier for the customer of the log entry. |
+| `CustomerId` | `Int64?` | yes | [Customers](Customer.md) |  | The business key identifier for the customer of the log entry. |
 | `CustomerCode` | `String` | no |  | max length 10 | The customer code of the log entry. |
 | `CustomerGroup` | `Int64?` | yes |  |  | The customer account group number of the log entry. |
-| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](/entities/Sales/CustomerOrder.md) |  | The business key identifier for the customer order of the log entry. |
+| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](CustomerOrder.md) |  | The business key identifier for the customer order of the log entry. |
 | `CustomerOrderNumber` | `String` | no |  | max length 15 | The customer order number of the log entry. |
-| `WarehouseId` | `Int64?` | yes | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier for the warehouse of the log entry. |
-| `UserId` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier for the application user of the log entry. |
+| `WarehouseId` | `Int64?` | yes | [Warehouses](../Common/Warehouse.md) |  | The business key identifier for the warehouse of the log entry. |
+| `UserId` | `Int64?` | yes | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier for the application user of the log entry. |
 | `UserName` | `String` | no |  | max length 20 | The user name of the log entry. |
 | `Seller` | `String` | no |  | max length 35 | The seller of the log entry. |
 | `OrderedQuantity` | `Decimal` | no |  |  | The ordered quantity of the log entry. |

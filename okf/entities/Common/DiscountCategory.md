@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a queryable discount category.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `DiscountCategory`
 - **Endpoint:** `GET /api/v1/Common/DiscountCategories`
 - **Required permission:** Show discount categories
@@ -48,23 +48,23 @@ Represents a queryable discount category.
 | `Number` | `String` | no |  | unique, max length 10 | The discount category number. |
 | `Description` | `String` | no |  |  | The translated description of the discount category. |
 | `CompanyIds` | `Int64[]` | no |  | collection | The business key identifiers of the companies that this entity is available for. |
-| `Rows` | `DiscountCategoryRows[]` | no | [DiscountCategoryRows](/entities/Common/DiscountCategoryRow.md) | expandable, collection, since 22.7 | The rows for the discount category. |
+| `Rows` | `DiscountCategoryRows[]` | no | [DiscountCategoryRows](DiscountCategoryRow.md) | expandable, collection, since 22.7 | The rows for the discount category. |
 
 ## Referenced by
 
 **Common**
 
-- [DiscountCategoryRows](/entities/Common/DiscountCategoryRow.md) — `DiscountCategoryId` (FK)
+- [DiscountCategoryRows](DiscountCategoryRow.md) — `DiscountCategoryId` (FK)
 
 **Purchase**
 
-- [Suppliers](/entities/Purchase/Supplier.md) — `DiscountCategory` (expand)
-- [Suppliers](/entities/Purchase/Supplier.md) — `DiscountCategoryId` (FK)
+- [Suppliers](../Purchase/Supplier.md) — `DiscountCategory` (expand)
+- [Suppliers](../Purchase/Supplier.md) — `DiscountCategoryId` (FK)
 
 **Sales**
 
-- [Customers](/entities/Sales/Customer.md) — `DiscountCategory` (expand)
-- [Customers](/entities/Sales/Customer.md) — `DiscountCategoryId` (FK)
+- [Customers](../Sales/Customer.md) — `DiscountCategory` (expand)
+- [Customers](../Sales/Customer.md) — `DiscountCategoryId` (FK)
 
 
 ## Example

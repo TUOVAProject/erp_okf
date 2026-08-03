@@ -32,7 +32,7 @@ references_out:
 
 Represents a business opportunity reference.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `BusinessOpportunityReference`
 - **Endpoint:** `GET /api/v1/Sales/BusinessOpportunityReferences`
 - **Required permission:** Show business opportunity
@@ -45,16 +45,16 @@ Represents a business opportunity reference.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the business opportunity reference. |
 | `Name` | `String` | no |  | max length 40 | The name of the reference. |
-| `ParentId` | `Int64` | no | [BusinessOpportunities](/entities/Sales/BusinessOpportunity.md) |  | The business key identifier of the reference's business opportunity. |
+| `ParentId` | `Int64` | no | [BusinessOpportunities](BusinessOpportunity.md) |  | The business key identifier of the reference's business opportunity. |
 | `ShouldFilterLogPosts` | `Boolean` | no |  |  | Specifies if the reference should filter log posts. |
 | `IsDefault` | `Boolean` | no |  |  | Specifies if this is the default reference for the business opportunity. |
-| `CustomerId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) |  | The business key identifier of the customer the reference belongs to. |
+| `CustomerId` | `Int64?` | yes | [Customers](Customer.md) |  | The business key identifier of the customer the reference belongs to. |
 | `ReferenceCode` | `String` | no |  | max length 40 | The code of the reference. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the reference's comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The reference's comment. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the reference's comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The reference's comment. |
 | `Remark` | `String` | no |  | max length 80 | The remark of the reference. |
 | `ReferenceCategory` | `String` | no |  | max length 20 | The reference category of the reference. |
-| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](/entities/Common/CommunicationAddress.md) | expandable, collection | The communication addresses of the reference. |
+| `CommunicationAddresses` | `CommunicationAddresses[]` | no | [CommunicationAddresses](../Common/CommunicationAddress.md) | expandable, collection | The communication addresses of the reference. |
 
 ## Example
 

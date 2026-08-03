@@ -30,7 +30,7 @@ references_out:
 
 Represents a company emission type linked to sustainability reporting according to the GHG protocol.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `CompanyEmissionDetail`
 - **Endpoint:** `GET /api/v1/Common/CompanyEmissionDetails`
 - **Required permission:** Show pre-calculation
@@ -51,7 +51,7 @@ Represents a company emission type linked to sustainability reporting according 
 | `ReliabilityIndex` | `Decimal` | no |  |  | The reliability index of the company emission type. |
 | `ReportingMethod` | `Int32` | no |  |  | The reporting method of the company emission type. |
 | `UnitId` | `Int64?` | yes |  |  | The business key identifier of the company emission type's unit. |
-| `Unit` | `Units` | no | [Units](/entities/Common/Unit.md) | expandable | The company emission type's unit. |
+| `Unit` | `Units` | no | [Units](Unit.md) | expandable | The company emission type's unit. |
 
 ## Example
 

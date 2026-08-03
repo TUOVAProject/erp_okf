@@ -37,7 +37,7 @@ referenced_by:
 
 Represents a customer account group.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerAccountGroup`
 - **Endpoint:** `GET /api/v1/Sales/CustomerAccountGroups`
 - **Required permission:** Show chart of accounts
@@ -58,30 +58,30 @@ Represents a customer account group.
 
 **Accounting**
 
-- [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) — `CustomerAccountGroup` (expand)
-- [AccountsReceivables](/entities/Accounting/AccountsReceivable.md) — `CustomerAccountGroupId` (FK)
+- [AccountsReceivables](../Accounting/AccountsReceivable.md) — `CustomerAccountGroup` (expand)
+- [AccountsReceivables](../Accounting/AccountsReceivable.md) — `CustomerAccountGroupId` (FK)
 
 **Common**
 
-- [Countries](/entities/Common/Country.md) — `CustomerAccountGroupId` (FK)
-- [DeliveryAddresses](/entities/Common/DeliveryAddress.md) — `CustomerAccountGroupId` (FK)
+- [Countries](../Common/Country.md) — `CustomerAccountGroupId` (FK)
+- [DeliveryAddresses](../Common/DeliveryAddress.md) — `CustomerAccountGroupId` (FK)
 
 **Inventory**
 
-- [SalesForecasts](/entities/Inventory/SalesForecast.md) — `CustomerAccountGroupId` (FK)
+- [SalesForecasts](../Inventory/SalesForecast.md) — `CustomerAccountGroupId` (FK)
 
 **Sales**
 
-- [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) — `AccountGroup` (expand)
-- [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) — `AccountGroupId` (FK)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `AccountGroup` (expand)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `AccountGroupId` (FK)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `CustomerAccountGroupId` (FK)
-- [Customers](/entities/Sales/Customer.md) — `ActiveDeliveryAddressAccountGroup` (expand)
-- [Customers](/entities/Sales/Customer.md) — `ActiveDeliveryAddressAccountGroupId` (FK)
-- [Quotes](/entities/Sales/Quote.md) — `AccountGroup` (expand)
-- [Quotes](/entities/Sales/Quote.md) — `AccountGroupId` (FK)
-- [SalesAgreements](/entities/Sales/SalesAgreement.md) — `CustomerAccountGroupId` (FK)
+- [CustomerOrderInvoices](CustomerOrderInvoice.md) — `AccountGroup` (expand)
+- [CustomerOrderInvoices](CustomerOrderInvoice.md) — `AccountGroupId` (FK)
+- [CustomerOrders](CustomerOrder.md) — `AccountGroup` (expand)
+- [CustomerOrders](CustomerOrder.md) — `AccountGroupId` (FK)
+- [CustomerOrders](CustomerOrder.md) — `CustomerAccountGroupId` (FK)
+- [Customers](Customer.md) — `ActiveDeliveryAddressAccountGroup` (expand)
+- [Customers](Customer.md) — `ActiveDeliveryAddressAccountGroupId` (FK)
+- [Quotes](Quote.md) — `AccountGroup` (expand)
+- [Quotes](Quote.md) — `AccountGroupId` (FK)
+- [SalesAgreements](SalesAgreement.md) — `CustomerAccountGroupId` (FK)
 
 
 ## Example

@@ -31,7 +31,7 @@ referenced_by:
 
 Represents a form template selection row.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `FormTemplateSelectionRow`
 - **Endpoint:** `GET /api/v1/Common/FormTemplateSelectionRows`
 - **GUID:** `3D2F2645-DDD2-4947-B5BE-741B951011BA`
@@ -43,17 +43,17 @@ Represents a form template selection row.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the entity. |
 | `Code` | `String` | no |  | unique, max length 12 | The human readable identifier of the form template selection row. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment of the form template selection row. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the form template selection row's comment. |
+| `Comment` | `Comments` | no | [Comments](Comment.md) | expandable | The comment of the form template selection row. |
+| `CommentId` | `Int64?` | yes | [Comments](Comment.md) |  | The business key identifier of the form template selection row's comment. |
 | `Description` | `String` | no |  |  | The translated description of the form template selection row. |
-| `FormTemplateId` | `Int64` | no | [FormTemplates](/entities/Common/FormTemplate.md) |  | The business key identifier of the form template that the form template selection row relates to. |
+| `FormTemplateId` | `Int64` | no | [FormTemplates](FormTemplate.md) |  | The business key identifier of the form template that the form template selection row relates to. |
 | `RowIndex` | `Int32?` | yes |  |  | The row index of the form template selection row. |
 
 ## Referenced by
 
 **Common**
 
-- [FormTemplateRows](/entities/Common/FormTemplateRow.md) — `FormTemplateSelectionRowId` (FK)
+- [FormTemplateRows](FormTemplateRow.md) — `FormTemplateSelectionRowId` (FK)
 
 
 ## Example

@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a reason code for debit note.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ReasonCodeDebitNote`
 - **Endpoint:** `GET /api/v1/Common/ReasonCodeDebitNotes`
 - **Required permission:** Show cause codes
@@ -49,8 +49,8 @@ Represents a reason code for debit note.
 
 **Sales**
 
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `ReasonCodeDebitNote` (expand)
-- [CustomerOrders](/entities/Sales/CustomerOrder.md) — `ReasonCodeDebitNoteId` (FK)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `ReasonCodeDebitNote` (expand)
+- [CustomerOrders](../Sales/CustomerOrder.md) — `ReasonCodeDebitNoteId` (FK)
 
 
 ## Example

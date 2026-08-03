@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a accrual accounting.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `AccrualAccounting`
 - **Endpoint:** `GET /api/v1/Accounting/AccrualAccountings`
 - **Required permission:** Show accrual
@@ -51,19 +51,19 @@ Represents a accrual accounting.
 | `Text` | `String` | no |  | max length 100 | The human readable text on the accrual accounting. |
 | `Type` | `Int32` | no |  | enum | Type of accrual accounting. |
 | `StartDate` | `DateTimeOffset?` | yes |  |  | Start date of the accrual accounting. |
-| `AccountsPayableId` | `Int64?` | yes | [AccountsPayables](/entities/Accounting/AccountsPayable.md) |  | The business key identifier of the accounts payable. |
+| `AccountsPayableId` | `Int64?` | yes | [AccountsPayables](AccountsPayable.md) |  | The business key identifier of the accounts payable. |
 | `AccountsPayableBookingRowId` | `Int64?` | yes |  |  | The business key identifier of the accounts payable booking row. |
 | `VoucherId` | `Int64?` | yes |  |  | The business key identifier of the voucher. |
 | `VoucherRowId` | `Int64?` | yes |  |  | The business key identifier of the voucher row. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the accrual accounting comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment on the accrual accounting. |
-| `CancelCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the accrual accounting cancellation comment. |
-| `CancelComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The cancellation comment on the accrual accounting. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the accrual accounting comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment on the accrual accounting. |
+| `CancelCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the accrual accounting cancellation comment. |
+| `CancelComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The cancellation comment on the accrual accounting. |
 | `IsCancelled` | `Boolean` | no |  |  | Specifies if the accrual accounting is cancelled. |
 | `BookingId` | `Int64` | no |  |  | The business key identifier of the booking. |
-| `Rows` | `AccrualAccountingRows[]` | no | [AccrualAccountingRows](/entities/Accounting/AccrualAccountingRow.md) | expandable, collection | The accrual accounting rows. |
-| `BookingRows` | `BookingRows[]` | no | [BookingRows](/entities/Accounting/BookingRow.md) | expandable, collection | The booking rows on the accrual accounting. |
-| `AccountsPayableBookingRow` | `BookingRows` | no | [BookingRows](/entities/Accounting/BookingRow.md) | expandable | The booking row of the accrual accounting's account payable. |
+| `Rows` | `AccrualAccountingRows[]` | no | [AccrualAccountingRows](AccrualAccountingRow.md) | expandable, collection | The accrual accounting rows. |
+| `BookingRows` | `BookingRows[]` | no | [BookingRows](BookingRow.md) | expandable, collection | The booking rows on the accrual accounting. |
+| `AccountsPayableBookingRow` | `BookingRows` | no | [BookingRows](BookingRow.md) | expandable | The booking row of the accrual accounting's account payable. |
 
 ## Enumerations
 
@@ -83,8 +83,8 @@ Represents a accrual accounting.
 
 **Accounting**
 
-- [BookingRows](/entities/Accounting/BookingRow.md) — `AccrualAccountingId` (FK)
-- [VoucherRows](/entities/Accounting/VoucherRow.md) — `AccrualAccountingId` (FK)
+- [BookingRows](BookingRow.md) — `AccrualAccountingId` (FK)
+- [VoucherRows](VoucherRow.md) — `AccrualAccountingId` (FK)
 
 
 ## Example

@@ -32,7 +32,7 @@ references_out:
 
 Represents a delegated work.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `DelegatedWork`
 - **Endpoint:** `GET /api/v1/Common/DelegatedWork`
 - **Required permission:** Show Activity list – Project
@@ -45,10 +45,10 @@ Represents a delegated work.
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the delegated work. |
 | `WorkRecordingType` | `Int32` | no |  | enum | The work recording type of the delegated work. |
-| `DelegatedBy` | `Int64?` | yes | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the user who delegated the work. |
-| `EmployeeId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the employee the work is delegated to. |
-| `ActivityId` | `Int64?` | yes | [ProjectActivities](/entities/Common/ProjectActivity.md) |  | The business key identifier of the delegated work's activity. |
-| `OperationId` | `Int64?` | yes | [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) |  | The business key identifier of the delegated work's operation. |
+| `DelegatedBy` | `Int64?` | yes | [ApplicationUsers](ApplicationUser.md) |  | The business key identifier of the user who delegated the work. |
+| `EmployeeId` | `Int64?` | yes | [Persons](Person.md) |  | The business key identifier of the employee the work is delegated to. |
+| `ActivityId` | `Int64?` | yes | [ProjectActivities](ProjectActivity.md) |  | The business key identifier of the delegated work's activity. |
+| `OperationId` | `Int64?` | yes | [ManufacturingOrderOperations](../Manufacturing/ManufacturingOrderOperation.md) |  | The business key identifier of the delegated work's operation. |
 
 ## Enumerations
 

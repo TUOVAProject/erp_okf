@@ -32,7 +32,7 @@ referenced_by:
 
 Represents an attendance recording interval on a recording day.
 
-- **Module:** [TimeRecording](/modules/TimeRecording.md)
+- **Module:** [TimeRecording](../../modules/TimeRecording.md)
 - **API class:** `AttendanceInterval`
 - **Endpoint:** `GET /api/v1/TimeRecording/AttendanceIntervals`
 - **Required permission:** Show recording items
@@ -47,10 +47,10 @@ Represents an attendance recording interval on a recording day.
 | `IntervalStart` | `DateTimeOffset` | no |  |  | The start of the interval. |
 | `IntervalEnd` | `DateTimeOffset` | no |  |  | The end of the interval. |
 | `IsClosedInterval` | `Boolean` | no |  |  | Indicatates if the interval was ended. If false the interval is considered the active interval on the day which the next attendance recording is supposed to end. |
-| `AbsenceCodeId` | `Int64?` | yes | [AbsenceCodes](/entities/TimeRecording/AbsenceCode.md) |  | The business key identifier of an absence code. If defined this interval is an absence recording. References a AbsenceCodes |
+| `AbsenceCodeId` | `Int64?` | yes | [AbsenceCodes](AbsenceCode.md) |  | The business key identifier of an absence code. If defined this interval is an absence recording. References a AbsenceCodes |
 | `DeductedIfDailyHoursNotFulfilledOverride` | `Boolean?` | yes |  |  | Used to per recording be able to override the setting from an absence code if it should affect deduction of overtime. |
-| `OvertimeTypeBeforeId` | `Int64?` | yes | [OvertimeTypes](/entities/TimeRecording/OvertimeType.md) |  | The business key identifier of an overtime type selected at the start of the interval. References a OvertimeTypes |
-| `OvertimeTypeAfterId` | `Int64?` | yes | [OvertimeTypes](/entities/TimeRecording/OvertimeType.md) |  | The business key identifier of an overtime type selected at the end of the interval. References a OvertimeTypes |
+| `OvertimeTypeBeforeId` | `Int64?` | yes | [OvertimeTypes](OvertimeType.md) |  | The business key identifier of an overtime type selected at the start of the interval. References a OvertimeTypes |
+| `OvertimeTypeAfterId` | `Int64?` | yes | [OvertimeTypes](OvertimeType.md) |  | The business key identifier of an overtime type selected at the end of the interval. References a OvertimeTypes |
 | `IsBreak` | `Boolean` | no |  |  | Indicates if this is a break recording. |
 | `IsAutomaticOut` | `Boolean` | no |  |  | Indicates if this was an automatic clock-out recording due to forgotten clock-out the previous day. |
 | `AbsenceKind` | `Int32` | no |  | enum | Specifies the absence kind recorded for this interval. |
@@ -75,7 +75,7 @@ Represents an attendance recording interval on a recording day.
 
 **TimeRecording**
 
-- [RecordingDays](/entities/TimeRecording/RecordingDay.md) — `AttendanceIntervals` (expand)
+- [RecordingDays](RecordingDay.md) — `AttendanceIntervals` (expand)
 
 
 ## Example

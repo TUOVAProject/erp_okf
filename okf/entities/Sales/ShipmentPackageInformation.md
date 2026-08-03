@@ -35,7 +35,7 @@ referenced_by:
 
 Represents a shipment package information.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `ShipmentPackageInformation`
 - **Endpoint:** `GET /api/v1/Sales/ShipmentPackageInformations`
 - **Required permission:** Show shipment
@@ -47,12 +47,12 @@ Represents a shipment package information.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the shipment package information. |
-| `InformationSourceId` | `Int64?` | yes | [ShipmentInformationSources](/entities/Sales/ShipmentInformationSource.md) |  | The business key identifier of the information source of the package information. |
+| `InformationSourceId` | `Int64?` | yes | [ShipmentInformationSources](ShipmentInformationSource.md) |  | The business key identifier of the information source of the package information. |
 | `Count` | `Int32` | no |  |  | The number of packages of the package information. |
 | `PackageTypeName` | `String` | no |  | max length 80 | The package type name of the package information. |
-| `PackageType` | `Int64?` | yes | [PackageTypes](/entities/Inventory/PackageType.md) |  | The business key identifier of the package type of the package information. |
+| `PackageType` | `Int64?` | yes | [PackageTypes](../Inventory/PackageType.md) |  | The business key identifier of the package type of the package information. |
 | `GoodsTypeName` | `String` | no |  | max length 80 | The goods type name of the package information. |
-| `GoodsType` | `Int64?` | yes | [GoodsTypes](/entities/Inventory/GoodsType.md) |  | The business key identifier of the goods type of the package information. |
+| `GoodsType` | `Int64?` | yes | [GoodsTypes](../Inventory/GoodsType.md) |  | The business key identifier of the goods type of the package information. |
 | `PackageIdentification` | `String` | no |  | max length 20 | The package identification of the package information. |
 | `PackageTypeCode` | `String` | no |  | max length 16 | The package type code of the package information. |
 | `Volume` | `Decimal` | no |  |  | The volume of the package information. |
@@ -63,15 +63,15 @@ Represents a shipment package information.
 | `Height` | `Decimal` | no |  |  | The height of the package information. |
 | `GoodsLabel` | `String` | no |  | max length 50 | The GoodsLabel of the package information. |
 | `PackageNumber` | `String` | no |  | max length 80, since 24.3 | The PackageNumber to identify a package with a Shipping Partner of the package information. |
-| `ShippingAgentsPackageNumbers` | `ShipmentPackageInformationPackageNumbers[]` | no | [ShipmentPackageInformationPackageNumbers](/entities/Sales/ShipmentPackageInformationPackageNumber.md) | expandable, collection, since 24.3 | The Real PackageNumbers from shipping agent or edited manually of the package information. |
-| `ShipmentId` | `Int64?` | yes | [Shipments](/entities/Sales/Shipment.md) |  | The business key identifier of the shipment of the package information. |
+| `ShippingAgentsPackageNumbers` | `ShipmentPackageInformationPackageNumbers[]` | no | [ShipmentPackageInformationPackageNumbers](ShipmentPackageInformationPackageNumber.md) | expandable, collection, since 24.3 | The Real PackageNumbers from shipping agent or edited manually of the package information. |
+| `ShipmentId` | `Int64?` | yes | [Shipments](Shipment.md) |  | The business key identifier of the shipment of the package information. |
 | `RowIndex` | `Int32?` | yes |  |  | The row index of the package information. |
 
 ## Referenced by
 
 **Sales**
 
-- [ShipmentPackageInformationPackageNumbers](/entities/Sales/ShipmentPackageInformationPackageNumber.md) — `ParentId` (FK)
+- [ShipmentPackageInformationPackageNumbers](ShipmentPackageInformationPackageNumber.md) — `ParentId` (FK)
 
 
 ## Example

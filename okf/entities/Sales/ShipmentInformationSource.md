@@ -36,7 +36,7 @@ referenced_by:
 
 Represents a shipment information source.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `ShipmentInformationSource`
 - **Endpoint:** `GET /api/v1/Sales/ShipmentInformationSources`
 - **Required permission:** Show shipment
@@ -48,13 +48,13 @@ Represents a shipment information source.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the shipment information source. |
-| `ShipmentId` | `Int64?` | yes | [Shipments](/entities/Sales/Shipment.md) |  | The business key identifier of the shipment of the shipment information source. |
+| `ShipmentId` | `Int64?` | yes | [Shipments](Shipment.md) |  | The business key identifier of the shipment of the shipment information source. |
 | `ShipmentInformationSourceType` | `Int32` | no |  | enum | The shipment information source type of the shipment information source. |
-| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](/entities/Sales/CustomerOrder.md) |  | The business key identifier of the customer order of the shipment information source. |
-| `PickingListId` | `Int64?` | yes | [SalesPickingLists](/entities/Sales/SalesPickingList.md) |  | The business key identifier of the picking list of the shipment information source. |
-| `SupplierId` | `Int64?` | yes | [Suppliers](/entities/Purchase/Supplier.md) |  | The business key identifier of the supplier of the shipment information source. |
-| `CustomerId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) |  | The business key identifier of the customer of the shipment information source. |
-| `CustomerOrderInvoiceId` | `Int64?` | yes | [CustomerOrderInvoices](/entities/Sales/CustomerOrderInvoice.md) |  | The business key identifier of the customer order shipment of the shipping information source. |
+| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](CustomerOrder.md) |  | The business key identifier of the customer order of the shipment information source. |
+| `PickingListId` | `Int64?` | yes | [SalesPickingLists](SalesPickingList.md) |  | The business key identifier of the picking list of the shipment information source. |
+| `SupplierId` | `Int64?` | yes | [Suppliers](../Purchase/Supplier.md) |  | The business key identifier of the supplier of the shipment information source. |
+| `CustomerId` | `Int64?` | yes | [Customers](Customer.md) |  | The business key identifier of the customer of the shipment information source. |
+| `CustomerOrderInvoiceId` | `Int64?` | yes | [CustomerOrderInvoices](CustomerOrderInvoice.md) |  | The business key identifier of the customer order shipment of the shipping information source. |
 | `RowIndex` | `Int32` | no |  |  | The row index of the shipment information source. |
 
 ## Enumerations
@@ -76,7 +76,7 @@ Represents a shipment information source.
 
 **Sales**
 
-- [ShipmentPackageInformations](/entities/Sales/ShipmentPackageInformation.md) — `InformationSourceId` (FK)
+- [ShipmentPackageInformations](ShipmentPackageInformation.md) — `InformationSourceId` (FK)
 
 
 ## Example

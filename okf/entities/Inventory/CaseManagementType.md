@@ -30,7 +30,7 @@ referenced_by:
 
 Represents a case management type.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `CaseManagementType`
 - **Endpoint:** `GET /api/v1/Inventory/CaseManagementType`
 - **Required permission:** Show basic data for case
@@ -66,9 +66,9 @@ Represents a case management type.
 
 **Inventory**
 
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `CaseType` (expand)
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `CaseTypeId` (FK)
-- [CaseManagementTemplates](/entities/Inventory/CaseManagementTemplate.md) — `CaseManagementTypeId` (FK)
+- [CaseEntry](CaseEntry.md) — `CaseType` (expand)
+- [CaseEntry](CaseEntry.md) — `CaseTypeId` (FK)
+- [CaseManagementTemplates](CaseManagementTemplate.md) — `CaseManagementTypeId` (FK)
 
 
 ## Example

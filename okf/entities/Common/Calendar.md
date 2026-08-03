@@ -29,7 +29,7 @@ referenced_by:
 
 Represents a queryable calendar.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `Calendar`
 - **Endpoint:** `GET /api/v1/Common/Calendars`
 - **Required permission:** Show calendar
@@ -241,8 +241,8 @@ Represents a queryable calendar.
 
 **Common**
 
-- [Warehouses](/entities/Common/Warehouse.md) — `Calendar` (expand)
-- [Warehouses](/entities/Common/Warehouse.md) — `CalendarId` (FK)
+- [Warehouses](Warehouse.md) — `Calendar` (expand)
+- [Warehouses](Warehouse.md) — `CalendarId` (FK)
 
 
 ## Example

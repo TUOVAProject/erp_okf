@@ -34,7 +34,7 @@ referenced_by:
 
 Represents a account.
 
-- **Module:** [Accounting](/modules/Accounting.md)
+- **Module:** [Accounting](../../modules/Accounting.md)
 - **API class:** `Account`
 - **Endpoint:** `GET /api/v1/Accounting/Accounts`
 - **Required permission:** Show chart of accounts
@@ -75,21 +75,21 @@ Represents a account.
 
 **Accounting**
 
-- [AccountYearSettings](/entities/Accounting/AccountYearSetting.md) — `Account` (expand)
-- [AccountYearSettings](/entities/Accounting/AccountYearSetting.md) — `AccountId` (FK)
-- [BankAccounts](/entities/Accounting/BankAccount.md) — `AccountingAccountId` (FK)
-- [CodingEntries](/entities/Accounting/CodingEntry.md) — `Account` (expand)
-- [CodingEntries](/entities/Accounting/CodingEntry.md) — `AccountId` (FK)
+- [AccountYearSettings](AccountYearSetting.md) — `Account` (expand)
+- [AccountYearSettings](AccountYearSetting.md) — `AccountId` (FK)
+- [BankAccounts](BankAccount.md) — `AccountingAccountId` (FK)
+- [CodingEntries](CodingEntry.md) — `Account` (expand)
+- [CodingEntries](CodingEntry.md) — `AccountId` (FK)
 
 **Common**
 
-- [VatRates](/entities/Common/VatRate.md) — `InputVatAccountId` (FK)
-- [VatRates](/entities/Common/VatRate.md) — `OutputVatAccountId` (FK)
+- [VatRates](../Common/VatRate.md) — `InputVatAccountId` (FK)
+- [VatRates](../Common/VatRate.md) — `OutputVatAccountId` (FK)
 
 **Sales**
 
-- [SalesAgreementBases](/entities/Sales/SalesAgreementBasis.md) — `AccrualAccountId` (FK)
-- [SalesAgreements](/entities/Sales/SalesAgreement.md) — `AccrualAccountId` (FK)
+- [SalesAgreementBases](../Sales/SalesAgreementBasis.md) — `AccrualAccountId` (FK)
+- [SalesAgreements](../Sales/SalesAgreement.md) — `AccrualAccountId` (FK)
 
 
 ## Example

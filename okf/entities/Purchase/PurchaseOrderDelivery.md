@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a purchase order delivery entry
 
-- **Module:** [Purchase](/modules/Purchase.md)
+- **Module:** [Purchase](../../modules/Purchase.md)
 - **API class:** `PurchaseOrderDelivery`
 - **Endpoint:** `GET /api/v1/Purchase/PurchaseOrderDeliveries`
 - **Required permission:** Show purchase orders
@@ -44,19 +44,19 @@ Represents a purchase order delivery entry
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the purchase order delivery. |
-| `PurchaseOrderId` | `Int64` | no | [PurchaseOrders](/entities/Purchase/PurchaseOrder.md) |  | The business key identifier of the purchase order. |
+| `PurchaseOrderId` | `Int64` | no | [PurchaseOrders](PurchaseOrder.md) |  | The business key identifier of the purchase order. |
 | `ConfirmationDate` | `DateTimeOffset?` | yes |  | **deprecated since 25.5** | The confirmation date of the of purchase order delivery. _(This field has been removed as it was never used.)_ |
 | `AdviceDate` | `DateTimeOffset?` | yes |  | **deprecated since 25.5** | The advice date of the of purchase order delivery. _(This field has been removed as it was never used.)_ |
 | `DeliveryNoteNumber` | `String` | no |  | max length 35 | The human readable delivery note number of the purchase order delivery. |
 | `WayBillNumber` | `String` | no |  | max length 35 | The human readable way bill number of the purchase order delivery. |
-| `Rows` | `PurchaseOrderDeliveryRows[]` | no | [PurchaseOrderDeliveryRows](/entities/Purchase/PurchaseOrderDeliveryRow.md) | expandable, collection | The rows of the purchase order delivery. |
+| `Rows` | `PurchaseOrderDeliveryRows[]` | no | [PurchaseOrderDeliveryRows](PurchaseOrderDeliveryRow.md) | expandable, collection | The rows of the purchase order delivery. |
 | `ArrivalNoteNumber` | `Int64` | no |  | since 25.6 | The arrival note number of the purchase order delivery. |
 
 ## Referenced by
 
 **Purchase**
 
-- [PurchaseOrderInvoices](/entities/Purchase/PurchaseOrderInvoice.md) — `PurchaseOrderDeliveryId` (FK)
+- [PurchaseOrderInvoices](PurchaseOrderInvoice.md) — `PurchaseOrderDeliveryId` (FK)
 
 
 ## Example

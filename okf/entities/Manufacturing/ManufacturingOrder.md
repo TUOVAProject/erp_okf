@@ -48,7 +48,7 @@ referenced_by:
 
 Represents a manufacturing order.
 
-- **Module:** [Manufacturing](/modules/Manufacturing.md)
+- **Module:** [Manufacturing](../../modules/Manufacturing.md)
 - **API class:** `ManufacturingOrder`
 - **Endpoint:** `GET /api/v1/Manufacturing/ManufacturingOrders`
 - **Required permission:** Show manufacturing orders
@@ -62,33 +62,33 @@ Represents a manufacturing order.
 | `Id` | `Int64` | no |  |  | The business key identifier of the manufacturing order. |
 | `OrderNumber` | `String` | no |  | unique, max length 20 | The order number of the manufacturing order. |
 | `Status` | `Int32` | no |  | enum | The status of the manufacturing order. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse that the manufacturing order belongs to. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the comment that belongs to the manufacturing order. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The comment that belongs to the manufacturing order. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part that the manufacturing order is to produce. |
-| `Part` | `Parts` | no | [Parts](/entities/Inventory/Part.md) | expandable | The part that the manufacturing order is to produce. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse that the manufacturing order belongs to. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the comment that belongs to the manufacturing order. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The comment that belongs to the manufacturing order. |
+| `PartId` | `Int64` | no | [Parts](../Inventory/Part.md) |  | The business key identifier of the part that the manufacturing order is to produce. |
+| `Part` | `Parts` | no | [Parts](../Inventory/Part.md) | expandable | The part that the manufacturing order is to produce. |
 | `ReportedQuantity` | `Decimal` | no |  |  | The reported quantity of the main manufacturing order node. |
 | `PlannedQuantity` | `Decimal` | no |  |  | The planned quantity of the main manufacturing order node. |
 | `RestQuantity` | `Decimal` | no |  |  | The rest quantity of the main manufacturing order node. |
 | `StartDate` | `DateTimeOffset` | no |  |  | The start date of the manufacturing order. |
 | `FinishDate` | `DateTimeOffset` | no |  |  | The finish date of the manufacturing order. |
 | `Priority` | `Int32` | no |  |  | The priority of the manufacturing order. |
-| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](/entities/Sales/CustomerOrder.md) |  | The business key identifier of the customer order that produced the manufacturing order. |
-| `CustomerOrder` | `CustomerOrders` | no | [CustomerOrders](/entities/Sales/CustomerOrder.md) | expandable | The customer order that produced the manufacturing order. |
-| `Operations` | `ManufacturingOrderOperations[]` | no | [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) | expandable, collection | The manufacturing order operations that belong to the manufacturing order. |
-| `Materials` | `ManufacturingOrderMaterials[]` | no | [ManufacturingOrderMaterials](/entities/Manufacturing/ManufacturingOrderMaterial.md) | expandable, collection | The manufacturing order materials that belong to the manufacturing order. |
-| `Nodes` | `ManufacturingOrderNodes[]` | no | [ManufacturingOrderNodes](/entities/Manufacturing/ManufacturingOrderNode.md) | expandable, collection, since 2.30 | The manufacturing order nodes that belong to the manufacturing order. It is flattened, not a structure. |
-| `ProjectId` | `Int64?` | yes | [Projects](/entities/Common/Project.md) | since 2.31 | The business key identifier of the project that belongs to the manufacturing order. |
-| `Project` | `Projects` | no | [Projects](/entities/Common/Project.md) | expandable, since 2.31 | The project that belongs to the manufacturing order. Can be null. |
+| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](../Sales/CustomerOrder.md) |  | The business key identifier of the customer order that produced the manufacturing order. |
+| `CustomerOrder` | `CustomerOrders` | no | [CustomerOrders](../Sales/CustomerOrder.md) | expandable | The customer order that produced the manufacturing order. |
+| `Operations` | `ManufacturingOrderOperations[]` | no | [ManufacturingOrderOperations](ManufacturingOrderOperation.md) | expandable, collection | The manufacturing order operations that belong to the manufacturing order. |
+| `Materials` | `ManufacturingOrderMaterials[]` | no | [ManufacturingOrderMaterials](ManufacturingOrderMaterial.md) | expandable, collection | The manufacturing order materials that belong to the manufacturing order. |
+| `Nodes` | `ManufacturingOrderNodes[]` | no | [ManufacturingOrderNodes](ManufacturingOrderNode.md) | expandable, collection, since 2.30 | The manufacturing order nodes that belong to the manufacturing order. It is flattened, not a structure. |
+| `ProjectId` | `Int64?` | yes | [Projects](../Common/Project.md) | since 2.31 | The business key identifier of the project that belongs to the manufacturing order. |
+| `Project` | `Projects` | no | [Projects](../Common/Project.md) | expandable, since 2.31 | The project that belongs to the manufacturing order. Can be null. |
 | `CategoryString` | `String` | no |  | max length 15, since 2.41 | The category string of the manufacturing order. |
 | `VariantCode` | `String` | no |  | max length 200, since 2.53 | The variant code on the manufacturing order. |
-| `CustomerId` | `Int64?` | yes | [Customers](/entities/Sales/Customer.md) | since 2.53 | The business key identifier of the customer on the manufacturing order. |
+| `CustomerId` | `Int64?` | yes | [Customers](../Sales/Customer.md) | since 2.53 | The business key identifier of the customer on the manufacturing order. |
 | `InitialFinishDate` | `DateTimeOffset` | no |  | since 2.53 | The initial finish date for the manufacturing order. |
-| `PartConfigurationId` | `Int64?` | yes | [PartConfigurations](/entities/Common/PartConfiguration.md) | since 2.55 | The business key identifier of the manufacturing order's part configuration. |
-| `OrderQuantityId` | `Int64?` | yes | [OrderQuantityManufacturingOrders](/entities/Manufacturing/OrderQuantityManufacturingOrder.md) | since 22.6 | The business key identifier of order quantity. |
-| `OrderQuantity` | `OrderQuantityManufacturingOrders` | no | [OrderQuantityManufacturingOrders](/entities/Manufacturing/OrderQuantityManufacturingOrder.md) | expandable, since 22.6 | Order quantity that holds the partial quantities. |
-| `OrderTypeId` | `Int64?` | yes | [ManufacturingOrderTypes](/entities/Manufacturing/ManufacturingOrderType.md) | since 24.3 | The business key identifier of order type. |
-| `OrderType` | `ManufacturingOrderTypes` | no | [ManufacturingOrderTypes](/entities/Manufacturing/ManufacturingOrderType.md) | expandable, since 24.3 | Order type of the Manufacturing Order. |
+| `PartConfigurationId` | `Int64?` | yes | [PartConfigurations](../Common/PartConfiguration.md) | since 2.55 | The business key identifier of the manufacturing order's part configuration. |
+| `OrderQuantityId` | `Int64?` | yes | [OrderQuantityManufacturingOrders](OrderQuantityManufacturingOrder.md) | since 22.6 | The business key identifier of order quantity. |
+| `OrderQuantity` | `OrderQuantityManufacturingOrders` | no | [OrderQuantityManufacturingOrders](OrderQuantityManufacturingOrder.md) | expandable, since 22.6 | Order quantity that holds the partial quantities. |
+| `OrderTypeId` | `Int64?` | yes | [ManufacturingOrderTypes](ManufacturingOrderType.md) | since 24.3 | The business key identifier of order type. |
+| `OrderType` | `ManufacturingOrderTypes` | no | [ManufacturingOrderTypes](ManufacturingOrderType.md) | expandable, since 24.3 | Order type of the Manufacturing Order. |
 
 ## Enumerations
 
@@ -110,22 +110,22 @@ Represents a manufacturing order.
 
 **Inventory**
 
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `ManufacturingOrder` (expand)
-- [CaseEntry](/entities/Inventory/CaseEntry.md) — `ManufacturingOrderId` (FK)
-- [Locations](/entities/Inventory/Location.md) — `ManufacturingOrderId` (FK)
-- [ProductRecords](/entities/Inventory/ProductRecord.md) — `ManufacturingOrder` (expand)
-- [ProductRecords](/entities/Inventory/ProductRecord.md) — `ManufacturingOrderId` (FK)
+- [CaseEntry](../Inventory/CaseEntry.md) — `ManufacturingOrder` (expand)
+- [CaseEntry](../Inventory/CaseEntry.md) — `ManufacturingOrderId` (FK)
+- [Locations](../Inventory/Location.md) — `ManufacturingOrderId` (FK)
+- [ProductRecords](../Inventory/ProductRecord.md) — `ManufacturingOrder` (expand)
+- [ProductRecords](../Inventory/ProductRecord.md) — `ManufacturingOrderId` (FK)
 
 **Manufacturing**
 
-- [MaintenanceReportings](/entities/Manufacturing/MaintenanceReporting.md) — `ManufacturingOrder` (expand)
-- [MaintenanceReportings](/entities/Manufacturing/MaintenanceReporting.md) — `ManufacturingOrderId` (FK)
-- [ManufacturingOrderMaterials](/entities/Manufacturing/ManufacturingOrderMaterial.md) — `ManufacturingOrderId` (FK)
-- [ManufacturingOrderOperations](/entities/Manufacturing/ManufacturingOrderOperation.md) — `ManufacturingOrderId` (FK)
+- [MaintenanceReportings](MaintenanceReporting.md) — `ManufacturingOrder` (expand)
+- [MaintenanceReportings](MaintenanceReporting.md) — `ManufacturingOrderId` (FK)
+- [ManufacturingOrderMaterials](ManufacturingOrderMaterial.md) — `ManufacturingOrderId` (FK)
+- [ManufacturingOrderOperations](ManufacturingOrderOperation.md) — `ManufacturingOrderId` (FK)
 
 **Sales**
 
-- [CustomerOrderRows](/entities/Sales/CustomerOrderRow.md) — `LinkedManufacturingOrderId` (FK)
+- [CustomerOrderRows](../Sales/CustomerOrderRow.md) — `LinkedManufacturingOrderId` (FK)
 
 
 ## Example

@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a stock balance change.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `StockBalanceChange`
 - **Endpoint:** `GET /api/v1/Inventory/StockBalanceChanges`
 - **Required permission:** Show part
@@ -45,17 +45,17 @@ Represents a stock balance change.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the stock balance change. |
-| `PartLocationId` | `Int64?` | yes | [PartLocations](/entities/Inventory/PartLocation.md) |  | The part location that the balance change effects. |
+| `PartLocationId` | `Int64?` | yes | [PartLocations](PartLocation.md) |  | The part location that the balance change effects. |
 | `BalanceChange` | `Decimal` | no |  |  | The balance change for this part location. |
 | `AvailableBalance` | `Decimal` | no |  |  | The available balance for the part location before the balance change was performed. NOTE: This only produces a value for arrival reporting and manufacturing reportings. This property is not suitable for looking at the historical balance of a part location. |
-| `ProductRecordId` | `Int64?` | yes | [ProductRecords](/entities/Inventory/ProductRecord.md) |  | The product record that is used for this balance change. |
-| `QuantityChangeId` | `Int64` | no | [QuantityChanges](/entities/Inventory/QuantityChange.md) |  | The parent quantity change of the stock balance change. |
+| `ProductRecordId` | `Int64?` | yes | [ProductRecords](ProductRecord.md) |  | The product record that is used for this balance change. |
+| `QuantityChangeId` | `Int64` | no | [QuantityChanges](QuantityChange.md) |  | The parent quantity change of the stock balance change. |
 
 ## Referenced by
 
 **Inventory**
 
-- [QuantityChanges](/entities/Inventory/QuantityChange.md) — `StockBalanceChanges` (expand)
+- [QuantityChanges](QuantityChange.md) — `StockBalanceChanges` (expand)
 
 
 ## Example

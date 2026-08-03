@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a queryable delivery address warehouse information entry.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `DeliveryAddressWarehouseInformation`
 - **Endpoint:** `GET /api/v1/Common/DeliveryAddressWarehouseInformations`
 - **GUID:** `F8FF21F1-DDFF-4363-BD87-D12425990A7E`
@@ -44,13 +44,13 @@ Represents a queryable delivery address warehouse information entry.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the warehouse information entry. |
-| `WarehouseId` | `Int64?` | yes | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse that the information pertains to. |
-| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](/entities/Common/DeliveryMethod.md) |  | The business key identifier of the delivery method that applies to the warehouse and delivery address. |
-| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](/entities/Common/DeliveryTerm.md) |  | The business key identifier of the delivery term that applies to the warehouse and delivery address. |
+| `WarehouseId` | `Int64?` | yes | [Warehouses](Warehouse.md) |  | The business key identifier of the warehouse that the information pertains to. |
+| `DeliveryMethodId` | `Int64?` | yes | [DeliveryMethods](DeliveryMethod.md) |  | The business key identifier of the delivery method that applies to the warehouse and delivery address. |
+| `DeliveryTermId` | `Int64?` | yes | [DeliveryTerms](DeliveryTerm.md) |  | The business key identifier of the delivery term that applies to the warehouse and delivery address. |
 | `TransportTime` | `TimeSpan?` | yes |  |  | The transport time that applies to the warehouse and delivery address. |
 | `DeliveryWeekdays` | `Int32` | no |  | bitmask, enum | Specifies what days delivery can be made for the warehouse and delivery address. |
 | `DestinationForDeliveryTerm` | `String` | no |  | max length 80 | Specifies the destination for the delivery term. |
-| `ParentId` | `Int64` | no | [DeliveryAddresses](/entities/Common/DeliveryAddress.md) |  | The business key identifier of the delivery address that the warehouse information pertains to. |
+| `ParentId` | `Int64` | no | [DeliveryAddresses](DeliveryAddress.md) |  | The business key identifier of the delivery address that the warehouse information pertains to. |
 
 ## Enumerations
 
@@ -72,7 +72,7 @@ Represents a queryable delivery address warehouse information entry.
 
 **Common**
 
-- [DeliveryAddresses](/entities/Common/DeliveryAddress.md) — `Warehouses` (expand)
+- [DeliveryAddresses](DeliveryAddress.md) — `Warehouses` (expand)
 
 
 ## Example

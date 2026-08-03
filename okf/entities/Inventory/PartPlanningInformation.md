@@ -35,7 +35,7 @@ referenced_by:
 
 Represents part planning information for a warehouse.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PartPlanningInformation`
 - **Endpoint:** `GET /api/v1/Inventory/PartPlanningInformation`
 - **Required permission:** Show part
@@ -47,10 +47,10 @@ Represents part planning information for a warehouse.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the part planning information. |
-| `ContactId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the contact person of the part planning information. |
-| `WarehouseId` | `Int64` | no | [Warehouses](/entities/Common/Warehouse.md) |  | The business key identifier of the warehouse that the part planning information is defined for. |
-| `AbcCodeId` | `Int64?` | yes | [AbcCodes](/entities/Inventory/AbcCode.md) | since 2.31 | The business key identifier of the AbcCode used. |
-| `AcquisitionWarehouseId` | `Int64?` | yes | [Warehouses](/entities/Common/Warehouse.md) | since 2.31 | The business key identifier of the warehouse to refill from. |
+| `ContactId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the contact person of the part planning information. |
+| `WarehouseId` | `Int64` | no | [Warehouses](../Common/Warehouse.md) |  | The business key identifier of the warehouse that the part planning information is defined for. |
+| `AbcCodeId` | `Int64?` | yes | [AbcCodes](AbcCode.md) | since 2.31 | The business key identifier of the AbcCode used. |
+| `AcquisitionWarehouseId` | `Int64?` | yes | [Warehouses](../Common/Warehouse.md) | since 2.31 | The business key identifier of the warehouse to refill from. |
 | `Eoq` | `Decimal` | no |  | since 2.31 | The economic order quantity. |
 | `RoundingBase` | `Decimal` | no |  | since 2.31 | The rounding quantity for orders. |
 | `SafetyStock` | `Decimal` | no |  | since 2.31 | The safety stock for the part . |
@@ -68,9 +68,9 @@ Represents part planning information for a warehouse.
 | `SafetyTime` | `TimeSpan` | no |  | since 2.31 | Safety time. |
 | `DeductSalesForecast` | `Int32` | no |  | enum, since 2.31 | The type of forecast deduction used. |
 | `DeductionMethod` | `Int32` | no |  | enum, since 2.31 | The method of forecast deduction used. |
-| `ActiveSupplierPartLinkId` | `Int64?` | yes | [SupplierPartLinks](/entities/Purchase/SupplierPartLink.md) | since 2.55 | The business key identifier of the active supplier part link of the part planning information. |
-| `ActiveSupplierPartLink` | `SupplierPartLinks` | no | [SupplierPartLinks](/entities/Purchase/SupplierPartLink.md) | expandable | The active supplier part link of the part planning information. |
-| `DefaultTransferProfileId` | `Int64?` | yes | [TransferProfiles](/entities/Common/TransferProfile.md) | since 22.1 | The business key identifier of the default transfer profile. |
+| `ActiveSupplierPartLinkId` | `Int64?` | yes | [SupplierPartLinks](../Purchase/SupplierPartLink.md) | since 2.55 | The business key identifier of the active supplier part link of the part planning information. |
+| `ActiveSupplierPartLink` | `SupplierPartLinks` | no | [SupplierPartLinks](../Purchase/SupplierPartLink.md) | expandable | The active supplier part link of the part planning information. |
+| `DefaultTransferProfileId` | `Int64?` | yes | [TransferProfiles](../Common/TransferProfile.md) | since 22.1 | The business key identifier of the default transfer profile. |
 | `PlanningMethod` | `Int32` | no |  | enum, since 22.1 | The planning method of the part planning information. |
 
 ## Enumerations
@@ -116,7 +116,7 @@ Represents part planning information for a warehouse.
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `PartPlanningInformations` (expand)
+- [Parts](Part.md) — `PartPlanningInformations` (expand)
 
 
 ## Example

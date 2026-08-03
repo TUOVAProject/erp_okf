@@ -26,7 +26,7 @@ property_count: 4
 
 Represents an auto-complete configuration.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `AutoCompleteConfiguration`
 - **Endpoint:** `GET /api/v1/Common/AutoCompleteConfigurations`
 - **GUID:** `3EDCE59F-DC9E-4963-B0D2-72BDA03C9A99`

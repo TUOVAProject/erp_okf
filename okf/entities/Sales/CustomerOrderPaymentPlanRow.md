@@ -34,7 +34,7 @@ references_out:
 
 Represents a customer order payment plan row.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `CustomerOrderPaymentPlanRow`
 - **Endpoint:** `GET /api/v1/Sales/CustomerOrderPaymentPlanRows`
 - **Required permission:** Show customer orders
@@ -46,22 +46,22 @@ Represents a customer order payment plan row.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the customer order payment plan row. |
-| `CustomerOrderId` | `Int64` | no | [CustomerOrders](/entities/Sales/CustomerOrder.md) |  | The business key identifier of the customer order this row belongs to. |
+| `CustomerOrderId` | `Int64` | no | [CustomerOrders](CustomerOrder.md) |  | The business key identifier of the customer order this row belongs to. |
 | `InvoicingPeriod` | `DateTimeOffset?` | yes |  |  | The invoicing period of the row. |
-| `VatRateId` | `Int64?` | yes | [VatRates](/entities/Common/VatRate.md) |  | The business key identifier of the VAT rate of the row. |
+| `VatRateId` | `Int64?` | yes | [VatRates](../Common/VatRate.md) |  | The business key identifier of the VAT rate of the row. |
 | `Amount` | `Decimal` | no |  |  | The amount of the row. |
-| `AmountCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for the rows amount. |
+| `AmountCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency for the rows amount. |
 | `AmountInCompanyCurrency` | `Decimal` | no |  |  | The amount in company currency of the row. |
-| `AmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for the rows amount in company currency. |
+| `AmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency for the rows amount in company currency. |
 | `ReducedAmountInCompanyCurrency` | `Decimal?` | yes |  |  | The reduced amount in company currency of the row. |
-| `ReducedAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](/entities/Common/Currency.md) |  | The business key identifier of the currency for the rows reduced amount in company currency. |
+| `ReducedAmountInCompanyCurrencyCurrencyId` | `Int64?` | yes | [Currencies](../Common/Currency.md) |  | The business key identifier of the currency for the rows reduced amount in company currency. |
 | `IsReset` | `Boolean` | no |  |  | Specifies if the row is reset. |
-| `CodingEntryId` | `Int64?` | yes | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the coding entry for the row. |
+| `CodingEntryId` | `Int64?` | yes | [CodingEntries](../Accounting/CodingEntry.md) |  | The business key identifier of the coding entry for the row. |
 | `PartialInvoiceType` | `Int32` | no |  | enum | The partial invoice type of the row. |
-| `PartId` | `Int64?` | yes | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the rows part. |
+| `PartId` | `Int64?` | yes | [Parts](../Inventory/Part.md) |  | The business key identifier of the rows part. |
 | `OverrideDescription` | `String` | no |  | max length 400 | The override description of the row. |
 | `FractionOfTotal` | `Decimal` | no |  |  | The fraction of the total amount for the row. |
-| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](/entities/Common/PaymentTerm.md) |  | The business key identifier of the payment term for the row. |
+| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](../Common/PaymentTerm.md) |  | The business key identifier of the payment term for the row. |
 | `RowIndex` | `Int32?` | yes |  |  | The row index of the row. |
 
 ## Enumerations

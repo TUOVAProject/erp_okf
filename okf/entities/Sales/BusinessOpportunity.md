@@ -41,7 +41,7 @@ referenced_by:
 
 Represents a business opportunity.
 
-- **Module:** [Sales](/modules/Sales.md)
+- **Module:** [Sales](../../modules/Sales.md)
 - **API class:** `BusinessOpportunity`
 - **Endpoint:** `GET /api/v1/Sales/BusinessOpportunities`
 - **Required permission:** Show business opportunity
@@ -57,31 +57,31 @@ Represents a business opportunity.
 | `StartDate` | `DateTimeOffset` | no |  |  | The start date of the business opportunity. |
 | `PlannedEndDate` | `DateTimeOffset?` | yes |  |  | The planned end date of the business opportunity. |
 | `ActualEndDate` | `DateTimeOffset?` | yes |  |  | The actual end date of the business opportunity. |
-| `BusinessOpportunityGroupId` | `Int64?` | yes | [BusinessOpportunityGroups](/entities/Sales/BusinessOpportunityGroup.md) |  | The business key identifier of the business opportunity's group. |
-| `BusinessOpportunityGroup` | `BusinessOpportunityGroups` | no | [BusinessOpportunityGroups](/entities/Sales/BusinessOpportunityGroup.md) | expandable | The business opportunity's group. |
+| `BusinessOpportunityGroupId` | `Int64?` | yes | [BusinessOpportunityGroups](BusinessOpportunityGroup.md) |  | The business key identifier of the business opportunity's group. |
+| `BusinessOpportunityGroup` | `BusinessOpportunityGroups` | no | [BusinessOpportunityGroups](BusinessOpportunityGroup.md) | expandable | The business opportunity's group. |
 | `BusinessOpportunityCategory` | `String` | no |  | max length 20 | The category of the business opportunity. |
-| `SalesProcessTemplateId` | `Int64?` | yes | [SalesProcessTemplates](/entities/Sales/SalesProcessTemplate.md) |  | The business key identifier of the business opportunity's sales process template. |
-| `SalesProcessTemplate` | `SalesProcessTemplates` | no | [SalesProcessTemplates](/entities/Sales/SalesProcessTemplate.md) | expandable | The business opportunity's sales process template. |
-| `OurReferenceId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the business opportunity's our reference. |
-| `OurReference` | `Persons` | no | [Persons](/entities/Common/Person.md) | expandable | The business opportunity's our reference. |
+| `SalesProcessTemplateId` | `Int64?` | yes | [SalesProcessTemplates](SalesProcessTemplate.md) |  | The business key identifier of the business opportunity's sales process template. |
+| `SalesProcessTemplate` | `SalesProcessTemplates` | no | [SalesProcessTemplates](SalesProcessTemplate.md) | expandable | The business opportunity's sales process template. |
+| `OurReferenceId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the business opportunity's our reference. |
+| `OurReference` | `Persons` | no | [Persons](../Common/Person.md) | expandable | The business opportunity's our reference. |
 | `Description` | `String` | no |  | max length 400 | The description of the business opportunity. |
 | `Status` | `Int32` | no |  | enum | The status of the business opportunity. |
 | `Priority` | `Int32` | no |  |  | The priority of the business opportunity. |
-| `BusinessOpportunityTypeId` | `Int64?` | yes | [BusinessOpportunityTypes](/entities/Sales/BusinessOpportunityType.md) |  | The business key identifier of the business opportunity's type. |
-| `BusinessOpportunityType` | `BusinessOpportunityTypes` | no | [BusinessOpportunityTypes](/entities/Sales/BusinessOpportunityType.md) | expandable | The business opportunity's type. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the business opportunity's comment. |
-| `Comment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The business opportunity's comment. |
-| `ReasonLostCommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the business opportunity's comment on lost opportunity. |
-| `ReasonLostComment` | `Comments` | no | [Comments](/entities/Common/Comment.md) | expandable | The business opportunity's comment on lost opportunity. |
+| `BusinessOpportunityTypeId` | `Int64?` | yes | [BusinessOpportunityTypes](BusinessOpportunityType.md) |  | The business key identifier of the business opportunity's type. |
+| `BusinessOpportunityType` | `BusinessOpportunityTypes` | no | [BusinessOpportunityTypes](BusinessOpportunityType.md) | expandable | The business opportunity's type. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the business opportunity's comment. |
+| `Comment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The business opportunity's comment. |
+| `ReasonLostCommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the business opportunity's comment on lost opportunity. |
+| `ReasonLostComment` | `Comments` | no | [Comments](../Common/Comment.md) | expandable | The business opportunity's comment on lost opportunity. |
 | `TotalValue` | `Decimal?` | yes |  |  | The total value of the business opportunity. |
-| `SellerId` | `Int64?` | yes | [Persons](/entities/Common/Person.md) |  | The business key identifier of the business opportunity's seller. |
-| `Seller` | `Persons` | no | [Persons](/entities/Common/Person.md) | expandable | The business opportunity's seller. |
+| `SellerId` | `Int64?` | yes | [Persons](../Common/Person.md) |  | The business key identifier of the business opportunity's seller. |
+| `Seller` | `Persons` | no | [Persons](../Common/Person.md) | expandable | The business opportunity's seller. |
 | `Name` | `String` | no |  |  | The translated name of the business opportunity. |
 | `ReferenceName` | `String` | no |  | max length 80 | The reference name of the business opportunity. |
-| `ReasonCodeLostQuoteId` | `Int64?` | yes | [ReasonCodeLostQuotes](/entities/Sales/ReasonCodeLostQuote.md) |  | The business key identifier of the business opportunity's reason code for lost quote. |
-| `ReasonCodeLostQuote` | `ReasonCodeLostQuotes` | no | [ReasonCodeLostQuotes](/entities/Sales/ReasonCodeLostQuote.md) | expandable | The business opportunity's reason code for lost quote. |
-| `BusinessContactNoteHistories` | `BusinessContactNoteHistories[]` | no | [BusinessContactNoteHistories](/entities/Common/BusinessContactNoteHistory.md) | expandable, collection | The business contact note history entries for the business opportunity. |
-| `Customers` | `Customers[]` | no | [Customers](/entities/Sales/Customer.md) | expandable, collection | The customers on the business opportunity. |
+| `ReasonCodeLostQuoteId` | `Int64?` | yes | [ReasonCodeLostQuotes](ReasonCodeLostQuote.md) |  | The business key identifier of the business opportunity's reason code for lost quote. |
+| `ReasonCodeLostQuote` | `ReasonCodeLostQuotes` | no | [ReasonCodeLostQuotes](ReasonCodeLostQuote.md) | expandable | The business opportunity's reason code for lost quote. |
+| `BusinessContactNoteHistories` | `BusinessContactNoteHistories[]` | no | [BusinessContactNoteHistories](../Common/BusinessContactNoteHistory.md) | expandable, collection | The business contact note history entries for the business opportunity. |
+| `Customers` | `Customers[]` | no | [Customers](Customer.md) | expandable, collection | The customers on the business opportunity. |
 
 ## Enumerations
 
@@ -101,11 +101,11 @@ Represents a business opportunity.
 
 **Sales**
 
-- [BusinessOpportunityActivities](/entities/Sales/BusinessOpportunityActivity.md) — `OrderId` (FK)
-- [BusinessOpportunityReferences](/entities/Sales/BusinessOpportunityReference.md) — `ParentId` (FK)
-- [BusinessOpportunitySalesProcessSteps](/entities/Sales/BusinessOpportunitySalesProcessStep.md) — `ParentId` (FK)
-- [Quotes](/entities/Sales/Quote.md) — `BusinessOpportunity` (expand)
-- [Quotes](/entities/Sales/Quote.md) — `BusinessOpportunityId` (FK)
+- [BusinessOpportunityActivities](BusinessOpportunityActivity.md) — `OrderId` (FK)
+- [BusinessOpportunityReferences](BusinessOpportunityReference.md) — `ParentId` (FK)
+- [BusinessOpportunitySalesProcessSteps](BusinessOpportunitySalesProcessStep.md) — `ParentId` (FK)
+- [Quotes](Quote.md) — `BusinessOpportunity` (expand)
+- [Quotes](Quote.md) — `BusinessOpportunityId` (FK)
 
 
 ## Example

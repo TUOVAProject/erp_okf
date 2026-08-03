@@ -32,7 +32,7 @@ referenced_by:
 
 Represents a project cost type.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `ProjectCostType`
 - **Endpoint:** `GET /api/v1/Common/ProjectCostTypes`
 - **Required permission:** Show projects
@@ -62,14 +62,14 @@ Represents a project cost type.
 
 **Common**
 
-- [ProjectAggregates](/entities/Common/ProjectAggregate.md) — `CostTypeId` (FK)
-- [ProjectCostBudgets](/entities/Common/ProjectCostBudget.md) — `CostTypeId` (FK)
-- [ProjectCostForecasts](/entities/Common/ProjectCostForecast.md) — `CostTypeId` (FK)
+- [ProjectAggregates](ProjectAggregate.md) — `CostTypeId` (FK)
+- [ProjectCostBudgets](ProjectCostBudget.md) — `CostTypeId` (FK)
+- [ProjectCostForecasts](ProjectCostForecast.md) — `CostTypeId` (FK)
 
 **TimeRecording**
 
-- [AttendanceAdditions](/entities/TimeRecording/AttendanceAddition.md) — `CostType` (expand)
-- [AttendanceAdditions](/entities/TimeRecording/AttendanceAddition.md) — `CostTypeId` (FK)
+- [AttendanceAdditions](../TimeRecording/AttendanceAddition.md) — `CostType` (expand)
+- [AttendanceAdditions](../TimeRecording/AttendanceAddition.md) — `CostTypeId` (FK)
 
 
 ## Example

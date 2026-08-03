@@ -33,7 +33,7 @@ referenced_by:
 
 Represents a write off code.
 
-- **Module:** [Common](/modules/Common.md)
+- **Module:** [Common](../../modules/Common.md)
 - **API class:** `WriteOffCode`
 - **Endpoint:** `GET /api/v1/Common/WriteOffCodes`
 - **Required permission:** Show bank settings
@@ -47,18 +47,18 @@ Represents a write off code.
 | `Id` | `Int64` | no |  |  | The business key identifier of the write off code. |
 | `Code` | `String` | no |  | unique, max length 5 | The human readable identifier of the write off code. |
 | `Description` | `String` | no |  |  | The translated description of the write off code. |
-| `IncomingPaymentCodingEntryId` | `Int64` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the write off code's coding entry for incoming payments. |
-| `IncomingPaymentCodingEntry` | `CodingEntries` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) | expandable | The write off code's coding entry for incoming payments. |
-| `OutgoingPaymentCodingEntryId` | `Int64` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) |  | The business key identifier of the write off code's coding entry for outgoing payments. |
-| `OutgoingPaymentCodingEntry` | `CodingEntries` | no | [CodingEntries](/entities/Accounting/CodingEntry.md) | expandable | The write off code's coding entry for outgoing payments. |
+| `IncomingPaymentCodingEntryId` | `Int64` | no | [CodingEntries](../Accounting/CodingEntry.md) |  | The business key identifier of the write off code's coding entry for incoming payments. |
+| `IncomingPaymentCodingEntry` | `CodingEntries` | no | [CodingEntries](../Accounting/CodingEntry.md) | expandable | The write off code's coding entry for incoming payments. |
+| `OutgoingPaymentCodingEntryId` | `Int64` | no | [CodingEntries](../Accounting/CodingEntry.md) |  | The business key identifier of the write off code's coding entry for outgoing payments. |
+| `OutgoingPaymentCodingEntry` | `CodingEntries` | no | [CodingEntries](../Accounting/CodingEntry.md) | expandable | The write off code's coding entry for outgoing payments. |
 
 ## Referenced by
 
 **Accounting**
 
-- [IncomingPayments](/entities/Accounting/IncomingPayment.md) — `WriteOffCodeId` (FK)
-- [OutgoingPayments](/entities/Accounting/OutgoingPayment.md) — `WriteOffCodeId` (FK)
-- [SetOffDestination](/entities/Accounting/SetOffDestination.md) — `WriteOffCodeId` (FK)
+- [IncomingPayments](../Accounting/IncomingPayment.md) — `WriteOffCodeId` (FK)
+- [OutgoingPayments](../Accounting/OutgoingPayment.md) — `WriteOffCodeId` (FK)
+- [SetOffDestination](../Accounting/SetOffDestination.md) — `WriteOffCodeId` (FK)
 
 
 ## Example

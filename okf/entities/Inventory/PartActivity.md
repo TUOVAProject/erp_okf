@@ -34,7 +34,7 @@ referenced_by:
 
 Represents an part activity.
 
-- **Module:** [Inventory](/modules/Inventory.md)
+- **Module:** [Inventory](../../modules/Inventory.md)
 - **API class:** `PartActivity`
 - **Endpoint:** `GET /api/v1/Inventory/PartActivities`
 - **Required permission:** Show part
@@ -46,11 +46,11 @@ Represents an part activity.
 | Property | Type | Null | References | Constraints | Description |
 | --- | --- | --- | --- | --- | --- |
 | `Id` | `Int64` | no |  |  | The business key identifier of the part activity. |
-| `PartId` | `Int64` | no | [Parts](/entities/Inventory/Part.md) |  | The business key identifier of the part that the activity belongs to. |
-| `ActivityTypeId` | `Int64` | no | [PartActivityTypes](/entities/Inventory/PartActivityType.md) |  | The business key identifier of the part activity type. |
+| `PartId` | `Int64` | no | [Parts](Part.md) |  | The business key identifier of the part that the activity belongs to. |
+| `ActivityTypeId` | `Int64` | no | [PartActivityTypes](PartActivityType.md) |  | The business key identifier of the part activity type. |
 | `Description` | `String` | no |  |  | The description of the activity. |
-| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](/entities/Common/ApplicationUser.md) |  | The business key identifier of the user that is responsible for the activity. |
-| `CommentId` | `Int64?` | yes | [Comments](/entities/Common/Comment.md) |  | The business key identifier of the activity's comment. |
+| `ResponsibleUserId` | `Int64` | no | [ApplicationUsers](../Common/ApplicationUser.md) |  | The business key identifier of the user that is responsible for the activity. |
+| `CommentId` | `Int64?` | yes | [Comments](../Common/Comment.md) |  | The business key identifier of the activity's comment. |
 | `ReminderId` | `Int64` | no |  |  | The business key identifier of the reminder that is linked with the activity. |
 | `PlannedCompletionDate` | `DateTimeOffset` | no |  |  | The planned completion date of the activity. |
 | `Status` | `Int32` | no |  | enum | The status of the the activity. |
@@ -70,7 +70,7 @@ Represents an part activity.
 
 **Inventory**
 
-- [Parts](/entities/Inventory/Part.md) — `PartActivities` (expand)
+- [Parts](Part.md) — `PartActivities` (expand)
 
 
 ## Example
