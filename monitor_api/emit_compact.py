@@ -9,7 +9,9 @@ Unlike okf/, this is not an OKF bundle: no YAML frontmatter, no reserved
 index.md/log.md semantics. It exists purely to fit inside a small context
 window, so every byte spent on metadata here is a byte not spent on data.
 Dropped relative to okf/: JSON examples, full per-member enum tables (kept as
-one compact line per enum property).
+one compact line per enum property), and per-property constraint tokens
+(expandable, unique, mandatory, min/max length). Property descriptions are
+kept -- an agent needs to know what a column means, not just its name and type.
 """
 
 import shutil
@@ -50,16 +52,22 @@ def write(relative_path: str, body: str) -> None:
 
 
 def compact_property_rows(entity: dict, entities: dict) -> list[str]:
-    """Same reference resolution as emit_okf.property_rows, 4 columns only."""
+    """Same reference resolution and description as emit_okf.property_rows,
+    minus the constraints column."""
     rows = []
 
     for prop in entity["properties"]:
         references = ", ".join(
             entity_link(entities[ref["target"]]) for ref in prop["references"]
         )
+        description = md_cell(prop["summary"])
+
+        if prop["obsolete_note"]:
+            description = f"{description} _({md_cell(prop['obsolete_note'])})_".strip()
+
         rows.append(
             f"| `{md_cell(prop['name'])}` | `{md_cell(prop['type'])}` "
-            f"| {'yes' if prop['nullable'] else 'no'} | {references} |"
+            f"| {'yes' if prop['nullable'] else 'no'} | {references} | {description} |"
         )
 
     return rows
@@ -90,9 +98,9 @@ def compact_entity_section(entity: dict, entities: dict) -> str:
     """One entity as a level-3 section with a stable anchor.
 
     Trimmed analogue of emit_okf.entity_body: description, endpoint,
-    permission, introduced_in, a 4-column property table, compact enum lines,
+    permission, introduced_in, a 5-column property table, compact enum lines,
     and references_out/referenced_by as name lists. No JSON example, no
-    per-member enum table.
+    per-member enum table, no constraints column.
     """
     heading = f"### {entity['title']}"
 
@@ -114,7 +122,10 @@ def compact_entity_section(entity: dict, entities: dict) -> str:
         parts += facts + [""]
 
     if entity["properties"]:
-        parts += ["| Property | Type | Nullable | References |", "| --- | --- | --- | --- |"]
+        parts += [
+            "| Property | Type | Nullable | References | Description |",
+            "| --- | --- | --- | --- | --- |",
+        ]
         parts += compact_property_rows(entity, entities)
         parts.append("")
 

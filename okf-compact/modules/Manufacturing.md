@@ -13,17 +13,17 @@ Represents an alternative work center on an operation row.
 - **Required permission:** Show part
 - **Introduced in:** 26.5
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `OperationRowId` | `Int64` | no | [OperationRows](Manufacturing.md#Manufacturing.OperationRow) |
-| `WorkCenterId` | `Int64` | no | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) |
-| `UnitStaffingFactor` | `Decimal?` | yes |  |
-| `SetupStaffingFactor` | `Decimal?` | yes |  |
-| `QueueTime` | `TimeSpan?` | yes |  |
-| `SetupTime` | `TimeSpan?` | yes |  |
-| `UnitTime` | `TimeSpan?` | yes |  |
-| `CycleTime` | `TimeSpan?` | yes |  |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the alternative operation row. |
+| `OperationRowId` | `Int64` | no | [OperationRows](Manufacturing.md#Manufacturing.OperationRow) | The business key identifier of the operation row that owns this alternative. |
+| `WorkCenterId` | `Int64` | no | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) | The business key identifier of the alternative work center. |
+| `UnitStaffingFactor` | `Decimal?` | yes |  | The unit staffing factor of the alternative operation row. |
+| `SetupStaffingFactor` | `Decimal?` | yes |  | The setup staffing factor of the alternative operation row. |
+| `QueueTime` | `TimeSpan?` | yes |  | The queue time of the alternative operation row. |
+| `SetupTime` | `TimeSpan?` | yes |  | The setup time of the alternative operation row. |
+| `UnitTime` | `TimeSpan?` | yes |  | The unit time of the alternative operation row. |
+| `CycleTime` | `TimeSpan?` | yes |  | The cycle time of the alternative operation row. |
 
 **References out:** [OperationRows](Manufacturing.md#Manufacturing.OperationRow), [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter)
 **Referenced by:** [OperationRows](Manufacturing.md#Manufacturing.OperationRow)
@@ -37,13 +37,13 @@ Represents a drawing revision.
 - **Required permission:** Show part
 - **Introduced in:** 2.18
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `Number` | `String` | no |  |
-| `ParentId` | `Int64?` | yes | [Drawings](Manufacturing.md#Manufacturing.Drawing) |
-| `RevisionCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
-| `RevisionComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the revision. |
+| `Number` | `String` | no |  | The human readable number of the revision. |
+| `ParentId` | `Int64?` | yes | [Drawings](Manufacturing.md#Manufacturing.Drawing) | The business key identifier of the drawing that the revision belongs to. |
+| `RevisionCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) | The business key identifier of the revision comment. |
+| `RevisionComment` | `Comments` | no | [Comments](Common.md#Common.Comment) | The revision comment. |
 
 **References out:** [Comments](Common.md#Common.Comment), [Drawings](Manufacturing.md#Manufacturing.Drawing)
 **Referenced by:** [Drawings](Manufacturing.md#Manufacturing.Drawing)
@@ -57,13 +57,13 @@ Represents a drawing.
 - **Required permission:** Show part
 - **Introduced in:** 2.18
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `DrawingNumber` | `String` | no |  |
-| `PartId` | `Int64` | no | [Parts](Inventory.md#Inventory.Part) |
-| `Revisions` | `DrawingRevisions[]` | no | [DrawingRevisions](Manufacturing.md#Manufacturing.DrawingRevision) |
-| `ActiveDrawingRevisionId` | `Int64?` | yes | [DrawingRevisions](Manufacturing.md#Manufacturing.DrawingRevision) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the drawing. |
+| `DrawingNumber` | `String` | no |  | The human readable number of the drawing. |
+| `PartId` | `Int64` | no | [Parts](Inventory.md#Inventory.Part) | The business key identifier of the part that the drawing belongs to. |
+| `Revisions` | `DrawingRevisions[]` | no | [DrawingRevisions](Manufacturing.md#Manufacturing.DrawingRevision) | A collection of revisions that belong the the drawing. |
+| `ActiveDrawingRevisionId` | `Int64?` | yes | [DrawingRevisions](Manufacturing.md#Manufacturing.DrawingRevision) | The business key identifier of the active drawing revision. |
 
 **References out:** [DrawingRevisions](Manufacturing.md#Manufacturing.DrawingRevision), [Parts](Inventory.md#Inventory.Part)
 **Referenced by:** [DrawingRevisions](Manufacturing.md#Manufacturing.DrawingRevision), [Parts](Inventory.md#Inventory.Part)
@@ -77,29 +77,29 @@ Represents a maintenance reporting row.
 - **Required permission:** Show maintenance plan
 - **Introduced in:** 25.7
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `Code` | `String` | no |  |
-| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
-| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
-| `Instruction` | `Comments` | no | [Comments](Common.md#Common.Comment) |
-| `InstructionId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
-| `Description` | `String` | no |  |
-| `MaintenanceReportingSelectionRowId` | `Int64` | no | [MaintenanceReportingSelectionRows](Manufacturing.md#Manufacturing.MaintenanceReportingSelectionRow) |
-| `RowIndex` | `Int32?` | yes |  |
-| `Checkbox` | `Boolean` | no |  |
-| `DateTimeValue` | `DateTimeOffset?` | yes |  |
-| `Number` | `Decimal?` | yes |  |
-| `TextValue` | `String` | no |  |
-| `Type` | `Int32` | no |  |
-| `ReportingStatus` | `Int32?` | yes |  |
-| `MinValue` | `Decimal?` | yes |  |
-| `MaxValue` | `Decimal?` | yes |  |
-| `Value` | `Decimal?` | yes |  |
-| `MasterToolId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) |
-| `MasterToolProductRecordId` | `Int64?` | yes | [ProductRecords](Inventory.md#Inventory.ProductRecord) |
-| `UnitId` | `Int64?` | yes | [Units](Common.md#Common.Unit) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the entity. |
+| `Code` | `String` | no |  | The human readable identifier of the maintenance reporting row. |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) | The comment of the maintenance reporting row. |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) | The business key identifier of the maintenance reporting row's comment. |
+| `Instruction` | `Comments` | no | [Comments](Common.md#Common.Comment) | The instruction of the maintenance reporting row. |
+| `InstructionId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) | The business key identifier of the maintenance reporting row's instruction. |
+| `Description` | `String` | no |  | The translated description of the maintenance reporting row. |
+| `MaintenanceReportingSelectionRowId` | `Int64` | no | [MaintenanceReportingSelectionRows](Manufacturing.md#Manufacturing.MaintenanceReportingSelectionRow) | The business key identifier of the maintenance reporting selection row that the maintenance reporting row relates to. |
+| `RowIndex` | `Int32?` | yes |  | The row index of the maintenance reporting row. |
+| `Checkbox` | `Boolean` | no |  | The boolean value of the maintenance reporting row. |
+| `DateTimeValue` | `DateTimeOffset?` | yes |  | The timestamp of the maintenance reporting row. |
+| `Number` | `Decimal?` | yes |  | The numeric value of the maintenance reporting row. |
+| `TextValue` | `String` | no |  | The text value of the maintenance reporting row. |
+| `Type` | `Int32` | no |  | The type of the value stored in the maintenance reporting row. |
+| `ReportingStatus` | `Int32?` | yes |  | The status of the value stored in the maintenance reporting row. |
+| `MinValue` | `Decimal?` | yes |  | The minimum tolerance value of the maintenance reporting row. |
+| `MaxValue` | `Decimal?` | yes |  | The maximum tolerance value of the maintenance reporting row. |
+| `Value` | `Decimal?` | yes |  | The setpoint value of the maintenance reporting row. |
+| `MasterToolId` | `Int64?` | yes | [Parts](Inventory.md#Inventory.Part) | The business key identifier of the tool that the maintenance reporting row relates to. |
+| `MasterToolProductRecordId` | `Int64?` | yes | [ProductRecords](Inventory.md#Inventory.ProductRecord) | The business key identifier of the tool's product record that the maintenance reporting row relates to. |
+| `UnitId` | `Int64?` | yes | [Units](Common.md#Common.Unit) | The business key identifier of the unit of the maintenance reporting row's value. |
 
 - `Type` — Decimal=0, Text=1, CheckBox=2, Date=3
 - `ReportingStatus` — Ok=0, NotOk=1, OkWithAction=2
@@ -116,29 +116,29 @@ Represents a maintenance reporting.
 - **Required permission:** Show maintenance plan
 - **Introduced in:** 24.6
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `SerialNumber` | `String` | no |  |
-| `ManufacturingOrderId` | `Int64` | no | [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder) |
-| `ManufacturingOrder` | `ManufacturingOrders` | no | [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder) |
-| `ProductRecordId` | `Int64` | no |  |
-| `ProductRecord` | `ProductRecords` | no | [ProductRecords](Inventory.md#Inventory.ProductRecord) |
-| `MaintenanceRowId` | `Int64` | no |  |
-| `ShortComment` | `String` | no |  |
-| `CommentId` | `Int64` | no | [Comments](Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
-| `MaintenanceStatus` | `Int32?` | yes |  |
-| `ReportedById` | `Int64` | no | [Persons](Common.md#Common.Person) |
-| `ReportedBy` | `Persons` | no | [Persons](Common.md#Common.Person) |
-| `ReportingStatus` | `Int32` | no |  |
-| `ActualDate` | `DateTimeOffset?` | yes |  |
-| `Status` | `Int32` | no |  |
-| `NextOccurrence` | `DateTimeOffset?` | yes |  |
-| `ColorCode` | `Int32?` | yes |  |
-| `InstructionId` | `Int64` | no |  |
-| `Instruction` | `Comments` | no | [Comments](Common.md#Common.Comment) |
-| `MaintenanceReportingSelectionRows` | `MaintenanceReportingSelectionRows[]` | no | [MaintenanceReportingSelectionRows](Manufacturing.md#Manufacturing.MaintenanceReportingSelectionRow) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the maintenance reporting. |
+| `SerialNumber` | `String` | no |  | The serial number of the maintenance reporting. |
+| `ManufacturingOrderId` | `Int64` | no | [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder) | The business key identifier of the manufacturing order. |
+| `ManufacturingOrder` | `ManufacturingOrders` | no | [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder) | The maintenance reporting manufacturing order. |
+| `ProductRecordId` | `Int64` | no |  | The business key identifier of product record. |
+| `ProductRecord` | `ProductRecords` | no | [ProductRecords](Inventory.md#Inventory.ProductRecord) | The product record of the maintenance reporting. |
+| `MaintenanceRowId` | `Int64` | no |  | The business key identifier of the maintenance row. |
+| `ShortComment` | `String` | no |  | The short comment of the maintenance reporting. |
+| `CommentId` | `Int64` | no | [Comments](Common.md#Common.Comment) | The business key identifier of the comment. |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) | The comment of the maintenance reporting. |
+| `MaintenanceStatus` | `Int32?` | yes |  | The maintenance status of the maintenance reporting. |
+| `ReportedById` | `Int64` | no | [Persons](Common.md#Common.Person) | The business key identifier of person that reported on the maintenance reporting. |
+| `ReportedBy` | `Persons` | no | [Persons](Common.md#Common.Person) | The person that reported in the maintenance reporting. |
+| `ReportingStatus` | `Int32` | no |  | The reporting status of the maintenance reporting. |
+| `ActualDate` | `DateTimeOffset?` | yes |  | The actual date of the maintenance reporting. |
+| `Status` | `Int32` | no |  | The serial number status of the maintenance reporting. |
+| `NextOccurrence` | `DateTimeOffset?` | yes |  | The next occurrence of the maintenance reporting. |
+| `ColorCode` | `Int32?` | yes |  | The color code of the maintenance reporting. |
+| `InstructionId` | `Int64` | no |  | The business key identifier of the instruction. |
+| `Instruction` | `Comments` | no | [Comments](Common.md#Common.Comment) | The instruction of the maintenance reporting. |
+| `MaintenanceReportingSelectionRows` | `MaintenanceReportingSelectionRows[]` | no | [MaintenanceReportingSelectionRows](Manufacturing.md#Manufacturing.MaintenanceReportingSelectionRow) | The maintenance reporting selection rows. |
 
 - `MaintenanceStatus` — Ok=0, NotOk=1, OkWithAction=2
 - `ReportingStatus` — New=0, InProgress=1, Finished=2
@@ -156,16 +156,16 @@ Represents a maintenance reporting selection row.
 - **Required permission:** Show maintenance plan
 - **Introduced in:** 25.7
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `Code` | `String` | no |  |
-| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
-| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
-| `Description` | `String` | no |  |
-| `MaintenanceReportingId` | `Int64` | no | [MaintenanceReportings](Manufacturing.md#Manufacturing.MaintenanceReporting) |
-| `RowIndex` | `Int32?` | yes |  |
-| `MaintenanceReportingRows` | `MaintenanceReportingRows[]` | no | [MaintenanceReportingRows](Manufacturing.md#Manufacturing.MaintenanceReportingRow) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the entity. |
+| `Code` | `String` | no |  | The human readable identifier of the maintenance reporting selection row. |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) | The comment of the maintenance reporting selection row. |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) | The business key identifier of the maintenance reporting selection row's comment. |
+| `Description` | `String` | no |  | The translated description of the maintenance reporting selection row. |
+| `MaintenanceReportingId` | `Int64` | no | [MaintenanceReportings](Manufacturing.md#Manufacturing.MaintenanceReporting) | The business key identifier of the maintenance reporting that the maintenance reporting selection row relates to. |
+| `RowIndex` | `Int32?` | yes |  | The row index of the maintenance reporting selection row. |
+| `MaintenanceReportingRows` | `MaintenanceReportingRows[]` | no | [MaintenanceReportingRows](Manufacturing.md#Manufacturing.MaintenanceReportingRow) | The maintenance reporting rows. |
 
 **References out:** [Comments](Common.md#Common.Comment), [MaintenanceReportingRows](Manufacturing.md#Manufacturing.MaintenanceReportingRow), [MaintenanceReportings](Manufacturing.md#Manufacturing.MaintenanceReporting)
 **Referenced by:** [MaintenanceReportingRows](Manufacturing.md#Manufacturing.MaintenanceReportingRow), [MaintenanceReportings](Manufacturing.md#Manufacturing.MaintenanceReporting)
@@ -179,11 +179,11 @@ Represents a manual operation status.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 25.2
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `Code` | `String` | no |  |
-| `Description` | `String` | no |  |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the manual operation status. |
+| `Code` | `String` | no |  | The human readable identifier of the manual operation status. |
+| `Description` | `String` | no |  | The translated description of the manual operation status. |
 
 **Referenced by:** [ManufacturingOrderOperations](Manufacturing.md#Manufacturing.ManufacturingOrderOperation)
 
@@ -196,34 +196,34 @@ Represents a manufacturing order material.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 2.18
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `ReportNumber` | `Int64` | no |  |
-| `RowNumber` | `Int32` | no |  |
-| `PartId` | `Int64` | no | [Parts](Inventory.md#Inventory.Part) |
-| `Part` | `Parts` | no | [Parts](Inventory.md#Inventory.Part) |
-| `ToOperationNumber` | `Int32` | no |  |
-| `ReportedQuantity` | `Decimal` | no |  |
-| `RestQuantity` | `Decimal` | no |  |
-| `PlannedQuantity` | `Decimal` | no |  |
-| `ManufacturingOrderId` | `Int64` | no | [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder) |
-| `ManufacturingOrderNodeId` | `Int64` | no | [ManufacturingOrderNodes](Manufacturing.md#Manufacturing.ManufacturingOrderNode) |
-| `PositionNumber` | `String` | no |  |
-| `InstructionCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
-| `InstructionComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
-| `QuantityPerUnit` | `Decimal` | no |  |
-| `CycleTime` | `TimeSpan?` | yes |  |
-| `EditedStatus` | `Int32` | no |  |
-| `ExtraQuantityProcent` | `Decimal` | no |  |
-| `LinkedPurchaseOrderRowId` | `Int64?` | yes | [PurchaseOrderRows](Purchase.md#Purchase.PurchaseOrderRow) |
-| `LockedToBatchNo` | `String` | no |  |
-| `QuantityPerCycle` | `Decimal?` | yes |  |
-| `RejectedQuantity` | `Decimal` | no |  |
-| `ReportedSetupQuantity` | `Decimal` | no |  |
-| `RestSetupQuantity` | `Decimal` | no |  |
-| `SetupQuantity` | `Decimal` | no |  |
-| `MaterialRowOriginId` | `Int64?` | yes |  |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the manufacturing order material. |
+| `ReportNumber` | `Int64` | no |  | The report number of the manufacturing order material. |
+| `RowNumber` | `Int32` | no |  | The row number of the manufacturing order material. |
+| `PartId` | `Int64` | no | [Parts](Inventory.md#Inventory.Part) | The business key identifier of the manufacturing order material part. |
+| `Part` | `Parts` | no | [Parts](Inventory.md#Inventory.Part) | The manufacturing order material part. |
+| `ToOperationNumber` | `Int32` | no |  | The manufacturing order operation number that the manufacturing order material belongs to. |
+| `ReportedQuantity` | `Decimal` | no |  | The reported quantity of the manufacturing order material. |
+| `RestQuantity` | `Decimal` | no |  | The remaining quantity of the manufacturing order material. |
+| `PlannedQuantity` | `Decimal` | no |  | The planned quantity of the manufacturing order material. |
+| `ManufacturingOrderId` | `Int64` | no | [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder) | The business key identifier of the manufacturing order that the manufacturing order material belongs to. |
+| `ManufacturingOrderNodeId` | `Int64` | no | [ManufacturingOrderNodes](Manufacturing.md#Manufacturing.ManufacturingOrderNode) | The business key identifier of the manufacturing order node that the manufacturing order material belongs to. |
+| `PositionNumber` | `String` | no |  | The position number of the material. |
+| `InstructionCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) | The business key identifier of the manufacturing order material's instruction comment. |
+| `InstructionComment` | `Comments` | no | [Comments](Common.md#Common.Comment) | The manufacturing order material's instruction comment. |
+| `QuantityPerUnit` | `Decimal` | no |  | Quantity per unit of the manufacturing order material. |
+| `CycleTime` | `TimeSpan?` | yes |  | Cycle time of the manufacturing order material. |
+| `EditedStatus` | `Int32` | no |  | Edited status of the manufacturing order material. |
+| `ExtraQuantityProcent` | `Decimal` | no |  | Extra quantity procent of the manufacturing order material. |
+| `LinkedPurchaseOrderRowId` | `Int64?` | yes | [PurchaseOrderRows](Purchase.md#Purchase.PurchaseOrderRow) | The business key identifier of the purchase order row that the manufacturing order material belongs to. |
+| `LockedToBatchNo` | `String` | no |  | Locked To batch number of the manufacturing order material. |
+| `QuantityPerCycle` | `Decimal?` | yes |  | Quantity per cycle of the manufacturing order material. |
+| `RejectedQuantity` | `Decimal` | no |  | Rejected quantity of the manufacturing order material. |
+| `ReportedSetupQuantity` | `Decimal` | no |  | Reported setup quantity of the manufacturing order material. |
+| `RestSetupQuantity` | `Decimal` | no |  | Rest setup quantity of the manufacturing order material. |
+| `SetupQuantity` | `Decimal` | no |  | Setup quantity of the manufacturing order material. |
+| `MaterialRowOriginId` | `Int64?` | yes |  | Material row origin id of the manufacturing order material. |
 
 - `EditedStatus` (bitmask) — NotEdited=0, Edited=1, Synchronized=2
 
@@ -239,13 +239,13 @@ Represents a drawing revision for manufacturing order node.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 24.2
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `Number` | `String` | no |  |
-| `ParentId` | `Int64?` | yes | [ManufacturingOrderNodeDrawings](Manufacturing.md#Manufacturing.ManufacturingOrderNodeDrawing) |
-| `RevisionCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
-| `RevisionComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the revision. |
+| `Number` | `String` | no |  | The human readable number of the revision. |
+| `ParentId` | `Int64?` | yes | [ManufacturingOrderNodeDrawings](Manufacturing.md#Manufacturing.ManufacturingOrderNodeDrawing) | The business key identifier of the drawing that the revision belongs to. |
+| `RevisionCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) | The business key identifier of the revision comment. |
+| `RevisionComment` | `Comments` | no | [Comments](Common.md#Common.Comment) | The revision comment. |
 
 **References out:** [Comments](Common.md#Common.Comment), [ManufacturingOrderNodeDrawings](Manufacturing.md#Manufacturing.ManufacturingOrderNodeDrawing)
 **Referenced by:** [ManufacturingOrderNodeDrawings](Manufacturing.md#Manufacturing.ManufacturingOrderNodeDrawing)
@@ -259,13 +259,13 @@ Represents a drawing for manufacturing order node.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 24.2
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `DrawingNumber` | `String` | no |  |
-| `ManufacturingOrderNodeId` | `Int64` | no | [ManufacturingOrderNodes](Manufacturing.md#Manufacturing.ManufacturingOrderNode) |
-| `Revisions` | `ManufacturingOrderNodeDrawingRevisions[]` | no | [ManufacturingOrderNodeDrawingRevisions](Manufacturing.md#Manufacturing.ManufacturingOrderNodeDrawingRevision) |
-| `ActiveDrawingRevisionId` | `Int64?` | yes | [ManufacturingOrderNodeDrawingRevisions](Manufacturing.md#Manufacturing.ManufacturingOrderNodeDrawingRevision) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the drawing. |
+| `DrawingNumber` | `String` | no |  | The human readable number of the drawing. |
+| `ManufacturingOrderNodeId` | `Int64` | no | [ManufacturingOrderNodes](Manufacturing.md#Manufacturing.ManufacturingOrderNode) | The business key identifier of the manufacturing order node that the drawing belongs to. |
+| `Revisions` | `ManufacturingOrderNodeDrawingRevisions[]` | no | [ManufacturingOrderNodeDrawingRevisions](Manufacturing.md#Manufacturing.ManufacturingOrderNodeDrawingRevision) | A collection of revisions that belong the the drawing. |
+| `ActiveDrawingRevisionId` | `Int64?` | yes | [ManufacturingOrderNodeDrawingRevisions](Manufacturing.md#Manufacturing.ManufacturingOrderNodeDrawingRevision) | The business key identifier of the active drawing revision. |
 
 **References out:** [ManufacturingOrderNodeDrawingRevisions](Manufacturing.md#Manufacturing.ManufacturingOrderNodeDrawingRevision), [ManufacturingOrderNodes](Manufacturing.md#Manufacturing.ManufacturingOrderNode)
 **Referenced by:** [ManufacturingOrderNodeDrawingRevisions](Manufacturing.md#Manufacturing.ManufacturingOrderNodeDrawingRevision), [ManufacturingOrderNodes](Manufacturing.md#Manufacturing.ManufacturingOrderNode)
@@ -279,26 +279,26 @@ Represents a manufacturing order node.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 2.30
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `IsMainNode` | `Boolean` | no |  |
-| `IsRootNode` | `Boolean` | no |  |
-| `Level` | `Int32` | no |  |
-| `Number` | `Int32` | no |  |
-| `PartId` | `Int64` | no | [Parts](Inventory.md#Inventory.Part) |
-| `ReportedQuantity` | `Decimal` | no |  |
-| `PlannedQuantity` | `Decimal` | no |  |
-| `RestQuantity` | `Decimal` | no |  |
-| `StartDate` | `DateTimeOffset` | no |  |
-| `EndDate` | `DateTimeOffset` | no |  |
-| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) |
-| `Status` | `Int32` | no |  |
-| `ManufacturingOrderNodeId` | `Int64?` | yes | [ManufacturingOrderNodes](Manufacturing.md#Manufacturing.ManufacturingOrderNode) |
-| `Drawings` | `ManufacturingOrderNodeDrawings[]` | no | [ManufacturingOrderNodeDrawings](Manufacturing.md#Manufacturing.ManufacturingOrderNodeDrawing) |
-| `RevisionId` | `Int64?` | yes | [Revisions](Common.md#Common.Revision) |
-| `Revision` | `Revisions` | no | [Revisions](Common.md#Common.Revision) |
-| `SerialNumberProductRecords` | `ProductRecords[]` | no | [ProductRecords](Inventory.md#Inventory.ProductRecord) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the manufacturing order node. |
+| `IsMainNode` | `Boolean` | no |  | Specifies if the node is the main node on manufacturing order. Only one of the root nodes on order can be the main node. |
+| `IsRootNode` | `Boolean` | no |  | Specifies if the node is a root node on manufacturing order. It can be several root nodes. For example when splitting from max quantity or when coordinated parts exists. Only one of the root nodes on order can be the main node. |
+| `Level` | `Int32` | no |  | Level in the node hierarchy |
+| `Number` | `Int32` | no |  | Node number, a sequence number in exploding sort order. |
+| `PartId` | `Int64` | no | [Parts](Inventory.md#Inventory.Part) | The business key identifier of the part that the manufacturing order node is to produce. |
+| `ReportedQuantity` | `Decimal` | no |  | The reported quantity. |
+| `PlannedQuantity` | `Decimal` | no |  | The planned quantity. |
+| `RestQuantity` | `Decimal` | no |  | The rest quantity. |
+| `StartDate` | `DateTimeOffset` | no |  | The start date of the manufacturing order node. |
+| `EndDate` | `DateTimeOffset` | no |  | The finish date of the manufacturing order node. |
+| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) | The business key identifier of the warehouse that the node belongs to. |
+| `Status` | `Int32` | no |  | The status of the manufacturing order node. |
+| `ManufacturingOrderNodeId` | `Int64?` | yes | [ManufacturingOrderNodes](Manufacturing.md#Manufacturing.ManufacturingOrderNode) | The business key identifier of the manufacturing order node that the manufacturing order node belongs to. If id is null, it's a root node. |
+| `Drawings` | `ManufacturingOrderNodeDrawings[]` | no | [ManufacturingOrderNodeDrawings](Manufacturing.md#Manufacturing.ManufacturingOrderNodeDrawing) | A collection of drawings that belong to the manufacturing order node. |
+| `RevisionId` | `Int64?` | yes | [Revisions](Common.md#Common.Revision) | The business key identifier of the revision that the manufacturing order node has. |
+| `Revision` | `Revisions` | no | [Revisions](Common.md#Common.Revision) | The revision that the manufacturing order node has. |
+| `SerialNumberProductRecords` | `ProductRecords[]` | no | [ProductRecords](Inventory.md#Inventory.ProductRecord) | A collection of product records with serial number traceability that belong to the manufacturing order node. |
 
 - `Status` — NotInitialized=0, Registrered=1, Printed=2, Started=3, Finished=4, PostCalculated=5, Delivered=6, Historical=9
 
@@ -314,16 +314,16 @@ Represents a measuring plan for a manufacturing order operation.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 22.5
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `ManufacturingOrderOperationId` | `Int64` | no | [ManufacturingOrderOperations](Manufacturing.md#Manufacturing.ManufacturingOrderOperation) |
-| `MeasuringTemplateId` | `Int64` | no | [MeasuringTemplates](Common.md#Common.MeasuringTemplate) |
-| `OverridenFormTemplateId` | `Int64` | no | [FormTemplates](Common.md#Common.FormTemplate) |
-| `OverridenFrequencyText` | `String` | no |  |
-| `OverridenIntervalAmount` | `Int32?` | yes |  |
-| `OverridenInterval` | `Int32?` | yes |  |
-| `WorkCenterId` | `Int64?` | yes | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the entity. |
+| `ManufacturingOrderOperationId` | `Int64` | no | [ManufacturingOrderOperations](Manufacturing.md#Manufacturing.ManufacturingOrderOperation) | The business key identifier of the manufacturing order operation that the row relates to. |
+| `MeasuringTemplateId` | `Int64` | no | [MeasuringTemplates](Common.md#Common.MeasuringTemplate) | The business key identifier of the measuring template that the row relates to. |
+| `OverridenFormTemplateId` | `Int64` | no | [FormTemplates](Common.md#Common.FormTemplate) | The business key identifier of the form template specified for this row. |
+| `OverridenFrequencyText` | `String` | no |  | The frequency text specified for this row. |
+| `OverridenIntervalAmount` | `Int32?` | yes |  | The quantity value specified for this row. |
+| `OverridenInterval` | `Int32?` | yes |  | The interval value specified for this row. |
+| `WorkCenterId` | `Int64?` | yes | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) | The business key identifier of the work center that the row relates to. |
 
 **References out:** [FormTemplates](Common.md#Common.FormTemplate), [ManufacturingOrderOperations](Manufacturing.md#Manufacturing.ManufacturingOrderOperation), [MeasuringTemplates](Common.md#Common.MeasuringTemplate), [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter)
 **Referenced by:** [ManufacturingOrderOperations](Manufacturing.md#Manufacturing.ManufacturingOrderOperation)
@@ -337,55 +337,55 @@ Represents a manufacturing order operation reporting.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 24.9
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `OperationId` | `Int64` | no | [ManufacturingOrderOperations](Manufacturing.md#Manufacturing.ManufacturingOrderOperation) |
-| `Quantity` | `Decimal` | no |  |
-| `SetupTime` | `TimeSpan?` | yes |  |
-| `UnitTime` | `TimeSpan?` | yes |  |
-| `WorkCenterId` | `Int64` | no | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) |
-| `EmployeeId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
-| `ReportingEmployeeId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
-| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) |
-| `ActualReportedDate` | `DateTimeOffset` | no |  |
-| `PreviousRestQuantity` | `Decimal` | no |  |
-| `RestQuantity` | `Decimal` | no |  |
-| `OverReceiveQuantity` | `Decimal` | no |  |
-| `SetupCost` | `Decimal?` | yes |  |
-| `SetupCostCurrencyId` | `Int64?` | yes |  |
-| `SetupCostFactor1` | `Decimal` | no |  |
-| `SetupCostFactor2` | `Decimal` | no |  |
-| `SetupCostFactor3` | `Decimal` | no |  |
-| `SetupCostInForeignCurrency` | `Decimal?` | yes |  |
-| `SetupCostInForeignCurrencyCurrencyId` | `Int64?` | yes |  |
-| `UnitCost` | `Decimal?` | yes |  |
-| `UnitCostCurrencyId` | `Int64?` | yes |  |
-| `UnitCostFactor1` | `Decimal` | no |  |
-| `UnitCostFactor2` | `Decimal` | no |  |
-| `UnitCostFactor3` | `Decimal` | no |  |
-| `UnitCostInForeignCurrency` | `Decimal?` | yes |  |
-| `UnitCostInForeignCurrencyCurrencyId` | `Int64?` | yes |  |
-| `IsSubcontractor` | `Boolean` | no |  |
-| `Type` | `Int32` | no |  |
-| `SubcontractorRequestedDeliveryDate` | `DateTimeOffset?` | yes |  |
-| `SubcontractorActualDeliveryDate` | `DateTimeOffset?` | yes |  |
-| `ReportRestQuantitiesOnSubsequentOperations` | `Boolean` | no |  |
-| `IsExportedToManagementAccounting` | `Boolean` | no |  |
-| `WipLocation` | `String` | no |  |
-| `PreviousWipLocation` | `String` | no |  |
-| `OfWichTime` | `TimeSpan?` | yes |  |
-| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
-| `ReasonCodeTimeConsumptionId` | `Int64?` | yes | [ReasonCodeTimeConsumptions](Manufacturing.md#Manufacturing.ReasonCodeTimeConsumption) |
-| `ReasonCodeTimeConsumption` | `ReasonCodeTimeConsumptions` | no | [ReasonCodeTimeConsumptions](Manufacturing.md#Manufacturing.ReasonCodeTimeConsumption) |
-| `AutomaticMaterialReporting` | `Boolean` | no |  |
-| `PurchaseOrderDeliveryRowId` | `Int64?` | yes | [PurchaseOrderDeliveryRows](Purchase.md#Purchase.PurchaseOrderDeliveryRow) |
-| `PreviousNodeStatus` | `Int32` | no |  |
-| `OriginalApprovedQuantityFromDeliveryRow` | `Decimal?` | yes |  |
-| `ReportingId` | `Int64?` | yes |  |
-| `ReportingTimestamp` | `DateTimeOffset` | no |  |
-| `RowNumber` | `Int32` | no |  |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the manufacturing order operation reporting. |
+| `OperationId` | `Int64` | no | [ManufacturingOrderOperations](Manufacturing.md#Manufacturing.ManufacturingOrderOperation) | The business key identifier of the operation that the manufacturing order operation reporting applies. |
+| `Quantity` | `Decimal` | no |  | The quantity of the manufacturing order operation reporting. |
+| `SetupTime` | `TimeSpan?` | yes |  | The setup time of the manufacturing order operation reporting. |
+| `UnitTime` | `TimeSpan?` | yes |  | The unit time of the manufacturing order operation reporting. |
+| `WorkCenterId` | `Int64` | no | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) | The business key identifier of the work center that the manufacturing order operation reporting applies. |
+| `EmployeeId` | `Int64?` | yes | [Persons](Common.md#Common.Person) | The business key identifier of the employee that make the manufacturing order operation reporting. |
+| `ReportingEmployeeId` | `Int64?` | yes | [Persons](Common.md#Common.Person) | The business key identifier of the employee to report as. |
+| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) | The business key identifier of the warehouse the manufacturing order operation reporting applies to. |
+| `ActualReportedDate` | `DateTimeOffset` | no |  | The actual reported date of the manufacturing order operation reporting. |
+| `PreviousRestQuantity` | `Decimal` | no |  | The previous rest quantity of the manufacturing order operation reporting. |
+| `RestQuantity` | `Decimal` | no |  | The rest quantity of the manufacturing order operation reporting. |
+| `OverReceiveQuantity` | `Decimal` | no |  | The over receive quantity of the manufacturing order operation reporting. |
+| `SetupCost` | `Decimal?` | yes |  | The setup cost of the manufacturing order operation reporting. |
+| `SetupCostCurrencyId` | `Int64?` | yes |  | The business key identifier of the currency that the setup cost of the manufacturing order operation reporting applies to. |
+| `SetupCostFactor1` | `Decimal` | no |  | The setup cost factor 1 of the manufacturing order operation reporting. |
+| `SetupCostFactor2` | `Decimal` | no |  | The setup cost factor 2 of the manufacturing order operation reporting. |
+| `SetupCostFactor3` | `Decimal` | no |  | The setup cost factor 3 of the manufacturing order operation reporting. |
+| `SetupCostInForeignCurrency` | `Decimal?` | yes |  | The setup cost in foreign currency of the manufacturing order operation reporting. |
+| `SetupCostInForeignCurrencyCurrencyId` | `Int64?` | yes |  | The business key identifier of the foreign currency that the setup cost of the manufacturing order operation reporting applies to. |
+| `UnitCost` | `Decimal?` | yes |  | The unit cost of the manufacturing order operation reporting. |
+| `UnitCostCurrencyId` | `Int64?` | yes |  | The business key identifier of the currency that the unit cost of the manufacturing order operation reporting applies to. |
+| `UnitCostFactor1` | `Decimal` | no |  | The unit cost factor 1 of the manufacturing order operation reporting. |
+| `UnitCostFactor2` | `Decimal` | no |  | The unit cost factor 2 of the manufacturing order operation reporting. |
+| `UnitCostFactor3` | `Decimal` | no |  | The unit cost factor 3 of the manufacturing order operation reporting. |
+| `UnitCostInForeignCurrency` | `Decimal?` | yes |  | The unit cost in foreign currency of the manufacturing order operation reporting. |
+| `UnitCostInForeignCurrencyCurrencyId` | `Int64?` | yes |  | The business key identifier of the foreign currency that the unit cost of the manufacturing order operation reporting applies to. |
+| `IsSubcontractor` | `Boolean` | no |  | Specifies if the operation is subcontracted. |
+| `Type` | `Int32` | no |  | The type that the manufacturing order operation reporting is. |
+| `SubcontractorRequestedDeliveryDate` | `DateTimeOffset?` | yes |  | The date requested by the subcontractor for delivering the manufacturing order operation reporting. |
+| `SubcontractorActualDeliveryDate` | `DateTimeOffset?` | yes |  | The actual delivery date provided by the subcontractor for the manufacturing order operation reporting. |
+| `ReportRestQuantitiesOnSubsequentOperations` | `Boolean` | no |  | Indicates whether to report remaining quantities on subsequent operations for the manufacturing order operation reporting. |
+| `IsExportedToManagementAccounting` | `Boolean` | no |  | Indicates whether the data has been exported to management accounting for the manufacturing order operation reporting. |
+| `WipLocation` | `String` | no |  | The work in progress location for the manufacturing order operation reporting. |
+| `PreviousWipLocation` | `String` | no |  | The previous work in progress location for the manufacturing order operation reporting. |
+| `OfWichTime` | `TimeSpan?` | yes |  | Represents the duration related to a specific event or process. |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) | The business key identifier of the manufacturing order operation reporting comment. |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) | Additional comments or remarks related to the manufacturing order operation reporting. |
+| `ReasonCodeTimeConsumptionId` | `Int64?` | yes | [ReasonCodeTimeConsumptions](Manufacturing.md#Manufacturing.ReasonCodeTimeConsumption) | The business key identifier of the reason code associated with time consumption for the manufacturing order operation reporting applies to. |
+| `ReasonCodeTimeConsumption` | `ReasonCodeTimeConsumptions` | no | [ReasonCodeTimeConsumptions](Manufacturing.md#Manufacturing.ReasonCodeTimeConsumption) | The reason code associated with time consumption for the manufacturing order operation reporting applies to. |
+| `AutomaticMaterialReporting` | `Boolean` | no |  | Indicates whether material reporting is performed automatically for the manufacturing order operation reporting. |
+| `PurchaseOrderDeliveryRowId` | `Int64?` | yes | [PurchaseOrderDeliveryRows](Purchase.md#Purchase.PurchaseOrderDeliveryRow) | The business key identifier of the delivery row associated with a purchase order for the manufacturing order operation reporting applies to. |
+| `PreviousNodeStatus` | `Int32` | no |  | The previous status of the manufacturing order node for the manufacturing order operation reporting applies to. |
+| `OriginalApprovedQuantityFromDeliveryRow` | `Decimal?` | yes |  | The originally approved quantity from the delivery row for the manufacturing order operation reporting applies to. |
+| `ReportingId` | `Int64?` | yes |  | The business key identifier of the manufacturing order operation that the reporting applies to. |
+| `ReportingTimestamp` | `DateTimeOffset` | no |  | The timestamp where the manufacturing order operation reporting occurred. |
+| `RowNumber` | `Int32` | no |  | The row number of the manufacturing order operation reporting. |
 
 - `Type` — Regular=0, SendToSubcontractor=1, ReceiveFromSubcontractor=2, CancelRest=3, MaterialOnly=4, SubcontractorInvoicePrice=5, RecordingTerminal=6, AdjustRecording=7, UndoRegular=8, UndoRecordingTerminal=9, UndoAdjustRecording=10, SubcontractorPosteriorReport=11, SubcontractorCostsManualReport=12, PickWorkCenter=13
 - `PreviousNodeStatus` — NotInitialized=0, Registrered=1, Printed=2, Started=3, Finished=4, PostCalculated=5, Delivered=6, Historical=9
@@ -402,50 +402,50 @@ Represents a manufacturing order operation.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 2.18
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `Priority` | `Int32?` | yes |  |
-| `WorkCenterId` | `Int64` | no | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) |
-| `PartId` | `Int64` | no | [Parts](Inventory.md#Inventory.Part) |
-| `Part` | `Parts` | no | [Parts](Inventory.md#Inventory.Part) |
-| `PlannedQuantity` | `Decimal` | no |  |
-| `ReportedQuantity` | `Decimal` | no |  |
-| `RestQuantity` | `Decimal` | no |  |
-| `ReportedSetupTime` | `TimeSpan` | no |  |
-| `ReportedUnitTime` | `TimeSpan` | no |  |
-| `RejectedQuantity` | `Decimal` | no |  |
-| `WipLocation` | `String` | no |  |
-| `ReportNumber` | `Int64` | no |  |
-| `InstructionCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
-| `InstructionComment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
-| `ManufacturingOrderId` | `Int64` | no | [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder) |
-| `ManufacturingOrderNodeId` | `Int64` | no | [ManufacturingOrderNodes](Manufacturing.md#Manufacturing.ManufacturingOrderNode) |
-| `OperationNumber` | `Int32` | no |  |
-| `PlannedSetupTime` | `TimeSpan` | no |  |
-| `PlannedUnitTime` | `TimeSpan` | no |  |
-| `PlannedStartDate` | `DateTimeOffset` | no |  |
-| `PlannedFinishDate` | `DateTimeOffset` | no |  |
-| `ActualStartDate` | `DateTimeOffset?` | yes |  |
-| `ActualFinishDate` | `DateTimeOffset?` | yes |  |
-| `OperationRowId` | `Int64?` | yes | [OperationRows](Manufacturing.md#Manufacturing.OperationRow) |
-| `OperationRow` | `OperationRows` | no | [OperationRows](Manufacturing.md#Manufacturing.OperationRow) |
-| `Status` | `Int32` | no |  |
-| `WorkshopOperationStatus` | `Int32` | no |  |
-| `BundleId` | `Int64?` | yes |  |
-| `Description` | `String` | no |  |
-| `ControlDataRows` | `ManufacturingOrderOperationControlDataRows[]` | no | [ManufacturingOrderOperationControlDataRows](Manufacturing.md#Manufacturing.ManufacturingOrderOperationControlDataRow) |
-| `OrderQuantityId` | `Int64?` | yes | [OrderQuantityManufacturingOrderOperations](Manufacturing.md#Manufacturing.OrderQuantityManufacturingOrderOperation) |
-| `OrderQuantity` | `OrderQuantityManufacturingOrderOperations` | no | [OrderQuantityManufacturingOrderOperations](Manufacturing.md#Manufacturing.OrderQuantityManufacturingOrderOperation) |
-| `ClearedStatus` | `Boolean` | no |  |
-| `OnPriorityPlan` | `Boolean` | no |  |
-| `ManualOperationStatusId` | `Int64?` | yes | [ManualOperationStatuses](Manufacturing.md#Manufacturing.ManualOperationStatus) |
-| `ManualOperationStatus` | `ManualOperationStatuses` | no | [ManualOperationStatuses](Manufacturing.md#Manufacturing.ManualOperationStatus) |
-| `Materials` | `ManufacturingOrderMaterials[]` | no | [ManufacturingOrderMaterials](Manufacturing.md#Manufacturing.ManufacturingOrderMaterial) |
-| `FixedLeadTime` | `TimeSpan?` | yes |  |
-| `UnitStaffingFactor` | `Decimal?` | yes |  |
-| `SetupStaffingFactor` | `Decimal?` | yes |  |
-| `IsPlannedTimeCalculated` | `Boolean` | no |  |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the manufacturing order operation. |
+| `Priority` | `Int32?` | yes |  | The priority of the manufacturing order operation. Can be null. |
+| `WorkCenterId` | `Int64` | no | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) | The business key identifier of the manufacturing order operation's work center. |
+| `PartId` | `Int64` | no | [Parts](Inventory.md#Inventory.Part) | The business key identifier of the manufacturing order operation's part. |
+| `Part` | `Parts` | no | [Parts](Inventory.md#Inventory.Part) | The manufacturing order operation's part. |
+| `PlannedQuantity` | `Decimal` | no |  | The planned quantity of the manufacturing order operation. |
+| `ReportedQuantity` | `Decimal` | no |  | The reported quantity of the manufacturing order operation. |
+| `RestQuantity` | `Decimal` | no |  | The remaining quantity of the manufacturing order operation. |
+| `ReportedSetupTime` | `TimeSpan` | no |  | The reported setup time of the manufacturing order operation. |
+| `ReportedUnitTime` | `TimeSpan` | no |  | The reported unit time of the manufacturing order operation. |
+| `RejectedQuantity` | `Decimal` | no |  | The rejected quantity of the manufacturing order operation. |
+| `WipLocation` | `String` | no |  | The work-in-progress location of the manufacturing order operation. |
+| `ReportNumber` | `Int64` | no |  | The report number of the manufacturing order operation. |
+| `InstructionCommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) | The business key identifier of the manufacturing order operation's instruction comment. |
+| `InstructionComment` | `Comments` | no | [Comments](Common.md#Common.Comment) | The manufacturing order operation's instruction comment. |
+| `ManufacturingOrderId` | `Int64` | no | [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder) | The business key identifier of the manufacturing order that the manufacturing order operation belongs to. |
+| `ManufacturingOrderNodeId` | `Int64` | no | [ManufacturingOrderNodes](Manufacturing.md#Manufacturing.ManufacturingOrderNode) | The business key identifier of the manufacturing order node that the manufacturing order operation belongs to. |
+| `OperationNumber` | `Int32` | no |  | The operation number of the manufacturing order operation. |
+| `PlannedSetupTime` | `TimeSpan` | no |  | The planned setup time of the manufacturing order operation. |
+| `PlannedUnitTime` | `TimeSpan` | no |  | The planned unit time of the manufacturing order operation. |
+| `PlannedStartDate` | `DateTimeOffset` | no |  | The planned start date of the manufacturing order operation. |
+| `PlannedFinishDate` | `DateTimeOffset` | no |  | The planned finish date of the manufacturing order operation. |
+| `ActualStartDate` | `DateTimeOffset?` | yes |  | The actual (reported) start date of the manufacturing order operation. |
+| `ActualFinishDate` | `DateTimeOffset?` | yes |  | The actual (reported) finish date of the manufacturing order operation. |
+| `OperationRowId` | `Int64?` | yes | [OperationRows](Manufacturing.md#Manufacturing.OperationRow) | The business key identifier of the operation row that the manufacturing order operation is based on. Can be null if the manufacturing order operation is added manually. |
+| `OperationRow` | `OperationRows` | no | [OperationRows](Manufacturing.md#Manufacturing.OperationRow) | The operation row that the manufacturing order operation is based on. |
+| `Status` | `Int32` | no |  | The status of the manufacturing order operation's status. |
+| `WorkshopOperationStatus` | `Int32` | no |  | The workshop status of the manufacturing order operation's status. |
+| `BundleId` | `Int64?` | yes |  | An generated id that is common for a collection of operations. |
+| `Description` | `String` | no |  | The translated description of the manufacturing order operation. |
+| `ControlDataRows` | `ManufacturingOrderOperationControlDataRows[]` | no | [ManufacturingOrderOperationControlDataRows](Manufacturing.md#Manufacturing.ManufacturingOrderOperationControlDataRow) | The control data rows. |
+| `OrderQuantityId` | `Int64?` | yes | [OrderQuantityManufacturingOrderOperations](Manufacturing.md#Manufacturing.OrderQuantityManufacturingOrderOperation) | The business key identifier of order quantity. |
+| `OrderQuantity` | `OrderQuantityManufacturingOrderOperations` | no | [OrderQuantityManufacturingOrderOperations](Manufacturing.md#Manufacturing.OrderQuantityManufacturingOrderOperation) | Order quantity that holds the partial quantities. |
+| `ClearedStatus` | `Boolean` | no |  | Specifies if the status is cleared. |
+| `OnPriorityPlan` | `Boolean` | no |  | Indicates if the operation is shown in priority plan. |
+| `ManualOperationStatusId` | `Int64?` | yes | [ManualOperationStatuses](Manufacturing.md#Manufacturing.ManualOperationStatus) | The business key identifier of manual operation status. |
+| `ManualOperationStatus` | `ManualOperationStatuses` | no | [ManualOperationStatuses](Manufacturing.md#Manufacturing.ManualOperationStatus) | The manual operation status. |
+| `Materials` | `ManufacturingOrderMaterials[]` | no | [ManufacturingOrderMaterials](Manufacturing.md#Manufacturing.ManufacturingOrderMaterial) | The manufacturing order materials of the operation. |
+| `FixedLeadTime` | `TimeSpan?` | yes |  | The fixed lead time of the manufacturing order operation. |
+| `UnitStaffingFactor` | `Decimal?` | yes |  | The unit staffing factor of the manufacturing order operation. |
+| `SetupStaffingFactor` | `Decimal?` | yes |  | The setup staffing factor of the manufacturing order operation. |
+| `IsPlannedTimeCalculated` | `Boolean` | no |  | Indicates that the planned time of the operation was calculated at order creation (from a part-configurator formula or aggregated from fictitious sub-parts) and must not be overwritten when the work center is changed. |
 
 - `Status` — None=0, Started=1, PartiallyShipped=2, FullyShipped=3, PartiallyReported=4, Finished=5
 - `WorkshopOperationStatus` — NotInitialized=0, InProgress=1, ClockedOut=2, Interrupted=3, PartiallyReported=4, SetupTime=5, IsStandingBy=6, Finished=9
@@ -462,38 +462,38 @@ Represents a manufacturing order.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 2.18
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `OrderNumber` | `String` | no |  |
-| `Status` | `Int32` | no |  |
-| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) |
-| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
-| `PartId` | `Int64` | no | [Parts](Inventory.md#Inventory.Part) |
-| `Part` | `Parts` | no | [Parts](Inventory.md#Inventory.Part) |
-| `ReportedQuantity` | `Decimal` | no |  |
-| `PlannedQuantity` | `Decimal` | no |  |
-| `RestQuantity` | `Decimal` | no |  |
-| `StartDate` | `DateTimeOffset` | no |  |
-| `FinishDate` | `DateTimeOffset` | no |  |
-| `Priority` | `Int32` | no |  |
-| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](Sales.md#Sales.CustomerOrder) |
-| `CustomerOrder` | `CustomerOrders` | no | [CustomerOrders](Sales.md#Sales.CustomerOrder) |
-| `Operations` | `ManufacturingOrderOperations[]` | no | [ManufacturingOrderOperations](Manufacturing.md#Manufacturing.ManufacturingOrderOperation) |
-| `Materials` | `ManufacturingOrderMaterials[]` | no | [ManufacturingOrderMaterials](Manufacturing.md#Manufacturing.ManufacturingOrderMaterial) |
-| `Nodes` | `ManufacturingOrderNodes[]` | no | [ManufacturingOrderNodes](Manufacturing.md#Manufacturing.ManufacturingOrderNode) |
-| `ProjectId` | `Int64?` | yes | [Projects](Common.md#Common.Project) |
-| `Project` | `Projects` | no | [Projects](Common.md#Common.Project) |
-| `CategoryString` | `String` | no |  |
-| `VariantCode` | `String` | no |  |
-| `CustomerId` | `Int64?` | yes | [Customers](Sales.md#Sales.Customer) |
-| `InitialFinishDate` | `DateTimeOffset` | no |  |
-| `PartConfigurationId` | `Int64?` | yes | [PartConfigurations](Common.md#Common.PartConfiguration) |
-| `OrderQuantityId` | `Int64?` | yes | [OrderQuantityManufacturingOrders](Manufacturing.md#Manufacturing.OrderQuantityManufacturingOrder) |
-| `OrderQuantity` | `OrderQuantityManufacturingOrders` | no | [OrderQuantityManufacturingOrders](Manufacturing.md#Manufacturing.OrderQuantityManufacturingOrder) |
-| `OrderTypeId` | `Int64?` | yes | [ManufacturingOrderTypes](Manufacturing.md#Manufacturing.ManufacturingOrderType) |
-| `OrderType` | `ManufacturingOrderTypes` | no | [ManufacturingOrderTypes](Manufacturing.md#Manufacturing.ManufacturingOrderType) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the manufacturing order. |
+| `OrderNumber` | `String` | no |  | The order number of the manufacturing order. |
+| `Status` | `Int32` | no |  | The status of the manufacturing order. |
+| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) | The business key identifier of the warehouse that the manufacturing order belongs to. |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) | The business key identifier of the comment that belongs to the manufacturing order. |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) | The comment that belongs to the manufacturing order. |
+| `PartId` | `Int64` | no | [Parts](Inventory.md#Inventory.Part) | The business key identifier of the part that the manufacturing order is to produce. |
+| `Part` | `Parts` | no | [Parts](Inventory.md#Inventory.Part) | The part that the manufacturing order is to produce. |
+| `ReportedQuantity` | `Decimal` | no |  | The reported quantity of the main manufacturing order node. |
+| `PlannedQuantity` | `Decimal` | no |  | The planned quantity of the main manufacturing order node. |
+| `RestQuantity` | `Decimal` | no |  | The rest quantity of the main manufacturing order node. |
+| `StartDate` | `DateTimeOffset` | no |  | The start date of the manufacturing order. |
+| `FinishDate` | `DateTimeOffset` | no |  | The finish date of the manufacturing order. |
+| `Priority` | `Int32` | no |  | The priority of the manufacturing order. |
+| `CustomerOrderId` | `Int64?` | yes | [CustomerOrders](Sales.md#Sales.CustomerOrder) | The business key identifier of the customer order that produced the manufacturing order. |
+| `CustomerOrder` | `CustomerOrders` | no | [CustomerOrders](Sales.md#Sales.CustomerOrder) | The customer order that produced the manufacturing order. |
+| `Operations` | `ManufacturingOrderOperations[]` | no | [ManufacturingOrderOperations](Manufacturing.md#Manufacturing.ManufacturingOrderOperation) | The manufacturing order operations that belong to the manufacturing order. |
+| `Materials` | `ManufacturingOrderMaterials[]` | no | [ManufacturingOrderMaterials](Manufacturing.md#Manufacturing.ManufacturingOrderMaterial) | The manufacturing order materials that belong to the manufacturing order. |
+| `Nodes` | `ManufacturingOrderNodes[]` | no | [ManufacturingOrderNodes](Manufacturing.md#Manufacturing.ManufacturingOrderNode) | The manufacturing order nodes that belong to the manufacturing order. It is flattened, not a structure. |
+| `ProjectId` | `Int64?` | yes | [Projects](Common.md#Common.Project) | The business key identifier of the project that belongs to the manufacturing order. |
+| `Project` | `Projects` | no | [Projects](Common.md#Common.Project) | The project that belongs to the manufacturing order. Can be null. |
+| `CategoryString` | `String` | no |  | The category string of the manufacturing order. |
+| `VariantCode` | `String` | no |  | The variant code on the manufacturing order. |
+| `CustomerId` | `Int64?` | yes | [Customers](Sales.md#Sales.Customer) | The business key identifier of the customer on the manufacturing order. |
+| `InitialFinishDate` | `DateTimeOffset` | no |  | The initial finish date for the manufacturing order. |
+| `PartConfigurationId` | `Int64?` | yes | [PartConfigurations](Common.md#Common.PartConfiguration) | The business key identifier of the manufacturing order's part configuration. |
+| `OrderQuantityId` | `Int64?` | yes | [OrderQuantityManufacturingOrders](Manufacturing.md#Manufacturing.OrderQuantityManufacturingOrder) | The business key identifier of order quantity. |
+| `OrderQuantity` | `OrderQuantityManufacturingOrders` | no | [OrderQuantityManufacturingOrders](Manufacturing.md#Manufacturing.OrderQuantityManufacturingOrder) | Order quantity that holds the partial quantities. |
+| `OrderTypeId` | `Int64?` | yes | [ManufacturingOrderTypes](Manufacturing.md#Manufacturing.ManufacturingOrderType) | The business key identifier of order type. |
+| `OrderType` | `ManufacturingOrderTypes` | no | [ManufacturingOrderTypes](Manufacturing.md#Manufacturing.ManufacturingOrderType) | Order type of the Manufacturing Order. |
 
 - `Status` — NotInitialized=0, Registrered=1, Printed=2, Started=3, Finished=4, PostCalculated=5, Delivered=6, Historical=9
 
@@ -509,13 +509,13 @@ Represents a manufacturing order type.
 - **Required permission:** Show order types
 - **Introduced in:** 2.35
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `Number` | `Int64` | no |  |
-| `Prefix` | `String` | no |  |
-| `Description` | `String` | no |  |
-| `BaseType` | `Int32` | no |  |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the type. |
+| `Number` | `Int64` | no |  | The human readable identifier of the type. |
+| `Prefix` | `String` | no |  | The prefix applied to manufacturing order numbers for this type. |
+| `Description` | `String` | no |  | The translated description of the type. |
+| `BaseType` | `Int32` | no |  | The base type of manufacturing orders created using this type. |
 
 - `BaseType` — InventoryControlled=0, CustomerOrderControlled=1, MaintenanceControlled=2
 
@@ -530,13 +530,13 @@ Represents a manufacturing picking list material.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 2.48
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `MaterialId` | `Int64` | no | [ManufacturingOrderMaterials](Manufacturing.md#Manufacturing.ManufacturingOrderMaterial) |
-| `Material` | `ManufacturingOrderMaterials` | no | [ManufacturingOrderMaterials](Manufacturing.md#Manufacturing.ManufacturingOrderMaterial) |
-| `QuantityChangeId` | `Int64` | no | [QuantityChanges](Inventory.md#Inventory.QuantityChange) |
-| `QuantityChange` | `QuantityChanges` | no | [QuantityChanges](Inventory.md#Inventory.QuantityChange) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the manufacturing picking list material. |
+| `MaterialId` | `Int64` | no | [ManufacturingOrderMaterials](Manufacturing.md#Manufacturing.ManufacturingOrderMaterial) | The business key identifier of the manufacturing order material. |
+| `Material` | `ManufacturingOrderMaterials` | no | [ManufacturingOrderMaterials](Manufacturing.md#Manufacturing.ManufacturingOrderMaterial) | The manufacturing order material in the manufacturing picking list. |
+| `QuantityChangeId` | `Int64` | no | [QuantityChanges](Inventory.md#Inventory.QuantityChange) | The business key identifier of the manufacturing picking list materials quantity change. |
+| `QuantityChange` | `QuantityChanges` | no | [QuantityChanges](Inventory.md#Inventory.QuantityChange) | The suggested quantity for withdrawal when creating the picking list. |
 
 **References out:** [ManufacturingOrderMaterials](Manufacturing.md#Manufacturing.ManufacturingOrderMaterial), [QuantityChanges](Inventory.md#Inventory.QuantityChange)
 **Referenced by:** [ManufacturingPickingLists](Manufacturing.md#Manufacturing.ManufacturingPickingList)
@@ -550,22 +550,22 @@ Represents a manufacturing picking list.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 2.48
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `Number` | `String` | no |  |
-| `CreatedByApplicationUserId` | `Int64` | no | [ApplicationUsers](Common.md#Common.ApplicationUser) |
-| `CreatedByPersonId` | `Int64` | no | [Persons](Common.md#Common.Person) |
-| `CreatedTimestamp` | `DateTimeOffset` | no |  |
-| `PrintedByApplicationUserId` | `Int64?` | yes | [ApplicationUsers](Common.md#Common.ApplicationUser) |
-| `PrintedByPersonId` | `Int64?` | yes | [Persons](Common.md#Common.Person) |
-| `PrintedTimestamp` | `DateTimeOffset?` | yes |  |
-| `Status` | `Int32` | no |  |
-| `Grouping` | `Int32` | no |  |
-| `Sorting` | `Int32` | no |  |
-| `WarehouseId` | `Int64?` | yes | [Warehouses](Common.md#Common.Warehouse) |
-| `Type` | `Int32` | no |  |
-| `Materials` | `ManufacturingPickingListMaterials[]` | no | [ManufacturingPickingListMaterials](Manufacturing.md#Manufacturing.ManufacturingPickingListMaterial) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the picking list. |
+| `Number` | `String` | no |  | The human readable identifier of the picking list. |
+| `CreatedByApplicationUserId` | `Int64` | no | [ApplicationUsers](Common.md#Common.ApplicationUser) | The business key identifier of the application user that created the picking list. |
+| `CreatedByPersonId` | `Int64` | no | [Persons](Common.md#Common.Person) | The business key identifier of the person that created the picking list. |
+| `CreatedTimestamp` | `DateTimeOffset` | no |  | The date the picking list was created. |
+| `PrintedByApplicationUserId` | `Int64?` | yes | [ApplicationUsers](Common.md#Common.ApplicationUser) | The business key identifier of the application user that printed the picking list. |
+| `PrintedByPersonId` | `Int64?` | yes | [Persons](Common.md#Common.Person) | The business key identifier of the person that printed the picking list. |
+| `PrintedTimestamp` | `DateTimeOffset?` | yes |  | The date the picking list was printed. |
+| `Status` | `Int32` | no |  | The status of the picking list. |
+| `Grouping` | `Int32` | no |  | The grouping for the picking list. |
+| `Sorting` | `Int32` | no |  | The sorting for the picking list. |
+| `WarehouseId` | `Int64?` | yes | [Warehouses](Common.md#Common.Warehouse) | The business key identifier of the warehouse for the picking list. |
+| `Type` | `Int32` | no |  | The type of picking list. |
+| `Materials` | `ManufacturingPickingListMaterials[]` | no | [ManufacturingPickingListMaterials](Manufacturing.md#Manufacturing.ManufacturingPickingListMaterial) | The picking lists materials |
 
 - `Status` — Registered=1, Printed=2, Reported=5, History=9
 - `Grouping` — Order=0, Material=1, NoGrouping=2
@@ -583,17 +583,17 @@ Represents a reference number attached to a material row.
 - **Required permission:** Show part
 - **Introduced in:** 26.6
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `MaterialRowId` | `Int64` | no | [MaterialRows](Manufacturing.md#Manufacturing.MaterialRow) |
-| `Prefix` | `String` | no |  |
-| `From` | `String` | no |  |
-| `To` | `String` | no |  |
-| `Suffix` | `String` | no |  |
-| `Remark` | `String` | no |  |
-| `Quantity` | `Decimal` | no |  |
-| `RowIndex` | `Int32?` | yes |  |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the reference number. |
+| `MaterialRowId` | `Int64` | no | [MaterialRows](Manufacturing.md#Manufacturing.MaterialRow) | The business key identifier of the material row that the reference number belongs to. |
+| `Prefix` | `String` | no |  | The prefix part of the reference number. |
+| `From` | `String` | no |  | The starting value of the reference number range. |
+| `To` | `String` | no |  | The ending value of the reference number range. Only valid when is numeric; otherwise this value is not persisted and the quantity is one. |
+| `Suffix` | `String` | no |  | The suffix part of the reference number. |
+| `Remark` | `String` | no |  | A free-text remark associated with the reference number. |
+| `Quantity` | `Decimal` | no |  | The quantity represented by the reference number range. This value is calculated from and and cannot be set directly. |
+| `RowIndex` | `Int32?` | yes |  | The display order of the reference number within the material row. |
 
 **References out:** [MaterialRows](Manufacturing.md#Manufacturing.MaterialRow)
 **Referenced by:** [MaterialRows](Manufacturing.md#Manufacturing.MaterialRow)
@@ -607,24 +607,24 @@ Represents a material row.
 - **Required permission:** Show part
 - **Introduced in:** 2.18
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `PartId` | `Int64` | no |  |
-| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
-| `Position` | `String` | no |  |
-| `ToOperation` | `Int32` | no |  |
-| `Quantity` | `Decimal` | no |  |
-| `SetupQuantity` | `Decimal` | no |  |
-| `ExtraPercent` | `Decimal` | no |  |
-| `IsForCalculationOnly` | `Boolean` | no |  |
-| `MainPartId` | `Int64` | no |  |
-| `RowIndex` | `Int32` | no |  |
-| `PreparationTermType` | `Int32?` | yes |  |
-| `PreparationTermFromValue` | `String` | no |  |
-| `PreparationTermToValue` | `String` | no |  |
-| `ReferenceNumbers` | `MaterialRowReferenceNumbers[]` | no | [MaterialRowReferenceNumbers](Manufacturing.md#Manufacturing.ReferenceNumber) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the material row. |
+| `PartId` | `Int64` | no |  | The business key identifier of material row part. |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) | The business key identifier of the material row's comment. References Comments /// |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) | The comment of the material row. |
+| `Position` | `String` | no |  | The position of the material row. |
+| `ToOperation` | `Int32` | no |  | The number of the operation row that the material row belongs to. |
+| `Quantity` | `Decimal` | no |  | The quantity of the material row. |
+| `SetupQuantity` | `Decimal` | no |  | The setup quantity of the material row. |
+| `ExtraPercent` | `Decimal` | no |  | The extra percent of the material row. |
+| `IsForCalculationOnly` | `Boolean` | no |  | Specifies if the material row is only used for calculation. |
+| `MainPartId` | `Int64` | no |  | The business key identifier of the part that the material row belongs to. |
+| `RowIndex` | `Int32` | no |  | The row index of the material row. |
+| `PreparationTermType` | `Int32?` | yes |  | PreparationTermType of the Material Row. |
+| `PreparationTermFromValue` | `String` | no |  | PreparationTermFromValue of the Material Row. |
+| `PreparationTermToValue` | `String` | no |  | PreparationTermToValue of the Material Row. |
+| `ReferenceNumbers` | `MaterialRowReferenceNumbers[]` | no | [MaterialRowReferenceNumbers](Manufacturing.md#Manufacturing.ReferenceNumber) | The reference numbers configured for this material row. |
 
 **References out:** [Comments](Common.md#Common.Comment), [MaterialRowReferenceNumbers](Manufacturing.md#Manufacturing.ReferenceNumber)
 **Referenced by:** [MaterialRowReferenceNumbers](Manufacturing.md#Manufacturing.ReferenceNumber), [Preparations](Manufacturing.md#Manufacturing.Preparation)
@@ -638,16 +638,16 @@ Represents a measuring plan for an operation row.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 22.5
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `OperationRowId` | `Int64` | no | [OperationRows](Manufacturing.md#Manufacturing.OperationRow) |
-| `MeasuringTemplateId` | `Int64` | no | [MeasuringTemplates](Common.md#Common.MeasuringTemplate) |
-| `OverriddenFormTemplateId` | `Int64?` | yes | [FormTemplates](Common.md#Common.FormTemplate) |
-| `OverriddenFrequencyText` | `String` | no |  |
-| `OverriddenIntervalAmount` | `Int32?` | yes |  |
-| `OverriddenInterval` | `Int32?` | yes |  |
-| `WorkCenterId` | `Int64?` | yes | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the entity. |
+| `OperationRowId` | `Int64` | no | [OperationRows](Manufacturing.md#Manufacturing.OperationRow) | The business key identifier of the operation row that the row relates to. |
+| `MeasuringTemplateId` | `Int64` | no | [MeasuringTemplates](Common.md#Common.MeasuringTemplate) | The business key identifier of the measuring template that the row relates to. |
+| `OverriddenFormTemplateId` | `Int64?` | yes | [FormTemplates](Common.md#Common.FormTemplate) | The business key identifier of the form template specified for this row. |
+| `OverriddenFrequencyText` | `String` | no |  | The frequency text specified for this row. |
+| `OverriddenIntervalAmount` | `Int32?` | yes |  | The quantity value specified for this row. |
+| `OverriddenInterval` | `Int32?` | yes |  | The interval value specified for this row. |
+| `WorkCenterId` | `Int64?` | yes | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) | The business key identifier of the work center that the row relates to. |
 
 **References out:** [FormTemplates](Common.md#Common.FormTemplate), [MeasuringTemplates](Common.md#Common.MeasuringTemplate), [OperationRows](Manufacturing.md#Manufacturing.OperationRow), [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter)
 **Referenced by:** [OperationRows](Manufacturing.md#Manufacturing.OperationRow)
@@ -661,46 +661,46 @@ Represents an operation row.
 - **Required permission:** Show part
 - **Introduced in:** 2.18
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `OperationNumber` | `Int32` | no |  |
-| `SubcontractPartId` | `Int64?` | yes |  |
-| `SupplierId` | `Int64?` | yes |  |
-| `WorkCenterId` | `Int64` | no |  |
-| `IsSubcontractor` | `Boolean` | no |  |
-| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
-| `Description` | `String` | no |  |
-| `TimeCode` | `Int32` | no |  |
-| `TimeUnit` | `Int32` | no |  |
-| `SetupTime` | `TimeSpan` | no |  |
-| `UnitTime` | `TimeSpan` | no |  |
-| `ExtraQuantityPercent` | `Decimal` | no |  |
-| `NumberOfFlows` | `Decimal?` | yes |  |
-| `OverlapPercent` | `Decimal` | no |  |
-| `UnitStaffingFactor` | `Decimal?` | yes |  |
-| `SetupStaffingFactor` | `Decimal?` | yes |  |
-| `SetupQuantity` | `Decimal` | no |  |
-| `IsForCalculationOnly` | `Boolean` | no |  |
-| `QueueTime` | `TimeSpan?` | yes |  |
-| `UseQueueTimeWholeDayRoundOf` | `Boolean?` | yes |  |
-| `UnitCostFactorId` | `Int64?` | yes |  |
-| `SetupCostFactorId` | `Int64?` | yes |  |
-| `FixedLeadTime` | `TimeSpan?` | yes |  |
-| `SetupCost` | `Decimal?` | yes |  |
-| `SetupCostCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
-| `UnitCost` | `Decimal?` | yes |  |
-| `UnitCostCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) |
-| `TransportCost` | `Decimal?` | yes |  |
-| `SupplierPartNumber` | `String` | no |  |
-| `DeliverToEndCustomer` | `Boolean` | no |  |
-| `ExtraFields` | `ExtraFields[]` | no | [ExtraFields](Common.md#Common.ExtraField) |
-| `ControlDataRows` | `OperationRowControlDataRows[]` | no | [OperationRowControlDataRows](Manufacturing.md#Manufacturing.OperationRowControlDataRow) |
-| `AlternativeOperationRows` | `AlternativeOperationRows[]` | no | [AlternativeOperationRows](Manufacturing.md#Manufacturing.AlternativeOperationRow) |
-| `PreparationTermType` | `Int32?` | yes |  |
-| `PreparationTermFromValue` | `String` | no |  |
-| `PreparationTermToValue` | `String` | no |  |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the material row. |
+| `OperationNumber` | `Int32` | no |  | The operation number of the operation row. |
+| `SubcontractPartId` | `Int64?` | yes |  | The business key identifier of the operation row's subcontract part. |
+| `SupplierId` | `Int64?` | yes |  | The business key identifier of the operation row's supplier. |
+| `WorkCenterId` | `Int64` | no |  | The business key identifier of the operation's row work center. |
+| `IsSubcontractor` | `Boolean` | no |  | Specifies if the operation is subcontracted. |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) | The business key identifier of the operation row's comment. |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) | The comment of the operation row. |
+| `Description` | `String` | no |  | The translated description of the operation row. |
+| `TimeCode` | `Int32` | no |  | The time code specified for the operation row. |
+| `TimeUnit` | `Int32` | no |  | The time unit specified for the operation row. |
+| `SetupTime` | `TimeSpan` | no |  | The setup time of the operation. |
+| `UnitTime` | `TimeSpan` | no |  | The unit time of the operation. |
+| `ExtraQuantityPercent` | `Decimal` | no |  | The extra quantity percentage of the operation row. |
+| `NumberOfFlows` | `Decimal?` | yes |  | The number of flows specified for the operation row. |
+| `OverlapPercent` | `Decimal` | no |  | The overlap percentage of the operation row. |
+| `UnitStaffingFactor` | `Decimal?` | yes |  | The unit staffing factor of the operation row. |
+| `SetupStaffingFactor` | `Decimal?` | yes |  | The setup staffing factor of the operation row. |
+| `SetupQuantity` | `Decimal` | no |  | The setup quantity of the operation row. |
+| `IsForCalculationOnly` | `Boolean` | no |  | Specifies if the operation row is to be used for calculations only. |
+| `QueueTime` | `TimeSpan?` | yes |  | The queue time of the operation. |
+| `UseQueueTimeWholeDayRoundOf` | `Boolean?` | yes |  | Specifies if queue time should be rounded to full day. |
+| `UnitCostFactorId` | `Int64?` | yes |  | The business key identifier of the unit cost factor of the operation row. |
+| `SetupCostFactorId` | `Int64?` | yes |  | The business key identifier of the setup cost factor of the operation row. |
+| `FixedLeadTime` | `TimeSpan?` | yes |  | The fixed lead time of the operation row. |
+| `SetupCost` | `Decimal?` | yes |  | The setup cost of the operation row. This value is only available if the operation is a subcontract. |
+| `SetupCostCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) | The business key identifier of the setup cost currency. |
+| `UnitCost` | `Decimal?` | yes |  | The unit cost of the operation row. This value is only available if the operation is a subcontract. |
+| `UnitCostCurrencyId` | `Int64?` | yes | [Currencies](Common.md#Common.Currency) | The business key identifier of the unit cost currency. |
+| `TransportCost` | `Decimal?` | yes |  | The transport cost of the operation represented in the company currency. This value is only available if the operation is a subcontract. |
+| `SupplierPartNumber` | `String` | no |  | The supplier part number of the operation subcontractor part. This value is only available if the operation is a subcontract. |
+| `DeliverToEndCustomer` | `Boolean` | no |  | Whether the subcontractor will deliver straight to the end customer or not. This value is only available if the operation is a subcontract. |
+| `ExtraFields` | `ExtraFields[]` | no | [ExtraFields](Common.md#Common.ExtraField) | The extra fields of the operation row. |
+| `ControlDataRows` | `OperationRowControlDataRows[]` | no | [OperationRowControlDataRows](Manufacturing.md#Manufacturing.OperationRowControlDataRow) | The control data rows. |
+| `AlternativeOperationRows` | `AlternativeOperationRows[]` | no | [AlternativeOperationRows](Manufacturing.md#Manufacturing.AlternativeOperationRow) | The alternative operation rows (alternative work centers) of the operation row. |
+| `PreparationTermType` | `Int32?` | yes |  | PreparationTermType of the Operation Row. |
+| `PreparationTermFromValue` | `String` | no |  | PreparationTermFromValue of the Operation Row. |
+| `PreparationTermToValue` | `String` | no |  | PreparationTermToValue of the Operation Row. |
 
 - `TimeCode` — NotInitialized=0, Calculated=1, Studied=2
 - `TimeUnit` — Hours=0, Minutes=1, Seconds=2, QuantityPerHour=3, QuantityPerMinute=4, QuantityPerSecond=5
@@ -717,10 +717,10 @@ Represents a order quantity template on part that holds many partial quantities.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 22.6
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `PartialQuantities` | `PartialQuantities[]` | no | [PartialQuantities](Common.md#Common.PartialQuantity) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the entity. |
+| `PartialQuantities` | `PartialQuantities[]` | no | [PartialQuantities](Common.md#Common.PartialQuantity) | The partial quantities for the order quantity. |
 
 **References out:** [PartialQuantities](Common.md#Common.PartialQuantity)
 **Referenced by:** [ManufacturingOrderOperations](Manufacturing.md#Manufacturing.ManufacturingOrderOperation)
@@ -734,10 +734,10 @@ Represents a order quantity template on part that holds many partial quantities.
 - **Required permission:** Show manufacturing orders
 - **Introduced in:** 22.6
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `PartialQuantities` | `PartialQuantities[]` | no | [PartialQuantities](Common.md#Common.PartialQuantity) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the entity. |
+| `PartialQuantities` | `PartialQuantities[]` | no | [PartialQuantities](Common.md#Common.PartialQuantity) | The partial quantities for the order quantity. |
 
 **References out:** [PartialQuantities](Common.md#Common.PartialQuantity)
 **Referenced by:** [ManufacturingOrders](Manufacturing.md#Manufacturing.ManufacturingOrder)
@@ -751,18 +751,18 @@ Represents a part preparation
 - **Required permission:** Show part
 - **Introduced in:** 2.18
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `PartNumber` | `String` | no |  |
-| `Description` | `String` | no |  |
-| `UseVariantManagement` | `Boolean` | no |  |
-| `VariantXAxisId` | `Int64?` | yes | [ExtraFieldTemplates](Common.md#Common.ExtraFieldTemplate) |
-| `VariantXAxis` | `ExtraFieldTemplates` | no | [ExtraFieldTemplates](Common.md#Common.ExtraFieldTemplate) |
-| `VariantYAxisId` | `Int64?` | yes | [ExtraFieldTemplates](Common.md#Common.ExtraFieldTemplate) |
-| `VariantYAxis` | `ExtraFieldTemplates` | no | [ExtraFieldTemplates](Common.md#Common.ExtraFieldTemplate) |
-| `Materials` | `MaterialRows[]` | no | [MaterialRows](Manufacturing.md#Manufacturing.MaterialRow) |
-| `Operations` | `OperationRows[]` | no | [OperationRows](Manufacturing.md#Manufacturing.OperationRow) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the part preparation. |
+| `PartNumber` | `String` | no |  | The part number of the part that the part preparation represents. |
+| `Description` | `String` | no |  | The translated description of the part preparation. |
+| `UseVariantManagement` | `Boolean` | no |  | Specifies if variant management is applied for the preparation. |
+| `VariantXAxisId` | `Int64?` | yes | [ExtraFieldTemplates](Common.md#Common.ExtraFieldTemplate) | The business key identifier of the extra field template used for the X axis of the variant management system. |
+| `VariantXAxis` | `ExtraFieldTemplates` | no | [ExtraFieldTemplates](Common.md#Common.ExtraFieldTemplate) | The extra field template that is applied for the X axis of the variant management system. |
+| `VariantYAxisId` | `Int64?` | yes | [ExtraFieldTemplates](Common.md#Common.ExtraFieldTemplate) | The business key identifier of the extra field template used for the Y axis of the variant management system. References ExtraFieldTemplates . |
+| `VariantYAxis` | `ExtraFieldTemplates` | no | [ExtraFieldTemplates](Common.md#Common.ExtraFieldTemplate) | The extra field template that is applied for the Y axis of the variant management system. |
+| `Materials` | `MaterialRows[]` | no | [MaterialRows](Manufacturing.md#Manufacturing.MaterialRow) | The material rows of the preparation. |
+| `Operations` | `OperationRows[]` | no | [OperationRows](Manufacturing.md#Manufacturing.OperationRow) | The operation rows of the preparation. |
 
 **References out:** [ExtraFieldTemplates](Common.md#Common.ExtraFieldTemplate), [MaterialRows](Manufacturing.md#Manufacturing.MaterialRow), [OperationRows](Manufacturing.md#Manufacturing.OperationRow)
 **Referenced by:** [Parts](Inventory.md#Inventory.Part)
@@ -776,14 +776,14 @@ Represents a table that contains exceptions from the production calendar. Only u
 - **Required permission:** Show work center
 - **Introduced in:** 24.3
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `WorkCenterId` | `Int64` | no | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) |
-| `NumberOfPlanningUnits` | `Decimal?` | yes |  |
-| `ExceptionDate` | `DateTime` | no |  |
-| `BasicTime` | `TimeSpan?` | yes |  |
-| `ScheduleId` | `Int64?` | yes | [Schedules](TimeRecording.md#TimeRecording.Schedule) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the production calendar exception. |
+| `WorkCenterId` | `Int64` | no | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) | The business key identifier of the work center that is linked to the production calendar exception. |
+| `NumberOfPlanningUnits` | `Decimal?` | yes |  | Number of persons or number of machines depending on the work center type. |
+| `ExceptionDate` | `DateTime` | no |  | Day of the production calendar exception. |
+| `BasicTime` | `TimeSpan?` | yes |  | Basic time used on this production calendar exception date. |
+| `ScheduleId` | `Int64?` | yes | [Schedules](TimeRecording.md#TimeRecording.Schedule) | The business key identifier of the schedule used on this production calendar exception date. |
 
 **References out:** [Schedules](TimeRecording.md#TimeRecording.Schedule), [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter)
 **Referenced by:** [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter)
@@ -797,14 +797,14 @@ Represents a reason code time consumption.
 - **Required permission:** Show cause codes
 - **Introduced in:** 24.9
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `Code` | `String` | no |  |
-| `Description` | `String` | no |  |
-| `CommentMandatory` | `Boolean` | no |  |
-| `Active` | `Boolean` | no |  |
-| `TimeConsumptionType` | `Int32` | no |  |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the reason code time consumption. |
+| `Code` | `String` | no |  | The alphanumeric code of the reason code time consumption. |
+| `Description` | `String` | no |  | The translated description of the reason code time consumption. |
+| `CommentMandatory` | `Boolean` | no |  | Specifies if a comment is mandatory for the reason code time consumption. |
+| `Active` | `Boolean` | no |  | Specifies if the reason code time consumption is active in the system. |
+| `TimeConsumptionType` | `Int32` | no |  | The type of the reason code time consumption. |
 
 - `TimeConsumptionType` — TimeLoss=0, TimeGain=1
 
@@ -819,21 +819,21 @@ Represents a cost factor group belonging to a work center. Note that all cost fa
 - **Required permission:** Show work center
 - **Introduced in:** 2.46
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `Description` | `String` | no |  |
-| `Type` | `Int32` | no |  |
-| `CostFactor1` | `Decimal?` | yes |  |
-| `CostFactor2` | `Decimal?` | yes |  |
-| `CostFactor3` | `Decimal?` | yes |  |
-| `FutureCostFactor1` | `Decimal?` | yes |  |
-| `FutureCostFactor2` | `Decimal?` | yes |  |
-| `FutureCostFactor3` | `Decimal?` | yes |  |
-| `IsDefaultSetupCost` | `Boolean` | no |  |
-| `IsDefaultUnitCost` | `Boolean` | no |  |
-| `ParentId` | `Int64` | no | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) |
-| `RowIndex` | `Int32` | no |  |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the work center cost factor group. |
+| `Description` | `String` | no |  | The translated description of the work center cost factor group. |
+| `Type` | `Int32` | no |  | The types that apply to the work center cost factor group. |
+| `CostFactor1` | `Decimal?` | yes |  | The first cost factor of the group. |
+| `CostFactor2` | `Decimal?` | yes |  | The second cost factor of the group. |
+| `CostFactor3` | `Decimal?` | yes |  | The third cost factor of the group. |
+| `FutureCostFactor1` | `Decimal?` | yes |  | The future first cost factor of the group. |
+| `FutureCostFactor2` | `Decimal?` | yes |  | The future second cost factor of the group. |
+| `FutureCostFactor3` | `Decimal?` | yes |  | The future third cost factor of the group. |
+| `IsDefaultSetupCost` | `Boolean` | no |  | Specifies if the cost factor group is used as the default group for setup costs for its parent work center. |
+| `IsDefaultUnitCost` | `Boolean` | no |  | Specifies if the cost factor group is used as the default group for unit costs for its parent work center. |
+| `ParentId` | `Int64` | no | [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter) | The business key identifier of the work center that the cost factor group belongs to. |
+| `RowIndex` | `Int32` | no |  | The row index of the work center cost factor group in relation to the other groups that belong to the parent work center. |
 
 - `Type` (bitmask) — None=0, SetupCost=1, UnitCost=2
 
@@ -849,12 +849,12 @@ Represents manufacturing print settings for a work center.
 - **Required permission:** Show work center
 - **Introduced in:** 2.28
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `Copies` | `Int32` | no |  |
-| `PrintExternalDocuments` | `Boolean` | no |  |
-| `FormReportId` | `Int64` | no |  |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the workcenter manufacturing print settings. |
+| `Copies` | `Int32` | no |  | Number of copies of the document. |
+| `PrintExternalDocuments` | `Boolean` | no |  | Specifies if external documents should be included in the printout. |
+| `FormReportId` | `Int64` | no |  | The business key identifier of the form report the settings applies to. |
 
 **Referenced by:** [WorkCenters](Manufacturing.md#Manufacturing.WorkCenter)
 
@@ -867,30 +867,30 @@ Represents a manufacturing work center.
 - **Required permission:** Show work center
 - **Introduced in:** 2.18
 
-| Property | Type | Nullable | References |
-| --- | --- | --- | --- |
-| `Id` | `Int64` | no |  |
-| `Number` | `String` | no |  |
-| `Description` | `String` | no |  |
-| `OperationDescription` | `String` | no |  |
-| `Type` | `Int32` | no |  |
-| `DepartmentId` | `Int64` | no |  |
-| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) |
-| `Warehouse` | `Warehouses` | no | [Warehouses](Common.md#Common.Warehouse) |
-| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) |
-| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) |
-| `ManufacturingPrintSettings` | `WorkCenterManufacturingPrintSettings[]` | no | [WorkCenterManufacturingPrintSettings](Manufacturing.md#Manufacturing.WorkCenterManufacturingPrintSettings) |
-| `CostFactorGroups` | `WorkCenterCostFactorGroups[]` | no | [WorkCenterCostFactorGroups](Manufacturing.md#Manufacturing.WorkCenterCostFactorGroup) |
-| `TimePrecision` | `Int32` | no |  |
-| `BasicTime` | `TimeSpan` | no |  |
-| `NumberOfPlanningUnits` | `Decimal` | no |  |
-| `NumberOfFlows` | `Decimal` | no |  |
-| `AvailabilityFactor` | `Decimal` | no |  |
-| `SimulationFactor` | `Decimal` | no |  |
-| `UnitStaffFactor` | `Decimal` | no |  |
-| `SetupStaffFactor` | `Decimal` | no |  |
-| `Employees` | `PersonWorkCenters[]` | no | [PersonWorkCenters](TimeRecording.md#TimeRecording.PersonWorkCenter) |
-| `ProductionCalendarExceptions` | `ProductionCalendarExceptions[]` | no | [ProductionCalendarExceptions](Manufacturing.md#Manufacturing.ProductionCalendarException) |
+| Property | Type | Nullable | References | Description |
+| --- | --- | --- | --- | --- |
+| `Id` | `Int64` | no |  | The business key identifier of the work center. |
+| `Number` | `String` | no |  | The human readable identifier of the work center. |
+| `Description` | `String` | no |  | The translated description of the work center. |
+| `OperationDescription` | `String` | no |  | The translated operation description of the work center. |
+| `Type` | `Int32` | no |  | The work center type. |
+| `DepartmentId` | `Int64` | no |  | The business key identifier of the department that the work center belongs to. |
+| `WarehouseId` | `Int64` | no | [Warehouses](Common.md#Common.Warehouse) | The business key identifier of the warehouse that the work center belongs to. References Warehouses . |
+| `Warehouse` | `Warehouses` | no | [Warehouses](Common.md#Common.Warehouse) | The warehouse that the work center belongs to. |
+| `CommentId` | `Int64?` | yes | [Comments](Common.md#Common.Comment) | The business key identifier of the work center comment. References Comments . |
+| `Comment` | `Comments` | no | [Comments](Common.md#Common.Comment) | The work center comment. |
+| `ManufacturingPrintSettings` | `WorkCenterManufacturingPrintSettings[]` | no | [WorkCenterManufacturingPrintSettings](Manufacturing.md#Manufacturing.WorkCenterManufacturingPrintSettings) | The print settings for manufacturing order documents. |
+| `CostFactorGroups` | `WorkCenterCostFactorGroups[]` | no | [WorkCenterCostFactorGroups](Manufacturing.md#Manufacturing.WorkCenterCostFactorGroup) | The cost factor groups that belong to the work center. |
+| `TimePrecision` | `Int32` | no |  | Time precision for the work center |
+| `BasicTime` | `TimeSpan` | no |  | Basic time (capacity per day) |
+| `NumberOfPlanningUnits` | `Decimal` | no |  | Number of planning units, can be machines or persons depending on the work center type. |
+| `NumberOfFlows` | `Decimal` | no |  | Number of machines per order or number of persons per order depending on the work center type. |
+| `AvailabilityFactor` | `Decimal` | no |  | Availability factor in percent for the work center. |
+| `SimulationFactor` | `Decimal` | no |  | Simulation factor in percent for the work center. |
+| `UnitStaffFactor` | `Decimal` | no |  | Indicates how large (in percent) a share of the operating unit time that is staffed for the work center. |
+| `SetupStaffFactor` | `Decimal` | no |  | Indicates how large (in percent) a share of the operating setup time that is staffed for the work center. |
+| `Employees` | `PersonWorkCenters[]` | no | [PersonWorkCenters](TimeRecording.md#TimeRecording.PersonWorkCenter) | Specifies the persons that should be allowed to select work from this work center. |
+| `ProductionCalendarExceptions` | `ProductionCalendarExceptions[]` | no | [ProductionCalendarExceptions](Manufacturing.md#Manufacturing.ProductionCalendarException) | Specifies the production calendar exceptions for this work center. |
 
 - `Type` — Machine=0, ManualWork=1, SubContract=2, Pool=3, Pick=4, Staffing=5
 - `TimePrecision` — Day=0, Schedule=1, Hourly=2
