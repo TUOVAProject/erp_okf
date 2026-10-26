@@ -2,14 +2,14 @@
 
 ## Lyhyesti
 
-Monitor ERP:n API:n tietomalli [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/open-knowledge-format)
--pakettina. Paketissa on jokainen kyseltävä resurssi, sen kentät, enumeraatiot,
-oikeusvaatimus ja suhteet muihin resursseihin. Tiedot ovat markdown-tiedostoina,
-joissa jokainen suhde on linkki. Paketti on tehty sekä ihmisen selattavaksi että
-AI-agentin luettavaksi.
+The Monitor ERP API data model as an [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/open-knowledge-format)
+bundle. The bundle contains every queryable resource, its fields, enumerations,
+required permission and relationships to other resources. The data is stored as
+markdown files in which every relationship is a link. The bundle is designed both
+for people to browse and for AI agents to read.
 
-**Haluatko vain lukea?** Avaa [`okf/index.md`](okf/index.md). Mitään ei tarvitse asentaa.
-Selaimessa: avaa `okf-html/index.html` — sama sisältö HTML-sivuina, hakuineen.
+**Just want to read?** Open [`okf/index.md`](okf/index.md). Nothing to install.
+In a browser: open `okf-html/index.html` — the same content as HTML pages, with search.
 
 **New here?** Follow [`GETTING_STARTED.md`](GETTING_STARTED.md): download, use with
 an AI agent, query from code, refresh from upstream, step by step.
