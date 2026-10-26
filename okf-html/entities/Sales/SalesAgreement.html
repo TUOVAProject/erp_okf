@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SalesAgreements · Monitor ERP API</title>
+<meta name="description" content="Represents an agreement.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>SalesAgreements</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html" aria-current="location">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="salesagreements">SalesAgreements</h1>
+<p>Represents an agreement.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Sales.html">Sales</a></dd><dt>API class</dt><dd><code>SalesAgreement</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Sales/SalesAgreements</code></dd><dt>Required permission</dt><dd>Show agreement</dd><dt>GUID</dt><dd><code>77CAE1A2-BBC1-405D-9C38-9F8F90950BB8</code></dd><dt>Introduced in</dt><dd>22.7</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique, max length 15</td>
+<td>The human readable identifier of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderTypeId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="SalesAgreementType.html">SalesAgreementTypes</a></td>
+<td></td>
+<td>The business key identifier of the agreements type.</td>
+</tr>
+<tr>
+<td class="prop"><code>PeriodStart</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The start period of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>PeriodEnd</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The end period of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>AgreementDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The date of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>LastNoticeDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The last notice date of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>TerminationDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The termination date of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExtensionPeriod</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The extension period in months of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomerAgreementNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The customers number of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>Status</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The status of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>ResponsibleId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td></td>
+<td>The business key identifier of the person responsible of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Customer.html">Customers</a></td>
+<td></td>
+<td>The business key identifier of the agreements customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactReferenceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td></td>
+<td>The business key identifier of the agreements customer reference.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactReferenceName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The customers reference name of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurReferenceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td></td>
+<td>The business key identifier of our reference on the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurReferenceName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>Our reference name of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>Description</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The translated description of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseForwardRate</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if the agreement use forward rate.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExchangeRate</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The exchange rate of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>InternalCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the agreements internal comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>InternalComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The internal comment of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExternalCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the agreements external comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExternalComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The external comment of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the agreements currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>TermLocation</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The term location of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoicingMethod</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The invoicing method of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatGroupId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/VatGroup.html">VatGroups</a></td>
+<td></td>
+<td>The business key identifier of the agreements VAT group.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsAccrual</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if the agreement is accrual.</td>
+</tr>
+<tr>
+<td class="prop"><code>DefaultOrderPrintoutVia</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The default printout method of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>MailingAddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td></td>
+<td>The business key identifier of the agreements mailing address.</td>
+</tr>
+<tr>
+<td class="prop"><code>MailingAddress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>expandable</td>
+<td>The mailing address of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryAddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td></td>
+<td>The business key identifier of the agreements delivery address.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryAddress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>expandable</td>
+<td>The delivery address of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomerAccountGroupId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td></td>
+<td>The business key identifier of the agreements customers account group.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceBusinessContactId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Customer.html">Customers</a></td>
+<td></td>
+<td>The business key identifier of the agreements invoice customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProjectId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Project.html">Projects</a></td>
+<td></td>
+<td>The business key identifier of the agreements project.</td>
+</tr>
+<tr>
+<td class="prop"><code>AftermarketProductRecordId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Inventory/ProductRecord.html">ProductRecords</a></td>
+<td></td>
+<td>The business key identifier of the agreements aftermarket product record.</td>
+</tr>
+<tr>
+<td class="prop"><code>SellerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td></td>
+<td>The business key identifier of the agreements seller.</td>
+</tr>
+<tr>
+<td class="prop"><code>Priority</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The priority of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>AccrualAccountId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Accounting/Account.html">Accounts</a></td>
+<td></td>
+<td>The business key identifier of the agreements accrual account.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceCurrentMonth</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if the agreement should be invoiced the current month.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoicingInterval</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The invoicing interval of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>ComprehensiveInvoiceChoice</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The comprehensive invoice choice of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReleaseAgreementBasisAutomatically</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if agreement basis should be released automatically.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentTermId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td></td>
+<td>The business key identifier of the agreements payment term.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentTermDescription</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The payment term description of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>DestinationForDeliveryTerm</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The destination for delivery term of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>GracePeriodInDays</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The grace period in days of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryMethodId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td></td>
+<td>The business key identifier of the agreements delivery method.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryMethodDescription</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The delivery method description of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryTermId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/DeliveryTerm.html">DeliveryTerms</a></td>
+<td></td>
+<td>The business key identifier of the delivery term of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryTermDescription</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The delivery term description of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceDefinition</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The price definition of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>UpdateStatusAutomatically</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if agreement status should be updated automatically.</td>
+</tr>
+<tr>
+<td class="prop"><code>Version</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The version of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>NoticePeriod</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The notice period of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>PlannedInvoiceDateOffset</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The planned invoice date offset in days of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>NumberOfYearsToCreateBasisFor</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The number of years to create agreement basis for in advance.</td>
+</tr>
+<tr>
+<td class="prop"><code>CreateAgreementBasis</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if agreement basis should be created.</td>
+</tr>
+<tr>
+<td class="prop"><code>Rows</code></td>
+<td class="type"><code>SalesAgreementRows[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="SalesAgreementRow.html">SalesAgreementRows</a></td>
+<td>expandable, collection</td>
+<td>The rows of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>LifeCycleState</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The life cycle state of the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>Factoring</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 25.7</td>
+<td>Specifies if factoring is activated for the agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>Bases</code></td>
+<td class="type"><code>SalesAgreementBases[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="SalesAgreementBasis.html">SalesAgreementBases</a></td>
+<td>expandable, collection, since 26.4</td>
+<td>The agreement bases of the agreement.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>Status</code><div class="evs"><span class="ev">Negotiation<span>=1</span></span><span class="ev">SignedValid<span>=2</span></span><span class="ev">Active<span>=3</span></span><span class="ev">Terminated<span>=4</span></span><span class="ev">Closed<span>=6</span></span><span class="ev">Historic<span>=9</span></span></div></li><li><code>InvoicingMethod</code><div class="evs"><span class="ev">InAdvance<span>=1</span></span><span class="ev">InArrears<span>=2</span></span></div></li><li><code>DefaultOrderPrintoutVia</code><div class="evs"><span class="ev">Printer<span>=0</span></span><span class="ev">Email<span>=1</span></span><span class="ev">Edi<span>=2</span></span><span class="ev">None<span>=9</span></span></div></li><li><code>InvoicingInterval</code><div class="evs"><span class="ev">Monthly<span>=1</span></span><span class="ev">EveryOtherMonth<span>=2</span></span><span class="ev">Quarterly<span>=3</span></span><span class="ev">FourMonthly<span>=4</span></span><span class="ev">SemiAnnually<span>=5</span></span><span class="ev">Annually<span>=6</span></span></div></li><li><code>ComprehensiveInvoiceChoice</code><div class="evs"><span class="ev">No<span>=1</span></span><span class="ev">PerCustomer<span>=2</span></span></div></li><li><code>PriceDefinition</code><div class="evs"><span class="ev">AccordingToInvoicingInterval<span>=0</span></span><span class="ev">Day<span>=1</span></span><span class="ev">Week<span>=2</span></span><span class="ev">Month<span>=3</span></span><span class="ev">TwoMonths<span>=4</span></span><span class="ev">Quarter<span>=5</span></span><span class="ev">FourMonths<span>=6</span></span><span class="ev">SixMonths<span>=7</span></span><span class="ev">Annual<span>=8</span></span></div></li><li><code>LifeCycleState</code><div class="evs"><span class="ev">Transient<span>=1</span></span><span class="ev">Persistent<span>=10</span></span><span class="ev">History<span>=20</span></span><span class="ev">RemovableCandidate<span>=99</span></span></div></li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="SalesAgreementBasis.html">SalesAgreementBases</a> — <code>SalesAgreementId</code> (FK)</li>
+<li><a href="SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>SalesAgreementId</code> (FK)</li>
+<li><a href="SalesAgreementRow.html">SalesAgreementRows</a> — <code>ParentOrderId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "OrderNumber": null,
+  "OrderTypeId": 0,
+  "PeriodStart": "0001-01-01T00:00:00+00:00",
+  "PeriodEnd": null,
+  "AgreementDate": null,
+  "LastNoticeDate": null,
+  "TerminationDate": null,
+  "ExtensionPeriod": null,
+  "CustomerAgreementNumber": null,
+  "Status": 0,
+  "ResponsibleId": null,
+  "BusinessContactId": 0,
+  "BusinessContactReferenceId": null,
+  "BusinessContactReferenceName": null,
+  "OurReferenceId": null,
+  "OurReferenceName": null,
+  "Description": null,
+  "UseForwardRate": false,
+  "ExchangeRate": 0.0,
+  "InternalCommentId": null,
+  "InternalComment": null,
+  "ExternalCommentId": null,
+  "ExternalComment": null,
+  "CurrencyId": 0,
+  "TermLocation": null,
+  "InvoicingMethod": 0,
+  "VatGroupId": 0,
+  "IsAccrual": false,
+  "DefaultOrderPrintoutVia": 0,
+  "MailingAddressId": null,
+  "MailingAddress": null,
+  "DeliveryAddressId": null,
+  "DeliveryAddress": null,
+  "CustomerAccountGroupId": null,
+  "InvoiceBusinessContactId": 0,
+  "ProjectId": null,
+  "AftermarketProductRecordId": null,
+  "SellerId": null,
+  "Priority": 0,
+  "AccrualAccountId": null,
+  "InvoiceCurrentMonth": false,
+  "InvoicingInterval": 0,
+  "ComprehensiveInvoiceChoice": 0,
+  "ReleaseAgreementBasisAutomatically": false,
+  "PaymentTermId": null,
+  "PaymentTermDescription": null,
+  "DestinationForDeliveryTerm": null,
+  "GracePeriodInDays": null,
+  "DeliveryMethodId": null,
+  "DeliveryMethodDescription": null,
+  "DeliveryTermId": null,
+  "DeliveryTermDescription": null,
+  "PriceDefinition": 0,
+  "UpdateStatusAutomatically": false,
+  "Version": 0,
+  "NoticePeriod": 0,
+  "PlannedInvoiceDateOffset": 0,
+  "NumberOfYearsToCreateBasisFor": 0,
+  "CreateAgreementBasis": false,
+  "Rows": null,
+  "LifeCycleState": 0,
+  "Factoring": false,
+  "Bases": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Sales.SalesAgreement.html">https://api.monitor.se/api/Monitor.API.Sales.SalesAgreement.html</a><br><span class="badge">Sales</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

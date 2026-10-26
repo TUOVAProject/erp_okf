@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Permissions · Monitor ERP API</title>
+<meta name="description" content="Which Monitor permission each documented endpoint requires.">
+<link rel="stylesheet" href="../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../index.html">Monitor ERP API</a>
+  <span class="crumb">Permissions</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../index.html">Overview</a>
+<a href="../about.html">About this bundle</a>
+<a href="../modules/index.html">All modules</a>
+<a href="../entities/index.html">All entities</a>
+<a href="../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../guides/core-entities.html">Core entities</a>
+<a href="../guides/querying.html">Querying the Monitor API</a>
+<a href="../guides/naming-conventions.html">Naming conventions</a>
+<a href="../guides/relationships.html">How entities relate</a>
+<a href="../guides/permissions.html" aria-current="page">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="permissions">Permissions</h1>
+<p>86 distinct permission strings guard the documented endpoints. 50 pages declare none (payload types and a few entities).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Entities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create and handle all monitoring tasks</td>
+<td><a class="chip" href="../entities/Common/MonitoringTaskRecipient.html">MonitoringTaskRecipients</a><a class="chip" href="../entities/Common/MonitoringTaskRow.html">MonitoringTaskRows</a><a class="chip" href="../entities/Common/MonitoringTask.html">MonitoringTasks</a></td>
+</tr>
+<tr>
+<td>Create new alloy codes</td>
+<td><a class="chip" href="../entities/Inventory/AlloyQuantity.html">AlloyQuantities</a></td>
+</tr>
+<tr>
+<td>Create new customer</td>
+<td><a class="chip" href="../entities/Sales/CreateCustomerEmployeeSpan.html">CreateCustomerEmployeeSpan</a></td>
+</tr>
+<tr>
+<td>Modify settings for file viewer</td>
+<td><a class="chip" href="../entities/Sales/CountryDocumentSettings.html">CountryDocumentSettings</a></td>
+</tr>
+<tr>
+<td>Report activity for any user</td>
+<td><a class="chip" href="../entities/Common/ProjectCostReportingEntry.html">ProjectCostReportingEntries</a></td>
+</tr>
+<tr>
+<td>Report stock count</td>
+<td><a class="chip" href="../entities/Inventory/PhysicalInventoryList.html">PhysicalInventoryLists</a><a class="chip" href="../entities/Inventory/PhysicalInventoryRow.html">PhysicalInventoryRows</a></td>
+</tr>
+<tr>
+<td>Show ABC codes</td>
+<td><a class="chip" href="../entities/Inventory/AbcCode.html">AbcCodes</a></td>
+</tr>
+<tr>
+<td>Show Activity list – Project</td>
+<td><a class="chip" href="../entities/Common/DelegatedWork.html">DelegatedWork</a><a class="chip" href="../entities/Common/ProjectActivity.html">ProjectActivities</a><a class="chip" href="../entities/Common/ProjectActivityRelation.html">ProjectActivityRelations</a><a class="chip" href="../entities/Common/ProjectPhase.html">ProjectPhases</a></td>
+</tr>
+<tr>
+<td>Show CN codes</td>
+<td><a class="chip" href="../entities/Common/StatisticalGoodsCode.html">StatisticalGoodsCodes</a></td>
+</tr>
+<tr>
+<td>Show EDI settings</td>
+<td><a class="chip" href="../entities/Common/EdiBehavior.html">EdiBehaviors</a></td>
+</tr>
+<tr>
+<td>Show VAT settings</td>
+<td><a class="chip" href="../entities/Common/VatGroup.html">VatGroups</a><a class="chip" href="../entities/Common/VatRate.html">VatRates</a></td>
+</tr>
+<tr>
+<td>Show accounting year</td>
+<td><a class="chip" href="../entities/Accounting/AccountingYearPeriod.html">AccountingYearPeriods</a><a class="chip" href="../entities/Accounting/AccountingYear.html">AccountingYears</a><a class="chip" href="../entities/Accounting/AccountYearSettingCodingDimensionAvailability.html">AccountYearSettingCodingDimensionAvailabilities</a><a class="chip" href="../entities/Accounting/AccountYearSetting.html">AccountYearSettings</a></td>
+</tr>
+<tr>
+<td>Show accounts payable</td>
+<td><a class="chip" href="../entities/Accounting/AccountsPayableCashDiscountLevel.html">AccountsPayableCashDiscountLevels</a><a class="chip" href="../entities/Accounting/AccountsPayable.html">AccountsPayables</a><a class="chip" href="../entities/Accounting/OutgoingPayment.html">OutgoingPayments</a></td>
+</tr>
+<tr>
+<td>Show accounts receivable</td>
+<td><a class="chip" href="../entities/Accounting/AccountsReceivableCashDiscountLevel.html">AccountsReceivableCashDiscountLevels</a><a class="chip" href="../entities/Accounting/AccountsReceivable.html">AccountsReceivables</a><a class="chip" href="../entities/Accounting/IncomingPayment.html">IncomingPayments</a></td>
+</tr>
+<tr>
+<td>Show accrual</td>
+<td><a class="chip" href="../entities/Accounting/AccrualAccountingLedger.html">AccrualAccountingLedgers</a><a class="chip" href="../entities/Accounting/AccrualAccountingRow.html">AccrualAccountingRows</a><a class="chip" href="../entities/Accounting/AccrualAccounting.html">AccrualAccountings</a></td>
+</tr>
+<tr>
+<td>Show agreement</td>
+<td><a class="chip" href="../entities/Sales/SalesAgreementBasis.html">SalesAgreementBases</a><a class="chip" href="../entities/Sales/SalesAgreementBasisRow.html">SalesAgreementBasisRows</a><a class="chip" href="../entities/Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a><a class="chip" href="../entities/Sales/SalesAgreementRow.html">SalesAgreementRows</a><a class="chip" href="../entities/Sales/SalesAgreement.html">SalesAgreements</a><a class="chip" href="../entities/Sales/SalesAgreementType.html">SalesAgreementTypes</a></td>
+</tr>
+<tr>
+<td>Show allocation keys</td>
+<td><a class="chip" href="../entities/Accounting/AllocationKeyResultRow.html">AllocationKeyResultRows</a><a class="chip" href="../entities/Accounting/AllocationKey.html">AllocationKeys</a></td>
+</tr>
+<tr>
+<td>Show alloy codes</td>
+<td><a class="chip" href="../entities/Inventory/Alloy.html">Alloys</a></td>
+</tr>
+<tr>
+<td>Show arrival</td>
+<td><a class="chip" href="../entities/Purchase/PurchaseOrderAdviceRowProductRecord.html">PurchaseOrderAdviceRowProductRecords</a><a class="chip" href="../entities/Purchase/PurchaseOrderAdviceRow.html">PurchaseOrderAdviceRows</a><a class="chip" href="../entities/Purchase/PurchaseOrderAdvice.html">PurchaseOrderAdvices</a></td>
+</tr>
+<tr>
+<td>Show attachment types</td>
+<td><a class="chip" href="../entities/Purchase/EimDocumentType.html">EimDocumentTypes</a></td>
+</tr>
+<tr>
+<td>Show automatic allocations</td>
+<td><a class="chip" href="../entities/Accounting/AutoAllocation.html">AutoAllocations</a></td>
+</tr>
+<tr>
+<td>Show balance information</td>
+<td><a class="chip" href="../entities/Accounting/BalanceRowDay.html">BalanceRowDays</a><a class="chip" href="../entities/Accounting/Balance.html">Balances</a></td>
+</tr>
+<tr>
+<td>Show bank settings</td>
+<td><a class="chip" href="../entities/Accounting/BankAccount.html">BankAccounts</a><a class="chip" href="../entities/Common/CentralBankCode.html">CentralBankCodes</a><a class="chip" href="../entities/Common/WriteOffCode.html">WriteOffCodes</a></td>
+</tr>
+<tr>
+<td>Show basic data for attendance</td>
+<td><a class="chip" href="../entities/TimeRecording/AbsenceCode.html">AbsenceCodes</a><a class="chip" href="../entities/TimeRecording/AdditionRecording.html">AdditionRecordings</a><a class="chip" href="../entities/TimeRecording/AttendanceAddition.html">AttendanceAdditions</a><a class="chip" href="../entities/TimeRecording/AttendanceGroupSettings.html">AttendanceGroupSettings</a><a class="chip" href="../entities/TimeRecording/IndirectWorkCode.html">IndirectWorkCodes</a><a class="chip" href="../entities/TimeRecording/OvertimeType.html">OvertimeTypes</a><a class="chip" href="../entities/TimeRecording/SalaryType.html">SalaryTypes</a><a class="chip" href="../entities/TimeRecording/Schedule.html">Schedules</a><a class="chip" href="../entities/TimeRecording/Schedule_Obsolete.html">Shedules</a><a class="chip" href="../entities/TimeRecording/WorkshopScheduleSalaryTypeRow.html">WorkshopScheduleSalaryTypeRows</a><a class="chip" href="../entities/TimeRecording/WorkshopScheduleSalaryType.html">WorkshopScheduleSalaryTypes</a></td>
+</tr>
+<tr>
+<td>Show basic data for budget</td>
+<td><a class="chip" href="../entities/Accounting/AccountingBudgetType.html">AccountingBudgetTypes</a><a class="chip" href="../entities/Accounting/BudgetChart.html">BudgetCharts</a></td>
+</tr>
+<tr>
+<td>Show basic data for case</td>
+<td><a class="chip" href="../entities/Inventory/CaseEntryAdditionalCost.html">CaseEntryAdditionalCost</a><a class="chip" href="../entities/Inventory/CaseManagementCost.html">CaseManagementCost</a><a class="chip" href="../entities/Inventory/CaseManagementTemplateCost.html">CaseManagementTemplateCosts</a><a class="chip" href="../entities/Inventory/CaseManagementTemplateNode.html">CaseManagementTemplateNodes</a><a class="chip" href="../entities/Inventory/CaseManagementTemplate.html">CaseManagementTemplates</a><a class="chip" href="../entities/Inventory/CaseManagementType.html">CaseManagementType</a></td>
+</tr>
+<tr>
+<td>Show basic data for fixed assets register</td>
+<td><a class="chip" href="../entities/Accounting/FixedAssetGroup.html">FixedAssetGroups</a></td>
+</tr>
+<tr>
+<td>Show basic data for part</td>
+<td><a class="chip" href="../entities/Inventory/PackageType.html">PackageTypes</a><a class="chip" href="../entities/Inventory/PartActivityType.html">PartActivityTypes</a><a class="chip" href="../entities/Inventory/PartCode.html">PartCodes</a><a class="chip" href="../entities/Inventory/PartIdentityType.html">PartIdentityTypes</a><a class="chip" href="../entities/Inventory/PartPurchaseExpenseValues.html">PartPurchaseExpenseValues</a><a class="chip" href="../entities/Inventory/PartTemplate.html">PartTemplates</a><a class="chip" href="../entities/Inventory/SalesForecastRow.html">SalesForecastRows</a><a class="chip" href="../entities/Inventory/SalesForecast.html">SalesForecasts</a><a class="chip" href="../entities/Inventory/StockTransaction.html">StockTransactions</a><a class="chip" href="../entities/Common/TariffAndServiceCode.html">TariffAndServiceCodes</a></td>
+</tr>
+<tr>
+<td>Show basic data for project</td>
+<td><a class="chip" href="../entities/Common/ProjectActivityType.html">ProjectActivityTypes</a><a class="chip" href="../entities/Common/ProjectGroup.html">ProjectGroups</a><a class="chip" href="../entities/Common/ProjectPhaseType.html">ProjectPhaseTypes</a><a class="chip" href="../entities/Common/ProjectType.html">ProjectTypes</a></td>
+</tr>
+<tr>
+<td>Show blanket order</td>
+<td><a class="chip" href="../entities/Purchase/BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a><a class="chip" href="../entities/Purchase/BlanketOrderPurchase.html">BlanketOrderPurchases</a><a class="chip" href="../entities/Purchase/BlanketOrderPurchaseType.html">BlanketOrderPurchaseTypes</a><a class="chip" href="../entities/Sales/BlanketOrderSales.html">BlanketOrderSales</a><a class="chip" href="../entities/Sales/BlanketOrderSalesRow.html">BlanketOrderSalesRows</a><a class="chip" href="../entities/Sales/BlanketOrderSalesType.html">BlanketOrderSalesTypes</a></td>
+</tr>
+<tr>
+<td>Show budget</td>
+<td><a class="chip" href="../entities/Accounting/AccountingBudgetPeriod.html">AccountingBudgetPeriods</a><a class="chip" href="../entities/Accounting/AccountingBudget.html">AccountingBudgets</a></td>
+</tr>
+<tr>
+<td>Show business opportunity</td>
+<td><a class="chip" href="../entities/Sales/BusinessOpportunity.html">BusinessOpportunities</a><a class="chip" href="../entities/Sales/BusinessOpportunityActivity.html">BusinessOpportunityActivities</a><a class="chip" href="../entities/Sales/BusinessOpportunityActivityTemplateRow.html">BusinessOpportunityActivityTemplateRows</a><a class="chip" href="../entities/Sales/BusinessOpportunityActivityTemplate.html">BusinessOpportunityActivityTemplates</a><a class="chip" href="../entities/Sales/BusinessOpportunityGroup.html">BusinessOpportunityGroups</a><a class="chip" href="../entities/Sales/BusinessOpportunityReference.html">BusinessOpportunityReferences</a><a class="chip" href="../entities/Sales/BusinessOpportunitySalesProcessStep.html">BusinessOpportunitySalesProcessSteps</a><a class="chip" href="../entities/Sales/BusinessOpportunityType.html">BusinessOpportunityTypes</a><a class="chip" href="../entities/Sales/SalesProcessStep.html">SalesProcessSteps</a><a class="chip" href="../entities/Sales/SalesProcessTemplateRow.html">SalesProcessTemplateRows</a><a class="chip" href="../entities/Sales/SalesProcessTemplate.html">SalesProcessTemplates</a><a class="chip" href="../entities/Sales/SellerGroup.html">SellerGroups</a></td>
+</tr>
+<tr>
+<td>Show calculation mark-up</td>
+<td><a class="chip" href="../entities/Inventory/ProfitMarkup.html">ProfitMarkups</a><a class="chip" href="../entities/Inventory/SalesOverheadMarkup.html">SalesOverheadMarkups</a><a class="chip" href="../entities/Inventory/StorageOverheadMarkup.html">StorageOverheadMarkups</a></td>
+</tr>
+<tr>
+<td>Show calendar</td>
+<td><a class="chip" href="../entities/Common/Calendar.html">Calendars</a></td>
+</tr>
+<tr>
+<td>Show case</td>
+<td><a class="chip" href="../entities/Inventory/CaseEntry.html">CaseEntry</a><a class="chip" href="../entities/Inventory/CaseEntryActivity.html">CaseEntryActivities</a><a class="chip" href="../entities/Inventory/CaseEntryLink.html">CaseEntryLinks</a><a class="chip" href="../entities/Inventory/CasePartLink.html">CaseEntryPartLinks</a><a class="chip" href="../entities/Inventory/CaseEntryPhase.html">CaseEntryPhases</a><a class="chip" href="../entities/Inventory/CaseManagementActivity.html">CaseManagementActivities</a><a class="chip" href="../entities/Inventory/CaseManagementPhase.html">CaseManagementPhases</a></td>
+</tr>
+<tr>
+<td>Show cause codes</td>
+<td><a class="chip" href="../entities/Common/ReasonCodeDebitNote.html">ReasonCodeDebitNotes</a><a class="chip" href="../entities/Sales/ReasonCodeLostQuote.html">ReasonCodeLostQuotes</a><a class="chip" href="../entities/Common/ReasonCode.html">ReasonCodes</a><a class="chip" href="../entities/Manufacturing/ReasonCodeTimeConsumption.html">ReasonCodeTimeConsumptions</a><a class="chip" href="../entities/Inventory/UnplannedStockMovementReasonCode.html">UnplannedStockMovementReasonCodes</a></td>
+</tr>
+<tr>
+<td>Show changelog</td>
+<td><a class="chip" href="../entities/Common/EntityChangeLog.html">EntityChangeLogs</a><a class="chip" href="../entities/Common/EntityPropertyChange.html">EntityPropertyChanges</a></td>
+</tr>
+<tr>
+<td>Show chart of accounts</td>
+<td><a class="chip" href="../entities/Accounting/Account.html">Accounts</a><a class="chip" href="../entities/Sales/CustomerAccountGroup.html">CustomerAccountGroups</a><a class="chip" href="../entities/Accounting/StandardAccount.html">StandardAccounts</a><a class="chip" href="../entities/Purchase/SupplierAccountGroup.html">SupplierAccountGroups</a></td>
+</tr>
+<tr>
+<td>Show company information</td>
+<td><a class="chip" href="../entities/Common/Company.html">Companies</a><a class="chip" href="../entities/Common/Warehouse.html">Warehouses</a></td>
+</tr>
+<tr>
+<td>Show connection</td>
+<td><a class="chip" href="../entities/Common/ConnectionProfile.html">ConnectionProfiles</a></td>
+</tr>
+<tr>
+<td>Show countries</td>
+<td><a class="chip" href="../entities/Common/Country.html">Countries</a></td>
+</tr>
+<tr>
+<td>Show currencies</td>
+<td><a class="chip" href="../entities/Common/Currency.html">Currencies</a><a class="chip" href="../entities/Common/CurrencyExchangeRateChangeLog.html">CurrencyExchangeRateChangeLogs</a><a class="chip" href="../entities/Common/CurrencyExchangeRate.html">CurrencyExchangeRates</a><a class="chip" href="../entities/Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+</tr>
+<tr>
+<td>Show customer</td>
+<td><a class="chip" href="../entities/Sales/CustomerCountryDocumentSettings.html">CustomerCountryDocumentSettings</a><a class="chip" href="../entities/Sales/CustomerDistrict.html">CustomerDistricts</a><a class="chip" href="../entities/Sales/CustomerEmployeeSpan.html">CustomerEmployeeSpans</a><a class="chip" href="../entities/Sales/CustomerPartLink.html">CustomerPartLinks</a><a class="chip" href="../entities/Sales/CustomerRelationshipActivityType.html">CustomerRelationshipActivityTypes</a><a class="chip" href="../entities/Sales/CustomerRelationshipManagementActivity.html">CustomerRelationshipManagementActivities</a><a class="chip" href="../entities/Sales/Customer.html">Customers</a><a class="chip" href="../entities/Sales/CustomerStatus.html">CustomerStatuses</a><a class="chip" href="../entities/Sales/CustomerType.html">CustomerTypes</a><a class="chip" href="../entities/Sales/OtherCustomerNumber.html">OtherCustomerNumbers</a><a class="chip" href="../entities/Common/Reseller.html">Resellers</a></td>
+</tr>
+<tr>
+<td>Show customer orders</td>
+<td><a class="chip" href="../entities/Sales/CreateSalesPickingList.html">CreateSalesPickingList</a><a class="chip" href="../entities/Sales/CustomerOrderActivity.html">CustomerOrderActivities</a><a class="chip" href="../entities/Sales/CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a><a class="chip" href="../entities/Sales/CustomerOrderInvoiceOrderRowDiscount.html">CustomerOrderInvoiceOrderRowDiscounts</a><a class="chip" href="../entities/Sales/CustomerOrderInvoiceRow.html">CustomerOrderInvoiceRows</a><a class="chip" href="../entities/Sales/CustomerOrderInvoice.html">CustomerOrderInvoices</a><a class="chip" href="../entities/Sales/CustomerOrderOrderRowDiscount.html">CustomerOrderOrderRowDiscounts</a><a class="chip" href="../entities/Sales/CustomerOrderPaymentPlanRow.html">CustomerOrderPaymentPlanRows</a><a class="chip" href="../entities/Sales/CustomerOrderRowInflow.html">CustomerOrderRowInflows</a><a class="chip" href="../entities/Sales/CustomerOrderRow.html">CustomerOrderRows</a><a class="chip" href="../entities/Sales/CustomerOrder.html">CustomerOrders</a><a class="chip" href="../entities/Sales/CustomerOrderShippingInformationRow.html">CustomerOrderShippingInformationRows</a><a class="chip" href="../entities/Sales/GetWithdrawalInformation.html">GetWithdrawalInformation</a><a class="chip" href="../entities/Sales/InvoiceLog.html">InvoiceLogs</a><a class="chip" href="../entities/Sales/PackageRowPartLocation.html">PackageRowPartLocations</a><a class="chip" href="../entities/Sales/PackageRow.html">PackageRows</a><a class="chip" href="../entities/Sales/RemoveSalesPickingList.html">RemoveSalesPickingList</a><a class="chip" href="../entities/Sales/SalesPickingListRowQuantity.html">SalesPickingListRowQuantities</a><a class="chip" href="../entities/Sales/SalesPickingList.html">SalesPickingLists</a></td>
+</tr>
+<tr>
+<td>Show departments</td>
+<td><a class="chip" href="../entities/Common/Department.html">Departments</a></td>
+</tr>
+<tr>
+<td>Show depreciation</td>
+<td><a class="chip" href="../entities/Accounting/FixedAssetDepreciation.html">FixedAssetDepreciations</a></td>
+</tr>
+<tr>
+<td>Show dimensions/dimension codes</td>
+<td><a class="chip" href="../entities/Accounting/CodingDimension.html">CodingDimensions</a><a class="chip" href="../entities/Accounting/CodingElement.html">CodingElements</a><a class="chip" href="../entities/Accounting/CodingEntry.html">CodingEntries</a><a class="chip" href="../entities/Accounting/CodingEntryElement.html">CodingEntryElements</a></td>
+</tr>
+<tr>
+<td>Show discount categories</td>
+<td><a class="chip" href="../entities/Common/DiscountCategory.html">DiscountCategories</a><a class="chip" href="../entities/Common/DiscountCategoryRow.html">DiscountCategoryRows</a></td>
+</tr>
+<tr>
+<td>Show discounts</td>
+<td><a class="chip" href="../entities/Common/Discount.html">Discounts</a></td>
+</tr>
+<tr>
+<td>Show extra fields</td>
+<td><a class="chip" href="../entities/Common/ExtraFieldGroup.html">ExtraFieldGroups</a><a class="chip" href="../entities/Common/ExtraFieldOptionTemplate.html">ExtraFieldOptionTemplates</a><a class="chip" href="../entities/Common/ExtraField.html">ExtraFields</a><a class="chip" href="../entities/Common/ExtraFieldTemplate.html">ExtraFieldTemplates</a></td>
+</tr>
+<tr>
+<td>Show fixed assets objects</td>
+<td><a class="chip" href="../entities/Accounting/FixedAsset.html">FixedAssets</a><a class="chip" href="../entities/Accounting/FixedAssetSale.html">FixedAssetSales</a></td>
+</tr>
+<tr>
+<td>Show inquiry</td>
+<td><a class="chip" href="../entities/Purchase/Inquiry.html">Inquiries</a><a class="chip" href="../entities/Purchase/InquiryRow.html">InquiryRows</a></td>
+</tr>
+<tr>
+<td>Show invoicing plan</td>
+<td><a class="chip" href="../entities/Common/PaymentPlanTemplateRow.html">PaymentPlanTemplateRows</a><a class="chip" href="../entities/Common/PaymentPlanTemplate.html">PaymentPlanTemplates</a></td>
+</tr>
+<tr>
+<td>Show languages</td>
+<td><a class="chip" href="../entities/Common/LanguageCode.html">LanguageCodes</a></td>
+</tr>
+<tr>
+<td>Show locations</td>
+<td><a class="chip" href="../entities/Inventory/Location.html">Locations</a></td>
+</tr>
+<tr>
+<td>Show maintenance plan</td>
+<td><a class="chip" href="../entities/Manufacturing/MaintenanceReportingRow.html">MaintenanceReportingRows</a><a class="chip" href="../entities/Manufacturing/MaintenanceReporting.html">MaintenanceReportings</a><a class="chip" href="../entities/Manufacturing/MaintenanceReportingSelectionRow.html">MaintenanceReportingSelectionRows</a></td>
+</tr>
+<tr>
+<td>Show manufacturing orders</td>
+<td><a class="chip" href="../entities/Manufacturing/ManualOperationStatus.html">ManualOperationStatuses</a><a class="chip" href="../entities/Manufacturing/ManufacturingOrderMaterial.html">ManufacturingOrderMaterials</a><a class="chip" href="../entities/Manufacturing/ManufacturingOrderNodeDrawingRevision.html">ManufacturingOrderNodeDrawingRevisions</a><a class="chip" href="../entities/Manufacturing/ManufacturingOrderNodeDrawing.html">ManufacturingOrderNodeDrawings</a><a class="chip" href="../entities/Manufacturing/ManufacturingOrderNode.html">ManufacturingOrderNodes</a><a class="chip" href="../entities/Manufacturing/ManufacturingOrderOperationControlDataRow.html">ManufacturingOrderOperationControlDataRows</a><a class="chip" href="../entities/Manufacturing/ManufacturingOrderOperationReporting.html">ManufacturingOrderOperationReportings</a><a class="chip" href="../entities/Manufacturing/ManufacturingOrderOperation.html">ManufacturingOrderOperations</a><a class="chip" href="../entities/Manufacturing/ManufacturingOrder.html">ManufacturingOrders</a><a class="chip" href="../entities/Manufacturing/ManufacturingPickingListMaterial.html">ManufacturingPickingListMaterials</a><a class="chip" href="../entities/Manufacturing/ManufacturingPickingList.html">ManufacturingPickingLists</a><a class="chip" href="../entities/Manufacturing/OperationRowControlDataRow.html">OperationRowControlDataRows</a><a class="chip" href="../entities/Manufacturing/OrderQuantityManufacturingOrderOperation.html">OrderQuantityManufacturingOrderOperations</a><a class="chip" href="../entities/Manufacturing/OrderQuantityManufacturingOrder.html">OrderQuantityManufacturingOrders</a></td>
+</tr>
+<tr>
+<td>Show measuring templates</td>
+<td><a class="chip" href="../entities/Common/MeasuringTemplate.html">MeasuringTemplates</a></td>
+</tr>
+<tr>
+<td>Show opening balance</td>
+<td><a class="chip" href="../entities/Accounting/OpeningBalance.html">OpeningBalances</a></td>
+</tr>
+<tr>
+<td>Show order types</td>
+<td><a class="chip" href="../entities/Sales/CustomerOrderType.html">CustomerOrderTypes</a><a class="chip" href="../entities/Purchase/InquiryType.html">InquiryTypes</a><a class="chip" href="../entities/Manufacturing/ManufacturingOrderType.html">ManufacturingOrderTypes</a><a class="chip" href="../entities/Purchase/PurchaseOrderType.html">PurchaseOrderTypes</a><a class="chip" href="../entities/Sales/QuoteType.html">QuoteTypes</a></td>
+</tr>
+<tr>
+<td>Show package type/goods type</td>
+<td><a class="chip" href="../entities/Inventory/GoodsType.html">GoodsTypes</a></td>
+</tr>
+<tr>
+<td>Show part</td>
+<td><a class="chip" href="../entities/Manufacturing/AlternativeOperationRow.html">AlternativeOperationRows</a><a class="chip" href="../entities/Manufacturing/DrawingRevision.html">DrawingRevisions</a><a class="chip" href="../entities/Manufacturing/Drawing.html">Drawings</a><a class="chip" href="../entities/Inventory/HyperLink.html">HyperLinks</a><a class="chip" href="../entities/Manufacturing/ReferenceNumber.html">MaterialRowReferenceNumbers</a><a class="chip" href="../entities/Manufacturing/MaterialRow.html">MaterialRows</a><a class="chip" href="../entities/Manufacturing/OperationRow.html">OperationRows</a><a class="chip" href="../entities/Inventory/OrderQuantityTemplate.html">OrderQuantityTemplates</a><a class="chip" href="../entities/Inventory/PartActivity.html">PartActivities</a><a class="chip" href="../entities/Common/PartConfigurationComponentSnapshot.html">PartConfigurationComponentSnapshots</a><a class="chip" href="../entities/Common/PartConfigurationPreset.html">PartConfigurationPresets</a><a class="chip" href="../entities/Common/PartConfigurationResult.html">PartConfigurationResults</a><a class="chip" href="../entities/Common/PartConfiguration.html">PartConfigurations</a><a class="chip" href="../entities/Common/PartConfigurationSelectionGroupResult.html">PartConfigurationSelectionGroupResults</a><a class="chip" href="../entities/Common/PartConfigurationTemplate.html">PartConfigurationTemplates</a><a class="chip" href="../entities/Inventory/PartDefaultTransportLabel.html">PartDefaultTransportLabels</a><a class="chip" href="../entities/Inventory/PartImage.html">PartImages</a><a class="chip" href="../entities/Inventory/PartLocationProductRecord.html">PartLocationProductRecords</a><a class="chip" href="../entities/Inventory/PartLocation.html">PartLocations</a><a class="chip" href="../entities/Inventory/PartOtherIdentity.html">PartOtherIdentities</a><a class="chip" href="../entities/Inventory/PartPlanningInformation.html">PartPlanningInformation</a><a class="chip" href="../entities/Inventory/PartPurchaseControlDataRow.html">PartPurchaseControlDataRows</a><a class="chip" href="../entities/Inventory/Part.html">Parts</a><a class="chip" href="../entities/Common/PartUnitUsage.html">PartUnitUsages</a><a class="chip" href="../entities/Manufacturing/Preparation.html">Preparations</a><a class="chip" href="../entities/Inventory/PriceChangeLog.html">PriceChangeLogs</a><a class="chip" href="../entities/Inventory/QuantityChange.html">QuantityChanges</a><a class="chip" href="../entities/Common/RemotePartConfigurationRow.html">RemotePartConfigurationRows</a><a class="chip" href="../entities/Common/RemotePartConfiguration.html">RemotePartConfigurations</a><a class="chip" href="../entities/Common/Revision.html">Revisions</a><a class="chip" href="../entities/Sales/SalesPrice.html">SalesPrices</a><a class="chip" href="../entities/Common/StaggeredPrice.html">StaggeredPrices</a><a class="chip" href="../entities/Inventory/StockBalanceChange.html">StockBalanceChanges</a><a class="chip" href="../entities/Common/Tag.html">Tags</a></td>
+</tr>
+<tr>
+<td>Show paths</td>
+<td><a class="chip" href="../entities/Common/FilePath.html">FilePaths</a></td>
+</tr>
+<tr>
+<td>Show person</td>
+<td><a class="chip" href="../entities/Common/EmploymentPeriod.html">EmploymentPeriods</a><a class="chip" href="../entities/Common/PersonManufacturingPrintSettings.html">PersonManufacturingPrintSettings</a><a class="chip" href="../entities/Common/PersonRelative.html">PersonRelatives</a><a class="chip" href="../entities/Common/Person.html">Persons</a><a class="chip" href="../entities/TimeRecording/PersonWorkCenter.html">PersonWorkCenters</a><a class="chip" href="../entities/TimeRecording/PlannedAbsence.html">PlannedAbsences</a></td>
+</tr>
+<tr>
+<td>Show posting matrix</td>
+<td><a class="chip" href="../entities/Common/ProductGroup.html">ProductGroups</a></td>
+</tr>
+<tr>
+<td>Show pre-calculation</td>
+<td><a class="chip" href="../entities/Common/CompanyEmissionDetail.html">CompanyEmissionDetails</a><a class="chip" href="../entities/Common/CompanyOverheadType.html">CompanyOverheadTypes</a></td>
+</tr>
+<tr>
+<td>Show price lists</td>
+<td><a class="chip" href="../entities/Common/PriceList.html">PriceLists</a></td>
+</tr>
+<tr>
+<td>Show probability codes</td>
+<td><a class="chip" href="../entities/Common/Probability.html">Probabilities</a></td>
+</tr>
+<tr>
+<td>Show projects</td>
+<td><a class="chip" href="../entities/Common/ProjectActivityCalendarAppointment.html">ProjectActivityCalendarAppointments</a><a class="chip" href="../entities/Common/ProjectAggregate.html">ProjectAggregates</a><a class="chip" href="../entities/Common/ProjectCostBudget.html">ProjectCostBudgets</a><a class="chip" href="../entities/Common/ProjectCostForecast.html">ProjectCostForecasts</a><a class="chip" href="../entities/Common/ProjectCostType.html">ProjectCostTypes</a><a class="chip" href="../entities/Common/Project.html">Projects</a></td>
+</tr>
+<tr>
+<td>Show purchase orders</td>
+<td><a class="chip" href="../entities/Sales/OrderQuantityCustomerOrder.html">OrderQuantityCustomerOrders</a><a class="chip" href="../entities/Purchase/OrderQuantityPurchaseOrder.html">OrderQuantityPurchaseOrders</a><a class="chip" href="../entities/Purchase/PurchaseOrderDelivery.html">PurchaseOrderDeliveries</a><a class="chip" href="../entities/Purchase/PurchaseOrderDeliveryRowQuantity.html">PurchaseOrderDeliveryRowQuantities</a><a class="chip" href="../entities/Purchase/PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a><a class="chip" href="../entities/Purchase/PurchaseOrderInvoiceRow.html">PurchaseOrderInvoiceRows</a><a class="chip" href="../entities/Purchase/PurchaseOrderInvoice.html">PurchaseOrderInvoices</a><a class="chip" href="../entities/Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a><a class="chip" href="../entities/Purchase/PurchaseOrder.html">PurchaseOrders</a></td>
+</tr>
+<tr>
+<td>Show quote</td>
+<td><a class="chip" href="../entities/Sales/QuoteActivity.html">QuoteActivities</a><a class="chip" href="../entities/Sales/QuoteOrderRowDiscount.html">QuoteOrderRowDiscounts</a><a class="chip" href="../entities/Sales/QuoteRow.html">QuoteRows</a><a class="chip" href="../entities/Sales/Quote.html">Quotes</a><a class="chip" href="../entities/Sales/RelatedQuoteEntry.html">RelatedQuoteEntries</a><a class="chip" href="../entities/Sales/RelatedQuote.html">RelatedQuotes</a></td>
+</tr>
+<tr>
+<td>Show recording items</td>
+<td><a class="chip" href="../entities/TimeRecording/AttendanceChart.html">AttendanceChart</a><a class="chip" href="../entities/TimeRecording/AttendanceInterval.html">AttendanceIntervals</a><a class="chip" href="../entities/TimeRecording/PersonTimeBank.html">PersonTimeBanks</a><a class="chip" href="../entities/TimeRecording/RecordingDay.html">RecordingDays</a><a class="chip" href="../entities/TimeRecording/StandbyWork.html">StandbyWorks</a><a class="chip" href="../entities/TimeRecording/TimeBank.html">TimeBanks</a><a class="chip" href="../entities/TimeRecording/WorkInterval.html">WorkIntervals</a></td>
+</tr>
+<tr>
+<td>Show rejection codes/cause codes</td>
+<td><a class="chip" href="../entities/Common/RejectionCodeItem.html">RejectionCodeItems</a></td>
+</tr>
+<tr>
+<td>Show serial number</td>
+<td><a class="chip" href="../entities/Inventory/AdditionalIdsRecord.html">AdditionalIDsRecords</a><a class="chip" href="../entities/Inventory/ProductRecordOperationReporting.html">ProductRecordOperationReportings</a><a class="chip" href="../entities/Inventory/ProductRecord.html">ProductRecords</a></td>
+</tr>
+<tr>
+<td>Show setting</td>
+<td><a class="chip" href="../entities/Common/OrderTransferSetting.html">OrderTransferSettings</a></td>
+</tr>
+<tr>
+<td>Show shipment</td>
+<td><a class="chip" href="../entities/Sales/ShipmentCustoms.html">ShipmentCustoms</a><a class="chip" href="../entities/Sales/ShipmentCustomsDocument.html">ShipmentCustomsDocuments</a><a class="chip" href="../entities/Sales/ShipmentCustomsRow.html">ShipmentCustomsRows</a><a class="chip" href="../entities/Sales/ShipmentInformationSource.html">ShipmentInformationSources</a><a class="chip" href="../entities/Sales/ShipmentPackageInformationPackageNumber.html">ShipmentPackageInformationPackageNumbers</a><a class="chip" href="../entities/Sales/ShipmentPackageInformation.html">ShipmentPackageInformations</a><a class="chip" href="../entities/Sales/Shipment.html">Shipments</a><a class="chip" href="../entities/Sales/ShippingService.html">ShippingServices</a><a class="chip" href="../entities/Sales/ShippingTemplate.html">ShippingTemplates</a></td>
+</tr>
+<tr>
+<td>Show supplier</td>
+<td><a class="chip" href="../entities/Purchase/OtherSupplierNumber.html">OtherSupplierNumbers</a><a class="chip" href="../entities/Purchase/SupplierAccount.html">SupplierAccounts</a><a class="chip" href="../entities/Purchase/SupplierDistrict.html">SupplierDistricts</a><a class="chip" href="../entities/Purchase/SupplierPartLink.html">SupplierPartLinks</a><a class="chip" href="../entities/Purchase/Supplier.html">Suppliers</a><a class="chip" href="../entities/Purchase/SupplierStatus.html">SupplierStatuses</a><a class="chip" href="../entities/Purchase/SupplierType.html">SupplierTypes</a></td>
+</tr>
+<tr>
+<td>Show supplier invoice</td>
+<td><a class="chip" href="../entities/Purchase/EimDocument.html">EimDocuments</a></td>
+</tr>
+<tr>
+<td>Show terms</td>
+<td><a class="chip" href="../entities/Common/DeliveryMethod.html">DeliveryMethods</a><a class="chip" href="../entities/Common/DeliveryTerm.html">DeliveryTerms</a><a class="chip" href="../entities/Common/DeliveryTime.html">DeliveryTimes</a><a class="chip" href="../entities/Purchase/PackingTerm.html">PackingTerms</a><a class="chip" href="../entities/Common/PaymentMethod.html">PaymentMethods</a><a class="chip" href="../entities/Common/PaymentTerm.html">PaymentTerms</a><a class="chip" href="../entities/Purchase/ResponseTime.html">ResponseTimes</a><a class="chip" href="../entities/Sales/ValidityTime.html">ValidityTimes</a></td>
+</tr>
+<tr>
+<td>Show transaction types</td>
+<td><a class="chip" href="../entities/Common/TransactionTypeIntrastat.html">TransactionTypeIntrastats</a></td>
+</tr>
+<tr>
+<td>Show transfer profile</td>
+<td><a class="chip" href="../entities/Common/TransferProfile.html">TransferProfiles</a></td>
+</tr>
+<tr>
+<td>Show units</td>
+<td><a class="chip" href="../entities/Common/Unit.html">Units</a></td>
+</tr>
+<tr>
+<td>Show user</td>
+<td><a class="chip" href="../entities/Common/ApplicationUserPrinter.html">ApplicationUserPrinters</a><a class="chip" href="../entities/Common/ApplicationUser.html">ApplicationUsers</a><a class="chip" href="../entities/Common/Permission.html">Permissions</a><a class="chip" href="../entities/Common/Role.html">Roles</a></td>
+</tr>
+<tr>
+<td>Show user rights groups</td>
+<td><a class="chip" href="../entities/Common/PermissionGroup.html">PermissionGroups</a><a class="chip" href="../entities/Common/WarehousePermission.html">WarehousePermissions</a></td>
+</tr>
+<tr>
+<td>Show voucher</td>
+<td><a class="chip" href="../entities/Accounting/VoucherRow.html">VoucherRows</a><a class="chip" href="../entities/Accounting/Voucher.html">Vouchers</a><a class="chip" href="../entities/Accounting/VoucherSeries.html">VoucherSeries</a></td>
+</tr>
+<tr>
+<td>Show work center</td>
+<td><a class="chip" href="../entities/Manufacturing/ProductionCalendarException.html">ProductionCalendarExceptions</a><a class="chip" href="../entities/Manufacturing/WorkCenterCostFactorGroup.html">WorkCenterCostFactorGroups</a><a class="chip" href="../entities/Manufacturing/WorkCenterManufacturingPrintSettings.html">WorkCenterManufacturingPrintSettings</a><a class="chip" href="../entities/Manufacturing/WorkCenter.html">WorkCenters</a></td>
+</tr>
+</tbody>
+</table></div>
+<div class="page-meta"><span class="badge">guide</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../";</script>
+<script src="../assets/okf-index.js"></script>
+<script src="../assets/okf.js"></script>
+</body>
+</html>

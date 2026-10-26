@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeliveryAddresses · Monitor ERP API</title>
+<meta name="description" content="Represents a delivery address.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>DeliveryAddresses</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html" aria-current="location">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="deliveryaddresses">DeliveryAddresses</h1>
+<p>Represents a delivery address.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Common.html">Common</a></dd><dt>API class</dt><dd><code>DeliveryAddress</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Common/DeliveryAddresses</code></dd><dt>GUID</dt><dd><code>CE99DAB8-D95F-4DD5-9747-AEA02084F5B7</code></dd><dt>Introduced in</dt><dd>2.18</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the address.</td>
+</tr>
+<tr>
+<td class="prop"><code>Addressee</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 100</td>
+<td>The addressee of the address.</td>
+</tr>
+<tr>
+<td class="prop"><code>Field1</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The first field of the address.</td>
+</tr>
+<tr>
+<td class="prop"><code>Field2</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The second field of the address.</td>
+</tr>
+<tr>
+<td class="prop"><code>Field3</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The third field of the address.</td>
+</tr>
+<tr>
+<td class="prop"><code>Field4</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The fourth field of the address.</td>
+</tr>
+<tr>
+<td class="prop"><code>Field5</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The fifth field of the address.</td>
+</tr>
+<tr>
+<td class="prop"><code>Locality</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The locality of the address.</td>
+</tr>
+<tr>
+<td class="prop"><code>Region</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The region of the address.</td>
+</tr>
+<tr>
+<td class="prop"><code>PostalCode</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 10</td>
+<td>The postal code of the address.</td>
+</tr>
+<tr>
+<td class="prop"><code>AddressFormatType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The format type of the address.</td>
+</tr>
+<tr>
+<td class="prop"><code>CountryId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Country.html">Countries</a></td>
+<td></td>
+<td>References Countries .</td>
+</tr>
+<tr>
+<td class="prop"><code>LanguageId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="LanguageCode.html">LanguageCodes</a></td>
+<td></td>
+<td>The business key identifier of the language code. References LanguageCodes .</td>
+</tr>
+<tr>
+<td class="prop"><code>FormReportTranslationGroupId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the form report translation group. References FormReportTranslationGroup.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>PostalCodeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td><span class="badge dep">deprecated since 2.44</span></td>
+<td>The business key identifier of the postal code. References PostalCode. <em>(Unavailable)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>IsDefault</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if this is the default delivery address.</td>
+</tr>
+<tr>
+<td class="prop"><code>AddressId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Address.html">Addresses</a></td>
+<td></td>
+<td>References Addresses .</td>
+</tr>
+<tr>
+<td class="prop"><code>ConsigneeReferenceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="BusinessContactReference.html">BusinessContactReferences</a></td>
+<td></td>
+<td>References BusinessContactReferences .</td>
+</tr>
+<tr>
+<td class="prop"><code>ConsigneeReferenceName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The consignee reference name of the delivery address.</td>
+</tr>
+<tr>
+<td class="prop"><code>Destination</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The destination of the delivery address.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>DeliveryWeekdays</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>bitmask, enum, <span class="badge dep">deprecated since 2.18</span></td>
+<td>Specifies which days delivery can be made to the delivery address. <em>(Can be found under Warehouses)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryInstruction</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The instruction of delivery for the delivery address.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatRateId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="VatRate.html">VatRates</a></td>
+<td></td>
+<td>The business key identifier of the VatRate of the delivery address. References VatRates .</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomerAccountGroupId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Sales/CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td></td>
+<td>The business key identifier of the customer account group of the delivery address. References CustomerAccountGroups .</td>
+</tr>
+<tr>
+<td class="prop"><code>SupplierAccountGroupId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the supplier account group of the delivery address. References SupplierAccountGroup.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatGroupId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="VatGroup.html">VatGroups</a></td>
+<td></td>
+<td>The business key identifier of the VAT group that the delivery address belongs to. References VatGroups .</td>
+</tr>
+<tr>
+<td class="prop"><code>VatNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30, since 24.9</td>
+<td>Vat registration number to be set on delivery address</td>
+</tr>
+<tr>
+<td class="prop"><code>Warehouses</code></td>
+<td class="type"><code>DeliveryAddressWarehouseInformations[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="DeliveryAddressWarehouseInformation.html">DeliveryAddressWarehouseInformations</a></td>
+<td>expandable, collection, since 2.43</td>
+<td>The warehouse information that belongs to the delivery address.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>DeliveryWeekdays</code><span class="badge">bitmask — values combine</span><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Monday<span>=1</span></span><span class="ev">Tuesday<span>=2</span></span><span class="ev">Wednesday<span>=4</span></span><span class="ev">Thursday<span>=8</span></span><span class="ev">Friday<span>=16</span></span><span class="ev">Saturday<span>=32</span></span><span class="ev">Sunday<span>=64</span></span></div></li></ul>
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Common</strong></p>
+<ul>
+<li><a href="DeliveryAddressWarehouseInformation.html">DeliveryAddressWarehouseInformations</a> — <code>ParentId</code> (FK)</li>
+<li><a href="Warehouse.html">Warehouses</a> — <code>DeliveryAddresses</code> (expand)</li>
+</ul>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>DeliveryAddressId</code> (FK)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>DeliveryAddress</code> (expand)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>DeliveryAddressId</code> (FK)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>DeliveryAddresses</code> (expand)</li>
+</ul>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>ActiveDeliveryAddress</code> (expand)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>ActiveDeliveryAddressId</code> (FK)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>DeliveryAddresses</code> (expand)</li>
+<li><a href="../Sales/Shipment.html">Shipments</a> — <code>ActiveDeliveryAddressDeliveryAddress</code> (expand)</li>
+<li><a href="../Sales/Shipment.html">Shipments</a> — <code>ActiveDeliveryAddressDeliveryAddressId</code> (FK)</li>
+<li><a href="../Sales/Shipment.html">Shipments</a> — <code>ActiveFallbackDeliveryAddressDeliveryAddress</code> (expand)</li>
+<li><a href="../Sales/Shipment.html">Shipments</a> — <code>ActiveFallbackDeliveryAddressDeliveryAddressId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Addressee": null,
+  "Field1": null,
+  "Field2": null,
+  "Field3": null,
+  "Field4": null,
+  "Field5": null,
+  "Locality": null,
+  "Region": null,
+  "PostalCode": null,
+  "AddressFormatType": 0,
+  "CountryId": 0,
+  "LanguageId": 0,
+  "FormReportTranslationGroupId": 0,
+  "PostalCodeId": null,
+  "IsDefault": false,
+  "AddressId": 0,
+  "ConsigneeReferenceId": null,
+  "ConsigneeReferenceName": null,
+  "Destination": null,
+  "DeliveryWeekdays": 0,
+  "DeliveryInstruction": null,
+  "VatRateId": null,
+  "CustomerAccountGroupId": null,
+  "SupplierAccountGroupId": null,
+  "VatGroupId": null,
+  "VatNumber": null,
+  "Warehouses": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Common.DeliveryAddress.html">https://api.monitor.se/api/Monitor.API.Common.DeliveryAddress.html</a><br><span class="badge">Common</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

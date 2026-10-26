@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sales · Monitor ERP API</title>
+<meta name="description" content="Monitor ERP API module Sales.">
+<link rel="stylesheet" href="../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../index.html">Monitor ERP API</a>
+  <span class="crumb">Sales</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../index.html">Overview</a>
+<a href="../about.html">About this bundle</a>
+<a href="../modules/index.html">All modules</a>
+<a href="../entities/index.html">All entities</a>
+<a href="../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../guides/core-entities.html">Core entities</a>
+<a href="../guides/querying.html">Querying the Monitor API</a>
+<a href="../guides/naming-conventions.html">Naming conventions</a>
+<a href="../guides/relationships.html">How entities relate</a>
+<a href="../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../modules/Sales.html" aria-current="page">Sales<span class="count">76</span></a>
+<a href="../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#queryable-entities">Queryable entities</a>
+<a class="toc-h" href="#commands">Commands</a>
+<a class="toc-h" href="#payload-types">Payload types</a>
+<a class="toc-h" href="#depends-on-other-modules">Depends on other modules</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="sales">Sales</h1>
+<p>Monitor API module <code>Sales</code>: 70 queryable entities, 4 commands, 2 payload types.</p>
+<p>Full listing: <a href="../entities/Sales/index.html">Sales entities</a></p>
+<h2 id="queryable-entities">Queryable entities</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../entities/Sales/BlanketOrderSales.html">BlanketOrderSales</a></td>
+<td><code>/api/v1/Sales/BlanketOrderSales</code></td>
+<td>Represents a blanket order for sales.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/BlanketOrderSalesRow.html">BlanketOrderSalesRows</a></td>
+<td><code>/api/v1/Sales/BlanketOrderSalesRows</code></td>
+<td>Represents a blanket order row for sales.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/BlanketOrderSalesType.html">BlanketOrderSalesTypes</a></td>
+<td><code>/api/v1/Sales/BlanketOrderSalesTypes</code></td>
+<td>Represents a blanket order type for sales.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/BusinessOpportunity.html">BusinessOpportunities</a></td>
+<td><code>/api/v1/Sales/BusinessOpportunities</code></td>
+<td>Represents a business opportunity.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/BusinessOpportunityActivity.html">BusinessOpportunityActivities</a></td>
+<td><code>/api/v1/Sales/BusinessOpportunityActivities</code></td>
+<td>Represents a business opportunity activity.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/BusinessOpportunityActivityTemplateRow.html">BusinessOpportunityActivityTemplateRows</a></td>
+<td><code>/api/v1/Sales/BusinessOpportunityActivityTemplateRows</code></td>
+<td>Represents a business opportunity activity template row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/BusinessOpportunityActivityTemplate.html">BusinessOpportunityActivityTemplates</a></td>
+<td><code>/api/v1/Sales/BusinessOpportunityActivityTemplates</code></td>
+<td>Represents a business opportunity activity template.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/BusinessOpportunityGroup.html">BusinessOpportunityGroups</a></td>
+<td><code>/api/v1/Sales/BusinessOpportunityGroups</code></td>
+<td>Represents a business opportunity group.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/BusinessOpportunityReference.html">BusinessOpportunityReferences</a></td>
+<td><code>/api/v1/Sales/BusinessOpportunityReferences</code></td>
+<td>Represents a business opportunity reference.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/BusinessOpportunitySalesProcessStep.html">BusinessOpportunitySalesProcessSteps</a></td>
+<td><code>/api/v1/Sales/BusinessOpportunitySalesProcessSteps</code></td>
+<td>Represents a business opportunity sales process step.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/BusinessOpportunityType.html">BusinessOpportunityTypes</a></td>
+<td><code>/api/v1/Sales/BusinessOpportunityTypes</code></td>
+<td>Represents a business opportunity type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CountryDocumentSettings.html">CountryDocumentSettings</a></td>
+<td><code>/api/v1/Sales/CountryDocumentSettings</code></td>
+<td>Represents a country document setting.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td><code>/api/v1/Sales/CustomerAccountGroups</code></td>
+<td>Represents a customer account group.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerCountryDocumentSettings.html">CustomerCountryDocumentSettings</a></td>
+<td><code>/api/v1/Sales/CustomerCountryDocumentSettings</code></td>
+<td>Represents a customer country document setting.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerDistrict.html">CustomerDistricts</a></td>
+<td><code>/api/v1/Sales/CustomerDistricts</code></td>
+<td>Represents a customer district.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerEmployeeSpan.html">CustomerEmployeeSpans</a></td>
+<td><code>/api/v1/Sales/CustomerEmployeeSpans</code></td>
+<td>Represents a customer employee span.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerOrderActivity.html">CustomerOrderActivities</a></td>
+<td><code>/api/v1/Sales/CustomerOrderActivities</code></td>
+<td>Represents a customer order activity.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a></td>
+<td><code>/api/v1/Sales/CustomerOrderDeliveryRows</code></td>
+<td>Represents a customer delivery order row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerOrderInvoiceOrderRowDiscount.html">CustomerOrderInvoiceOrderRowDiscounts</a></td>
+<td><code>/api/v1/Sales/CustomerOrderInvoiceOrderRowDiscounts</code></td>
+<td>Represents a discount row for a customer order invoice row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerOrderInvoiceRow.html">CustomerOrderInvoiceRows</a></td>
+<td><code>/api/v1/Sales/CustomerOrderInvoiceRows</code></td>
+<td>Represents a customer order invoice row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerOrderInvoice.html">CustomerOrderInvoices</a></td>
+<td><code>/api/v1/Sales/CustomerOrderInvoices</code></td>
+<td>Represents a customer order invoice.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerOrderOrderRowDiscount.html">CustomerOrderOrderRowDiscounts</a></td>
+<td><code>/api/v1/Sales/CustomerOrderOrderRowDiscounts</code></td>
+<td>Represents a discount row for a customer order row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerOrderPaymentPlanRow.html">CustomerOrderPaymentPlanRows</a></td>
+<td><code>/api/v1/Sales/CustomerOrderPaymentPlanRows</code></td>
+<td>Represents a customer order payment plan row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerOrderRowInflow.html">CustomerOrderRowInflows</a></td>
+<td><code>/api/v1/Sales/CustomerOrderRowInflows</code></td>
+<td>Represents a customer order inflow row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerOrderRow.html">CustomerOrderRows</a></td>
+<td><code>/api/v1/Sales/CustomerOrderRows</code></td>
+<td>Represents a customer order row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerOrder.html">CustomerOrders</a></td>
+<td><code>/api/v1/Sales/CustomerOrders</code></td>
+<td>Represents a customer order.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerOrderShippingInformationRow.html">CustomerOrderShippingInformationRows</a></td>
+<td><code>/api/v1/Sales/CustomerOrderShippingInformationRows</code></td>
+<td>Represents a customer order shipping information row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerOrderType.html">CustomerOrderTypes</a></td>
+<td><code>/api/v1/Sales/CustomerOrderTypes</code></td>
+<td>Represents a customer order type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerPartLink.html">CustomerPartLinks</a></td>
+<td><code>/api/v1/Sales/CustomerPartLinks</code></td>
+<td>Represents a customer part link.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerRelationshipActivityType.html">CustomerRelationshipActivityTypes</a></td>
+<td><code>/api/v1/Sales/CustomerRelationshipActivityTypes</code></td>
+<td>Represents a customer relationship activity type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerRelationshipManagementActivity.html">CustomerRelationshipManagementActivities</a></td>
+<td><code>/api/v1/Sales/CustomerRelationshipManagementActivities</code></td>
+<td>Represents a customer relationship management activity.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/Customer.html">Customers</a></td>
+<td><code>/api/v1/Sales/Customers</code></td>
+<td>Represents a customer.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerStatus.html">CustomerStatuses</a></td>
+<td><code>/api/v1/Sales/CustomerStatuses</code></td>
+<td>Represents a customer status.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CustomerType.html">CustomerTypes</a></td>
+<td><code>/api/v1/Sales/CustomerTypes</code></td>
+<td>Represents a customer type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/InvoiceLog.html">InvoiceLogs</a></td>
+<td><code>/api/v1/Sales/InvoiceLogs</code></td>
+<td>Represents an invoice log entry.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/OrderQuantityCustomerOrder.html">OrderQuantityCustomerOrders</a></td>
+<td><code>/api/v1/Sales/OrderQuantityCustomerOrders</code></td>
+<td>Represents a order quantity template on part that holds many partial quantities.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/OtherCustomerNumber.html">OtherCustomerNumbers</a></td>
+<td><code>/api/v1/Sales/OtherCustomerNumbers</code></td>
+<td>Represents an alternative customer code mainly used for EDI.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/PackageRowPartLocation.html">PackageRowPartLocations</a></td>
+<td><code>/api/v1/Sales/PackageRowPartLocations</code></td>
+<td>Represents a package row's location.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/PackageRow.html">PackageRows</a></td>
+<td><code>/api/v1/Sales/PackageRows</code></td>
+<td>Represents a package row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/QuoteActivity.html">QuoteActivities</a></td>
+<td><code>/api/v1/Sales/QuoteActivities</code></td>
+<td>Represents a quote activity.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/QuoteOrderRowDiscount.html">QuoteOrderRowDiscounts</a></td>
+<td><code>/api/v1/Sales/QuoteOrderRowDiscounts</code></td>
+<td>Represents a discount row for a quote row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/QuoteRow.html">QuoteRows</a></td>
+<td><code>/api/v1/Sales/QuoteRows</code></td>
+<td>Represents a quote row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/Quote.html">Quotes</a></td>
+<td><code>/api/v1/Sales/Quotes</code></td>
+<td>Represents a quote.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/QuoteType.html">QuoteTypes</a></td>
+<td><code>/api/v1/Sales/QuoteTypes</code></td>
+<td>Represents a quote type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/ReasonCodeLostQuote.html">ReasonCodeLostQuotes</a></td>
+<td><code>/api/v1/Sales/ReasonCodeLostQuotes</code></td>
+<td>Represents a reason code for a lost quote.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/RelatedQuoteEntry.html">RelatedQuoteEntries</a></td>
+<td><code>/api/v1/Sales/RelatedQuoteEntries</code></td>
+<td>Represents a related quote entry.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/RelatedQuote.html">RelatedQuotes</a></td>
+<td><code>/api/v1/Sales/RelatedQuotes</code></td>
+<td>Represents a placeholder for related quotes.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/SalesAgreementBasis.html">SalesAgreementBases</a></td>
+<td><code>/api/v1/Sales/SalesAgreementBases</code></td>
+<td>Represents a sales agreement basis.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/SalesAgreementBasisRow.html">SalesAgreementBasisRows</a></td>
+<td><code>/api/v1/Sales/SalesAgreementBasisRows</code></td>
+<td>Represents a sales agreement basis row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a></td>
+<td><code>/api/v1/Sales/SalesAgreementRowInflows</code></td>
+<td>Represents a sales agreement inflow row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/SalesAgreementRow.html">SalesAgreementRows</a></td>
+<td><code>/api/v1/Sales/SalesAgreementRows</code></td>
+<td>Represents an agreement row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/SalesAgreement.html">SalesAgreements</a></td>
+<td><code>/api/v1/Sales/SalesAgreements</code></td>
+<td>Represents an agreement.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/SalesAgreementType.html">SalesAgreementTypes</a></td>
+<td><code>/api/v1/Sales/SalesAgreementTypes</code></td>
+<td>Represents an agreement type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/SalesPickingListRowQuantity.html">SalesPickingListRowQuantities</a></td>
+<td><code>/api/v1/Sales/SalesPickingListRowQuantities</code></td>
+<td>Represents sales picking list row quantity information used by the web-client procedure.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/SalesPickingList.html">SalesPickingLists</a></td>
+<td><code>/api/v1/Sales/SalesPickingLists</code></td>
+<td>Represents a sales picking list.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/SalesPrice.html">SalesPrices</a></td>
+<td><code>/api/v1/Sales/SalesPrices</code></td>
+<td>Represents a sales price.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/SalesProcessStep.html">SalesProcessSteps</a></td>
+<td><code>/api/v1/Sales/SalesProcessSteps</code></td>
+<td>Represents a sales process step.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/SalesProcessTemplateRow.html">SalesProcessTemplateRows</a></td>
+<td><code>/api/v1/Sales/SalesProcessTemplateRows</code></td>
+<td>Represents a sales process template row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/SalesProcessTemplate.html">SalesProcessTemplates</a></td>
+<td><code>/api/v1/Sales/SalesProcessTemplates</code></td>
+<td>Represents a sales process template.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/SellerGroup.html">SellerGroups</a></td>
+<td><code>/api/v1/Sales/SellerGroups</code></td>
+<td>Represents a seller group.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/ShipmentCustoms.html">ShipmentCustoms</a></td>
+<td><code>/api/v1/Sales/ShipmentCustoms</code></td>
+<td>Represents a shipments customs information.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/ShipmentCustomsDocument.html">ShipmentCustomsDocuments</a></td>
+<td><code>/api/v1/Sales/ShipmentCustomsDocuments</code></td>
+<td>Represents a shipments customs information document.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/ShipmentCustomsRow.html">ShipmentCustomsRows</a></td>
+<td><code>/api/v1/Sales/ShipmentCustomsRows</code></td>
+<td>Represents a shipments customs information row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/ShipmentInformationSource.html">ShipmentInformationSources</a></td>
+<td><code>/api/v1/Sales/ShipmentInformationSources</code></td>
+<td>Represents a shipment information source.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/ShipmentPackageInformationPackageNumber.html">ShipmentPackageInformationPackageNumbers</a></td>
+<td><code>/api/v1/Sales/ShipmentPackageInformationPackageNumbers</code></td>
+<td>Represents a shipping agents real package number for a shipment package information.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/ShipmentPackageInformation.html">ShipmentPackageInformations</a></td>
+<td><code>/api/v1/Sales/ShipmentPackageInformations</code></td>
+<td>Represents a shipment package information.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/Shipment.html">Shipments</a></td>
+<td><code>/api/v1/Sales/Shipments</code></td>
+<td>Represents a shipment.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/ShippingService.html">ShippingServices</a></td>
+<td><code>/api/v1/Sales/ShippingServices</code></td>
+<td>Represents a shipping service.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/ShippingTemplate.html">ShippingTemplates</a></td>
+<td><code>/api/v1/Sales/ShippingTemplates</code></td>
+<td>Represents a shipping service.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/ValidityTime.html">ValidityTimes</a></td>
+<td><code>/api/v1/Sales/ValidityTimes</code></td>
+<td>Represents a validity time.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="commands">Commands</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../entities/Sales/CreateCustomerEmployeeSpan.html">CreateCustomerEmployeeSpan</a></td>
+<td><code>POST /api/v1/Sales/CustomerEmployeeSpans/Create</code></td>
+<td>Creates a new customer employee span object.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/CreateSalesPickingList.html">CreateSalesPickingList</a></td>
+<td><code>POST /api/v1/Sales/SalesPickingLists/Create</code></td>
+<td>Creates picking lists.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/GetWithdrawalInformation.html">GetWithdrawalInformation</a></td>
+<td><code>POST /api/v1/Sales/SalesPickingLists/GetWithdrawalInformation</code></td>
+<td>Calculates and returns the suggested withdrawal information for a picking list.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/RemoveSalesPickingList.html">RemoveSalesPickingList</a></td>
+<td><code>POST /api/v1/Sales/SalesPickingLists/Remove</code></td>
+<td>Deletes a picking list.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="payload-types">Payload types</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../entities/Sales/WithdrawalInformationLocation.html">WithdrawalInformationLocation</a></td>
+<td>Used to provide the suggested withdrawal information of a location.</td>
+</tr>
+<tr>
+<td><a href="../entities/Sales/WithdrawalInformationRow.html">WithdrawalInformationRow</a></td>
+<td>Used to provide the suggested withdrawal information of a customer order row.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="depends-on-other-modules">Depends on other modules</h2>
+<ul>
+<li><a href="Accounting.html">Accounting</a>: <a href="../entities/Accounting/Account.html">Accounts</a>, <a href="../entities/Accounting/AccountsReceivable.html">AccountsReceivables</a>, <a href="../entities/Accounting/CodingEntry.html">CodingEntries</a>, <a href="../entities/Accounting/Coding.html">Codings</a>, <a href="../entities/Accounting/FixedAsset.html">FixedAssets</a></li>
+<li><a href="Common.html">Common</a>: <a href="../entities/Common/Address.html">Addresses</a>, <a href="../entities/Common/ApplicationUser.html">ApplicationUsers</a>, <a href="../entities/Common/BusinessContactNoteHistory.html">BusinessContactNoteHistories</a>, <a href="../entities/Common/BusinessContactReference.html">BusinessContactReferences</a>, <a href="../entities/Common/Comment.html">Comments</a>, <a href="../entities/Common/CommunicationAddress.html">CommunicationAddresses</a>, <a href="../entities/Common/Country.html">Countries</a>, <a href="../entities/Common/Currency.html">Currencies</a>, <a href="../entities/Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a>, <a href="../entities/Common/DeliveryAddress.html">DeliveryAddresses</a>, <a href="../entities/Common/DeliveryMethod.html">DeliveryMethods</a>, <a href="../entities/Common/DeliveryTerm.html">DeliveryTerms</a>, <a href="../entities/Common/DeliveryTime.html">DeliveryTimes</a>, <a href="../entities/Common/DiscountCategory.html">DiscountCategories</a>, <a href="../entities/Common/Discount.html">Discounts</a>, <a href="../entities/Common/ExtraField.html">ExtraFields</a>, <a href="../entities/Common/FormReportConfiguration.html">FormReportConfigurations</a>, <a href="../entities/Common/LanguageCode.html">LanguageCodes</a>, <a href="../entities/Common/PartConfiguration.html">PartConfigurations</a>, <a href="../entities/Common/PartialQuantity.html">PartialQuantities</a>, <a href="../entities/Common/PaymentMethod.html">PaymentMethods</a>, <a href="../entities/Common/PaymentPlanTemplate.html">PaymentPlanTemplates</a>, <a href="../entities/Common/PaymentTerm.html">PaymentTerms</a>, <a href="../entities/Common/Person.html">Persons</a>, <a href="../entities/Common/PriceList.html">PriceLists</a>, <a href="../entities/Common/Probability.html">Probabilities</a>, <a href="../entities/Common/Project.html">Projects</a>, <a href="../entities/Common/ReasonCodeDebitNote.html">ReasonCodeDebitNotes</a>, <a href="../entities/Common/Reseller.html">Resellers</a>, <a href="../entities/Common/Revision.html">Revisions</a>, <a href="../entities/Common/StaggeredPrice.html">StaggeredPrices</a>, <a href="../entities/Common/StatisticalGoodsCode.html">StatisticalGoodsCodes</a>, <a href="../entities/Common/TariffAndServiceCode.html">TariffAndServiceCodes</a>, <a href="../entities/Common/TransactionTypeIntrastat.html">TransactionTypeIntrastats</a>, <a href="../entities/Common/TransferProfile.html">TransferProfiles</a>, <a href="../entities/Common/Unit.html">Units</a>, <a href="../entities/Common/VatGroup.html">VatGroups</a>, <a href="../entities/Common/VatRate.html">VatRates</a>, <a href="../entities/Common/Warehouse.html">Warehouses</a></li>
+<li><a href="Inventory.html">Inventory</a>: <a href="../entities/Inventory/CaseEntry.html">CaseEntry</a>, <a href="../entities/Inventory/GoodsType.html">GoodsTypes</a>, <a href="../entities/Inventory/PackageType.html">PackageTypes</a>, <a href="../entities/Inventory/PartLocation.html">PartLocations</a>, <a href="../entities/Inventory/Part.html">Parts</a>, <a href="../entities/Inventory/ProductRecord.html">ProductRecords</a></li>
+<li><a href="Manufacturing.html">Manufacturing</a>: <a href="../entities/Manufacturing/ManufacturingOrder.html">ManufacturingOrders</a></li>
+<li><a href="Purchase.html">Purchase</a>: <a href="../entities/Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a>, <a href="../entities/Purchase/PurchaseOrder.html">PurchaseOrders</a>, <a href="../entities/Purchase/Supplier.html">Suppliers</a></li>
+</ul>
+<div class="page-meta"><span class="badge">Sales</span><span class="badge">module</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../";</script>
+<script src="../assets/okf-index.js"></script>
+<script src="../assets/okf.js"></script>
+</body>
+</html>

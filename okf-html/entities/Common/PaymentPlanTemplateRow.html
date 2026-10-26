@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PaymentPlanTemplateRows · Monitor ERP API</title>
+<meta name="description" content="Represents a payment plan template row.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>PaymentPlanTemplateRows</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html" aria-current="location">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="paymentplantemplaterows">PaymentPlanTemplateRows</h1>
+<p>Represents a payment plan template row.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Common.html">Common</a></dd><dt>API class</dt><dd><code>PaymentPlanTemplateRow</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Common/PaymentPlanTemplateRows</code></dd><dt>Required permission</dt><dd>Show invoicing plan</dd><dt>GUID</dt><dd><code>2217102F-3B6A-4183-BDE1-3188492C214A</code></dd><dt>Introduced in</dt><dd>2.28</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the payment plan template row.</td>
+</tr>
+<tr>
+<td class="prop"><code>UnpaidAdvanceWarningType</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The unpaid advance warning type of the payment plan template row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentPlanTemplateId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="PaymentPlanTemplate.html">PaymentPlanTemplates</a></td>
+<td></td>
+<td>The business key identifier of the payment plan template of the payment plan template row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartialInvoiceType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The partial invoice type of the payment plan template row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
+<td></td>
+<td>The business key identifier of the part of the payment plan template row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Part</code></td>
+<td class="type"><code>Parts</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
+<td>expandable</td>
+<td>The part of the payment plan template row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OverrideDescription</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The override description of the payment plan template row.</td>
+</tr>
+<tr>
+<td class="prop"><code>FractionOfTotal</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The fraction of total of the payment plan template row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentTermId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="PaymentTerm.html">PaymentTerms</a></td>
+<td></td>
+<td>The business key identifier of the payment term of the payment plan template row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentTerm</code></td>
+<td class="type"><code>PaymentTerms</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="PaymentTerm.html">PaymentTerms</a></td>
+<td>expandable</td>
+<td>The payment term of the payment plan template row.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowIndex</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The row index of the payment plan template row.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>UnpaidAdvanceWarningType</code><div class="evs"><span class="ev">NoAlert<span>=0</span></span><span class="ev">Warning<span>=1</span></span><span class="ev">PreventDelivery<span>=2</span></span></div></li><li><code>PartialInvoiceType</code><div class="evs"><span class="ev">NotInitialized<span>=0</span></span><span class="ev">InAdvance<span>=1</span></span><span class="ev">Delivery<span>=2</span></span><span class="ev">InArrears<span>=3</span></span><span class="ev">Text<span>=4</span></span></div></li></ul>
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Common</strong></p>
+<ul>
+<li><a href="PaymentPlanTemplate.html">PaymentPlanTemplates</a> — <code>PaymentPlanTemplateRows</code> (expand)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "UnpaidAdvanceWarningType": null,
+  "PaymentPlanTemplateId": 0,
+  "PartialInvoiceType": 0,
+  "PartId": null,
+  "Part": null,
+  "OverrideDescription": null,
+  "FractionOfTotal": 0.0,
+  "PaymentTermId": null,
+  "PaymentTerm": null,
+  "RowIndex": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Common.PaymentPlanTemplateRow.html">https://api.monitor.se/api/Monitor.API.Common.PaymentPlanTemplateRow.html</a><br><span class="badge">Common</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

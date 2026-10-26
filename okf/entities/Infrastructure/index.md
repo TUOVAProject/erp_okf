@@ -1,10 +1,3 @@
----
-type: Index
-title: Infrastructure entities
-tags:
-- Infrastructure
----
-
 # Infrastructure entities
 
 18 documented pages in the Infrastructure module.

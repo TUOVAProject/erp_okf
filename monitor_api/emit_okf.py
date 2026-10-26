@@ -1,9 +1,14 @@
 """
-OKF (Open Knowledge Format, https://github.com/GoogleCloudPlatform/knowledge-catalog)
+OKF (Open Knowledge Format, https://github.com/GoogleCloudPlatform/open-knowledge-format)
 represents knowledge as a directory of markdown files with YAML frontmatter.
-Only ``type`` is required; ``index.md`` and ``log.md`` are the reserved
-filenames; relationships are expressed as ordinary markdown links, which is what
-turns the directory into a graph.
+Only ``type`` is required; relationships are expressed as ordinary markdown
+links, which is what turns the directory into a graph.
+
+``index.md`` and ``log.md`` are reserved filenames with their own structure, not
+concepts: they carry no frontmatter (except ``okf_version`` on the root
+``index.md``), an index is headed sections of links, and a log is ``YYYY-MM-DD``
+headings, newest first. Anything that needs frontmatter or prose belongs in a
+concept file such as ``/about.md``.
 
 Every cross-entity reference in a properties table is emitted as a markdown
 link, so an agent can answer "what does CustomerOrders reference, and what
@@ -51,6 +56,10 @@ def relativize_links(body: str, from_path: str) -> str:
     return ABSOLUTE_LINK.sub(replace, body)
 
 OKF_VERSION = "0.2"
+
+# Monitor's separate how-to documentation: authentication, URL format, query
+# options, examples. Not scraped -- this bundle covers the API Reference only.
+DEVELOPER_GUIDE = "https://api.monitor.se/articles/v1/index.html"
 GENERATOR = "process:monitor-okf-build"
 
 # How many entities the "start here" guide lists. Long enough to cover the shared
@@ -133,11 +142,12 @@ def frontmatter(fields: dict) -> str:
     return f"---\n{body}---\n"
 
 
-def write(relative_path: str, fields: dict, body: str) -> None:
+def write(relative_path: str, fields: dict | None, body: str) -> None:
+    """Write one bundle file; fields=None for reserved files, which have no frontmatter."""
     path = OKF_TMP_DIR / relative_path.lstrip("/")
     path.parent.mkdir(parents=True, exist_ok=True)
-    body = relativize_links(body, relative_path)
-    path.write_text(frontmatter(fields) + "\n" + body.rstrip() + "\n", encoding="utf-8")
+    body = relativize_links(body, relative_path).rstrip() + "\n"
+    path.write_text(frontmatter(fields) + "\n" + body if fields else body, encoding="utf-8")
 
 
 def constraint_tokens(prop: dict) -> list[str]:
@@ -358,7 +368,7 @@ def emit_entity_indexes(model: dict) -> None:
 
         write(
             f"/entities/{module}/index.md",
-            {"type": "Index", "title": f"{module} entities", "tags": [module]},
+            None,
             "\n".join(lines),
         )
 
@@ -369,7 +379,7 @@ def emit_entity_indexes(model: dict) -> None:
 
     write(
         "/entities/index.md",
-        {"type": "Index", "title": "Entities"},
+        None,
         "\n".join(lines),
     )
 
@@ -457,7 +467,7 @@ def emit_modules(model: dict) -> None:
             f"| {module['commands']} | {module['types']} |"
         )
 
-    write("/modules/index.md", {"type": "Index", "title": "Modules"}, "\n".join(lines))
+    write("/modules/index.md", None, "\n".join(lines))
 
 
 def querying_body(model: dict, entities: dict, entity_link, modules_path: str) -> str:
@@ -502,24 +512,18 @@ not because command coverage is a goal.
 If you need a write operation, go to {model['source']} and look under the
 module's `Commands` namespace.
 
-## What the source documentation does not cover
+## Query options
 
-The scraped pages contain **no** query-parameter reference: no documented
-`$filter`, `$select`, `$orderby`, `$expand` or paging syntax, and no response
-status codes. Only `GET` and `POST` appear anywhere in the corpus.
+Query options, filter functions and authentication are documented in Monitor's
+Developer Guide ({DEVELOPER_GUIDE}), which this bundle does not include.
 
-Two indirect signals are still recorded here, because they are the closest thing
-the docs give to query semantics:
+### Hints on the entity pages
 
 - Properties marked `expandable` ({stats['expandable_properties']}
-  of them) are navigation properties — the docs flag them as expandable, which
-  implies an expand mechanism exists.
+  of them) are navigation properties that can be expanded.
 - One property summary
   ({form_report_configuration} `Type`)
-  notes that `$filter` and `$orderby` cannot be used with it, which confirms both
-  options exist in some form.
-
-Treat anything beyond that as unverified: it is not in the source documentation.
+  notes that `$filter` and `$orderby` cannot be used with it.
 
 ## Related
 
@@ -711,7 +715,7 @@ def emit_guides(model: dict) -> None:
         {
             "type": "Guide",
             "title": "Querying the Monitor API",
-            "description": "Endpoint shape, HTTP verbs and what the documentation does and does not cover.",
+            "description": "Endpoint shape, HTTP verbs and what this bundle contains.",
             **common,
         },
         querying_body(model, entities, okf_entity_link, "/modules/index.md"),
@@ -765,13 +769,13 @@ def emit_guides(model: dict) -> None:
 
     write(
         "/guides/index.md",
-        {"type": "Index", "title": "Guides"},
+        None,
         """# Guides
 
 Orientation material that no single entity page covers.
 
 - [Core entities](/guides/core-entities.md) — the entities to read first, and why
-- [Querying the Monitor API](/guides/querying.md) — endpoint shape, verbs, and the limits of the source docs
+- [Querying the Monitor API](/guides/querying.md) — endpoint shape, verbs, and where query options are documented
 - [Naming conventions](/guides/naming-conventions.md) — plural API names vs. class names
 - [How entities relate](/guides/relationships.md) — foreign keys vs. navigation properties
 - [Permissions](/guides/permissions.md) — permission required per endpoint
@@ -788,22 +792,21 @@ def emit_root(model: dict) -> None:
     )
 
     write(
-        "/index.md",
+        "/about.md",
         {
-            "type": "Knowledge Bundle",
-            "title": "Monitor ERP API",
+            "type": "Bundle Overview",
+            "title": "About this bundle",
             "description": (
                 f"Data model of the Monitor ERP REST API: {stats['entities']} documented "
                 f"entities across {stats['modules']} modules, with {stats['relationships']} "
                 "resolved relationships."
             ),
             "resource": model["source"],
-            "okf_version": OKF_VERSION,
             "tags": ["monitor", "erp", "api", "data-model"],
             "generated": {"by": GENERATOR, "from": model["source_digest"]},
             "sources": [{"resource": model["source"], "title": "Monitor ERP API documentation"}],
         },
-        f"""# Monitor ERP API
+        f"""# About this bundle
 
 The data model of the Monitor ERP REST API, derived from the public documentation
 at {model['source']}.
@@ -814,17 +817,14 @@ This bundle describes **what data the API exposes and how it connects**: every
 queryable resource, its properties, types, enumerations, required permission and
 its relationships to other resources.
 
-Two things are deliberately outside that scope, and you will not find them here:
+Two things are deliberately outside that scope:
 
 - **Write operations.** {scope_note(model)} This bundle is the read model.
-- **How to authenticate and how to shape a request.** The source documentation
-  contains no authentication, `$filter`/`$expand`/paging or status-code
-  reference, so neither does this bundle. See
-  [Querying the Monitor API](/guides/querying.md) for exactly what the source
-  does and does not say.
+- **Monitor's Developer Guide.** Only the API Reference pages are scraped. How to
+  authenticate, the URL format, query options and worked examples are in
+  Monitor's Developer Guide: {DEVELOPER_GUIDE}
 
-Use this to work out *which resource and which field* you need. You will need
-Monitor's own operational documentation to make the call.
+See [Querying the Monitor API](/guides/querying.md) for the endpoint shape.
 
 | | |
 | --- | ---: |
@@ -843,16 +843,6 @@ Monitor's own operational documentation to make the call.
 2. [How entities relate](/guides/relationships.md) — foreign keys vs. navigation
    properties, which is the one concept you need to traverse anything here.
 
-## Start here
-
-- [Guides](/guides/index.md) — how the API is shaped and how entities relate
-- [Modules](/modules/index.md) — the {stats['modules']} top-level modules
-- [Entities](/entities/index.md) — every documented page
-
-## Modules
-
-{module_lines}
-
 ## How to use this bundle
 
 Each entity page carries its endpoint, required permission, full property table,
@@ -866,15 +856,39 @@ how data connects, follow the links.
     )
 
     write(
+        "/index.md",
+        {"okf_version": OKF_VERSION},
+        f"""# Monitor ERP API
+
+## Start here
+
+- [About this bundle](/about.md) — scope, what is deliberately left out, and the headline numbers
+- [Core entities](/guides/core-entities.md) — the {CORE_ENTITY_COUNT} entities the rest of the model hangs off
+- [How entities relate](/guides/relationships.md) — foreign keys vs. navigation properties
+
+## Contents
+
+- [Guides](/guides/index.md) — how the API is shaped and how entities relate
+- [Modules](/modules/index.md) — the {stats['modules']} top-level modules
+- [Entities](/entities/index.md) — every documented page
+- [Generation log](/log.md) — when the source was fetched and what it contained
+
+## Modules
+
+{module_lines}
+""",
+    )
+
+    write(
         "/log.md",
-        {"type": "Log", "title": "Generation log"},
+        None,
         f"""# Generation log
 
-## Source {model['source_digest']}
+## {model['scope']['fetched_on']}
 
-Generated from {stats['entities']} cached documentation pages by `build.py`.
-This heading is a digest of the scrape cache, not a timestamp: it changes only
-when the source documentation changes, so a rebuild of unchanged input produces
+Built from {stats['entities']} documentation pages fetched from {model['source']}
+(source digest `{model['source_digest']}`). The date is when the cached pages
+last changed, not when `build.py` ran, so a rebuild of unchanged input produces
 an unchanged bundle.
 
 - {stats['entities']} entities ({stats['queryable']} queryable, {stats['commands']} commands, {stats['types']} types)
@@ -882,8 +896,6 @@ an unchanged bundle.
 - {stats['relationships']} relationships ({stats['foreign_key_edges']} foreign key, {stats['navigation_edges']} navigation)
 - {stats['enum_properties']} properties with enumerations
 - {stats['obsolete_properties']} deprecated properties
-
-Source: {model['source']}
 """,
     )
 

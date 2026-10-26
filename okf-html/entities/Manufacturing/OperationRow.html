@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OperationRows · Monitor ERP API</title>
+<meta name="description" content="Represents an operation row.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>OperationRows</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html" aria-current="location">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="operationrows">OperationRows</h1>
+<p>Represents an operation row.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Manufacturing.html">Manufacturing</a></dd><dt>API class</dt><dd><code>OperationRow</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Manufacturing/OperationRows</code></dd><dt>Required permission</dt><dd>Show part</dd><dt>GUID</dt><dd><code>6BC59318-2E5D-4097-954D-678C90EACD77</code></dd><dt>Introduced in</dt><dd>2.18</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the material row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OperationNumber</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The operation number of the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SubcontractPartId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the operation row's subcontract part.</td>
+</tr>
+<tr>
+<td class="prop"><code>SupplierId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the operation row's supplier.</td>
+</tr>
+<tr>
+<td class="prop"><code>WorkCenterId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the operation's row work center.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsSubcontractor</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the operation is subcontracted.</td>
+</tr>
+<tr>
+<td class="prop"><code>CommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the operation row's comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>Comment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The comment of the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Description</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The translated description of the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>TimeCode</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The time code specified for the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>TimeUnit</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The time unit specified for the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupTime</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The setup time of the operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>UnitTime</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The unit time of the operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExtraQuantityPercent</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The extra quantity percentage of the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>NumberOfFlows</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The number of flows specified for the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OverlapPercent</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The overlap percentage of the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>UnitStaffingFactor</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The unit staffing factor of the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupStaffingFactor</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The setup staffing factor of the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The setup quantity of the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsForCalculationOnly</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the operation row is to be used for calculations only.</td>
+</tr>
+<tr>
+<td class="prop"><code>QueueTime</code></td>
+<td class="type"><code>TimeSpan?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The queue time of the operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseQueueTimeWholeDayRoundOf</code></td>
+<td class="type"><code>Boolean?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>Specifies if queue time should be rounded to full day.</td>
+</tr>
+<tr>
+<td class="prop"><code>UnitCostFactorId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the unit cost factor of the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupCostFactorId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the setup cost factor of the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>FixedLeadTime</code></td>
+<td class="type"><code>TimeSpan?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The fixed lead time of the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupCost</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The setup cost of the operation row. This value is only available if the operation is a subcontract.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupCostCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the setup cost currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>UnitCost</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The unit cost of the operation row. This value is only available if the operation is a subcontract.</td>
+</tr>
+<tr>
+<td class="prop"><code>UnitCostCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the unit cost currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>TransportCost</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The transport cost of the operation represented in the company currency. This value is only available if the operation is a subcontract.</td>
+</tr>
+<tr>
+<td class="prop"><code>SupplierPartNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The supplier part number of the operation subcontractor part. This value is only available if the operation is a subcontract.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliverToEndCustomer</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Whether the subcontractor will deliver straight to the end customer or not. This value is only available if the operation is a subcontract.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExtraFields</code></td>
+<td class="type"><code>ExtraFields[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/ExtraField.html">ExtraFields</a></td>
+<td>expandable, collection, since 22.5</td>
+<td>The extra fields of the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ControlDataRows</code></td>
+<td class="type"><code>OperationRowControlDataRows[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="OperationRowControlDataRow.html">OperationRowControlDataRows</a></td>
+<td>expandable, collection, since 22.5</td>
+<td>The control data rows.</td>
+</tr>
+<tr>
+<td class="prop"><code>AlternativeOperationRows</code></td>
+<td class="type"><code>AlternativeOperationRows[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="AlternativeOperationRow.html">AlternativeOperationRows</a></td>
+<td>expandable, collection, since 26.5</td>
+<td>The alternative operation rows (alternative work centers) of the operation row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PreparationTermType</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 24.4</td>
+<td>PreparationTermType of the Operation Row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PreparationTermFromValue</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 24.4</td>
+<td>PreparationTermFromValue of the Operation Row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PreparationTermToValue</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 24.4</td>
+<td>PreparationTermToValue of the Operation Row.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>TimeCode</code><div class="evs"><span class="ev">NotInitialized<span>=0</span></span><span class="ev">Calculated<span>=1</span></span><span class="ev">Studied<span>=2</span></span></div></li><li><code>TimeUnit</code><div class="evs"><span class="ev">Hours<span>=0</span></span><span class="ev">Minutes<span>=1</span></span><span class="ev">Seconds<span>=2</span></span><span class="ev">QuantityPerHour<span>=3</span></span><span class="ev">QuantityPerMinute<span>=4</span></span><span class="ev">QuantityPerSecond<span>=5</span></span></div></li></ul>
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="AlternativeOperationRow.html">AlternativeOperationRows</a> — <code>OperationRowId</code> (FK)</li>
+<li><a href="ManufacturingOrderOperation.html">ManufacturingOrderOperations</a> — <code>OperationRow</code> (expand)</li>
+<li><a href="ManufacturingOrderOperation.html">ManufacturingOrderOperations</a> — <code>OperationRowId</code> (FK)</li>
+<li><a href="OperationRowControlDataRow.html">OperationRowControlDataRows</a> — <code>OperationRowId</code> (FK)</li>
+<li><a href="Preparation.html">Preparations</a> — <code>Operations</code> (expand)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "OperationNumber": 0,
+  "SubcontractPartId": null,
+  "SupplierId": null,
+  "WorkCenterId": 0,
+  "IsSubcontractor": false,
+  "CommentId": null,
+  "Comment": null,
+  "Description": null,
+  "TimeCode": 0,
+  "TimeUnit": 0,
+  "SetupTime": "00:00:00",
+  "UnitTime": "00:00:00",
+  "ExtraQuantityPercent": 0.0,
+  "NumberOfFlows": null,
+  "OverlapPercent": 0.0,
+  "UnitStaffingFactor": null,
+  "SetupStaffingFactor": null,
+  "SetupQuantity": 0.0,
+  "IsForCalculationOnly": false,
+  "QueueTime": null,
+  "UseQueueTimeWholeDayRoundOf": null,
+  "UnitCostFactorId": null,
+  "SetupCostFactorId": null,
+  "FixedLeadTime": null,
+  "SetupCost": null,
+  "SetupCostCurrencyId": null,
+  "UnitCost": null,
+  "UnitCostCurrencyId": null,
+  "TransportCost": null,
+  "SupplierPartNumber": null,
+  "DeliverToEndCustomer": false,
+  "ExtraFields": null,
+  "ControlDataRows": null,
+  "AlternativeOperationRows": null,
+  "PreparationTermType": null,
+  "PreparationTermFromValue": null,
+  "PreparationTermToValue": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Manufacturing.OperationRow.html">https://api.monitor.se/api/Monitor.API.Manufacturing.OperationRow.html</a><br><span class="badge">Manufacturing</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

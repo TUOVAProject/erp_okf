@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TimeRecording entities · Monitor ERP API</title>
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb">TimeRecording entities</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="timerecording-entities">TimeRecording entities</h1>
+<p>20 documented pages in the TimeRecording module.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Kind</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AbsenceCode.html">AbsenceCodes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/AbsenceCodes</code></td>
+<td>Represents an absence code. Used in time recording to represent a period of absence.</td>
+</tr>
+<tr>
+<td><a href="AdditionRecording.html">AdditionRecordings</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/AdditionRecordings</code></td>
+<td>Represents an additional recording</td>
+</tr>
+<tr>
+<td><a href="AttendanceAddition.html">AttendanceAdditions</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/AttendanceAdditions</code></td>
+<td>Represents an attendance addition</td>
+</tr>
+<tr>
+<td><a href="AttendanceChart.html">AttendanceChart</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/AttendanceChart</code></td>
+<td>Represents an attendance chart.</td>
+</tr>
+<tr>
+<td><a href="AttendanceGroupSettings.html">AttendanceGroupSettings</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/AttendanceGroupSettings</code></td>
+<td>Represents an attendance group setting.</td>
+</tr>
+<tr>
+<td><a href="AttendanceInterval.html">AttendanceIntervals</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/AttendanceIntervals</code></td>
+<td>Represents an attendance recording interval on a recording day.</td>
+</tr>
+<tr>
+<td><a href="IndirectWorkCode.html">IndirectWorkCodes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/IndirectWorkCodes</code></td>
+<td>Represents indirect work used for work recording.</td>
+</tr>
+<tr>
+<td><a href="OvertimeType.html">OvertimeTypes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/OvertimeTypes</code></td>
+<td>Represents a overtime type.</td>
+</tr>
+<tr>
+<td><a href="PersonTimeBank.html">PersonTimeBanks</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/PersonTimeBanks</code></td>
+<td>Represents a persons time bank.</td>
+</tr>
+<tr>
+<td><a href="PersonWorkCenter.html">PersonWorkCenters</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/PersonWorkCenters</code></td>
+<td>Represents a table that determines which work centers (and thereby which report numbers) the person should be allowed to select among in the priority plan and when starting work via report numbers.</td>
+</tr>
+<tr>
+<td><a href="PlannedAbsence.html">PlannedAbsences</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/PlannedAbsences</code></td>
+<td>Represents a planned absence.</td>
+</tr>
+<tr>
+<td><a href="RecordingDay.html">RecordingDays</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/RecordingDays</code></td>
+<td>Represents a Recording Day, which holds the attendance and work recordings which belongs to an employee for a specific date.</td>
+</tr>
+<tr>
+<td><a href="SalaryType.html">SalaryTypes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/SalaryTypes</code></td>
+<td>Represents a salary type.</td>
+</tr>
+<tr>
+<td><a href="Schedule.html">Schedules</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/Schedules</code></td>
+<td>Represents a schedule used for time recording.</td>
+</tr>
+<tr>
+<td><a href="Schedule_Obsolete.html">Shedules</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/Shedules</code></td>
+<td>Represents a schedule used for time recording.</td>
+</tr>
+<tr>
+<td><a href="StandbyWork.html">StandbyWorks</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/StandbyWorks</code></td>
+<td>Represents a work put on standby.</td>
+</tr>
+<tr>
+<td><a href="TimeBank.html">TimeBanks</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/TimeBanks</code></td>
+<td>Represents a time bank.</td>
+</tr>
+<tr>
+<td><a href="WorkInterval.html">WorkIntervals</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/WorkIntervals</code></td>
+<td>Represents a work interval.</td>
+</tr>
+<tr>
+<td><a href="WorkshopScheduleSalaryTypeRow.html">WorkshopScheduleSalaryTypeRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/WorkshopScheduleSalaryTypeRows</code></td>
+<td>Represent a workshop schedule salary type row.</td>
+</tr>
+<tr>
+<td><a href="WorkshopScheduleSalaryType.html">WorkshopScheduleSalaryTypes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/TimeRecording/WorkshopScheduleSalaryTypes</code></td>
+<td>Represent a workshop schedule salary type</td>
+</tr>
+</tbody>
+</table></div>
+
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

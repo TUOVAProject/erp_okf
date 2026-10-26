@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ApplicationUsers · Monitor ERP API</title>
+<meta name="description" content="Represents a queryable MONITOR application user.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>ApplicationUsers</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html" aria-current="location">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="applicationusers">ApplicationUsers</h1>
+<p>Represents a queryable MONITOR application user.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Common.html">Common</a></dd><dt>API class</dt><dd><code>ApplicationUser</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Common/ApplicationUsers</code></dd><dt>Required permission</dt><dd>Show user</dd><dt>GUID</dt><dd><code>1B543334-333B-4D74-8680-C8A2395C8D9F</code></dd><dt>Introduced in</dt><dd>2.18</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the application user.</td>
+</tr>
+<tr>
+<td class="prop"><code>Username</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique, max length 20</td>
+<td>The username of the application user.</td>
+</tr>
+<tr>
+<td class="prop"><code>Description</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35, since 2.52</td>
+<td>The description of the application user.</td>
+</tr>
+<tr>
+<td class="prop"><code>WindowsUserAccountName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The windows account username of the application user.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsInvisible</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.52</td>
+<td>Specifies if the application user is hidden from general use in the MONITOR system.</td>
+</tr>
+<tr>
+<td class="prop"><code>DefaultRole</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.52</td>
+<td>The default role of the application user.</td>
+</tr>
+<tr>
+<td class="prop"><code>DefaultGroup</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.52</td>
+<td>The business key identifier of the application user's default permission group.</td>
+</tr>
+<tr>
+<td class="prop"><code>WarehouseId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Warehouse.html">Warehouses</a></td>
+<td>since 2.52</td>
+<td>The business key identifier of the application user's default warehouse. References Warehouses .</td>
+</tr>
+<tr>
+<td class="prop"><code>LanguageId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="LanguageCode.html">LanguageCodes</a></td>
+<td>since 2.52</td>
+<td>The business key identifier of the application user's default language code. References LanguageCodes .</td>
+</tr>
+<tr>
+<td class="prop"><code>MailAddress</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 2.52</td>
+<td>The email address of the user.</td>
+</tr>
+<tr>
+<td class="prop"><code>MailMethod</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum, since 2.52</td>
+<td>The email method of the user.</td>
+</tr>
+<tr>
+<td class="prop"><code>Printers</code></td>
+<td class="type"><code>ApplicationUserPrinters[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ApplicationUserPrinter.html">ApplicationUserPrinters</a></td>
+<td>expandable, collection, since 2.52</td>
+<td>The printers that have been assigned to the user.</td>
+</tr>
+<tr>
+<td class="prop"><code>DefaultPrinter</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.52</td>
+<td>The name of the default printer that have been assigned to the user.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>External1Printer</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 300, <span class="badge dep">deprecated since 26.3</span>, since 2.52</td>
+<td>The name of the external 1 printer that has been assigned to the user. <em>(Use the Printers collection with FormReportType = FilesExternal1 instead)</em></td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>External2Printer</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 300, <span class="badge dep">deprecated since 26.3</span>, since 2.52</td>
+<td>The name of the external 2 printer that has been assigned to the user. <em>(Use the Printers collection with FormReportType = FilesExternal2 instead)</em></td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>External3Printer</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 300, <span class="badge dep">deprecated since 26.3</span>, since 2.52</td>
+<td>The name of the external 3 printer that has been assigned to the user. <em>(Use the Printers collection with FormReportType = FilesExternal3 instead)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>PrintoutFormatForParcel</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.52</td>
+<td>The printout document format type that have been assigned to the user.</td>
+</tr>
+<tr>
+<td class="prop"><code>WarehousePermissions</code></td>
+<td class="type"><code>WarehousePermissions[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="WarehousePermission.html">WarehousePermissions</a></td>
+<td>expandable, collection, since 22.3</td>
+<td>The warehouse permissions that apply to the application user.</td>
+</tr>
+<tr>
+<td class="prop"><code>DefaultVoucherSeriesId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Accounting/VoucherSeries.html">VoucherSeries</a></td>
+<td>since 22.3</td>
+<td>The business key identifier of the application user's default voucher series.</td>
+</tr>
+<tr>
+<td class="prop"><code>UserAuthenticationMethod</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 25.3</td>
+<td>The selected authentication method of the application user.</td>
+</tr>
+<tr>
+<td class="prop"><code>Culture</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 25.7</td>
+<td>The culture setting of the user in .NET format.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>MailMethod</code><div class="evs"><span class="ev">ClientBasedOutlook<span>=0</span></span><span class="ev">ServerBasedExchange<span>=2</span></span><span class="ev">ServerBasedSmtp<span>=3</span></span><span class="ev">ServerBasedExchangeOnline<span>=4</span></span></div></li><li><code>PrintoutFormatForParcel</code><div class="evs"><span class="ev">PDF<span>=0</span></span><span class="ev">ZPL<span>=1</span></span><span class="ev">LaserSte<span>=2</span></span><span class="ev">ThermoSe<span>=3</span></span><span class="ev">LaserA5<span>=4</span></span><span class="ev">Laser2A5<span>=5</span></span><span class="ev">Thermo190<span>=6</span></span><span class="ev">ThermoBrev3<span>=7</span></span><span class="ev">Thermo165<span>=8</span></span></div></li><li><code>UserAuthenticationMethod</code><div class="evs"><span class="ev">Password<span>=0</span></span><span class="ev">WindowsIntegrated<span>=1</span></span><span class="ev">Oidc<span>=4</span></span></div></li></ul>
+
+
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Accounting</strong></p>
+<ul>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>BlockedBy</code> (expand)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>BlockedById</code> (FK)</li>
+<li><a href="../Accounting/IncomingPayment.html">IncomingPayments</a> — <code>CancelledByUserId</code> (FK)</li>
+<li><a href="../Accounting/OutgoingPayment.html">OutgoingPayments</a> — <code>CancelledByUserId</code> (FK)</li>
+</ul>
+<p><strong>Common</strong></p>
+<ul>
+<li><a href="ApplicationUserPrinter.html">ApplicationUserPrinters</a> — <code>ApplicationUserId</code> (FK)</li>
+<li><a href="BusinessContactNoteHistory.html">BusinessContactNoteHistories</a> — <code>CreatedByUserId</code> (FK)</li>
+<li><a href="DelegatedWork.html">DelegatedWork</a> — <code>DelegatedBy</code> (FK)</li>
+<li><a href="MonitoringTaskRecipient.html">MonitoringTaskRecipients</a> — <code>ApplicationUserId</code> (FK)</li>
+<li><a href="MonitoringTask.html">MonitoringTasks</a> — <code>ApplicationUser</code> (expand)</li>
+<li><a href="MonitoringTask.html">MonitoringTasks</a> — <code>ApplicationUserId</code> (FK)</li>
+<li><a href="PartConfigurationPreset.html">PartConfigurationPresets</a> — <code>ChangedBy</code> (FK)</li>
+<li><a href="PartConfigurationPreset.html">PartConfigurationPresets</a> — <code>CreatedBy</code> (FK)</li>
+<li><a href="Person.html">Persons</a> — <code>ApplicationUserId</code> (FK)</li>
+<li><a href="ProjectActivity.html">ProjectActivities</a> — <code>CompletedByUserId</code> (FK)</li>
+<li><a href="ProjectActivity.html">ProjectActivities</a> — <code>ResponsibleUserId</code> (FK)</li>
+<li><a href="ProjectActivityType.html">ProjectActivityTypes</a> — <code>ResponsibleUserId</code> (FK)</li>
+<li><a href="ProjectPhaseType.html">ProjectPhaseTypes</a> — <code>ManagerId</code> (FK)</li>
+<li><a href="ProjectPhase.html">ProjectPhases</a> — <code>ResponsibleUserId</code> (FK)</li>
+</ul>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="../Inventory/CaseEntryActivity.html">CaseEntryActivities</a> — <code>CompletedByUserId</code> (FK)</li>
+<li><a href="../Inventory/CaseEntryActivity.html">CaseEntryActivities</a> — <code>ResponsibleUserId</code> (FK)</li>
+<li><a href="../Inventory/CaseEntryPhase.html">CaseEntryPhases</a> — <code>ResponsibleUserId</code> (FK)</li>
+<li><a href="../Inventory/CaseManagementTemplateNode.html">CaseManagementTemplateNodes</a> — <code>UserId</code> (FK)</li>
+<li><a href="../Inventory/Location.html">Locations</a> — <code>BlockedBy</code> (expand)</li>
+<li><a href="../Inventory/Location.html">Locations</a> — <code>BlockedById</code> (FK)</li>
+<li><a href="../Inventory/PartActivity.html">PartActivities</a> — <code>ResponsibleUserId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>BlockedBy</code> (expand)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>BlockedById</code> (FK)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>BlockedById</code> (FK)</li>
+<li><a href="../Inventory/QuantityChange.html">QuantityChanges</a> — <code>DeliveredByUserId</code> (FK)</li>
+<li><a href="../Inventory/QuantityChange.html">QuantityChanges</a> — <code>PickingByUserId</code> (FK)</li>
+</ul>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="../Manufacturing/ManufacturingPickingList.html">ManufacturingPickingLists</a> — <code>CreatedByApplicationUserId</code> (FK)</li>
+<li><a href="../Manufacturing/ManufacturingPickingList.html">ManufacturingPickingLists</a> — <code>PrintedByApplicationUserId</code> (FK)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>BlockedBy</code> (expand)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>BlockedById</code> (FK)</li>
+</ul>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="../Sales/BusinessOpportunityActivity.html">BusinessOpportunityActivities</a> — <code>CompletedByUserId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunityActivity.html">BusinessOpportunityActivities</a> — <code>ResponsibleUserId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunityActivityTemplateRow.html">BusinessOpportunityActivityTemplateRows</a> — <code>ResponsibleUserId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunitySalesProcessStep.html">BusinessOpportunitySalesProcessSteps</a> — <code>ResponsibleUserId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderActivity.html">CustomerOrderActivities</a> — <code>ResponsibleUserId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>PrintoutBy</code> (FK)</li>
+<li><a href="../Sales/CustomerRelationshipManagementActivity.html">CustomerRelationshipManagementActivities</a> — <code>CompletedByUserId</code> (FK)</li>
+<li><a href="../Sales/CustomerRelationshipManagementActivity.html">CustomerRelationshipManagementActivities</a> — <code>ResponsibleUserId</code> (FK)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>BlockedBy</code> (expand)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>BlockedById</code> (FK)</li>
+<li><a href="../Sales/InvoiceLog.html">InvoiceLogs</a> — <code>UserId</code> (FK)</li>
+<li><a href="../Sales/QuoteActivity.html">QuoteActivities</a> — <code>CompletedByUserId</code> (FK)</li>
+<li><a href="../Sales/QuoteActivity.html">QuoteActivities</a> — <code>ResponsibleUserId</code> (FK)</li>
+<li><a href="../Sales/SalesPickingList.html">SalesPickingLists</a> — <code>PrintedByApplicationUserId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Username": null,
+  "Description": null,
+  "WindowsUserAccountName": null,
+  "IsInvisible": false,
+  "DefaultRole": 0,
+  "DefaultGroup": null,
+  "WarehouseId": 0,
+  "LanguageId": 0,
+  "MailAddress": null,
+  "MailMethod": null,
+  "Printers": null,
+  "DefaultPrinter": null,
+  "External1Printer": null,
+  "External2Printer": null,
+  "External3Printer": null,
+  "PrintoutFormatForParcel": 0,
+  "WarehousePermissions": null,
+  "DefaultVoucherSeriesId": null,
+  "UserAuthenticationMethod": 0,
+  "Culture": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Common.ApplicationUser.html">https://api.monitor.se/api/Monitor.API.Common.ApplicationUser.html</a><br><span class="badge">Common</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

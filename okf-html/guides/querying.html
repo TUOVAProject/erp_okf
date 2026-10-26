@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Querying the Monitor API · Monitor ERP API</title>
+<meta name="description" content="Endpoint shape, HTTP verbs and what this bundle contains.">
+<link rel="stylesheet" href="../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../index.html">Monitor ERP API</a>
+  <span class="crumb">Querying the Monitor API</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../index.html">Overview</a>
+<a href="../about.html">About this bundle</a>
+<a href="../modules/index.html">All modules</a>
+<a href="../entities/index.html">All entities</a>
+<a href="../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../guides/core-entities.html">Core entities</a>
+<a href="../guides/querying.html" aria-current="page">Querying the Monitor API</a>
+<a href="../guides/naming-conventions.html">Naming conventions</a>
+<a href="../guides/relationships.html">How entities relate</a>
+<a href="../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#endpoint-shape">Endpoint shape</a>
+<a class="toc-h" href="#what-is-in-this-bundle">What is in this bundle</a>
+<a class="toc-h" href="#what-is-deliberately-not-in-this-bundle">What is deliberately not in this bundle</a>
+<a class="toc-h" href="#query-options">Query options</a>
+<a class="toc-i" href="#hints-on-the-entity-pages">Hints on the entity pages</a>
+<a class="toc-h" href="#related">Related</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="querying-the-monitor-api">Querying the Monitor API</h1>
+<h2 id="endpoint-shape">Endpoint shape</h2>
+<p>Every documented endpoint follows one pattern:</p>
+<pre><code>GET  https://&lt;host&gt;/&lt;language&gt;/&lt;company&gt;/api/v1/&lt;Module&gt;/&lt;Entity&gt;
+POST https://&lt;host&gt;/&lt;language&gt;/&lt;company&gt;/api/v1/&lt;Module&gt;/&lt;Entity&gt;/&lt;Command&gt;
+</code></pre>
+<p>The documentation renders the host as <code>localhost:8001</code> with language <code>sv</code> and
+company <code>001.1</code> — these are placeholders for your own Monitor server, not a
+public endpoint. The <code>/api/v1/&lt;Module&gt;/&lt;Entity&gt;</code> tail is the stable part, and it
+is the <code>endpoint</code> value recorded on every entity page in this bundle.</p>
+<h2 id="what-is-in-this-bundle">What is in this bundle</h2>
+<ul>
+<li><strong>351 queryable entities</strong> — <code>GET</code>, returning a collection.</li>
+<li><strong>4 commands</strong> — <code>POST</code>, listed in
+  <a href="../modules/index.html">Modules</a>. Their properties table is the <strong>request body</strong>,
+  not a response shape.</li>
+<li><strong>25 payload types</strong> — no endpoint of their own; they appear
+  nested inside other responses or command bodies.</li>
+</ul>
+<h2 id="what-is-deliberately-not-in-this-bundle">What is deliberately not in this bundle</h2>
+<p>The API's 913 command pages (<code>POST</code> operations that create, update or remove data) are excluded by the crawler. They live under <code>Monitor.API.&lt;Module&gt;.Commands.*</code> upstream
+and the crawler skips them by design, because the purpose of this bundle is to
+describe the data model comprehensively rather than the write API.</p>
+<p>The 4 commands that <em>are</em> here are the ones the upstream
+documentation files outside that namespace; they are included for completeness,
+not because command coverage is a goal.</p>
+<p>If you need a write operation, go to https://api.monitor.se/api/ and look under the
+module's <code>Commands</code> namespace.</p>
+<h2 id="query-options">Query options</h2>
+<p>Query options, filter functions and authentication are documented in Monitor's
+Developer Guide (https://api.monitor.se/articles/v1/index.html), which this bundle does not include.</p>
+<h3 id="hints-on-the-entity-pages">Hints on the entity pages</h3>
+<ul>
+<li>Properties marked <code>expandable</code> (599
+  of them) are navigation properties that can be expanded.</li>
+<li>One property summary
+  (<a href="../entities/Common/FormReportConfiguration.html">FormReportConfigurations</a> <code>Type</code>)
+  notes that <code>$filter</code> and <code>$orderby</code> cannot be used with it.</li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="naming-conventions.html">Naming conventions</a></li>
+<li><a href="relationships.html">Relationships</a></li>
+<li><a href="permissions.html">Permissions</a></li>
+</ul>
+<div class="page-meta"><span class="badge">guide</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../";</script>
+<script src="../assets/okf-index.js"></script>
+<script src="../assets/okf.js"></script>
+</body>
+</html>

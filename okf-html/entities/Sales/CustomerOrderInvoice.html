@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CustomerOrderInvoices · Monitor ERP API</title>
+<meta name="description" content="Represents a customer order invoice.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>CustomerOrderInvoices</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html" aria-current="location">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="customerorderinvoices">CustomerOrderInvoices</h1>
+<p>Represents a customer order invoice.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Sales.html">Sales</a></dd><dt>API class</dt><dd><code>CustomerOrderInvoice</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Sales/CustomerOrderInvoices</code></dd><dt>Required permission</dt><dd>Show customer orders</dd><dt>GUID</dt><dd><code>61435D1A-FCFC-4DA4-B199-03BDA9E30A9B</code></dd><dt>Introduced in</dt><dd>2.33</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>Status</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The status of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryNoteNumber</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The delivery note number of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryIndex</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The delivery index of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderDeliveryNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 18</td>
+<td>The order delivery number of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>PickingListId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the picking list of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>WarehouseId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
+<td></td>
+<td>The business key identifier of the warehouse that the customer order invoice belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>Version</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.34</td>
+<td>The version of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveDeliveryAddressCustomerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="Customer.html">Customers</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of the customer source of the active delivery address.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveDeliveryAddressSupplierId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Purchase/Supplier.html">Suppliers</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of the supplier source of the active delivery address.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveDeliveryAddressCompanyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.34</td>
+<td>The business key identifier of the company source of the active delivery address.</td>
+</tr>
+<tr>
+<td class="prop"><code>SourceOfAlternativeDeliveryAddresses</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.34</td>
+<td>Specifies the source of the customer order invoice delivery address.</td>
+</tr>
+<tr>
+<td class="prop"><code>ConsigneeReferenceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of the consignee reference of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>ConsigneeReference</code></td>
+<td class="type"><code>BusinessContactReferences</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td>expandable, since 2.34</td>
+<td>The consignee reference on the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProformaStatus</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.34</td>
+<td>The proforma status of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProjectId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Project.html">Projects</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of project of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryAddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of the delivery address of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryAddress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>expandable, since 2.34</td>
+<td>The delivery address of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceAddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of the invoice address of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceAddress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>expandable, since 2.34</td>
+<td>The invoice address of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurReferenceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of our reference for the customer order invoice. Reference Persons</td>
+</tr>
+<tr>
+<td class="prop"><code>OurReferenceName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 2.34</td>
+<td>The name of our reference for the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactReferenceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of the customer's reference for the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactReferenceName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 2.34</td>
+<td>The name of the customer's reference for the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>GoodsLabel</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 2.34</td>
+<td>The goods label of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceStatusPending</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.34</td>
+<td>Specifies if the invoice status is pending on the customer order invoice.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>IsPartOfComprehensiveInvoice</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td><span class="badge dep">deprecated since 2.41</span>, since 2.34</td>
+<td>Specifies if the customer order invoice is part of a comprehensive invoice. <em>(Replaced by ComprehensiveInvoiceGroupingMode)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>ComprehensiveInvoiceGroupingMode</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.41</td>
+<td>Specifies if the customer order invoice is part of a comprehensive invoice, and how they are grouped.</td>
+</tr>
+<tr>
+<td class="prop"><code>HasInvoicingCharge</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.34</td>
+<td>Specifies if the customer order invoice involves an invoicing charge.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsFreeDeliveryMonth</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.34</td>
+<td>Specifies if the customer order invoice have a free delivery month.</td>
+</tr>
+<tr>
+<td class="prop"><code>GoodsAddressNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 2.34</td>
+<td>The goods address number of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 2.34</td>
+<td>The VAT number of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>Dock</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35, since 2.34</td>
+<td>The dock of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryInstruction</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 2.34</td>
+<td>The delivery instruction of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoicePrintoutMethod</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum, since 2.34</td>
+<td>Specifies the printout method for the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>PrintProformaInvoiceVia</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum, since 2.34</td>
+<td>The preferred Proforma printout method of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>EInvoiceExportMode</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum, since 2.34</td>
+<td>The preffered electronic invoice export mode to use on this customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>Priority</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.34</td>
+<td>The priority of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>DirectlyRegistered</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.34</td>
+<td>Specifies if the customer order invoice is directly registered.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartialInvoiceType</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum, since 2.34</td>
+<td>The partial invoice type of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>FormReportConfigurationId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/FormReportConfiguration.html">FormReportConfigurations</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of the customer order invoice's form report configuration.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryNoteCreationDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.34</td>
+<td>The delivery note creation date on the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExcludeFromEdi</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.34</td>
+<td>Specifies if the customer order invoice will be excluded from EDI.</td>
+</tr>
+<tr>
+<td class="prop"><code>SellerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of the seller on the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShippingInformationId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.34</td>
+<td>The business key identifier of the shipping information on the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProformaNumber</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.34</td>
+<td>The proforma number of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProformaDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.34</td>
+<td>The proforma date of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>DestinationForDeliveryTerm</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35, since 2.34</td>
+<td>The destination for delivery term for the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>CandidateDebitInvoiceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.34</td>
+<td>The business key identifier to the accounts receivable linked to the debit invoice candidate for this customer order invoice. References AccountsReceivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>ConsigneeReferenceName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 2.34</td>
+<td>The consignee reference name of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>LedgerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.34</td>
+<td>The business key identifier to the ledger's accounts receivable of the customer order invoice. References AccountsReceivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactOrderId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CustomerOrder.html">CustomerOrders</a></td>
+<td>since 2.34</td>
+<td>The business key identifier to the customre order of the customer order invoice. References CustomerOrders .</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceBusinessContactId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Customer.html">Customers</a></td>
+<td>since 2.34</td>
+<td>The business key identifier to the customer on the customer order invoice. References Customers .</td>
+</tr>
+<tr>
+<td class="prop"><code>AccountGroupId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of the account group of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>AccountGroup</code></td>
+<td class="type"><code>CustomerAccountGroups</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td>expandable, since 2.34</td>
+<td>The account group on the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatGroupId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/VatGroup.html">VatGroups</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of the VAT group that applies for the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentTermId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of the payment term of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentTerm</code></td>
+<td class="type"><code>PaymentTerms</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td>expandable, since 2.34</td>
+<td>The payment term of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentTermDescription</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35, since 2.34</td>
+<td>The payment term description of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>GracePeriodInDays</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.34</td>
+<td>The grace period in days of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryMethodId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of the delivery method of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryTermId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/DeliveryTerm.html">DeliveryTerms</a></td>
+<td>since 2.34</td>
+<td>The business key identifier of the delivery term of the customer order invoices.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryTermDescription</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35, since 2.34</td>
+<td>The delivery term description of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryMethodDescription</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35, since 2.34</td>
+<td>The delivery method description of the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShipmentPayer</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.34</td>
+<td>Specifies who is responsible for the shipment payment for the customer order invoce.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryRows</code></td>
+<td class="type"><code>CustomerOrderDeliveryRows[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a></td>
+<td>expandable, collection, since 2.36</td>
+<td>The customer order delivery rows. CustomerOrderDeliveryRows</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.53</td>
+<td>Invoice type of customer order invoice</td>
+</tr>
+<tr>
+<td class="prop"><code>EditedOrderAmountExcludingVat</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 24.8</td>
+<td>The edited order amount excluding VAT for the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>EditedOrderAmountExcludingVatCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>since 24.8</td>
+<td>The currency of the edited order amount excluding VAT for the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>EditedOrderAmountDiscount</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 24.8</td>
+<td>The edited order amount discount in percent for the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>TypeOfOrderAmountEntered</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum, since 24.8</td>
+<td>The type of edited order value entered on the customer order invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>Factoring</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 25.7</td>
+<td>Specifies if factoring is activated for the customer order invoice.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>Status</code><div class="evs"><span class="ev">Canceled<span>=0</span></span><span class="ev">Registered<span>=1</span></span><span class="ev">Preliminary<span>=2</span></span><span class="ev">Waiting<span>=3</span></span><span class="ev">InvoiceApproved<span>=8</span></span><span class="ev">InvoicePrinted<span>=9</span></span></div></li><li><code>SourceOfAlternativeDeliveryAddresses</code><div class="evs"><span class="ev">CurrentCustomer<span>=0</span></span><span class="ev">Customer<span>=1</span></span><span class="ev">Supplier<span>=2</span></span><span class="ev">Company<span>=3</span></span><span class="ev">CurrentSupplier<span>=4</span></span></div></li><li><code>ProformaStatus</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">ApprovedForPrint<span>=1</span></span><span class="ev">Printed<span>=2</span></span></div></li><li><code>ComprehensiveInvoiceGroupingMode</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Customer<span>=1</span></span><span class="ev">Order<span>=2</span></span><span class="ev">DeliveryNote<span>=3</span></span></div></li><li><code>InvoicePrintoutMethod</code><div class="evs"><span class="ev">Printer<span>=0</span></span><span class="ev">Email<span>=1</span></span><span class="ev">Edi<span>=2</span></span><span class="ev">None<span>=9</span></span></div></li><li><code>PrintProformaInvoiceVia</code><div class="evs"><span class="ev">Printer<span>=0</span></span><span class="ev">Email<span>=1</span></span><span class="ev">Edi<span>=2</span></span><span class="ev">None<span>=9</span></span></div></li><li><code>EInvoiceExportMode</code><div class="evs"><span class="ev">No<span>=0</span></span><span class="ev">Yes<span>=1</span></span><span class="ev">YesIncludingPrintoutOrEmail<span>=2</span></span><span class="ev">SaveToFile<span>=3</span></span></div></li><li><code>PartialInvoiceType</code><div class="evs"><span class="ev">NotInitialized<span>=0</span></span><span class="ev">InAdvance<span>=1</span></span><span class="ev">Delivery<span>=2</span></span><span class="ev">InArrears<span>=3</span></span><span class="ev">Text<span>=4</span></span></div></li><li><code>ShipmentPayer</code><div class="evs"><span class="ev">BuyerPays<span>=1</span></span><span class="ev">SellerPays<span>=2</span></span><span class="ev">OtherPayer<span>=3</span></span><span class="ev">Incoterms<span>=4</span></span></div></li><li><code>InvoiceType</code><div class="evs"><span class="ev">Standard<span>=1</span></span><span class="ev">Internal<span>=2</span></span><span class="ev">CashReceipt<span>=3</span></span><span class="ev">Interest<span>=4</span></span><span class="ev">OnAccount<span>=5</span></span><span class="ev">DebitNote<span>=6</span></span><span class="ev">ServiceTax<span>=7</span></span><span class="ev">CorrectionInvoice<span>=8</span></span><span class="ev">CollectiveCorrectionInvoice<span>=9</span></span></div></li><li><code>TypeOfOrderAmountEntered</code><div class="evs"><span class="ev">Percent<span>=1</span></span><span class="ev">Amount<span>=2</span></span></div></li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a> — <code>InvoiceId</code> (FK)</li>
+<li><a href="SalesAgreementBasis.html">SalesAgreementBases</a> — <code>InvoiceId</code> (FK)</li>
+<li><a href="SalesPickingList.html">SalesPickingLists</a> — <code>CustomerOrderInvoices</code> (expand)</li>
+<li><a href="ShipmentInformationSource.html">ShipmentInformationSources</a> — <code>CustomerOrderInvoiceId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Status": 0,
+  "DeliveryNoteNumber": 0,
+  "DeliveryIndex": 0,
+  "OrderDeliveryNumber": null,
+  "PickingListId": null,
+  "WarehouseId": 0,
+  "Version": 0,
+  "ActiveDeliveryAddressCustomerId": null,
+  "ActiveDeliveryAddressSupplierId": null,
+  "ActiveDeliveryAddressCompanyId": null,
+  "SourceOfAlternativeDeliveryAddresses": 0,
+  "ConsigneeReferenceId": null,
+  "ConsigneeReference": null,
+  "ProformaStatus": 0,
+  "ProjectId": null,
+  "DeliveryAddressId": null,
+  "DeliveryAddress": null,
+  "InvoiceAddressId": null,
+  "InvoiceAddress": null,
+  "OurReferenceId": null,
+  "OurReferenceName": null,
+  "BusinessContactReferenceId": null,
+  "BusinessContactReferenceName": null,
+  "GoodsLabel": null,
+  "InvoiceStatusPending": false,
+  "IsPartOfComprehensiveInvoice": false,
+  "ComprehensiveInvoiceGroupingMode": 0,
+  "HasInvoicingCharge": false,
+  "IsFreeDeliveryMonth": false,
+  "GoodsAddressNumber": null,
+  "VatNumber": null,
+  "Dock": null,
+  "DeliveryInstruction": null,
+  "InvoicePrintoutMethod": null,
+  "PrintProformaInvoiceVia": null,
+  "EInvoiceExportMode": null,
+  "Priority": 0,
+  "DirectlyRegistered": false,
+  "PartialInvoiceType": null,
+  "FormReportConfigurationId": null,
+  "DeliveryNoteCreationDate": null,
+  "ExcludeFromEdi": false,
+  "SellerId": null,
+  "ShippingInformationId": null,
+  "ProformaNumber": null,
+  "ProformaDate": null,
+  "DestinationForDeliveryTerm": null,
+  "CandidateDebitInvoiceId": null,
+  "ConsigneeReferenceName": null,
+  "LedgerId": null,
+  "BusinessContactOrderId": 0,
+  "InvoiceBusinessContactId": 0,
+  "AccountGroupId": 0,
+  "AccountGroup": null,
+  "VatGroupId": 0,
+  "PaymentTermId": null,
+  "PaymentTerm": null,
+  "PaymentTermDescription": null,
+  "GracePeriodInDays": null,
+  "DeliveryMethodId": null,
+  "DeliveryTermId": null,
+  "DeliveryTermDescription": null,
+  "DeliveryMethodDescription": null,
+  "ShipmentPayer": 0,
+  "DeliveryRows": null,
+  "InvoiceType": 0,
+  "EditedOrderAmountExcludingVat": null,
+  "EditedOrderAmountExcludingVatCurrencyId": null,
+  "EditedOrderAmountDiscount": null,
+  "TypeOfOrderAmountEntered": null,
+  "Factoring": false
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderInvoice.html">https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderInvoice.html</a><br><span class="badge">Sales</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

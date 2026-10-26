@@ -36,24 +36,18 @@ not because command coverage is a goal.
 If you need a write operation, go to https://api.monitor.se/api/ and look under the
 module's `Commands` namespace.
 
-## What the source documentation does not cover
+## Query options
 
-The scraped pages contain **no** query-parameter reference: no documented
-`$filter`, `$select`, `$orderby`, `$expand` or paging syntax, and no response
-status codes. Only `GET` and `POST` appear anywhere in the corpus.
+Query options, filter functions and authentication are documented in Monitor's
+Developer Guide (https://api.monitor.se/articles/v1/index.html), which this bundle does not include.
 
-Two indirect signals are still recorded here, because they are the closest thing
-the docs give to query semantics:
+### Hints on the entity pages
 
 - Properties marked `expandable` (599
-  of them) are navigation properties — the docs flag them as expandable, which
-  implies an expand mechanism exists.
+  of them) are navigation properties that can be expanded.
 - One property summary
   ([FormReportConfigurations](../modules/Common.md#Common.FormReportConfiguration) `Type`)
-  notes that `$filter` and `$orderby` cannot be used with it, which confirms both
-  options exist in some form.
-
-Treat anything beyond that as unverified: it is not in the source documentation.
+  notes that `$filter` and `$orderby` cannot be used with it.
 
 ## Related
 

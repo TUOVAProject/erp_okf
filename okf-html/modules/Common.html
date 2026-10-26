@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Common · Monitor ERP API</title>
+<meta name="description" content="Monitor ERP API module Common.">
+<link rel="stylesheet" href="../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../index.html">Monitor ERP API</a>
+  <span class="crumb">Common</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../index.html">Overview</a>
+<a href="../about.html">About this bundle</a>
+<a href="../modules/index.html">All modules</a>
+<a href="../entities/index.html">All entities</a>
+<a href="../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../guides/core-entities.html">Core entities</a>
+<a href="../guides/querying.html">Querying the Monitor API</a>
+<a href="../guides/naming-conventions.html">Naming conventions</a>
+<a href="../guides/relationships.html">How entities relate</a>
+<a href="../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../modules/Common.html" aria-current="page">Common<span class="count">113</span></a>
+<a href="../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#queryable-entities">Queryable entities</a>
+<a class="toc-h" href="#payload-types">Payload types</a>
+<a class="toc-h" href="#depends-on-other-modules">Depends on other modules</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="common">Common</h1>
+<p>Monitor API module <code>Common</code>: 110 queryable entities, 0 commands, 3 payload types.</p>
+<p>Full listing: <a href="../entities/Common/index.html">Common entities</a></p>
+<h2 id="queryable-entities">Queryable entities</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../entities/Common/Address.html">Addresses</a></td>
+<td><code>/api/v1/Common/Addresses</code></td>
+<td>Represents a queryable address.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ApplicationUserPrinter.html">ApplicationUserPrinters</a></td>
+<td><code>/api/v1/Common/ApplicationUserPrinters</code></td>
+<td>Represents a printer that has been assigned to an application user.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><code>/api/v1/Common/ApplicationUsers</code></td>
+<td>Represents a queryable MONITOR application user.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/AutoCompleteConfiguration.html">AutoCompleteConfigurations</a></td>
+<td><code>/api/v1/Common/AutoCompleteConfigurations</code></td>
+<td>Represents an auto-complete configuration.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/BlobData.html">BlobData</a></td>
+<td><code>/api/v1/Common/BlobData</code></td>
+<td>A container for blob data.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/BusinessContactBankAccount.html">BusinessContactBankAccounts</a></td>
+<td><code>/api/v1/Common/BusinessContactBankAccounts</code></td>
+<td>Represents a business contact bank account.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/BusinessContactNoteHistory.html">BusinessContactNoteHistories</a></td>
+<td><code>/api/v1/Common/BusinessContactNoteHistories</code></td>
+<td>Represents a business contact note history entry.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td><code>/api/v1/Common/BusinessContactReferences</code></td>
+<td>Represents a queryable business contact reference.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Calendar.html">Calendars</a></td>
+<td><code>/api/v1/Common/Calendars</code></td>
+<td>Represents a queryable calendar.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/CentralBankCode.html">CentralBankCodes</a></td>
+<td><code>/api/v1/Common/CentralBankCodes</code></td>
+<td>Represents a central bank code.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Comment.html">Comments</a></td>
+<td><code>/api/v1/Common/Comments</code></td>
+<td>Represents a comment, containing both raw and HTML formatted text.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/CommunicationAddress.html">CommunicationAddresses</a></td>
+<td><code>/api/v1/Common/CommunicationAddresses</code></td>
+<td>Represents a queryable communication address. A communication address is used to store either phone, cellphone, email or fax information in MONITOR.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Company.html">Companies</a></td>
+<td><code>/api/v1/Common/Companies</code></td>
+<td>Represents a company in the MONITOR system.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/CompanyEmissionDetail.html">CompanyEmissionDetails</a></td>
+<td><code>/api/v1/Common/CompanyEmissionDetails</code></td>
+<td>Represents a company emission type linked to sustainability reporting according to the GHG protocol.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/CompanyOverheadType.html">CompanyOverheadTypes</a></td>
+<td><code>/api/v1/Common/CompanyOverheadTypes</code></td>
+<td>Represents an overhead type used in company emission and sustainability calculations.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ConnectionProfile.html">ConnectionProfiles</a></td>
+<td><code>/api/v1/Common/ConnectionProfiles</code></td>
+<td>Represents a connection profile.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Country.html">Countries</a></td>
+<td><code>/api/v1/Common/Countries</code></td>
+<td>Represents a queryable country.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Currency.html">Currencies</a></td>
+<td><code>/api/v1/Common/Currencies</code></td>
+<td>Represents a queryable currency.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/CurrencyExchangeRateChangeLog.html">CurrencyExchangeRateChangeLogs</a></td>
+<td><code>/api/v1/Common/CurrencyExchangeRateChangeLogs</code></td>
+<td>Represents a currency exchange rate entry.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/CurrencyExchangeRate.html">CurrencyExchangeRates</a></td>
+<td><code>/api/v1/Common/CurrencyExchangeRates</code></td>
+<td>Represents a currency exchange rate entry.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td><code>/api/v1/Common/CurrencyExchangeTypes</code></td>
+<td>Represents a currency exchange type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/CustomReportDefinition.html">CustomReportDefinitions</a></td>
+<td><code>/api/v1/Common/CustomReportDefinitions</code></td>
+<td>Represents a queryable custom report definition.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/CustomReportDisplayDefinition.html">CustomReportDisplayDefinitions</a></td>
+<td><code>/api/v1/Common/CustomReportDisplayDefinitions</code></td>
+<td>Represents a queryable custom report display definition.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/DelegatedWork.html">DelegatedWork</a></td>
+<td><code>/api/v1/Common/DelegatedWork</code></td>
+<td>Represents a delegated work.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/DeliveryAddress.html">DeliveryAddresses</a></td>
+<td><code>/api/v1/Common/DeliveryAddresses</code></td>
+<td>Represents a delivery address.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/DeliveryAddressWarehouseInformation.html">DeliveryAddressWarehouseInformations</a></td>
+<td><code>/api/v1/Common/DeliveryAddressWarehouseInformations</code></td>
+<td>Represents a queryable delivery address warehouse information entry.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td><code>/api/v1/Common/DeliveryMethods</code></td>
+<td>Represents a queryable delivery method.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/DeliveryTerm.html">DeliveryTerms</a></td>
+<td><code>/api/v1/Common/DeliveryTerms</code></td>
+<td>Represents a queryable delivery term.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/DeliveryTime.html">DeliveryTimes</a></td>
+<td><code>/api/v1/Common/DeliveryTimes</code></td>
+<td>Represents a queryable delivery time.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Department.html">Departments</a></td>
+<td><code>/api/v1/Common/Departments</code></td>
+<td>Represents a queryable department.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/DiscountCategory.html">DiscountCategories</a></td>
+<td><code>/api/v1/Common/DiscountCategories</code></td>
+<td>Represents a queryable discount category.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/DiscountCategoryRow.html">DiscountCategoryRows</a></td>
+<td><code>/api/v1/Common/DiscountCategoryRows</code></td>
+<td>Represents a discount category row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Discount.html">Discounts</a></td>
+<td><code>/api/v1/Common/Discounts</code></td>
+<td>Represents a queryable discount.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/EdiBehavior.html">EdiBehaviors</a></td>
+<td><code>/api/v1/Common/EdiBehaviors</code></td>
+<td>Represents an Edi Behavior</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/EdiChannelConfiguration.html">EdiChannelConfigurations</a></td>
+<td><code>/api/v1/Common/EdiChannelConfigurations</code></td>
+<td>Represents an Edi Channel Configuration.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/EmploymentPeriod.html">EmploymentPeriods</a></td>
+<td><code>/api/v1/Common/EmploymentPeriods</code></td>
+<td>Represents the employment period of a personnel record.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/EntityChangeLog.html">EntityChangeLogs</a></td>
+<td><code>/api/v1/Common/EntityChangeLogs</code></td>
+<td>Represents a queryable entity changelog entry.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/EntityPropertyChange.html">EntityPropertyChanges</a></td>
+<td><code>/api/v1/Common/EntityPropertyChanges</code></td>
+<td>Represents a queryable entity property change entry.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ExtraFieldGroup.html">ExtraFieldGroups</a></td>
+<td><code>/api/v1/Common/ExtraFieldGroups</code></td>
+<td>Represents an extra field group.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ExtraFieldOptionTemplate.html">ExtraFieldOptionTemplates</a></td>
+<td><code>/api/v1/Common/ExtraFieldOptionTemplates</code></td>
+<td>Represents an extra field option template.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ExtraField.html">ExtraFields</a></td>
+<td><code>/api/v1/Common/ExtraFields</code></td>
+<td>Represents an extra field.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ExtraFieldTemplate.html">ExtraFieldTemplates</a></td>
+<td><code>/api/v1/Common/ExtraFieldTemplates</code></td>
+<td>Represents an extra field template.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/FilePath.html">FilePaths</a></td>
+<td><code>/api/v1/Common/FilePaths</code></td>
+<td>Represents a queryable file path.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/FormReportConfiguration.html">FormReportConfigurations</a></td>
+<td><code>/api/v1/Common/FormReportConfigurations</code></td>
+<td>Represents a form report configuration.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/FormReportTranslationGroup.html">FormReportTranslationGroups</a></td>
+<td><code>/api/v1/Common/FormReportTranslationGroups</code></td>
+<td>Represents a form report translation group.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/FormReportTranslation.html">FormReportTranslations</a></td>
+<td><code>/api/v1/Common/FormReportTranslations</code></td>
+<td>Represents a form report translation.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/FormTemplateRow.html">FormTemplateRows</a></td>
+<td><code>/api/v1/Common/FormTemplateRows</code></td>
+<td>Represents a form template row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/FormTemplate.html">FormTemplates</a></td>
+<td><code>/api/v1/Common/FormTemplates</code></td>
+<td>Represents a measuring or maintenance form template.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/FormTemplateSelectionRow.html">FormTemplateSelectionRows</a></td>
+<td><code>/api/v1/Common/FormTemplateSelectionRows</code></td>
+<td>Represents a form template selection row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/LanguageCode.html">LanguageCodes</a></td>
+<td><code>/api/v1/Common/LanguageCodes</code></td>
+<td>Represents a language code. Language codes are the language definitions in MONITOR.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/MeasuringTemplate.html">MeasuringTemplates</a></td>
+<td><code>/api/v1/Common/MeasuringTemplates</code></td>
+<td>Represents a measuring template.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/MonitoringTaskRecipient.html">MonitoringTaskRecipients</a></td>
+<td><code>/api/v1/Common/MonitoringTaskRecipients</code></td>
+<td>Represents a recipient for monitoring task.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/MonitoringTaskRow.html">MonitoringTaskRows</a></td>
+<td><code>/api/v1/Common/MonitoringTaskRows</code></td>
+<td>Represents a monitoring task row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/MonitoringTask.html">MonitoringTasks</a></td>
+<td><code>/api/v1/Common/MonitoringTasks</code></td>
+<td>Represents a monitoring task.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/OrderTransferSetting.html">OrderTransferSettings</a></td>
+<td><code>/api/v1/Common/OrderTransferSettings</code></td>
+<td>Represents an order transfer setting.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PartConfigurationComponentSnapshot.html">PartConfigurationComponentSnapshots</a></td>
+<td><code>/api/v1/Common/PartConfigurationComponentSnapshots</code></td>
+<td>Represents a part configuration component snapshot.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PartConfigurationPreset.html">PartConfigurationPresets</a></td>
+<td><code>/api/v1/Common/PartConfigurationPresets</code></td>
+<td>Represents a part configuration preset.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PartConfigurationResult.html">PartConfigurationResults</a></td>
+<td><code>/api/v1/Common/PartConfigurationResults</code></td>
+<td>Represents a part configuration result.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PartConfiguration.html">PartConfigurations</a></td>
+<td><code>/api/v1/Common/PartConfigurations</code></td>
+<td>Represents a part configuration.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PartConfigurationSelectionGroupResult.html">PartConfigurationSelectionGroupResults</a></td>
+<td><code>/api/v1/Common/PartConfigurationSelectionGroupResults</code></td>
+<td>Represents a part configuration selection group result</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PartConfigurationTemplate.html">PartConfigurationTemplates</a></td>
+<td><code>/api/v1/Common/PartConfigurationTemplates</code></td>
+<td>Represents a part configuration template.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PartialQuantity.html">PartialQuantities</a></td>
+<td><code>/api/v1/Common/PartialQuantities</code></td>
+<td>Represents a partial quantity.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PartUnitUsage.html">PartUnitUsages</a></td>
+<td><code>/api/v1/Common/PartUnitUsages</code></td>
+<td>Represents a part unit usage.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PaymentMethod.html">PaymentMethods</a></td>
+<td><code>/api/v1/Common/PaymentMethods</code></td>
+<td>Represents a queryable payment method.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PaymentPlanTemplateRow.html">PaymentPlanTemplateRows</a></td>
+<td><code>/api/v1/Common/PaymentPlanTemplateRows</code></td>
+<td>Represents a payment plan template row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PaymentPlanTemplate.html">PaymentPlanTemplates</a></td>
+<td><code>/api/v1/Common/PaymentPlanTemplates</code></td>
+<td>Represents a payment plan template.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PaymentTerm.html">PaymentTerms</a></td>
+<td><code>/api/v1/Common/PaymentTerms</code></td>
+<td>Represents a queryable payment term.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PermissionGroup.html">PermissionGroups</a></td>
+<td><code>/api/v1/Common/PermissionGroups</code></td>
+<td>Represents a permission group.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Permission.html">Permissions</a></td>
+<td><code>/api/v1/Common/Permissions</code></td>
+<td>Represents a permission node.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PersonManufacturingPrintSettings.html">PersonManufacturingPrintSettings</a></td>
+<td><code>/api/v1/Common/PersonManufacturingPrintSettings</code></td>
+<td>Represents manufacturing print settings for a person.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PersonRelative.html">PersonRelatives</a></td>
+<td><code>/api/v1/Common/PersonRelatives</code></td>
+<td>Represents the relative of a person.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Person.html">Persons</a></td>
+<td><code>/api/v1/Common/Persons</code></td>
+<td>Represents a person.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/PriceList.html">PriceLists</a></td>
+<td><code>/api/v1/Common/PriceLists</code></td>
+<td>Represents a price list.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Probability.html">Probabilities</a></td>
+<td><code>/api/v1/Common/Probabilities</code></td>
+<td>Represents a probability.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProductGroup.html">ProductGroups</a></td>
+<td><code>/api/v1/Common/ProductGroups</code></td>
+<td>Represents a product group.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProjectActivity.html">ProjectActivities</a></td>
+<td><code>/api/v1/Common/ProjectActivities</code></td>
+<td>Represents a project activity.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProjectActivityCalendarAppointment.html">ProjectActivityCalendarAppointments</a></td>
+<td><code>/api/v1/Common/ProjectActivityCalendarAppointments</code></td>
+<td>Represents a Project Activity Calendar Appointment.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProjectActivityRelation.html">ProjectActivityRelations</a></td>
+<td><code>/api/v1/Common/ProjectActivityRelations</code></td>
+<td>Represents a relation between two project activities.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProjectActivityType.html">ProjectActivityTypes</a></td>
+<td><code>/api/v1/Common/ProjectActivityTypes</code></td>
+<td>Represents a project activity type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProjectAggregate.html">ProjectAggregates</a></td>
+<td><code>/api/v1/Common/ProjectAggregates</code></td>
+<td>Represents a project aggregate.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProjectCostBudget.html">ProjectCostBudgets</a></td>
+<td><code>/api/v1/Common/ProjectCostBudgets</code></td>
+<td>Represents a project cost budget.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProjectCostForecast.html">ProjectCostForecasts</a></td>
+<td><code>/api/v1/Common/ProjectCostForecasts</code></td>
+<td>Represents a project cost forecast.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProjectCostReportingEntry.html">ProjectCostReportingEntries</a></td>
+<td><code>/api/v1/Common/ProjectCostReportingEntries</code></td>
+<td>Represents a project cost reporting entry.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProjectCostType.html">ProjectCostTypes</a></td>
+<td><code>/api/v1/Common/ProjectCostTypes</code></td>
+<td>Represents a project cost type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProjectGroup.html">ProjectGroups</a></td>
+<td><code>/api/v1/Common/ProjectGroups</code></td>
+<td>Represents a project group.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProjectPhase.html">ProjectPhases</a></td>
+<td><code>/api/v1/Common/ProjectPhases</code></td>
+<td>Represents a project phase.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProjectPhaseType.html">ProjectPhaseTypes</a></td>
+<td><code>/api/v1/Common/ProjectPhaseTypes</code></td>
+<td>Represents a project phase type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Project.html">Projects</a></td>
+<td><code>/api/v1/Common/Projects</code></td>
+<td>Represents a project.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ProjectType.html">ProjectTypes</a></td>
+<td><code>/api/v1/Common/ProjectTypes</code></td>
+<td>Represents a project type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ReasonCodeDebitNote.html">ReasonCodeDebitNotes</a></td>
+<td><code>/api/v1/Common/ReasonCodeDebitNotes</code></td>
+<td>Represents a reason code for debit note.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ReasonCode.html">ReasonCodes</a></td>
+<td><code>/api/v1/Common/ReasonCodes</code></td>
+<td>Represents a reason code.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/RejectionCodeItem.html">RejectionCodeItems</a></td>
+<td><code>/api/v1/Common/RejectionCodeItems</code></td>
+<td>Represents a rejection code.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/RemotePartConfigurationRow.html">RemotePartConfigurationRows</a></td>
+<td><code>/api/v1/Common/RemotePartConfigurationRows</code></td>
+<td>Represents a remote part configuration row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/RemotePartConfiguration.html">RemotePartConfigurations</a></td>
+<td><code>/api/v1/Common/RemotePartConfigurations</code></td>
+<td>Represents a remote part configuration.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Reseller.html">Resellers</a></td>
+<td><code>/api/v1/Common/Resellers</code></td>
+<td>Represents a reseller.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Revision.html">Revisions</a></td>
+<td><code>/api/v1/Common/Revisions</code></td>
+<td>Represents a revision.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Role.html">Roles</a></td>
+<td><code>/api/v1/Common/Roles</code></td>
+<td>Represents a user role.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/ServerPrinter.html">ServerPrinters</a></td>
+<td><code>/api/v1/Common/ServerPrinters</code></td>
+<td>Represents a server printer that can be used to print documents via the MONITOR server.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/StaggeredPrice.html">StaggeredPrices</a></td>
+<td><code>/api/v1/Common/StaggeredPrices</code></td>
+<td>Represents a staggered price.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/StatisticalGoodsCode.html">StatisticalGoodsCodes</a></td>
+<td><code>/api/v1/Common/StatisticalGoodsCodes</code></td>
+<td>Represents a queryable statistical goods code.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Tag.html">Tags</a></td>
+<td><code>/api/v1/Common/Tags</code></td>
+<td>Represents a tag.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/TariffAndServiceCode.html">TariffAndServiceCodes</a></td>
+<td><code>/api/v1/Common/TariffAndServiceCodes</code></td>
+<td>Represents a tariff and service code.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/TransactionTypeIntrastat.html">TransactionTypeIntrastats</a></td>
+<td><code>/api/v1/Common/TransactionTypeIntrastats</code></td>
+<td>Represents a transaction type intrastat.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/TransferProfile.html">TransferProfiles</a></td>
+<td><code>/api/v1/Common/TransferProfiles</code></td>
+<td>Represents a transfer profile.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Unit.html">Units</a></td>
+<td><code>/api/v1/Common/Units</code></td>
+<td>Represents a quantity unit.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/VatGroup.html">VatGroups</a></td>
+<td><code>/api/v1/Common/VatGroups</code></td>
+<td>Represents a VAT group.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/VatRate.html">VatRates</a></td>
+<td><code>/api/v1/Common/VatRates</code></td>
+<td>Represents a VAT rate.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/WarehousePermission.html">WarehousePermissions</a></td>
+<td><code>/api/v1/Common/WarehousePermissions</code></td>
+<td>Represents an application user warehouse permission.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Warehouse.html">Warehouses</a></td>
+<td><code>/api/v1/Common/Warehouses</code></td>
+<td>Represents a warehouse.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/WriteOffCode.html">WriteOffCodes</a></td>
+<td><code>/api/v1/Common/WriteOffCodes</code></td>
+<td>Represents a write off code.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="payload-types">Payload types</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../entities/Common/FileLink.html">FileLink</a></td>
+<td>Represents a file that has been linked to a comment.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/FormReportData.html">FormReportData</a></td>
+<td>Represents form report data from MONITOR.</td>
+</tr>
+<tr>
+<td><a href="../entities/Common/Money.html">Money</a></td>
+<td>An object composite representing a money value.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="depends-on-other-modules">Depends on other modules</h2>
+<ul>
+<li><a href="Accounting.html">Accounting</a>: <a href="../entities/Accounting/Account.html">Accounts</a>, <a href="../entities/Accounting/CodingEntry.html">CodingEntries</a>, <a href="../entities/Accounting/VoucherSeries.html">VoucherSeries</a></li>
+<li><a href="Inventory.html">Inventory</a>: <a href="../entities/Inventory/PartCode.html">PartCodes</a>, <a href="../entities/Inventory/Part.html">Parts</a></li>
+<li><a href="Manufacturing.html">Manufacturing</a>: <a href="../entities/Manufacturing/ManufacturingOrderOperation.html">ManufacturingOrderOperations</a></li>
+<li><a href="Purchase.html">Purchase</a>: <a href="../entities/Purchase/Supplier.html">Suppliers</a></li>
+<li><a href="Sales.html">Sales</a>: <a href="../entities/Sales/CustomerAccountGroup.html">CustomerAccountGroups</a>, <a href="../entities/Sales/CustomerDistrict.html">CustomerDistricts</a>, <a href="../entities/Sales/CustomerOrder.html">CustomerOrders</a>, <a href="../entities/Sales/Customer.html">Customers</a></li>
+<li><a href="TimeRecording.html">TimeRecording</a>: <a href="../entities/TimeRecording/PersonTimeBank.html">PersonTimeBanks</a>, <a href="../entities/TimeRecording/PersonWorkCenter.html">PersonWorkCenters</a>, <a href="../entities/TimeRecording/PlannedAbsence.html">PlannedAbsences</a>, <a href="../entities/TimeRecording/Schedule.html">Schedules</a></li>
+</ul>
+<div class="page-meta"><span class="badge">Common</span><span class="badge">module</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../";</script>
+<script src="../assets/okf-index.js"></script>
+<script src="../assets/okf.js"></script>
+</body>
+</html>

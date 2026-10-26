@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AccountsReceivables · Monitor ERP API</title>
+<meta name="description" content="Represents an accounts receivable.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>AccountsReceivables</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html" aria-current="location">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="accountsreceivables">AccountsReceivables</h1>
+<p>Represents an accounts receivable.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Accounting.html">Accounting</a></dd><dt>API class</dt><dd><code>AccountsReceivable</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Accounting/AccountsReceivables</code></dd><dt>Required permission</dt><dd>Show accounts receivable</dd><dt>GUID</dt><dd><code>93690592-6919-4221-822a-1f8bfbca9ce9</code></dd><dt>Introduced in</dt><dd>2.44</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>Version</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The version of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>BookingId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="Booking.html">Bookings</a></td>
+<td></td>
+<td>The business key identifier of the booking that the accounts receivable belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>Booking</code></td>
+<td class="type"><code>Bookings</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Booking.html">Bookings</a></td>
+<td>expandable</td>
+<td>The booking that the accounts receivable belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The invoice type of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>LatestReminderDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The latest reminder date of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentReminder</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the accounts receivable has payment reminders.</td>
+</tr>
+<tr>
+<td class="prop"><code>NumberOfPaymentReminders</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The number of payment reminders that are left for the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>CollectionDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The collection date of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>Collection</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the accounts receivable has been collected or not.</td>
+</tr>
+<tr>
+<td class="prop"><code>InterestType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The interest type of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsComprehensive</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the accounts receivable is comprehensive or not.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartialInvoiceType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>Specifies how partial invoicing works for the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomerAccountGroupId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Sales/CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td></td>
+<td>The business key identifier of the customer account group for the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomerAccountGroup</code></td>
+<td class="type"><code>CustomerAccountGroups</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Sales/CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td>expandable</td>
+<td>The customer account group of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>DebitInvoiceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="AccountsReceivable.html">AccountsReceivables</a></td>
+<td></td>
+<td>The business key identifier of the debit invoice that the accounts receivable belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>OnAccountIncomingPaymentLedgerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the incoming payment ledger for the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>OnAccountCancelledIncomingPaymentLedgerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the cancelled incoming payment ledger for the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsEInvoiceExported</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if an e-invoice has been exported for the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>AccountsReceivableLedgerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the accounts receivable ledger.</td>
+</tr>
+<tr>
+<td class="prop"><code>CancelledAccountsReceivableLedgerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the cancelled accounts receivable ledger.</td>
+</tr>
+<tr>
+<td class="prop"><code>Status</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The status of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>LatePaymentFee</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The late payment fee of the accounts receivable in percent.</td>
+</tr>
+<tr>
+<td class="prop"><code>CancelCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the cancel comment of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>CancelComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The cancel comment of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>CancelDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The cancel date of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>CancelBookingId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="Booking.html">Bookings</a></td>
+<td></td>
+<td>The business key identifier of the cancel booking that the accounts receivable belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>CancelBooking</code></td>
+<td class="type"><code>Bookings</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Booking.html">Bookings</a></td>
+<td>expandable</td>
+<td>The cancel booking that the accounts receivable belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Sales/Customer.html">Customers</a></td>
+<td></td>
+<td>The business key identifier of the customer that the accounts receivable belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceNumber</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique</td>
+<td>The human readable identifier of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The invoice date of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>DueDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The due date of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsCredit</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the accounts receivable is on credit or not.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceAmount</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The invoice amount of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceAmountCurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the accounts receivable’s invoice amount currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceAmountInCompanyCurrency</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The invoice amount of the accounts receivable in the company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceAmountInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the accounts receivable’s invoice amount company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatAmount</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The VAT amount of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatAmountCurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the accounts receivable’s VAT amount currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatAmountInCompanyCurrency</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The VAT amount of the accounts receivable in the company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatAmountInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the accounts receivable’s VAT amount company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>RestAmount</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The rest amount of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>RestAmountCurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the accounts receivable’s rest amount currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>RestAmountInCompanyCurrency</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The rest amount of the accounts receivable in the company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>RestAmountInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the accounts receivable’s rest amount company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderedRestAmount</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The ordered rest amount of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderedRestAmountCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the accounts receivable’s ordered rest amount currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the accounts receivable currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExchangeRate</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The exchange rate applicable to the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaidInFullDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>Specifies when the accounts receivable was paid in full.</td>
+</tr>
+<tr>
+<td class="prop"><code>CommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the accounts receivable comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>Comment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The comment of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReferenceNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The reference number of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseFixedDueDate</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the accounts receivable uses a fixed due date.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatGroupId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/VatGroup.html">VatGroups</a></td>
+<td></td>
+<td>The business key identifier of the VAT group that the accounts receivable belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentTermId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td></td>
+<td>The business key identifier of the payment term that the accounts receivable belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>ChineseVatInvoiceNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The Chinese VAT invoice number of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>ChineseVatInvoiceDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The Chinese VAT invoice date of the accounts receivable.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyExchangeTypeId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td>since 22.9</td>
+<td>The business key identifier of the accounts receivable's currency exchange type.</td>
+</tr>
+<tr>
+<td class="prop"><code>CTCReportingInvoiceNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 25.6</td>
+<td>The invoice number for accounts receivable from CTC reporting system.</td>
+</tr>
+<tr>
+<td class="prop"><code>CTCReportingReasonForRejection</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 25.6</td>
+<td>The reason for rejection accounts receivable in CTC reporting system.</td>
+</tr>
+<tr>
+<td class="prop"><code>CTCReportingStatus</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum, since 25.6</td>
+<td>The accounts receivable's status from CTC reporting system.</td>
+</tr>
+<tr>
+<td class="prop"><code>CTCReportingInvoiceDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 25.6</td>
+<td>The accounts receivable's invoice date from CTC reporting system.</td>
+</tr>
+<tr>
+<td class="prop"><code>CTCReportingIdentifier</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 25.6</td>
+<td>The accounts receivable's identifier from CTC reporting system.</td>
+</tr>
+<tr>
+<td class="prop"><code>CTCReportingElectronicConfirmationURL</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 25.6</td>
+<td>The official electronic confirmation URL of receipt from CTC reporting system.</td>
+</tr>
+<tr>
+<td class="prop"><code>CTCReportingElectronicConfirmationNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 25.6</td>
+<td>The official electronic confirmation number of receipt from CTC reporting system.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>InvoiceType</code><div class="evs"><span class="ev">Standard<span>=1</span></span><span class="ev">Internal<span>=2</span></span><span class="ev">CashReceipt<span>=3</span></span><span class="ev">Interest<span>=4</span></span><span class="ev">OnAccount<span>=5</span></span><span class="ev">DebitNote<span>=6</span></span><span class="ev">ServiceTax<span>=7</span></span><span class="ev">CorrectionInvoice<span>=8</span></span><span class="ev">CollectiveCorrectionInvoice<span>=9</span></span></div></li><li><code>InterestType</code><div class="evs"><span class="ev">InterestInvoice<span>=0</span></span><span class="ev">NextRegularInvoice<span>=1</span></span><span class="ev">None<span>=2</span></span></div></li><li><code>PartialInvoiceType</code><div class="evs"><span class="ev">NotInitialized<span>=0</span></span><span class="ev">InAdvance<span>=1</span></span><span class="ev">Delivery<span>=2</span></span><span class="ev">InArrears<span>=3</span></span><span class="ev">Text<span>=4</span></span></div></li><li><code>Status</code><div class="evs"><span class="ev">Approved<span>=0</span></span><span class="ev">Printed<span>=1</span></span><span class="ev">Cancelled<span>=2</span></span></div></li><li><code>CTCReportingStatus</code><div class="evs"><span class="ev">NotSent<span>=0</span></span><span class="ev">SentForApproval<span>=1</span></span><span class="ev">Approved<span>=2</span></span><span class="ev">NotApproved<span>=3</span></span><span class="ev">Cancelled<span>=4</span></span></div></li></ul>
+
+
+
+
+
+
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Accounting</strong></p>
+<ul>
+<li><a href="AccountsReceivableCashDiscountLevel.html">AccountsReceivableCashDiscountLevels</a> — <code>ParentId</code> (FK)</li>
+<li><a href="AccountsReceivable.html">AccountsReceivables</a> — <code>DebitInvoiceId</code> (FK)</li>
+<li><a href="FixedAssetSale.html">FixedAssetSales</a> — <code>AccountsReceivableId</code> (FK)</li>
+<li><a href="IncomingPayment.html">IncomingPayments</a> — <code>ParentId</code> (FK)</li>
+<li><a href="SetOffDestination.html">SetOffDestination</a> — <code>AccountsReceivableId</code> (FK)</li>
+<li><a href="VoucherRow.html">VoucherRows</a> — <code>AccountsReceivableId</code> (FK)</li>
+</ul>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>AccountReciveableId</code> (FK)</li>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>AccountsReceivable</code> (expand)</li>
+<li><a href="../Inventory/CasePartLink.html">CaseEntryPartLinks</a> — <code>CompensationAccountsReceivableId</code> (FK)</li>
+</ul>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="../Sales/InvoiceLog.html">InvoiceLogs</a> — <code>InvoiceId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Version": 0,
+  "BookingId": null,
+  "Booking": null,
+  "InvoiceType": 0,
+  "LatestReminderDate": null,
+  "PaymentReminder": false,
+  "NumberOfPaymentReminders": 0,
+  "CollectionDate": null,
+  "Collection": false,
+  "InterestType": 0,
+  "IsComprehensive": false,
+  "PartialInvoiceType": 0,
+  "CustomerAccountGroupId": 0,
+  "CustomerAccountGroup": null,
+  "DebitInvoiceId": null,
+  "OnAccountIncomingPaymentLedgerId": null,
+  "OnAccountCancelledIncomingPaymentLedgerId": null,
+  "IsEInvoiceExported": false,
+  "AccountsReceivableLedgerId": null,
+  "CancelledAccountsReceivableLedgerId": null,
+  "Status": 0,
+  "LatePaymentFee": null,
+  "CancelCommentId": null,
+  "CancelComment": null,
+  "CancelDate": "0001-01-01T00:00:00+00:00",
+  "CancelBookingId": null,
+  "CancelBooking": null,
+  "BusinessContactId": null,
+  "InvoiceNumber": 0,
+  "InvoiceDate": "0001-01-01T00:00:00+00:00",
+  "DueDate": "0001-01-01T00:00:00+00:00",
+  "IsCredit": false,
+  "InvoiceAmount": 0.0,
+  "InvoiceAmountCurrencyId": 0,
+  "InvoiceAmountInCompanyCurrency": 0.0,
+  "InvoiceAmountInCompanyCurrencyCurrencyId": 0,
+  "VatAmount": 0.0,
+  "VatAmountCurrencyId": 0,
+  "VatAmountInCompanyCurrency": 0.0,
+  "VatAmountInCompanyCurrencyCurrencyId": 0,
+  "RestAmount": 0.0,
+  "RestAmountCurrencyId": 0,
+  "RestAmountInCompanyCurrency": 0.0,
+  "RestAmountInCompanyCurrencyCurrencyId": 0,
+  "OrderedRestAmount": 0.0,
+  "OrderedRestAmountCurrencyId": null,
+  "CurrencyId": 0,
+  "ExchangeRate": 0.0,
+  "PaidInFullDate": null,
+  "CommentId": null,
+  "Comment": null,
+  "ReferenceNumber": null,
+  "UseFixedDueDate": false,
+  "VatGroupId": 0,
+  "PaymentTermId": 0,
+  "ChineseVatInvoiceNumber": null,
+  "ChineseVatInvoiceDate": null,
+  "CurrencyExchangeTypeId": 0,
+  "CTCReportingInvoiceNumber": null,
+  "CTCReportingReasonForRejection": null,
+  "CTCReportingStatus": null,
+  "CTCReportingInvoiceDate": null,
+  "CTCReportingIdentifier": null,
+  "CTCReportingElectronicConfirmationURL": null,
+  "CTCReportingElectronicConfirmationNumber": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Accounting.AccountsReceivable.html">https://api.monitor.se/api/Monitor.API.Accounting.AccountsReceivable.html</a><br><span class="badge">Accounting</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

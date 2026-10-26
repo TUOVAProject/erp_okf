@@ -1,10 +1,3 @@
----
-type: Index
-title: Common entities
-tags:
-- Common
----
-
 # Common entities
 
 113 documented pages in the Common module.

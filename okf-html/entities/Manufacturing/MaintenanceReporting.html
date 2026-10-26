@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MaintenanceReportings · Monitor ERP API</title>
+<meta name="description" content="Represents a maintenance reporting.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>MaintenanceReportings</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html" aria-current="location">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="maintenancereportings">MaintenanceReportings</h1>
+<p>Represents a maintenance reporting.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Manufacturing.html">Manufacturing</a></dd><dt>API class</dt><dd><code>MaintenanceReporting</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Manufacturing/MaintenanceReportings</code></dd><dt>Required permission</dt><dd>Show maintenance plan</dd><dt>GUID</dt><dd><code>E557EAFE-1137-42B7-A3A4-A610D9066703</code></dd><dt>Introduced in</dt><dd>24.6</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>SerialNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique</td>
+<td>The serial number of the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>ManufacturingOrderId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td></td>
+<td>The business key identifier of the manufacturing order.</td>
+</tr>
+<tr>
+<td class="prop"><code>ManufacturingOrder</code></td>
+<td class="type"><code>ManufacturingOrders</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td>expandable</td>
+<td>The maintenance reporting manufacturing order.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProductRecordId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of product record.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProductRecord</code></td>
+<td class="type"><code>ProductRecords</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Inventory/ProductRecord.html">ProductRecords</a></td>
+<td>expandable</td>
+<td>The product record of the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>MaintenanceRowId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the maintenance row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShortComment</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The short comment of the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>CommentId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>Comment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The comment of the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>MaintenanceStatus</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The maintenance status of the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReportedById</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td></td>
+<td>The business key identifier of person that reported on the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReportedBy</code></td>
+<td class="type"><code>Persons</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td>expandable</td>
+<td>The person that reported in the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReportingStatus</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The reporting status of the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActualDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The actual date of the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>Status</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The serial number status of the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>NextOccurrence</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The next occurrence of the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>ColorCode</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The color code of the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>InstructionId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the instruction.</td>
+</tr>
+<tr>
+<td class="prop"><code>Instruction</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The instruction of the maintenance reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>MaintenanceReportingSelectionRows</code></td>
+<td class="type"><code>MaintenanceReportingSelectionRows[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="MaintenanceReportingSelectionRow.html">MaintenanceReportingSelectionRows</a></td>
+<td>expandable, collection, since 25.7</td>
+<td>The maintenance reporting selection rows.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>MaintenanceStatus</code><div class="evs"><span class="ev">Ok<span>=0</span></span><span class="ev">NotOk<span>=1</span></span><span class="ev">OkWithAction<span>=2</span></span></div></li><li><code>ReportingStatus</code><div class="evs"><span class="ev">New<span>=0</span></span><span class="ev">InProgress<span>=1</span></span><span class="ev">Finished<span>=2</span></span></div></li><li><code>Status</code><div class="evs"><span class="ev">ApprovalForUse<span>=0</span></span><span class="ev">NonApproval<span>=1</span></span><span class="ev">ServicePastDue<span>=2</span></span><span class="ev">UnderServiceOrCalibration<span>=3</span></span><span class="ev">Rejected<span>=4</span></span><span class="ev">ServiceOrCalibrationBeforeUse<span>=5</span></span><span class="ev">Missing<span>=6</span></span><span class="ev">Scrapped<span>=7</span></span></div></li></ul>
+
+
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="MaintenanceReportingSelectionRow.html">MaintenanceReportingSelectionRows</a> — <code>MaintenanceReportingId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "SerialNumber": null,
+  "ManufacturingOrderId": 0,
+  "ManufacturingOrder": null,
+  "ProductRecordId": 0,
+  "ProductRecord": null,
+  "MaintenanceRowId": 0,
+  "ShortComment": null,
+  "CommentId": 0,
+  "Comment": null,
+  "MaintenanceStatus": null,
+  "ReportedById": 0,
+  "ReportedBy": null,
+  "ReportingStatus": 0,
+  "ActualDate": null,
+  "Status": 0,
+  "NextOccurrence": null,
+  "ColorCode": null,
+  "InstructionId": 0,
+  "Instruction": null,
+  "MaintenanceReportingSelectionRows": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Manufacturing.MaintenanceReporting.html">https://api.monitor.se/api/Monitor.API.Manufacturing.MaintenanceReporting.html</a><br><span class="badge">Manufacturing</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

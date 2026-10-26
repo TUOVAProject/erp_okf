@@ -1,10 +1,3 @@
----
-type: Index
-title: Inventory entities
-tags:
-- Inventory
----
-
 # Inventory entities
 
 50 documented pages in the Inventory module.

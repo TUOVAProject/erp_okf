@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SalesAgreementRowInflows · Monitor ERP API</title>
+<meta name="description" content="Represents a sales agreement inflow row.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>SalesAgreementRowInflows</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html" aria-current="location">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="salesagreementrowinflows">SalesAgreementRowInflows</h1>
+<p>Represents a sales agreement inflow row.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Sales.html">Sales</a></dd><dt>API class</dt><dd><code>SalesAgreementRowInflow</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Sales/SalesAgreementRowInflows</code></dd><dt>Required permission</dt><dd>Show agreement</dd><dt>GUID</dt><dd><code>530d3209-85ab-498d-8b73-7d21ecb03f1d</code></dd><dt>Introduced in</dt><dd>26.4</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>CreationTime</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The creation time of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>LoggingTimeStamp</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The logging timestamp of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderRowType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The order row type of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
+<td></td>
+<td>The business key identifier of the inflow rows part.</td>
+</tr>
+<tr>
+<td class="prop"><code>AdditionalRowDescription</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The additional row description of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SalesAgreementId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="SalesAgreement.html">SalesAgreements</a></td>
+<td></td>
+<td>The business key identifier of the inflow rows sales agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>SalesAgreementRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="SalesAgreementRow.html">SalesAgreementRows</a></td>
+<td></td>
+<td>The business key identifier of the inflow rows sales agreement row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderedQuantityChange</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The ordered quantity change of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChange</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The price change of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChangeCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the price change currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChangeCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The price change currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChangeInCompanyCurrency</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The price change in company currency of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChangeInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the price change in company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChangeInCompanyCurrencyCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The price change in company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>DiscountChange</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The discount change of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>TotalValueChange</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The total value change of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>TotalValueChangeCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the total value change currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>TotalValueChangeCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The total value change currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>TotalValueChangeInCompanyCurrency</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The total value change in company currency of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>TotalValueChangeInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the total value change in company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>TotalValueChangeInCompanyCurrencyCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The total value change in company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowTotalValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The row total value of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowTotalValueCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the row total value currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowTotalValueCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The row total value currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowTotalValueInCompanyCurrency</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The row total value in company currency of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowTotalValueInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the row total value in company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowTotalValueInCompanyCurrencyCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The row total value in company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowTotalQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The row total quantity of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsOneTimeCost</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Whether the inflow row is a one-time cost.</td>
+</tr>
+<tr>
+<td class="prop"><code>SalesAgreementInvoicingInterval</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The invoicing interval of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>TypeOfChange</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The type of change of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceDefinition</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The price definition of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChangePerInterval</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The price change per interval of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChangePerIntervalCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the price change per interval currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChangePerIntervalCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The price change per interval currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChangePerIntervalInCompanyCurrency</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The price change per interval in company currency of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChangePerIntervalInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the price change per interval in company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChangePerIntervalInCompanyCurrencyCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The price change per interval in company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>TotalValueChangePerInterval</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The total value change per interval of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>TotalValueChangePerIntervalInCompanyCurrency</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The total value change per interval in company currency of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowTotalValuePerInterval</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The row total value per interval of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowTotalValuePerIntervalInCompanyCurrency</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The row total value per interval in company currency of the inflow row.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>OrderRowType</code><div class="evs"><span class="ev">Part<span>=1</span></span><span class="ev">Additional<span>=2</span></span><span class="ev">Sum<span>=3</span></span><span class="ev">FreeText<span>=4</span></span></div></li><li><code>SalesAgreementInvoicingInterval</code><div class="evs"><span class="ev">Monthly<span>=1</span></span><span class="ev">EveryOtherMonth<span>=2</span></span><span class="ev">Quarterly<span>=3</span></span><span class="ev">FourMonthly<span>=4</span></span><span class="ev">SemiAnnually<span>=5</span></span><span class="ev">Annually<span>=6</span></span></div></li><li><code>TypeOfChange</code><div class="evs"><span class="ev">NewRow<span>=0</span></span><span class="ev">Upgrade<span>=1</span></span><span class="ev">Downgrade<span>=2</span></span><span class="ev">Churn<span>=3</span></span><span class="ev">PriceChange<span>=4</span></span></div></li><li><code>PriceDefinition</code><div class="evs"><span class="ev">AccordingToInvoicingInterval<span>=0</span></span><span class="ev">Day<span>=1</span></span><span class="ev">Week<span>=2</span></span><span class="ev">Month<span>=3</span></span><span class="ev">TwoMonths<span>=4</span></span><span class="ev">Quarter<span>=5</span></span><span class="ev">FourMonths<span>=6</span></span><span class="ev">SixMonths<span>=7</span></span><span class="ev">Annual<span>=8</span></span></div></li></ul>
+
+
+
+
+
+
+
+
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "CreationTime": null,
+  "LoggingTimeStamp": "0001-01-01T00:00:00+00:00",
+  "OrderRowType": 0,
+  "PartId": null,
+  "AdditionalRowDescription": null,
+  "SalesAgreementId": null,
+  "SalesAgreementRowId": null,
+  "OrderedQuantityChange": null,
+  "PriceChange": null,
+  "PriceChangeCurrencyId": null,
+  "PriceChangeCurrency": null,
+  "PriceChangeInCompanyCurrency": null,
+  "PriceChangeInCompanyCurrencyCurrencyId": null,
+  "PriceChangeInCompanyCurrencyCurrency": null,
+  "DiscountChange": null,
+  "TotalValueChange": 0.0,
+  "TotalValueChangeCurrencyId": null,
+  "TotalValueChangeCurrency": null,
+  "TotalValueChangeInCompanyCurrency": 0.0,
+  "TotalValueChangeInCompanyCurrencyCurrencyId": null,
+  "TotalValueChangeInCompanyCurrencyCurrency": null,
+  "RowTotalValue": 0.0,
+  "RowTotalValueCurrencyId": null,
+  "RowTotalValueCurrency": null,
+  "RowTotalValueInCompanyCurrency": 0.0,
+  "RowTotalValueInCompanyCurrencyCurrencyId": null,
+  "RowTotalValueInCompanyCurrencyCurrency": null,
+  "RowTotalQuantity": 0.0,
+  "IsOneTimeCost": false,
+  "SalesAgreementInvoicingInterval": 0,
+  "TypeOfChange": 0,
+  "PriceDefinition": 0,
+  "PriceChangePerInterval": null,
+  "PriceChangePerIntervalCurrencyId": null,
+  "PriceChangePerIntervalCurrency": null,
+  "PriceChangePerIntervalInCompanyCurrency": null,
+  "PriceChangePerIntervalInCompanyCurrencyCurrencyId": null,
+  "PriceChangePerIntervalInCompanyCurrencyCurrency": null,
+  "TotalValueChangePerInterval": 0.0,
+  "TotalValueChangePerIntervalInCompanyCurrency": 0.0,
+  "RowTotalValuePerInterval": 0.0,
+  "RowTotalValuePerIntervalInCompanyCurrency": 0.0
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Sales.SalesAgreementRowInflow.html">https://api.monitor.se/api/Monitor.API.Sales.SalesAgreementRowInflow.html</a><br><span class="badge">Sales</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

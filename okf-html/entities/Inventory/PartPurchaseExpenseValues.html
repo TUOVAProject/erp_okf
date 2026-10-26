@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PartPurchaseExpenseValues · Monitor ERP API</title>
+<meta name="description" content="Represents a part purchase expense values entity.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>PartPurchaseExpenseValues</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html" aria-current="location">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="partpurchaseexpensevalues">PartPurchaseExpenseValues</h1>
+<p>Represents a part purchase expense values entity.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Inventory.html">Inventory</a></dd><dt>API class</dt><dd><code>PartPurchaseExpenseValues</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Inventory/PartPurchaseExpenseValues</code></dd><dt>Required permission</dt><dd>Show basic data for part</dd><dt>GUID</dt><dd><code>1e748c37-d10b-44e7-889b-da35ed77c464</code></dd><dt>Introduced in</dt><dd>2.48</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the part purchase expense values.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the part that part purchase expense values belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense1PercentOfPriceValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense1 (default name: Packaging) - percent of price.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense1PerEachValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense1 (default name: Packaging) - per each.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense2PercentOfPriceValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense2 (default name: Freight) - percent of price.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense2PerEachValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense2 (default name: Freight) - per each.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense3PercentOfPriceValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense3 (default name: Customs duty) - percent of price.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense3PerEachValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense3 (default name: Customs duty) - per each.</td>
+</tr>
+<tr>
+<td class="prop"><code>CertificatePercentOfPriceValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Certificate - percent of price.</td>
+</tr>
+<tr>
+<td class="prop"><code>CertificatePerEachValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Certificate - per each.</td>
+</tr>
+<tr>
+<td class="prop"><code>CertificatePerKgValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Certificate - per kg.</td>
+</tr>
+<tr>
+<td class="prop"><code>CertificatePerPackageValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Certificate - per package.</td>
+</tr>
+<tr>
+<td class="prop"><code>CertificatePerOrderValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Certificate - per order.</td>
+</tr>
+<tr>
+<td class="prop"><code>CertificatePerQuantityValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Certificate - per quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>CertificateQuantityValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Certificate - quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense1PerKgValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense1 (default name: Packaging) - per kg.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense1PerPackageValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense1 (default name: Packaging) - per package.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense1PerOrderValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense1 (default name: Packaging) - per order.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense1PerQuantityValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense1 (default name: Packaging) - per quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense1QuantityValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense1 (default name: Packaging) - quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense2PerKgValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense2 (default name: Freight) - per kg.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense2PerPackageValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense2 (default name: Freight) - per package.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense2PerOrderValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense2 (default name: Freight) - per order.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense2PerQuantityValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense2 (default name: Freight) - per quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense2QuantityValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense2 (default name: Freight) - quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense3PerKgValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense3 (default name: Customs duty) - per kg.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense3PerPackageValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense3 (default name: Customs duty) - per package.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense3PerOrderValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense3 (default name: Customs duty) - per order.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense3PerQuantityValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense3 (default name: Customs duty) - per quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense3QuantityValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense3 (default name: Customs duty) - quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense4PercentOfPriceValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense4 (default name: Tooling) - percent of price.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense4PerEachValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense4 (default name: Tooling) - per each.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense4PerKgValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense4 (default name: Tooling) - per kg.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense4PerPackageValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense4 (default name: Tooling) - per package.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense4PerOrderValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense4 (default name: Tooling) - per order.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense4PerQuantityValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense4 (default name: Tooling) - per quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense4QuantityValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense4 (default name: Tooling) - quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense5PercentOfPriceValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense5 (default name: Other) - percent of price.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense5PerEachValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense5 (default name: Other) - per each.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense5PerKgValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense5 (default name: Other) - per kg.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense5PerPackageValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense5 (default name: Other) - per package.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense5PerOrderValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense5 (default name: Other) - per order.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense5PerQuantityValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense5 (default name: Other) - per quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>Expense5QuantityValue</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Expense5 (default name: Other) - quantity.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="../Purchase/SupplierPartLink.html">SupplierPartLinks</a> — <code>PartPurchaseExpenseValues</code> (expand)</li>
+<li><a href="../Purchase/SupplierPartLink.html">SupplierPartLinks</a> — <code>PartPurchaseExpenseValuesId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "PartId": 0,
+  "Expense1PercentOfPriceValue": 0.0,
+  "Expense1PerEachValue": 0.0,
+  "Expense2PercentOfPriceValue": 0.0,
+  "Expense2PerEachValue": 0.0,
+  "Expense3PercentOfPriceValue": 0.0,
+  "Expense3PerEachValue": 0.0,
+  "CertificatePercentOfPriceValue": 0.0,
+  "CertificatePerEachValue": 0.0,
+  "CertificatePerKgValue": 0.0,
+  "CertificatePerPackageValue": 0.0,
+  "CertificatePerOrderValue": 0.0,
+  "CertificatePerQuantityValue": 0.0,
+  "CertificateQuantityValue": 0.0,
+  "Expense1PerKgValue": 0.0,
+  "Expense1PerPackageValue": 0.0,
+  "Expense1PerOrderValue": 0.0,
+  "Expense1PerQuantityValue": 0.0,
+  "Expense1QuantityValue": 0.0,
+  "Expense2PerKgValue": 0.0,
+  "Expense2PerPackageValue": 0.0,
+  "Expense2PerOrderValue": 0.0,
+  "Expense2PerQuantityValue": 0.0,
+  "Expense2QuantityValue": 0.0,
+  "Expense3PerKgValue": 0.0,
+  "Expense3PerPackageValue": 0.0,
+  "Expense3PerOrderValue": 0.0,
+  "Expense3PerQuantityValue": 0.0,
+  "Expense3QuantityValue": 0.0,
+  "Expense4PercentOfPriceValue": 0.0,
+  "Expense4PerEachValue": 0.0,
+  "Expense4PerKgValue": 0.0,
+  "Expense4PerPackageValue": 0.0,
+  "Expense4PerOrderValue": 0.0,
+  "Expense4PerQuantityValue": 0.0,
+  "Expense4QuantityValue": 0.0,
+  "Expense5PercentOfPriceValue": 0.0,
+  "Expense5PerEachValue": 0.0,
+  "Expense5PerKgValue": 0.0,
+  "Expense5PerPackageValue": 0.0,
+  "Expense5PerOrderValue": 0.0,
+  "Expense5PerQuantityValue": 0.0,
+  "Expense5QuantityValue": 0.0
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Inventory.PartPurchaseExpenseValues.html">https://api.monitor.se/api/Monitor.API.Inventory.PartPurchaseExpenseValues.html</a><br><span class="badge">Inventory</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

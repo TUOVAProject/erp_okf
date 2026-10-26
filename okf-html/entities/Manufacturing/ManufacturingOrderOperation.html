@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ManufacturingOrderOperations · Monitor ERP API</title>
+<meta name="description" content="Represents a manufacturing order operation.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>ManufacturingOrderOperations</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html" aria-current="location">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="manufacturingorderoperations">ManufacturingOrderOperations</h1>
+<p>Represents a manufacturing order operation.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Manufacturing.html">Manufacturing</a></dd><dt>API class</dt><dd><code>ManufacturingOrderOperation</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Manufacturing/ManufacturingOrderOperations</code></dd><dt>Required permission</dt><dd>Show manufacturing orders</dd><dt>GUID</dt><dd><code>C1A9916E-607F-4720-9941-EEC496C92E2D</code></dd><dt>Introduced in</dt><dd>2.18</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>Priority</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The priority of the manufacturing order operation. Can be null.</td>
+</tr>
+<tr>
+<td class="prop"><code>WorkCenterId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="WorkCenter.html">WorkCenters</a></td>
+<td></td>
+<td>The business key identifier of the manufacturing order operation's work center.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Inventory/Part.html">Part</a></td>
+<td></td>
+<td>The business key identifier of the manufacturing order operation's part.</td>
+</tr>
+<tr>
+<td class="prop"><code>Part</code></td>
+<td class="type"><code>Parts</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
+<td>expandable</td>
+<td>The manufacturing order operation's part.</td>
+</tr>
+<tr>
+<td class="prop"><code>PlannedQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The planned quantity of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReportedQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The reported quantity of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>RestQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The remaining quantity of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReportedSetupTime</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The reported setup time of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReportedUnitTime</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The reported unit time of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>RejectedQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The rejected quantity of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>WipLocation</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The work-in-progress location of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReportNumber</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The report number of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>InstructionCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the manufacturing order operation's instruction comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>InstructionComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The manufacturing order operation's instruction comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ManufacturingOrderId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td></td>
+<td>The business key identifier of the manufacturing order that the manufacturing order operation belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>ManufacturingOrderNodeId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ManufacturingOrderNode.html">ManufacturingOrderNodes</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the manufacturing order node that the manufacturing order operation belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>OperationNumber</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The operation number of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>PlannedSetupTime</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The planned setup time of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>PlannedUnitTime</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The planned unit time of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>PlannedStartDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.27</td>
+<td>The planned start date of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>PlannedFinishDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.27</td>
+<td>The planned finish date of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActualStartDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.27</td>
+<td>The actual (reported) start date of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActualFinishDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.27</td>
+<td>The actual (reported) finish date of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>OperationRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="OperationRow.html">OperationRows</a></td>
+<td>since 2.41</td>
+<td>The business key identifier of the operation row that the manufacturing order operation is based on. Can be null if the manufacturing order operation is added manually.</td>
+</tr>
+<tr>
+<td class="prop"><code>OperationRow</code></td>
+<td class="type"><code>OperationRows</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="OperationRow.html">OperationRows</a></td>
+<td>expandable, since 2.41</td>
+<td>The operation row that the manufacturing order operation is based on.</td>
+</tr>
+<tr>
+<td class="prop"><code>Status</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.50</td>
+<td>The status of the manufacturing order operation's status.</td>
+</tr>
+<tr>
+<td class="prop"><code>WorkshopOperationStatus</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.50</td>
+<td>The workshop status of the manufacturing order operation's status.</td>
+</tr>
+<tr>
+<td class="prop"><code>BundleId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.52</td>
+<td>An generated id that is common for a collection of operations.</td>
+</tr>
+<tr>
+<td class="prop"><code>Description</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.54</td>
+<td>The translated description of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>ControlDataRows</code></td>
+<td class="type"><code>ManufacturingOrderOperationControlDataRows[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ManufacturingOrderOperationControlDataRow.html">ManufacturingOrderOperationControlDataRows</a></td>
+<td>expandable, collection, since 22.5</td>
+<td>The control data rows.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderQuantityId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="OrderQuantityManufacturingOrderOperation.html">OrderQuantityManufacturingOrderOperations</a></td>
+<td>since 22.6</td>
+<td>The business key identifier of order quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderQuantity</code></td>
+<td class="type"><code>OrderQuantityManufacturingOrderOperations</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="OrderQuantityManufacturingOrderOperation.html">OrderQuantityManufacturingOrderOperations</a></td>
+<td>expandable, since 22.6</td>
+<td>Order quantity that holds the partial quantities.</td>
+</tr>
+<tr>
+<td class="prop"><code>ClearedStatus</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 23.3</td>
+<td>Specifies if the status is cleared.</td>
+</tr>
+<tr>
+<td class="prop"><code>OnPriorityPlan</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 25.2</td>
+<td>Indicates if the operation is shown in priority plan.</td>
+</tr>
+<tr>
+<td class="prop"><code>ManualOperationStatusId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="ManualOperationStatus.html">ManualOperationStatuses</a></td>
+<td>since 25.2</td>
+<td>The business key identifier of manual operation status.</td>
+</tr>
+<tr>
+<td class="prop"><code>ManualOperationStatus</code></td>
+<td class="type"><code>ManualOperationStatuses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ManualOperationStatus.html">ManualOperationStatuses</a></td>
+<td>expandable, since 25.2</td>
+<td>The manual operation status.</td>
+</tr>
+<tr>
+<td class="prop"><code>Materials</code></td>
+<td class="type"><code>ManufacturingOrderMaterials[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ManufacturingOrderMaterial.html">ManufacturingOrderMaterials</a></td>
+<td>expandable, collection, since 24.4</td>
+<td>The manufacturing order materials of the operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>FixedLeadTime</code></td>
+<td class="type"><code>TimeSpan?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 24.6</td>
+<td>The fixed lead time of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>UnitStaffingFactor</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 25.8</td>
+<td>The unit staffing factor of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupStaffingFactor</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 25.8</td>
+<td>The setup staffing factor of the manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsPlannedTimeCalculated</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 26.5</td>
+<td>Indicates that the planned time of the operation was calculated at order creation (from a part-configurator formula or aggregated from fictitious sub-parts) and must not be overwritten when the work center is changed.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>Status</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Started<span>=1</span></span><span class="ev">PartiallyShipped<span>=2</span></span><span class="ev">FullyShipped<span>=3</span></span><span class="ev">PartiallyReported<span>=4</span></span><span class="ev">Finished<span>=5</span></span></div></li><li><code>WorkshopOperationStatus</code><div class="evs"><span class="ev">NotInitialized<span>=0</span></span><span class="ev">InProgress<span>=1</span></span><span class="ev">ClockedOut<span>=2</span></span><span class="ev">Interrupted<span>=3</span></span><span class="ev">PartiallyReported<span>=4</span></span><span class="ev">SetupTime<span>=5</span></span><span class="ev">IsStandingBy<span>=6</span></span><span class="ev">Finished<span>=9</span></span></div></li></ul>
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Common</strong></p>
+<ul>
+<li><a href="../Common/DelegatedWork.html">DelegatedWork</a> — <code>OperationId</code> (FK)</li>
+</ul>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="ManufacturingOrderOperationControlDataRow.html">ManufacturingOrderOperationControlDataRows</a> — <code>ManufacturingOrderOperationId</code> (FK)</li>
+<li><a href="ManufacturingOrderOperationReporting.html">ManufacturingOrderOperationReportings</a> — <code>OperationId</code> (FK)</li>
+<li><a href="ManufacturingOrder.html">ManufacturingOrders</a> — <code>Operations</code> (expand)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>LinkedSubcontractingManufacturingOrderOperation</code> (FK)</li>
+</ul>
+<p><strong>TimeRecording</strong></p>
+<ul>
+<li><a href="../TimeRecording/IndirectWorkCode.html">IndirectWorkCodes</a> — <code>AffectsOrder</code> (FK)</li>
+<li><a href="../TimeRecording/StandbyWork.html">StandbyWorks</a> — <code>Operation</code> (expand)</li>
+<li><a href="../TimeRecording/StandbyWork.html">StandbyWorks</a> — <code>OperationId</code> (FK)</li>
+<li><a href="../TimeRecording/WorkInterval.html">WorkIntervals</a> — <code>OperationId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Priority": null,
+  "WorkCenterId": 0,
+  "PartId": 0,
+  "Part": null,
+  "PlannedQuantity": 0.0,
+  "ReportedQuantity": 0.0,
+  "RestQuantity": 0.0,
+  "ReportedSetupTime": "00:00:00",
+  "ReportedUnitTime": "00:00:00",
+  "RejectedQuantity": 0.0,
+  "WipLocation": null,
+  "ReportNumber": 0,
+  "InstructionCommentId": null,
+  "InstructionComment": null,
+  "ManufacturingOrderId": 0,
+  "ManufacturingOrderNodeId": 0,
+  "OperationNumber": 0,
+  "PlannedSetupTime": "00:00:00",
+  "PlannedUnitTime": "00:00:00",
+  "PlannedStartDate": "0001-01-01T00:00:00+00:00",
+  "PlannedFinishDate": "0001-01-01T00:00:00+00:00",
+  "ActualStartDate": null,
+  "ActualFinishDate": null,
+  "OperationRowId": null,
+  "OperationRow": null,
+  "Status": 0,
+  "WorkshopOperationStatus": 0,
+  "BundleId": null,
+  "Description": null,
+  "ControlDataRows": null,
+  "OrderQuantityId": null,
+  "OrderQuantity": null,
+  "ClearedStatus": false,
+  "OnPriorityPlan": false,
+  "ManualOperationStatusId": null,
+  "ManualOperationStatus": null,
+  "Materials": null,
+  "FixedLeadTime": null,
+  "UnitStaffingFactor": null,
+  "SetupStaffingFactor": null,
+  "IsPlannedTimeCalculated": false
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingOrderOperation.html">https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingOrderOperation.html</a><br><span class="badge">Manufacturing</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

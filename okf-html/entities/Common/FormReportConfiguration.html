@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FormReportConfigurations · Monitor ERP API</title>
+<meta name="description" content="Represents a form report configuration.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>FormReportConfigurations</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html" aria-current="location">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="formreportconfigurations">FormReportConfigurations</h1>
+<p>Represents a form report configuration.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Common.html">Common</a></dd><dt>API class</dt><dd><code>FormReportConfiguration</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Common/FormReportConfigurations</code></dd><dt>GUID</dt><dd><code>4570168B-D8A4-44E1-98BF-520E6AF19C09</code></dd><dt>Introduced in</dt><dd>2.36</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the form report configuration.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>Type</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td><span class="badge dep">deprecated since 22.7</span></td>
+<td>Type of form report. When querying the value retrieved this is converted from the new Guid Type property to the old Enum type. <em>(Replaced by TypeId. $filter and $orderby cannot be used with this property. Use TypeId instead)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>TypeId</code></td>
+<td class="type"><code>Guid</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 22.7</td>
+<td>Id of form report Type. Translation for each guid is shown if existing. Each TypeId also has a corresponding FormReportType listed in parenthesis. None: 00000000-0000-0000-0000-000000000000 (NotInitialized:0) Quote: eafce8bd-64c1-4bee-bf64-1d4389adce5f (Quote:1) Order confirmation: e013402a-73cb-4d6f-8b53-cac95c7f709a (Acknowledgement:3) Delivery note: dc7d6709-e4b9-41e1-8ca4-96d24a69d6ba (CustomerDeliveryNote:5) Delivery note, delivered: 8dda82c8-c394-451f-821c-75bbf2955f4e (CustomerDeliveryNoteDelivered:6) Invoice: 932cfa90-7499-43da-bc16-d049c688cc07 (Invoice:7) Comprehensive delivery note: 4bac9892-9e62-4d8f-8234-ae4da535e506 (CustomerDeliveryNoteCollectionDelivered:8) Transport label, sales: 0ce06331-f6ab-4383-97e7-9e9cc32930a8 (SalesTransportLabelA4:16) Comprehensive invoice: 97578728-4aab-4a6f-9a41-91d4202e9d41 (ComprehensiveInvoice:17) Purchase order: bcfe8d1d-860c-413b-bd33-1917a0ea34af (PurchaseOrder:22) Order confirmation reminder: f673f852-cd1c-419a-981a-d61d6a979e8e (PurchaseOrderConfirmationReminder:23) Order confirmation reminder (stray supplier): 3a508aa4-91be-4d56-8631-8f5218acec16 (PurchaseOrderConfirmationReminderCasualSupplier:24) Delivery reminder: 836d0088-7819-48b1-8cb9-6c41c4a034c6 (PurchaseOrderDeliveryConfirmationReminder:25) Delivery reminder (stray supplier): 9a5035b7-625e-4fa6-9309-0ce3643753a7 (PurchaseOrderDeliveryConfirmationReminderCasualSupplier:26) Transport label, purchase: 61319239-2b20-4514-8101-611178f1c116 (PurchaseTransportLabel:31) Pick list – Ready for delivery: f1e25675-553d-4f1e-9443-dba517f7949e (PickingList:100) Inspection report: 97db03da-93f5-42ca-97d7-a39370645a45 (InspectionReport:101) Transport label, purchase, rejected: bd606210-1bc7-43c3-a6f3-30a8d8010202 (PurchaseTransportLabelForRejection:102) Pro forma invoice: 91033be4-c02d-44cc-8a24-d3eacaf23fd7 (ProformaInvoice:103) Pro forma – Comprehensive invoice: ec6f7da0-072c-47f6-8c77-b0aef3c260d8 (ComprehensiveProformaInvoice:104) Transport label, manufacturing, transfer to stock: 0f880b25-2013-4d80-bfe2-fa20b53df9e0 (ManufacturingTransportLabelA4:105) Transport label, manufacturing, rejected: 6b7bb6f1-593f-412c-8c93-547674ef43fe (ManufacturingTransportLabelA4ForRejection:106) Transport label, manufacturing, in progress: 6a8529fa-5fba-4836-8a69-6d2928f82599 (ManufacturingTransportLabelA4InProgress:107) Transport label, manufacturing, prior to reporting: 79656978-0310-45c4-abeb-1faed6be1a8b (ManufacturingTransportLabelA4BeforeReporting:108) Operation document: 1bff7361-d75e-4698-a0ba-e088abc9f0c5 (ManufacturingOrderOperation:109) Material document: e974a3ec-198a-421c-8a79-40930451b2ed (ManufacturingOrderMaterial:110) Traveler: bc91d33e-8b31-451a-bfd2-d941f101ddc8 (ManufacturingOrderTraveler:111) Pre-calculation – Summary: dae6b764-698c-4e48-80cc-f556d903401d (PreCalculationSummary:112) Purchase order (subc.): 2ab68cf7-0885-41d6-8098-162a8f97a4ca (SubcontractPurchaseOrder:113) Delivery note (subc.): dc037f40-02fd-431f-aefd-b03e47efdc10 (SubcontractDeliveryNote:114) Transport label, subcontract: 6927245e-67e2-41b7-af95-2598178dbe66 (SubcontractTransportLabelA4:117) Transport label, subcontract – A5: 28ba8c2d-f45c-46ca-9515-44285e1ab452 (SubcontractTransportLabelA5:118) Transport label, subcontract – Label: ee677374-a11d-453e-a494-045f767ceac2 (SubcontractTransportLabelSmall:119) Included in: 7ca067e4-a6d7-4233-8d22-458430582df7 (LevelListWhereUsedList:120) Consists of: 3f49ed90-e3ac-4af2-bfa0-aac95a90f047 (LevelListConsistsOfList:122) Post-calculation – Summary: 4d9a3c77-0acf-4529-ab64-07c983fb4f73 (PostCalculationSummary:123) Stock count basis: ff8fb009-29fc-440c-93cb-4d1cd6512255 (PhysicalInventoryList:124) Shortage list: e7937a7f-2cd8-4ab5-a831-1e5a2163804d (MaterialClearanceShortageList:125) Accounting order: ef3bf6be-1dd2-45e6-a816-c5d9f7349c67 (AccountingOrder:126) General ledger (drilldown): 65d4227a-f5d4-49e7-b111-2a8fd7bdd25c (GeneralLedgerDrilldown:127) Voucher (drilldown): e977d354-e5c7-4619-bf6a-e313bcf64347 (JournalDrilldown:128) Pick list – Manufacturing, no grouping: ec67174b-f59a-42d7-bfce-1132da7f635c (ManufacturingPickingList:129) Pick list – Manufacturing, grouped by order: 220aa289-ee0f-4748-b13e-0acb0c1e425b (ManufacturingPickingListGroupByOrder:130) Pick list – Manufacturing, grouped by material: 19b12c7e-6657-4f47-9f56-1f92640a15a4 (ManufacturingPickingListGroupByMaterial:131) Accounting report – Header: f1245731-0e98-4362-8e72-a6ed30cd3e71 (AccountingReportHeader:132) Internal invoice: 75f654f5-e2fc-4e05-b560-a1bc464e277b (InternalInvoice:133) Cash receipt: 0ec3ea22-823c-4870-b880-b4d3f33729b0 (CashReceipt:134) Customer invoice journal: cd72d166-edbb-4e2a-8870-803c38fa9480 (AccountsReceivableLedger:135) Reprint – Customer invoice journal: 8d289d30-a1e3-40cb-a741-856d94bc327e (AccountsReceivableLedgerReprint:136) Incoming payment journal: 306a323a-13f6-49df-9634-b626781219df (IncomingPaymentLedger:137) Reprint – Incoming payment journal: 6085f126-9941-4e0f-8b78-dc833af25018 (IncomingPaymentLedgerReprint:138) Supplier invoice journal: f2ac9337-f5f2-4fb6-9767-4ba088fcae78 (AccountsPayableLedger:139) Reprint – Supplier invoice journal: 82688ad3-2233-4d53-a51b-2c210899f545 (AccountsPayableLedgerReprint:140) Preliminary entry journal: d48e6f5a-5fbd-4ceb-ae2d-819c40ed797d (PreliminaryAccountsPayableLedger:141) Reprint – Preliminary entry journal: 31fb0f84-5bfb-4c8e-ba07-8730f7e0500f (PreliminaryAccountsPayableLedgerReprint:142) Cancellation journal of suppl. invoices: fde103f4-abbc-46ee-a1a3-9a23759565a3 (CancelledAccountsPayableLedger:143) Reprint – Cancellation journal of suppl. invoices: 1985401c-ba0b-4dfa-96f4-853ecb3a4a1e (CancelledAccountsPayableLedgerReprint:144) Cancellation journal of prel. entries: a2561f92-14da-4103-9168-019667d46565 (CancelledPreliminaryAccountsPayableLedger:145) Reprint – Cancellation journal of prel. entries: aef26f21-1653-4fff-aab8-12b201153927 (CancelledPreliminaryAccountsPayableLedgerReprint:146) Payment reminder: 218f35dd-3c57-4d70-933e-e8a3e1059274 (PaymentReminder:147) Reprint – Payment reminder: c091e3a4-5119-4288-b175-658dbbdd217b (PaymentReminderReprint:148) Accrual accounting journal: b79e1255-f198-496b-bd02-e695dbaa17aa (AccrualAccountingLedger:149) Reprint – Accrual accounting journal : 2961c4d5-f8c3-41a7-a70f-09e6b4558a63 (AccrualAccountingLedgerReprint:150) VAT report: 923e18d6-e3a4-46d4-86a8-698724116a61 (VatReport:151) VAT report – Accounts: a0634f20-249f-4d7e-93eb-6a3436c26181 (VatReportAccounts:152) VAT report – General ledger: e1615e01-edf9-40e4-a381-e352196b994e (VatReportGeneralLedger:153) VAT report – Transactions: 874e1f9f-9686-4717-ae52-b376af407df8 (VatReportTransactions:154) VAT report – VAT control: 8ac35a6c-3466-421a-bb7d-475822900239 (VatReportCheck:155) VAT report – Find difference: 147eef4b-9cde-4fb0-acaf-526515b5a95b (VatReportDifferenceSearch:156) Transaction list: 0c02e0d3-742a-4564-8ddb-968d297eebc2 (TransactionList:157) Outgoing payment journal: 2f2d5f42-495f-4dda-80d1-e0d7eeae8c6d (OutgoingPaymentLedger:158) Reprint – Outgoing payment journal : d6690ff3-05ab-4557-97da-9c42c874bdf2 (OutgoingPaymentLedgerReprint:159) Transport label, sales – A5: 54da85af-8ec2-4780-b50a-dc13bcf95fd7 (SalesTransportLabelA5:160) Confirmation of customer nonconformity: 920b1dff-ab65-4f19-8b78-4dfbad94ed8d (CustomerCaseConfirmation:161) Statement – Sales: 1194287c-0812-4cf2-8ab9-10ad023cc258 (AccountStatement:162) Response to customer nonconformity: 115c2889-9c55-462b-aa29-5c0cbd398756 (CustomerCaseAnswer:163) Nonconformity report (internal) (customer noncon.): 75461eec-b83d-433c-9dbb-b8ce42c220d2 (CustomerNonconformityReport:164) Nonconformity report (internal) (suppl. noncon.): 760b392d-e4bb-4038-9cfb-de5f23425b14 (SupplierNonconformityReport:165) Nonconformity report (internal) (internal noncon.): 9b6e0da2-0a56-4cba-8c5a-bcb3cf86ff50 (InternalNonconformityReport:166) Claim report: 1ad587c9-da25-420a-beb2-9f7f88f0c676 (SupplierClaimReport:167) Cancellation journal of customer invoices: 2597c873-42f9-4c17-91c5-e6fe4ee55f92 (CancelledAccountsReceivableLedger:168) Reprint – Cancellation journal of customer invoices : 61cfa874-db5a-4209-962a-438e973e1dd4 (CancelledAccountsReceivableLedgerReprint:169) Shipping – Waybill: 54f71041-2f72-460d-88ba-96ad6e8246af (ShipmentWayBill:170) Shipping – Label: b40a4ea5-590e-470a-af77-8e6ba1903cec (ShipmentParcel:171) Inquiry: 1c34fe91-fc5e-4620-8be9-674c307a007a (Inquiry:172) Pick list – By order: c97d45c4-8f05-48c7-9692-e386abcd12f7 (CustomerOrderPickingList:173) EIM – Invoice information: 8011d3f0-beb2-45d0-8e42-1568faf50e37 (EimInvoiceInformation:174) Interest invoice: d88af683-b2a6-4843-aa32-f9bce581e724 (InterestInvoice:175) Files: 6d401da3-1e18-492f-b932-bf8dbe44cd1b (FileLink:176) Recording and total per salary type: af518555-d4f9-4669-821d-028247e072dd (RecordingsAndSalaryTypeSummary:177) Traceability – Consists of: 33d5ca31-5a3a-486a-993e-8e98b1288d2b (ProductRecordConsistsOf:178) Traceability – Included in: 5978216a-ffd6-4922-9cd6-341713652b93 (ProductRecordIncludedIn:179) Internal project report: e518a66d-ba3b-4ff2-acc5-9a9a3c34e95c (InternalProjectReport:180) External project report: 025343d2-1ad7-451c-97c2-4fba3e356106 (ExternalProjectReport:181) Product description incl. certificate: 9693a1e5-b13d-4367-ba56-ef10a14f176a (TraceabilityProtocol:182) Fixed assets journal: 9a7d5961-2a64-45ef-b49f-457d27718752 (FixedAssetLedger:183) Reprint – Fixed assets journal: 4c5061ec-1805-4d34-850e-b60acce40afc (FixedAssetLedgerReprint:184) CustomReport: 743e498a-539b-416d-a42b-cb09cf60d519 (obsolete) (CustomReport:185) Order confirmation – Stock order: 29e7a2f7-0694-4b2d-b8b9-e0a647c7ea36 (StockAcknowledgement:186) Delivery note – Stock order: 63611f39-e8c7-4479-bf29-1d39fca68b75 (StockDeliveryNote:187) Purchase – Stock order: e4531daa-5836-4844-b991-5b819ae40aec (StockPurchaseOrder:188) Delivery note, delivered – Stock order: 1407c853-d6de-4c57-af6c-16633ad6baf0 (StockDeliveryNoteDelivered:189) Modified purchase order: e8e74d3b-ef31-4b2f-aac3-b6573a946621 (PurchaseOrderModified:190) Tax depreciation: 50dbc0fd-3d81-48e2-a1ae-6181c490aea1 (TaxDepreciation:191) Drilldown, tax depreciation: e6586902-bee7-4485-a0c1-e69910d631d7 (TaxDepreciationDrilldown:192) Transport label – Label: 6abd31bf-1a02-4b31-a3a9-17ef2bd5f243 (PartTransportLabelSmall:193) Transport label – A5: 40acea6f-7ded-42e7-a7bd-cdd4a9a2a324 (PartTransportLabelA5:194) Transport label – A4: 7a67a731-dfff-4fc7-ad84-b5b7e5633204 (PartTransportLabelA4:195) Stock reporting journal: 2a6a84b3-7413-457f-bc06-04f36ee7e1fd (UnplannedStockBalanceChangeLedger:196) Reprint – Stock reporting journal: bffda7cc-e95d-46dc-b0af-1db29bdb87c7 (UnplannedStockBalanceChangeLedgerReprint:197) WIP value, detailed: 862cd2bb-2606-48d9-a83c-be50c59b09cf (PIADetailed:198) Stock transaction journal: 373c1669-0c22-4be3-b9f7-0a3de1a78f35 (StockTransactionLogLedger:199) Manufacturing order journal: cf1ff7d9-5619-411d-aabd-baf06fc0b006 (ManufacturingOrderLogLedger:200) Invoicing journal: 2706d19b-59e9-4271-bdf5-a12b54abf5f8 (InvoiceLogLedger:201) Price change journal: 7b746bf0-4088-40c8-8dbb-6f37b2696475 (PriceChangeLogLedger:202) Calculation difference journal: ac22350f-53ef-4eaf-a376-a69229741bcc (CalculationDifferenceLedger:203) Balance per customer: 6f2f383a-04d3-4d4b-84b1-f34ebb627ebf (AccountStatementBalancePerCustomer:204) Reprint – Stock transaction journal: 92c5814f-d1a0-4428-8e21-afdc8b2b9f3a (StockTransactionLogLedgerReprint:205) Reprint – Manufacturing order journal: 4d434ad0-6f1e-4f76-bcc2-9c41fc7979f1 (ManufacturingOrderLogLedgerReprint:206) Reprint – Price change journal: f2b7fe09-73e3-4108-98fd-1cd8a80c716e (PriceChangeLogLedgerReprint:207) Reprint – Calculation difference log journal: 71f539d0-3fbf-4a2f-b789-94997b20e32f (CalculationDifferenceLedgerReprint:208) Reprint – Invoicing journal: 32eb0f25-4a03-479e-8263-332946af2230 (InvoiceLogLedgerReprint:209) Printout demo certificate: 17ec79b8-3df2-48da-bdd8-7ee30277f5ac (PrintoutDemoCertificate:210) Blanket order – Purchase: f0899bd9-7584-4490-a4e2-c28971f1c353 (BlanketOrderPurchase:211) Arrival note: ee277e80-7cbb-4727-8dbb-b1ec55b851a8 (ArrivalNote:212) Correction invoice: acc03146-758b-4eb4-be77-dbe05cd9283c (CorrectionInvoice:213) Modified order confirmation: 4339c24d-bf19-4fbc-9157-9205ce7fd670 (ModifiedOrderConfirmation:214) Delivery schedule – Purchase: b3a15846-9c6b-4d0c-8065-33d8a9e81d39 (PurchaseDeliverySchedule:215) Packing list: f07d7023-3513-46e3-a48d-271d85eb4751 (PackageList:216) Transport label – Package structure: 7a90e262-e1fe-44cd-a393-fba077f59752 (PackageTransportLabel:217) Annual volume: a0a902f4-2da7-414f-861d-5b3d4f5250a7 (AnnualVolumeList:218) Blanket order – Sales: 5fa18c37-34be-4387-a75a-4d7e5f7d17fc (BlanketOrderSales:219) Transport label, direct withdrawal – A4: 41e94543-4ecc-4866-b347-b8f920934331 (TransportLabelDirectWithdrawalA4:220) Transport label, direct withdrawal – A5: 1ea50061-a032-4ab8-bcb6-7b4ca026f199 (TransportLabelDirectWithdrawalA5:221) Transport label, direct withdrawal – Label: f2e64493-702f-475b-b8e4-66214da6cca2 (TransportLabelDirectWithdrawalSmall:222) Transport label, direct arrival – A4: 248e7815-3878-4dd0-8a00-6224efc68a9c (TransportLabelDirectArrivalA4:223) Transport label, direct arrival – A5: 2c5270f8-8c1d-41d7-a271-600e4a6e26d5 (TransportLabelDirectArrivalA5:224) Transport label, direct arrival – Label: 92712a79-8485-44a0-b833-6a5b26e4206d (TransportLabelDirectArrivalSmall:225) Transport label, move between locations – A4: efff335f-034f-4dad-88e0-edfa8eb2fc93 (TransportLabelMoveBetweenLocationsA4:226) Transport label, move between locations – A5: b06919f9-5266-4122-b14e-5decd92ea4ec (TransportLabelMoveBetweenLocationsA5:227) Transport label, move between locations – Label: 9bf0deda-289d-49df-92e3-11a3902ba567 (TransportLabelMoveBetweenLocationsSmall:228) Transport label, move between warehouses – A4: f76084dc-94c7-4065-a415-f1b7faee204f (TransportLabelMoveBetweenWarehousesA4:229) Transport label, move between warehouses – A5: 9ad5ae01-782b-4530-a3a8-448ce71d3b74 (TransportLabelMoveBetweenWarehousesA5:230) Transport label, move between warehouses – Label: 2f31de4e-7239-47f5-8a04-e8da5abb9696 (TransportLabelMoveBetweenWarehousesSmall:231) 8D Internal report: 8fb1cef8-f38d-45ef-ad54-c01ecbeea562 (Standard8DNonconformityReport:232) Payment journal: cccd7875-6214-4053-989f-36365331d0b9 (PaymentLedger:233) Reprint – Payment journal: fc148c16-4be6-42e2-aa28-b5db15b78859 (PaymentLedgerReprint:234) Payment voucher: 8ab6f5cf-d677-4706-9788-2ced86e0c8a4 (PaymentVoucher:235) Debtor statement: 2405953a-ceb8-4469-8b71-3c96b504eef7 (DebtorStatement:236) Creditor statement: 17930d0a-a563-48e5-a807-a8b89cda95f3 (CreditorStatement:237) Print voucher: 7dac1305-b16b-4c9a-ab68-543e0be26ff0 (PrintVoucher:238) Official receipt: 7362b68e-9b41-48c9-b65a-a500562a32f0 (OfficialReceipt:239) Cash receipt: 44f7644c-395b-4863-b8aa-48a5b9c1ec14 (PolishCashReceipt:240) Cash report: 3acc9f86-b8b8-441c-89fc-80dd51e0dd51 (PolishCashReport:241) 8D Report to customer: 11800def-9275-43b4-9c16-3013a2c752fa (Standard8DCustomerNonconformityReport:242) Automatic postings/allocations journal: 372029ab-5a8b-4321-b1aa-7e62180224dd (AutoCodingLedger:243) Reprint – Automatic postings/allocations journal: 26f0c8fc-4258-4262-84c9-4cc5d046e932 (AutoCodingLedgerReprint:244) Measurement record – Manufacturing: 4b5fc35b-d7dd-4726-97fb-d1d58cb32fea (MeasuringProtocolManufacturing:245) Measurement record – Purchase: fef45cea-e553-4411-a7a2-652a4abad913 (MeasuringProtocolPurchase:246) Voucher list: 6ca862a5-a18e-4d64-a89a-4520e60ed16a (VoucherList:247) Revenue calculation journal: b9abc267-483d-4b09-bb92-7db9d3d4cfb1 (RevenueCalculationLedger:248) Reprint – Revenue calculation journal: 8923cf69-de06-43d4-91d9-ba4aae8d1917 (RevenueCalculationLedgerReprint:249) Activity list, standard: 965248e0-976f-44ec-a568-210ea65e063a (GeneralActivityList:250) Delivery note (return order): 0f392981-928c-4d12-96ff-154b32a7aad5 (ReturnPurchaseOrderDeliveryNote:251) Pro forma – Return order: 243d4277-ffcf-4289-add4-21fa98de6c8d (ReturnPurchaseOrderProforma:252) Transport label, return order: 620f2d83-27d2-4852-8ee7-a18ef055ac9f (ReturnPurchaseOrderTransportLabelA4:253) Transport label, return order – A5: f711b21f-0bec-449b-9672-e00d3f63bf2c (ReturnPurchaseOrderTransportLabelA5:254) Transport label, return order – Label: ff60dbc2-a97d-4cd0-8308-0340e6c372b9 (ReturnPurchaseOrderTransportLabelSmall:255) Waybill: 706a2a3d-9d72-4aef-98b1-61f0a32db3ad (Waybill:256) Shipment advice: 9b44b771-c1e1-4729-9af5-16efb1d8ce61 (ShipmentAdvice:257) Transport label (part) – Grouped: 7a7d94cd-91e6-4312-8222-b1f6b9fb0bf1 (PartTransportMultiLabel:258) Transport label (stock) – Grouped: 633e17cd-e794-4180-add2-cef1ee212db1 (StockTransportMultiLabel:259) Emission calculation – Detailed: 13fb1fac-667f-47ff-baca-547fc1c051e4 (SustainabilityCalculationDetailed:260) Shipment receipt: 5dc2afb1-0845-403c-ad05-d655bbb55b0c (ShipmentReceipt:261) Order row discounts: 4ec248fd-a3e5-41e5-94bb-69da8d51a996 (OrderRowDiscounts:262) Bank reconciliation report: 7bb84be0-0133-4c15-9d50-bcd44c6482a3 (BankAccountReconciliation:263) Collective correction invoice: b7acc870-8952-4a6f-8942-aae35a0d2ee6 (CollectiveCorrectionInvoice:264) Nonconformity report (customer noncon.): 11b8598a-65d3-4f76-a4e3-3888583dcdbd (ExternalCustomerNonconformityReport:265) Nonconformity report (suppl. noncon.): 2d49c11a-4402-4bb8-9a85-f908cbaa03cb (ExternalSupplierNonconformityReport:266) Nonconformity report (internal noncon.): c8dbc4c3-8dee-4b91-940a-e7a78874d047 (ExternalInternalNonconformityReport:267) Part contents – Delivery: 7ae8fdb9-411d-4a62-ad2d-419a7d393eaf (PartContentDeliveryReport:268) Material cost calculation journal: dec4476e-6c19-479c-8c82-660db0eeb556 (ProjectMaterialCalculationLedger:269) Reprint – Material cost calculation journal: ef45f2d6-e80d-46d3-ae16-0eae08ff48a5 (ProjectMaterialCalculationLedgerReprint:270) Causes for shortage: d7a641d7-08ca-4798-a767-ba1783453374 (CausesForShortage:271) Customer consists of: e0e1a152-118f-45cf-baf6-59d99e3f60f6 (CustomerLevelListConsistsOfList:272) Customer included in: 331903cc-0e37-4ac0-a810-ac4b0031a28c (CustomerLevelListIncludedInList:273) Supplier consists of: db1d96d7-5e4d-4009-8119-788b40943c84 (SupplierLevelListConsistsOfList:274) Supplier included in: 232412ed-0ea6-4a07-b5e9-3cc791ab273c (SupplierLevelListIncludedInList:275) GPB form: 8a96da92-8718-489c-bf27-2b53b117231c (GPBForm:276) Currency warehouse: d227b757-c6d8-4b5c-af5e-849a4cc45554 (CurrencyWarehouse:277) Pick list – Return order: 3008625c-3817-438b-894c-20bd6365bc9b (ReturnPurchaseOrderPickingList:278) Pro forma – Subcontract: 799b8e9b-b084-4983-ab13-3b328b9adfb4 (SubcontractProformaInvoice:279) Location label: f846467e-587e-453c-893d-0e6c1abd5c13 (LocationLabel:280) Location label (grouped): bd9d08e7-c979-4e51-87e8-12dd5c5363a6 (LocationMultiLabel:281) Files – External 1: fa315dd4-d7be-4cd8-aae0-4764e4c645a2 (FilesExternal1:282) Files – External 2: d3d834d7-fa0a-4ed4-9990-17c0ee955562 (FilesExternal2:283) Files – External 3: 6350e944-e659-4d27-a6fb-918dde12cc1d (FilesExternal3:284) Remittance advice: 631d1e42-725e-451f-aa88-d3736d0b6524 (RemittanceAdvice:285) Supplier agreement: c84c5776-76df-4eea-9eec-2938825d56c6 (SupplierAgreement:286) Modified supplier agreement: ec227dfa-ace8-4669-aedb-83e0fcdd056c (ModifiedSupplierAgreement:287) Self-billed invoice: a1c7e3f5-6b2d-4a8e-9f01-3d5e7c9b2a4f (SelfBilledInvoice:288) Transport label, purchase – A5: 9f000a32-f873-4766-96fe-ce96d93febe0 (PurchaseTransportLabelA5:310) Refill pick location: 5a65ead5-3268-4843-85ab-0bde904364ff (RefillPickingLocationStandard:500) Transport label, purchase, rejected – A5: b413093d-5e78-4af4-927c-2d28cbb628c3 (PurchaseTransportLabelA5ForRejection:1020) Transport label, manufacturing, transfer to stock – A5: aa95647b-d822-4ff4-ad00-8256ee66d957 (ManufacturingTransportLabelA5:1050) Transport label, manufacturing, rejected – A5: e29de335-254d-43bd-bdf5-316da09780bb (ManufacturingTransportLabelA5ForRejection:1060) Transport label, manufacturing, in progress – A5: 90eef0ea-fdb1-447a-b0af-e471b9b57498 (ManufacturingTransportLabelA5InProgress:1070) Transport label, manufacturing, prior to reporting – A5: 35042984-e462-42b6-9008-5060b05ef2ac (ManufacturingTransportLabelA5BeforeReporting:1080) Transport label, sales – Label: 39342c6e-3a50-4522-81d5-b3cdefff9898 (SalesTransportLabelSmall:1600) Form: 5673c63a-9738-4f7f-ad81-22daf5644bd0 (Form:2401) Service reporting: 63a761be-63df-469d-b1a1-b6902834ae7e (ServiceReporting:2402) Customer agreement: bcf47983-4284-4ddc-848c-de587e63971d (SalesAgreement:2501) Modified customer agreement: 031443e5-f432-4780-9cd7-da9f1c50534e (ModifiedSalesAgreement:2502) Balance per supplier: ee88f434-fbb0-4bc8-8583-2f948c5b4e7b (AccountStatementPurchase:2503) Return order: 1ebc4fb7-52c4-4e18-83c6-986b1cb75906 (ReturnPurchaseOrder:2504) Transport label, purchase – Label: 843c501e-c6c7-4e14-98f9-b0376846cce8 (PurchaseTransportLabelSmall:3100) Transport label, purchase, rejected – Label: 7451185c-cc36-4708-bb11-ddedd8431bf0 (PurchaseTransportLabelSmallForRejection:10200) Transport label, manufacturing, transfer to stock – Label: 2d65c164-620c-44a3-9c4f-501a7dbfad9b (ManufacturingTransportLabelSmall:10500) Transport label, manufacturing, rejected – Label: 0a76662a-741d-415c-9f85-f970257201fa (ManufacturingTransportLabelSmallForRejection:10600) Transport label, manufacturing, in progress – Label: b31f7c82-8aa7-4df7-95d5-f34f9a72036e (ManufacturingTransportLabelSmallInProgress:10700) Transport label, manufacturing, prior to reporting – Label: 3454d90d-46e7-426d-bdc4-a35f5e7e17b7 (ManufacturingTransportLabelSmallBeforeReporting:10800) Debit note: 1db44533-7218-4884-aac4-b95c91efb8f9 (DebitNote:10801) Service invoice: d883c1dc-e5c3-40e7-bdb1-36417d56fa0b (ServiceTax:10802) Sales – Order confirmation: cbc56d0a-ab13-4d8b-9508-5bfc88d099b8 (EdiCustomerOrderConfirmation:20001) Sales – Customer invoice: d416b442-0e51-44f6-b083-4335df21c28b (EdiCustomerOrderInvoice:20002) Sales – Simplified dispatch advice: fdeea94d-fe02-419a-aa0b-d3864b019273 (EdiCustomerOrderSimpleDispatchAdvice:20003) Sales – Customer order response: f3d0ca97-bca5-4a2d-bde3-bafb2a9e901f (EdiCustomerOrderResponse:20004) Purchase – Purchase order: 8530c00d-ae4d-4bc4-bb45-0f720ddac9f2 (EdiPurchaseOrder:20005) Sales – Complex dispatch advice: cae7be59-23f1-46e3-b085-27382bfa1cc7 (EdiCustomerOrderComplexDispatchAdvice:20006) Purchase – Delivery schedule: 051aad1f-7c06-412e-bfa7-7551e06c6706 (EdiPurchaseDeliverySchedule:20007)</td>
+</tr>
+<tr>
+<td class="prop"><code>IsDefault</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the form report is default.</td>
+</tr>
+<tr>
+<td class="prop"><code>Hint</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 200</td>
+<td>The human readable form of the report type.</td>
+</tr>
+<tr>
+<td class="prop"><code>Name</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Name of the form report.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsStandard</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the form report is a standard report.</td>
+</tr>
+<tr>
+<td class="prop"><code>DocumentId</code></td>
+<td class="type"><code>Guid</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Globally unique identifier (GUID) of the form report.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsAdaptation</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the form report is an adaptation.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Common</strong></p>
+<ul>
+<li><a href="PaymentMethod.html">PaymentMethods</a> — <code>TransactionListFormReportConfigurationId</code> (FK)</li>
+</ul>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="../Inventory/PartDefaultTransportLabel.html">PartDefaultTransportLabels</a> — <code>FormReportConfigurationId</code> (FK)</li>
+</ul>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="../Sales/CustomerOrderInvoice.html">CustomerOrderInvoices</a> — <code>FormReportConfigurationId</code> (FK)</li>
+<li><a href="../Sales/QuoteType.html">QuoteTypes</a> — <code>FormReportConfigurationId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Type": 0,
+  "TypeId": "00000000-0000-0000-0000-000000000000",
+  "IsDefault": false,
+  "Hint": null,
+  "Name": null,
+  "IsStandard": false,
+  "DocumentId": "00000000-0000-0000-0000-000000000000",
+  "IsAdaptation": false
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Common.FormReportConfiguration.html">https://api.monitor.se/api/Monitor.API.Common.FormReportConfiguration.html</a><br><span class="badge">Common</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

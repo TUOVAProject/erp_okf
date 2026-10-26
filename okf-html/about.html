@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About this bundle · Monitor ERP API</title>
+<meta name="description" content="Data model of the Monitor ERP REST API: 380 documented entities across 8 modules, with 1840 resolved relationships.">
+<link rel="stylesheet" href="assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="index.html">Monitor ERP API</a>
+  <span class="crumb">About this bundle</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="index.html">Overview</a>
+<a href="about.html" aria-current="page">About this bundle</a>
+<a href="modules/index.html">All modules</a>
+<a href="entities/index.html">All entities</a>
+<a href="log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="guides/core-entities.html">Core entities</a>
+<a href="guides/querying.html">Querying the Monitor API</a>
+<a href="guides/naming-conventions.html">Naming conventions</a>
+<a href="guides/relationships.html">How entities relate</a>
+<a href="guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="modules/Common.html">Common<span class="count">113</span></a>
+<a href="modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#scope">Scope</a>
+<a class="toc-h" href="#if-you-read-only-two-pages">If you read only two pages</a>
+<a class="toc-h" href="#how-to-use-this-bundle">How to use this bundle</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="about-this-bundle">About this bundle</h1>
+<p>The data model of the Monitor ERP REST API, derived from the public documentation
+at https://api.monitor.se/api/.</p>
+<h2 id="scope">Scope</h2>
+<p>This bundle describes <strong>what data the API exposes and how it connects</strong>: every
+queryable resource, its properties, types, enumerations, required permission and
+its relationships to other resources.</p>
+<p>Two things are deliberately outside that scope:</p>
+<ul>
+<li><strong>Write operations.</strong> The API's 913 command pages (<code>POST</code> operations that create, update or remove data) are excluded by the crawler. This bundle is the read model.</li>
+<li><strong>Monitor's Developer Guide.</strong> Only the API Reference pages are scraped. How to
+  authenticate, the URL format, query options and worked examples are in
+  Monitor's Developer Guide: https://api.monitor.se/articles/v1/index.html</li>
+</ul>
+<p>See <a href="guides/querying.html">Querying the Monitor API</a> for the endpoint shape.</p>
+<div class="stats"><div class="stat"><span class="stat-n">8</span><span class="stat-l">Modules</span></div><div class="stat"><span class="stat-n">380</span><span class="stat-l">Documented pages</span></div><div class="stat"><span class="stat-n">351</span><span class="stat-l">Queryable entities</span></div><div class="stat"><span class="stat-n">4</span><span class="stat-l">Commands</span></div><div class="stat"><span class="stat-n">25</span><span class="stat-l">Payload types</span></div><div class="stat"><span class="stat-n">5379</span><span class="stat-l">Properties</span></div><div class="stat"><span class="stat-n">1840</span><span class="stat-l">Relationships</span></div></div>
+<h2 id="if-you-read-only-two-pages">If you read only two pages</h2>
+<ol>
+<li><a href="guides/core-entities.html">Core entities</a> — the 20 entities
+   the rest of the model hangs off, ranked by how much of the API points at them.</li>
+<li><a href="guides/relationships.html">How entities relate</a> — foreign keys vs. navigation
+   properties, which is the one concept you need to traverse anything here.</li>
+</ol>
+<h2 id="how-to-use-this-bundle">How to use this bundle</h2>
+<p>Each entity page carries its endpoint, required permission, full property table,
+enumerations and JSON example. References in the property tables are links, and
+each page lists what references it under <strong>Referenced by</strong> — so both directions
+of the graph can be walked without loading anything else.</p>
+<p>To answer a question about one entity, open its page. To answer a question about
+how data connects, follow the links.</p>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/">https://api.monitor.se/api/</a><br><span class="badge">monitor</span><span class="badge">erp</span><span class="badge">api</span><span class="badge">data-model</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "";</script>
+<script src="assets/okf-index.js"></script>
+<script src="assets/okf.js"></script>
+</body>
+</html>

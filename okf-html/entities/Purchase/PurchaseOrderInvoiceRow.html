@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PurchaseOrderInvoiceRows · Monitor ERP API</title>
+<meta name="description" content="Represents a purchase order invoice row entry">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Purchase.html">Purchase</a><span class="sep">/</span>PurchaseOrderInvoiceRows</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html" aria-current="location">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="purchaseorderinvoicerows">PurchaseOrderInvoiceRows</h1>
+<p>Represents a purchase order invoice row entry</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Purchase.html">Purchase</a></dd><dt>API class</dt><dd><code>PurchaseOrderInvoiceRow</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Purchase/PurchaseOrderInvoiceRows</code></dd><dt>Required permission</dt><dd>Show purchase orders</dd><dt>GUID</dt><dd><code>1A17F9C3-677C-4E68-AA31-7720DE7355AB</code></dd><dt>Introduced in</dt><dd>2.27</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the purchase order invoice row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PurchaseOrderDeliveryRowId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a></td>
+<td></td>
+<td>The business key identifier of the purchase order delivery row.</td>
+</tr>
+<tr>
+<td class="prop"><code>CommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the purchase order's invoice row comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>Comment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The internal comment of the purchase order invoice row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Price</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The price of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the row price currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceLockedFromAutomaticChanges</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if price is locked from automatic changes.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceIsFuturePrice</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if price is a future price.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceInCompanyCurrency</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The price of the row in company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the currency for the row price in the company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupPrice</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The setup price of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupPriceCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the currency for the row setup price.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupPriceInCompanyCurrency</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The setup price of the row in company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupPriceInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the currency for row setup price in company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatRateId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td></td>
+<td>The business key identifier of the row's VAT rate.</td>
+</tr>
+<tr>
+<td class="prop"><code>Discount</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The discount in percent set for the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>StandardPrice</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The standard price of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>StandardPriceCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the currency for the row standard price.</td>
+</tr>
+<tr>
+<td class="prop"><code>CodingId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Accounting/CodingEntry.html">CodingEntries</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's coding.</td>
+</tr>
+<tr>
+<td class="prop"><code>Coding</code></td>
+<td class="type"><code>Codings</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Accounting/Coding.html">Codings</a></td>
+<td>expandable, since 2.30</td>
+<td>The coding of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>LedgerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Accounting/AccountsPayable.html">AccountsPayables</a></td>
+<td>since 22.5</td>
+<td>The business key identifier of the invoice row's ledger.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="PurchaseOrderInvoice.html">PurchaseOrderInvoices</a> — <code>Rows</code> (expand)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "PurchaseOrderDeliveryRowId": 0,
+  "CommentId": null,
+  "Comment": null,
+  "Price": null,
+  "PriceCurrencyId": null,
+  "PriceLockedFromAutomaticChanges": false,
+  "PriceIsFuturePrice": false,
+  "PriceInCompanyCurrency": null,
+  "PriceInCompanyCurrencyCurrencyId": null,
+  "SetupPrice": null,
+  "SetupPriceCurrencyId": null,
+  "SetupPriceInCompanyCurrency": null,
+  "SetupPriceInCompanyCurrencyCurrencyId": null,
+  "VatRateId": 0,
+  "Discount": 0.0,
+  "StandardPrice": null,
+  "StandardPriceCurrencyId": null,
+  "CodingId": null,
+  "Coding": null,
+  "LedgerId": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderInvoiceRow.html">https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderInvoiceRow.html</a><br><span class="badge">Purchase</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

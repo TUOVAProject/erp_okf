@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shipments · Monitor ERP API</title>
+<meta name="description" content="Represents a shipment.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>Shipments</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html" aria-current="location">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="shipments">Shipments</h1>
+<p>Represents a shipment.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Sales.html">Sales</a></dd><dt>API class</dt><dd><code>Shipment</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Sales/Shipments</code></dd><dt>Required permission</dt><dd>Show shipment</dd><dt>GUID</dt><dd><code>4E8AEFBC-74B0-427C-A043-5AA7D91ED387</code></dd><dt>Introduced in</dt><dd>23.1</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShipmentNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique, max length 20</td>
+<td>The human readable identifier of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ConsignmentNo</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The real consignment/shipment number from the shipper.</td>
+</tr>
+<tr>
+<td class="prop"><code>UnifaunOnlineFirstParcelNo</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The unifaun online first parcel number of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>UnifaunOnlineFirstPrintLink</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 4000</td>
+<td>The unifaun online first print link of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>LogTradeTrackingNo</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 400</td>
+<td>The log trade tracking number of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryMethodId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td></td>
+<td>The business key identifier of the shipments delivery method.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryTermId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/DeliveryTerm.html">DeliveryTerms</a></td>
+<td></td>
+<td>The business key identifier of the shipments delivery term.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryTermStandardCode</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 10</td>
+<td>The delivery term standard code of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryTermLocation</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The delivery term location of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShippingAgentType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The shipping agent type of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShipmentPayer</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The shipment payer of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShipmentPayerReference</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The shipment payer reference of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>TransportDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The transport date of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>StoredShipment</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if the shipment is stored.</td>
+</tr>
+<tr>
+<td class="prop"><code>PickupDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The pickup date of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>PickupTimeFrom</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The pickup time from of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>PickupTimeTo</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The pickup time to of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExportDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The export date of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The delivery date of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryTime</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The delivery time of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>PickupText1</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The first pickup text of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>PickupMisc</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The pickup misc. text of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>SchenkerOpalNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The Schenker opal number of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsConsolidated</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if the shipment is consolidated.</td>
+</tr>
+<tr>
+<td class="prop"><code>ConsolidateKey</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The consolidate key of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>TotalEurPallets</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The total number of euro pallets on the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrentInformationSourceType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The current shipment information source type of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>Status</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The status of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShippingAgentId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Purchase/Supplier.html">Suppliers</a></td>
+<td></td>
+<td>The business key identifier of the shipping agent of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>RecipientAdressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td></td>
+<td>The business key identifier of the recipient adress of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>RecipientAdress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>expandable</td>
+<td>The recipient adress of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>RecipientInvoiceAddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td></td>
+<td>The business key identifier of the recipient invoice adress of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>RecipientInvoiceAddress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>expandable</td>
+<td>The recipient invoice adress of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>FreightPayerAddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td></td>
+<td>The business key identifier of the freight payer adress of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>FreightPayerAddress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>expandable</td>
+<td>The freight payer adress of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ConsignmentId</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 25</td>
+<td>The consignment id of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ConsignmentIdForReturn</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 25</td>
+<td>The consignment id for return of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurReferenceName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>Our reference name of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurReferencePhoneNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>Our reference phone number of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurReferenceMobilePhoneNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>Our reference mobile phone number of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurReferenceMail</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>Our reference mail of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurPickUpAddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td></td>
+<td>The business key identifier of our pick up address of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurPickUpAddress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>expandable</td>
+<td>Our pick up adress of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurInvoiceAdressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td></td>
+<td>The business key identifier of our invoce address of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurInvoiceAddress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>expandable</td>
+<td>Our invoice adress of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>PalletRegistrationNo</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The pallet registration number of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurPalletRegistrationNo</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>Our pallet registration number of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactReferenceName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The business contact reference name of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactReferencePhoneNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The business contact reference phone number of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactReferenceMobilePhoneNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The business contact reference mobile phone number of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactReferenceMail</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The business contact reference mail of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShippingTemplate</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The shipping template code of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShippingTemplateId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="ShippingTemplate.html">ShippingTemplates</a></td>
+<td></td>
+<td>The business key identifier of the shipping template of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShippingServiceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="ShippingService.html">ShippingServices</a></td>
+<td></td>
+<td>The business key identifier of shipping service of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShippingService</code></td>
+<td class="type"><code>ShippingServices</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ShippingService.html">ShippingServices</a></td>
+<td>expandable</td>
+<td>The shipping service of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShippingServiceCode</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The shipping service code of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>SenderQuickId</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The sender quick id of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>SellerQuickId</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The seller quick id of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ConsignorId</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The consignor id of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>PickupId</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The pickup id of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>LogTradePrintQueue</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 25</td>
+<td>The log trade print queue of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShippingAgentCode</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 15</td>
+<td>The shipping agent code of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>SenderReference</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The sender reference of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>RecipientReference</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The recipient reference of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryInstruction</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The delivery instruction of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>BookTransport</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if the shipment has booked transport.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReturnLabel</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if the shipment has return label.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShipmentPrintSetting</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The print setting of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveDeliveryAddressCustomerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="Customer.html">Customers</a></td>
+<td></td>
+<td>The business key identifier of the active delivery address customer of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveDeliveryAddressSupplierId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Purchase/Supplier.html">Suppliers</a></td>
+<td></td>
+<td>The business key identifier of the active delivery address supplier of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveDeliveryAddressCompanyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the active delivery address company of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveDeliveryAddressDeliveryAddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/DeliveryAddress.html">DeliveryAddresses</a></td>
+<td></td>
+<td>The business key identifier of the active delivery address delivery address of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveDeliveryAddressDeliveryAddress</code></td>
+<td class="type"><code>DeliveryAddresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/DeliveryAddress.html">DeliveryAddresses</a></td>
+<td>expandable</td>
+<td>The active delivery address delivery address of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveFallbackDeliveryAddressDeliveryAddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/DeliveryAddress.html">DeliveryAddresses</a></td>
+<td></td>
+<td>The business key identifier of the active fallback delivery address delivery address of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveFallbackDeliveryAddressDeliveryAddress</code></td>
+<td class="type"><code>DeliveryAddresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/DeliveryAddress.html">DeliveryAddresses</a></td>
+<td>expandable</td>
+<td>The active fallback delivery address delivery address of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>SourceOfAlternativeDeliveryAddresses</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The source of alternative delivery addresses of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>WarehouseShippingAgentCode</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 20</td>
+<td>The warehouse shipping agent code of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomerGoodsAddressNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The customer goods address number of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomerShippingAgentCode</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 20</td>
+<td>The customer shipping agent code of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>WarehouseId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
+<td></td>
+<td>The business key identifier of the shipments warehouse.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShippingAgentAccountName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The shipping agent account name of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>CalculatedFreightPrice</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The calculated freight price of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>CalculatedFreightPriceCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the calculated freight price currency of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>CalculatedFreightPriceCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The calculated freight price currency of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>MobilePhoneNotificationNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The mobile phone notification number for phone advice of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>GoodsTrackingUrl</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 4000, since 24.7</td>
+<td>The goods tracking URL of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomsId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 26.4</td>
+<td>The business key identifier of the customs information of the shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>Customs</code></td>
+<td class="type"><code>ShipmentCustoms</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ShipmentCustoms.html">ShipmentCustoms</a></td>
+<td>expandable, since 26.4</td>
+<td>The customs information of the shipment.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>ShippingAgentType</code><div class="evs"><span class="ev">Other<span>=0</span></span><span class="ev">DHL<span>=1</span></span><span class="ev">Schenker<span>=2</span></span><span class="ev">PostNord<span>=3</span></span><span class="ev">DSV<span>=4</span></span></div></li><li><code>ShipmentPayer</code><div class="evs"><span class="ev">BuyerPays<span>=1</span></span><span class="ev">SellerPays<span>=2</span></span><span class="ev">OtherPayer<span>=3</span></span><span class="ev">Incoterms<span>=4</span></span></div></li><li><code>CurrentInformationSourceType</code><div class="evs"><span class="ev">CustomerOrder<span>=0</span></span><span class="ev">Supplier<span>=1</span></span><span class="ev">PickingList<span>=2</span></span><span class="ev">Customer<span>=3</span></span><span class="ev">PickingListWithPackageStructure<span>=4</span></span><span class="ev">Subcontract<span>=5</span></span><span class="ev">ReturnOrder<span>=6</span></span></div></li><li><code>Status</code><div class="evs"><span class="ev">Registered<span>=1</span></span><span class="ev">ShipmentFailed<span>=2</span></span><span class="ev">ShipmentInformationNotSufficient<span>=3</span></span><span class="ev">Sent<span>=4</span></span><span class="ev">Booked<span>=5</span></span><span class="ev">Shipped<span>=6</span></span><span class="ev">Cancelled<span>=7</span></span></div></li><li><code>ShipmentPrintSetting</code><div class="evs"><span class="ev">WaybillAndParcel<span>=0</span></span><span class="ev">Waybill<span>=1</span></span><span class="ev">Parcel<span>=2</span></span></div></li><li><code>SourceOfAlternativeDeliveryAddresses</code><div class="evs"><span class="ev">CurrentCustomer<span>=0</span></span><span class="ev">Customer<span>=1</span></span><span class="ev">Supplier<span>=2</span></span><span class="ev">Company<span>=3</span></span><span class="ev">CurrentSupplier<span>=4</span></span></div></li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="ShipmentCustoms.html">ShipmentCustoms</a> — <code>ParentId</code> (FK)</li>
+<li><a href="ShipmentInformationSource.html">ShipmentInformationSources</a> — <code>ShipmentId</code> (FK)</li>
+<li><a href="ShipmentPackageInformation.html">ShipmentPackageInformations</a> — <code>ShipmentId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "ShipmentNumber": null,
+  "ConsignmentNo": null,
+  "UnifaunOnlineFirstParcelNo": null,
+  "UnifaunOnlineFirstPrintLink": null,
+  "LogTradeTrackingNo": null,
+  "DeliveryMethodId": null,
+  "DeliveryTermId": null,
+  "DeliveryTermStandardCode": null,
+  "DeliveryTermLocation": null,
+  "ShippingAgentType": 0,
+  "ShipmentPayer": 0,
+  "ShipmentPayerReference": null,
+  "TransportDate": "0001-01-01T00:00:00+00:00",
+  "StoredShipment": false,
+  "PickupDate": null,
+  "PickupTimeFrom": null,
+  "PickupTimeTo": null,
+  "ExportDate": null,
+  "DeliveryDate": null,
+  "DeliveryTime": null,
+  "PickupText1": null,
+  "PickupMisc": null,
+  "SchenkerOpalNumber": null,
+  "IsConsolidated": false,
+  "ConsolidateKey": null,
+  "TotalEurPallets": 0,
+  "CurrentInformationSourceType": 0,
+  "Status": 0,
+  "ShippingAgentId": 0,
+  "RecipientAdressId": null,
+  "RecipientAdress": null,
+  "RecipientInvoiceAddressId": null,
+  "RecipientInvoiceAddress": null,
+  "FreightPayerAddressId": null,
+  "FreightPayerAddress": null,
+  "ConsignmentId": null,
+  "ConsignmentIdForReturn": null,
+  "OurReferenceName": null,
+  "OurReferencePhoneNumber": null,
+  "OurReferenceMobilePhoneNumber": null,
+  "OurReferenceMail": null,
+  "OurPickUpAddressId": null,
+  "OurPickUpAddress": null,
+  "OurInvoiceAdressId": null,
+  "OurInvoiceAddress": null,
+  "PalletRegistrationNo": null,
+  "OurPalletRegistrationNo": null,
+  "BusinessContactReferenceName": null,
+  "BusinessContactReferencePhoneNumber": null,
+  "BusinessContactReferenceMobilePhoneNumber": null,
+  "BusinessContactReferenceMail": null,
+  "ShippingTemplate": null,
+  "ShippingTemplateId": null,
+  "ShippingServiceId": null,
+  "ShippingService": null,
+  "ShippingServiceCode": null,
+  "SenderQuickId": null,
+  "SellerQuickId": null,
+  "ConsignorId": null,
+  "PickupId": null,
+  "LogTradePrintQueue": null,
+  "ShippingAgentCode": null,
+  "SenderReference": null,
+  "RecipientReference": null,
+  "DeliveryInstruction": null,
+  "BookTransport": false,
+  "ReturnLabel": false,
+  "ShipmentPrintSetting": 0,
+  "ActiveDeliveryAddressCustomerId": null,
+  "ActiveDeliveryAddressSupplierId": null,
+  "ActiveDeliveryAddressCompanyId": null,
+  "ActiveDeliveryAddressDeliveryAddressId": null,
+  "ActiveDeliveryAddressDeliveryAddress": null,
+  "ActiveFallbackDeliveryAddressDeliveryAddressId": null,
+  "ActiveFallbackDeliveryAddressDeliveryAddress": null,
+  "SourceOfAlternativeDeliveryAddresses": 0,
+  "WarehouseShippingAgentCode": null,
+  "CustomerGoodsAddressNumber": null,
+  "CustomerShippingAgentCode": null,
+  "WarehouseId": 0,
+  "ShippingAgentAccountName": null,
+  "CalculatedFreightPrice": null,
+  "CalculatedFreightPriceCurrencyId": null,
+  "CalculatedFreightPriceCurrency": null,
+  "MobilePhoneNotificationNumber": null,
+  "GoodsTrackingUrl": null,
+  "CustomsId": null,
+  "Customs": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Sales.Shipment.html">https://api.monitor.se/api/Monitor.API.Sales.Shipment.html</a><br><span class="badge">Sales</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

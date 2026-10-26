@@ -1,10 +1,3 @@
----
-type: Index
-title: Sales entities
-tags:
-- Sales
----
-
 # Sales entities
 
 76 documented pages in the Sales module.

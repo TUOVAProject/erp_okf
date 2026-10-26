@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accounting · Monitor ERP API</title>
+<meta name="description" content="Monitor ERP API module Accounting.">
+<link rel="stylesheet" href="../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../index.html">Monitor ERP API</a>
+  <span class="crumb">Accounting</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../index.html">Overview</a>
+<a href="../about.html">About this bundle</a>
+<a href="../modules/index.html">All modules</a>
+<a href="../entities/index.html">All entities</a>
+<a href="../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../guides/core-entities.html">Core entities</a>
+<a href="../guides/querying.html">Querying the Monitor API</a>
+<a href="../guides/naming-conventions.html">Naming conventions</a>
+<a href="../guides/relationships.html">How entities relate</a>
+<a href="../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../modules/Accounting.html" aria-current="page">Accounting<span class="count">43</span></a>
+<a href="../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#queryable-entities">Queryable entities</a>
+<a class="toc-h" href="#payload-types">Payload types</a>
+<a class="toc-h" href="#depends-on-other-modules">Depends on other modules</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="accounting">Accounting</h1>
+<p>Monitor API module <code>Accounting</code>: 41 queryable entities, 0 commands, 2 payload types.</p>
+<p>Full listing: <a href="../entities/Accounting/index.html">Accounting entities</a></p>
+<h2 id="queryable-entities">Queryable entities</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../entities/Accounting/AccountingBudgetPeriod.html">AccountingBudgetPeriods</a></td>
+<td><code>/api/v1/Accounting/AccountingBudgetPeriods</code></td>
+<td>Represents an accounting budget period.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AccountingBudget.html">AccountingBudgets</a></td>
+<td><code>/api/v1/Accounting/AccountingBudgets</code></td>
+<td>Represents an accounting budget.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AccountingBudgetType.html">AccountingBudgetTypes</a></td>
+<td><code>/api/v1/Accounting/AccountingBudgetTypes</code></td>
+<td>Represents an accounting budget type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AccountingYearPeriod.html">AccountingYearPeriods</a></td>
+<td><code>/api/v1/Accounting/AccountingYearPeriods</code></td>
+<td>Represents a accounting year period.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AccountingYear.html">AccountingYears</a></td>
+<td><code>/api/v1/Accounting/AccountingYears</code></td>
+<td>Represents a accounting year.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/Account.html">Accounts</a></td>
+<td><code>/api/v1/Accounting/Accounts</code></td>
+<td>Represents a account.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AccountsPayableCashDiscountLevel.html">AccountsPayableCashDiscountLevels</a></td>
+<td><code>/api/v1/Accounting/AccountsPayableCashDiscountLevels</code></td>
+<td>Represents a cash discount level for an accounts payable.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AccountsPayable.html">AccountsPayables</a></td>
+<td><code>/api/v1/Accounting/AccountsPayables</code></td>
+<td>Represents a account's payable.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AccountsReceivableCashDiscountLevel.html">AccountsReceivableCashDiscountLevels</a></td>
+<td><code>/api/v1/Accounting/AccountsReceivableCashDiscountLevels</code></td>
+<td>Represents a cash discount level for an accounts receivable.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AccountsReceivable.html">AccountsReceivables</a></td>
+<td><code>/api/v1/Accounting/AccountsReceivables</code></td>
+<td>Represents an accounts receivable.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AccountYearSettingCodingDimensionAvailability.html">AccountYearSettingCodingDimensionAvailabilities</a></td>
+<td><code>/api/v1/Accounting/AccountYearSettingCodingDimensionAvailabilities</code></td>
+<td>Represents a coding dimension available on a account for a specific year setting.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AccountYearSetting.html">AccountYearSettings</a></td>
+<td><code>/api/v1/Accounting/AccountYearSettings</code></td>
+<td>Represents a account setting on a specific year.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AccrualAccountingLedger.html">AccrualAccountingLedgers</a></td>
+<td><code>/api/v1/Accounting/AccrualAccountingLedgers</code></td>
+<td>Represents a accrual accounting ledger.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AccrualAccountingRow.html">AccrualAccountingRows</a></td>
+<td><code>/api/v1/Accounting/AccrualAccountingRows</code></td>
+<td>Represents a accrual accounting row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AccrualAccounting.html">AccrualAccountings</a></td>
+<td><code>/api/v1/Accounting/AccrualAccountings</code></td>
+<td>Represents a accrual accounting.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AllocationKeyResultRow.html">AllocationKeyResultRows</a></td>
+<td><code>/api/v1/Accounting/AllocationKeyResultRows</code></td>
+<td>Represent an allocation key result row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AllocationKey.html">AllocationKeys</a></td>
+<td><code>/api/v1/Accounting/AllocationKeys</code></td>
+<td>Represent an allocation key.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/AutoAllocation.html">AutoAllocations</a></td>
+<td><code>/api/v1/Accounting/AutoAllocations</code></td>
+<td>Represent an auto allocation.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/BalanceRowDay.html">BalanceRowDays</a></td>
+<td><code>/api/v1/Accounting/BalanceRowDays</code></td>
+<td>Represents a balance row day.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/Balance.html">Balances</a></td>
+<td><code>/api/v1/Accounting/Balances</code></td>
+<td>Represents a balance.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/BankAccount.html">BankAccounts</a></td>
+<td><code>/api/v1/Accounting/BankAccounts</code></td>
+<td>Represents a bank account.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/BookingRow.html">BookingRows</a></td>
+<td><code>/api/v1/Accounting/BookingRows</code></td>
+<td>Represents a booking row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/Booking.html">Bookings</a></td>
+<td><code>/api/v1/Accounting/Bookings</code></td>
+<td>Represents a booking.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/BudgetChart.html">BudgetCharts</a></td>
+<td><code>/api/v1/Accounting/BudgetCharts</code></td>
+<td>Represents a budget chart.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/CodingDimension.html">CodingDimensions</a></td>
+<td><code>/api/v1/Accounting/CodingDimensions</code></td>
+<td>Represents a Coding dimension.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/CodingElement.html">CodingElements</a></td>
+<td><code>/api/v1/Accounting/CodingElements</code></td>
+<td>Represents a Coding element.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/CodingEntry.html">CodingEntries</a></td>
+<td><code>/api/v1/Accounting/CodingEntries</code></td>
+<td>Represents a coding entry.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/CodingEntryElement.html">CodingEntryElements</a></td>
+<td><code>/api/v1/Accounting/CodingEntryElements</code></td>
+<td>Represents a coding entry element.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/CodingRow.html">CodingRows</a></td>
+<td><code>/api/v1/Accounting/CodingRows</code></td>
+<td>Represents a coding row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/Coding.html">Codings</a></td>
+<td><code>/api/v1/Accounting/Codings</code></td>
+<td>Represents a coding.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/FixedAssetDepreciation.html">FixedAssetDepreciations</a></td>
+<td><code>/api/v1/Accounting/FixedAssetDepreciations</code></td>
+<td>Represents a depreciation for a fixed assets object.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/FixedAssetGroup.html">FixedAssetGroups</a></td>
+<td><code>/api/v1/Accounting/FixedAssetGroups</code></td>
+<td>Represents a fixed assets group.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/FixedAsset.html">FixedAssets</a></td>
+<td><code>/api/v1/Accounting/FixedAssets</code></td>
+<td>Represents a fixed assets object.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/FixedAssetSale.html">FixedAssetSales</a></td>
+<td><code>/api/v1/Accounting/FixedAssetSales</code></td>
+<td>Represents a sale/retirement of a fixed assets object.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/IncomingPayment.html">IncomingPayments</a></td>
+<td><code>/api/v1/Accounting/IncomingPayments</code></td>
+<td>Represents an incoming payment.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/OpeningBalance.html">OpeningBalances</a></td>
+<td><code>/api/v1/Accounting/OpeningBalances</code></td>
+<td>Represents an opening balance.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/OutgoingPayment.html">OutgoingPayments</a></td>
+<td><code>/api/v1/Accounting/OutgoingPayments</code></td>
+<td>Represents an outgoing payment.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/StandardAccount.html">StandardAccounts</a></td>
+<td><code>/api/v1/Accounting/StandardAccounts</code></td>
+<td>Represents a standard account.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/VoucherRow.html">VoucherRows</a></td>
+<td><code>/api/v1/Accounting/VoucherRows</code></td>
+<td>Represents a voucher row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/Voucher.html">Vouchers</a></td>
+<td><code>/api/v1/Accounting/Vouchers</code></td>
+<td>Represents a voucher.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/VoucherSeries.html">VoucherSeries</a></td>
+<td><code>/api/v1/Accounting/VoucherSeries</code></td>
+<td>Represents a voucher series.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="payload-types">Payload types</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../entities/Accounting/AccountingExportResponse.html">AccountingExportResponse</a></td>
+<td>The response object used by accounting exports.</td>
+</tr>
+<tr>
+<td><a href="../entities/Accounting/SetOffDestination.html">SetOffDestination</a></td>
+<td>The set-off invoice.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="depends-on-other-modules">Depends on other modules</h2>
+<ul>
+<li><a href="Common.html">Common</a>: <a href="../entities/Common/Address.html">Addresses</a>, <a href="../entities/Common/ApplicationUser.html">ApplicationUsers</a>, <a href="../entities/Common/BusinessContactBankAccount.html">BusinessContactBankAccounts</a>, <a href="../entities/Common/Comment.html">Comments</a>, <a href="../entities/Common/Country.html">Countries</a>, <a href="../entities/Common/Currency.html">Currencies</a>, <a href="../entities/Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a>, <a href="../entities/Common/Department.html">Departments</a>, <a href="../entities/Common/LanguageCode.html">LanguageCodes</a>, <a href="../entities/Common/PaymentMethod.html">PaymentMethods</a>, <a href="../entities/Common/PaymentTerm.html">PaymentTerms</a>, <a href="../entities/Common/VatGroup.html">VatGroups</a>, <a href="../entities/Common/VatRate.html">VatRates</a>, <a href="../entities/Common/Warehouse.html">Warehouses</a>, <a href="../entities/Common/WriteOffCode.html">WriteOffCodes</a></li>
+<li><a href="Manufacturing.html">Manufacturing</a>: <a href="../entities/Manufacturing/WorkCenter.html">WorkCenters</a></li>
+<li><a href="Purchase.html">Purchase</a>: <a href="../entities/Purchase/PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a>, <a href="../entities/Purchase/PurchaseOrder.html">PurchaseOrders</a>, <a href="../entities/Purchase/SupplierAccountGroup.html">SupplierAccountGroups</a>, <a href="../entities/Purchase/Supplier.html">Suppliers</a></li>
+<li><a href="Sales.html">Sales</a>: <a href="../entities/Sales/CustomerAccountGroup.html">CustomerAccountGroups</a>, <a href="../entities/Sales/Customer.html">Customers</a></li>
+</ul>
+<div class="page-meta"><span class="badge">Accounting</span><span class="badge">module</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../";</script>
+<script src="../assets/okf-index.js"></script>
+<script src="../assets/okf.js"></script>
+</body>
+</html>

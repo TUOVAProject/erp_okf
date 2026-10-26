@@ -3,6 +3,7 @@ Unchanged in behaviour from the original scrape_monitor_api.py — only the path
 are now repo-anchored and the dead BASE_URL constant / unused re import are gone.
 """
 
+import datetime
 import json
 import time
 from pathlib import Path
@@ -185,7 +186,8 @@ def discover_endpoint_links():
     return endpoints, sorted(excluded_urls)
 
 
-def download_endpoint(endpoint: dict, force: bool = False):
+def download_endpoint(endpoint: dict, force: bool = False) -> bool:
+    """Palauttaa True, jos välimuistin sisältö muuttui (uusi tai erilainen sivu)."""
     category = endpoint["category"]
     api_class = endpoint["api_class"]
     url = endpoint["url"]
@@ -198,25 +200,43 @@ def download_endpoint(endpoint: dict, force: bool = False):
     # Välimuistissa olevaa sivua ei koskaan päivitetä ilman --refresh:iä.
     if output_file.exists() and not force:
         print(f"  SKIP existing: {output_file}")
-        return
+        return False
 
     print(f"  Downloading: {category}/{api_class}")
 
     html = fetch_html(url)
+    changed = not output_file.exists() or output_file.read_text(encoding="utf-8") != html
     output_file.write_text(html, encoding="utf-8")
 
     time.sleep(REQUEST_DELAY_SECONDS)
 
+    return changed
 
-def save_index(endpoints: list[dict], excluded_urls: list[str]):
+
+def previous_fetched_on() -> str | None:
+    """Edellisen manifestin hakupäivä, jos sellainen on tallennettu."""
+    if not ENDPOINT_INDEX.exists():
+        return None
+
+    index = json.loads(ENDPOINT_INDEX.read_text(encoding="utf-8"))
+
+    return index.get("fetched_on") if isinstance(index, dict) else None
+
+
+def save_index(endpoints: list[dict], excluded_urls: list[str], fetched_on: str | None):
     """Crawl-manifesti.
 
     Mukana myös rajauksen laajuus, jotta paketti voi kertoa montako komentosivua
     jää ulkopuolelle ilman että luku kirjoitetaan käsin mihinkään.
+
+    fetched_on on päivä, jolloin välimuistin sisältö viimeksi muuttui -- ei
+    ajon aikaleima. Se päivitetään vain kun jokin sivu oikeasti muuttui, joten
+    muuttumattoman lähteen uudelleenhaku ei muuta pakettia.
     """
     ENDPOINT_INDEX.write_text(
         json.dumps(
             {
+                "fetched_on": fetched_on,
                 "endpoints": endpoints,
                 "excluded_patterns": EXCLUDED_PATTERNS,
                 "excluded_pages": len(excluded_urls),
@@ -239,10 +259,13 @@ def main(force: bool = False):
         print("If this happens, toc.html may not contain the links directly.")
         return
 
-    save_index(endpoints, excluded_urls)
+    fetched_on = previous_fetched_on()
+    save_index(endpoints, excluded_urls, fetched_on)
 
     print("")
     print("Downloading endpoint HTML files...")
+
+    changed = False
 
     for index, endpoint in enumerate(endpoints, start=1):
         print(
@@ -251,10 +274,13 @@ def main(force: bool = False):
         )
 
         try:
-            download_endpoint(endpoint, force=force)
+            changed = download_endpoint(endpoint, force=force) or changed
         except Exception as error:
             print(f"  ERROR: {endpoint['url']}")
             print(f"  {error}")
+
+    if changed or fetched_on is None:
+        save_index(endpoints, excluded_urls, datetime.date.today().isoformat())
 
     print("")
     print("Done.")

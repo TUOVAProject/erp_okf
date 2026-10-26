@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Units · Monitor ERP API</title>
+<meta name="description" content="Represents a quantity unit.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>Units</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html" aria-current="location">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="units">Units</h1>
+<p>Represents a quantity unit.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Common.html">Common</a></dd><dt>API class</dt><dd><code>Unit</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Common/Units</code></dd><dt>Required permission</dt><dd>Show units</dd><dt>GUID</dt><dd><code>c666b903-0599-4082-b7f2-2cffa4d7ea82</code></dd><dt>Introduced in</dt><dd>2.18</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the unit.</td>
+</tr>
+<tr>
+<td class="prop"><code>Code</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The translatable code of the unit.</td>
+</tr>
+<tr>
+<td class="prop"><code>Description</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The translated description of the unit.</td>
+</tr>
+<tr>
+<td class="prop"><code>Number</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The unit number.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Common</strong></p>
+<ul>
+<li><a href="CompanyEmissionDetail.html">CompanyEmissionDetails</a> — <code>Unit</code> (expand)</li>
+<li><a href="FormTemplateRow.html">FormTemplateRows</a> — <code>UnitId</code> (FK)</li>
+<li><a href="PartUnitUsage.html">PartUnitUsages</a> — <code>UnitId</code> (FK)</li>
+</ul>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="../Inventory/Alloy.html">Alloys</a> — <code>UnitId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>StandardUnitId</code> (FK)</li>
+<li><a href="../Inventory/SalesForecastRow.html">SalesForecastRows</a> — <code>UnitId</code> (FK)</li>
+</ul>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="../Manufacturing/MaintenanceReportingRow.html">MaintenanceReportingRows</a> — <code>UnitId</code> (FK)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="../Purchase/BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a> — <code>Unit</code> (expand)</li>
+<li><a href="../Purchase/BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a> — <code>UnitId</code> (FK)</li>
+<li><a href="../Purchase/InquiryRow.html">InquiryRows</a> — <code>Unit</code> (expand)</li>
+<li><a href="../Purchase/InquiryRow.html">InquiryRows</a> — <code>UnitId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderAdviceRow.html">PurchaseOrderAdviceRows</a> — <code>UnitId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>Unit</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>UnitId</code> (FK)</li>
+<li><a href="../Purchase/SupplierPartLink.html">SupplierPartLinks</a> — <code>Unit</code> (expand)</li>
+<li><a href="../Purchase/SupplierPartLink.html">SupplierPartLinks</a> — <code>UnitId</code> (FK)</li>
+</ul>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="../Sales/BlanketOrderSalesRow.html">BlanketOrderSalesRows</a> — <code>Unit</code> (expand)</li>
+<li><a href="../Sales/BlanketOrderSalesRow.html">BlanketOrderSalesRows</a> — <code>UnitId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderRowInflow.html">CustomerOrderRowInflows</a> — <code>Unit</code> (expand)</li>
+<li><a href="../Sales/CustomerOrderRow.html">CustomerOrderRows</a> — <code>Unit</code> (expand)</li>
+<li><a href="../Sales/CustomerOrderRow.html">CustomerOrderRows</a> — <code>UnitId</code> (FK)</li>
+<li><a href="../Sales/CustomerPartLink.html">CustomerPartLinks</a> — <code>Unit</code> (expand)</li>
+<li><a href="../Sales/CustomerPartLink.html">CustomerPartLinks</a> — <code>UnitId</code> (FK)</li>
+<li><a href="../Sales/QuoteRow.html">QuoteRows</a> — <code>Unit</code> (expand)</li>
+<li><a href="../Sales/QuoteRow.html">QuoteRows</a> — <code>UnitId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementBasisRow.html">SalesAgreementBasisRows</a> — <code>Unit</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementBasisRow.html">SalesAgreementBasisRows</a> — <code>UnitId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRow.html">SalesAgreementRows</a> — <code>Unit</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementRow.html">SalesAgreementRows</a> — <code>UnitId</code> (FK)</li>
+<li><a href="../Sales/ShipmentCustomsRow.html">ShipmentCustomsRows</a> — <code>OtherUnit</code> (expand)</li>
+<li><a href="../Sales/ShipmentCustomsRow.html">ShipmentCustomsRows</a> — <code>OtherUnitId</code> (FK)</li>
+<li><a href="../Sales/ShipmentCustomsRow.html">ShipmentCustomsRows</a> — <code>Unit</code> (expand)</li>
+<li><a href="../Sales/ShipmentCustomsRow.html">ShipmentCustomsRows</a> — <code>UnitId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Code": null,
+  "Description": null,
+  "Number": 0
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Common.Unit.html">https://api.monitor.se/api/Monitor.API.Common.Unit.html</a><br><span class="badge">Common</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

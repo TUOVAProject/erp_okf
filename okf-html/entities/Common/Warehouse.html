@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warehouses · Monitor ERP API</title>
+<meta name="description" content="Represents a warehouse.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>Warehouses</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html" aria-current="location">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="warehouses">Warehouses</h1>
+<p>Represents a warehouse.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Common.html">Common</a></dd><dt>API class</dt><dd><code>Warehouse</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Common/Warehouses</code></dd><dt>Required permission</dt><dd>Show company information</dd><dt>GUID</dt><dd><code>DA31FCD6-18FE-4607-91F9-44CAE738840A</code></dd><dt>Introduced in</dt><dd>2.18</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the warehouse.</td>
+</tr>
+<tr>
+<td class="prop"><code>Name</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The warehouse name.</td>
+</tr>
+<tr>
+<td class="prop"><code>Code</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique, max length 10</td>
+<td>The warehouse code.</td>
+</tr>
+<tr>
+<td class="prop"><code>LanguageId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="LanguageCode.html">LanguageCodes</a></td>
+<td></td>
+<td>The business key identifier of the warehouse language code. References LanguageCodes .</td>
+</tr>
+<tr>
+<td class="prop"><code>CountryId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Country.html">Countries</a></td>
+<td></td>
+<td>The business key identifier of the warehouse country. References Countries .</td>
+</tr>
+<tr>
+<td class="prop"><code>PlaceOfDispatch</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 40</td>
+<td>The place of dispatch for the warehouse.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>PalletRegistrationNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 40, <span class="badge dep">deprecated since 2.54</span></td>
+<td>The pallet registration number of the warehouse. <em>(Never used in G5.)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>Url</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 255</td>
+<td>The website URL of the warehouse.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>TimeZoneId</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Company.html">Companies</a></td>
+<td><span class="badge dep">deprecated since 25.2</span>, since 2.29</td>
+<td>The time zone of the warehouse. Specified as a time zone identifier (e.g. "W. Europe Standard Time"). From 25.2 moved to Companies . <em>(Time zone is now on company level. All warhouses will return the same value as the company time zone.)</em></td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>TimeZone</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td><span class="badge dep">deprecated since 2.29</span></td>
+<td>The timezone offset of the warehouse. <em>(Replaced by TimeZoneId)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>CalendarId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Calendar.html">Calendars</a></td>
+<td></td>
+<td>The business key identifier of the warehouse calendar. References Calendars .</td>
+</tr>
+<tr>
+<td class="prop"><code>Calendar</code></td>
+<td class="type"><code>Calendars</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Calendar.html">Calendars</a></td>
+<td>expandable</td>
+<td>The warehouse calendar.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 25</td>
+<td>The VAT number of the warehouse.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryAddresses</code></td>
+<td class="type"><code>DeliveryAddresses[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="DeliveryAddress.html">DeliveryAddresses</a></td>
+<td>expandable, collection, since 25.4</td>
+<td>All available delivery addresses of the warehouse.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Accounting</strong></p>
+<ul>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>WarehouseId</code> (FK)</li>
+</ul>
+<p><strong>Common</strong></p>
+<ul>
+<li><a href="ApplicationUser.html">ApplicationUsers</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="Company.html">Companies</a> — <code>Warehouses</code> (expand)</li>
+<li><a href="DeliveryAddressWarehouseInformation.html">DeliveryAddressWarehouseInformations</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="EdiBehavior.html">EdiBehaviors</a> — <code>Warehouse</code> (expand)</li>
+<li><a href="EdiBehavior.html">EdiBehaviors</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="MonitoringTaskRow.html">MonitoringTaskRows</a> — <code>Warehouses</code> (expand)</li>
+<li><a href="Person.html">Persons</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="TransferProfile.html">TransferProfiles</a> — <code>RemoteWarehouseId</code> (FK)</li>
+</ul>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>Warehouse</code> (expand)</li>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Inventory/Location.html">Locations</a> — <code>Warehouse</code> (expand)</li>
+<li><a href="../Inventory/Location.html">Locations</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Inventory/PartLocation.html">PartLocations</a> — <code>Warehouse</code> (expand)</li>
+<li><a href="../Inventory/PartLocation.html">PartLocations</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Inventory/PartPlanningInformation.html">PartPlanningInformation</a> — <code>AcquisitionWarehouseId</code> (FK)</li>
+<li><a href="../Inventory/PartPlanningInformation.html">PartPlanningInformation</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>DefaultCustomerOrderWarehouseId</code> (FK)</li>
+<li><a href="../Inventory/PhysicalInventoryList.html">PhysicalInventoryLists</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Inventory/QuantityChange.html">QuantityChanges</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Inventory/SalesForecast.html">SalesForecasts</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Inventory/StockTransaction.html">StockTransactions</a> — <code>WarehouseId</code> (FK)</li>
+</ul>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="../Manufacturing/ManufacturingOrderNode.html">ManufacturingOrderNodes</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Manufacturing/ManufacturingOrderOperationReporting.html">ManufacturingOrderOperationReportings</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Manufacturing/ManufacturingOrder.html">ManufacturingOrders</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Manufacturing/ManufacturingPickingList.html">ManufacturingPickingLists</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Manufacturing/WorkCenter.html">WorkCenters</a> — <code>Warehouse</code> (expand)</li>
+<li><a href="../Manufacturing/WorkCenter.html">WorkCenters</a> — <code>WarehouseId</code> (FK)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="../Purchase/Inquiry.html">Inquiries</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Purchase/InquiryRow.html">InquiryRows</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderInvoice.html">PurchaseOrderInvoices</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>Warehouse</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrder.html">PurchaseOrders</a> — <code>Warehouse</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrder.html">PurchaseOrders</a> — <code>WarehouseId</code> (FK)</li>
+</ul>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="../Sales/BlanketOrderSalesType.html">BlanketOrderSalesTypes</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderInvoice.html">CustomerOrderInvoices</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderRow.html">CustomerOrderRows</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Sales/InvoiceLog.html">InvoiceLogs</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Sales/QuoteRow.html">QuoteRows</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Sales/Quote.html">Quotes</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Sales/SalesPickingList.html">SalesPickingLists</a> — <code>WarehouseId</code> (FK)</li>
+<li><a href="../Sales/Shipment.html">Shipments</a> — <code>WarehouseId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Name": null,
+  "Code": null,
+  "LanguageId": 0,
+  "CountryId": 0,
+  "PlaceOfDispatch": null,
+  "PalletRegistrationNumber": null,
+  "Url": null,
+  "TimeZoneId": null,
+  "TimeZone": null,
+  "CalendarId": 0,
+  "Calendar": null,
+  "VatNumber": null,
+  "DeliveryAddresses": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Common.Warehouse.html">https://api.monitor.se/api/Monitor.API.Common.Warehouse.html</a><br><span class="badge">Common</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

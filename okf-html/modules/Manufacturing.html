@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manufacturing · Monitor ERP API</title>
+<meta name="description" content="Monitor ERP API module Manufacturing.">
+<link rel="stylesheet" href="../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../index.html">Monitor ERP API</a>
+  <span class="crumb">Manufacturing</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../index.html">Overview</a>
+<a href="../about.html">About this bundle</a>
+<a href="../modules/index.html">All modules</a>
+<a href="../entities/index.html">All entities</a>
+<a href="../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../guides/core-entities.html">Core entities</a>
+<a href="../guides/querying.html">Querying the Monitor API</a>
+<a href="../guides/naming-conventions.html">Naming conventions</a>
+<a href="../guides/relationships.html">How entities relate</a>
+<a href="../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../modules/Manufacturing.html" aria-current="page">Manufacturing<span class="count">30</span></a>
+<a href="../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#queryable-entities">Queryable entities</a>
+<a class="toc-h" href="#depends-on-other-modules">Depends on other modules</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="manufacturing">Manufacturing</h1>
+<p>Monitor API module <code>Manufacturing</code>: 30 queryable entities, 0 commands, 0 payload types.</p>
+<p>Full listing: <a href="../entities/Manufacturing/index.html">Manufacturing entities</a></p>
+<h2 id="queryable-entities">Queryable entities</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../entities/Manufacturing/AlternativeOperationRow.html">AlternativeOperationRows</a></td>
+<td><code>/api/v1/Manufacturing/AlternativeOperationRows</code></td>
+<td>Represents an alternative work center on an operation row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/DrawingRevision.html">DrawingRevisions</a></td>
+<td><code>/api/v1/Manufacturing/DrawingRevisions</code></td>
+<td>Represents a drawing revision.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/Drawing.html">Drawings</a></td>
+<td><code>/api/v1/Manufacturing/Drawings</code></td>
+<td>Represents a drawing.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/MaintenanceReportingRow.html">MaintenanceReportingRows</a></td>
+<td><code>/api/v1/Manufacturing/MaintenanceReportingRows</code></td>
+<td>Represents a maintenance reporting row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/MaintenanceReporting.html">MaintenanceReportings</a></td>
+<td><code>/api/v1/Manufacturing/MaintenanceReportings</code></td>
+<td>Represents a maintenance reporting.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/MaintenanceReportingSelectionRow.html">MaintenanceReportingSelectionRows</a></td>
+<td><code>/api/v1/Manufacturing/MaintenanceReportingSelectionRows</code></td>
+<td>Represents a maintenance reporting selection row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ManualOperationStatus.html">ManualOperationStatuses</a></td>
+<td><code>/api/v1/Manufacturing/ManualOperationStatuses</code></td>
+<td>Represents a manual operation status.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ManufacturingOrderMaterial.html">ManufacturingOrderMaterials</a></td>
+<td><code>/api/v1/Manufacturing/ManufacturingOrderMaterials</code></td>
+<td>Represents a manufacturing order material.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ManufacturingOrderNodeDrawingRevision.html">ManufacturingOrderNodeDrawingRevisions</a></td>
+<td><code>/api/v1/Manufacturing/ManufacturingOrderNodeDrawingRevisions</code></td>
+<td>Represents a drawing revision for manufacturing order node.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ManufacturingOrderNodeDrawing.html">ManufacturingOrderNodeDrawings</a></td>
+<td><code>/api/v1/Manufacturing/ManufacturingOrderNodeDrawings</code></td>
+<td>Represents a drawing for manufacturing order node.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ManufacturingOrderNode.html">ManufacturingOrderNodes</a></td>
+<td><code>/api/v1/Manufacturing/ManufacturingOrderNodes</code></td>
+<td>Represents a manufacturing order node.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ManufacturingOrderOperationControlDataRow.html">ManufacturingOrderOperationControlDataRows</a></td>
+<td><code>/api/v1/Manufacturing/ManufacturingOrderOperationControlDataRows</code></td>
+<td>Represents a measuring plan for a manufacturing order operation.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ManufacturingOrderOperationReporting.html">ManufacturingOrderOperationReportings</a></td>
+<td><code>/api/v1/Manufacturing/ManufacturingOrderOperationReportings</code></td>
+<td>Represents a manufacturing order operation reporting.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ManufacturingOrderOperation.html">ManufacturingOrderOperations</a></td>
+<td><code>/api/v1/Manufacturing/ManufacturingOrderOperations</code></td>
+<td>Represents a manufacturing order operation.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td><code>/api/v1/Manufacturing/ManufacturingOrders</code></td>
+<td>Represents a manufacturing order.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ManufacturingOrderType.html">ManufacturingOrderTypes</a></td>
+<td><code>/api/v1/Manufacturing/ManufacturingOrderTypes</code></td>
+<td>Represents a manufacturing order type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ManufacturingPickingListMaterial.html">ManufacturingPickingListMaterials</a></td>
+<td><code>/api/v1/Manufacturing/ManufacturingPickingListMaterials</code></td>
+<td>Represents a manufacturing picking list material.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ManufacturingPickingList.html">ManufacturingPickingLists</a></td>
+<td><code>/api/v1/Manufacturing/ManufacturingPickingLists</code></td>
+<td>Represents a manufacturing picking list.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ReferenceNumber.html">MaterialRowReferenceNumbers</a></td>
+<td><code>/api/v1/Manufacturing/MaterialRowReferenceNumbers</code></td>
+<td>Represents a reference number attached to a material row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/MaterialRow.html">MaterialRows</a></td>
+<td><code>/api/v1/Manufacturing/MaterialRows</code></td>
+<td>Represents a material row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/OperationRowControlDataRow.html">OperationRowControlDataRows</a></td>
+<td><code>/api/v1/Manufacturing/OperationRowControlDataRows</code></td>
+<td>Represents a measuring plan for an operation row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/OperationRow.html">OperationRows</a></td>
+<td><code>/api/v1/Manufacturing/OperationRows</code></td>
+<td>Represents an operation row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/OrderQuantityManufacturingOrderOperation.html">OrderQuantityManufacturingOrderOperations</a></td>
+<td><code>/api/v1/Manufacturing/OrderQuantityManufacturingOrderOperations</code></td>
+<td>Represents a order quantity template on part that holds many partial quantities.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/OrderQuantityManufacturingOrder.html">OrderQuantityManufacturingOrders</a></td>
+<td><code>/api/v1/Manufacturing/OrderQuantityManufacturingOrders</code></td>
+<td>Represents a order quantity template on part that holds many partial quantities.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/Preparation.html">Preparations</a></td>
+<td><code>/api/v1/Manufacturing/Preparations</code></td>
+<td>Represents a part preparation</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ProductionCalendarException.html">ProductionCalendarExceptions</a></td>
+<td><code>/api/v1/Manufacturing/ProductionCalendarExceptions</code></td>
+<td>Represents a table that contains exceptions from the production calendar. Only used when using daily planning.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/ReasonCodeTimeConsumption.html">ReasonCodeTimeConsumptions</a></td>
+<td><code>/api/v1/Manufacturing/ReasonCodeTimeConsumptions</code></td>
+<td>Represents a reason code time consumption.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/WorkCenterCostFactorGroup.html">WorkCenterCostFactorGroups</a></td>
+<td><code>/api/v1/Manufacturing/WorkCenterCostFactorGroups</code></td>
+<td>Represents a cost factor group belonging to a work center. Note that all cost factors are represented in company currency per hour.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/WorkCenterManufacturingPrintSettings.html">WorkCenterManufacturingPrintSettings</a></td>
+<td><code>/api/v1/Common/WorkCenterManufacturingPrintSettings</code></td>
+<td>Represents manufacturing print settings for a work center.</td>
+</tr>
+<tr>
+<td><a href="../entities/Manufacturing/WorkCenter.html">WorkCenters</a></td>
+<td><code>/api/v1/Manufacturing/WorkCenters</code></td>
+<td>Represents a manufacturing work center.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="depends-on-other-modules">Depends on other modules</h2>
+<ul>
+<li><a href="Common.html">Common</a>: <a href="../entities/Common/ApplicationUser.html">ApplicationUsers</a>, <a href="../entities/Common/Comment.html">Comments</a>, <a href="../entities/Common/Currency.html">Currencies</a>, <a href="../entities/Common/ExtraField.html">ExtraFields</a>, <a href="../entities/Common/ExtraFieldTemplate.html">ExtraFieldTemplates</a>, <a href="../entities/Common/FormTemplate.html">FormTemplates</a>, <a href="../entities/Common/MeasuringTemplate.html">MeasuringTemplates</a>, <a href="../entities/Common/PartConfiguration.html">PartConfigurations</a>, <a href="../entities/Common/PartialQuantity.html">PartialQuantities</a>, <a href="../entities/Common/Person.html">Persons</a>, <a href="../entities/Common/Project.html">Projects</a>, <a href="../entities/Common/Revision.html">Revisions</a>, <a href="../entities/Common/Unit.html">Units</a>, <a href="../entities/Common/Warehouse.html">Warehouses</a></li>
+<li><a href="Inventory.html">Inventory</a>: <a href="../entities/Inventory/Part.html">Parts</a>, <a href="../entities/Inventory/ProductRecord.html">ProductRecords</a>, <a href="../entities/Inventory/QuantityChange.html">QuantityChanges</a></li>
+<li><a href="Purchase.html">Purchase</a>: <a href="../entities/Purchase/PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a>, <a href="../entities/Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a></li>
+<li><a href="Sales.html">Sales</a>: <a href="../entities/Sales/CustomerOrder.html">CustomerOrders</a>, <a href="../entities/Sales/Customer.html">Customers</a></li>
+<li><a href="TimeRecording.html">TimeRecording</a>: <a href="../entities/TimeRecording/PersonWorkCenter.html">PersonWorkCenters</a>, <a href="../entities/TimeRecording/Schedule.html">Schedules</a></li>
+</ul>
+<div class="page-meta"><span class="badge">Manufacturing</span><span class="badge">module</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../";</script>
+<script src="../assets/okf-index.js"></script>
+<script src="../assets/okf.js"></script>
+</body>
+</html>

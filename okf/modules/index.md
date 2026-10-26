@@ -1,8 +1,3 @@
----
-type: Index
-title: Modules
----
-
 # Modules
 
 | Module | Queryable | Commands | Types |

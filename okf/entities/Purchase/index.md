@@ -1,10 +1,3 @@
----
-type: Index
-title: Purchase entities
-tags:
-- Purchase
----
-
 # Purchase entities
 
 30 documented pages in the Purchase module.

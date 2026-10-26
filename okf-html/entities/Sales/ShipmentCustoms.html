@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShipmentCustoms · Monitor ERP API</title>
+<meta name="description" content="Represents a shipments customs information.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>ShipmentCustoms</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html" aria-current="location">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="shipmentcustoms">ShipmentCustoms</h1>
+<p>Represents a shipments customs information.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Sales.html">Sales</a></dd><dt>API class</dt><dd><code>ShipmentCustoms</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Sales/ShipmentCustoms</code></dd><dt>Required permission</dt><dd>Show shipment</dd><dt>GUID</dt><dd><code>628442CA-0EE8-4507-A749-96FE34D46B99</code></dd><dt>Introduced in</dt><dd>26.4</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the shipments customs information.</td>
+</tr>
+<tr>
+<td class="prop"><code>ParentId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Shipment.html">Shipments</a></td>
+<td></td>
+<td>The business key identifier of the customs informations shipment.</td>
+</tr>
+<tr>
+<td class="prop"><code>Dutiable</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if the shipment is dutiable.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 20</td>
+<td>The invoice number on the customs information.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The invoice date on the customs information.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the customs informations currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>Currency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The customs informations currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyExchangeTypeId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td></td>
+<td>The business key identifier of the customs informations currency exchange type.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyExchangeType</code></td>
+<td class="type"><code>CurrencyExchangeTypes</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td>expandable</td>
+<td>The customs informations currency exchange type.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryMethodId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td></td>
+<td>The business key identifier of the customs informations delivery method.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryMethod</code></td>
+<td class="type"><code>DeliveryMethods</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td>expandable</td>
+<td>The customs informations delivery method.</td>
+</tr>
+<tr>
+<td class="prop"><code>ForeignDeliveryMethodId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td></td>
+<td>The business key identifier of the customs informations foreign delivery method.</td>
+</tr>
+<tr>
+<td class="prop"><code>ForeignDeliveryMethod</code></td>
+<td class="type"><code>DeliveryMethods</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td>expandable</td>
+<td>The customs informations foreign delivery method.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeclarantId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td></td>
+<td>The business key identifier of the customs informations declarant person.</td>
+</tr>
+<tr>
+<td class="prop"><code>Declarant</code></td>
+<td class="type"><code>Persons</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td>expandable</td>
+<td>The customs informations declarant person.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeclarantName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 71</td>
+<td>The customs informations declarant name.</td>
+</tr>
+<tr>
+<td class="prop"><code>NumberOfPackages</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The number of packages on the customs information.</td>
+</tr>
+<tr>
+<td class="prop"><code>Comment1</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The comment row 1 on the customs information.</td>
+</tr>
+<tr>
+<td class="prop"><code>Comment2</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The comment row 2 on the customs information.</td>
+</tr>
+<tr>
+<td class="prop"><code>Comment3</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The comment row 3 on the customs information.</td>
+</tr>
+<tr>
+<td class="prop"><code>Comment4</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The comment row 4 on the customs information.</td>
+</tr>
+<tr>
+<td class="prop"><code>TransactionType</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The customs informations transaction type.</td>
+</tr>
+<tr>
+<td class="prop"><code>PointOfExport</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The customs informations point of export.</td>
+</tr>
+<tr>
+<td class="prop"><code>City</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The customs informations city.</td>
+</tr>
+<tr>
+<td class="prop"><code>Date</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The customs informations date.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeclarantCorporationIdentificationNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The customs informations declarant corporation identification number.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReferenceNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The customs informations reference number.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceType</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The customs informations invoice type.</td>
+</tr>
+<tr>
+<td class="prop"><code>ImportExportType</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The customs informations import export type.</td>
+</tr>
+<tr>
+<td class="prop"><code>ImportExportTypeName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 26.5</td>
+<td>Free-text override of the import/export type. When set, it takes precedence over when the shipment is exported to forwarders (for example for forwarder-specific codes like "GIFT" or "sample").</td>
+</tr>
+<tr>
+<td class="prop"><code>ReasonForExport</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 70</td>
+<td>The customs informations reason for export.</td>
+</tr>
+<tr>
+<td class="prop"><code>StatisticalGoodsCodeType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The customs informations statistical goods code type.</td>
+</tr>
+<tr>
+<td class="prop"><code>EoriSeller</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The Economic Operator Registration and Identification number of the customs informations seller.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatNumberSeller</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The VAT number of the customs informations seller.</td>
+</tr>
+<tr>
+<td class="prop"><code>CorporationIdentificationNumberSeller</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The corporation identification number of the customs informations seller.</td>
+</tr>
+<tr>
+<td class="prop"><code>EoriPickup</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The customs informations Economic Operator Registration and Identification pickup number.</td>
+</tr>
+<tr>
+<td class="prop"><code>EoriPurchaser</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The Economic Operator Registration and Identification number of the customs informations purchaser.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatNumberPurchaser</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The VAT number of the customs informations purchaser.</td>
+</tr>
+<tr>
+<td class="prop"><code>CorporationIdentificationNumberPurchaser</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The corporation identification number of the customs informations purchaser.</td>
+</tr>
+<tr>
+<td class="prop"><code>EoriDelivery</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The Economic Operator Registration and Identification number of the customs informations delivery.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatNumberDelivery</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The VAT number of the customs informations delivery.</td>
+</tr>
+<tr>
+<td class="prop"><code>CorporationIdentificationNumberDelivery</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The corporation identification number of the customs informations delivery.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomsPayingParty</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>Specifies who pay the cusoms fee.</td>
+</tr>
+<tr>
+<td class="prop"><code>EoriCustomsPayer</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The Economic Operator Registration and Identification number of the customs payer.</td>
+</tr>
+<tr>
+<td class="prop"><code>CorporationIdentificationNumberCustomsPayer</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The corporation identification number of the customs payer.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatNumberCustomsPayer</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The VAT number of the customs payer.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomsPayer</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The customs informations customs payer.</td>
+</tr>
+<tr>
+<td class="prop"><code>Rows</code></td>
+<td class="type"><code>ShipmentCustomsRows[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ShipmentCustomsRow.html">ShipmentCustomsRows</a></td>
+<td>expandable, collection</td>
+<td>The rows of the customs information.</td>
+</tr>
+<tr>
+<td class="prop"><code>Documents</code></td>
+<td class="type"><code>ShipmentCustomsDocuments[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ShipmentCustomsDocument.html">ShipmentCustomsDocuments</a></td>
+<td>expandable, collection</td>
+<td>The documents of the customs information.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>InvoiceType</code><div class="evs"><span class="ev">Proforma<span>=1</span></span><span class="ev">Commercial<span>=2</span></span></div></li><li><code>ImportExportType</code><div class="evs"><span class="ev">Permanent<span>=1</span></span><span class="ev">Temporary<span>=2</span></span><span class="ev">Reexport<span>=3</span></span></div></li><li><code>StatisticalGoodsCodeType</code><div class="evs"><span class="ev">CN<span>=0</span></span><span class="ev">HS<span>=1</span></span><span class="ev">Taric<span>=2</span></span><span class="ev">HTS<span>=3</span></span><span class="ev">NCM<span>=4</span></span><span class="ev">ECCN<span>=5</span></span><span class="ev">SITC<span>=6</span></span></div></li><li><code>CustomsPayingParty</code><div class="evs"><span class="ev">BuyerPays<span>=1</span></span><span class="ev">SellerPays<span>=2</span></span><span class="ev">OtherPayer<span>=3</span></span><span class="ev">Incoterms<span>=4</span></span></div></li></ul>
+
+
+
+
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="ShipmentCustomsDocument.html">ShipmentCustomsDocuments</a> — <code>ParentId</code> (FK)</li>
+<li><a href="ShipmentCustomsRow.html">ShipmentCustomsRows</a> — <code>ParentId</code> (FK)</li>
+<li><a href="Shipment.html">Shipments</a> — <code>Customs</code> (expand)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "ParentId": 0,
+  "Dutiable": false,
+  "InvoiceNumber": null,
+  "InvoiceDate": null,
+  "CurrencyId": 0,
+  "Currency": null,
+  "CurrencyExchangeTypeId": 0,
+  "CurrencyExchangeType": null,
+  "DeliveryMethodId": null,
+  "DeliveryMethod": null,
+  "ForeignDeliveryMethodId": null,
+  "ForeignDeliveryMethod": null,
+  "DeclarantId": null,
+  "Declarant": null,
+  "DeclarantName": null,
+  "NumberOfPackages": 0,
+  "Comment1": null,
+  "Comment2": null,
+  "Comment3": null,
+  "Comment4": null,
+  "TransactionType": null,
+  "PointOfExport": null,
+  "City": null,
+  "Date": "0001-01-01T00:00:00+00:00",
+  "DeclarantCorporationIdentificationNumber": null,
+  "ReferenceNumber": null,
+  "InvoiceType": null,
+  "ImportExportType": null,
+  "ImportExportTypeName": null,
+  "ReasonForExport": null,
+  "StatisticalGoodsCodeType": 0,
+  "EoriSeller": null,
+  "VatNumberSeller": null,
+  "CorporationIdentificationNumberSeller": null,
+  "EoriPickup": null,
+  "EoriPurchaser": null,
+  "VatNumberPurchaser": null,
+  "CorporationIdentificationNumberPurchaser": null,
+  "EoriDelivery": null,
+  "VatNumberDelivery": null,
+  "CorporationIdentificationNumberDelivery": null,
+  "CustomsPayingParty": 0,
+  "EoriCustomsPayer": null,
+  "CorporationIdentificationNumberCustomsPayer": null,
+  "VatNumberCustomsPayer": null,
+  "CustomsPayer": null,
+  "Rows": null,
+  "Documents": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Sales.ShipmentCustoms.html">https://api.monitor.se/api/Monitor.API.Sales.ShipmentCustoms.html</a><br><span class="badge">Sales</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

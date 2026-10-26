@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ManufacturingOrderOperationControlDataRows · Monitor ERP API</title>
+<meta name="description" content="Represents a measuring plan for a manufacturing order operation.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>ManufacturingOrderOperationControlDataRows</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html" aria-current="location">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="manufacturingorderoperationcontroldatarows">ManufacturingOrderOperationControlDataRows</h1>
+<p>Represents a measuring plan for a manufacturing order operation.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Manufacturing.html">Manufacturing</a></dd><dt>API class</dt><dd><code>ManufacturingOrderOperationControlDataRow</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Manufacturing/ManufacturingOrderOperationControlDataRows</code></dd><dt>Required permission</dt><dd>Show manufacturing orders</dd><dt>GUID</dt><dd><code>DEFEEB6C-69C9-40E9-9D05-C817707F855C</code></dd><dt>Introduced in</dt><dd>22.5</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the entity.</td>
+</tr>
+<tr>
+<td class="prop"><code>ManufacturingOrderOperationId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ManufacturingOrderOperation.html">ManufacturingOrderOperations</a></td>
+<td></td>
+<td>The business key identifier of the manufacturing order operation that the row relates to.</td>
+</tr>
+<tr>
+<td class="prop"><code>MeasuringTemplateId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/MeasuringTemplate.html">MeasuringTemplates</a></td>
+<td></td>
+<td>The business key identifier of the measuring template that the row relates to.</td>
+</tr>
+<tr>
+<td class="prop"><code>OverridenFormTemplateId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/FormTemplate.html">FormTemplates</a></td>
+<td></td>
+<td>The business key identifier of the form template specified for this row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OverridenFrequencyText</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The frequency text specified for this row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OverridenIntervalAmount</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The quantity value specified for this row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OverridenInterval</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The interval value specified for this row.</td>
+</tr>
+<tr>
+<td class="prop"><code>WorkCenterId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="WorkCenter.html">WorkCenters</a></td>
+<td></td>
+<td>The business key identifier of the work center that the row relates to.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="ManufacturingOrderOperation.html">ManufacturingOrderOperations</a> — <code>ControlDataRows</code> (expand)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "ManufacturingOrderOperationId": 0,
+  "MeasuringTemplateId": 0,
+  "OverridenFormTemplateId": 0,
+  "OverridenFrequencyText": null,
+  "OverridenIntervalAmount": null,
+  "OverridenInterval": null,
+  "WorkCenterId": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingOrderOperationControlDataRow.html">https://api.monitor.se/api/Monitor.API.Manufacturing.ManufacturingOrderOperationControlDataRow.html</a><br><span class="badge">Manufacturing</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

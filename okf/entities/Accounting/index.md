@@ -1,10 +1,3 @@
----
-type: Index
-title: Accounting entities
-tags:
-- Accounting
----
-
 # Accounting entities
 
 43 documented pages in the Accounting module.

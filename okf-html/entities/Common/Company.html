@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Companies · Monitor ERP API</title>
+<meta name="description" content="Represents a company in the MONITOR system.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>Companies</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html" aria-current="location">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="companies">Companies</h1>
+<p>Represents a company in the MONITOR system.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Common.html">Common</a></dd><dt>API class</dt><dd><code>Company</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Common/Companies</code></dd><dt>Required permission</dt><dd>Show company information</dd><dt>GUID</dt><dd><code>8C9373B7-7F59-4F91-A8D3-15852B2CADFB</code></dd><dt>Introduced in</dt><dd>24.3</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the company.</td>
+</tr>
+<tr>
+<td class="prop"><code>Name</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The name of the company.</td>
+</tr>
+<tr>
+<td class="prop"><code>ImageId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier for the image of the company.</td>
+</tr>
+<tr>
+<td class="prop"><code>Image</code></td>
+<td class="type"><code>BlobData</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="BlobData.html">BlobData</a></td>
+<td>expandable</td>
+<td>The image blob of the company.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier for the currency of the company.</td>
+</tr>
+<tr>
+<td class="prop"><code>Currency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>LanguageId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="LanguageCode.html">LanguageCodes</a></td>
+<td></td>
+<td>The business key identifier of the language.</td>
+</tr>
+<tr>
+<td class="prop"><code>Language</code></td>
+<td class="type"><code>LanguageCodes</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="LanguageCode.html">LanguageCodes</a></td>
+<td>expandable</td>
+<td>The language of the company.</td>
+</tr>
+<tr>
+<td class="prop"><code>Warehouses</code></td>
+<td class="type"><code>Warehouses[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Warehouse.html">Warehouses</a></td>
+<td>expandable, collection</td>
+<td>The warehouses that belong to the company.</td>
+</tr>
+<tr>
+<td class="prop"><code>TimeZone</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 25.2</td>
+<td>The time zone of the company. Specified as a time zone identifier. Identifier depends on underlying database engine, and could be in either IANA or Windows style.</td>
+</tr>
+<tr>
+<td class="prop"><code>CorporationIdentificationNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 25, since 25.4</td>
+<td>The corporation identification number of the company.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Common</strong></p>
+<ul>
+<li><a href="Warehouse.html">Warehouses</a> — <code>TimeZoneId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Name": null,
+  "ImageId": null,
+  "Image": null,
+  "CurrencyId": 0,
+  "Currency": null,
+  "LanguageId": 0,
+  "Language": null,
+  "Warehouses": null,
+  "TimeZone": null,
+  "CorporationIdentificationNumber": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Common.Company.html">https://api.monitor.se/api/Monitor.API.Common.Company.html</a><br><span class="badge">Common</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

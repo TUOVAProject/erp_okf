@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AccountYearSettings · Monitor ERP API</title>
+<meta name="description" content="Represents a account setting on a specific year.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>AccountYearSettings</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html" aria-current="location">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="accountyearsettings">AccountYearSettings</h1>
+<p>Represents a account setting on a specific year.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Accounting.html">Accounting</a></dd><dt>API class</dt><dd><code>AccountYearSetting</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Accounting/AccountYearSettings</code></dd><dt>Required permission</dt><dd>Show accounting year</dd><dt>GUID</dt><dd><code>016F1042-749D-4D51-8B79-C597C16E7A47</code></dd><dt>Introduced in</dt><dd>2.27</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the account year setting.</td>
+</tr>
+<tr>
+<td class="prop"><code>AccountingYearId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="AccountingYear.html">AccountingYears</a></td>
+<td></td>
+<td>The business key identifier of accounting year.</td>
+</tr>
+<tr>
+<td class="prop"><code>Description</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The description of the account year setting.</td>
+</tr>
+<tr>
+<td class="prop"><code>AllowSpecification</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the account year setting allows specification to be used.</td>
+</tr>
+<tr>
+<td class="prop"><code>AllowQuantity</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the account year setting allows quantity to be used.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsCurrencyAccount</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the account year setting is a currency account.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the currency if used.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsAccrual</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the account year setting is accrual.</td>
+</tr>
+<tr>
+<td class="prop"><code>DebitOrCreditType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>Specifies if the account year setting is of debit or credit type.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The vat type on the account year setting.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatRateId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td></td>
+<td>The business key identifier of the vat rate.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedForManualCoding</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the account year setting is block for manual coding.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsFixedAssetAccount</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the account year setting is a fixed asset account.</td>
+</tr>
+<tr>
+<td class="prop"><code>IncludeOrderNumberInCoding</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the account year setting should include ordernumber in coding.</td>
+</tr>
+<tr>
+<td class="prop"><code>AccountId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Account.html">Accounts</a></td>
+<td></td>
+<td>The business key identifier of the account.</td>
+</tr>
+<tr>
+<td class="prop"><code>Account</code></td>
+<td class="type"><code>Accounts</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Account.html">Accounts</a></td>
+<td>expandable</td>
+<td>The account of the account year setting.</td>
+</tr>
+<tr>
+<td class="prop"><code>AccountCodingDimensions</code></td>
+<td class="type"><code>AccountYearSettingCodingDimensionAvailabilities[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="AccountYearSettingCodingDimensionAvailability.html">AccountYearSettingCodingDimensionAvailabilities</a></td>
+<td>expandable, collection</td>
+<td>The account coding dimensions of the account year setting.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>DebitOrCreditType</code><div class="evs"><span class="ev">Debit<span>=0</span></span><span class="ev">Credit<span>=1</span></span></div></li><li><code>VatType</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Sales<span>=1</span></span><span class="ev">Purchase<span>=2</span></span><span class="ev">InputVat<span>=3</span></span><span class="ev">OutputVat<span>=4</span></span></div></li></ul>
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Accounting</strong></p>
+<ul>
+<li><a href="AccountYearSettingCodingDimensionAvailability.html">AccountYearSettingCodingDimensionAvailabilities</a> — <code>AccountYearSettingId</code> (FK)</li>
+<li><a href="AccountingBudget.html">AccountingBudgets</a> — <code>AccountYearSettingId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "AccountingYearId": 0,
+  "Description": null,
+  "AllowSpecification": false,
+  "AllowQuantity": false,
+  "IsCurrencyAccount": false,
+  "CurrencyId": null,
+  "IsAccrual": false,
+  "DebitOrCreditType": 0,
+  "VatType": 0,
+  "VatRateId": null,
+  "BlockedForManualCoding": false,
+  "IsFixedAssetAccount": false,
+  "IncludeOrderNumberInCoding": false,
+  "AccountId": 0,
+  "Account": null,
+  "AccountCodingDimensions": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Accounting.AccountYearSetting.html">https://api.monitor.se/api/Monitor.API.Accounting.AccountYearSetting.html</a><br><span class="badge">Accounting</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

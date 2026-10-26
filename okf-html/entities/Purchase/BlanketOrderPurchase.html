@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlanketOrderPurchases · Monitor ERP API</title>
+<meta name="description" content="Represents a blanket order for purchase.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Purchase.html">Purchase</a><span class="sep">/</span>BlanketOrderPurchases</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html" aria-current="location">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="blanketorderpurchases">BlanketOrderPurchases</h1>
+<p>Represents a blanket order for purchase.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Purchase.html">Purchase</a></dd><dt>API class</dt><dd><code>BlanketOrderPurchase</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Purchase/BlanketOrderPurchases</code></dd><dt>Required permission</dt><dd>Show blanket order</dd><dt>GUID</dt><dd><code>A1F017C3-02E1-4E05-A36E-514BDA5D1BF5</code></dd><dt>Introduced in</dt><dd>23.8</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>LifeCycleState</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The life cycle state of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique, max length 15</td>
+<td>The human readable identifier of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderTypeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="BlanketOrderPurchaseType.html">BlanketOrderPurchaseTypes</a></td>
+<td></td>
+<td>The business key identifier of the blanket order's type.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="Supplier.html">Suppliers</a></td>
+<td></td>
+<td>The business key identifier of the blanket order's supplier.</td>
+</tr>
+<tr>
+<td class="prop"><code>SuppliersOrderNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The supplier's order number of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactReferenceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td></td>
+<td>The business key identifier of the blanket order's business contact reference.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactReference</code></td>
+<td class="type"><code>BusinessContactReferences</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td>expandable</td>
+<td>The business contact reference of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactReferenceName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The business contact reference name of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurReferenceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td></td>
+<td>The business key identifier of the blanket order's our reference.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurReference</code></td>
+<td class="type"><code>Persons</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td>expandable</td>
+<td>Our reference of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurReferenceName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>Our reference name of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>ValidationPeriod</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>Specifies the validation period of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>ValidFrom</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The valid from date of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>ValidThrough</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The valid through date of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>Priority</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The priority of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>Status</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The status of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>CategoryString</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 20</td>
+<td>The category string of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseForwardRate</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the blanket order use forward rate.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExchangeRate</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The exchange rate of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the blanket order's currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>Currency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The currency of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The order date of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>DefaultOrderPrintoutVia</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The default order printout method of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>MailingAddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td></td>
+<td>The business key identifier of the blanket order's mailing address.</td>
+</tr>
+<tr>
+<td class="prop"><code>MailingAddress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>expandable</td>
+<td>The mailing address of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>InternalCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the blanket order's internal comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>InternalComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The internal comment of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExternalCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the blanket order's external comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExternalComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The external comment of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyExchangeTypeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td></td>
+<td>The business key identifier of the blanket order's currency exchange type.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyExchangeType</code></td>
+<td class="type"><code>CurrencyExchangeTypes</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td>expandable</td>
+<td>The currency exchange type of the blanket order.</td>
+</tr>
+<tr>
+<td class="prop"><code>Rows</code></td>
+<td class="type"><code>BlanketOrderPurchaseRows[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a></td>
+<td>expandable, collection</td>
+<td>The rows of the blanket order.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>LifeCycleState</code><div class="evs"><span class="ev">Transient<span>=1</span></span><span class="ev">Persistent<span>=10</span></span><span class="ev">History<span>=20</span></span><span class="ev">RemovableCandidate<span>=99</span></span></div></li><li><code>ValidationPeriod</code><div class="evs"><span class="ev">OrderDate<span>=0</span></span><span class="ev">DeliveryDate<span>=1</span></span></div></li><li><code>Status</code><div class="evs"><span class="ev">Registered<span>=1</span></span><span class="ev">Printed<span>=2</span></span><span class="ev">PartiallyCalledOf<span>=7</span></span><span class="ev">FullyCalledOf<span>=8</span></span><span class="ev">History<span>=9</span></span></div></li><li><code>DefaultOrderPrintoutVia</code><div class="evs"><span class="ev">Printer<span>=0</span></span><span class="ev">Email<span>=1</span></span><span class="ev">Edi<span>=2</span></span><span class="ev">None<span>=9</span></span></div></li></ul>
+
+
+
+
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a> — <code>ParentOrderId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "LifeCycleState": 0,
+  "OrderNumber": null,
+  "OrderTypeId": null,
+  "BusinessContactId": null,
+  "SuppliersOrderNumber": null,
+  "BusinessContactReferenceId": null,
+  "BusinessContactReference": null,
+  "BusinessContactReferenceName": null,
+  "OurReferenceId": null,
+  "OurReference": null,
+  "OurReferenceName": null,
+  "ValidationPeriod": 0,
+  "ValidFrom": "0001-01-01T00:00:00+00:00",
+  "ValidThrough": "0001-01-01T00:00:00+00:00",
+  "Priority": 0,
+  "Status": 0,
+  "CategoryString": null,
+  "UseForwardRate": false,
+  "ExchangeRate": 0.0,
+  "CurrencyId": null,
+  "Currency": null,
+  "OrderDate": "0001-01-01T00:00:00+00:00",
+  "DefaultOrderPrintoutVia": 0,
+  "MailingAddressId": null,
+  "MailingAddress": null,
+  "InternalCommentId": null,
+  "InternalComment": null,
+  "ExternalCommentId": null,
+  "ExternalComment": null,
+  "CurrencyExchangeTypeId": null,
+  "CurrencyExchangeType": null,
+  "Rows": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Purchase.BlanketOrderPurchase.html">https://api.monitor.se/api/Monitor.API.Purchase.BlanketOrderPurchase.html</a><br><span class="badge">Purchase</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

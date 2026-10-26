@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CountryDocumentSettings · Monitor ERP API</title>
+<meta name="description" content="Represents a country document setting.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>CountryDocumentSettings</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html" aria-current="location">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#notes">Notes</a>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="countrydocumentsettings">CountryDocumentSettings</h1>
+<p>Represents a country document setting.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Sales.html">Sales</a></dd><dt>API class</dt><dd><code>CountryDocumentSettings</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Sales/CountryDocumentSettings</code></dd><dt>Required permission</dt><dd>Modify settings for file viewer</dd><dt>GUID</dt><dd><code>4a2c8077-1f23-4cd8-8c5a-4f70af4348fa</code></dd><dt>Introduced in</dt><dd>26.3</dd></dl>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Note the values in this entity can be overridden on each customer by CustomerCountryDocumentSettings .</li>
+</ul>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the country document setting.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowIndex</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The row index of the document setting.</td>
+</tr>
+<tr>
+<td class="prop"><code>CountryId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Country.html">Countries</a></td>
+<td></td>
+<td>The business key identifier of the document setting's country.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShowInSalesForm</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>bitmask, enum</td>
+<td>Specifies the document type this setting applies to.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShowCountryOfOrigin</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if this setting should show country of origin.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShowNetWeight</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if this setting should show net weight.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShowTradeClassificationName</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if this setting should show trade classification name.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShowCN</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if this setting should show CN.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShowHS</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if this setting should show HS.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShowTaric</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if this setting should show taric.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShowHTS</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if this setting should show HTS.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShowNCM</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if this setting should show NCM.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShowECCN</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if this setting should show ECCN.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShowSITC</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if this setting should show SITC.</td>
+</tr>
+<tr>
+<td class="prop"><code>AmountExcludedDiscount</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if this setting should show amount excluded discount.</td>
+</tr>
+<tr>
+<td class="prop"><code>TotalByCombCode</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 26.6</td>
+<td>Specifies which classification code system drives the "Total by Comb. n. code" summary section on Pro forma and Comprehensive proforma invoices. Only meaningful when is .</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>ShowInSalesForm</code><span class="badge">bitmask — values combine</span><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Quote<span>=1</span></span><span class="ev">Acknowledgement<span>=2</span></span><span class="ev">DeliveryNote<span>=4</span></span><span class="ev">Invoice<span>=8</span></span><span class="ev">ProFormaInvoice<span>=16</span></span></div></li><li><code>TotalByCombCode</code><div class="evs"><span class="ev">CN<span>=0</span></span><span class="ev">HS<span>=1</span></span><span class="ev">Taric<span>=2</span></span><span class="ev">HTS<span>=3</span></span><span class="ev">NCM<span>=4</span></span><span class="ev">ECCN<span>=5</span></span><span class="ev">SITC<span>=6</span></span></div></li></ul>
+
+
+
+
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "RowIndex": null,
+  "CountryId": 0,
+  "ShowInSalesForm": 0,
+  "ShowCountryOfOrigin": false,
+  "ShowNetWeight": false,
+  "ShowTradeClassificationName": false,
+  "ShowCN": false,
+  "ShowHS": false,
+  "ShowTaric": false,
+  "ShowHTS": false,
+  "ShowNCM": false,
+  "ShowECCN": false,
+  "ShowSITC": false,
+  "AmountExcludedDiscount": false,
+  "TotalByCombCode": 0
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Sales.CountryDocumentSettings.html">https://api.monitor.se/api/Monitor.API.Sales.CountryDocumentSettings.html</a><br><span class="badge">Sales</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How entities relate · Monitor ERP API</title>
+<meta name="description" content="Foreign keys vs. navigation properties, and how to traverse the model.">
+<link rel="stylesheet" href="../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../index.html">Monitor ERP API</a>
+  <span class="crumb">How entities relate</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../index.html">Overview</a>
+<a href="../about.html">About this bundle</a>
+<a href="../modules/index.html">All modules</a>
+<a href="../entities/index.html">All entities</a>
+<a href="../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../guides/core-entities.html">Core entities</a>
+<a href="../guides/querying.html">Querying the Monitor API</a>
+<a href="../guides/naming-conventions.html">Naming conventions</a>
+<a href="../guides/relationships.html" aria-current="page">How entities relate</a>
+<a href="../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#foreign-key-1227-edges">Foreign key (1227 edges)</a>
+<a class="toc-h" href="#navigation-property-613-edges">Navigation property (613 edges)</a>
+<a class="toc-h" href="#traversing-this-bundle">Traversing this bundle</a>
+<a class="toc-h" href="#module-coupling">Module coupling</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="how-entities-relate">How entities relate</h1>
+<p>The model contains <strong>1840 relationships</strong> between
+380 entities. They come in two forms, and most related entities
+are connected by both at once.</p>
+<h2 id="foreign-key-1227-edges">Foreign key (1227 edges)</h2>
+<p>A scalar id property whose description says it references another entity:</p>
+<pre><code>| `PaymentTermId` | `Int64?` | yes | PaymentTerms | | ... References PaymentTerms |
+</code></pre>
+<p>Use these to join data yourself. They are almost always named <code>&lt;Entity&gt;Id</code> and
+typed <code>Int64</code> / <code>Int64?</code>.</p>
+<h2 id="navigation-property-613-edges">Navigation property (613 edges)</h2>
+<p>A property whose <strong>type</strong> is another entity, usually flagged <code>expandable</code>:</p>
+<pre><code>| `PaymentTerm` | `PaymentTerms` | no | PaymentTerms | expandable | ... |
+</code></pre>
+<p>These are the related object itself rather than its id. A property typed
+<code>SomeEntity[]</code> is a collection of them.</p>
+<p>So <code>CustomerOrders</code> carries both <code>PaymentTermId</code> (the key) and <code>PaymentTerm</code>
+(the object) pointing at the same target.</p>
+<h2 id="traversing-this-bundle">Traversing this bundle</h2>
+<p>Every reference in a properties table is a markdown link to the target entity
+page, and every entity page ends with a <strong>Referenced by</strong> section listing the
+incoming edges grouped by module. Both directions are also in the frontmatter as
+<code>references_out</code> and <code>referenced_by</code>, so a reverse lookup needs no index.</p>
+<p>The most heavily referenced entities are the shared basic-data tables. Follow
+<strong>Referenced by</strong> on any of these to see how widely they are used:</p>
+<ul>
+<li><a href="../entities/Common/Comment.html">Comments</a> — referenced by 214 properties</li>
+<li><a href="../entities/Common/Currency.html">Currencies</a> — referenced by 198 properties</li>
+<li><a href="../entities/Common/Person.html">Persons</a> — referenced by 72 properties</li>
+<li><a href="../entities/Inventory/Part.html">Parts</a> — referenced by 70 properties</li>
+<li><a href="../entities/Common/Address.html">Addresses</a> — referenced by 57 properties</li>
+</ul>
+<h2 id="module-coupling">Module coupling</h2>
+<p>Each module page has a <strong>Depends on other modules</strong> section listing exactly
+which entities it reaches into elsewhere — the fastest way to see how coupled
+the modules are.</p>
+<div class="page-meta"><span class="badge">guide</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../";</script>
+<script src="../assets/okf-index.js"></script>
+<script src="../assets/okf.js"></script>
+</body>
+</html>

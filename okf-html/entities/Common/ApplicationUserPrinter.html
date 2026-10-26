@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ApplicationUserPrinters · Monitor ERP API</title>
+<meta name="description" content="Represents a printer that has been assigned to an application user.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>ApplicationUserPrinters</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html" aria-current="location">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="applicationuserprinters">ApplicationUserPrinters</h1>
+<p>Represents a printer that has been assigned to an application user.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Common.html">Common</a></dd><dt>API class</dt><dd><code>ApplicationUserPrinter</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Common/ApplicationUserPrinters</code></dd><dt>Required permission</dt><dd>Show user</dd><dt>GUID</dt><dd><code>F518CF01-8FB0-4134-B283-0178684F49F0</code></dd><dt>Introduced in</dt><dd>2.52</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the application user printer.</td>
+</tr>
+<tr>
+<td class="prop"><code>ApplicationUserId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ApplicationUser.html">ApplicationUsers</a></td>
+<td></td>
+<td>The business key identifier of the application user that the application user printer belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>PrinterName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 300</td>
+<td>The name of the local printer that is assigned.</td>
+</tr>
+<tr>
+<td class="prop"><code>NormalizedFormReportType</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The type of form report that the printer assignment will be used for.</td>
+</tr>
+<tr>
+<td class="prop"><code>FormReportType</code></td>
+<td class="type"><code>Guid?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The type of form report that the printer assignment will be used for.</td>
+</tr>
+<tr>
+<td class="prop"><code>ServerPrinterId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="ServerPrinter.html">ServerPrinters</a></td>
+<td></td>
+<td>The server printer that is linked to the application user printer.</td>
+</tr>
+<tr>
+<td class="prop"><code>FormDocumentType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The type of document that the printer assignment will be used for.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>NormalizedFormReportType</code><div class="evs"><span class="ev">NotInitialized<span>=0</span></span><span class="ev">Quote<span>=1</span></span><span class="ev">Acknowledgement<span>=3</span></span><span class="ev">CustomerDeliveryNote<span>=5</span></span><span class="ev">CustomerDeliveryNoteDelivered<span>=6</span></span><span class="ev">Invoice<span>=7</span></span><span class="ev">CustomerDeliveryNoteCollectionDelivered<span>=8</span></span><span class="ev">SalesTransportLabelA4<span>=16</span></span><span class="ev">ComprehensiveInvoice<span>=17</span></span><span class="ev">PurchaseOrder<span>=22</span></span><span class="ev">PurchaseOrderConfirmationReminder<span>=23</span></span><span class="ev">PurchaseOrderConfirmationReminderCasualSupplier<span>=24</span></span><span class="ev">PurchaseOrderDeliveryConfirmationReminder<span>=25</span></span><span class="ev">PurchaseOrderDeliveryConfirmationReminderCasualSupplier<span>=26</span></span><span class="ev">PurchaseTransportLabel<span>=31</span></span><span class="ev">PickingList<span>=100</span></span><span class="ev">InspectionReport<span>=101</span></span><span class="ev">PurchaseTransportLabelForRejection<span>=102</span></span><span class="ev">ProformaInvoice<span>=103</span></span><span class="ev">ComprehensiveProformaInvoice<span>=104</span></span><span class="ev">ManufacturingTransportLabelA4<span>=105</span></span><span class="ev">ManufacturingTransportLabelA4ForRejection<span>=106</span></span><span class="ev">ManufacturingTransportLabelA4InProgress<span>=107</span></span><span class="ev">ManufacturingTransportLabelA4BeforeReporting<span>=108</span></span><span class="ev">ManufacturingOrderOperation<span>=109</span></span><span class="ev">ManufacturingOrderMaterial<span>=110</span></span><span class="ev">ManufacturingOrderTraveler<span>=111</span></span><span class="ev">PreCalculationSummary<span>=112</span></span><span class="ev">SubcontractPurchaseOrder<span>=113</span></span><span class="ev">SubcontractDeliveryNote<span>=114</span></span><span class="ev">SubcontractTransportLabelA4<span>=117</span></span><span class="ev">SubcontractTransportLabelA5<span>=118</span></span><span class="ev">SubcontractTransportLabelSmall<span>=119</span></span><span class="ev">LevelListWhereUsedList<span>=120</span></span><span class="ev">LevelListConsistsOfList<span>=122</span></span><span class="ev">PostCalculationSummary<span>=123</span></span><span class="ev">PhysicalInventoryList<span>=124</span></span><span class="ev">MaterialClearanceShortageList<span>=125</span></span><span class="ev">AccountingOrder<span>=126</span></span><span class="ev">GeneralLedgerDrilldown<span>=127</span></span><span class="ev">JournalDrilldown<span>=128</span></span><span class="ev">ManufacturingPickingList<span>=129</span></span><span class="ev">ManufacturingPickingListGroupByOrder<span>=130</span></span><span class="ev">ManufacturingPickingListGroupByMaterial<span>=131</span></span><span class="ev">AccountingReportHeader<span>=132</span></span><span class="ev">InternalInvoice<span>=133</span></span><span class="ev">CashReceipt<span>=134</span></span><span class="ev">AccountsReceivableLedger<span>=135</span></span><span class="ev">AccountsReceivableLedgerReprint<span>=136</span></span><span class="ev">IncomingPaymentLedger<span>=137</span></span><span class="ev">IncomingPaymentLedgerReprint<span>=138</span></span><span class="ev">AccountsPayableLedger<span>=139</span></span><span class="ev">AccountsPayableLedgerReprint<span>=140</span></span><span class="ev">PreliminaryAccountsPayableLedger<span>=141</span></span><span class="ev">PreliminaryAccountsPayableLedgerReprint<span>=142</span></span><span class="ev">CancelledAccountsPayableLedger<span>=143</span></span><span class="ev">CancelledAccountsPayableLedgerReprint<span>=144</span></span><span class="ev">CancelledPreliminaryAccountsPayableLedger<span>=145</span></span><span class="ev">CancelledPreliminaryAccountsPayableLedgerReprint<span>=146</span></span><span class="ev">PaymentReminder<span>=147</span></span><span class="ev">PaymentReminderReprint<span>=148</span></span><span class="ev">AccrualAccountingLedger<span>=149</span></span><span class="ev">AccrualAccountingLedgerReprint<span>=150</span></span><span class="ev">VatReport<span>=151</span></span><span class="ev">VatReportAccounts<span>=152</span></span><span class="ev">VatReportGeneralLedger<span>=153</span></span><span class="ev">VatReportTransactions<span>=154</span></span><span class="ev">VatReportCheck<span>=155</span></span><span class="ev">VatReportDifferenceSearch<span>=156</span></span><span class="ev">TransactionList<span>=157</span></span><span class="ev">OutgoingPaymentLedger<span>=158</span></span><span class="ev">OutgoingPaymentLedgerReprint<span>=159</span></span><span class="ev">SalesTransportLabelA5<span>=160</span></span><span class="ev">CustomerCaseConfirmation<span>=161</span></span><span class="ev">AccountStatement<span>=162</span></span><span class="ev">CustomerCaseAnswer<span>=163</span></span><span class="ev">CustomerNonconformityReport<span>=164</span></span><span class="ev">SupplierNonconformityReport<span>=165</span></span><span class="ev">InternalNonconformityReport<span>=166</span></span><span class="ev">SupplierClaimReport<span>=167</span></span><span class="ev">CancelledAccountsReceivableLedger<span>=168</span></span><span class="ev">CancelledAccountsReceivableLedgerReprint<span>=169</span></span><span class="ev">ShipmentWayBill<span>=170</span></span><span class="ev">ShipmentParcel<span>=171</span></span><span class="ev">Inquiry<span>=172</span></span><span class="ev">CustomerOrderPickingList<span>=173</span></span><span class="ev">EimInvoiceInformation<span>=174</span></span><span class="ev">InterestInvoice<span>=175</span></span><span class="ev">FileLink<span>=176</span></span><span class="ev">RecordingsAndSalaryTypeSummary<span>=177</span></span><span class="ev">ProductRecordConsistsOf<span>=178</span></span><span class="ev">ProductRecordIncludedIn<span>=179</span></span><span class="ev">InternalProjectReport<span>=180</span></span><span class="ev">ExternalProjectReport<span>=181</span></span><span class="ev">TraceabilityProtocol<span>=182</span></span><span class="ev">FixedAssetLedger<span>=183</span></span><span class="ev">FixedAssetLedgerReprint<span>=184</span></span><span class="ev">CustomReport<span>=185</span></span><span class="ev">StockAcknowledgement<span>=186</span></span><span class="ev">StockDeliveryNote<span>=187</span></span><span class="ev">StockPurchaseOrder<span>=188</span></span><span class="ev">StockDeliveryNoteDelivered<span>=189</span></span><span class="ev">PurchaseOrderModified<span>=190</span></span><span class="ev">TaxDepreciation<span>=191</span></span><span class="ev">TaxDepreciationDrilldown<span>=192</span></span><span class="ev">PartTransportLabelSmall<span>=193</span></span><span class="ev">PartTransportLabelA5<span>=194</span></span><span class="ev">PartTransportLabelA4<span>=195</span></span><span class="ev">UnplannedStockBalanceChangeLedger<span>=196</span></span><span class="ev">UnplannedStockBalanceChangeLedgerReprint<span>=197</span></span><span class="ev">PIADetailed<span>=198</span></span><span class="ev">StockTransactionLogLedger<span>=199</span></span><span class="ev">ManufacturingOrderLogLedger<span>=200</span></span><span class="ev">InvoiceLogLedger<span>=201</span></span><span class="ev">PriceChangeLogLedger<span>=202</span></span><span class="ev">CalculationDifferenceLedger<span>=203</span></span><span class="ev">AccountStatementBalancePerCustomer<span>=204</span></span><span class="ev">StockTransactionLogLedgerReprint<span>=205</span></span><span class="ev">ManufacturingOrderLogLedgerReprint<span>=206</span></span><span class="ev">PriceChangeLogLedgerReprint<span>=207</span></span><span class="ev">CalculationDifferenceLedgerReprint<span>=208</span></span><span class="ev">InvoiceLogLedgerReprint<span>=209</span></span><span class="ev">PrintoutDemoCertificate<span>=210</span></span><span class="ev">BlanketOrderPurchase<span>=211</span></span><span class="ev">ArrivalNote<span>=212</span></span><span class="ev">CorrectionInvoice<span>=213</span></span><span class="ev">ModifiedOrderConfirmation<span>=214</span></span><span class="ev">PurchaseDeliverySchedule<span>=215</span></span><span class="ev">PackageList<span>=216</span></span><span class="ev">PackageTransportLabel<span>=217</span></span><span class="ev">AnnualVolumeList<span>=218</span></span><span class="ev">BlanketOrderSales<span>=219</span></span><span class="ev">TransportLabelDirectWithdrawalA4<span>=220</span></span><span class="ev">TransportLabelDirectWithdrawalA5<span>=221</span></span><span class="ev">TransportLabelDirectWithdrawalSmall<span>=222</span></span><span class="ev">TransportLabelDirectArrivalA4<span>=223</span></span><span class="ev">TransportLabelDirectArrivalA5<span>=224</span></span><span class="ev">TransportLabelDirectArrivalSmall<span>=225</span></span><span class="ev">TransportLabelMoveBetweenLocationsA4<span>=226</span></span><span class="ev">TransportLabelMoveBetweenLocationsA5<span>=227</span></span><span class="ev">TransportLabelMoveBetweenLocationsSmall<span>=228</span></span><span class="ev">TransportLabelMoveBetweenWarehousesA4<span>=229</span></span><span class="ev">TransportLabelMoveBetweenWarehousesA5<span>=230</span></span><span class="ev">TransportLabelMoveBetweenWarehousesSmall<span>=231</span></span><span class="ev">Standard8DNonconformityReport<span>=232</span></span><span class="ev">PaymentLedger<span>=233</span></span><span class="ev">PaymentLedgerReprint<span>=234</span></span><span class="ev">PaymentVoucher<span>=235</span></span><span class="ev">DebtorStatement<span>=236</span></span><span class="ev">CreditorStatement<span>=237</span></span><span class="ev">PrintVoucher<span>=238</span></span><span class="ev">OfficialReceipt<span>=239</span></span><span class="ev">PolishCashReceipt<span>=240</span></span><span class="ev">PolishCashReport<span>=241</span></span><span class="ev">Standard8DCustomerNonconformityReport<span>=242</span></span><span class="ev">AutoCodingLedger<span>=243</span></span><span class="ev">AutoCodingLedgerReprint<span>=244</span></span><span class="ev">MeasuringProtocolManufacturing<span>=245</span></span><span class="ev">MeasuringProtocolPurchase<span>=246</span></span><span class="ev">VoucherList<span>=247</span></span><span class="ev">RevenueCalculationLedger<span>=248</span></span><span class="ev">RevenueCalculationLedgerReprint<span>=249</span></span><span class="ev">GeneralActivityList<span>=250</span></span><span class="ev">ReturnPurchaseOrderDeliveryNote<span>=251</span></span><span class="ev">ReturnPurchaseOrderProforma<span>=252</span></span><span class="ev">ReturnPurchaseOrderTransportLabelA4<span>=253</span></span><span class="ev">ReturnPurchaseOrderTransportLabelA5<span>=254</span></span><span class="ev">ReturnPurchaseOrderTransportLabelSmall<span>=255</span></span><span class="ev">Waybill<span>=256</span></span><span class="ev">ShipmentAdvice<span>=257</span></span><span class="ev">PartTransportMultiLabel<span>=258</span></span><span class="ev">StockTransportMultiLabel<span>=259</span></span><span class="ev">SustainabilityCalculationDetailed<span>=260</span></span><span class="ev">ShipmentReceipt<span>=261</span></span><span class="ev">OrderRowDiscounts<span>=262</span></span><span class="ev">BankAccountReconciliation<span>=263</span></span><span class="ev">CollectiveCorrectionInvoice<span>=264</span></span><span class="ev">ExternalCustomerNonconformityReport<span>=265</span></span><span class="ev">ExternalSupplierNonconformityReport<span>=266</span></span><span class="ev">ExternalInternalNonconformityReport<span>=267</span></span><span class="ev">PartContentDeliveryReport<span>=268</span></span><span class="ev">ProjectMaterialCalculationLedger<span>=269</span></span><span class="ev">ProjectMaterialCalculationLedgerReprint<span>=270</span></span><span class="ev">CausesForShortage<span>=271</span></span><span class="ev">CustomerLevelListConsistsOfList<span>=272</span></span><span class="ev">CustomerLevelListIncludedInList<span>=273</span></span><span class="ev">SupplierLevelListConsistsOfList<span>=274</span></span><span class="ev">SupplierLevelListIncludedInList<span>=275</span></span><span class="ev">GPBForm<span>=276</span></span><span class="ev">CurrencyWarehouse<span>=277</span></span><span class="ev">ReturnPurchaseOrderPickingList<span>=278</span></span><span class="ev">SubcontractProformaInvoice<span>=279</span></span><span class="ev">LocationLabel<span>=280</span></span><span class="ev">LocationMultiLabel<span>=281</span></span><span class="ev">FilesExternal1<span>=282</span></span><span class="ev">FilesExternal2<span>=283</span></span><span class="ev">FilesExternal3<span>=284</span></span><span class="ev">RemittanceAdvice<span>=285</span></span><span class="ev">SupplierAgreement<span>=286</span></span><span class="ev">ModifiedSupplierAgreement<span>=287</span></span><span class="ev">SelfBilledInvoice<span>=288</span></span><span class="ev">PurchaseTransportLabelA5<span>=310</span></span><span class="ev">RefillPickingLocationStandard<span>=500</span></span><span class="ev">PurchaseTransportLabelA5ForRejection<span>=1020</span></span><span class="ev">ManufacturingTransportLabelA5<span>=1050</span></span><span class="ev">ManufacturingTransportLabelA5ForRejection<span>=1060</span></span><span class="ev">ManufacturingTransportLabelA5InProgress<span>=1070</span></span><span class="ev">ManufacturingTransportLabelA5BeforeReporting<span>=1080</span></span><span class="ev">SalesTransportLabelSmall<span>=1600</span></span><span class="ev">Form<span>=2401</span></span><span class="ev">ServiceReporting<span>=2402</span></span><span class="ev">SalesAgreement<span>=2501</span></span><span class="ev">ModifiedSalesAgreement<span>=2502</span></span><span class="ev">AccountStatementPurchase<span>=2503</span></span><span class="ev">ReturnPurchaseOrder<span>=2504</span></span><span class="ev">PurchaseTransportLabelSmall<span>=3100</span></span><span class="ev">PurchaseTransportLabelSmallForRejection<span>=10200</span></span><span class="ev">ManufacturingTransportLabelSmall<span>=10500</span></span><span class="ev">ManufacturingTransportLabelSmallForRejection<span>=10600</span></span><span class="ev">ManufacturingTransportLabelSmallInProgress<span>=10700</span></span><span class="ev">ManufacturingTransportLabelSmallBeforeReporting<span>=10800</span></span><span class="ev">DebitNote<span>=10801</span></span><span class="ev">ServiceTax<span>=10802</span></span><span class="ev">EdiCustomerOrderConfirmation<span>=20001</span></span><span class="ev">EdiCustomerOrderInvoice<span>=20002</span></span><span class="ev">EdiCustomerOrderSimpleDispatchAdvice<span>=20003</span></span><span class="ev">EdiCustomerOrderResponse<span>=20004</span></span><span class="ev">EdiPurchaseOrder<span>=20005</span></span><span class="ev">EdiCustomerOrderComplexDispatchAdvice<span>=20006</span></span><span class="ev">EdiPurchaseDeliverySchedule<span>=20007</span></span></div></li><li><code>FormDocumentType</code><div class="evs"><span class="ev">Document<span>=0</span></span><span class="ev">AdaptedReport<span>=1</span></span></div></li></ul>
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Common</strong></p>
+<ul>
+<li><a href="ApplicationUser.html">ApplicationUsers</a> — <code>Printers</code> (expand)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "ApplicationUserId": 0,
+  "PrinterName": null,
+  "NormalizedFormReportType": null,
+  "FormReportType": null,
+  "ServerPrinterId": null,
+  "FormDocumentType": 0
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Common.ApplicationUserPrinter.html">https://api.monitor.se/api/Monitor.API.Common.ApplicationUserPrinter.html</a><br><span class="badge">Common</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AccountsPayables · Monitor ERP API</title>
+<meta name="description" content="Represents a account&#x27;s payable.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>AccountsPayables</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html" aria-current="location">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="accountspayables">AccountsPayables</h1>
+<p>Represents a account's payable.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Accounting.html">Accounting</a></dd><dt>API class</dt><dd><code>AccountsPayable</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Accounting/AccountsPayables</code></dd><dt>Required permission</dt><dd>Show accounts payable</dd><dt>GUID</dt><dd><code>7C342374-541F-4841-ADF9-5925130FD07F</code></dd><dt>Introduced in</dt><dd>2.27</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the account's payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>Version</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The version of the account's payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>CancelCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the account payable's cancellation comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>CancelComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The cancellation comment of the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentMethodId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/PaymentMethod.html">PaymentMethods</a></td>
+<td></td>
+<td>The business key identifier of the account payable's payment method.</td>
+</tr>
+<tr>
+<td class="prop"><code>LanguageId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/LanguageCode.html">LanguageCodes</a></td>
+<td></td>
+<td>The business key identifier of the account payable's language.</td>
+</tr>
+<tr>
+<td class="prop"><code>Language</code></td>
+<td class="type"><code>LanguageCodes</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/LanguageCode.html">LanguageCodes</a></td>
+<td>expandable</td>
+<td>The language of the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>SuppliersInvoiceNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The human readable identifier of the supplier's invoice number.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The invoice type of the accounts payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsCredit</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the accounts payable is a credit or not.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsFinalBooked</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the accounts payable is final booked or not.</td>
+</tr>
+<tr>
+<td class="prop"><code>PurchaseOrderId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Purchase/PurchaseOrder.html">PurchaseOrders</a></td>
+<td></td>
+<td>The business key identifier of the account payable's purchase order.</td>
+</tr>
+<tr>
+<td class="prop"><code>WarehouseId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
+<td></td>
+<td>The business key identifier of the warehouse that the accounts payable belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>PreliminaryBookingDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The date of the preliminary booking.</td>
+</tr>
+<tr>
+<td class="prop"><code>VoucherDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The voucher date of the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>CancelVoucherDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The voucher cancellation date of the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>SupplierAccountGroupId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Purchase/SupplierAccountGroup.html">SupplierAccountGroups</a></td>
+<td></td>
+<td>The business key identifier of the supplier account group of the acounts payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>CountryId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Country.html">Countries</a></td>
+<td></td>
+<td>The business key identifier of the account payable's country.</td>
+</tr>
+<tr>
+<td class="prop"><code>Status</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The status of the accounts payable invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockMessageId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the entity block message comment. References Comments .</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockMessage</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The block message of the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>OCRNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The OCR number of the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseOCRNumber</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if OCR number is used.</td>
+</tr>
+<tr>
+<td class="prop"><code>CreditedAccountsPayableId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="AccountsPayable.html">AccountsPayables</a></td>
+<td></td>
+<td>The business key identifier of the account payable's credit account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedById</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td></td>
+<td>The business key identifier of the application user that blocked the entity.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedBy</code></td>
+<td class="type"><code>ApplicationUsers</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td>expandable</td>
+<td>The application user that blocked the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedFromDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The date when the entity starts being blocked.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedToDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The date when the entity stops being blocked.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedStatus</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The block status of the entity.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedContextType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>bitmask, enum</td>
+<td>Specifies which contexts the block applies for.</td>
+</tr>
+<tr>
+<td class="prop"><code>HasEimInvoice</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the account payable has EIM invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>HoldEimInvoice</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the EIM invoice is on hold.</td>
+</tr>
+<tr>
+<td class="prop"><code>EimInvoiceStatus</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>Specifies the status of the EIM invoice.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceNumber</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The invoice number of the accounts payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The invoice date on the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>DueDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The due date on the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceAmount</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The invoice amount on the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceAmountCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the invoice amount currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceAmountInCompanyCurrency</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The invoice amount in the company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceAmountInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the company currency for the invoice amount.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatAmount</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The VAT amount on the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatAmountCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the invoice vat amount currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatAmountInCompanyCurrency</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The VAT amount in company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatAmountInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the company currency for the invoice vat amount.</td>
+</tr>
+<tr>
+<td class="prop"><code>RestAmount</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The rest amount on the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>RestAmountCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the invoice rest amount currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>RestAmountInCompanyCurrency</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The rest amount in company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>RestAmountInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the company currency for the invoice rest amount.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderedRestAmount</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The ordered rest amount on the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderedRestAmountCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the invoice ordered rest amount currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the currency on the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExchangeRate</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The exchange rate on the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaidInFullDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>Specifies the date when the account payable was paid in full.</td>
+</tr>
+<tr>
+<td class="prop"><code>CommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the account payable's comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>Comment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The internal comment of the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReferenceNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The human readable reference number on the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseFixedDueDate</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if a fixed due date is used.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatGroupId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/VatGroup.html">VatGroups</a></td>
+<td></td>
+<td>The business key identifier of the VAT group that the account payable belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentTermId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td></td>
+<td>The business key identifier of the payment term of the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentTerm</code></td>
+<td class="type"><code>PaymentTerms</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td>expandable</td>
+<td>The payment term of the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>FinalBookingId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.41.1</td>
+<td>The business key identifier of the account payable's final booking. References Booking.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessContactId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Purchase/Supplier.html">Suppliers</a></td>
+<td>since 22.5</td>
+<td>The business key identifier of the supplier that the accounts payable belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyExchangeTypeId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td>since 22.9</td>
+<td>The business key identifier of the accounts payable's currency exchange type.</td>
+</tr>
+<tr>
+<td class="prop"><code>Payments</code></td>
+<td class="type"><code>OutgoingPayments[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="OutgoingPayment.html">OutgoingPayments</a></td>
+<td>expandable, collection, since 24.2</td>
+<td>The payments of the accounts payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>WithholdTaxAmount</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 25.6</td>
+<td>The withholding tax amount on the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>WithholdTaxAmountCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>since 25.6</td>
+<td>The business key identifier of the withholding tax amount currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>WithholdTaxAmountInCompanyCurrency</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 25.6</td>
+<td>The withholding tax in company currency amount on the account payable.</td>
+</tr>
+<tr>
+<td class="prop"><code>WithholdTaxAmountInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>since 25.6</td>
+<td>The business key identifier of the withholding tax in company currency amount currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>InputVatDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 26.5</td>
+<td>The date used to assign the invoice's input VAT to the correct VAT period. Only used in the Polish and Hungarian country packages.</td>
+</tr>
+<tr>
+<td class="prop"><code>OutputVatDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 26.5</td>
+<td>The date used to assign the invoice's output VAT to the correct VAT period. Only used in the Polish and Hungarian country packages.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>InvoiceType</code><div class="evs"><span class="ev">Standard<span>=1</span></span><span class="ev">Interest<span>=4</span></span><span class="ev">OnAccount<span>=5</span></span><span class="ev">ForOrderingOnAccount<span>=8</span></span><span class="ev">CorrectionInvoice<span>=9</span></span></div></li><li><code>Status</code><div class="evs"><span class="ev">Registered<span>=0</span></span><span class="ev">Preliminary<span>=1</span></span><span class="ev">Final<span>=2</span></span><span class="ev">Cancelled<span>=6</span></span></div></li><li><code>BlockedStatus</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Message<span>=1</span></span><span class="ev">Blocked<span>=2</span></span></div></li><li><code>BlockedContextType</code><span class="badge">bitmask — values combine</span><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Payment<span>=1</span></span></div></li><li><code>EimInvoiceStatus</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Hold<span>=1</span></span><span class="ev">ForAuthorization<span>=2</span></span><span class="ev">Approved<span>=3</span></span><span class="ev">Rejected<span>=4</span></span><span class="ev">FinalBooked<span>=5</span></span></div></li></ul>
+
+
+
+
+
+
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Accounting</strong></p>
+<ul>
+<li><a href="AccountsPayableCashDiscountLevel.html">AccountsPayableCashDiscountLevels</a> — <code>ParentId</code> (FK)</li>
+<li><a href="AccountsPayable.html">AccountsPayables</a> — <code>CreditedAccountsPayableId</code> (FK)</li>
+<li><a href="AccrualAccounting.html">AccrualAccountings</a> — <code>AccountsPayableId</code> (FK)</li>
+<li><a href="FixedAsset.html">FixedAssets</a> — <code>AccountsPayableId</code> (FK)</li>
+<li><a href="OutgoingPayment.html">OutgoingPayments</a> — <code>AccountsPayableId</code> (FK)</li>
+<li><a href="SetOffDestination.html">SetOffDestination</a> — <code>AccountsPayableId</code> (FK)</li>
+<li><a href="VoucherRow.html">VoucherRows</a> — <code>AccountsPayableId</code> (FK)</li>
+<li><a href="Voucher.html">Vouchers</a> — <code>AccountsPayable</code> (expand)</li>
+<li><a href="Voucher.html">Vouchers</a> — <code>AccountsPayableId</code> (FK)</li>
+</ul>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="../Inventory/CasePartLink.html">CaseEntryPartLinks</a> — <code>CompensationAccountsPayableId</code> (FK)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="../Purchase/EimDocument.html">EimDocuments</a> — <code>AccountsPayableId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a> — <code>AccountsPayableId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderInvoiceRow.html">PurchaseOrderInvoiceRows</a> — <code>LedgerId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Version": 0,
+  "CancelCommentId": null,
+  "CancelComment": null,
+  "PaymentMethodId": null,
+  "LanguageId": 0,
+  "Language": null,
+  "SuppliersInvoiceNumber": null,
+  "InvoiceType": 0,
+  "IsCredit": false,
+  "IsFinalBooked": false,
+  "PurchaseOrderId": null,
+  "WarehouseId": 0,
+  "PreliminaryBookingDate": null,
+  "VoucherDate": null,
+  "CancelVoucherDate": null,
+  "SupplierAccountGroupId": null,
+  "CountryId": 0,
+  "Status": 0,
+  "BlockMessageId": null,
+  "BlockMessage": null,
+  "OCRNumber": null,
+  "UseOCRNumber": false,
+  "CreditedAccountsPayableId": null,
+  "BlockedById": null,
+  "BlockedBy": null,
+  "BlockedFromDate": null,
+  "BlockedToDate": null,
+  "BlockedStatus": 0,
+  "BlockedContextType": 0,
+  "HasEimInvoice": false,
+  "HoldEimInvoice": false,
+  "EimInvoiceStatus": 0,
+  "InvoiceNumber": 0,
+  "InvoiceDate": "0001-01-01T00:00:00+00:00",
+  "DueDate": "0001-01-01T00:00:00+00:00",
+  "InvoiceAmount": 0.0,
+  "InvoiceAmountCurrencyId": null,
+  "InvoiceAmountInCompanyCurrency": 0.0,
+  "InvoiceAmountInCompanyCurrencyCurrencyId": null,
+  "VatAmount": 0.0,
+  "VatAmountCurrencyId": null,
+  "VatAmountInCompanyCurrency": 0.0,
+  "VatAmountInCompanyCurrencyCurrencyId": null,
+  "RestAmount": 0.0,
+  "RestAmountCurrencyId": null,
+  "RestAmountInCompanyCurrency": 0.0,
+  "RestAmountInCompanyCurrencyCurrencyId": null,
+  "OrderedRestAmount": 0.0,
+  "OrderedRestAmountCurrencyId": null,
+  "CurrencyId": null,
+  "ExchangeRate": 0.0,
+  "PaidInFullDate": null,
+  "CommentId": null,
+  "Comment": null,
+  "ReferenceNumber": null,
+  "UseFixedDueDate": false,
+  "VatGroupId": null,
+  "PaymentTermId": null,
+  "PaymentTerm": null,
+  "FinalBookingId": null,
+  "BusinessContactId": 0,
+  "CurrencyExchangeTypeId": 0,
+  "Payments": null,
+  "WithholdTaxAmount": null,
+  "WithholdTaxAmountCurrencyId": null,
+  "WithholdTaxAmountInCompanyCurrency": null,
+  "WithholdTaxAmountInCompanyCurrencyCurrencyId": null,
+  "InputVatDate": null,
+  "OutputVatDate": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Accounting.AccountsPayable.html">https://api.monitor.se/api/Monitor.API.Accounting.AccountsPayable.html</a><br><span class="badge">Accounting</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

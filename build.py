@@ -1,6 +1,6 @@
 """Build the Monitor ERP API knowledge bundle.
 
-    python build.py             parse cached HTML -> build/model.json + okf/
+    python build.py             parse cached HTML -> build/model.json + okf/ + okf-html/
     python build.py --scrape    fetch pages missing from the cache, then build
     python build.py --refresh   re-fetch every page even if cached, then build
 
@@ -12,9 +12,9 @@ pick up upstream documentation changes.
 import argparse
 import sys
 
-from monitor_api import emit_compact, emit_json, emit_okf, scrape
+from monitor_api import emit_compact, emit_html, emit_json, emit_okf, scrape
 from monitor_api.model import ValidationError, build
-from monitor_api.paths import HTML_DIR, MODEL_JSON, OKF_COMPACT_DIR, OKF_DIR
+from monitor_api.paths import HTML_DIR, MODEL_JSON, OKF_COMPACT_DIR, OKF_DIR, OKF_HTML_DIR
 
 
 def main():
@@ -52,6 +52,10 @@ def main():
 
     emit_okf.emit(model)
     print(f"Wrote {OKF_DIR} ({sum(1 for _ in OKF_DIR.rglob('*.md'))} markdown files)")
+
+    # Renders okf/ from disk, so it must follow emit_okf.
+    emit_html.emit(model)
+    print(f"Wrote {OKF_HTML_DIR} ({sum(1 for _ in OKF_HTML_DIR.rglob('*.html'))} HTML pages)")
 
     emit_compact.emit(model)
     print(f"Wrote {OKF_COMPACT_DIR} ({sum(1 for _ in OKF_COMPACT_DIR.rglob('*.md'))} markdown files)")

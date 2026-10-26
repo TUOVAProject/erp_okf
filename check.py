@@ -18,9 +18,18 @@ import re
 import shutil
 import sys
 
-from monitor_api import emit_compact, emit_okf
+import yaml
+
+from monitor_api import emit_compact, emit_html, emit_okf
 from monitor_api.model import build
-from monitor_api.paths import BASELINE_JSON, HTML_DIR, OKF_COMPACT_DIR, OKF_DIR, REPO_ROOT
+from monitor_api.paths import (
+    BASELINE_JSON,
+    HTML_DIR,
+    OKF_COMPACT_DIR,
+    OKF_DIR,
+    OKF_HTML_DIR,
+    REPO_ROOT,
+)
 from monitor_api.parse import parse_page
 
 # Pages chosen to pin down a specific parser behaviour each. If one of these
@@ -57,6 +66,7 @@ FIXTURES = [
 ]
 
 LINK_PATTERN = re.compile(r"\]\(([^)\s]+)\)")
+HTML_LINK_PATTERN = re.compile(r'(?:href|src)="([^"]+)"')
 
 
 def check_fixtures():
@@ -160,6 +170,69 @@ def check_determinism():
             f"okf-compact/{relative} differs from a fresh emit -- "
             "okf-compact/ is stale, re-run build.py"
         )
+
+
+def check_html_fresh():
+    """okf-html/ is exactly what rendering the committed okf/ produces now."""
+    staging = REPO_ROOT / "okf-html.check.tmp"
+
+    if staging.exists():
+        shutil.rmtree(staging)
+
+    try:
+        original_dir = emit_html.OKF_HTML_TMP_DIR
+        emit_html.OKF_HTML_TMP_DIR = staging
+        emit_html.render_all()
+        rendered = {
+            path.relative_to(staging): path.read_bytes()
+            for path in staging.rglob("*")
+            if path.is_file()
+        }
+    finally:
+        emit_html.OKF_HTML_TMP_DIR = original_dir
+        shutil.rmtree(staging, ignore_errors=True)
+
+    committed = {
+        path.relative_to(OKF_HTML_DIR) for path in OKF_HTML_DIR.rglob("*") if path.is_file()
+    }
+
+    assert rendered, "rendering produced no files"
+    assert committed == set(rendered), (
+        f"okf-html/ has {len(committed ^ set(rendered))} files that a fresh render "
+        "does not (or vice versa) -- re-run build.py"
+    )
+
+    for relative, content in rendered.items():
+        assert (OKF_HTML_DIR / relative).read_bytes() == content, (
+            f"okf-html/{relative} differs from a fresh render -- okf-html/ is stale, "
+            "re-run build.py"
+        )
+
+
+def check_html_links():
+    """Every relative href/src in okf-html/ resolves, including its anchor."""
+    broken = []
+    texts = {}
+
+    def text(path):
+        if path not in texts:
+            texts[path] = path.read_text(encoding="utf-8")
+        return texts[path]
+
+    for path in sorted(OKF_HTML_DIR.rglob("*.html")):
+        for target in HTML_LINK_PATTERN.findall(text(path)):
+            if re.match(r"[a-z]+:", target):
+                continue
+
+            file_part, _, fragment = target.partition("#")
+            resolved = (path.parent / file_part).resolve() if file_part else path
+
+            if not resolved.exists():
+                broken.append(f"{path.relative_to(OKF_HTML_DIR)} -> {target} (missing file)")
+            elif fragment and f'id="{fragment}"' not in text(resolved):
+                broken.append(f"{path.relative_to(OKF_HTML_DIR)} -> {target} (missing anchor)")
+
+    assert not broken, f"{len(broken)} broken HTML links, e.g. " + "; ".join(broken[:5])
 
 
 def check_baseline():
@@ -272,20 +345,63 @@ def check_compact_encoding():
     assert not mangled, f"{len(mangled)} compact files contain mojibake, e.g. {mangled[:3]}"
 
 
+def check_okf_conformance():
+    """The three OKF v0.2 conformance rules, plus the reserved-file structure.
+
+    Every non-reserved file has parseable frontmatter with a non-empty `type`;
+    index.md and log.md have none, except okf_version on the root index.md;
+    log.md headings are YYYY-MM-DD, newest first.
+    """
+    frontmatter = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
+    problems = []
+
+    for path in sorted(OKF_DIR.rglob("*.md")):
+        relative = path.relative_to(OKF_DIR).as_posix()
+        text = path.read_text(encoding="utf-8")
+        match = frontmatter.match(text)
+
+        if path.name in ("index.md", "log.md"):
+            allowed = {"okf_version"} if relative == "index.md" else set()
+            fields = set(yaml.safe_load(match.group(1)) or {}) if match else set()
+            if fields - allowed:
+                problems.append(f"{relative}: reserved file carries frontmatter {sorted(fields - allowed)}")
+            continue
+
+        fields = yaml.safe_load(match.group(1)) if match else None
+        if not isinstance(fields, dict) or not fields.get("type"):
+            problems.append(f"{relative}: no frontmatter with a non-empty type")
+
+    root = frontmatter.match((OKF_DIR / "index.md").read_text(encoding="utf-8"))
+    assert root and yaml.safe_load(root.group(1)).get("okf_version") == emit_okf.OKF_VERSION, (
+        "root index.md does not declare okf_version"
+    )
+
+    dates = re.findall(r"^## (.+)$", (OKF_DIR / "log.md").read_text(encoding="utf-8"), re.MULTILINE)
+    if not dates or not all(re.fullmatch(r"\d{4}-\d{2}-\d{2}", d) for d in dates):
+        problems.append(f"log.md: headings are not YYYY-MM-DD dates: {dates}")
+    elif dates != sorted(dates, reverse=True):
+        problems.append("log.md: dates are not newest first")
+
+    assert not problems, f"{len(problems)} problems, e.g. {problems[:3]}"
+
+
 CHECKS = [
     ("parser fixtures", check_fixtures),
     ("deterministic output", check_determinism),
     ("baseline floor", check_baseline),
+    ("okf conformance", check_okf_conformance),
     ("link integrity", check_links),
     ("character encoding", check_encoding),
     ("compact bundle structure", check_compact_structure),
     ("compact bundle links", check_compact_links),
     ("compact bundle encoding", check_compact_encoding),
+    ("html site freshness", check_html_fresh),
+    ("html site links", check_html_links),
 ]
 
 
 def main():
-    if not OKF_DIR.exists() or not OKF_COMPACT_DIR.exists():
+    if not all(d.exists() for d in (OKF_DIR, OKF_COMPACT_DIR, OKF_HTML_DIR)):
         sys.exit("No bundle to check. Run: python build.py")
 
     failures = 0

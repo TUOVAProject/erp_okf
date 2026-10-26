@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StandbyWorks · Monitor ERP API</title>
+<meta name="description" content="Represents a work put on standby.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/TimeRecording.html">TimeRecording</a><span class="sep">/</span>StandbyWorks</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html" aria-current="location">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="standbyworks">StandbyWorks</h1>
+<p>Represents a work put on standby.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/TimeRecording.html">TimeRecording</a></dd><dt>API class</dt><dd><code>StandbyWork</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/TimeRecording/StandbyWorks</code></dd><dt>Required permission</dt><dd>Show recording items</dd><dt>GUID</dt><dd><code>2D0EFE39-5F0A-4FD5-86C4-2E497793ED96</code></dd><dt>Introduced in</dt><dd>2.26</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the standby work.</td>
+</tr>
+<tr>
+<td class="prop"><code>EmployeeId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td></td>
+<td>The business key identifier of the employee who has this work on standby.</td>
+</tr>
+<tr>
+<td class="prop"><code>BundleId</code></td>
+<td class="type"><code>Guid</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The bundle id of the work. Used to identify if work should be started as a bundle when restarting.</td>
+</tr>
+<tr>
+<td class="prop"><code>WorkRecordingType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>What type of work this represents.</td>
+</tr>
+<tr>
+<td class="prop"><code>IndirectWorkCodeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="IndirectWorkCode.html">IndirectWorkCodes</a></td>
+<td></td>
+<td>The business key identifier of the indirect work code, defined when WorkRecordingType is Indirect.</td>
+</tr>
+<tr>
+<td class="prop"><code>IndirectWorkCode</code></td>
+<td class="type"><code>IndirectWorkCodes</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="IndirectWorkCode.html">IndirectWorkCodes</a></td>
+<td>expandable</td>
+<td>The indirect work code, available when WorkRecordingType is Indirect.</td>
+</tr>
+<tr>
+<td class="prop"><code>OperationId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Manufacturing/ManufacturingOrderOperation.html">ManufacturingOrderOperations</a></td>
+<td></td>
+<td>The business key identifier of the operation, defined when WorkRecordingType is OperationSetup or OperationUnit.</td>
+</tr>
+<tr>
+<td class="prop"><code>Operation</code></td>
+<td class="type"><code>ManufacturingOrderOperations</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Manufacturing/ManufacturingOrderOperation.html">ManufacturingOrderOperations</a></td>
+<td>expandable</td>
+<td>The operation for this work, available when WorkRecordingType is OperationSetup or OperationUnit.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActivityId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the activity, defined when WorkRecordingType is Activity. References a project activity.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>WorkRecordingType</code><div class="evs"><span class="ev">Indirect<span>=0</span></span><span class="ev">OperationSetup<span>=1</span></span><span class="ev">OperationUnit<span>=2</span></span><span class="ev">ProjectActivity<span>=3</span></span></div></li></ul>
+
+
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "EmployeeId": 0,
+  "BundleId": "00000000-0000-0000-0000-000000000000",
+  "WorkRecordingType": 0,
+  "IndirectWorkCodeId": null,
+  "IndirectWorkCode": null,
+  "OperationId": null,
+  "Operation": null,
+  "ActivityId": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.TimeRecording.StandbyWork.html">https://api.monitor.se/api/Monitor.API.TimeRecording.StandbyWork.html</a><br><span class="badge">TimeRecording</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

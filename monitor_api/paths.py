@@ -18,6 +18,7 @@ BUILD_DIR = REPO_ROOT / "build"
 MODEL_JSON = BUILD_DIR / "model.json"
 OKF_DIR = REPO_ROOT / "okf"
 OKF_COMPACT_DIR = REPO_ROOT / "okf-compact"
+OKF_HTML_DIR = REPO_ROOT / "okf-html"
 
 # Staging directories. Emitters write here and swap on success, so a crash
 # mid-emit leaves the previous good output in place instead of a half-written
@@ -25,6 +26,7 @@ OKF_COMPACT_DIR = REPO_ROOT / "okf-compact"
 BUILD_TMP_DIR = REPO_ROOT / "build.tmp"
 OKF_TMP_DIR = REPO_ROOT / "okf.tmp"
 OKF_COMPACT_TMP_DIR = REPO_ROOT / "okf-compact.tmp"
+OKF_HTML_TMP_DIR = REPO_ROOT / "okf-html.tmp"
 
 # Recorded stats floor; validate() fails if a build drops below it.
 BASELINE_JSON = REPO_ROOT / "baseline.json"

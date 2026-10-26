@@ -1,95 +1,176 @@
-# Monitor ERP API — knowledge bundle
+# Monitor ERP API — OKF knowledge bundle
 
 ## Lyhyesti
 
-Monitor ERP:n julkinen API-dokumentaatio muunnettuna luettavaksi tietomalliksi:
-jokainen kyseltävä resurssi, sen kentät, enumeraatiot, oikeusvaatimus ja suhteet
-muihin resursseihin. Tarkoitettu sekä ihmisen selattavaksi että AI-agentin
-luettavaksi.
+Monitor ERP:n API:n tietomalli [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/open-knowledge-format)
+-pakettina. Paketissa on jokainen kyseltävä resurssi, sen kentät, enumeraatiot,
+oikeusvaatimus ja suhteet muihin resursseihin. Tiedot ovat markdown-tiedostoina,
+joissa jokainen suhde on linkki. Paketti on tehty sekä ihmisen selattavaksi että
+AI-agentin luettavaksi.
 
 **Haluatko vain lukea?** Avaa [`okf/index.md`](okf/index.md). Mitään ei tarvitse asentaa.
+Selaimessa: avaa `okf-html/index.html` — sama sisältö HTML-sivuina, hakuineen.
+
+**New here?** Follow [`GETTING_STARTED.md`](GETTING_STARTED.md): download, use with
+an AI agent, query from code, refresh from upstream, step by step.
 
 ---
 
 ## What this is
 
-A scrape-and-transform pipeline that turns the public Monitor ERP API
-documentation at <https://api.monitor.se/api/> into a **knowledge bundle**: a
-directory of markdown files describing the API's data model, where every
-relationship between entities is a real link you can follow.
+**[`okf/`](okf/index.md) is the product.** It is a knowledge bundle in the
+[Open Knowledge Format v0.2](https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/main/SPEC.md)
+that describes the data model of the Monitor ERP REST API:
 
-It is not an application and not an API client. It answers *which resource holds
-this data, what are its fields, and what does it connect to* — the questions you
-have to answer before you can write an integration.
+- every queryable resource,
+- its fields, types and enumerations,
+- the permission it requires,
+- which other resources it references and which reference it.
 
-## I just want to read the docs
+The bundle answers *which resource holds this data, what are its fields, and what
+does it connect to?* Those are the questions you have to answer before you can
+write an integration. It is built so that an AI agent can answer them by opening
+two or three files instead of loading the whole API.
 
-Open **[`okf/index.md`](okf/index.md)**. Nothing to install, no build step. It is
-plain markdown, so GitHub renders it and any editor opens it.
+Everything else in the repo exists to produce that bundle from Monitor's public
+API Reference (<https://api.monitor.se/api/>), keep it correct, and offer it in a
+few other shapes.
 
-From there: [`okf/guides/`](okf/guides/) explains how the API is shaped,
-[`okf/modules/`](okf/modules/) lists the eight modules, and
-`okf/entities/<Module>/<Class>.md` is one page per resource.
+## Why OKF
 
-Pointing an AI agent at this repo works the same way — the bundle is designed so
-an agent can answer a question by opening two or three files rather than loading
-everything.
+Monitor's documentation is hundreds of HTML pages built for people clicking
+through a website. An agent reading that directly spends most of its context on
+navigation chrome, and has to guess how pages relate. OKF fixes both problems
+with very little machinery:
 
-## I want to query it in code
+- **A bundle is just a directory of markdown files.** It needs no database, server
+  or special reader. It works on GitHub, in an editor, in a coding agent's
+  workspace, or in any OKF-aware tool.
+- **One file per concept, identified by its path.** Here, a concept is usually one
+  API resource: `okf/entities/Sales/CustomerOrder.md` is `entities/Sales/CustomerOrder`.
+- **YAML frontmatter for machines, markdown body for readers.** `type` is the only
+  required key. This bundle also records the endpoint, the permission, and the
+  outgoing and incoming references, so a program can read them without parsing
+  prose.
+- **Relationships are ordinary links.** A link from customer orders to payment
+  terms *is* the fact that they are related, which turns the directory into a
+  graph you can walk in either direction.
+- **`index.md` files guide navigation.** Each directory lists what is in it, so a
+  reader starts at the top and only opens what it needs.
+- **Provenance is built in.** Every page carries `resource` and `sources` pointing
+  back to the Monitor documentation page it came from, plus `generated` recording
+  what produced it.
 
-Run the build (below) to produce **`build/model.json`** — the whole model as one
-JSON file:
+## What the bundle looks like
 
-```jsonc
-{
-  "entities": {                  // keyed by "<Module>.<ApiClass>"
-    "Sales.CustomerOrder": {
-      "title": "CustomerOrders",
-      "endpoint": { "method": "GET", "path": "/api/v1/Sales/CustomerOrders" },
-      "properties": [ ... ],
-      "references_out": [ ... ],
-      "referenced_by": [ ... ]
-    }
-  },
-  "relationships": [ ... ],      // flat edge list
-  "modules":       { ... },
-  "stats":         { ... }
-}
+```
+okf/
+├── index.md                 entry point (declares okf_version)
+├── about.md                 scope and headline numbers
+├── log.md                   when the source last changed, and what it contained
+├── guides/                  how the API is shaped: core entities, relationships,
+│                            naming, permissions, querying
+├── modules/                 one page per Monitor module, with cross-module dependencies
+└── entities/<Module>/       one page per resource
+    └── <Class>.md
 ```
 
-`build/` is not committed — it is fully derived and regenerates in seconds.
+An entity page, abridged:
+
+```markdown
+---
+type: API Entity
+title: CustomerOrders
+description: Represents a customer order.
+resource: https://api.monitor.se/api/Monitor.API.Sales.CustomerOrder.html
+endpoint: GET /api/v1/Sales/CustomerOrders
+permission: Show customer orders
+references_out:
+- /entities/Common/PaymentTerm.md
+- /entities/Sales/Customer.md
+referenced_by:
+- /entities/Manufacturing/ManufacturingOrder.md
+---
+
+# CustomerOrders
+
+| Property | Type | Null | References | Constraints | Description |
+| --- | --- | --- | --- | --- | --- |
+| `PaymentTermId` | `Int64?` | yes | [PaymentTerms](../Common/PaymentTerm.md) |  | ... |
+```
+
+The body continues with enumerations, a JSON example, and a **Referenced by**
+section listing every entity and property that points here.
+
+To answer *"which permission do I need to read customer orders, and how do they
+link to payment terms?"*, an agent opens `okf/index.md`, then
+`okf/entities/Sales/index.md`, then `CustomerOrder.md`. The permission is in the
+frontmatter, and the `PaymentTermId` row links to the payment terms page.
+
+**Where to start reading:** [`okf/guides/core-entities.md`](okf/guides/core-entities.md)
+lists the 20 entities the rest of the model hangs off.
+
+## Using it
+
+| Output | What it is | Use it for |
+| --- | --- | --- |
+| **[`okf/`](okf/index.md)** | The OKF bundle | Reading on GitHub or in an editor; AI agents that can open files on demand (Claude Code, Copilot in VS Code, Cursor) |
+| `okf-compact/` | The same model in 14 files, one per module. Not OKF. | Agents with a cap on uploaded knowledge files |
+| `okf-html/` | `okf/` rendered as a static site with search. Not OKF. | Browsing: open `okf-html/index.html` from disk |
+| `build/model.json` | The same model as one JSON file. Generated, not committed. | Querying from your own code |
+
+All four come from the same model in a single build, so they never disagree.
+[`GETTING_STARTED.md`](GETTING_STARTED.md) explains each one, including a snippet
+to drop into your agent's instructions.
+
+## Conformance
+
+`check.py` verifies on every build that the bundle conforms to OKF v0.2:
+
+- every concept has frontmatter with a non-empty `type`,
+- `index.md` and `log.md` carry no frontmatter, except `okf_version` on the root index,
+- `log.md` headings are dates, newest first,
+- every link resolves.
+
+The log is dated from when the source pages last changed, not from when the build
+ran, so rebuilding unchanged input gives byte-identical output and the bundle's
+git diff shows only real changes.
+
+## Scope — read this before relying on the bundle
+
+This bundle covers the **queryable data model**, from the API Reference pages.
+Two things are deliberately left out:
+
+- **Write operations.** The 913 `Monitor.API.<Module>.Commands.*` pages are
+  excluded by design. This is the read model.
+- **Monitor's Developer Guide.** Authentication, URL format, query options and
+  examples are documented at <https://api.monitor.se/articles/v1/index.html>,
+  which is not scraped.
 
 ## Quickstart
 
-```bash
-git clone <this repo>
-cd "MonitorApi Documentation"
+Reading the bundle needs nothing installed. To build it yourself or get
+`build/model.json` on Linux, macOS or WSL:
 
-python3.11 -m venv .venv
+```bash
+git clone https://github.com/TUOVAProject/erp_okf.git
+cd erp_okf
+
+python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 
-.venv/bin/python build.py     # offline, a few seconds
+.venv/bin/python build.py     # regenerate all outputs from the html/ cache
 .venv/bin/python check.py     # verify the build
 ```
 
-The default build is **offline and deterministic**: it reads the committed
-`html/` cache and never touches the network. Running it twice produces
-byte-identical output.
+`build.py` reads the documentation pages already cached in `html/`, so it needs no
+network connection and finishes in a few seconds. It fetches from Monitor's site
+only when you ask it to with `--scrape` or `--refresh`.
 
-## What's in the repo
+Windows commands and more detailed instructions for each step are in
+[`GETTING_STARTED.md`](GETTING_STARTED.md).
 
-| Path | |
-|---|---|
-| `okf/` | **The deliverable.** The knowledge bundle — 405 markdown files. Committed. |
-| `build/model.json` | The same model as one JSON file, for code. Generated, not committed. |
-| `html/` | Cache of the scraped documentation pages. Committed, so builds are reproducible offline. |
-| `endpoint_index.json` | Crawl manifest: what was found and what was deliberately skipped. |
-| `baseline.json` | Recorded stats floor. The build fails if extraction drops below it. |
-| `build.py` | The only entry point. |
-| `check.py` | Verification suite — run after any change. |
-| `monitor_api/` | The pipeline: `scrape` → `parse` → `model` → `emit_json` / `emit_okf`. |
-
-## How it works
+## How the bundle is built
 
 ```
 api.monitor.se ──scrape.py──▶ html/ ──parse.py──▶ raw page dicts
@@ -97,56 +178,60 @@ api.monitor.se ──scrape.py──▶ html/ ──parse.py──▶ raw page d
                                                      model.py          normalise, resolve
                                                         │              references, build the
                                                         ▼              graph, validate
-                                        ┌───────────────┴───────────────┐
-                                  emit_json.py                     emit_okf.py
-                                        │                               │
-                                  build/model.json                    okf/
+                          ┌──────────────┬──────────────┴──────────────┐
+                    emit_json.py     emit_okf.py                 emit_compact.py
+                          │              │                             │
+                  build/model.json     okf/ ──emit_html.py──▶ okf-html/  okf-compact/
 ```
 
-1. **`scrape.py`** crawls from `toc.html`, writes `html/<Module>/<Class>.html`.
-2. **`parse.py`** turns docfx HTML into raw dicts. It reads structure, not prose:
-   a relative `Monitor.API.<Module>.<Class>.html` href is an exact entity
-   pointer, and per-property facts come from `<li>` elements.
-3. **`model.py`** normalises, resolves every reference, builds the graph both
-   ways, and **validates**. A failure here means the source markup changed.
-4. **`emit_json.py`** and **`emit_okf.py`** are pure projections of that model.
+1. **`scrape.py`** crawls the API Reference and caches each page in
+   `html/<Module>/<Class>.html`. A normal build never touches the network, so it
+   is **offline and deterministic**.
+2. **`parse.py`** reads the docfx HTML by structure, not prose. A relative
+   `Monitor.API.<Module>.<Class>.html` href is an exact entity pointer, and
+   per-property facts come from `<li>` elements. Nothing is guessed from names.
+3. **`model.py`** normalises the pages, resolves every reference, builds the graph
+   in both directions, and **validates**. The build fails rather than producing a
+   smaller bundle when the source markup changes or extraction drops below
+   `baseline.json`.
+4. The **emitters** are pure projections of that one model. `emit_okf.py` writes
+   the bundle, and the others derive their views from the same data.
 
-## Refreshing from upstream
+### Refreshing from upstream
 
 ```bash
 .venv/bin/python build.py --scrape    # fetch pages missing from the cache
 .venv/bin/python build.py --refresh   # re-fetch every page, replacing the cache
 ```
 
-`html/` is a cache and a cached page is never silently updated, so `--scrape`
-only adds what is new. Use `--refresh` to pick up documentation changes; treat
+`html/` is a cache, and a cached page is never silently updated, so `--scrape`
+only adds what is new. Use `--refresh` to pick up documentation changes. Treat
 the result as a deliberate commit and read the diff before keeping it.
 
-## Scope — read this before relying on the bundle
+## What's in the repo
 
-This bundle covers the **queryable data model**. Two things are deliberately or
-unavoidably absent:
-
-- **Write operations.** The 913 `Monitor.API.<Module>.Commands.*` pages are
-  excluded by design. This is the read model.
-- **Authentication and request syntax.** The source documentation contains no
-  authentication reference, no `$filter`/`$expand`/paging syntax and no status
-  codes — so neither does this bundle, and nothing here is invented to fill the
-  gap. `okf/guides/querying.md` states exactly what the source does and does not
-  say.
-
-Use this to determine *which resource and which field*. You will need Monitor's
-own operational documentation to actually make a call.
+| Path | |
+|---|---|
+| `okf/` | **The deliverable.** The OKF bundle. Committed. |
+| `okf-compact/` | Compact view for file-capped agents. Generated, committed. |
+| `okf-html/` | Static HTML site rendered from `okf/`. Generated, committed. |
+| `build/model.json` | The model as one JSON file. Generated, not committed. |
+| `html/` | Cache of the scraped documentation pages. Committed, so builds are reproducible offline. |
+| `endpoint_index.json` | Crawl manifest: what was found, what was deliberately skipped, and when the cache last changed. |
+| `baseline.json` | Recorded stats floor. The build fails if extraction drops below it. |
+| `build.py` | The only entry point. |
+| `check.py` | Verification suite. Run it after any change. |
+| `monitor_api/` | The pipeline modules. |
 
 ## Numbers
 
-Deliberately not repeated here — they would go stale. The current counts are
-generated into [`okf/index.md`](okf/index.md) and
+These are deliberately not repeated here, because they would go stale. The
+current counts are generated into [`okf/about.md`](okf/about.md) and
 [`okf/log.md`](okf/log.md) on every build.
 
 ## Licence and attribution
 
-The **code** (`build.py`, `check.py`, `monitor_api/`) is MIT licensed — see
+The **code** (`build.py`, `check.py`, `monitor_api/`) is MIT licensed. See
 [`LICENSE`](LICENSE).
 
 The contents of `html/` and `okf/` are a cache of, and a derivative work of, the

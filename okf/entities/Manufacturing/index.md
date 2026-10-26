@@ -1,10 +1,3 @@
----
-type: Index
-title: Manufacturing entities
-tags:
-- Manufacturing
----
-
 # Manufacturing entities
 
 30 documented pages in the Manufacturing module.

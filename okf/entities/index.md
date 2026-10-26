@@ -1,8 +1,3 @@
----
-type: Index
-title: Entities
----
-
 # Entities
 
 Documented pages grouped by module.

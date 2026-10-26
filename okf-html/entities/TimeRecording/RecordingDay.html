@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RecordingDays · Monitor ERP API</title>
+<meta name="description" content="Represents a Recording Day, which holds the attendance and work recordings which belongs to an employee for a specific date.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/TimeRecording.html">TimeRecording</a><span class="sep">/</span>RecordingDays</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html" aria-current="location">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="recordingdays">RecordingDays</h1>
+<p>Represents a Recording Day, which holds the attendance and work recordings which belongs to an employee for a specific date.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/TimeRecording.html">TimeRecording</a></dd><dt>API class</dt><dd><code>RecordingDay</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/TimeRecording/RecordingDays</code></dd><dt>Required permission</dt><dd>Show recording items</dd><dt>GUID</dt><dd><code>0E8C9FCB-5AA5-4075-8FD0-2CF9305FCE4F</code></dd><dt>Introduced in</dt><dd>2.25</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the recording day.</td>
+</tr>
+<tr>
+<td class="prop"><code>RecordingDate</code></td>
+<td class="type"><code>DateTime</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The date this recording day belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>PersonId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td></td>
+<td>The business key identifier of the Employee that this recording day belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>ScheduleId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the workshop schedule assigned to this day. Null if recording without schedule.</td>
+</tr>
+<tr>
+<td class="prop"><code>OvertimeScheduleId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the workshop overtime schedule assigned to this day. Null if recording without overtime schedule.</td>
+</tr>
+<tr>
+<td class="prop"><code>CalculatedScheduleDiff</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The calculated difference between the schedule length and the sum of recorded attendance and absence on the day.</td>
+</tr>
+<tr>
+<td class="prop"><code>CalculatedFlex</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The days calculated total flex-time.</td>
+</tr>
+<tr>
+<td class="prop"><code>CalculatedOvertime</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The days calculated total overtime.</td>
+</tr>
+<tr>
+<td class="prop"><code>CalculatedAbsence</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The days calculated total absence.</td>
+</tr>
+<tr>
+<td class="prop"><code>CalculatedAttendance</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The days calculated total attendance.</td>
+</tr>
+<tr>
+<td class="prop"><code>Exported</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicatates if the day has been exported by the salary export system. When true the creation of new or modification of existing attendance recordings is not allowed.</td>
+</tr>
+<tr>
+<td class="prop"><code>Authorized</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicatates if the day has been authorized.</td>
+</tr>
+<tr>
+<td class="prop"><code>AttendanceIntervals</code></td>
+<td class="type"><code>AttendanceIntervals[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="AttendanceInterval.html">AttendanceIntervals</a></td>
+<td>expandable, collection</td>
+<td>The recorded attendance intervals belonging to this day.</td>
+</tr>
+<tr>
+<td class="prop"><code>WorkIntervals</code></td>
+<td class="type"><code>WorkIntervals[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="WorkInterval.html">WorkIntervals</a></td>
+<td>expandable, collection</td>
+<td>The recorded work intervals belonging to this day.</td>
+</tr>
+<tr>
+<td class="prop"><code>Additions</code></td>
+<td class="type"><code>AdditionRecordings[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="AdditionRecording.html">AdditionRecordings</a></td>
+<td>expandable, collection</td>
+<td>Additional recordings belonging to this day.</td>
+</tr>
+<tr>
+<td class="prop"><code>Approved</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 22.1</td>
+<td>Indicates that the employee is finished with the adding or adjustments.</td>
+</tr>
+<tr>
+<td class="prop"><code>CommentText</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 22.7</td>
+<td>Recording comment</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>TimeRecording</strong></p>
+<ul>
+<li><a href="AttendanceChart.html">AttendanceChart</a> — <code>Id</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "RecordingDate": "0001-01-01T00:00:00",
+  "PersonId": 0,
+  "ScheduleId": null,
+  "OvertimeScheduleId": null,
+  "CalculatedScheduleDiff": "00:00:00",
+  "CalculatedFlex": "00:00:00",
+  "CalculatedOvertime": "00:00:00",
+  "CalculatedAbsence": "00:00:00",
+  "CalculatedAttendance": "00:00:00",
+  "Exported": false,
+  "Authorized": false,
+  "AttendanceIntervals": null,
+  "WorkIntervals": null,
+  "Additions": null,
+  "Approved": false,
+  "CommentText": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.TimeRecording.RecordingDay.html">https://api.monitor.se/api/Monitor.API.TimeRecording.RecordingDay.html</a><br><span class="badge">TimeRecording</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

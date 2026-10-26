@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Persons · Monitor ERP API</title>
+<meta name="description" content="Represents a person.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>Persons</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html" aria-current="location">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="persons">Persons</h1>
+<p>Represents a person.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Common.html">Common</a></dd><dt>API class</dt><dd><code>Person</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Common/Persons</code></dd><dt>Required permission</dt><dd>Show person</dd><dt>GUID</dt><dd><code>50651357-4726-4877-A944-87820BED57BA</code></dd><dt>Introduced in</dt><dd>2.18</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedContextType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>bitmask, enum</td>
+<td>Specifies where the person block applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsRecordingEmployee</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the person has any type of employee recording enabled.</td>
+</tr>
+<tr>
+<td class="prop"><code>EmployeeNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique, max length 10</td>
+<td>The human readable employee number of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>FirstName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The first name of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>LastName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The last name of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>PhoneNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The phone number of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>PrivatePhoneNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 23.7</td>
+<td>The private phone number of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>CellPhoneNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The cell phone number of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>PrivateCellPhoneNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 23.7</td>
+<td>The private cell phone number of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>InternalPhoneNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 2.43</td>
+<td>The internal phone number of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>EmailAddress</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The email address of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>PrivateEmailAddress</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 23.7</td>
+<td>The private email address of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>SkypeId</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The Skype identifier of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>FaxNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The fax number of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>Position</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The position of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsReference</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the person is a reference.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsPurchaseManager</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the person is a purchase manager.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsPlanner</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specififes if the person is a planner.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsAccountManager</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the person is an account manager.</td>
+</tr>
+<tr>
+<td class="prop"><code>Contact</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The name of the person's contact.</td>
+</tr>
+<tr>
+<td class="prop"><code>ContactPhoneNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The phone number of the person's contact.</td>
+</tr>
+<tr>
+<td class="prop"><code>ContactCellPhoneNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The cell phone number of the person's contact.</td>
+</tr>
+<tr>
+<td class="prop"><code>ContactEmailAddress</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The email address of the person's contact.</td>
+</tr>
+<tr>
+<td class="prop"><code>AddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="Address.html">Addresses</a></td>
+<td></td>
+<td>The business key identifier of the person's address. References Addresses .</td>
+</tr>
+<tr>
+<td class="prop"><code>Address</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Address.html">Addresses</a></td>
+<td>expandable</td>
+<td>The address of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>CommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the person's comment. Reference Comments .</td>
+</tr>
+<tr>
+<td class="prop"><code>Comment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The comment of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedFromDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The date that the person starts being blocked from.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedToDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The date that the person stops being blocked.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsPersonBlocked</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the person is blocked.</td>
+</tr>
+<tr>
+<td class="prop"><code>PersonBlockedById</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>Specifies the application user that blocked the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>PersonBlockedDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The date when the person was blocked.</td>
+</tr>
+<tr>
+<td class="prop"><code>CanAuthorize</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the person can authorize invoices provided that EIM is not enabled for this MONITOR system.</td>
+</tr>
+<tr>
+<td class="prop"><code>ApplicationUserId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="ApplicationUser.html">ApplicationUsers</a></td>
+<td></td>
+<td>The business key identifier of the application user that is coupled to the person. References ApplicationUsers .</td>
+</tr>
+<tr>
+<td class="prop"><code>IsSeller</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the person is a seller.</td>
+</tr>
+<tr>
+<td class="prop"><code>Initials</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 5, since 2.43</td>
+<td>Max length 5</td>
+</tr>
+<tr>
+<td class="prop"><code>DepartmentId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Department.html">Departments</a></td>
+<td>since 2.43</td>
+<td>The business key identifier of the department that the person belongs to. References Departments .</td>
+</tr>
+<tr>
+<td class="prop"><code>DistrictId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Sales/CustomerDistrict.html">CustomerDistricts</a></td>
+<td>since 2.43</td>
+<td>The business key identifier of the district that the person belongs to. References CustomerDistricts .</td>
+</tr>
+<tr>
+<td class="prop"><code>LanguageId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="LanguageCode.html">LanguageCodes</a></td>
+<td></td>
+<td>The business key identifier of the person's preferred language. References LanguageCodes .</td>
+</tr>
+<tr>
+<td class="prop"><code>WarehouseId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Warehouse.html">Warehouses</a></td>
+<td></td>
+<td>The business key identifier of the person's default warehouse. References Warehouses .</td>
+</tr>
+<tr>
+<td class="prop"><code>Category</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 15</td>
+<td>The category of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>IdentityNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 16, since 2.43</td>
+<td>The identity number of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>GroupSettingsId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the person's attendance group settings. References AttendanceGroupSettings.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseWorkCenterManufacturingPrintSettings</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.28</td>
+<td>Specifies if manufacturing order document settings should come from the work center's settings or the person's settings.</td>
+</tr>
+<tr>
+<td class="prop"><code>ManufacturingPrintSettings</code></td>
+<td class="type"><code>PersonManufacturingPrintSettings[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="PersonManufacturingPrintSettings.html">PersonManufacturingPrintSettings</a></td>
+<td>expandable, collection, since 2.28</td>
+<td>The person's print settings for manufacturing order documents.</td>
+</tr>
+<tr>
+<td class="prop"><code>PlannedAbsences</code></td>
+<td class="type"><code>PlannedAbsences[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../TimeRecording/PlannedAbsence.html">PlannedAbsences</a></td>
+<td>expandable, collection, since 2.47</td>
+<td>The planned absences for the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>TimeBanks</code></td>
+<td class="type"><code>PersonTimeBanks[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../TimeRecording/PersonTimeBank.html">PersonTimeBanks</a></td>
+<td>expandable, collection, since 22.3</td>
+<td>The time banks for the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>Relatives</code></td>
+<td class="type"><code>PersonRelatives[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="PersonRelative.html">PersonRelatives</a></td>
+<td>expandable, collection, since 22.3</td>
+<td>The relatives of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>EmploymentPeriods</code></td>
+<td class="type"><code>EmploymentPeriods[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="EmploymentPeriod.html">EmploymentPeriods</a></td>
+<td>expandable, collection, since 22.3</td>
+<td>The employment periods that belong to the personnel record.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExtraFields</code></td>
+<td class="type"><code>ExtraFields[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ExtraField.html">ExtraFields</a></td>
+<td>expandable, collection, since 22.3</td>
+<td>The extra fields of the personnel record.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsProjectManager</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 23.3</td>
+<td>Specifies if the person is a project manager.</td>
+</tr>
+<tr>
+<td class="prop"><code>AvailableWorkshopSchedules</code></td>
+<td class="type"><code>Schedules[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../TimeRecording/Schedule.html">Schedules</a></td>
+<td>expandable, collection, since 24.3</td>
+<td>The workshop schedules of the personnel record.</td>
+</tr>
+<tr>
+<td class="prop"><code>AvailableWorkCenters</code></td>
+<td class="type"><code>PersonWorkCenters[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../TimeRecording/PersonWorkCenter.html">PersonWorkCenters</a></td>
+<td>expandable, collection, since 24.3</td>
+<td>Specifies which work centers (and thereby which report numbers) the person should be allowed to select among in the priority plan and when starting work via report numbers.</td>
+</tr>
+<tr>
+<td class="prop"><code>Signature</code></td>
+<td class="type"><code>BlobData</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="BlobData.html">BlobData</a></td>
+<td>expandable, since 24.5</td>
+<td>The entity signature blob data</td>
+</tr>
+<tr>
+<td class="prop"><code>EmployeeRecordingType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>bitmask, enum, since 24.5</td>
+<td>The employee recording type of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>ScheduleManagementType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>bitmask, enum, since 24.5</td>
+<td>The schedule management type of the person.</td>
+</tr>
+<tr>
+<td class="prop"><code>PersonScheduleCycles</code></td>
+<td class="type"><code>PersonScheduleCycles[]</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>expandable, collection, since 24.5</td>
+<td>The schedule cycles of the personnel record.</td>
+</tr>
+<tr>
+<td class="prop"><code>AttendanceRecordingAuthorizers</code></td>
+<td class="type"><code>AttendanceRecordingAuthorizers[]</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>expandable, collection, since 24.5</td>
+<td>The attendance recording authorizers of the personnel record.</td>
+</tr>
+<tr>
+<td class="prop"><code>WorkMethod</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 24.9</td>
+<td>The work method of the person.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>BlockedContextType</code><span class="badge">bitmask — values combine</span><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">RegisterCustomerOrder<span>=1</span></span></div></li><li><code>EmployeeRecordingType</code><span class="badge">bitmask — values combine</span><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">AttendanceAndWork<span>=1</span></span><span class="ev">OnlyWork<span>=2</span></span></div></li><li><code>ScheduleManagementType</code><span class="badge">bitmask — values combine</span><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">ScheduleCycle<span>=1</span></span></div></li><li><code>WorkMethod</code><div class="evs"><span class="ev">OnlyChange<span>=0</span></span><span class="ev">StartFinishAtWill<span>=1</span></span></div></li></ul>
+
+
+
+
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Common</strong></p>
+<ul>
+<li><a href="DelegatedWork.html">DelegatedWork</a> — <code>EmployeeId</code> (FK)</li>
+<li><a href="EmploymentPeriod.html">EmploymentPeriods</a> — <code>PersonId</code> (FK)</li>
+<li><a href="ProjectActivityCalendarAppointment.html">ProjectActivityCalendarAppointments</a> — <code>SenderPersonId</code> (FK)</li>
+<li><a href="Project.html">Projects</a> — <code>OurReference</code> (expand)</li>
+<li><a href="Project.html">Projects</a> — <code>OurReferenceId</code> (FK)</li>
+<li><a href="Project.html">Projects</a> — <code>ProjectManagerId</code> (FK)</li>
+<li><a href="Project.html">Projects</a> — <code>Seller</code> (expand)</li>
+<li><a href="Project.html">Projects</a> — <code>SellerId</code> (FK)</li>
+</ul>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>OurReferenceId</code> (FK)</li>
+<li><a href="../Inventory/PartPlanningInformation.html">PartPlanningInformation</a> — <code>ContactId</code> (FK)</li>
+<li><a href="../Inventory/PartTemplate.html">PartTemplates</a> — <code>PreparerId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>Preparer</code> (expand)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>PreparerId</code> (FK)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>CustomerOrderOurReferenceId</code> (FK)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>InstalledBy</code> (FK)</li>
+<li><a href="../Inventory/QuantityChange.html">QuantityChanges</a> — <code>DeliveredByPersonId</code> (FK)</li>
+<li><a href="../Inventory/QuantityChange.html">QuantityChanges</a> — <code>PickingByPersonId</code> (FK)</li>
+</ul>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="../Manufacturing/MaintenanceReporting.html">MaintenanceReportings</a> — <code>ReportedBy</code> (expand)</li>
+<li><a href="../Manufacturing/MaintenanceReporting.html">MaintenanceReportings</a> — <code>ReportedById</code> (FK)</li>
+<li><a href="../Manufacturing/ManufacturingOrderOperationReporting.html">ManufacturingOrderOperationReportings</a> — <code>EmployeeId</code> (FK)</li>
+<li><a href="../Manufacturing/ManufacturingOrderOperationReporting.html">ManufacturingOrderOperationReportings</a> — <code>ReportingEmployeeId</code> (FK)</li>
+<li><a href="../Manufacturing/ManufacturingPickingList.html">ManufacturingPickingLists</a> — <code>CreatedByPersonId</code> (FK)</li>
+<li><a href="../Manufacturing/ManufacturingPickingList.html">ManufacturingPickingLists</a> — <code>PrintedByPersonId</code> (FK)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="../Purchase/BlanketOrderPurchase.html">BlanketOrderPurchases</a> — <code>OurReference</code> (expand)</li>
+<li><a href="../Purchase/BlanketOrderPurchase.html">BlanketOrderPurchases</a> — <code>OurReferenceId</code> (FK)</li>
+<li><a href="../Purchase/Inquiry.html">Inquiries</a> — <code>BusinessContactReferenceId</code> (FK)</li>
+<li><a href="../Purchase/Inquiry.html">Inquiries</a> — <code>CreatedById</code> (FK)</li>
+<li><a href="../Purchase/Inquiry.html">Inquiries</a> — <code>OurReferenceId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrder.html">PurchaseOrders</a> — <code>OurReference</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrder.html">PurchaseOrders</a> — <code>OurReferenceId</code> (FK)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>AuthorizedSignerPerson</code> (expand)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>AuthorizedSignerPersonId</code> (FK)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>PurchaseManager</code> (expand)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>PurchaseManagerId</code> (FK)</li>
+</ul>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="../Sales/BlanketOrderSales.html">BlanketOrderSales</a> — <code>OurReference</code> (expand)</li>
+<li><a href="../Sales/BlanketOrderSales.html">BlanketOrderSales</a> — <code>OurReferenceId</code> (FK)</li>
+<li><a href="../Sales/BlanketOrderSales.html">BlanketOrderSales</a> — <code>Seller</code> (expand)</li>
+<li><a href="../Sales/BlanketOrderSales.html">BlanketOrderSales</a> — <code>SellerId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunity.html">BusinessOpportunities</a> — <code>OurReference</code> (expand)</li>
+<li><a href="../Sales/BusinessOpportunity.html">BusinessOpportunities</a> — <code>OurReferenceId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunity.html">BusinessOpportunities</a> — <code>Seller</code> (expand)</li>
+<li><a href="../Sales/BusinessOpportunity.html">BusinessOpportunities</a> — <code>SellerId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunityActivity.html">BusinessOpportunityActivities</a> — <code>ReferenceId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunitySalesProcessStep.html">BusinessOpportunitySalesProcessSteps</a> — <code>ResponsibleSellerId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunityType.html">BusinessOpportunityTypes</a> — <code>ResponsibleSeller</code> (expand)</li>
+<li><a href="../Sales/BusinessOpportunityType.html">BusinessOpportunityTypes</a> — <code>ResponsibleSellerId</code> (FK)</li>
+<li><a href="../Sales/CreateSalesPickingList.html">CreateSalesPickingList</a> — <code>CreatedByPersonId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderInvoice.html">CustomerOrderInvoices</a> — <code>OurReferenceId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderInvoice.html">CustomerOrderInvoices</a> — <code>SellerId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>OurReferenceId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>SellerId</code> (FK)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>AccountManager</code> (expand)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>AccountManagerId</code> (FK)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>ResellerId</code> (FK)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>Seller</code> (expand)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>SellerId</code> (FK)</li>
+<li><a href="../Sales/Quote.html">Quotes</a> — <code>OurReferenceId</code> (FK)</li>
+<li><a href="../Sales/Quote.html">Quotes</a> — <code>SellerId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreement.html">SalesAgreements</a> — <code>OurReferenceId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreement.html">SalesAgreements</a> — <code>ResponsibleId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreement.html">SalesAgreements</a> — <code>SellerId</code> (FK)</li>
+<li><a href="../Sales/SalesPickingList.html">SalesPickingLists</a> — <code>PrintedByPersonId</code> (FK)</li>
+<li><a href="../Sales/SalesProcessTemplateRow.html">SalesProcessTemplateRows</a> — <code>ResponsibleSeller</code> (expand)</li>
+<li><a href="../Sales/SalesProcessTemplateRow.html">SalesProcessTemplateRows</a> — <code>ResponsibleSellerId</code> (FK)</li>
+<li><a href="../Sales/ShipmentCustoms.html">ShipmentCustoms</a> — <code>Declarant</code> (expand)</li>
+<li><a href="../Sales/ShipmentCustoms.html">ShipmentCustoms</a> — <code>DeclarantId</code> (FK)</li>
+</ul>
+<p><strong>TimeRecording</strong></p>
+<ul>
+<li><a href="../TimeRecording/AttendanceChart.html">AttendanceChart</a> — <code>EmployeeId</code> (FK)</li>
+<li><a href="../TimeRecording/PersonTimeBank.html">PersonTimeBanks</a> — <code>PersonId</code> (FK)</li>
+<li><a href="../TimeRecording/PersonWorkCenter.html">PersonWorkCenters</a> — <code>PersonId</code> (FK)</li>
+<li><a href="../TimeRecording/RecordingDay.html">RecordingDays</a> — <code>PersonId</code> (FK)</li>
+<li><a href="../TimeRecording/StandbyWork.html">StandbyWorks</a> — <code>EmployeeId</code> (FK)</li>
+<li><a href="../TimeRecording/WorkInterval.html">WorkIntervals</a> — <code>ReportingEmployeeId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "SignatureId": null,
+  "Id": 0,
+  "BlockedContextType": 0,
+  "IsRecordingEmployee": false,
+  "EmployeeNumber": null,
+  "FirstName": null,
+  "LastName": null,
+  "PhoneNumber": null,
+  "PrivatePhoneNumber": null,
+  "CellPhoneNumber": null,
+  "PrivateCellPhoneNumber": null,
+  "InternalPhoneNumber": null,
+  "EmailAddress": null,
+  "PrivateEmailAddress": null,
+  "SkypeId": null,
+  "FaxNumber": null,
+  "Position": null,
+  "IsReference": false,
+  "IsPurchaseManager": false,
+  "IsPlanner": false,
+  "IsAccountManager": false,
+  "Contact": null,
+  "ContactPhoneNumber": null,
+  "ContactCellPhoneNumber": null,
+  "ContactEmailAddress": null,
+  "AddressId": null,
+  "Address": null,
+  "CommentId": null,
+  "Comment": null,
+  "BlockedFromDate": null,
+  "BlockedToDate": null,
+  "IsPersonBlocked": false,
+  "PersonBlockedById": null,
+  "PersonBlockedDate": null,
+  "CanAuthorize": false,
+  "ApplicationUserId": null,
+  "IsSeller": false,
+  "Initials": null,
+  "DepartmentId": 0,
+  "DistrictId": null,
+  "LanguageId": 0,
+  "WarehouseId": 0,
+  "Category": null,
+  "IdentityNumber": null,
+  "GroupSettingsId": null,
+  "UseWorkCenterManufacturingPrintSettings": false,
+  "ManufacturingPrintSettings": null,
+  "PlannedAbsences": null,
+  "TimeBanks": null,
+  "Relatives": null,
+  "EmploymentPeriods": null,
+  "ExtraFields": null,
+  "IsProjectManager": false,
+  "AvailableWorkshopSchedules": null,
+  "AvailableWorkCenters": null,
+  "Signature": null,
+  "EmployeeRecordingType": 0,
+  "ScheduleManagementType": 0,
+  "PersonScheduleCycles": null,
+  "AttendanceRecordingAuthorizers": null,
+  "WorkMethod": 0
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Common.Person.html">https://api.monitor.se/api/Monitor.API.Common.Person.html</a><br><span class="badge">Common</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

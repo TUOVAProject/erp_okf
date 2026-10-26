@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BusinessContactBankAccounts · Monitor ERP API</title>
+<meta name="description" content="Represents a business contact bank account.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>BusinessContactBankAccounts</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html" aria-current="location">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="businesscontactbankaccounts">BusinessContactBankAccounts</h1>
+<p>Represents a business contact bank account.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Common.html">Common</a></dd><dt>API class</dt><dd><code>BusinessContactBankAccount</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Common/BusinessContactBankAccounts</code></dd><dt>GUID</dt><dd><code>2E25739E-28B0-4E9A-B1E0-E5F71BB65783</code></dd><dt>Introduced in</dt><dd>2.28</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the business contact bank account.</td>
+</tr>
+<tr>
+<td class="prop"><code>ClearingNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The clearing number of the business contact bank account.</td>
+</tr>
+<tr>
+<td class="prop"><code>ClearingSystem</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The clearing system of the business contact bank account.</td>
+</tr>
+<tr>
+<td class="prop"><code>CountryId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Country.html">Countries</a></td>
+<td></td>
+<td>The business key identifier of the business contact bank account country.</td>
+</tr>
+<tr>
+<td class="prop"><code>Country</code></td>
+<td class="type"><code>Countries</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Country.html">Countries</a></td>
+<td>expandable</td>
+<td>The country of the business contact bank account.</td>
+</tr>
+<tr>
+<td class="prop"><code>CentralBankCodeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="CentralBankCode.html">CentralBankCodes</a></td>
+<td></td>
+<td>The business key identifier of the business contact bank account central bank code.</td>
+</tr>
+<tr>
+<td class="prop"><code>CentralBankCode</code></td>
+<td class="type"><code>CentralBankCodes</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CentralBankCode.html">CentralBankCodes</a></td>
+<td>expandable</td>
+<td>The central bank code of the business contact bank account.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the business contact bank account currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>Currency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The currency of the business contact bank account.</td>
+</tr>
+<tr>
+<td class="prop"><code>Type</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The type of the business contact bank account.</td>
+</tr>
+<tr>
+<td class="prop"><code>Number</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The human readable identifier number of the business contact bank account.</td>
+</tr>
+<tr>
+<td class="prop"><code>BankIdentifierCode</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The human readable identifier bank identifier code of the business contact bank account.</td>
+</tr>
+<tr>
+<td class="prop"><code>BankAddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="Address.html">Addresses</a></td>
+<td></td>
+<td>The business key identifier of the business contact bank account bank address.</td>
+</tr>
+<tr>
+<td class="prop"><code>BankAddress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Address.html">Addresses</a></td>
+<td>expandable</td>
+<td>The bank address of the business contact bank account.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>Type</code><div class="evs"><span class="ev">Iban<span>=1</span></span><span class="ev">Bban<span>=2</span></span><span class="ev">Upic<span>=3</span></span><span class="ev">Miscellaneous<span>=4</span></span></div></li></ul>
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Accounting</strong></p>
+<ul>
+<li><a href="../Accounting/OutgoingPayment.html">OutgoingPayments</a> — <code>ReceivingBankAccountId</code> (FK)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>AllBusinessContactBankAccountOfSupplier</code> (expand)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>DefaultBusinessContactBankAccount</code> (expand)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>DefaultBusinessContactBankAccountId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "ClearingNumber": null,
+  "ClearingSystem": null,
+  "CountryId": 0,
+  "Country": null,
+  "CentralBankCodeId": null,
+  "CentralBankCode": null,
+  "CurrencyId": 0,
+  "Currency": null,
+  "Type": 0,
+  "Number": null,
+  "BankIdentifierCode": null,
+  "BankAddressId": null,
+  "BankAddress": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Common.BusinessContactBankAccount.html">https://api.monitor.se/api/Monitor.API.Common.BusinessContactBankAccount.html</a><br><span class="badge">Common</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

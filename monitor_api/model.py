@@ -80,6 +80,9 @@ def scrape_scope() -> dict:
     return {
         "excluded_pages": index.get("excluded_pages", 0),
         "excluded_patterns": index.get("excluded_patterns", []),
+        # The day the cache content last changed, not the day of the run, so it
+        # moves only when source_digest does.
+        "fetched_on": index.get("fetched_on"),
     }
 
 
@@ -414,6 +417,10 @@ def validate(model: dict, page_count: int, dangling: list[str]) -> list[str]:
 
     if len(entities) != page_count:
         problems.append(f"{page_count} pages produced {len(entities)} entities (key collision?)")
+
+    # log.md's OKF date heading comes from here; without it the log cannot be dated.
+    if not model["scope"].get("fetched_on"):
+        problems.append("endpoint_index.json records no fetched_on date (re-run build.py --scrape)")
 
     for key, entity in entities.items():
         if not entity["properties"] and key not in EMPTY_PROPERTIES_ALLOWLIST:

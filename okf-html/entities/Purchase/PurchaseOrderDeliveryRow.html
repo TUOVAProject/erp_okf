@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PurchaseOrderDeliveryRows · Monitor ERP API</title>
+<meta name="description" content="Represents a purchase order delivery row entry">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Purchase.html">Purchase</a><span class="sep">/</span>PurchaseOrderDeliveryRows</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html" aria-current="location">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="purchaseorderdeliveryrows">PurchaseOrderDeliveryRows</h1>
+<p>Represents a purchase order delivery row entry</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Purchase.html">Purchase</a></dd><dt>API class</dt><dd><code>PurchaseOrderDeliveryRow</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Purchase/PurchaseOrderDeliveryRows</code></dd><dt>Required permission</dt><dd>Show purchase orders</dd><dt>GUID</dt><dd><code>DDBDFA96-3D45-4A77-B5BF-A3B6A19DEFD6</code></dd><dt>Introduced in</dt><dd>2.26</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the purchase order delivery row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Version</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The version of the purchase order delivery row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PurchaseOrderId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="PurchaseOrder.html">PurchaseOrders</a></td>
+<td></td>
+<td>The business key identifier of the purchase order.</td>
+</tr>
+<tr>
+<td class="prop"><code>PurchaseOrderRowId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="PurchaseOrderRow.html">PurchaseOrderRows</a></td>
+<td></td>
+<td>The business key identifier of the purchase order row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PurchaseOrderRow</code></td>
+<td class="type"><code>PurchaseOrderRows</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="PurchaseOrderRow.html">PurchaseOrderRows</a></td>
+<td>expandable</td>
+<td>The purchase order row.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The delivery date of the of order delivery row.</td>
+</tr>
+<tr>
+<td class="prop"><code>GoodsLocation</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 40</td>
+<td>The human readable goods location of the order delivery row.</td>
+</tr>
+<tr>
+<td class="prop"><code>GoodsMessage</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 100</td>
+<td>The human readable good message on the order delivery row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ArrivedQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The arrived qty on the order delivery row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ApprovedQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The approved qty on the order delivery row.</td>
+</tr>
+<tr>
+<td class="prop"><code>AccountsPayableId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Accounting/AccountsPayable.html">AccountsPayables</a></td>
+<td>since 22.5</td>
+<td>The business key identifier of the accounts payable the delivery row is linked to.</td>
+</tr>
+<tr>
+<td class="prop"><code>PurchaseOrderDeliveryRowQuantities</code></td>
+<td class="type"><code>PurchaseOrderDeliveryRowQuantities[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="PurchaseOrderDeliveryRowQuantity.html">PurchaseOrderDeliveryRowQuantities</a></td>
+<td>collection, since 26.4</td>
+<td>The quantities of the order delivery row.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Accounting</strong></p>
+<ul>
+<li><a href="../Accounting/BookingRow.html">BookingRows</a> — <code>PurchaseOrderDeliveryRowId</code> (FK)</li>
+</ul>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="../Manufacturing/ManufacturingOrderOperationReporting.html">ManufacturingOrderOperationReportings</a> — <code>PurchaseOrderDeliveryRowId</code> (FK)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="PurchaseOrderDelivery.html">PurchaseOrderDeliveries</a> — <code>Rows</code> (expand)</li>
+<li><a href="PurchaseOrderDeliveryRowQuantity.html">PurchaseOrderDeliveryRowQuantities</a> — <code>ParentId</code> (FK)</li>
+<li><a href="PurchaseOrderInvoiceRow.html">PurchaseOrderInvoiceRows</a> — <code>PurchaseOrderDeliveryRowId</code> (FK)</li>
+<li><a href="PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>OriginatingPurchaseOrderDeliveryRowId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Version": 0,
+  "PurchaseOrderId": 0,
+  "PurchaseOrderRowId": 0,
+  "PurchaseOrderRow": null,
+  "DeliveryDate": "0001-01-01T00:00:00+00:00",
+  "GoodsLocation": null,
+  "GoodsMessage": null,
+  "ArrivedQuantity": 0.0,
+  "ApprovedQuantity": 0.0,
+  "AccountsPayableId": null,
+  "PurchaseOrderDeliveryRowQuantities": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderDeliveryRow.html">https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderDeliveryRow.html</a><br><span class="badge">Purchase</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

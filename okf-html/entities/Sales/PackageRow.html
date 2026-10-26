@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PackageRows · Monitor ERP API</title>
+<meta name="description" content="Represents a package row.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>PackageRows</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html" aria-current="location">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="packagerows">PackageRows</h1>
+<p>Represents a package row.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Sales.html">Sales</a></dd><dt>API class</dt><dd><code>PackageRow</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Sales/PackageRows</code></dd><dt>Required permission</dt><dd>Show customer orders</dd><dt>GUID</dt><dd><code>4CDC166D-5C02-4BF4-A440-D49E727AAFE9</code></dd><dt>Introduced in</dt><dd>25.5</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the package row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ParentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="SalesPickingList.html">SalesPickingLists</a></td>
+<td></td>
+<td>The business key identifier of the row's picking list.</td>
+</tr>
+<tr>
+<td class="prop"><code>ParentRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="PackageRow.html">PackageRows</a></td>
+<td></td>
+<td>The business key identifier of the row's parent row.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomerOrderDeliveryRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a></td>
+<td></td>
+<td>The business key identifier of the row's delivery row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PackagingPartId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
+<td></td>
+<td>The business key identifier of the packing part.</td>
+</tr>
+<tr>
+<td class="prop"><code>Cleared</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the row is cleared.</td>
+</tr>
+<tr>
+<td class="prop"><code>ContainerNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The container number of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SealNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The seal number of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PackageNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The package number of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OtherPackageNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The other package number of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OtherPackageNumberNumberSeriesType</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The other package number series type of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExternalPackageId</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The external package id of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Length</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The length of the row's content.</td>
+</tr>
+<tr>
+<td class="prop"><code>Width</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The width of the row's content.</td>
+</tr>
+<tr>
+<td class="prop"><code>Height</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The height of the row's content.</td>
+</tr>
+<tr>
+<td class="prop"><code>Volume</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The volume of the row's content.</td>
+</tr>
+<tr>
+<td class="prop"><code>VolumeCalculated</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The calculated volume of the row's content.</td>
+</tr>
+<tr>
+<td class="prop"><code>GrossWeight</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The gross weight of the row's content.</td>
+</tr>
+<tr>
+<td class="prop"><code>GrossWeightCalculated</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The calculated gross weight of the row's content.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExternalCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the row's external comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExternalComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The external comment of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>InternalCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the row's internal comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>InternalComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The internal comment of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PackageComplete</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the package row is complete.</td>
+</tr>
+<tr>
+<td class="prop"><code>BalanceChange</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The balance change of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>TemplateCode</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The template code of the row.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>OtherPackageNumberNumberSeriesType</code><div class="evs"><span class="ev">NotInitalized<span>=0</span></span><span class="ev">CustomerOrderNumber<span>=2</span></span><span class="ev">PurchaseOrderNumber<span>=3</span></span><span class="ev">AccountsReceivableNumber<span>=4</span></span><span class="ev">SupplierCode<span>=5</span></span><span class="ev">CustomerCode<span>=6</span></span><span class="ev">AccountsPayableNumber<span>=7</span></span><span class="ev">InventoryLogPriceId<span>=13</span></span><span class="ev">PickingListNumber<span>=14</span></span><span class="ev">AccountsReceivableLedgerNumber<span>=15</span></span><span class="ev">RejectionLogId<span>=16</span></span><span class="ev">ReportNumberForMaterial<span>=17</span></span><span class="ev">ReportNumberForOperation<span>=18</span></span><span class="ev">ManufacturingOrderNumber<span>=19</span></span><span class="ev">AccountsReceivableNumberCashReceipt<span>=20</span></span><span class="ev">AccountsReceivableNumberInterest<span>=21</span></span><span class="ev">AccountsReceivableNumberInternal<span>=22</span></span><span class="ev">AccountsReceivableNumberCredit<span>=23</span></span><span class="ev">ProformaInvoiceNumber<span>=24</span></span><span class="ev">DeliveryNoteNumber<span>=25</span></span><span class="ev">PhysicalInventoryList<span>=27</span></span><span class="ev">VoucherNumber<span>=28</span></span><span class="ev">AutoCoding<span>=29</span></span><span class="ev">AutoAllocation<span>=30</span></span><span class="ev">ManufacturingPickingListNumber<span>=31</span></span><span class="ev">AccountsReceivableNumberOnAccount<span>=32</span></span><span class="ev">IncomingPaymentsBundleNumber<span>=33</span></span><span class="ev">AccrualAccountingNumber<span>=34</span></span><span class="ev">ShipmentNumber<span>=35</span></span><span class="ev">AccountsPayableNumberOnAccount<span>=36</span></span><span class="ev">OutgoingPaymentsBundleNumber<span>=37</span></span><span class="ev">CaseNumber<span>=38</span></span><span class="ev">TransactionList<span>=39</span></span><span class="ev">Quote<span>=40</span></span><span class="ev">Inquiry<span>=41</span></span><span class="ev">Project<span>=43</span></span><span class="ev">ProjectCostReportingEntry<span>=44</span></span><span class="ev">FixedAsset<span>=45</span></span><span class="ev">EdiFileTransaction<span>=46</span></span><span class="ev">ServerPrinterNumber<span>=47</span></span><span class="ev">AgentTaskNumber<span>=48</span></span><span class="ev">MonitoringTaskNumber<span>=49</span></span><span class="ev">DeliverySchedule<span>=50</span></span><span class="ev">AccountsReceivableNumberDebitNote<span>=51</span></span><span class="ev">AccountsReceivableNumberServiceTax<span>=52</span></span><span class="ev">CodingMethod<span>=53</span></span><span class="ev">TransferTask<span>=54</span></span><span class="ev">BlanketOrderPurchase<span>=55</span></span><span class="ev">ArrivalNote<span>=56</span></span><span class="ev">GS1Code<span>=57</span></span><span class="ev">AccountsReceivableNumberCorrectionInvoice<span>=58</span></span><span class="ev">PackageNumber<span>=59</span></span><span class="ev">MaintenanceReportingServiceNumber<span>=60</span></span><span class="ev">BlanketOrderSales<span>=61</span></span><span class="ev">AccountingReport<span>=62</span></span><span class="ev">VatReport<span>=63</span></span><span class="ev">PaymentBundleNumber<span>=64</span></span><span class="ev">PackagingTemplateNumber<span>=65</span></span><span class="ev">AllocationKeyNumber<span>=66</span></span><span class="ev">PurchaseDeliverySchedule<span>=67</span></span><span class="ev">SalesAgreement<span>=68</span></span><span class="ev">AccountsReceivableNumberAdvance<span>=69</span></span><span class="ev">SsccPackage<span>=70</span></span><span class="ev">SalesForecast<span>=71</span></span><span class="ev">BankAccountReconciliationReport<span>=72</span></span><span class="ev">AccountsReceivableNumberCollectiveCorrectionInvoice<span>=73</span></span><span class="ev">OscarPackage<span>=74</span></span><span class="ev">DunsPackage<span>=75</span></span><span class="ev">JipdecPackage<span>=76</span></span><span class="ev">AccountsPayableNumberCorrectionInvoice<span>=77</span></span><span class="ev">BusinessOpportunity<span>=78</span></span><span class="ev">DeliveryNoteSubcontract<span>=79</span></span><span class="ev">SupplierAgreement<span>=80</span></span></div></li></ul>
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="PackageRowPartLocation.html">PackageRowPartLocations</a> — <code>ParentPackageRowId</code> (FK)</li>
+<li><a href="PackageRow.html">PackageRows</a> — <code>ParentRowId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "ParentId": null,
+  "ParentRowId": null,
+  "CustomerOrderDeliveryRowId": null,
+  "PackagingPartId": null,
+  "Cleared": false,
+  "ContainerNumber": null,
+  "SealNumber": null,
+  "PackageNumber": null,
+  "OtherPackageNumber": null,
+  "OtherPackageNumberNumberSeriesType": null,
+  "ExternalPackageId": null,
+  "Length": null,
+  "Width": null,
+  "Height": null,
+  "Volume": null,
+  "VolumeCalculated": 0.0,
+  "GrossWeight": null,
+  "GrossWeightCalculated": 0.0,
+  "ExternalCommentId": null,
+  "ExternalComment": null,
+  "InternalCommentId": null,
+  "InternalComment": null,
+  "PackageComplete": false,
+  "BalanceChange": 0.0,
+  "TemplateCode": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Sales.PackageRow.html">https://api.monitor.se/api/Monitor.API.Sales.PackageRow.html</a><br><span class="badge">Sales</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

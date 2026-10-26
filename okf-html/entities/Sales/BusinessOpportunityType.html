@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BusinessOpportunityTypes · Monitor ERP API</title>
+<meta name="description" content="Represents a business opportunity type.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>BusinessOpportunityTypes</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html" aria-current="location">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="businessopportunitytypes">BusinessOpportunityTypes</h1>
+<p>Represents a business opportunity type.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Sales.html">Sales</a></dd><dt>API class</dt><dd><code>BusinessOpportunityType</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Sales/BusinessOpportunityTypes</code></dd><dt>Required permission</dt><dd>Show business opportunity</dd><dt>GUID</dt><dd><code>b7640a9a-eae7-444d-bcff-e05e63360be7</code></dd><dt>Introduced in</dt><dd>25.9</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the business opportunity type.</td>
+</tr>
+<tr>
+<td class="prop"><code>Code</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique</td>
+<td>The human readable identifier of the business opportunity type.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsActive</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the business opportunity type is active.</td>
+</tr>
+<tr>
+<td class="prop"><code>Description</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 400</td>
+<td>The translated description of the business opportunity type.</td>
+</tr>
+<tr>
+<td class="prop"><code>Prefix</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 3</td>
+<td>The prefix of the opportunity number created by the business opportunity type.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsDefault</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the business opportunity type is the default type.</td>
+</tr>
+<tr>
+<td class="prop"><code>Priority</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The priority of the business opportunity type.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessOpportunityGroupId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="BusinessOpportunityGroup.html">BusinessOpportunityGroups</a></td>
+<td></td>
+<td>The business key identifier of the business opportunity type's business opportunity group.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessOpportunityGroup</code></td>
+<td class="type"><code>BusinessOpportunityGroups</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="BusinessOpportunityGroup.html">BusinessOpportunityGroups</a></td>
+<td>expandable</td>
+<td>The business opportunity type's business opportunity group.</td>
+</tr>
+<tr>
+<td class="prop"><code>ResponsibleSellerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td></td>
+<td>The business key identifier of the business opportunity type's .responsible seller.</td>
+</tr>
+<tr>
+<td class="prop"><code>ResponsibleSeller</code></td>
+<td class="type"><code>Persons</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td>expandable</td>
+<td>The business opportunity type's .responsible seller.</td>
+</tr>
+<tr>
+<td class="prop"><code>SalesProcessTemplateId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="SalesProcessTemplate.html">SalesProcessTemplates</a></td>
+<td></td>
+<td>The business key identifier of the business opportunity type's .sales process template.</td>
+</tr>
+<tr>
+<td class="prop"><code>SalesProcessTemplate</code></td>
+<td class="type"><code>SalesProcessTemplates</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="SalesProcessTemplate.html">SalesProcessTemplates</a></td>
+<td>expandable</td>
+<td>The business opportunity type's .sales process template.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessOpportunityActivityTemplateId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="BusinessOpportunityActivityTemplate.html">BusinessOpportunityActivityTemplates</a></td>
+<td></td>
+<td>The business key identifier of the business opportunity type's .activity template.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessOpportunityActivityTemplate</code></td>
+<td class="type"><code>BusinessOpportunityActivityTemplates</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="BusinessOpportunityActivityTemplate.html">BusinessOpportunityActivityTemplates</a></td>
+<td></td>
+<td>The business opportunity type's .activity template.</td>
+</tr>
+<tr>
+<td class="prop"><code>CommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the business opportunity type's .comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>Comment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The business opportunity type's .comment.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="BusinessOpportunity.html">BusinessOpportunities</a> — <code>BusinessOpportunityType</code> (expand)</li>
+<li><a href="BusinessOpportunity.html">BusinessOpportunities</a> — <code>BusinessOpportunityTypeId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Code": 0,
+  "IsActive": false,
+  "Description": null,
+  "Prefix": null,
+  "IsDefault": false,
+  "Priority": 0,
+  "BusinessOpportunityGroupId": null,
+  "BusinessOpportunityGroup": null,
+  "ResponsibleSellerId": null,
+  "ResponsibleSeller": null,
+  "SalesProcessTemplateId": null,
+  "SalesProcessTemplate": null,
+  "BusinessOpportunityActivityTemplateId": null,
+  "BusinessOpportunityActivityTemplate": null,
+  "CommentId": null,
+  "Comment": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Sales.BusinessOpportunityType.html">https://api.monitor.se/api/Monitor.API.Sales.BusinessOpportunityType.html</a><br><span class="badge">Sales</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

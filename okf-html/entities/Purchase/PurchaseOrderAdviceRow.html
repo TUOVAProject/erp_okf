@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PurchaseOrderAdviceRows · Monitor ERP API</title>
+<meta name="description" content="Represents a purchase order advice row.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Purchase.html">Purchase</a><span class="sep">/</span>PurchaseOrderAdviceRows</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html" aria-current="location">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="purchaseorderadvicerows">PurchaseOrderAdviceRows</h1>
+<p>Represents a purchase order advice row.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Purchase.html">Purchase</a></dd><dt>API class</dt><dd><code>PurchaseOrderAdviceRow</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Purchase/PurchaseOrderAdviceRows</code></dd><dt>Required permission</dt><dd>Show arrival</dd><dt>GUID</dt><dd><code>F5EA8FD8-8301-4C1A-A6DF-C26D966E4DFC</code></dd><dt>Introduced in</dt><dd>22.2</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the purchase order advice row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PurchaseOrderRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="PurchaseOrderRow.html">PurchaseOrderRows</a></td>
+<td></td>
+<td>The business key identifier of the purchase order row for this row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ParentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="PurchaseOrderAdvice.html">PurchaseOrderAdvices</a></td>
+<td></td>
+<td>The business key identifier of the purchase order advice for this row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Status</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The status for the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Quantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The quantity for the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveredQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The delivered quantity for the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>RestQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The rest quantity for the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>UnitId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Unit.html">Units</a></td>
+<td></td>
+<td>The business key identifier of the unit for the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ConversionFactor</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The conversion factor for the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ParentRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="PurchaseOrderAdviceRow.html">PurchaseOrderAdviceRows</a></td>
+<td></td>
+<td>The business key identifier of the purchase order advice row for the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SupplierPackageNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The supplier package number for the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SupplierAgreementReference</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The supplier agreement reference tor the row.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>Status</code><div class="evs"><span class="ev">Registered<span>=1</span></span><span class="ev">PartiallyDelivered<span>=5</span></span><span class="ev">History<span>=9</span></span></div></li></ul>
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="PurchaseOrderAdviceRowProductRecord.html">PurchaseOrderAdviceRowProductRecords</a> — <code>ParentId</code> (FK)</li>
+<li><a href="PurchaseOrderAdviceRow.html">PurchaseOrderAdviceRows</a> — <code>ParentRowId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "PurchaseOrderRowId": null,
+  "ParentId": null,
+  "Status": 0,
+  "Quantity": 0.0,
+  "DeliveredQuantity": 0.0,
+  "RestQuantity": 0.0,
+  "UnitId": null,
+  "ConversionFactor": null,
+  "ParentRowId": null,
+  "SupplierPackageNumber": null,
+  "SupplierAgreementReference": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderAdviceRow.html">https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderAdviceRow.html</a><br><span class="badge">Purchase</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

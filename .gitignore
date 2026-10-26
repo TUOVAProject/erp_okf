@@ -11,5 +11,8 @@ build/
 build.tmp/
 okf.tmp/
 okf-compact.tmp/
+okf-html.tmp/
+html_compact_example/
 CLAUDE.md
+OHJE.md
 .DS_Store

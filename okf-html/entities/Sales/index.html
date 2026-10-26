@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sales entities · Monitor ERP API</title>
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb">Sales entities</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="sales-entities">Sales entities</h1>
+<p>76 documented pages in the Sales module.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Kind</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="BlanketOrderSales.html">BlanketOrderSales</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/BlanketOrderSales</code></td>
+<td>Represents a blanket order for sales.</td>
+</tr>
+<tr>
+<td><a href="BlanketOrderSalesRow.html">BlanketOrderSalesRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/BlanketOrderSalesRows</code></td>
+<td>Represents a blanket order row for sales.</td>
+</tr>
+<tr>
+<td><a href="BlanketOrderSalesType.html">BlanketOrderSalesTypes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/BlanketOrderSalesTypes</code></td>
+<td>Represents a blanket order type for sales.</td>
+</tr>
+<tr>
+<td><a href="BusinessOpportunity.html">BusinessOpportunities</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/BusinessOpportunities</code></td>
+<td>Represents a business opportunity.</td>
+</tr>
+<tr>
+<td><a href="BusinessOpportunityActivity.html">BusinessOpportunityActivities</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/BusinessOpportunityActivities</code></td>
+<td>Represents a business opportunity activity.</td>
+</tr>
+<tr>
+<td><a href="BusinessOpportunityActivityTemplateRow.html">BusinessOpportunityActivityTemplateRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/BusinessOpportunityActivityTemplateRows</code></td>
+<td>Represents a business opportunity activity template row.</td>
+</tr>
+<tr>
+<td><a href="BusinessOpportunityActivityTemplate.html">BusinessOpportunityActivityTemplates</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/BusinessOpportunityActivityTemplates</code></td>
+<td>Represents a business opportunity activity template.</td>
+</tr>
+<tr>
+<td><a href="BusinessOpportunityGroup.html">BusinessOpportunityGroups</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/BusinessOpportunityGroups</code></td>
+<td>Represents a business opportunity group.</td>
+</tr>
+<tr>
+<td><a href="BusinessOpportunityReference.html">BusinessOpportunityReferences</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/BusinessOpportunityReferences</code></td>
+<td>Represents a business opportunity reference.</td>
+</tr>
+<tr>
+<td><a href="BusinessOpportunitySalesProcessStep.html">BusinessOpportunitySalesProcessSteps</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/BusinessOpportunitySalesProcessSteps</code></td>
+<td>Represents a business opportunity sales process step.</td>
+</tr>
+<tr>
+<td><a href="BusinessOpportunityType.html">BusinessOpportunityTypes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/BusinessOpportunityTypes</code></td>
+<td>Represents a business opportunity type.</td>
+</tr>
+<tr>
+<td><a href="CountryDocumentSettings.html">CountryDocumentSettings</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CountryDocumentSettings</code></td>
+<td>Represents a country document setting.</td>
+</tr>
+<tr>
+<td><a href="CreateCustomerEmployeeSpan.html">CreateCustomerEmployeeSpan</a></td>
+<td>command</td>
+<td><code>/api/v1/Sales/CustomerEmployeeSpans/Create</code></td>
+<td>Creates a new customer employee span object.</td>
+</tr>
+<tr>
+<td><a href="CreateSalesPickingList.html">CreateSalesPickingList</a></td>
+<td>command</td>
+<td><code>/api/v1/Sales/SalesPickingLists/Create</code></td>
+<td>Creates picking lists.</td>
+</tr>
+<tr>
+<td><a href="CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerAccountGroups</code></td>
+<td>Represents a customer account group.</td>
+</tr>
+<tr>
+<td><a href="CustomerCountryDocumentSettings.html">CustomerCountryDocumentSettings</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerCountryDocumentSettings</code></td>
+<td>Represents a customer country document setting.</td>
+</tr>
+<tr>
+<td><a href="CustomerDistrict.html">CustomerDistricts</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerDistricts</code></td>
+<td>Represents a customer district.</td>
+</tr>
+<tr>
+<td><a href="CustomerEmployeeSpan.html">CustomerEmployeeSpans</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerEmployeeSpans</code></td>
+<td>Represents a customer employee span.</td>
+</tr>
+<tr>
+<td><a href="CustomerOrderActivity.html">CustomerOrderActivities</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerOrderActivities</code></td>
+<td>Represents a customer order activity.</td>
+</tr>
+<tr>
+<td><a href="CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerOrderDeliveryRows</code></td>
+<td>Represents a customer delivery order row.</td>
+</tr>
+<tr>
+<td><a href="CustomerOrderInvoiceOrderRowDiscount.html">CustomerOrderInvoiceOrderRowDiscounts</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerOrderInvoiceOrderRowDiscounts</code></td>
+<td>Represents a discount row for a customer order invoice row.</td>
+</tr>
+<tr>
+<td><a href="CustomerOrderInvoiceRow.html">CustomerOrderInvoiceRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerOrderInvoiceRows</code></td>
+<td>Represents a customer order invoice row.</td>
+</tr>
+<tr>
+<td><a href="CustomerOrderInvoice.html">CustomerOrderInvoices</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerOrderInvoices</code></td>
+<td>Represents a customer order invoice.</td>
+</tr>
+<tr>
+<td><a href="CustomerOrderOrderRowDiscount.html">CustomerOrderOrderRowDiscounts</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerOrderOrderRowDiscounts</code></td>
+<td>Represents a discount row for a customer order row.</td>
+</tr>
+<tr>
+<td><a href="CustomerOrderPaymentPlanRow.html">CustomerOrderPaymentPlanRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerOrderPaymentPlanRows</code></td>
+<td>Represents a customer order payment plan row.</td>
+</tr>
+<tr>
+<td><a href="CustomerOrderRowInflow.html">CustomerOrderRowInflows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerOrderRowInflows</code></td>
+<td>Represents a customer order inflow row.</td>
+</tr>
+<tr>
+<td><a href="CustomerOrderRow.html">CustomerOrderRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerOrderRows</code></td>
+<td>Represents a customer order row.</td>
+</tr>
+<tr>
+<td><a href="CustomerOrder.html">CustomerOrders</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerOrders</code></td>
+<td>Represents a customer order.</td>
+</tr>
+<tr>
+<td><a href="CustomerOrderShippingInformationRow.html">CustomerOrderShippingInformationRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerOrderShippingInformationRows</code></td>
+<td>Represents a customer order shipping information row.</td>
+</tr>
+<tr>
+<td><a href="CustomerOrderType.html">CustomerOrderTypes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerOrderTypes</code></td>
+<td>Represents a customer order type.</td>
+</tr>
+<tr>
+<td><a href="CustomerPartLink.html">CustomerPartLinks</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerPartLinks</code></td>
+<td>Represents a customer part link.</td>
+</tr>
+<tr>
+<td><a href="CustomerRelationshipActivityType.html">CustomerRelationshipActivityTypes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerRelationshipActivityTypes</code></td>
+<td>Represents a customer relationship activity type.</td>
+</tr>
+<tr>
+<td><a href="CustomerRelationshipManagementActivity.html">CustomerRelationshipManagementActivities</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerRelationshipManagementActivities</code></td>
+<td>Represents a customer relationship management activity.</td>
+</tr>
+<tr>
+<td><a href="Customer.html">Customers</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/Customers</code></td>
+<td>Represents a customer.</td>
+</tr>
+<tr>
+<td><a href="CustomerStatus.html">CustomerStatuses</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerStatuses</code></td>
+<td>Represents a customer status.</td>
+</tr>
+<tr>
+<td><a href="CustomerType.html">CustomerTypes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/CustomerTypes</code></td>
+<td>Represents a customer type.</td>
+</tr>
+<tr>
+<td><a href="GetWithdrawalInformation.html">GetWithdrawalInformation</a></td>
+<td>command</td>
+<td><code>/api/v1/Sales/SalesPickingLists/GetWithdrawalInformation</code></td>
+<td>Calculates and returns the suggested withdrawal information for a picking list.</td>
+</tr>
+<tr>
+<td><a href="InvoiceLog.html">InvoiceLogs</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/InvoiceLogs</code></td>
+<td>Represents an invoice log entry.</td>
+</tr>
+<tr>
+<td><a href="OrderQuantityCustomerOrder.html">OrderQuantityCustomerOrders</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/OrderQuantityCustomerOrders</code></td>
+<td>Represents a order quantity template on part that holds many partial quantities.</td>
+</tr>
+<tr>
+<td><a href="OtherCustomerNumber.html">OtherCustomerNumbers</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/OtherCustomerNumbers</code></td>
+<td>Represents an alternative customer code mainly used for EDI.</td>
+</tr>
+<tr>
+<td><a href="PackageRowPartLocation.html">PackageRowPartLocations</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/PackageRowPartLocations</code></td>
+<td>Represents a package row's location.</td>
+</tr>
+<tr>
+<td><a href="PackageRow.html">PackageRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/PackageRows</code></td>
+<td>Represents a package row.</td>
+</tr>
+<tr>
+<td><a href="QuoteActivity.html">QuoteActivities</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/QuoteActivities</code></td>
+<td>Represents a quote activity.</td>
+</tr>
+<tr>
+<td><a href="QuoteOrderRowDiscount.html">QuoteOrderRowDiscounts</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/QuoteOrderRowDiscounts</code></td>
+<td>Represents a discount row for a quote row.</td>
+</tr>
+<tr>
+<td><a href="QuoteRow.html">QuoteRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/QuoteRows</code></td>
+<td>Represents a quote row.</td>
+</tr>
+<tr>
+<td><a href="Quote.html">Quotes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/Quotes</code></td>
+<td>Represents a quote.</td>
+</tr>
+<tr>
+<td><a href="QuoteType.html">QuoteTypes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/QuoteTypes</code></td>
+<td>Represents a quote type.</td>
+</tr>
+<tr>
+<td><a href="ReasonCodeLostQuote.html">ReasonCodeLostQuotes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/ReasonCodeLostQuotes</code></td>
+<td>Represents a reason code for a lost quote.</td>
+</tr>
+<tr>
+<td><a href="RelatedQuoteEntry.html">RelatedQuoteEntries</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/RelatedQuoteEntries</code></td>
+<td>Represents a related quote entry.</td>
+</tr>
+<tr>
+<td><a href="RelatedQuote.html">RelatedQuotes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/RelatedQuotes</code></td>
+<td>Represents a placeholder for related quotes.</td>
+</tr>
+<tr>
+<td><a href="RemoveSalesPickingList.html">RemoveSalesPickingList</a></td>
+<td>command</td>
+<td><code>/api/v1/Sales/SalesPickingLists/Remove</code></td>
+<td>Deletes a picking list.</td>
+</tr>
+<tr>
+<td><a href="SalesAgreementBasis.html">SalesAgreementBases</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/SalesAgreementBases</code></td>
+<td>Represents a sales agreement basis.</td>
+</tr>
+<tr>
+<td><a href="SalesAgreementBasisRow.html">SalesAgreementBasisRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/SalesAgreementBasisRows</code></td>
+<td>Represents a sales agreement basis row.</td>
+</tr>
+<tr>
+<td><a href="SalesAgreementRowInflow.html">SalesAgreementRowInflows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/SalesAgreementRowInflows</code></td>
+<td>Represents a sales agreement inflow row.</td>
+</tr>
+<tr>
+<td><a href="SalesAgreementRow.html">SalesAgreementRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/SalesAgreementRows</code></td>
+<td>Represents an agreement row.</td>
+</tr>
+<tr>
+<td><a href="SalesAgreement.html">SalesAgreements</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/SalesAgreements</code></td>
+<td>Represents an agreement.</td>
+</tr>
+<tr>
+<td><a href="SalesAgreementType.html">SalesAgreementTypes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/SalesAgreementTypes</code></td>
+<td>Represents an agreement type.</td>
+</tr>
+<tr>
+<td><a href="SalesPickingListRowQuantity.html">SalesPickingListRowQuantities</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/SalesPickingListRowQuantities</code></td>
+<td>Represents sales picking list row quantity information used by the web-client procedure.</td>
+</tr>
+<tr>
+<td><a href="SalesPickingList.html">SalesPickingLists</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/SalesPickingLists</code></td>
+<td>Represents a sales picking list.</td>
+</tr>
+<tr>
+<td><a href="SalesPrice.html">SalesPrices</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/SalesPrices</code></td>
+<td>Represents a sales price.</td>
+</tr>
+<tr>
+<td><a href="SalesProcessStep.html">SalesProcessSteps</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/SalesProcessSteps</code></td>
+<td>Represents a sales process step.</td>
+</tr>
+<tr>
+<td><a href="SalesProcessTemplateRow.html">SalesProcessTemplateRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/SalesProcessTemplateRows</code></td>
+<td>Represents a sales process template row.</td>
+</tr>
+<tr>
+<td><a href="SalesProcessTemplate.html">SalesProcessTemplates</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/SalesProcessTemplates</code></td>
+<td>Represents a sales process template.</td>
+</tr>
+<tr>
+<td><a href="SellerGroup.html">SellerGroups</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/SellerGroups</code></td>
+<td>Represents a seller group.</td>
+</tr>
+<tr>
+<td><a href="ShipmentCustoms.html">ShipmentCustoms</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/ShipmentCustoms</code></td>
+<td>Represents a shipments customs information.</td>
+</tr>
+<tr>
+<td><a href="ShipmentCustomsDocument.html">ShipmentCustomsDocuments</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/ShipmentCustomsDocuments</code></td>
+<td>Represents a shipments customs information document.</td>
+</tr>
+<tr>
+<td><a href="ShipmentCustomsRow.html">ShipmentCustomsRows</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/ShipmentCustomsRows</code></td>
+<td>Represents a shipments customs information row.</td>
+</tr>
+<tr>
+<td><a href="ShipmentInformationSource.html">ShipmentInformationSources</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/ShipmentInformationSources</code></td>
+<td>Represents a shipment information source.</td>
+</tr>
+<tr>
+<td><a href="ShipmentPackageInformationPackageNumber.html">ShipmentPackageInformationPackageNumbers</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/ShipmentPackageInformationPackageNumbers</code></td>
+<td>Represents a shipping agents real package number for a shipment package information.</td>
+</tr>
+<tr>
+<td><a href="ShipmentPackageInformation.html">ShipmentPackageInformations</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/ShipmentPackageInformations</code></td>
+<td>Represents a shipment package information.</td>
+</tr>
+<tr>
+<td><a href="Shipment.html">Shipments</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/Shipments</code></td>
+<td>Represents a shipment.</td>
+</tr>
+<tr>
+<td><a href="ShippingService.html">ShippingServices</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/ShippingServices</code></td>
+<td>Represents a shipping service.</td>
+</tr>
+<tr>
+<td><a href="ShippingTemplate.html">ShippingTemplates</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/ShippingTemplates</code></td>
+<td>Represents a shipping service.</td>
+</tr>
+<tr>
+<td><a href="ValidityTime.html">ValidityTimes</a></td>
+<td>queryable</td>
+<td><code>/api/v1/Sales/ValidityTimes</code></td>
+<td>Represents a validity time.</td>
+</tr>
+<tr>
+<td><a href="WithdrawalInformationLocation.html">WithdrawalInformationLocation</a></td>
+<td>type</td>
+<td>—</td>
+<td>Used to provide the suggested withdrawal information of a location.</td>
+</tr>
+<tr>
+<td><a href="WithdrawalInformationRow.html">WithdrawalInformationRow</a></td>
+<td>type</td>
+<td>—</td>
+<td>Used to provide the suggested withdrawal information of a customer order row.</td>
+</tr>
+</tbody>
+</table></div>
+
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

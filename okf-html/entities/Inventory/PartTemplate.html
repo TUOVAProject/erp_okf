@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PartTemplates · Monitor ERP API</title>
+<meta name="description" content="Represents a part template.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>PartTemplates</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html" aria-current="location">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="parttemplates">PartTemplates</h1>
+<p>Represents a part template.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Inventory.html">Inventory</a></dd><dt>API class</dt><dd><code>PartTemplate</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Inventory/PartTemplates</code></dd><dt>Required permission</dt><dd>Show basic data for part</dd><dt>GUID</dt><dd><code>429950a6-1de2-4eb6-b509-77cd0c55c9e1</code></dd><dt>Introduced in</dt><dd>2.47</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the part template.</td>
+</tr>
+<tr>
+<td class="prop"><code>AbcCodeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="AbcCode.html">AbcCodes</a></td>
+<td></td>
+<td>The business key identifier of the ABC code that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>AnnualVolume</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The annual volume that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>AutomaticReportingMode</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The automatic reporting mode that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>CategoryString</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 15</td>
+<td>The category string that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>Code</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique, max length 20</td>
+<td>The human readable identifier of the part template.</td>
+</tr>
+<tr>
+<td class="prop"><code>CountryOfOriginId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Country.html">Countries</a></td>
+<td></td>
+<td>The business key identifier of the country of origin that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeductSalesForecast</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The sales forecast deduction type that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeductionMethod</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The sales deduction method that the part template applies if a deduct sales forecast type is defined.</td>
+</tr>
+<tr>
+<td class="prop"><code>Description</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The description of the part template.</td>
+</tr>
+<tr>
+<td class="prop"><code>Eoq</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The EOQ that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsActive</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies whether or not the part template is active.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsDefault</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies whether or not the part template is the default part template.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsPreset</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies whether or not the part template is a preset.</td>
+</tr>
+<tr>
+<td class="prop"><code>LotSizingRule</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The lot sizing rule that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>ManageStockBalance</code></td>
+<td class="type"><code>Boolean?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The stock balance management strategy that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseRandomLocationStorage</code></td>
+<td class="type"><code>Boolean?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The random location storage strategy that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>AllowOrderCreationFromCustomerOrder</code></td>
+<td class="type"><code>Boolean?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The customer order creation permission that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>RoundingBase</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The rounding base that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>LeadTime</code></td>
+<td class="type"><code>TimeSpan?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The lead time that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>ManufacturingLabelType</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The manufacturing transport label type that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>SalesLabelType</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The sales transport label type that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>PurchaseLabelType</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The purchase transport label type that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseInCalculation</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Whether or not the parts that derive from the part template should be used in calculations.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartCodeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="PartCode.html">PartCodes</a></td>
+<td></td>
+<td>The business key identifier of the part code that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartType</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The part template type that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>PreparerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td></td>
+<td>The business key identifier of the preparer that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProductGroupId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/ProductGroup.html">ProductGroups</a></td>
+<td></td>
+<td>The business key identifier of the product group that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReorderPoint</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The reorder point that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>SafetyStock</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The safety stock that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>SafetyTime</code></td>
+<td class="type"><code>TimeSpan?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The safety time that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>SerialNumberGeneration</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The serial number generation strategy that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>SerialNumberGenerationSource</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The serial number generation source that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>TemplateType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The template type of the part template.</td>
+</tr>
+<tr>
+<td class="prop"><code>TraceabilityMode</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The traceability mode that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProfitMarkupId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="ProfitMarkup.html">ProfitMarkups</a></td>
+<td></td>
+<td>The business key identifier of the profit markup that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>SalesOverheadMarkupId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="SalesOverheadMarkup.html">SalesOverheadMarkups</a></td>
+<td></td>
+<td>The business key identifier of the sales overhead markup that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartActivityTemplateId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the part activity template that the part template applies. References PartActivityTemplate.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartStatus</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The part status that the part template applies.</td>
+</tr>
+<tr>
+<td class="prop"><code>LithuanianCountyOfOrigin</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum, since 25.8</td>
+<td>The county of origin that the part template applies. Only used in the Lithuanian country package.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>AutomaticReportingMode</code><div class="evs"><span class="ev">PickingLocation<span>=1</span></span><span class="ev">Cleared<span>=2</span></span><span class="ev">BufferLocation<span>=4</span></span><span class="ev">Project<span>=8</span></span></div></li><li><code>DeductSalesForecast</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">LeadTime<span>=1</span></span><span class="ev">Now<span>=2</span></span></div></li><li><code>DeductionMethod</code><div class="evs"><span class="ev">Percent<span>=0</span></span><span class="ev">TimeOrder<span>=1</span></span><span class="ev">Closest<span>=2</span></span><span class="ev">ClosestBefore<span>=3</span></span><span class="ev">PeriodicIntervals<span>=4</span></span></div></li><li><code>LotSizingRule</code><div class="evs"><span class="ev">LotForLot<span>=1</span></span><span class="ev">FixedQuantity<span>=2</span></span><span class="ev">PeriodRequirement<span>=3</span></span><span class="ev">Bucketpart<span>=4</span></span><span class="ev">Linked<span>=5</span></span></div></li><li><code>ManufacturingLabelType</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Transport<span>=1</span></span><span class="ev">Label<span>=2</span></span><span class="ev">SmallLabel<span>=3</span></span><span class="ev">MultiLabel<span>=4</span></span><span class="ev">SelectAtPrintout<span>=5</span></span></div></li><li><code>SalesLabelType</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Transport<span>=1</span></span><span class="ev">Label<span>=2</span></span><span class="ev">SmallLabel<span>=3</span></span><span class="ev">MultiLabel<span>=4</span></span><span class="ev">SelectAtPrintout<span>=5</span></span></div></li><li><code>PurchaseLabelType</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Transport<span>=1</span></span><span class="ev">Label<span>=2</span></span><span class="ev">SmallLabel<span>=3</span></span><span class="ev">MultiLabel<span>=4</span></span><span class="ev">SelectAtPrintout<span>=5</span></span></div></li><li><code>PartType</code><div class="evs"><span class="ev">Purchased<span>=0</span></span><span class="ev">Manufactured<span>=1</span></span><span class="ev">Fictitious<span>=2</span></span><span class="ev">Service<span>=5</span></span><span class="ev">Subcontract<span>=6</span></span></div></li><li><code>SerialNumberGeneration</code><div class="evs"><span class="ev">Never<span>=0</span></span><span class="ev">CustomerOrderRegistration<span>=1</span></span><span class="ev">ManufacturingOrderRegistration<span>=2</span></span><span class="ev">DeliveryReporting<span>=3</span></span></div></li><li><code>SerialNumberGenerationSource</code><div class="evs"><span class="ev">NumberSeries<span>=0</span></span><span class="ev">Manual<span>=1</span></span></div></li><li><code>TemplateType</code><div class="evs"><span class="ev">Part<span>=0</span></span><span class="ev">ConsumableEquipment<span>=1</span></span><span class="ev">ReusableEquipment<span>=2</span></span><span class="ev">EquipmentList<span>=3</span></span></div></li><li><code>TraceabilityMode</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Batch<span>=1</span></span><span class="ev">Individual<span>=2</span></span><span class="ev">IndividualOnlyWithdrawal<span>=4</span></span></div></li><li><code>PartStatus</code><div class="evs"><span class="ev">Quote<span>=1</span></span><span class="ev">Prototype<span>=2</span></span><span class="ev">New<span>=3</span></span><span class="ev">Normal<span>=4</span></span><span class="ev">NewRevision<span>=5</span></span><span class="ev">PhasingOut<span>=6</span></span><span class="ev">Expired<span>=9</span></span><span class="ev">Inactive<span>=99</span></span></div></li><li><code>LithuanianCountyOfOrigin</code><div class="evs"><span class="ev">A<span>=1</span></span><span class="ev">K<span>=2</span></span><span class="ev">L<span>=3</span></span><span class="ev">M<span>=4</span></span><span class="ev">P<span>=5</span></span><span class="ev">S<span>=6</span></span><span class="ev">J<span>=7</span></span><span class="ev">T<span>=8</span></span><span class="ev">U<span>=9</span></span><span class="ev">V<span>=10</span></span></div></li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="Part.html">Parts</a> — <code>PartTemplate</code> (expand)</li>
+<li><a href="Part.html">Parts</a> — <code>PartTemplateId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "AbcCodeId": null,
+  "AnnualVolume": null,
+  "AutomaticReportingMode": null,
+  "CategoryString": null,
+  "Code": null,
+  "CountryOfOriginId": null,
+  "DeductSalesForecast": null,
+  "DeductionMethod": null,
+  "Description": null,
+  "Eoq": null,
+  "IsActive": false,
+  "IsDefault": false,
+  "IsPreset": false,
+  "LotSizingRule": null,
+  "ManageStockBalance": null,
+  "UseRandomLocationStorage": null,
+  "AllowOrderCreationFromCustomerOrder": null,
+  "RoundingBase": null,
+  "LeadTime": null,
+  "ManufacturingLabelType": null,
+  "SalesLabelType": null,
+  "PurchaseLabelType": null,
+  "UseInCalculation": false,
+  "PartCodeId": null,
+  "PartType": null,
+  "PreparerId": null,
+  "ProductGroupId": null,
+  "ReorderPoint": null,
+  "SafetyStock": null,
+  "SafetyTime": null,
+  "SerialNumberGeneration": null,
+  "SerialNumberGenerationSource": null,
+  "TemplateType": 0,
+  "TraceabilityMode": null,
+  "ProfitMarkupId": null,
+  "SalesOverheadMarkupId": null,
+  "PartActivityTemplateId": null,
+  "PartStatus": null,
+  "LithuanianCountyOfOrigin": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Inventory.PartTemplate.html">https://api.monitor.se/api/Monitor.API.Inventory.PartTemplate.html</a><br><span class="badge">Inventory</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

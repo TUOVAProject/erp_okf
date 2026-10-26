@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StockTransactions · Monitor ERP API</title>
+<meta name="description" content="Represents a stock transaction.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>StockTransactions</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html" aria-current="location">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="stocktransactions">StockTransactions</h1>
+<p>Represents a stock transaction.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Inventory.html">Inventory</a></dd><dt>API class</dt><dd><code>StockTransaction</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Inventory/StockTransactions</code></dd><dt>Required permission</dt><dd>Show basic data for part</dd><dt>GUID</dt><dd><code>F4B5074F-7694-45F4-91CE-67602641773C</code></dd><dt>Introduced in</dt><dd>22.4</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 20</td>
+<td>The part number of the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="Part.html">Parts</a></td>
+<td></td>
+<td>The business key identifier of the part that was involved in the stock transaction. This value might not be set even though a part always is involved in a stock transaction, read part number to identify involved part in that case.</td>
+</tr>
+<tr>
+<td class="prop"><code>BalanceChange</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The balance change of the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>BalanceOnPartAfterChange</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The balance on the part after the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>BalanceOnLocationAfterChange</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The balance on the location after the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>LoggingTimeStamp</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The logging timestamp of the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The delivery date of the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>LocationName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The location name of the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessTransactionId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business transaction identity of the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>WarehouseId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
+<td></td>
+<td>The business key identifier of the warehouse where the stock transaction occured.</td>
+</tr>
+<tr>
+<td class="prop"><code>PhysicalInventoryListNumber</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The physical inventory list number of the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartLocationId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="PartLocation.html">PartLocations</a></td>
+<td></td>
+<td>The business key identifier of the part location where the stock transaction occured.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProductRecordId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="ProductRecord.html">ProductRecords</a></td>
+<td></td>
+<td>The business key identifier of the product record used in the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>BatchNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 23.4</td>
+<td>The batch number of the product record in this stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 23.4</td>
+<td>The order number associated to this stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>BusinessTransactionContextType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 23.4</td>
+<td>The type of the business transaction context of this stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>StandardPrice</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 25.9</td>
+<td>The standard price of the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>Price</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 25.9</td>
+<td>The price of the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReportedPrice</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 25.9</td>
+<td>The reported price of the stock transaction.</td>
+</tr>
+<tr>
+<td class="prop"><code>Amount</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 25.9</td>
+<td>The calculated amount based on Price multiplied by BalanceChange of the stock transaction.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>BusinessTransactionContextType</code><div class="evs"><span class="ev">NotInitialized<span>=0</span></span><span class="ev">ArrivalReporting<span>=1</span></span><span class="ev">ManufacturingOrderReporting<span>=2</span></span><span class="ev">DeliveryReporting<span>=3</span></span><span class="ev">PhysicalInventory<span>=4</span></span><span class="ev">UnplannedStockWithdrawal<span>=5</span></span><span class="ev">MoveBetweenWarehouse<span>=6</span></span><span class="ev">MoveStockBalance<span>=7</span></span><span class="ev">NonconformityPosteriorRejection<span>=8</span></span><span class="ev">DirectlyRegisteredInvoice<span>=9</span></span><span class="ev">RemovalOfPartLocation<span>=10</span></span><span class="ev">ManufacturingOrderMaterialReporting<span>=11</span></span><span class="ev">UnplannedStockArrivalReporting<span>=12</span></span><span class="ev">StockImport<span>=13</span></span><span class="ev">DeliveryReportingStockOrder<span>=14</span></span><span class="ev">ArrivalReportingStockOrder<span>=15</span></span><span class="ev">UndoManufacturingOrderMaterialReporting<span>=16</span></span><span class="ev">UndoManufacturingOrderReporting<span>=17</span></span><span class="ev">UndoArrivalReporting<span>=18</span></span><span class="ev">UndoDeliveryReporting<span>=19</span></span><span class="ev">UndoArrivalReportingStockOrder<span>=20</span></span><span class="ev">UndoDeliveryReportingStockOrder<span>=21</span></span><span class="ev">OutgoingReusable<span>=22</span></span><span class="ev">ArrivalReusable<span>=23</span></span><span class="ev">UndoOutgoingReusable<span>=24</span></span><span class="ev">UndoArrivalReusable<span>=25</span></span><span class="ev">ToolWithdrawal<span>=26</span></span><span class="ev">ToolReturn<span>=27</span></span><span class="ev">CreditSupplierInvoice<span>=28</span></span><span class="ev">CreditCustomerInvoice<span>=29</span></span><span class="ev">ReturnPurchaseOrder<span>=30</span></span><span class="ev">SplitInvoiceBasis<span>=31</span></span><span class="ev">CreationOfPartLocation<span>=32</span></span><span class="ev">ArrivalsCorrection<span>=33</span></span><span class="ev">ArrivalRejection<span>=34</span></span><span class="ev">UndoReturnPurchaseOrder<span>=35</span></span></div></li></ul>
+
+
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "PartNumber": null,
+  "PartId": null,
+  "BalanceChange": 0.0,
+  "BalanceOnPartAfterChange": 0.0,
+  "BalanceOnLocationAfterChange": 0.0,
+  "LoggingTimeStamp": "0001-01-01T00:00:00+00:00",
+  "DeliveryDate": "0001-01-01T00:00:00+00:00",
+  "LocationName": null,
+  "BusinessTransactionId": 0,
+  "WarehouseId": 0,
+  "PhysicalInventoryListNumber": null,
+  "PartLocationId": null,
+  "ProductRecordId": null,
+  "BatchNumber": null,
+  "OrderNumber": null,
+  "BusinessTransactionContextType": 0,
+  "StandardPrice": 0.0,
+  "Price": null,
+  "ReportedPrice": 0.0,
+  "Amount": 0.0
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Inventory.StockTransaction.html">https://api.monitor.se/api/Monitor.API.Inventory.StockTransaction.html</a><br><span class="badge">Inventory</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

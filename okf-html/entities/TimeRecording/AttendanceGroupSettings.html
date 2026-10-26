@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AttendanceGroupSettings · Monitor ERP API</title>
+<meta name="description" content="Represents an attendance group setting.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/TimeRecording.html">TimeRecording</a><span class="sep">/</span>AttendanceGroupSettings</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html" aria-current="location">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="attendancegroupsettings">AttendanceGroupSettings</h1>
+<p>Represents an attendance group setting.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/TimeRecording.html">TimeRecording</a></dd><dt>API class</dt><dd><code>AttendanceGroupSettings</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/TimeRecording/AttendanceGroupSettings</code></dd><dt>Required permission</dt><dd>Show basic data for attendance</dd><dt>GUID</dt><dd><code>22F83797-8309-4B93-B483-B0B63FF38D9F</code></dd><dt>Introduced in</dt><dd>22.1</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the attendance group setting.</td>
+</tr>
+<tr>
+<td class="prop"><code>AllowAttendanceRecordingAdditionsInRecordingTerminal</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if attendance recording additions is allowed in the recording terminal.</td>
+</tr>
+<tr>
+<td class="prop"><code>AllowAttendanceRecordingAdjustmentsInRecordingTerminal</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if attendance recording adjustments are allowed in the recording terminal.</td>
+</tr>
+<tr>
+<td class="prop"><code>AllowShorterWorkingHours</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if shorter working hours are allowed.</td>
+</tr>
+<tr>
+<td class="prop"><code>GenerateShorterWorkingHoursForHoliday</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if shorter working hours for holidays should be generated.</td>
+</tr>
+<tr>
+<td class="prop"><code>Description</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The translated description of the attendance group setting.</td>
+</tr>
+<tr>
+<td class="prop"><code>AbsenceCheck</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if absences should be checked.</td>
+</tr>
+<tr>
+<td class="prop"><code>NonRegulatedWorkinghours</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if non regulated working hours are allowed.</td>
+</tr>
+<tr>
+<td class="prop"><code>AddRoundOffOvertimeToTimeBank</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The round off for overtime to the time bank.</td>
+</tr>
+<tr>
+<td class="prop"><code>Name</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique, max length 8</td>
+<td>The name of the attendance group setting.</td>
+</tr>
+<tr>
+<td class="prop"><code>AllowOvertime</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if overtime is allowed.</td>
+</tr>
+<tr>
+<td class="prop"><code>AllowAbsenceRecordingInNegativeFlexZones</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if absence recording is allowed within negative flex zones.</td>
+</tr>
+<tr>
+<td class="prop"><code>AutomaticOvertimeQuestionOutsideSchedule</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if there should be a dialog for overtime outside of the schedule.</td>
+</tr>
+<tr>
+<td class="prop"><code>CalculationBase</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The calculation base type for shorter working hours.</td>
+</tr>
+<tr>
+<td class="prop"><code>CalculationFactor</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The calculation factor.</td>
+</tr>
+<tr>
+<td class="prop"><code>CalculateOvertime</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>Indicates how overtime is calculated.</td>
+</tr>
+<tr>
+<td class="prop"><code>FlexTime</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if flex time is allowed.</td>
+</tr>
+<tr>
+<td class="prop"><code>SalaryTypeForPositiveFlex</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="SalaryType.html">SalaryTypes</a></td>
+<td></td>
+<td>The salary type for positive flex.</td>
+</tr>
+<tr>
+<td class="prop"><code>SalaryTypeForNegativeFlex</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="SalaryType.html">SalaryTypes</a></td>
+<td></td>
+<td>The salary type for negative flex.</td>
+</tr>
+<tr>
+<td class="prop"><code>CalculateFlextime</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 24.8</td>
+<td>Indicates how flex is calculated.</td>
+</tr>
+<tr>
+<td class="prop"><code>SalaryTypeForScheduleLessRecording</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="SalaryType.html">SalaryTypes</a></td>
+<td></td>
+<td>The salary type for schedule less recordings.</td>
+</tr>
+<tr>
+<td class="prop"><code>MinTimePerDay</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The minimum time the employee has to work for shorter working hours to apply when using per day calculation.</td>
+</tr>
+<tr>
+<td class="prop"><code>NegativeFlexIncludedInDailyHours</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if negative flex should be included in daily hours.</td>
+</tr>
+<tr>
+<td class="prop"><code>NumberOfDaysBackInTimeThatCanBeAdjusted</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Determains how many days are adjustable back in time.</td>
+</tr>
+<tr>
+<td class="prop"><code>NumberOfDaysBackInTimeThatCanBeEdited</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Determains how many days are editable back in time.</td>
+</tr>
+<tr>
+<td class="prop"><code>OvertimeInFlexZone</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if overtime is allowed within flex zone.</td>
+</tr>
+<tr>
+<td class="prop"><code>OvertimeLimitAfter</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The overtime limit after the end of the schedule.</td>
+</tr>
+<tr>
+<td class="prop"><code>OvertimeLimitBefore</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The overtime limit before the start of the schedule.</td>
+</tr>
+<tr>
+<td class="prop"><code>PlanAbsenceViaRecordingTerminal</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if planned absence is allowed from the recording terminal.</td>
+</tr>
+<tr>
+<td class="prop"><code>RoundOffOvertime</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if round off overtime should be used.</td>
+</tr>
+<tr>
+<td class="prop"><code>RoundOffOvertimeTimebankId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="TimeBank.html">TimeBanks</a></td>
+<td></td>
+<td>The timebank to use for round off overtime.</td>
+</tr>
+<tr>
+<td class="prop"><code>RoundOffTo</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The time to round off overtime to.</td>
+</tr>
+<tr>
+<td class="prop"><code>SalaryTypeAccordingToOvertime</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if salary type should be calculated from the start of the overtime schedule, not from where it was recorded.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShorterWorkingHoursTimeBankId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="TimeBank.html">TimeBanks</a></td>
+<td></td>
+<td>The time bank to use for shorter working hours.</td>
+</tr>
+<tr>
+<td class="prop"><code>TimeAfterScheduleEnd</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Threshold for automatic overtime question after schedule end in recording terminal.</td>
+</tr>
+<tr>
+<td class="prop"><code>TimeBeforeScheduleStart</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Threshold for automatic overtime question before schedule start in recording terminal.</td>
+</tr>
+<tr>
+<td class="prop"><code>UnavailableAbsenceCodes</code></td>
+<td class="type"><code>AbsenceCodes[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="AbsenceCode.html">AbsenceCodes</a></td>
+<td>expandable, collection, since 22.3</td>
+<td>Unavailable absence codes for the attendance group setting.</td>
+</tr>
+<tr>
+<td class="prop"><code>OvertimeTypes</code></td>
+<td class="type"><code>OvertimeTypes[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="OvertimeType.html">OvertimeTypes</a></td>
+<td>expandable, collection, since 23.4</td>
+<td>The overtime types for the attendance group setting.</td>
+</tr>
+<tr>
+<td class="prop"><code>IndirectWorkCodeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="IndirectWorkCode.html">IndirectWorkCodes</a></td>
+<td>since 23.4</td>
+<td>The business key identifier of the indirect work.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>AddRoundOffOvertimeToTimeBank</code><div class="evs"><span class="ev">No<span>=1</span></span><span class="ev">AllTime<span>=2</span></span><span class="ev">TimeWithinFlexZone<span>=3</span></span></div></li><li><code>CalculationBase</code><div class="evs"><span class="ev">Day<span>=1</span></span><span class="ev">Hour<span>=2</span></span><span class="ev">AccordingToSchedule<span>=3</span></span></div></li><li><code>CalculateOvertime</code><div class="evs"><span class="ev">AllRecordedOvertime<span>=0</span></span><span class="ev">AfterFulfilledDailyHours<span>=1</span></span></div></li><li><code>CalculateFlextime</code><div class="evs"><span class="ev">AllRecordedFlex<span>=0</span></span><span class="ev">AfterFulfilledDailyHours<span>=1</span></span></div></li></ul>
+
+
+
+
+
+
+
+
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "AllowAttendanceRecordingAdditionsInRecordingTerminal": false,
+  "AllowAttendanceRecordingAdjustmentsInRecordingTerminal": false,
+  "AllowShorterWorkingHours": false,
+  "GenerateShorterWorkingHoursForHoliday": false,
+  "Description": null,
+  "AbsenceCheck": false,
+  "NonRegulatedWorkinghours": false,
+  "AddRoundOffOvertimeToTimeBank": 0,
+  "Name": null,
+  "AllowOvertime": false,
+  "AllowAbsenceRecordingInNegativeFlexZones": false,
+  "AutomaticOvertimeQuestionOutsideSchedule": false,
+  "CalculationBase": 0,
+  "CalculationFactor": "00:00:00",
+  "CalculateOvertime": 0,
+  "FlexTime": false,
+  "SalaryTypeForPositiveFlex": null,
+  "SalaryTypeForNegativeFlex": null,
+  "CalculateFlextime": 0,
+  "SalaryTypeForScheduleLessRecording": null,
+  "MinTimePerDay": "00:00:00",
+  "NegativeFlexIncludedInDailyHours": false,
+  "NumberOfDaysBackInTimeThatCanBeAdjusted": 0,
+  "NumberOfDaysBackInTimeThatCanBeEdited": 0,
+  "OvertimeInFlexZone": false,
+  "OvertimeLimitAfter": "00:00:00",
+  "OvertimeLimitBefore": "00:00:00",
+  "PlanAbsenceViaRecordingTerminal": false,
+  "RoundOffOvertime": false,
+  "RoundOffOvertimeTimebankId": null,
+  "RoundOffTo": "00:00:00",
+  "SalaryTypeAccordingToOvertime": false,
+  "ShorterWorkingHoursTimeBankId": null,
+  "TimeAfterScheduleEnd": "00:00:00",
+  "TimeBeforeScheduleStart": "00:00:00",
+  "UnavailableAbsenceCodes": null,
+  "OvertimeTypes": null,
+  "IndirectWorkCodeId": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.TimeRecording.AttendanceGroupSettings.html">https://api.monitor.se/api/Monitor.API.TimeRecording.AttendanceGroupSettings.html</a><br><span class="badge">TimeRecording</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

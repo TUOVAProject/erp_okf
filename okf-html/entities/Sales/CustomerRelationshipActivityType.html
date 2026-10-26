@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CustomerRelationshipActivityTypes · Monitor ERP API</title>
+<meta name="description" content="Represents a customer relationship activity type.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>CustomerRelationshipActivityTypes</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html" aria-current="location">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="customerrelationshipactivitytypes">CustomerRelationshipActivityTypes</h1>
+<p>Represents a customer relationship activity type.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Sales.html">Sales</a></dd><dt>API class</dt><dd><code>CustomerRelationshipActivityType</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Sales/CustomerRelationshipActivityTypes</code></dd><dt>Required permission</dt><dd>Show customer</dd><dt>GUID</dt><dd><code>11710A5B-5D7F-4576-A5DD-1E6DAF679404</code></dd><dt>Introduced in</dt><dd>2.55</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the customer relationship activity type.</td>
+</tr>
+<tr>
+<td class="prop"><code>Code</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique</td>
+<td>The human readable identifier of the activity type.</td>
+</tr>
+<tr>
+<td class="prop"><code>Description</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The description of the activity type.</td>
+</tr>
+<tr>
+<td class="prop"><code>Sources</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>bitmask, enum, since 24.2</td>
+<td>Specifies where this activity type can be used.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>Sources</code><span class="badge">bitmask — values combine</span><div class="evs"><span class="ev">Part<span>=1</span></span><span class="ev">Quote<span>=2</span></span><span class="ev">CustomerOrder<span>=4</span></span><span class="ev">Customer<span>=8</span></span><span class="ev">PurchaseOrder<span>=16</span></span><span class="ev">Inquiry<span>=32</span></span><span class="ev">BlanketOrderPurchase<span>=64</span></span><span class="ev">Supplier<span>=128</span></span><span class="ev">BlanketOrderSales<span>=256</span></span><span class="ev">SalesAgreement<span>=512</span></span><span class="ev">PurchaseAgreement<span>=1024</span></span><span class="ev">BusinessOpportunity<span>=2048</span></span></div></li></ul>
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="BusinessOpportunityActivityTemplateRow.html">BusinessOpportunityActivityTemplateRows</a> — <code>ActivityTypeId</code> (FK)</li>
+<li><a href="CustomerOrderActivity.html">CustomerOrderActivities</a> — <code>ActivityTypeId</code> (FK)</li>
+<li><a href="CustomerRelationshipManagementActivity.html">CustomerRelationshipManagementActivities</a> — <code>ActivityType</code> (expand)</li>
+<li><a href="CustomerRelationshipManagementActivity.html">CustomerRelationshipManagementActivities</a> — <code>ActivityTypeId</code> (FK)</li>
+<li><a href="QuoteActivity.html">QuoteActivities</a> — <code>ActivityTypeId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Code": 0,
+  "Description": null,
+  "Sources": 0
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Sales.CustomerRelationshipActivityType.html">https://api.monitor.se/api/Monitor.API.Sales.CustomerRelationshipActivityType.html</a><br><span class="badge">Sales</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

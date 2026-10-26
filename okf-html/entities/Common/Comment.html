@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comments · Monitor ERP API</title>
+<meta name="description" content="Represents a comment, containing both raw and HTML formatted text.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>Comments</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html" aria-current="location">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="comments">Comments</h1>
+<p>Represents a comment, containing both raw and HTML formatted text.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Common.html">Common</a></dd><dt>API class</dt><dd><code>Comment</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Common/Comments</code></dd><dt>GUID</dt><dd><code>FA8BCB02-98C2-49E5-B03C-07B6FAD90786</code></dd><dt>Introduced in</dt><dd>2.18</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>Text</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The comment text with HTML formatting.</td>
+</tr>
+<tr>
+<td class="prop"><code>RawText</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The comment text without HTML formatting. In MONITOR this is used exclusively for indexing purposes and is not shown anywhere in the system.</td>
+</tr>
+<tr>
+<td class="prop"><code>HasFileLinks</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the comment has files linked to it.</td>
+</tr>
+<tr>
+<td class="prop"><code>FileLinks</code></td>
+<td class="type"><code>FileLink[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="FileLink.html">FileLink</a></td>
+<td>expandable, collection</td>
+<td>A collection of all file links that belong to the comment.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Accounting</strong></p>
+<ul>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>BlockMessage</code> (expand)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>BlockMessageId</code> (FK)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>CancelComment</code> (expand)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>CancelCommentId</code> (FK)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Accounting/AccountsReceivable.html">AccountsReceivables</a> — <code>CancelComment</code> (expand)</li>
+<li><a href="../Accounting/AccountsReceivable.html">AccountsReceivables</a> — <code>CancelCommentId</code> (FK)</li>
+<li><a href="../Accounting/AccountsReceivable.html">AccountsReceivables</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Accounting/AccountsReceivable.html">AccountsReceivables</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Accounting/AccrualAccounting.html">AccrualAccountings</a> — <code>CancelComment</code> (expand)</li>
+<li><a href="../Accounting/AccrualAccounting.html">AccrualAccountings</a> — <code>CancelCommentId</code> (FK)</li>
+<li><a href="../Accounting/AccrualAccounting.html">AccrualAccountings</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Accounting/AccrualAccounting.html">AccrualAccountings</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Accounting/FixedAssetSale.html">FixedAssetSales</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Accounting/FixedAssetSale.html">FixedAssetSales</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Accounting/Voucher.html">Vouchers</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Accounting/Voucher.html">Vouchers</a> — <code>CommentId</code> (FK)</li>
+</ul>
+<p><strong>Common</strong></p>
+<ul>
+<li><a href="BusinessContactNoteHistory.html">BusinessContactNoteHistories</a> — <code>Body</code> (expand)</li>
+<li><a href="BusinessContactReference.html">BusinessContactReferences</a> — <code>Comment</code> (expand)</li>
+<li><a href="BusinessContactReference.html">BusinessContactReferences</a> — <code>CommentId</code> (FK)</li>
+<li><a href="EmploymentPeriod.html">EmploymentPeriods</a> — <code>Comment</code> (expand)</li>
+<li><a href="EmploymentPeriod.html">EmploymentPeriods</a> — <code>CommentId</code> (FK)</li>
+<li><a href="ExtraField.html">ExtraFields</a> — <code>Comment</code> (expand)</li>
+<li><a href="ExtraField.html">ExtraFields</a> — <code>CommentId</code> (FK)</li>
+<li><a href="FormTemplateRow.html">FormTemplateRows</a> — <code>Comment</code> (expand)</li>
+<li><a href="FormTemplateRow.html">FormTemplateRows</a> — <code>CommentId</code> (FK)</li>
+<li><a href="FormTemplateSelectionRow.html">FormTemplateSelectionRows</a> — <code>Comment</code> (expand)</li>
+<li><a href="FormTemplateSelectionRow.html">FormTemplateSelectionRows</a> — <code>CommentId</code> (FK)</li>
+<li><a href="FormTemplate.html">FormTemplates</a> — <code>Comment</code> (expand)</li>
+<li><a href="FormTemplate.html">FormTemplates</a> — <code>CommentId</code> (FK)</li>
+<li><a href="MonitoringTask.html">MonitoringTasks</a> — <code>Comment</code> (expand)</li>
+<li><a href="MonitoringTask.html">MonitoringTasks</a> — <code>CommentId</code> (FK)</li>
+<li><a href="PartConfigurationTemplate.html">PartConfigurationTemplates</a> — <code>Comment</code> (expand)</li>
+<li><a href="PartConfigurationTemplate.html">PartConfigurationTemplates</a> — <code>CommentId</code> (FK)</li>
+<li><a href="PartConfiguration.html">PartConfigurations</a> — <code>Comment</code> (expand)</li>
+<li><a href="PartConfiguration.html">PartConfigurations</a> — <code>CommentId</code> (FK)</li>
+<li><a href="Person.html">Persons</a> — <code>Comment</code> (expand)</li>
+<li><a href="Person.html">Persons</a> — <code>CommentId</code> (FK)</li>
+<li><a href="ProjectActivity.html">ProjectActivities</a> — <code>Comment</code> (expand)</li>
+<li><a href="ProjectActivity.html">ProjectActivities</a> — <code>CommentId</code> (FK)</li>
+<li><a href="ProjectActivityType.html">ProjectActivityTypes</a> — <code>Comment</code> (expand)</li>
+<li><a href="ProjectActivityType.html">ProjectActivityTypes</a> — <code>CommentId</code> (FK)</li>
+<li><a href="ProjectCostBudget.html">ProjectCostBudgets</a> — <code>Comment</code> (expand)</li>
+<li><a href="ProjectCostBudget.html">ProjectCostBudgets</a> — <code>CommentId</code> (FK)</li>
+<li><a href="ProjectCostForecast.html">ProjectCostForecasts</a> — <code>Comment</code> (expand)</li>
+<li><a href="ProjectCostForecast.html">ProjectCostForecasts</a> — <code>CommentId</code> (FK)</li>
+<li><a href="ProjectCostReportingEntry.html">ProjectCostReportingEntries</a> — <code>Comment</code> (expand)</li>
+<li><a href="ProjectCostReportingEntry.html">ProjectCostReportingEntries</a> — <code>InternalComment</code> (expand)</li>
+<li><a href="Project.html">Projects</a> — <code>ExternalComment</code> (expand)</li>
+<li><a href="Project.html">Projects</a> — <code>ExternalCommentId</code> (FK)</li>
+<li><a href="Project.html">Projects</a> — <code>InternalComment</code> (expand)</li>
+<li><a href="Project.html">Projects</a> — <code>InternalCommentId</code> (FK)</li>
+<li><a href="Revision.html">Revisions</a> — <code>Comment</code> (expand)</li>
+<li><a href="Revision.html">Revisions</a> — <code>CommentId</code> (FK)</li>
+<li><a href="VatRate.html">VatRates</a> — <code>ReferenceText</code> (expand)</li>
+<li><a href="VatRate.html">VatRates</a> — <code>ReferenceTextId</code> (FK)</li>
+</ul>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>ActualRejectionComment</code> (expand)</li>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>ActualRejectionCommentId</code> (FK)</li>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>ExternalComment</code> (expand)</li>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>ExternalCommentId</code> (FK)</li>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>InternalComment</code> (expand)</li>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>InternalCommentId</code> (FK)</li>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>ReasonComment</code> (expand)</li>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>ReasonCommentId</code> (FK)</li>
+<li><a href="../Inventory/CaseEntryActivity.html">CaseEntryActivities</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Inventory/CaseEntryActivity.html">CaseEntryActivities</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Inventory/CaseManagementTemplateNode.html">CaseManagementTemplateNodes</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Inventory/CaseManagementTemplateNode.html">CaseManagementTemplateNodes</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Inventory/Location.html">Locations</a> — <code>BlockMessage</code> (expand)</li>
+<li><a href="../Inventory/Location.html">Locations</a> — <code>BlockMessageId</code> (FK)</li>
+<li><a href="../Inventory/Location.html">Locations</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Inventory/Location.html">Locations</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Inventory/PartActivity.html">PartActivities</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>BlockMessage</code> (expand)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>BlockMessageId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>ManufacturingComment</code> (expand)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>ManufacturingCommentId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>PickingInstruction</code> (expand)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>PickingInstructionId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>PurchaseComment</code> (expand)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>PurchaseCommentId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>ReceivingInstruction</code> (expand)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>ReceivingInstructionId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>SalesComment</code> (expand)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>SalesCommentId</code> (FK)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>BlockMessage</code> (expand)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>BlockMessageId</code> (FK)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>Certificate</code> (expand)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>CertificateId</code> (FK)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>InstallationComment</code> (expand)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>InstallationCommentId</code> (FK)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>WarrantyCommitment</code> (expand)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>WarrantyCommitmentId</code> (FK)</li>
+</ul>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="../Manufacturing/DrawingRevision.html">DrawingRevisions</a> — <code>RevisionComment</code> (expand)</li>
+<li><a href="../Manufacturing/DrawingRevision.html">DrawingRevisions</a> — <code>RevisionCommentId</code> (FK)</li>
+<li><a href="../Manufacturing/MaintenanceReportingRow.html">MaintenanceReportingRows</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Manufacturing/MaintenanceReportingRow.html">MaintenanceReportingRows</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Manufacturing/MaintenanceReportingRow.html">MaintenanceReportingRows</a> — <code>Instruction</code> (expand)</li>
+<li><a href="../Manufacturing/MaintenanceReportingRow.html">MaintenanceReportingRows</a> — <code>InstructionId</code> (FK)</li>
+<li><a href="../Manufacturing/MaintenanceReportingSelectionRow.html">MaintenanceReportingSelectionRows</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Manufacturing/MaintenanceReportingSelectionRow.html">MaintenanceReportingSelectionRows</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Manufacturing/MaintenanceReporting.html">MaintenanceReportings</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Manufacturing/MaintenanceReporting.html">MaintenanceReportings</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Manufacturing/MaintenanceReporting.html">MaintenanceReportings</a> — <code>Instruction</code> (expand)</li>
+<li><a href="../Manufacturing/ManufacturingOrderMaterial.html">ManufacturingOrderMaterials</a> — <code>InstructionComment</code> (expand)</li>
+<li><a href="../Manufacturing/ManufacturingOrderMaterial.html">ManufacturingOrderMaterials</a> — <code>InstructionCommentId</code> (FK)</li>
+<li><a href="../Manufacturing/ManufacturingOrderNodeDrawingRevision.html">ManufacturingOrderNodeDrawingRevisions</a> — <code>RevisionComment</code> (expand)</li>
+<li><a href="../Manufacturing/ManufacturingOrderNodeDrawingRevision.html">ManufacturingOrderNodeDrawingRevisions</a> — <code>RevisionCommentId</code> (FK)</li>
+<li><a href="../Manufacturing/ManufacturingOrderOperationReporting.html">ManufacturingOrderOperationReportings</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Manufacturing/ManufacturingOrderOperationReporting.html">ManufacturingOrderOperationReportings</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Manufacturing/ManufacturingOrderOperation.html">ManufacturingOrderOperations</a> — <code>InstructionComment</code> (expand)</li>
+<li><a href="../Manufacturing/ManufacturingOrderOperation.html">ManufacturingOrderOperations</a> — <code>InstructionCommentId</code> (FK)</li>
+<li><a href="../Manufacturing/ManufacturingOrder.html">ManufacturingOrders</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Manufacturing/ManufacturingOrder.html">ManufacturingOrders</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Manufacturing/MaterialRow.html">MaterialRows</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Manufacturing/MaterialRow.html">MaterialRows</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Manufacturing/OperationRow.html">OperationRows</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Manufacturing/OperationRow.html">OperationRows</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Manufacturing/WorkCenter.html">WorkCenters</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Manufacturing/WorkCenter.html">WorkCenters</a> — <code>CommentId</code> (FK)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="../Purchase/BlanketOrderPurchase.html">BlanketOrderPurchases</a> — <code>ExternalComment</code> (expand)</li>
+<li><a href="../Purchase/BlanketOrderPurchase.html">BlanketOrderPurchases</a> — <code>ExternalCommentId</code> (FK)</li>
+<li><a href="../Purchase/BlanketOrderPurchase.html">BlanketOrderPurchases</a> — <code>InternalComment</code> (expand)</li>
+<li><a href="../Purchase/BlanketOrderPurchase.html">BlanketOrderPurchases</a> — <code>InternalCommentId</code> (FK)</li>
+<li><a href="../Purchase/Inquiry.html">Inquiries</a> — <code>ExternalComment</code> (expand)</li>
+<li><a href="../Purchase/Inquiry.html">Inquiries</a> — <code>ExternalCommentId</code> (FK)</li>
+<li><a href="../Purchase/Inquiry.html">Inquiries</a> — <code>InternalComment</code> (expand)</li>
+<li><a href="../Purchase/Inquiry.html">Inquiries</a> — <code>InternalCommentId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderInvoiceRow.html">PurchaseOrderInvoiceRows</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrderInvoiceRow.html">PurchaseOrderInvoiceRows</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>DelayComment</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>DelayCommentId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>ReceivingInspectionInstruction</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>ReceivingInspectionInstructionId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>ReceivingMessage</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>ReceivingMessageId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrder.html">PurchaseOrders</a> — <code>ExternalComment</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrder.html">PurchaseOrders</a> — <code>ExternalCommentId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrder.html">PurchaseOrders</a> — <code>InternalComment</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrder.html">PurchaseOrders</a> — <code>InternalCommentId</code> (FK)</li>
+<li><a href="../Purchase/SupplierPartLink.html">SupplierPartLinks</a> — <code>OverridePurchaseComment</code> (expand)</li>
+<li><a href="../Purchase/SupplierPartLink.html">SupplierPartLinks</a> — <code>OverridePurchaseCommentId</code> (FK)</li>
+<li><a href="../Purchase/SupplierPartLink.html">SupplierPartLinks</a> — <code>PriceComment</code> (expand)</li>
+<li><a href="../Purchase/SupplierPartLink.html">SupplierPartLinks</a> — <code>PriceCommentId</code> (FK)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>ArrivalReportingInstruction</code> (expand)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>ArrivalReportingInstructionId</code> (FK)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>BlockMessage</code> (expand)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>BlockMessageId</code> (FK)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>CommentId</code> (FK)</li>
+</ul>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="../Sales/BlanketOrderSales.html">BlanketOrderSales</a> — <code>ExternalComment</code> (expand)</li>
+<li><a href="../Sales/BlanketOrderSales.html">BlanketOrderSales</a> — <code>ExternalCommentId</code> (FK)</li>
+<li><a href="../Sales/BlanketOrderSales.html">BlanketOrderSales</a> — <code>InternalComment</code> (expand)</li>
+<li><a href="../Sales/BlanketOrderSales.html">BlanketOrderSales</a> — <code>InternalCommentId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunity.html">BusinessOpportunities</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Sales/BusinessOpportunity.html">BusinessOpportunities</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunity.html">BusinessOpportunities</a> — <code>ReasonLostComment</code> (expand)</li>
+<li><a href="../Sales/BusinessOpportunity.html">BusinessOpportunities</a> — <code>ReasonLostCommentId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunityActivity.html">BusinessOpportunityActivities</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Sales/BusinessOpportunityActivity.html">BusinessOpportunityActivities</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunityActivityTemplateRow.html">BusinessOpportunityActivityTemplateRows</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Sales/BusinessOpportunityActivityTemplateRow.html">BusinessOpportunityActivityTemplateRows</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunityReference.html">BusinessOpportunityReferences</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Sales/BusinessOpportunityReference.html">BusinessOpportunityReferences</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Sales/BusinessOpportunityType.html">BusinessOpportunityTypes</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Sales/BusinessOpportunityType.html">BusinessOpportunityTypes</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>ExternalComment</code> (expand)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>ExternalCommentId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>InternalComment</code> (expand)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>InternalCommentId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>PickInstruction</code> (expand)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>PickInstructionId</code> (FK)</li>
+<li><a href="../Sales/CustomerPartLink.html">CustomerPartLinks</a> — <code>OverrideSalesComment</code> (expand)</li>
+<li><a href="../Sales/CustomerPartLink.html">CustomerPartLinks</a> — <code>OverrideSalesCommentId</code> (FK)</li>
+<li><a href="../Sales/CustomerPartLink.html">CustomerPartLinks</a> — <code>PickingComment</code> (expand)</li>
+<li><a href="../Sales/CustomerPartLink.html">CustomerPartLinks</a> — <code>PickingCommentId</code> (FK)</li>
+<li><a href="../Sales/CustomerPartLink.html">CustomerPartLinks</a> — <code>PriceComment</code> (expand)</li>
+<li><a href="../Sales/CustomerPartLink.html">CustomerPartLinks</a> — <code>PriceCommentId</code> (FK)</li>
+<li><a href="../Sales/CustomerRelationshipManagementActivity.html">CustomerRelationshipManagementActivities</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Sales/CustomerRelationshipManagementActivity.html">CustomerRelationshipManagementActivities</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>BlockMessage</code> (expand)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>BlockMessageId</code> (FK)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>PickingListComment</code> (expand)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>PickingListCommentId</code> (FK)</li>
+<li><a href="../Sales/PackageRow.html">PackageRows</a> — <code>ExternalComment</code> (expand)</li>
+<li><a href="../Sales/PackageRow.html">PackageRows</a> — <code>ExternalCommentId</code> (FK)</li>
+<li><a href="../Sales/PackageRow.html">PackageRows</a> — <code>InternalComment</code> (expand)</li>
+<li><a href="../Sales/PackageRow.html">PackageRows</a> — <code>InternalCommentId</code> (FK)</li>
+<li><a href="../Sales/QuoteActivity.html">QuoteActivities</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Sales/QuoteActivity.html">QuoteActivities</a> — <code>CommentId</code> (FK)</li>
+<li><a href="../Sales/Quote.html">Quotes</a> — <code>ExternalComment</code> (expand)</li>
+<li><a href="../Sales/Quote.html">Quotes</a> — <code>ExternalCommentId</code> (FK)</li>
+<li><a href="../Sales/Quote.html">Quotes</a> — <code>InternalComment</code> (expand)</li>
+<li><a href="../Sales/Quote.html">Quotes</a> — <code>InternalCommentId</code> (FK)</li>
+<li><a href="../Sales/Quote.html">Quotes</a> — <code>ReasonLostComment</code> (expand)</li>
+<li><a href="../Sales/Quote.html">Quotes</a> — <code>ReasonLostCommentId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreement.html">SalesAgreements</a> — <code>ExternalComment</code> (expand)</li>
+<li><a href="../Sales/SalesAgreement.html">SalesAgreements</a> — <code>ExternalCommentId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreement.html">SalesAgreements</a> — <code>InternalComment</code> (expand)</li>
+<li><a href="../Sales/SalesAgreement.html">SalesAgreements</a> — <code>InternalCommentId</code> (FK)</li>
+<li><a href="../Sales/SalesPrice.html">SalesPrices</a> — <code>Comment</code> (expand)</li>
+<li><a href="../Sales/SalesPrice.html">SalesPrices</a> — <code>CommentId</code> (FK)</li>
+</ul>
+<p><strong>TimeRecording</strong></p>
+<ul>
+<li><a href="../TimeRecording/AdditionRecording.html">AdditionRecordings</a> — <code>Comment</code> (expand)</li>
+<li><a href="../TimeRecording/Schedule.html">Schedules</a> — <code>BlockMessage</code> (expand)</li>
+<li><a href="../TimeRecording/Schedule.html">Schedules</a> — <code>BlockMessageId</code> (FK)</li>
+<li><a href="../TimeRecording/WorkInterval.html">WorkIntervals</a> — <code>Comment</code> (expand)</li>
+<li><a href="../TimeRecording/WorkInterval.html">WorkIntervals</a> — <code>CommentId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Text": null,
+  "RawText": null,
+  "HasFileLinks": false,
+  "FileLinks": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Common.Comment.html">https://api.monitor.se/api/Monitor.API.Common.Comment.html</a><br><span class="badge">Common</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

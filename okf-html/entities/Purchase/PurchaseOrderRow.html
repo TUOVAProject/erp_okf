@@ -1,0 +1,1034 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PurchaseOrderRows · Monitor ERP API</title>
+<meta name="description" content="Represents a purchase order row.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Purchase.html">Purchase</a><span class="sep">/</span>PurchaseOrderRows</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html" aria-current="location">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="purchaseorderrows">PurchaseOrderRows</h1>
+<p>Represents a purchase order row.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Purchase.html">Purchase</a></dd><dt>API class</dt><dd><code>PurchaseOrderRow</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Purchase/PurchaseOrderRows</code></dd><dt>Required permission</dt><dd>Show purchase orders</dd><dt>GUID</dt><dd><code>E2C7B35D-48E3-45E6-AEEC-A297943E583F</code></dd><dt>Introduced in</dt><dd>2.26</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Position</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The relative numeric position of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderRowType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The type of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
+<td></td>
+<td>The business key identifier of the part set for the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Part</code></td>
+<td class="type"><code>Parts</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
+<td>expandable</td>
+<td>The part of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>EntityIdentityString</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 20</td>
+<td>The human readable identifier of the entity subject of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>AdditionalRowDescription</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The additional row description of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>FreeTextHtml</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 0</td>
+<td>The free text row's rich text HTML row data.</td>
+</tr>
+<tr>
+<td class="prop"><code>FreeText</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 0</td>
+<td>The free text row's raw text.</td>
+</tr>
+<tr>
+<td class="prop"><code>ParentRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="PurchaseOrderRow.html">PurchaseOrderRows</a></td>
+<td></td>
+<td>The business key identifier of the current row's parent.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The delivery date set for the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>RevisionId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Revision.html">Revisions</a></td>
+<td></td>
+<td>The business key identifier of the row's revision.</td>
+</tr>
+<tr>
+<td class="prop"><code>Revision</code></td>
+<td class="type"><code>Revisions</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Revision.html">Revisions</a></td>
+<td>expandable</td>
+<td>The revision of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderedQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The ordered quantity of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Price</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The price of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the row price currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable, since 2.30</td>
+<td>The price currency for the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Discount</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The discount in percent set for the row.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>ToolId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td><span class="badge dep">deprecated since 2.48</span></td>
+<td>The business key identifier of the tool of the row. <em>(Replaced by Part)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>UnitId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Unit.html">Units</a></td>
+<td></td>
+<td>The business key identifier of the row's unit.</td>
+</tr>
+<tr>
+<td class="prop"><code>Unit</code></td>
+<td class="type"><code>Units</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Unit.html">Units</a></td>
+<td>expandable</td>
+<td>The unit of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatRateId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td></td>
+<td>The business key identifier of the row's VAT rate.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatRate</code></td>
+<td class="type"><code>VatRates</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td>expandable, since 2.30</td>
+<td>The VAT rate of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>WarehouseId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
+<td></td>
+<td>The business key identifier of the warehouse that the row belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>Warehouse</code></td>
+<td class="type"><code>Warehouses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
+<td>expandable, since 2.30</td>
+<td>The warehouse that the row belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>WeightPerUnit</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The weight per unit of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The order date of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ConversionFactor</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The conversion factor of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceInCompanyCurrency</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The row price in the company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupPriceInCompanyCurrency</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The setup price of the row in the company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupPriceInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>StandardPrice</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The standard price of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>StandardPriceCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the row's standard price currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>StandardPriceCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable, since 2.30</td>
+<td>The standard price currency of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupPrice</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The setup price of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupPriceCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the row's setup price currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupPriceCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable, since 2.30</td>
+<td>The setup price currency of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShowPrice</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if price should be shown for the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartRowType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The part row type of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>LifeCycleState</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The life cycle state of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartStatus</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>enum</td>
+<td>The part status of the part at the time of row creation.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderedQuantityInOrderUnit</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The ordered quantity in the order unit.</td>
+</tr>
+<tr>
+<td class="prop"><code>RestQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The rest quantity of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveredQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The delivered quantity of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>InitialDeliveryDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The initial delivery date of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>DesiredDeliveryDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The desired delivery date of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>RestQuantityInOrderUnit</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The rest quantity in the order unit.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveredQuantityInOrderUnit</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The delivered quantity in the order unit.</td>
+</tr>
+<tr>
+<td class="prop"><code>CreationContext</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The creation context of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ShowFreeTextIn</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>bitmask, enum</td>
+<td>Specifies which documents the free text row data will appear on.</td>
+</tr>
+<tr>
+<td class="prop"><code>StatisticalGoodsCodeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/StatisticalGoodsCode.html">StatisticalGoodsCodes</a></td>
+<td></td>
+<td>The business key identifier of the row's statistical goods code.</td>
+</tr>
+<tr>
+<td class="prop"><code>StatisticalGoodsCode</code></td>
+<td class="type"><code>StatisticalGoodsCodes</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/StatisticalGoodsCode.html">StatisticalGoodsCodes</a></td>
+<td>expandable, since 2.30</td>
+<td>The statistical goods code of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowStatus</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The status of the purchase order row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Version</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.30</td>
+<td>The version of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ArrivalReporting</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.30</td>
+<td>Specifies if the row uses arrival reporting.</td>
+</tr>
+<tr>
+<td class="prop"><code>ConfirmedDelayed</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.30</td>
+<td>Specifies if the row is confirmed delayed.</td>
+</tr>
+<tr>
+<td class="prop"><code>DelayCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's delay comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>DelayComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable, since 2.30</td>
+<td>The delay comment of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>DelayReasonId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/ReasonCode.html">ReasonCodes</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's delay reason.</td>
+</tr>
+<tr>
+<td class="prop"><code>DelayReason</code></td>
+<td class="type"><code>ReasonCodes</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/ReasonCode.html">ReasonCodes</a></td>
+<td>expandable, since 2.30</td>
+<td>The delay reason of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>CodingId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's coding.</td>
+</tr>
+<tr>
+<td class="prop"><code>Coding</code></td>
+<td class="type"><code>Codings</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Accounting/Coding.html">Codings</a></td>
+<td>expandable, since 2.30</td>
+<td>The coding of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsConfirmed</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.30</td>
+<td>Specifies if the row is confirmed.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReceivingInspectionInstructionId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's receiving inspection instruction.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReceivingInspectionInstruction</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable, since 2.30</td>
+<td>The receiving inspection instruction of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReceivingInspectionType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.30</td>
+<td>The receiving inspection type of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReceivingMessageId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's receiving message.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReceivingMessage</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable, since 2.30</td>
+<td>The receiving message of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>RequiredForManufacturingOrderNode</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.30</td>
+<td>The business key identifier of the manufacturing order node that requires this row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Weight</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.30</td>
+<td>The weight of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>LinkedStockOrderRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Sales/CustomerOrderRow.html">CustomerOrderRows</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's linked stock order row.</td>
+</tr>
+<tr>
+<td class="prop"><code>LinkedSubcontractingManufacturingOrderOperation</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Manufacturing/ManufacturingOrderOperation.html">ManufacturingOrderOperations</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's linked subcontracting manufacturing order operation.</td>
+</tr>
+<tr>
+<td class="prop"><code>OriginatingPurchaseOrderDeliveryRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's originating purchase order delivery row.</td>
+</tr>
+<tr>
+<td class="prop"><code>CausingTransType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.30</td>
+<td>The causing transaction type of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>CausingOrderRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.30</td>
+<td>The business key identifier of the order row that was the cause of this row. References depends on CausingTransType</td>
+</tr>
+<tr>
+<td class="prop"><code>RequirementDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.30</td>
+<td>The requirement date of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PreviousOrderedQuantity</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.30</td>
+<td>The previous ordered quantity of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PreviousDeliveryDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.30</td>
+<td>The previous delivery date of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SubPartParentRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="PurchaseOrderRow.html">PurchaseOrderRows</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's sub part parent row.</td>
+</tr>
+<tr>
+<td class="prop"><code>QuantityRatio</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.30</td>
+<td>The quantity ratio of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>ParentOrderId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="PurchaseOrder.html">PurchaseOrders</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's purchase order.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowIndex</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.30</td>
+<td>The row index of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SumRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="PurchaseOrderRow.html">PurchaseOrderRows</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's sum row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceOrigin</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.30</td>
+<td>The row index of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>DiscountIsLockedFromAutomaticChanges</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.30</td>
+<td>Specifies if the row's discount is locked from automatic changes.</td>
+</tr>
+<tr>
+<td class="prop"><code>IntrastatTransactionTypeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/TransactionTypeIntrastat.html">TransactionTypeIntrastats</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's intrastat transaction type.</td>
+</tr>
+<tr>
+<td class="prop"><code>IntrastatTransactionType</code></td>
+<td class="type"><code>TransactionTypeIntrastats</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/TransactionTypeIntrastat.html">TransactionTypeIntrastats</a></td>
+<td>expandable, since 2.30</td>
+<td>The intrastat transaction type of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>TariffAndServiceCodeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/TariffAndServiceCode.html">TariffAndServiceCodes</a></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's tariff and service code.</td>
+</tr>
+<tr>
+<td class="prop"><code>TariffAndServiceCode</code></td>
+<td class="type"><code>TariffAndServiceCodes</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/TariffAndServiceCode.html">TariffAndServiceCodes</a></td>
+<td>expandable, since 2.30</td>
+<td>The tariff and service code of the row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartConfigurationId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.30</td>
+<td>The business key identifier of the row's part configuration.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowsGoodsLabel</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 2.46</td>
+<td>The goods label of the purchase order row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderQuantityId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="OrderQuantityPurchaseOrder.html">OrderQuantityPurchaseOrders</a></td>
+<td>since 22.6</td>
+<td>The business key identifier of order quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderQuantity</code></td>
+<td class="type"><code>OrderQuantityPurchaseOrders</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="OrderQuantityPurchaseOrder.html">OrderQuantityPurchaseOrders</a></td>
+<td>expandable, since 22.6</td>
+<td>Order quantity that holds the partial quantities.</td>
+</tr>
+<tr>
+<td class="prop"><code>SupplierDrawingNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 24.6</td>
+<td>The supplier drawing number of the purchase order row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SupplierRevisionNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 24.6</td>
+<td>The supplier revision number of the purchase order row.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowNotes</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 100, since 24.9</td>
+<td>The note of the purchase order row.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlanketOrderPurchaseRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a></td>
+<td>since 26.2</td>
+<td>The business key identifier of the row's blanket order purchase row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SupplierOrderNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 26.2</td>
+<td>The supplier order number of the purchase order row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SupplierOrderRowPosition</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 26.2</td>
+<td>The supplier order row position of the purchase order row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SupplierPartNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50, since 26.4</td>
+<td>The supplier's part number of the purchase order row.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>OrderRowType</code><div class="evs"><span class="ev">Part<span>=1</span></span><span class="ev">Additional<span>=2</span></span><span class="ev">Sum<span>=3</span></span><span class="ev">FreeText<span>=4</span></span></div></li><li><code>PartRowType</code><div class="evs"><span class="ev">NotPartRow<span>=0</span></span><span class="ev">RegularRow<span>=1</span></span><span class="ev">SubPartRow<span>=2</span></span><span class="ev">SetupPriceRow<span>=3</span></span><span class="ev">AlloyCostRow<span>=4</span></span><span class="ev">PaymentPlanRow<span>=5</span></span><span class="ev">PackagingRow<span>=6</span></span></div></li><li><code>LifeCycleState</code><div class="evs"><span class="ev">Transient<span>=1</span></span><span class="ev">Persistent<span>=10</span></span><span class="ev">History<span>=20</span></span><span class="ev">RemovableCandidate<span>=99</span></span></div></li><li><code>PartStatus</code><div class="evs"><span class="ev">Quote<span>=1</span></span><span class="ev">Prototype<span>=2</span></span><span class="ev">New<span>=3</span></span><span class="ev">Normal<span>=4</span></span><span class="ev">NewRevision<span>=5</span></span><span class="ev">PhasingOut<span>=6</span></span><span class="ev">Expired<span>=9</span></span><span class="ev">Inactive<span>=99</span></span></div></li><li><code>CreationContext</code><div class="evs"><span class="ev">OrderRegistration<span>=0</span></span><span class="ev">DeliveryReporting<span>=1</span></span><span class="ev">Invoicing<span>=2</span></span><span class="ev">PartialInvoicing<span>=3</span></span></div></li><li><code>ShowFreeTextIn</code><span class="badge">bitmask — values combine</span><div class="evs"><span class="ev">Internal<span>=0</span></span><span class="ev">Inquiry<span>=1</span></span><span class="ev">Order<span>=2</span></span><span class="ev">DeliverySchedule<span>=4</span></span></div></li><li><code>RowStatus</code><div class="evs"><span class="ev">Registered<span>=1</span></span><span class="ev">PurchaseOrderRowPrinted<span>=2</span></span><span class="ev">PartiallyDelivered<span>=5</span></span><span class="ev">Declined<span>=8</span></span><span class="ev">History<span>=9</span></span></div></li><li><code>ReceivingInspectionType</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Always<span>=1</span></span><span class="ev">VariableInspection<span>=2</span></span></div></li><li><code>CausingTransType</code><div class="evs"><span class="ev">StockBalanceRow<span>=0</span></span><span class="ev">ReceivedPurchaseOrder<span>=1</span></span><span class="ev">PurchaseOrder<span>=2</span></span><span class="ev">PurchaseOrderSuggestion<span>=3</span></span><span class="ev">ManufactureOrderNode<span>=4</span></span><span class="ev">ManufactureOrderNodeSuggestion<span>=5</span></span><span class="ev">ManufactureOrderNodeSimulation<span>=6</span></span><span class="ev">CustomerOrder<span>=7</span></span><span class="ev">SalesForecast<span>=8</span></span><span class="ev">CustomerOrderForecast<span>=9</span></span><span class="ev">MaterialRequirementFromManufactureOrderNode<span>=10</span></span><span class="ev">MaterialRequirementFromManufactureOrderSuggestion<span>=11</span></span><span class="ev">MaterialRequirementFromManufactureOrderSimulation<span>=12</span></span><span class="ev">Quote<span>=13</span></span><span class="ev">MaterialRequirementSuggestionFromQuoteSimulation<span>=14</span></span><span class="ev">ArrivingStockOrder<span>=15</span></span><span class="ev">DeliveringStockOrder<span>=16</span></span><span class="ev">StockOrderArrivalSuggestion<span>=17</span></span><span class="ev">StockOrderDeliverySuggestion<span>=18</span></span><span class="ev">CustomerOrderFromDeliveryTimeControl<span>=19</span></span><span class="ev">MaterialRequirementSuggestionFromDeliveryTimeControl<span>=20</span></span><span class="ev">ManufactureOrderNodeFromDeliveryTimeControl<span>=21</span></span><span class="ev">PurchaseOrderFromDeliveryTimeControl<span>=22</span></span><span class="ev">PurchaseOrderAdvice<span>=23</span></span><span class="ev">DeliveringStockOrderFromDeliveryTimeControl<span>=24</span></span><span class="ev">CustomerOrderPreliminary<span>=27</span></span><span class="ev">CustomerOrderRowMissingDeliveryDate<span>=28</span></span><span class="ev">DeliveringStockOrderPreliminary<span>=29</span></span><span class="ev">ServiceOrder<span>=30</span></span><span class="ev">ReturnTool<span>=33</span></span><span class="ev">WithdrawalTool<span>=34</span></span><span class="ev">QuotePreliminary<span>=35</span></span><span class="ev">QuoteMissingDeliveryDate<span>=36</span></span><span class="ev">SalesBlanketOrder<span>=40</span></span><span class="ev">PurchaseBlanketOrder<span>=41</span></span><span class="ev">ReturnPurchaseOrder<span>=42</span></span></div></li><li><code>PriceOrigin</code><div class="evs"><span class="ev">Undefined<span>=0</span></span><span class="ev">UserDefined<span>=1</span></span><span class="ev">PriceList<span>=2</span></span><span class="ev">PriceListStaggered<span>=3</span></span><span class="ev">BusinessPartLink<span>=4</span></span><span class="ev">BusinessPartLinkStaggered<span>=5</span></span><span class="ev">StandardPrice<span>=6</span></span><span class="ev">PartConfiguration<span>=7</span></span><span class="ev">PostCalculatedAverage<span>=8</span></span><span class="ev">BusinessPartLinkFuturePrice<span>=9</span></span></div></li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="../Manufacturing/ManufacturingOrderMaterial.html">ManufacturingOrderMaterials</a> — <code>LinkedPurchaseOrderRowId</code> (FK)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="PurchaseOrderAdviceRow.html">PurchaseOrderAdviceRows</a> — <code>PurchaseOrderRowId</code> (FK)</li>
+<li><a href="PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a> — <code>PurchaseOrderRow</code> (expand)</li>
+<li><a href="PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a> — <code>PurchaseOrderRowId</code> (FK)</li>
+<li><a href="PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>ParentRowId</code> (FK)</li>
+<li><a href="PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>SubPartParentRowId</code> (FK)</li>
+<li><a href="PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>SumRowId</code> (FK)</li>
+<li><a href="PurchaseOrder.html">PurchaseOrders</a> — <code>Rows</code> (expand)</li>
+</ul>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="../Sales/CustomerOrderRow.html">CustomerOrderRows</a> — <code>LinkedPurchaseOrderRowId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderRow.html">CustomerOrderRows</a> — <code>LinkedStockOrderRow</code> (expand)</li>
+<li><a href="../Sales/CustomerOrderRow.html">CustomerOrderRows</a> — <code>LinkedStockOrderRowId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Position": null,
+  "OrderRowType": 0,
+  "PartId": null,
+  "Part": null,
+  "EntityIdentityString": null,
+  "AdditionalRowDescription": null,
+  "FreeTextHtml": null,
+  "FreeText": null,
+  "ParentRowId": null,
+  "DeliveryDate": null,
+  "RevisionId": null,
+  "Revision": null,
+  "OrderedQuantity": 0.0,
+  "Price": null,
+  "PriceCurrencyId": null,
+  "PriceCurrency": null,
+  "Discount": 0.0,
+  "ToolId": null,
+  "UnitId": null,
+  "Unit": null,
+  "VatRateId": 0,
+  "VatRate": null,
+  "WarehouseId": 0,
+  "Warehouse": null,
+  "WeightPerUnit": null,
+  "OrderDate": "0001-01-01T00:00:00+00:00",
+  "ConversionFactor": 0.0,
+  "PriceInCompanyCurrency": null,
+  "PriceInCompanyCurrencyCurrencyId": null,
+  "SetupPriceInCompanyCurrency": null,
+  "SetupPriceInCompanyCurrencyCurrencyId": null,
+  "StandardPrice": null,
+  "StandardPriceCurrencyId": null,
+  "StandardPriceCurrency": null,
+  "SetupPrice": null,
+  "SetupPriceCurrencyId": null,
+  "SetupPriceCurrency": null,
+  "ShowPrice": false,
+  "PartRowType": 0,
+  "LifeCycleState": 0,
+  "PartStatus": null,
+  "OrderedQuantityInOrderUnit": 0.0,
+  "RestQuantity": 0.0,
+  "DeliveredQuantity": 0.0,
+  "InitialDeliveryDate": null,
+  "DesiredDeliveryDate": null,
+  "RestQuantityInOrderUnit": 0.0,
+  "DeliveredQuantityInOrderUnit": 0.0,
+  "CreationContext": 0,
+  "ShowFreeTextIn": 0,
+  "StatisticalGoodsCodeId": null,
+  "StatisticalGoodsCode": null,
+  "RowStatus": 0,
+  "Version": 0,
+  "ArrivalReporting": false,
+  "ConfirmedDelayed": false,
+  "DelayCommentId": null,
+  "DelayComment": null,
+  "DelayReasonId": null,
+  "DelayReason": null,
+  "CodingId": null,
+  "Coding": null,
+  "IsConfirmed": false,
+  "ReceivingInspectionInstructionId": null,
+  "ReceivingInspectionInstruction": null,
+  "ReceivingInspectionType": 0,
+  "ReceivingMessageId": null,
+  "ReceivingMessage": null,
+  "RequiredForManufacturingOrderNode": null,
+  "Weight": 0.0,
+  "LinkedStockOrderRowId": null,
+  "LinkedSubcontractingManufacturingOrderOperation": null,
+  "OriginatingPurchaseOrderDeliveryRowId": null,
+  "CausingTransType": 0,
+  "CausingOrderRowId": null,
+  "RequirementDate": null,
+  "PreviousOrderedQuantity": null,
+  "PreviousDeliveryDate": null,
+  "SubPartParentRowId": null,
+  "QuantityRatio": null,
+  "ParentOrderId": 0,
+  "RowIndex": 0,
+  "SumRowId": null,
+  "PriceOrigin": 0,
+  "DiscountIsLockedFromAutomaticChanges": false,
+  "IntrastatTransactionTypeId": null,
+  "IntrastatTransactionType": null,
+  "TariffAndServiceCodeId": null,
+  "TariffAndServiceCode": null,
+  "PartConfigurationId": null,
+  "RowsGoodsLabel": null,
+  "OrderQuantityId": null,
+  "OrderQuantity": null,
+  "SupplierDrawingNumber": null,
+  "SupplierRevisionNumber": null,
+  "RowNotes": null,
+  "BlanketOrderPurchaseRowId": null,
+  "SupplierOrderNumber": null,
+  "SupplierOrderRowPosition": null,
+  "SupplierPartNumber": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderRow.html">https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderRow.html</a><br><span class="badge">Purchase</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

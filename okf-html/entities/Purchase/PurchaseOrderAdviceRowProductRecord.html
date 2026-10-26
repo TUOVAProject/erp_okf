@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PurchaseOrderAdviceRowProductRecords · Monitor ERP API</title>
+<meta name="description" content="Represents a purchase order advice row product record.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Purchase.html">Purchase</a><span class="sep">/</span>PurchaseOrderAdviceRowProductRecords</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html" aria-current="location">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="purchaseorderadvicerowproductrecords">PurchaseOrderAdviceRowProductRecords</h1>
+<p>Represents a purchase order advice row product record.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Purchase.html">Purchase</a></dd><dt>API class</dt><dd><code>PurchaseOrderAdviceRowProductRecord</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Purchase/PurchaseOrderAdviceRowProductRecords</code></dd><dt>Required permission</dt><dd>Show arrival</dd><dt>GUID</dt><dd><code>6CBD9EF6-2FD4-44D4-B1D2-8568A451CFC8</code></dd><dt>Introduced in</dt><dd>22.2</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the purchase order advice row product record.</td>
+</tr>
+<tr>
+<td class="prop"><code>ParentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="PurchaseOrderAdviceRow.html">PurchaseOrderAdviceRows</a></td>
+<td></td>
+<td>The business key identifier of the purchase order advice row that this product record belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>TraceabilityMode</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The traceability mode for the product record.</td>
+</tr>
+<tr>
+<td class="prop"><code>BatchNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 60</td>
+<td>The batch number for the product record.</td>
+</tr>
+<tr>
+<td class="prop"><code>BatchQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The batch quantity for the product record.</td>
+</tr>
+<tr>
+<td class="prop"><code>BatchBestBeforeDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The batch best before date for the product record.</td>
+</tr>
+<tr>
+<td class="prop"><code>SerialNumberPrefix</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 5</td>
+<td>The serial number prefix for the product records.</td>
+</tr>
+<tr>
+<td class="prop"><code>SerialNumberStart</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 60</td>
+<td>The serial number start for the product records.</td>
+</tr>
+<tr>
+<td class="prop"><code>SerialNumberCount</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Number of product records with serial number to create.</td>
+</tr>
+<tr>
+<td class="prop"><code>ChargeNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The charge number of the product record(s).</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>TraceabilityMode</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Batch<span>=1</span></span><span class="ev">Individual<span>=2</span></span><span class="ev">IndividualOnlyWithdrawal<span>=4</span></span></div></li></ul>
+
+
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "ParentId": null,
+  "TraceabilityMode": 0,
+  "BatchNumber": null,
+  "BatchQuantity": 0.0,
+  "BatchBestBeforeDate": null,
+  "SerialNumberPrefix": null,
+  "SerialNumberStart": null,
+  "SerialNumberCount": 0,
+  "ChargeNumber": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderAdviceRowProductRecord.html">https://api.monitor.se/api/Monitor.API.Purchase.PurchaseOrderAdviceRowProductRecord.html</a><br><span class="badge">Purchase</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

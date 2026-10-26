@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Purchase · Monitor ERP API</title>
+<meta name="description" content="Monitor ERP API module Purchase.">
+<link rel="stylesheet" href="../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../index.html">Monitor ERP API</a>
+  <span class="crumb">Purchase</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../index.html">Overview</a>
+<a href="../about.html">About this bundle</a>
+<a href="../modules/index.html">All modules</a>
+<a href="../entities/index.html">All entities</a>
+<a href="../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../guides/core-entities.html">Core entities</a>
+<a href="../guides/querying.html">Querying the Monitor API</a>
+<a href="../guides/naming-conventions.html">Naming conventions</a>
+<a href="../guides/relationships.html">How entities relate</a>
+<a href="../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../modules/Purchase.html" aria-current="page">Purchase<span class="count">30</span></a>
+<a href="../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#queryable-entities">Queryable entities</a>
+<a class="toc-h" href="#depends-on-other-modules">Depends on other modules</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="purchase">Purchase</h1>
+<p>Monitor API module <code>Purchase</code>: 30 queryable entities, 0 commands, 0 payload types.</p>
+<p>Full listing: <a href="../entities/Purchase/index.html">Purchase entities</a></p>
+<h2 id="queryable-entities">Queryable entities</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../entities/Purchase/BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a></td>
+<td><code>/api/v1/Purchase/BlanketOrderPurchaseRows</code></td>
+<td>Represents a blanket order row for purchase.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/BlanketOrderPurchase.html">BlanketOrderPurchases</a></td>
+<td><code>/api/v1/Purchase/BlanketOrderPurchases</code></td>
+<td>Represents a blanket order for purchase.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/BlanketOrderPurchaseType.html">BlanketOrderPurchaseTypes</a></td>
+<td><code>/api/v1/Purchase/BlanketOrderPurchaseTypes</code></td>
+<td>Represents a blanket order type for purchase.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/EimDocument.html">EimDocuments</a></td>
+<td><code>/api/v1/Purchase/EimDocuments</code></td>
+<td>Represents an EimDocument.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/EimDocumentType.html">EimDocumentTypes</a></td>
+<td><code>/api/v1/Purchase/EimDocumentTypes</code></td>
+<td>Represents an EIM document type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/Inquiry.html">Inquiries</a></td>
+<td><code>/api/v1/Purchase/Inquiries</code></td>
+<td>Represents an inquiry.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/InquiryRow.html">InquiryRows</a></td>
+<td><code>/api/v1/Purchase/InquiryRows</code></td>
+<td>Represents an inquiry row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/InquiryType.html">InquiryTypes</a></td>
+<td><code>/api/v1/Purchase/InquiryTypes</code></td>
+<td>Represents an inquiry type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/OrderQuantityPurchaseOrder.html">OrderQuantityPurchaseOrders</a></td>
+<td><code>/api/v1/Purchase/OrderQuantityPurchaseOrders</code></td>
+<td>Represents a order quantity template on part that holds many partial quantities.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/OtherSupplierNumber.html">OtherSupplierNumbers</a></td>
+<td><code>/api/v1/Purchase/OtherSupplierNumbers</code></td>
+<td>Represents an alternative supplier code mainly used for EDI.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/PackingTerm.html">PackingTerms</a></td>
+<td><code>/api/v1/Purchase/PackingTerms</code></td>
+<td>Represents a packing term.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/PurchaseOrderAdviceRowProductRecord.html">PurchaseOrderAdviceRowProductRecords</a></td>
+<td><code>/api/v1/Purchase/PurchaseOrderAdviceRowProductRecords</code></td>
+<td>Represents a purchase order advice row product record.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/PurchaseOrderAdviceRow.html">PurchaseOrderAdviceRows</a></td>
+<td><code>/api/v1/Purchase/PurchaseOrderAdviceRows</code></td>
+<td>Represents a purchase order advice row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/PurchaseOrderAdvice.html">PurchaseOrderAdvices</a></td>
+<td><code>/api/v1/Purchase/PurchaseOrderAdvices</code></td>
+<td>Represents a purchase order advice.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/PurchaseOrderDelivery.html">PurchaseOrderDeliveries</a></td>
+<td><code>/api/v1/Purchase/PurchaseOrderDeliveries</code></td>
+<td>Represents a purchase order delivery entry</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/PurchaseOrderDeliveryRowQuantity.html">PurchaseOrderDeliveryRowQuantities</a></td>
+<td><code>/api/v1/Purchase/PurchaseOrderDeliveryRowQuantities</code></td>
+<td>Represents a purchase order delivery row quantity entry</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a></td>
+<td><code>/api/v1/Purchase/PurchaseOrderDeliveryRows</code></td>
+<td>Represents a purchase order delivery row entry</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/PurchaseOrderInvoiceRow.html">PurchaseOrderInvoiceRows</a></td>
+<td><code>/api/v1/Purchase/PurchaseOrderInvoiceRows</code></td>
+<td>Represents a purchase order invoice row entry</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/PurchaseOrderInvoice.html">PurchaseOrderInvoices</a></td>
+<td><code>/api/v1/Purchase/PurchaseOrderInvoices</code></td>
+<td>Represents a purchase order invoice entry</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a></td>
+<td><code>/api/v1/Purchase/PurchaseOrderRows</code></td>
+<td>Represents a purchase order row.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/PurchaseOrder.html">PurchaseOrders</a></td>
+<td><code>/api/v1/Purchase/PurchaseOrders</code></td>
+<td>Represents a purchase order.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/PurchaseOrderType.html">PurchaseOrderTypes</a></td>
+<td><code>/api/v1/Purchase/PurchaseOrderTypes</code></td>
+<td>Represents a purchase order type.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/ResponseTime.html">ResponseTimes</a></td>
+<td><code>/api/v1/Purchase/ResponseTimes</code></td>
+<td>Represents a response time.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/SupplierAccountGroup.html">SupplierAccountGroups</a></td>
+<td><code>/api/v1/Purchase/SupplierAccountGroups</code></td>
+<td>Represents a supplier account group.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/SupplierAccount.html">SupplierAccounts</a></td>
+<td><code>/api/v1/Purchase/SupplierAccounts</code></td>
+<td>Represents a supplier account.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/SupplierDistrict.html">SupplierDistricts</a></td>
+<td><code>/api/v1/Purchase/SupplierDistricts</code></td>
+<td>Represents a supplier district.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/SupplierPartLink.html">SupplierPartLinks</a></td>
+<td><code>/api/v1/Purchase/SupplierPartLinks</code></td>
+<td>Represents a supplier part link.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/Supplier.html">Suppliers</a></td>
+<td><code>/api/v1/Purchase/Suppliers</code></td>
+<td>Represents a supplier.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/SupplierStatus.html">SupplierStatuses</a></td>
+<td><code>/api/v1/Purchase/SupplierStatuses</code></td>
+<td>Represents a supplier status.</td>
+</tr>
+<tr>
+<td><a href="../entities/Purchase/SupplierType.html">SupplierTypes</a></td>
+<td><code>/api/v1/Purchase/SupplierTypes</code></td>
+<td>Represents a supplier type.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="depends-on-other-modules">Depends on other modules</h2>
+<ul>
+<li><a href="Accounting.html">Accounting</a>: <a href="../entities/Accounting/AccountsPayable.html">AccountsPayables</a>, <a href="../entities/Accounting/CodingEntry.html">CodingEntries</a>, <a href="../entities/Accounting/Coding.html">Codings</a>, <a href="../entities/Accounting/StandardAccount.html">StandardAccounts</a></li>
+<li><a href="Common.html">Common</a>: <a href="../entities/Common/Address.html">Addresses</a>, <a href="../entities/Common/ApplicationUser.html">ApplicationUsers</a>, <a href="../entities/Common/BlobData.html">BlobData</a>, <a href="../entities/Common/BusinessContactBankAccount.html">BusinessContactBankAccounts</a>, <a href="../entities/Common/BusinessContactReference.html">BusinessContactReferences</a>, <a href="../entities/Common/Comment.html">Comments</a>, <a href="../entities/Common/CommunicationAddress.html">CommunicationAddresses</a>, <a href="../entities/Common/Currency.html">Currencies</a>, <a href="../entities/Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a>, <a href="../entities/Common/DeliveryAddress.html">DeliveryAddresses</a>, <a href="../entities/Common/DeliveryMethod.html">DeliveryMethods</a>, <a href="../entities/Common/DeliveryTerm.html">DeliveryTerms</a>, <a href="../entities/Common/DiscountCategory.html">DiscountCategories</a>, <a href="../entities/Common/ExtraField.html">ExtraFields</a>, <a href="../entities/Common/LanguageCode.html">LanguageCodes</a>, <a href="../entities/Common/PartialQuantity.html">PartialQuantities</a>, <a href="../entities/Common/PaymentMethod.html">PaymentMethods</a>, <a href="../entities/Common/PaymentTerm.html">PaymentTerms</a>, <a href="../entities/Common/Person.html">Persons</a>, <a href="../entities/Common/PriceList.html">PriceLists</a>, <a href="../entities/Common/Project.html">Projects</a>, <a href="../entities/Common/ReasonCode.html">ReasonCodes</a>, <a href="../entities/Common/Revision.html">Revisions</a>, <a href="../entities/Common/StatisticalGoodsCode.html">StatisticalGoodsCodes</a>, <a href="../entities/Common/TariffAndServiceCode.html">TariffAndServiceCodes</a>, <a href="../entities/Common/TransactionTypeIntrastat.html">TransactionTypeIntrastats</a>, <a href="../entities/Common/Unit.html">Units</a>, <a href="../entities/Common/VatGroup.html">VatGroups</a>, <a href="../entities/Common/VatRate.html">VatRates</a>, <a href="../entities/Common/Warehouse.html">Warehouses</a></li>
+<li><a href="Inventory.html">Inventory</a>: <a href="../entities/Inventory/CaseEntry.html">CaseEntry</a>, <a href="../entities/Inventory/PartPurchaseExpenseValues.html">PartPurchaseExpenseValues</a>, <a href="../entities/Inventory/Part.html">Parts</a>, <a href="../entities/Inventory/QuantityChange.html">QuantityChanges</a></li>
+<li><a href="Manufacturing.html">Manufacturing</a>: <a href="../entities/Manufacturing/ManufacturingOrderOperation.html">ManufacturingOrderOperations</a></li>
+<li><a href="Sales.html">Sales</a>: <a href="../entities/Sales/CustomerOrderRow.html">CustomerOrderRows</a>, <a href="../entities/Sales/CustomerOrder.html">CustomerOrders</a>, <a href="../entities/Sales/Customer.html">Customers</a></li>
+</ul>
+<div class="page-meta"><span class="badge">Purchase</span><span class="badge">module</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../";</script>
+<script src="../assets/okf-index.js"></script>
+<script src="../assets/okf.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WorkCenters · Monitor ERP API</title>
+<meta name="description" content="Represents a manufacturing work center.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>WorkCenters</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html" aria-current="location">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="workcenters">WorkCenters</h1>
+<p>Represents a manufacturing work center.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Manufacturing.html">Manufacturing</a></dd><dt>API class</dt><dd><code>WorkCenter</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Manufacturing/WorkCenters</code></dd><dt>Required permission</dt><dd>Show work center</dd><dt>GUID</dt><dd><code>2A2247AB-2CB4-40BD-B5F3-2E2D3DE37170</code></dd><dt>Introduced in</dt><dd>2.18</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the work center.</td>
+</tr>
+<tr>
+<td class="prop"><code>Number</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique, max length 8</td>
+<td>The human readable identifier of the work center.</td>
+</tr>
+<tr>
+<td class="prop"><code>Description</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The translated description of the work center.</td>
+</tr>
+<tr>
+<td class="prop"><code>OperationDescription</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The translated operation description of the work center.</td>
+</tr>
+<tr>
+<td class="prop"><code>Type</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The work center type.</td>
+</tr>
+<tr>
+<td class="prop"><code>DepartmentId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the department that the work center belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>WarehouseId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
+<td></td>
+<td>The business key identifier of the warehouse that the work center belongs to. References Warehouses .</td>
+</tr>
+<tr>
+<td class="prop"><code>Warehouse</code></td>
+<td class="type"><code>Warehouses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
+<td>expandable</td>
+<td>The warehouse that the work center belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>CommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the work center comment. References Comments .</td>
+</tr>
+<tr>
+<td class="prop"><code>Comment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The work center comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ManufacturingPrintSettings</code></td>
+<td class="type"><code>WorkCenterManufacturingPrintSettings[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="WorkCenterManufacturingPrintSettings.html">WorkCenterManufacturingPrintSettings</a></td>
+<td>expandable, collection, since 2.28</td>
+<td>The print settings for manufacturing order documents.</td>
+</tr>
+<tr>
+<td class="prop"><code>CostFactorGroups</code></td>
+<td class="type"><code>WorkCenterCostFactorGroups[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="WorkCenterCostFactorGroup.html">WorkCenterCostFactorGroups</a></td>
+<td>expandable, collection, since 2.46</td>
+<td>The cost factor groups that belong to the work center.</td>
+</tr>
+<tr>
+<td class="prop"><code>TimePrecision</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 24.3</td>
+<td>Time precision for the work center</td>
+</tr>
+<tr>
+<td class="prop"><code>BasicTime</code></td>
+<td class="type"><code>TimeSpan</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 24.3</td>
+<td>Basic time (capacity per day)</td>
+</tr>
+<tr>
+<td class="prop"><code>NumberOfPlanningUnits</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 24.3</td>
+<td>Number of planning units, can be machines or persons depending on the work center type.</td>
+</tr>
+<tr>
+<td class="prop"><code>NumberOfFlows</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 24.3</td>
+<td>Number of machines per order or number of persons per order depending on the work center type.</td>
+</tr>
+<tr>
+<td class="prop"><code>AvailabilityFactor</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 24.3</td>
+<td>Availability factor in percent for the work center.</td>
+</tr>
+<tr>
+<td class="prop"><code>SimulationFactor</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 24.3</td>
+<td>Simulation factor in percent for the work center.</td>
+</tr>
+<tr>
+<td class="prop"><code>UnitStaffFactor</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 24.3</td>
+<td>Indicates how large (in percent) a share of the operating unit time that is staffed for the work center.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupStaffFactor</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 24.3</td>
+<td>Indicates how large (in percent) a share of the operating setup time that is staffed for the work center.</td>
+</tr>
+<tr>
+<td class="prop"><code>Employees</code></td>
+<td class="type"><code>PersonWorkCenters[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../TimeRecording/PersonWorkCenter.html">PersonWorkCenters</a></td>
+<td>expandable, collection, since 24.3</td>
+<td>Specifies the persons that should be allowed to select work from this work center.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProductionCalendarExceptions</code></td>
+<td class="type"><code>ProductionCalendarExceptions[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ProductionCalendarException.html">ProductionCalendarExceptions</a></td>
+<td>expandable, collection, since 24.3</td>
+<td>Specifies the production calendar exceptions for this work center.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>Type</code><div class="evs"><span class="ev">Machine<span>=0</span></span><span class="ev">ManualWork<span>=1</span></span><span class="ev">SubContract<span>=2</span></span><span class="ev">Pool<span>=3</span></span><span class="ev">Pick<span>=4</span></span><span class="ev">Staffing<span>=5</span></span></div></li><li><code>TimePrecision</code><div class="evs"><span class="ev">Day<span>=0</span></span><span class="ev">Schedule<span>=1</span></span><span class="ev">Hourly<span>=2</span></span></div></li></ul>
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Accounting</strong></p>
+<ul>
+<li><a href="../Accounting/FixedAsset.html">FixedAssets</a> — <code>WorkCenterId</code> (FK)</li>
+</ul>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>ReasonWorkCenterId</code> (FK)</li>
+</ul>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="AlternativeOperationRow.html">AlternativeOperationRows</a> — <code>WorkCenterId</code> (FK)</li>
+<li><a href="ManufacturingOrderOperationControlDataRow.html">ManufacturingOrderOperationControlDataRows</a> — <code>WorkCenterId</code> (FK)</li>
+<li><a href="ManufacturingOrderOperationReporting.html">ManufacturingOrderOperationReportings</a> — <code>WorkCenterId</code> (FK)</li>
+<li><a href="ManufacturingOrderOperation.html">ManufacturingOrderOperations</a> — <code>WorkCenterId</code> (FK)</li>
+<li><a href="OperationRowControlDataRow.html">OperationRowControlDataRows</a> — <code>WorkCenterId</code> (FK)</li>
+<li><a href="ProductionCalendarException.html">ProductionCalendarExceptions</a> — <code>WorkCenterId</code> (FK)</li>
+<li><a href="WorkCenterCostFactorGroup.html">WorkCenterCostFactorGroups</a> — <code>ParentId</code> (FK)</li>
+</ul>
+<p><strong>TimeRecording</strong></p>
+<ul>
+<li><a href="../TimeRecording/PersonWorkCenter.html">PersonWorkCenters</a> — <code>WorkCenterId</code> (FK)</li>
+<li><a href="../TimeRecording/WorkInterval.html">WorkIntervals</a> — <code>WorkCenterId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Number": null,
+  "Description": null,
+  "OperationDescription": null,
+  "Type": 0,
+  "DepartmentId": 0,
+  "WarehouseId": 0,
+  "Warehouse": null,
+  "CommentId": null,
+  "Comment": null,
+  "ManufacturingPrintSettings": null,
+  "CostFactorGroups": null,
+  "TimePrecision": 0,
+  "BasicTime": "00:00:00",
+  "NumberOfPlanningUnits": 0.0,
+  "NumberOfFlows": 0.0,
+  "AvailabilityFactor": 0.0,
+  "SimulationFactor": 0.0,
+  "UnitStaffFactor": 0.0,
+  "SetupStaffFactor": 0.0,
+  "Employees": null,
+  "ProductionCalendarExceptions": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Manufacturing.WorkCenter.html">https://api.monitor.se/api/Monitor.API.Manufacturing.WorkCenter.html</a><br><span class="badge">Manufacturing</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

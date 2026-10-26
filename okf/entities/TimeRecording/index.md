@@ -1,10 +1,3 @@
----
-type: Index
-title: TimeRecording entities
-tags:
-- TimeRecording
----
-
 # TimeRecording entities
 
 20 documented pages in the TimeRecording module.

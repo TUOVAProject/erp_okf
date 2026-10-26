@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CaseEntry · Monitor ERP API</title>
+<meta name="description" content="Represents a case entry.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>CaseEntry</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html" aria-current="location">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="caseentry">CaseEntry</h1>
+<p>Represents a case entry.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Inventory.html">Inventory</a></dd><dt>API class</dt><dd><code>CaseEntry</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Inventory/CaseEntry</code></dd><dt>Required permission</dt><dd>Show case</dd><dt>GUID</dt><dd><code>B1A83C64-4AC0-41B3-89B2-6FDB7DD0E3BE</code></dd><dt>Introduced in</dt><dd>2.22</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the case entry.</td>
+</tr>
+<tr>
+<td class="prop"><code>Number</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique, max length 20, since 2.36</td>
+<td>The human readable identifier of the case entry.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProjectId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Project.html">Projects</a></td>
+<td>since 2.36</td>
+<td>The business key identifier of the project that belongs to the case entry.</td>
+</tr>
+<tr>
+<td class="prop"><code>Project</code></td>
+<td class="type"><code>Projects</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Project.html">Projects</a></td>
+<td>expandable, since 2.36</td>
+<td>The project that belongs to the case entry</td>
+</tr>
+<tr>
+<td class="prop"><code>ContactCaseNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique, max length 40, since 2.36</td>
+<td>The customer's or the supplier's case number (depending on case type)</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomerOrderId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Sales/CustomerOrder.html">CustomerOrders</a></td>
+<td>since 2.36</td>
+<td>The business key identifier of the customer order that is linked to the case entry.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomerOrder</code></td>
+<td class="type"><code>CustomerOrders</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Sales/CustomerOrder.html">CustomerOrders</a></td>
+<td>expandable, since 2.36</td>
+<td>The customer order that is linked to the case entry.</td>
+</tr>
+<tr>
+<td class="prop"><code>PurchaseOrderId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Purchase/PurchaseOrder.html">PurchaseOrders</a></td>
+<td>since 2.36</td>
+<td>The business key identifier of the purchase order that is linked to the case entry.</td>
+</tr>
+<tr>
+<td class="prop"><code>PurchaseOrder</code></td>
+<td class="type"><code>PurchaseOrders</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Purchase/PurchaseOrder.html">PurchaseOrders</a></td>
+<td>expandable, since 2.36</td>
+<td>The purchase order that is linked to the case entry.</td>
+</tr>
+<tr>
+<td class="prop"><code>ArrivalDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.36</td>
+<td>Date when delivery arrived.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.36</td>
+<td>Date when delivery was made.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveredQuantity</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.36</td>
+<td>The quantity the delivery consisted of.</td>
+</tr>
+<tr>
+<td class="prop"><code>ArrivedQuantity</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.36</td>
+<td>The quantity the arrival consisted of.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReasonSupplierId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Purchase/Supplier.html">Suppliers</a></td>
+<td>since 2.36</td>
+<td>The business key identifier of the supplier that caused the nonconformity. References Suppliers .</td>
+</tr>
+<tr>
+<td class="prop"><code>ReasonWorkCenterId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Manufacturing/WorkCenter.html">WorkCenters</a></td>
+<td>since 2.36</td>
+<td>The business key identifier of the work center that caused the nonconformity. References WorkCenters .</td>
+</tr>
+<tr>
+<td class="prop"><code>ReasonDepartmentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Department.html">Departments</a></td>
+<td>since 2.36</td>
+<td>The business key identifier of the department that caused the nonconformity. References Departments .</td>
+</tr>
+<tr>
+<td class="prop"><code>ReasonRejectionCodeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/RejectionCodeItem.html">RejectionCodeItems</a></td>
+<td>since 2.36</td>
+<td>The business key identifier of the rejection that caused the nonconformity.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReasonPartId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="Part.html">Parts</a></td>
+<td>since 2.36</td>
+<td>The business key identifier of the part that caused the nonconformity.</td>
+</tr>
+<tr>
+<td class="prop"><code>InternalCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the case internal comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>InternalComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The internal comment of the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReasonCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>since 2.36</td>
+<td>The business key identifier of the reason comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ReasonComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable, since 2.36</td>
+<td>The reason comment of the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActualRejectionCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>since 2.36</td>
+<td>The business key identifier of the actual rejections description.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActualRejectionComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable, since 2.36</td>
+<td>The actual rejections description.</td>
+</tr>
+<tr>
+<td class="prop"><code>Status</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The status of the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>CaseTypeId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CaseManagementType.html">CaseManagementType</a></td>
+<td></td>
+<td>The business key identifier of the case management type.</td>
+</tr>
+<tr>
+<td class="prop"><code>CaseType</code></td>
+<td class="type"><code>CaseManagementType</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CaseManagementType.html">CaseManagementType</a></td>
+<td>expandable</td>
+<td>The case management type of the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>CaseDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The case date of the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>WarehouseId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
+<td></td>
+<td>The business key identifier of the warehouse where the case is registered.</td>
+</tr>
+<tr>
+<td class="prop"><code>Warehouse</code></td>
+<td class="type"><code>Warehouses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
+<td>expandable</td>
+<td>The warehouse of the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Sales/Customer.html">Customers</a></td>
+<td></td>
+<td>The business key identifier of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProductRecordId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="ProductRecord.html">ProductRecords</a></td>
+<td></td>
+<td>The business key identifier of the used product record for the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProductRecord</code></td>
+<td class="type"><code>ProductRecords</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ProductRecord.html">ProductRecords</a></td>
+<td>expandable</td>
+<td>The product record of the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartRevisionId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Revision.html">Revisions</a></td>
+<td>since 24.5</td>
+<td>The business key identifier of the part revision used for the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartRevision</code></td>
+<td class="type"><code>Revisions</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Revision.html">Revisions</a></td>
+<td>expandable, since 24.5</td>
+<td>The part revision of the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Part.html">Parts</a></td>
+<td></td>
+<td>The business key identifier of the used part for the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>Part</code></td>
+<td class="type"><code>Parts</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Part.html">Parts</a></td>
+<td>expandable</td>
+<td>The part of the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>ManufacturingOrderId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Manufacturing/ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td></td>
+<td>The business key identifier of the manufacturing order.</td>
+</tr>
+<tr>
+<td class="prop"><code>ManufacturingOrder</code></td>
+<td class="type"><code>ManufacturingOrders</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Manufacturing/ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td>expandable</td>
+<td>The manufacturing order of the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>SupplierId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Purchase/Supplier.html">Suppliers</a></td>
+<td></td>
+<td>The business key identifier of the supplier.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActualRejectionCodeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/RejectionCodeItem.html">RejectionCodeItems</a></td>
+<td></td>
+<td>The business key identifier of the actual rejection code for the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActualRejectionCode</code></td>
+<td class="type"><code>RejectionCodeItems</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/RejectionCodeItem.html">RejectionCodeItems</a></td>
+<td>expandable</td>
+<td>The actual rejection code for the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>RejectionCodeItemId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/RejectionCodeItem.html">RejectionCodeItems</a></td>
+<td></td>
+<td>The business key identifier of the planned rejection code item for the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>RejectionCodeItem</code></td>
+<td class="type"><code>RejectionCodeItems</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/RejectionCodeItem.html">RejectionCodeItems</a></td>
+<td>expandable</td>
+<td>The rejection code item of the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExtraFields</code></td>
+<td class="type"><code>ExtraFields[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/ExtraField.html">ExtraFields</a></td>
+<td>expandable, collection</td>
+<td>A collection of extra field values for the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>Costs</code></td>
+<td class="type"><code>CaseEntryAdditionalCost[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CaseEntryAdditionalCost.html">CaseEntryAdditionalCost</a></td>
+<td>expandable, collection, since 2.26</td>
+<td>A collection of case entry additional cost values for the case.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurReferenceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td>since 2.36</td>
+<td>The business key identifier of our reference for the case entry. Reference Persons</td>
+</tr>
+<tr>
+<td class="prop"><code>OurReferenceName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 2.36</td>
+<td>The name of our reference for the case entry.</td>
+</tr>
+<tr>
+<td class="prop"><code>Phases</code></td>
+<td class="type"><code>CaseEntryPhases[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CaseEntryPhase.html">CaseEntryPhases</a></td>
+<td>expandable, collection, since 2.45</td>
+<td>The phases that belong to the case entry</td>
+</tr>
+<tr>
+<td class="prop"><code>RejectionDescription</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 400, since 2.45</td>
+<td>The rejection description of the case entry.</td>
+</tr>
+<tr>
+<td class="prop"><code>Notes</code></td>
+<td class="type"><code>BusinessContactNoteHistories[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/BusinessContactNoteHistory.html">BusinessContactNoteHistories</a></td>
+<td>expandable, collection, since 2.55</td>
+<td>Rows of business contact notes.</td>
+</tr>
+<tr>
+<td class="prop"><code>ContactReferenceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td>since 2.54</td>
+<td>The business key identifier of business contact reference.</td>
+</tr>
+<tr>
+<td class="prop"><code>ContactName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, since 2.54</td>
+<td>The customer's or supplier's reference name. Only set when ContactReferenceId is not set.</td>
+</tr>
+<tr>
+<td class="prop"><code>AccountReciveableId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Accounting/AccountsReceivable.html">AccountsReceivables</a></td>
+<td>since 2.54</td>
+<td>The business key identifier of the accounts receiveable.</td>
+</tr>
+<tr>
+<td class="prop"><code>AccountsReceivable</code></td>
+<td class="type"><code>AccountsReceivables</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Accounting/AccountsReceivable.html">AccountsReceivables</a></td>
+<td>expandable, since 2.54</td>
+<td>The accounts receiveable that is linked on the case entry</td>
+</tr>
+<tr>
+<td class="prop"><code>CategoryString</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 20, since 2.54</td>
+<td>Category string.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExternalCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>since 23.2</td>
+<td>The business key identifier of the case entry external comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExternalComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable, since 23.2</td>
+<td>The case entry external comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>RejectedQuantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 24.3</td>
+<td>The case entry rejected quantity.</td>
+</tr>
+<tr>
+<td class="prop"><code>CasePartLinks</code></td>
+<td class="type"><code>CaseEntryPartLinks[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CasePartLink.html">CaseEntryPartLinks</a></td>
+<td>expandable, collection, since 24.5</td>
+<td>Case part links that reference the parts included in this case.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>Status</code><div class="evs"><span class="ev">Registered<span>=1</span></span><span class="ev">Printed<span>=2</span></span><span class="ev">Started<span>=3</span></span><span class="ev">Finished<span>=4</span></span><span class="ev">History<span>=9</span></span><span class="ev">Rejected<span>=99</span></span></div></li></ul>
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="CaseEntryActivity.html">CaseEntryActivities</a> — <code>CaseEntryId</code> (FK)</li>
+<li><a href="CaseEntryAdditionalCost.html">CaseEntryAdditionalCost</a> — <code>CaseEntryId</code> (FK)</li>
+<li><a href="CaseEntryLink.html">CaseEntryLinks</a> — <code>ChildId</code> (FK)</li>
+<li><a href="CaseEntryLink.html">CaseEntryLinks</a> — <code>ParentId</code> (FK)</li>
+<li><a href="CasePartLink.html">CaseEntryPartLinks</a> — <code>CaseId</code> (FK)</li>
+<li><a href="CaseEntryPhase.html">CaseEntryPhases</a> — <code>ParentId</code> (FK)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>CaseEntries</code> (expand)</li>
+</ul>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>CaseEntries</code> (expand)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Number": null,
+  "ProjectId": null,
+  "Project": null,
+  "ContactCaseNumber": null,
+  "CustomerOrderId": null,
+  "CustomerOrder": null,
+  "PurchaseOrderId": null,
+  "PurchaseOrder": null,
+  "ArrivalDate": null,
+  "DeliveryDate": null,
+  "DeliveredQuantity": null,
+  "ArrivedQuantity": null,
+  "ReasonSupplierId": null,
+  "ReasonWorkCenterId": null,
+  "ReasonDepartmentId": null,
+  "ReasonRejectionCodeId": null,
+  "ReasonPartId": null,
+  "InternalCommentId": null,
+  "InternalComment": null,
+  "ReasonCommentId": null,
+  "ReasonComment": null,
+  "ActualRejectionCommentId": null,
+  "ActualRejectionComment": null,
+  "Status": 0,
+  "CaseTypeId": 0,
+  "CaseType": null,
+  "CaseDate": "0001-01-01T00:00:00+00:00",
+  "WarehouseId": 0,
+  "Warehouse": null,
+  "CustomerId": null,
+  "ProductRecordId": null,
+  "ProductRecord": null,
+  "PartRevisionId": null,
+  "PartRevision": null,
+  "PartId": 0,
+  "Part": null,
+  "ManufacturingOrderId": null,
+  "ManufacturingOrder": null,
+  "SupplierId": 0,
+  "ActualRejectionCodeId": null,
+  "ActualRejectionCode": null,
+  "RejectionCodeItemId": 0,
+  "RejectionCodeItem": null,
+  "ExtraFields": null,
+  "Costs": null,
+  "OurReferenceId": null,
+  "OurReferenceName": null,
+  "Phases": null,
+  "RejectionDescription": null,
+  "Notes": null,
+  "ContactReferenceId": null,
+  "ContactName": null,
+  "AccountReciveableId": null,
+  "AccountsReceivable": null,
+  "CategoryString": null,
+  "ExternalCommentId": null,
+  "ExternalComment": null,
+  "RejectedQuantity": 0.0,
+  "CasePartLinks": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Inventory.CaseEntry.html">https://api.monitor.se/api/Monitor.API.Inventory.CaseEntry.html</a><br><span class="badge">Inventory</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

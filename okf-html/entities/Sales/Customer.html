@@ -1,0 +1,1490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customers · Monitor ERP API</title>
+<meta name="description" content="Represents a customer.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>Customers</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html" aria-current="location">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="customers">Customers</h1>
+<p>Represents a customer.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Sales.html">Sales</a></dd><dt>API class</dt><dd><code>Customer</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Sales/Customers</code></dd><dt>Required permission</dt><dd>Show customer</dd><dt>GUID</dt><dd><code>9A9B110E-D5B5-410D-AFEE-C397747EBA77</code></dd><dt>Introduced in</dt><dd>2.18</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>Name</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 100</td>
+<td>The name of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>Code</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique, max length 10</td>
+<td>The human readable identifier of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>AlternativeName</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 100</td>
+<td>The alternative name of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>CorporationIdentificationNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The corporation identification number of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>PersonalNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 13</td>
+<td>The personal number of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsPrivateCustomer</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the customer is a private person.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30</td>
+<td>The VAT number of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryAddresses</code></td>
+<td class="type"><code>DeliveryAddresses[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/DeliveryAddress.html">DeliveryAddresses</a></td>
+<td>expandable, collection</td>
+<td>The delivery addresses of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveDeliveryAddressId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/DeliveryAddress.html">DeliveryAddresses</a></td>
+<td></td>
+<td>The business key identifier of the customer's active delivery address.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveDeliveryAddress</code></td>
+<td class="type"><code>DeliveryAddresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/DeliveryAddress.html">DeliveryAddresses</a></td>
+<td>expandable</td>
+<td>The active delivery address of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>References</code></td>
+<td class="type"><code>BusinessContactReferences[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td>expandable, collection</td>
+<td>The business contact references belonging to the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>DefaultReferenceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td></td>
+<td>The business key identifier of the customer's default business contact reference.</td>
+</tr>
+<tr>
+<td class="prop"><code>DefaultReference</code></td>
+<td class="type"><code>BusinessContactReferences</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td>expandable</td>
+<td>The default reference of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>Alias</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 10</td>
+<td>The alias code of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>AlloyCost</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The alloy cost associated with the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>ApplyBankCharge</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if bank charge should be applied for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>ApplyInvoicingCharge</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if invoicing charge should be applied for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>ApplyReminderCharge</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if reminder charge should be applied for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>AccountManagerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td></td>
+<td>The business key identifier of the customer's account manager.</td>
+</tr>
+<tr>
+<td class="prop"><code>AccountManager</code></td>
+<td class="type"><code>Persons</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td>expandable</td>
+<td>The account manager of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveDeliveryAddressAccountGroupId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td>since 2.28</td>
+<td>The business key identifier of the customer's active delivery address account group.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActiveDeliveryAddressAccountGroup</code></td>
+<td class="type"><code>CustomerAccountGroups</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td>expandable, since 2.28</td>
+<td>The active delivery address account group of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActualCustomerProbabilityId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Probability.html">Probabilities</a></td>
+<td></td>
+<td>The business key identifier of the customer's actualization probability.</td>
+</tr>
+<tr>
+<td class="prop"><code>ActualCustomerProbability</code></td>
+<td class="type"><code>Probabilities</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Probability.html">Probabilities</a></td>
+<td>expandable</td>
+<td>The actualization probability of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>AttachDatafileWithOrder</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if data file should be attached with orders for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>AttachDatafileWithInvoice</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if data file should be attached with invoices for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>AttachDatafileWithCase</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 22.2</td>
+<td>Specifies if data file should be attached with cases for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>AttachDatafileWithPart</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if data file should be attached with parts for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>AttachDatafileWithDispatchAdvice</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if data file should be attached with dispatch advice for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>BankChargeAmount</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The bank charge amount of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>BankGiroNo</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 15</td>
+<td>The bank giro number of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedById</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td></td>
+<td>The business key identifier of the application user that blocked the entity.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedBy</code></td>
+<td class="type"><code>ApplicationUsers</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td>expandable</td>
+<td>The application user that blocked the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedStatus</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The block status of the entity.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedContextType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>bitmask, enum</td>
+<td>Specifies in which contexts that the customer is blocked.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockMessageId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the entity block message comment. References Comments .</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockMessage</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The block message that applies for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedFromDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The date when the entity starts being blocked.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlockedToDate</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The date when the entity stops being blocked.</td>
+</tr>
+<tr>
+<td class="prop"><code>CategoryString</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 15</td>
+<td>The category string of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>CommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the customer's comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>Comment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The comment of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>CompanyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the company that the customer belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>ConfigurationPriceListId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/PriceList.html">PriceLists</a></td>
+<td></td>
+<td>The business key identifier of the configuration price list that the customer belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>CreditLimit</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The credit limit of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the customer's currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>Currency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable, since 2.28</td>
+<td>The currency of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>DateDisplayFormat</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.28</td>
+<td>The date display format of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>DecimalSymbol</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 1, since 2.28</td>
+<td>The decimal symbol of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryHorizon</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.28</td>
+<td>The delivery horizon of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryNoteNumberWhenDeliveryPlanning</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.28</td>
+<td>The delivery note number when delivery planning of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>DistrictId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="CustomerDistrict.html">CustomerDistricts</a></td>
+<td></td>
+<td>The business key identifier of the district that the customer belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>District</code></td>
+<td class="type"><code>CustomerDistricts</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CustomerDistrict.html">CustomerDistricts</a></td>
+<td>expandable</td>
+<td>The district that the customer belongs to.</td>
+</tr>
+<tr>
+<td class="prop"><code>DateForTransitionToActualContact</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The date/time when transition to actual contact was made for the customer. Changed from DateTimeOffset to DateTimeOffset? in 26.3</td>
+</tr>
+<tr>
+<td class="prop"><code>Discount</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The general discount of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>DiscountCategoryId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/DiscountCategory.html">DiscountCategories</a></td>
+<td></td>
+<td>The business key identifier of the discount category that applies for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>DiscountCategory</code></td>
+<td class="type"><code>DiscountCategories</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/DiscountCategory.html">DiscountCategories</a></td>
+<td>expandable</td>
+<td>The discount category that applies for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>DefaultOrderPrintoutVia</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The preferred order printout method of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>PrintProformaInvoiceVia</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The preferred Proforma printout method of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>PrintPaymentReminderVia</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The preferred payment reminder printout method of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>DeliveryInstruction</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The delivery instruction of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>DefaultInvoiceStatusPending</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if invoices should be pending by default for the customer.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>EdiCode</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80, <span class="badge dep">deprecated since 2.32</span></td>
+<td>The EDI code of the customer. <em>(Replaced by OtherCustomerNumbers)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>EInvoiceElectronicAddressIdentifier</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 6, since 2.28</td>
+<td>The e-invoice electronic address identifier of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>EInvoiceId</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30, since 2.28</td>
+<td>The e-invoice id of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>EInvoiceOperatorCode</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30, since 2.28</td>
+<td>The e-invoice operator code of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>Factoring</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if factoring applies for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>GracePeriod</code></td>
+<td class="type"><code>TimeSpan?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The grace period of the customer.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>HideDiscountOnProformaInvoice</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td><span class="badge dep">deprecated since 26.3</span>, since 2.28</td>
+<td>Specifies if the customer hides discount on proforma invoices. <em>(Replaced by CustomerCountryDocumentSettings)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>IncludeInDeliveryAnalysis</code></td>
+<td class="type"><code>Boolean?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.28</td>
+<td>Specifies if the customer is included in delivery analysis.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceAddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td></td>
+<td>The business key identifier of the customer's invoice address. If there is no value here use MailingAddressId.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceAddress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>expandable</td>
+<td>The invoice address of the customer. If there is no value here use MailingAddress.</td>
+</tr>
+<tr>
+<td class="prop"><code>InterestType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>Specifies the interest type of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsCasualCustomer</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if the customer is a stray customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>InterestInvoiceDays</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>Specifies the interest invoice days for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>InsuranceCost</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The insurance cost specified for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceCustomerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="Customer.html">Customers</a></td>
+<td></td>
+<td>The business key identifier of the invoice customer of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoicePrintoutMethod</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The customer's preferred printout method for invoices.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoicePrintoutOccasion</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>Specifies when invoices should be printed for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsInternal</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.28</td>
+<td>Specifies if the customer is internal.</td>
+</tr>
+<tr>
+<td class="prop"><code>LanguageId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/LanguageCode.html">LanguageCodes</a></td>
+<td></td>
+<td>The business key identifier of the customer's preferred language.</td>
+</tr>
+<tr>
+<td class="prop"><code>Language</code></td>
+<td class="type"><code>LanguageCodes</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/LanguageCode.html">LanguageCodes</a></td>
+<td>since 2.28</td>
+<td>The language of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>LatePaymentFee</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The late payment fee of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>MailingAddressId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td></td>
+<td>The business key identifier of the customer's mailing address. If InvoiceAddressId does not have a value this is also used as invoice adress.</td>
+</tr>
+<tr>
+<td class="prop"><code>MailingAddress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>expandable</td>
+<td>The mailing address of the customer. If InvoiceAddressId does not have a value this is also used as invoice adress.</td>
+</tr>
+<tr>
+<td class="prop"><code>NumberOfInvoiceCopies</code></td>
+<td class="type"><code>Int32?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The number of invoice copies that should be produced for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>OurCodeByYou</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The supplier code assigned to us by the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>PalletRegistrationNo</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 35</td>
+<td>The customer's pallet registration number.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartialDeliveryType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.28</td>
+<td>The partial delivery type of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentPlanTemplateId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/PaymentPlanTemplate.html">PaymentPlanTemplates</a></td>
+<td>since 2.28</td>
+<td>The business key identifier of the customer's payment plan template.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentPlanTemplate</code></td>
+<td class="type"><code>PaymentPlanTemplates</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/PaymentPlanTemplate.html">PaymentPlanTemplates</a></td>
+<td>expandable, since 2.28</td>
+<td>The payment plan template of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentTermId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td></td>
+<td>The business key identifier of the customer's payment term.</td>
+</tr>
+<tr>
+<td class="prop"><code>PaymentTerm</code></td>
+<td class="type"><code>PaymentTerms</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td>expandable</td>
+<td>The payment term of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>PlusGiroNo</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 15</td>
+<td>The PlusGiro number of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceListId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/PriceList.html">PriceLists</a></td>
+<td></td>
+<td>The business key identifier of the customer's price list.</td>
+</tr>
+<tr>
+<td class="prop"><code>Priority</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The priority of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>PickingListCommentId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td></td>
+<td>The business key identifier of the customer's picking list comment.</td>
+</tr>
+<tr>
+<td class="prop"><code>PickingListComment</code></td>
+<td class="type"><code>Comments</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Comment.html">Comments</a></td>
+<td>expandable</td>
+<td>The picking list comment of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>ProformaInvoicePrintoutOccasion</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>Specifies when proforma invoices should be printed for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>ResellerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td></td>
+<td>The business key identifier of the customer's reseller.</td>
+</tr>
+<tr>
+<td class="prop"><code>Reseller</code></td>
+<td class="type"><code>Resellers</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Reseller.html">Resellers</a></td>
+<td>expandable</td>
+<td>The reseller of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>RoundOff</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if round off applies for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>SellerId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td></td>
+<td>The business key identifier of the customer's seller.</td>
+</tr>
+<tr>
+<td class="prop"><code>Seller</code></td>
+<td class="type"><code>Persons</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Person.html">Persons</a></td>
+<td>expandable</td>
+<td>The seller of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>ServiceAgreementId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the customer's service agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>ServiceTaxNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 30, since 2.28</td>
+<td>The service tax number of the customer.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>ShowPartStatisticalGoodsCodeAndCountryOfOriginInForms</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>bitmask, enum, <span class="badge dep">deprecated since 24.3</span></td>
+<td>New properties available: ShowPartStatisticalGoodsCodeInForms and ShowCountryOfOriginInForms. Try to use new properties instead. <em>(Replaced by ShowPartStatisticalGoodsCodeInForms and ShowCountryOfOriginInForms)</em></td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>ShowPartStatisticalGoodsCodeInForms</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>bitmask, enum, <span class="badge dep">deprecated since 26.3</span>, since 24.3</td>
+<td>Specifies which documents should display statistical goods codes for the customer. <em>(Replaced by CustomerCountryDocumentSettings)</em></td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>ShowCountryOfOriginInForms</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>bitmask, enum, <span class="badge dep">deprecated since 26.3</span>, since 24.3</td>
+<td>Specifies which documents should show country of origin for the customer. <em>(Replaced by CustomerCountryDocumentSettings)</em></td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>ShowPartWeightInForms</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>bitmask, enum, <span class="badge dep">deprecated since 26.3</span></td>
+<td>Specifies which documents should show part weight for the customer. <em>(Replaced by CustomerCountryDocumentSettings)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>StatusId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CustomerStatus.html">CustomerStatuses</a></td>
+<td></td>
+<td>The business key identifier of the customer's status.</td>
+</tr>
+<tr>
+<td class="prop"><code>Status</code></td>
+<td class="type"><code>CustomerStatuses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CustomerStatus.html">CustomerStatuses</a></td>
+<td>expandable</td>
+<td>The status of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>TimeZone</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.29</td>
+<td>The time zone of the customer. Specified as a time zone identifier (e.g. "W. Europe Standard Time").</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>TimeZoneOffset</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td><span class="badge dep">deprecated since 2.29</span>, since 2.28</td>
+<td>The time zone offset of the customer. <em>(Replaced by TimeZone)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>ToleranceForLateDelivery</code></td>
+<td class="type"><code>TimeSpan?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The customer's tolerance for late delivery.</td>
+</tr>
+<tr>
+<td class="prop"><code>ToleranceForEarlyDelivery</code></td>
+<td class="type"><code>TimeSpan?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The customer's tolerance for early delivery.</td>
+</tr>
+<tr>
+<td class="prop"><code>TypeId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="CustomerType.html">CustomerTypes</a></td>
+<td></td>
+<td>The business key identifier of the customer's type.</td>
+</tr>
+<tr>
+<td class="prop"><code>Type</code></td>
+<td class="type"><code>CustomerTypes</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CustomerType.html">CustomerTypes</a></td>
+<td>expandable</td>
+<td>The type of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>Url</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 255</td>
+<td>The URL of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseBundling</code></td>
+<td class="type"><code>Boolean?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.28</td>
+<td>Specifies if the customer uses bundling.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>UseComprehensiveInvoices</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td><span class="badge dep">deprecated since 2.41</span></td>
+<td>Specifies if comprehensive invoices should be used for the customer. <em>(Replaced by ComprehensiveInvoiceGroupingMode)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>ComprehensiveInvoiceGroupingMode</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum, since 2.41</td>
+<td>Specifies if comprehensive invoices should be used for the customer and if so, what they should be grouped on.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseDeliveryNoteCollectionFormReport</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if comprehensive delivery notes should be used for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseEInvoicing</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 2.28</td>
+<td>Specifies if the customer uses e-invoicing.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseForwardRate</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if forward rate should be used for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseInvoiceCustomersVatNumber</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if VAT number should be taken via the invoice customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>UsePackageSpecification</code></td>
+<td class="type"><code>Boolean?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 2.28</td>
+<td>Specifies if the customer uses package specification.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseReminder</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Specifies if reminders should be enabled for the customer.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>VatRateId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td><span class="badge dep">deprecated since 23.6</span></td>
+<td>The business key identifier of the customer's VAT rate. <em>(Replaced by VatGroupId on DeliveryAddress)</em></td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>VatRate</code></td>
+<td class="type"><code>VatRates</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td>expandable, <span class="badge dep">deprecated since 23.6</span></td>
+<td>The VAT rate of the customer. <em>(Replaced by VatGroup from DeliveryAddress)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>ValidityTimeId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ValidityTime.html">ValidityTimes</a></td>
+<td></td>
+<td>The business key identifier of the customer's validity time.</td>
+</tr>
+<tr>
+<td class="prop"><code>ValidityTime</code></td>
+<td class="type"><code>ValidityTimes</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="ValidityTime.html">ValidityTimes</a></td>
+<td></td>
+<td>The validity time of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>Version</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The version of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>VisitingAddressId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td></td>
+<td>The business key identifier of the customer's visiting address.</td>
+</tr>
+<tr>
+<td class="prop"><code>VisitingAddress</code></td>
+<td class="type"><code>Addresses</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Address.html">Addresses</a></td>
+<td>expandable</td>
+<td>The visiting address of the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomerPartLinks</code></td>
+<td class="type"><code>CustomerPartLinks[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CustomerPartLink.html">CustomerPartLinks</a></td>
+<td>expandable, collection</td>
+<td>The part links defined for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>CaseEntries</code></td>
+<td class="type"><code>CaseEntry[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Inventory/CaseEntry.html">CaseEntry</a></td>
+<td>expandable, collection</td>
+<td>A collection of case entries that belong to the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>OtherCustomerNumbers</code></td>
+<td class="type"><code>OtherCustomerNumbers[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="OtherCustomerNumber.html">OtherCustomerNumbers</a></td>
+<td>expandable, collection, since 2.32</td>
+<td>Available other customer numbers. Mainly used as EDI identifiers.</td>
+</tr>
+<tr>
+<td class="prop"><code>CommunicationAddresses</code></td>
+<td class="type"><code>CommunicationAddresses[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/CommunicationAddress.html">CommunicationAddresses</a></td>
+<td>expandable, collection, since 2.50</td>
+<td>The communication addresses for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExtraFields</code></td>
+<td class="type"><code>ExtraFields[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/ExtraField.html">ExtraFields</a></td>
+<td>expandable, collection, since 2.54</td>
+<td>A collection of extra field values for the customer.</td>
+</tr>
+<tr>
+<td class="prop"><code>PreliminaryPickingList</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 22.6</td>
+<td>Specifies if the customer should apply preliminary picking list.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyExchangeTypeId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td>since 22.9</td>
+<td>The business key identifier of the customer's currency exchange type.</td>
+</tr>
+<tr>
+<td class="prop"><code>RootId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>since 24.3</td>
+<td>The business key identifier of the customer's root entity.</td>
+</tr>
+<tr>
+<td class="prop"><code>EmployeeSpanId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td>since 24.3</td>
+<td>The business key identifier of employee span of customer</td>
+</tr>
+<tr>
+<td class="prop"><code>EmployeeSpan</code></td>
+<td class="type"><code>CustomerEmployeeSpans</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CustomerEmployeeSpan.html">CustomerEmployeeSpans</a></td>
+<td>expandable, since 24.3</td>
+<td>The employee span of customer</td>
+</tr>
+<tr>
+<td class="prop"><code>TinNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 13, since 25.9</td>
+<td>The customer's income tax reference number</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>BlockedStatus</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Message<span>=1</span></span><span class="ev">Blocked<span>=2</span></span></div></li><li><code>BlockedContextType</code><span class="badge">bitmask — values combine</span><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Register<span>=1</span></span><span class="ev">Report<span>=2</span></span><span class="ev">RegisterSupplierInvoice<span>=4</span></span><span class="ev">Payments<span>=8</span></span></div></li><li><code>DateDisplayFormat</code><div class="evs"><span class="ev">YYYYMMDD_Dash<span>=1</span></span><span class="ev">YYMMDD_Dash<span>=2</span></span><span class="ev">DDMMYYYY_Dash<span>=3</span></span><span class="ev">DDMMYY_Dash<span>=4</span></span><span class="ev">YYYYMMDD_Slash<span>=5</span></span><span class="ev">YYMMDD_Slash<span>=6</span></span><span class="ev">MMDDYYYY_Slash<span>=7</span></span><span class="ev">MMDDYY_Slash<span>=8</span></span><span class="ev">MDYY_Slash<span>=9</span></span><span class="ev">DDMMYYYY_Slash<span>=10</span></span><span class="ev">DDMMYY_Slash<span>=11</span></span><span class="ev">DMMYY_Slash<span>=12</span></span><span class="ev">YYYYMMDD_Dot<span>=13</span></span><span class="ev">DDMMYYYY_Dot<span>=14</span></span><span class="ev">DDMMYY_Dot<span>=15</span></span><span class="ev">DDMYY_Dot<span>=16</span></span><span class="ev">DMMYYYY_Dot<span>=17</span></span><span class="ev">DMMYY_Dot<span>=18</span></span><span class="ev">DMYYYY_Dot<span>=19</span></span><span class="ev">DMYY_Dot<span>=20</span></span><span class="ev">YYWWD<span>=21</span></span></div></li><li><code>DefaultOrderPrintoutVia</code><div class="evs"><span class="ev">Printer<span>=0</span></span><span class="ev">Email<span>=1</span></span><span class="ev">Edi<span>=2</span></span><span class="ev">None<span>=9</span></span></div></li><li><code>PrintProformaInvoiceVia</code><div class="evs"><span class="ev">Printer<span>=0</span></span><span class="ev">Email<span>=1</span></span><span class="ev">Edi<span>=2</span></span><span class="ev">None<span>=9</span></span></div></li><li><code>PrintPaymentReminderVia</code><div class="evs"><span class="ev">Printer<span>=0</span></span><span class="ev">Email<span>=1</span></span><span class="ev">Edi<span>=2</span></span><span class="ev">None<span>=9</span></span></div></li><li><code>InterestType</code><div class="evs"><span class="ev">InterestInvoice<span>=0</span></span><span class="ev">NextRegularInvoice<span>=1</span></span><span class="ev">None<span>=2</span></span></div></li><li><code>InvoicePrintoutMethod</code><div class="evs"><span class="ev">Printer<span>=0</span></span><span class="ev">Email<span>=1</span></span><span class="ev">Edi<span>=2</span></span><span class="ev">None<span>=9</span></span></div></li><li><code>InvoicePrintoutOccasion</code><div class="evs"><span class="ev">AfterDeliveryReport<span>=0</span></span><span class="ev">OnDeliveryReportPreliminary<span>=1</span></span><span class="ev">OnDeliveryReportDefinite<span>=2</span></span></div></li><li><code>PartialDeliveryType</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">PerOrder<span>=1</span></span><span class="ev">PerRow<span>=2</span></span><span class="ev">NoneDelete<span>=3</span></span><span class="ev">PerDeliveryDate<span>=4</span></span></div></li><li><code>ProformaInvoicePrintoutOccasion</code><div class="evs"><span class="ev">AfterDeliveryReport<span>=0</span></span><span class="ev">OnDeliveryReport<span>=1</span></span></div></li><li><code>ShowPartStatisticalGoodsCodeAndCountryOfOriginInForms</code><span class="badge">bitmask — values combine</span><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Quote<span>=1</span></span><span class="ev">Acknowledgement<span>=2</span></span><span class="ev">DeliveryNote<span>=4</span></span><span class="ev">Invoice<span>=8</span></span><span class="ev">ProFormaInvoice<span>=16</span></span></div></li><li><code>ShowPartStatisticalGoodsCodeInForms</code><span class="badge">bitmask — values combine</span><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Quote<span>=1</span></span><span class="ev">Acknowledgement<span>=2</span></span><span class="ev">DeliveryNote<span>=4</span></span><span class="ev">Invoice<span>=8</span></span><span class="ev">ProFormaInvoice<span>=16</span></span></div></li><li><code>ShowCountryOfOriginInForms</code><span class="badge">bitmask — values combine</span><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Quote<span>=1</span></span><span class="ev">Acknowledgement<span>=2</span></span><span class="ev">DeliveryNote<span>=4</span></span><span class="ev">Invoice<span>=8</span></span><span class="ev">ProFormaInvoice<span>=16</span></span></div></li><li><code>ShowPartWeightInForms</code><span class="badge">bitmask — values combine</span><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Quote<span>=1</span></span><span class="ev">Acknowledgement<span>=2</span></span><span class="ev">DeliveryNote<span>=4</span></span><span class="ev">Invoice<span>=8</span></span><span class="ev">ProFormaInvoice<span>=16</span></span></div></li><li><code>ComprehensiveInvoiceGroupingMode</code><div class="evs"><span class="ev">None<span>=0</span></span><span class="ev">Customer<span>=1</span></span><span class="ev">Order<span>=2</span></span><span class="ev">DeliveryNote<span>=3</span></span></div></li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Accounting</strong></p>
+<ul>
+<li><a href="../Accounting/AccountsReceivable.html">AccountsReceivables</a> — <code>BusinessContactId</code> (FK)</li>
+<li><a href="../Accounting/FixedAssetSale.html">FixedAssetSales</a> — <code>CustomerId</code> (FK)</li>
+</ul>
+<p><strong>Common</strong></p>
+<ul>
+<li><a href="../Common/EdiBehavior.html">EdiBehaviors</a> — <code>Customers</code> (expand)</li>
+<li><a href="../Common/EdiBehavior.html">EdiBehaviors</a> — <code>InvoiceCustomers</code> (expand)</li>
+<li><a href="../Common/Project.html">Projects</a> — <code>CustomerId</code> (FK)</li>
+</ul>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="../Inventory/CaseEntry.html">CaseEntry</a> — <code>CustomerId</code> (FK)</li>
+<li><a href="../Inventory/PriceChangeLog.html">PriceChangeLogs</a> — <code>CustomerId</code> (FK)</li>
+<li><a href="../Inventory/ProductRecord.html">ProductRecords</a> — <code>OwnerId</code> (FK)</li>
+<li><a href="../Inventory/SalesForecast.html">SalesForecasts</a> — <code>CustomerId</code> (FK)</li>
+</ul>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="../Manufacturing/ManufacturingOrder.html">ManufacturingOrders</a> — <code>CustomerId</code> (FK)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="../Purchase/PurchaseOrder.html">PurchaseOrders</a> — <code>ActiveDeliveryAddressCustomerId</code> (FK)</li>
+</ul>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="BlanketOrderSales.html">BlanketOrderSales</a> — <code>BusinessContact</code> (expand)</li>
+<li><a href="BlanketOrderSales.html">BlanketOrderSales</a> — <code>BusinessContactId</code> (FK)</li>
+<li><a href="BusinessOpportunity.html">BusinessOpportunities</a> — <code>Customers</code> (expand)</li>
+<li><a href="BusinessOpportunityActivity.html">BusinessOpportunityActivities</a> — <code>CustomerId</code> (FK)</li>
+<li><a href="BusinessOpportunityReference.html">BusinessOpportunityReferences</a> — <code>CustomerId</code> (FK)</li>
+<li><a href="CustomerCountryDocumentSettings.html">CustomerCountryDocumentSettings</a> — <code>CustomerId</code> (FK)</li>
+<li><a href="CustomerOrderInvoice.html">CustomerOrderInvoices</a> — <code>ActiveDeliveryAddressCustomerId</code> (FK)</li>
+<li><a href="CustomerOrderInvoice.html">CustomerOrderInvoices</a> — <code>InvoiceBusinessContactId</code> (FK)</li>
+<li><a href="CustomerOrder.html">CustomerOrders</a> — <code>ActiveDeliveryAddressCustomerId</code> (FK)</li>
+<li><a href="CustomerOrder.html">CustomerOrders</a> — <code>CustomerId</code> (FK)</li>
+<li><a href="CustomerOrder.html">CustomerOrders</a> — <code>InvoiceCustomerId</code> (FK)</li>
+<li><a href="CustomerPartLink.html">CustomerPartLinks</a> — <code>CustomerId</code> (FK)</li>
+<li><a href="CustomerRelationshipManagementActivity.html">CustomerRelationshipManagementActivities</a> — <code>CustomerId</code> (FK)</li>
+<li><a href="Customer.html">Customers</a> — <code>InvoiceCustomerId</code> (FK)</li>
+<li><a href="InvoiceLog.html">InvoiceLogs</a> — <code>CustomerId</code> (FK)</li>
+<li><a href="OtherCustomerNumber.html">OtherCustomerNumbers</a> — <code>CustomerId</code> (FK)</li>
+<li><a href="Quote.html">Quotes</a> — <code>CustomerId</code> (FK)</li>
+<li><a href="SalesAgreement.html">SalesAgreements</a> — <code>BusinessContactId</code> (FK)</li>
+<li><a href="SalesAgreement.html">SalesAgreements</a> — <code>InvoiceBusinessContactId</code> (FK)</li>
+<li><a href="ShipmentInformationSource.html">ShipmentInformationSources</a> — <code>CustomerId</code> (FK)</li>
+<li><a href="Shipment.html">Shipments</a> — <code>ActiveDeliveryAddressCustomerId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Name": null,
+  "Code": null,
+  "AlternativeName": null,
+  "CorporationIdentificationNumber": null,
+  "PersonalNumber": null,
+  "IsPrivateCustomer": false,
+  "VatNumber": null,
+  "DeliveryAddresses": null,
+  "ActiveDeliveryAddressId": 0,
+  "ActiveDeliveryAddress": null,
+  "References": null,
+  "DefaultReferenceId": null,
+  "DefaultReference": null,
+  "Alias": null,
+  "AlloyCost": 0,
+  "ApplyBankCharge": false,
+  "ApplyInvoicingCharge": false,
+  "ApplyReminderCharge": false,
+  "AccountManagerId": null,
+  "AccountManager": null,
+  "ActiveDeliveryAddressAccountGroupId": null,
+  "ActiveDeliveryAddressAccountGroup": null,
+  "ActualCustomerProbabilityId": null,
+  "ActualCustomerProbability": null,
+  "AttachDatafileWithOrder": false,
+  "AttachDatafileWithInvoice": false,
+  "AttachDatafileWithCase": false,
+  "AttachDatafileWithPart": false,
+  "AttachDatafileWithDispatchAdvice": false,
+  "BankChargeAmount": 0.0,
+  "BankGiroNo": null,
+  "BlockedById": null,
+  "BlockedBy": null,
+  "BlockedStatus": 0,
+  "BlockedContextType": 0,
+  "BlockMessageId": null,
+  "BlockMessage": null,
+  "BlockedFromDate": null,
+  "BlockedToDate": null,
+  "CategoryString": null,
+  "CommentId": null,
+  "Comment": null,
+  "CompanyId": 0,
+  "ConfigurationPriceListId": null,
+  "CreditLimit": 0.0,
+  "CurrencyId": 0,
+  "Currency": null,
+  "DateDisplayFormat": 0,
+  "DecimalSymbol": null,
+  "DeliveryHorizon": null,
+  "DeliveryNoteNumberWhenDeliveryPlanning": false,
+  "DistrictId": null,
+  "District": null,
+  "DateForTransitionToActualContact": null,
+  "Discount": null,
+  "DiscountCategoryId": null,
+  "DiscountCategory": null,
+  "DefaultOrderPrintoutVia": 0,
+  "PrintProformaInvoiceVia": 0,
+  "PrintPaymentReminderVia": 0,
+  "DeliveryInstruction": null,
+  "DefaultInvoiceStatusPending": false,
+  "EdiCode": null,
+  "EInvoiceElectronicAddressIdentifier": null,
+  "EInvoiceId": null,
+  "EInvoiceOperatorCode": null,
+  "Factoring": false,
+  "GracePeriod": null,
+  "HideDiscountOnProformaInvoice": false,
+  "IncludeInDeliveryAnalysis": null,
+  "InvoiceAddressId": null,
+  "InvoiceAddress": null,
+  "InterestType": 0,
+  "IsCasualCustomer": false,
+  "InterestInvoiceDays": null,
+  "InsuranceCost": 0.0,
+  "InvoiceCustomerId": null,
+  "InvoicePrintoutMethod": 0,
+  "InvoicePrintoutOccasion": 0,
+  "IsInternal": false,
+  "LanguageId": 0,
+  "Language": null,
+  "LatePaymentFee": null,
+  "MailingAddressId": 0,
+  "MailingAddress": null,
+  "NumberOfInvoiceCopies": null,
+  "OurCodeByYou": null,
+  "PalletRegistrationNo": null,
+  "PartialDeliveryType": 0,
+  "PaymentPlanTemplateId": null,
+  "PaymentPlanTemplate": null,
+  "PaymentTermId": 0,
+  "PaymentTerm": null,
+  "PlusGiroNo": null,
+  "PriceListId": 0,
+  "Priority": 0,
+  "PickingListCommentId": null,
+  "PickingListComment": null,
+  "ProformaInvoicePrintoutOccasion": 0,
+  "ResellerId": null,
+  "Reseller": null,
+  "RoundOff": false,
+  "SellerId": null,
+  "Seller": null,
+  "ServiceAgreementId": null,
+  "ServiceTaxNumber": null,
+  "ShowPartStatisticalGoodsCodeAndCountryOfOriginInForms": 0,
+  "ShowPartStatisticalGoodsCodeInForms": 0,
+  "ShowCountryOfOriginInForms": 0,
+  "ShowPartWeightInForms": 0,
+  "StatusId": 0,
+  "Status": null,
+  "TimeZone": null,
+  "TimeZoneOffset": 0.0,
+  "ToleranceForLateDelivery": null,
+  "ToleranceForEarlyDelivery": null,
+  "TypeId": null,
+  "Type": null,
+  "Url": null,
+  "UseBundling": null,
+  "UseComprehensiveInvoices": false,
+  "ComprehensiveInvoiceGroupingMode": 0,
+  "UseDeliveryNoteCollectionFormReport": false,
+  "UseEInvoicing": false,
+  "UseForwardRate": false,
+  "UseInvoiceCustomersVatNumber": false,
+  "UsePackageSpecification": null,
+  "UseReminder": false,
+  "VatRateId": null,
+  "VatRate": null,
+  "ValidityTimeId": 0,
+  "ValidityTime": null,
+  "Version": 0,
+  "VisitingAddressId": null,
+  "VisitingAddress": null,
+  "CustomerPartLinks": null,
+  "CaseEntries": null,
+  "OtherCustomerNumbers": null,
+  "CommunicationAddresses": null,
+  "ExtraFields": null,
+  "PreliminaryPickingList": false,
+  "CurrencyExchangeTypeId": 0,
+  "RootId": 0,
+  "EmployeeSpanId": null,
+  "EmployeeSpan": null,
+  "TinNumber": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Sales.Customer.html">https://api.monitor.se/api/Monitor.API.Sales.Customer.html</a><br><span class="badge">Sales</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

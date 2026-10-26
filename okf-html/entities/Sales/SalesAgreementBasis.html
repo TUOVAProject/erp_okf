@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SalesAgreementBases · Monitor ERP API</title>
+<meta name="description" content="Represents a sales agreement basis.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>SalesAgreementBases</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html" aria-current="location">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="salesagreementbases">SalesAgreementBases</h1>
+<p>Represents a sales agreement basis.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Sales.html">Sales</a></dd><dt>API class</dt><dd><code>SalesAgreementBasis</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Sales/SalesAgreementBases</code></dd><dt>Required permission</dt><dd>Show agreement</dd><dt>GUID</dt><dd><code>61d4a4e1-492b-4caf-a3d3-8afec951c340</code></dd><dt>Introduced in</dt><dd>26.4</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the agreement basis.</td>
+</tr>
+<tr>
+<td class="prop"><code>SalesAgreementId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="SalesAgreement.html">SalesAgreements</a></td>
+<td></td>
+<td>The business key identifier of the parent agreement.</td>
+</tr>
+<tr>
+<td class="prop"><code>CustomerOrderId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CustomerOrder.html">CustomerOrders</a></td>
+<td></td>
+<td>The business key identifier of the customer order generated from this agreement basis.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoiceId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="CustomerOrderInvoice.html">CustomerOrderInvoices</a></td>
+<td></td>
+<td>The business key identifier of the invoice for this agreement basis.</td>
+</tr>
+<tr>
+<td class="prop"><code>AccrualAccountId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Accounting/Account.html">Accounts</a></td>
+<td></td>
+<td>The business key identifier of the accrual account for this agreement basis.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsAccrual</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if this agreement basis uses accrual accounting.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsOneTimeCost</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if this agreement basis is a one-time cost.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsRemoved</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if the agreement basis and the linked customer order has been set as removed.</td>
+</tr>
+<tr>
+<td class="prop"><code>IsPaused</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if the agreement basis is paused.</td>
+</tr>
+<tr>
+<td class="prop"><code>InvoicingMethod</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The invoicing method of the agreement basis.</td>
+</tr>
+<tr>
+<td class="prop"><code>PeriodStart</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The period start date of the agreement basis.</td>
+</tr>
+<tr>
+<td class="prop"><code>PeriodEnd</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The period end date of the agreement basis.</td>
+</tr>
+<tr>
+<td class="prop"><code>PlannedInvoiceDate</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The planned invoice date of the agreement basis.</td>
+</tr>
+<tr>
+<td class="prop"><code>PeriodStartOnAgreementWhenCreated</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The period start on the agreement when this basis was created.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExchangeRate</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The exchange rate of the agreement basis.</td>
+</tr>
+<tr>
+<td class="prop"><code>CurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the currency of the agreement basis.</td>
+</tr>
+<tr>
+<td class="prop"><code>Currency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The currency of the agreement basis.</td>
+</tr>
+<tr>
+<td class="prop"><code>UseForwardRate</code></td>
+<td class="type"><code>Boolean</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Indicates if the agreement basis uses forward rate.</td>
+</tr>
+<tr>
+<td class="prop"><code>Rows</code></td>
+<td class="type"><code>SalesAgreementBasisRows[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="SalesAgreementBasisRow.html">SalesAgreementBasisRows</a></td>
+<td>expandable, collection</td>
+<td>The rows of the agreement basis.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>InvoicingMethod</code><div class="evs"><span class="ev">InAdvance<span>=1</span></span><span class="ev">InArrears<span>=2</span></span></div></li></ul>
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="SalesAgreementBasisRow.html">SalesAgreementBasisRows</a> — <code>ParentAgreementBasisId</code> (FK)</li>
+<li><a href="SalesAgreement.html">SalesAgreements</a> — <code>Bases</code> (expand)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "SalesAgreementId": 0,
+  "CustomerOrderId": 0,
+  "InvoiceId": null,
+  "AccrualAccountId": null,
+  "IsAccrual": false,
+  "IsOneTimeCost": false,
+  "IsRemoved": false,
+  "IsPaused": false,
+  "InvoicingMethod": 0,
+  "PeriodStart": "0001-01-01T00:00:00+00:00",
+  "PeriodEnd": "0001-01-01T00:00:00+00:00",
+  "PlannedInvoiceDate": "0001-01-01T00:00:00+00:00",
+  "PeriodStartOnAgreementWhenCreated": null,
+  "ExchangeRate": 0.0,
+  "CurrencyId": 0,
+  "Currency": null,
+  "UseForwardRate": false,
+  "Rows": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Sales.SalesAgreementBasis.html">https://api.monitor.se/api/Monitor.API.Sales.SalesAgreementBasis.html</a><br><span class="badge">Sales</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

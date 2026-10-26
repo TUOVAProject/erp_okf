@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BookingRows · Monitor ERP API</title>
+<meta name="description" content="Represents a booking row.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>BookingRows</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html" aria-current="location">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="bookingrows">BookingRows</h1>
+<p>Represents a booking row.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Accounting.html">Accounting</a></dd><dt>API class</dt><dd><code>BookingRow</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Accounting/BookingRows</code></dd><dt>GUID</dt><dd><code>6C01AE3F-3CEA-4A92-899A-04E23F8FBD46</code></dd><dt>Introduced in</dt><dd>2.27</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the booking row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Type</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The type of booking row.</td>
+</tr>
+<tr class="deprecated">
+<td class="prop"><code>AuthorizedWhen</code></td>
+<td class="type"><code>DateTimeOffset?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td><span class="badge dep">deprecated since 2.49</span></td>
+<td>When the booking row was authorized. Property is obsolete, it gives last value from new list of row authorizations <em>(Now returns AuthorizedWhen from last row authorization)</em></td>
+</tr>
+<tr>
+<td class="prop"><code>PurchaseOrderDeliveryRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Purchase/PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a></td>
+<td></td>
+<td>The business key identifier of the booking rows purchase order delivery row.</td>
+</tr>
+<tr>
+<td class="prop"><code>BookingId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="Booking.html">Bookings</a></td>
+<td></td>
+<td>The business key identifier of the booking.</td>
+</tr>
+<tr>
+<td class="prop"><code>VatRateId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td></td>
+<td>The business key identifier of the row's VAT rate.</td>
+</tr>
+<tr>
+<td class="prop"><code>AccrualAccountingId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="AccrualAccounting.html">AccrualAccountings</a></td>
+<td></td>
+<td>The business key identifier of the accrual accounting.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderNumber</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 50</td>
+<td>The human readable identifier of the order number</td>
+</tr>
+<tr>
+<td class="prop"><code>DebitInCompanyCurrency</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Debit in the company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>DebitInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the debit in the company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>CreditInCompanyCurrency</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Credit in the company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>CreditInCompanyCurrencyCurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the credit in the company currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>Debit</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Debit on the booking row.</td>
+</tr>
+<tr>
+<td class="prop"><code>DebitCurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the debit currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>Credit</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Credit on the booking row.</td>
+</tr>
+<tr>
+<td class="prop"><code>CreditCurrencyId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the credit currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>Quantity</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Quantity on the booking row.</td>
+</tr>
+<tr>
+<td class="prop"><code>RowIndex</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>Row index of the booking row.</td>
+</tr>
+<tr>
+<td class="prop"><code>CodingEntryId</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CodingEntry.html">CodingEntries</a></td>
+<td></td>
+<td>The business key identifier of the coding entry.</td>
+</tr>
+<tr>
+<td class="prop"><code>NetAmountBookingRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="BookingRow.html">BookingRows</a></td>
+<td>since 25.6</td>
+<td>The business key identifier of the net amount row that the VAT row belongs to.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>Type</code><div class="evs"><span class="ev">NotInitialized<span>=0</span></span><span class="ev">AccountsReceivable<span>=1</span></span><span class="ev">OutputVat<span>=2</span></span><span class="ev">AccountsPayable<span>=3</span></span><span class="ev">PreliminaryAccountsPayable<span>=4</span></span><span class="ev">PaymentIn<span>=5</span></span><span class="ev">PaymentOut<span>=6</span></span><span class="ev">Purchase<span>=7</span></span><span class="ev">Sales<span>=8</span></span><span class="ev">Miscellaneous<span>=9</span></span><span class="ev">PurchaseWithoutOrder<span>=10</span></span><span class="ev">InvoicingCharges<span>=11</span></span><span class="ev">InsuranceCost<span>=12</span></span><span class="ev">RoundOff<span>=13</span></span><span class="ev">SetupPrice<span>=14</span></span><span class="ev">Material<span>=15</span></span><span class="ev">Inventory<span>=16</span></span><span class="ev">PreliminaryAccount<span>=17</span></span><span class="ev">InputVat<span>=18</span></span><span class="ev">ExchangeRateAdjustment<span>=19</span></span><span class="ev">InvoiceReminderFee<span>=20</span></span><span class="ev">PriceDifference<span>=21</span></span><span class="ev">PaymentInVat<span>=22</span></span><span class="ev">PaymentOutVat<span>=23</span></span><span class="ev">OtherPayment<span>=24</span></span><span class="ev">InputVatNonDeductible<span>=25</span></span><span class="ev">CurrencyDifference<span>=26</span></span><span class="ev">WithholdingTax<span>=27</span></span><span class="ev">ManualAccountsPayableFinalBookingFromG4<span>=999</span></span></div></li></ul>
+
+
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Accounting</strong></p>
+<ul>
+<li><a href="AccrualAccountingRow.html">AccrualAccountingRows</a> — <code>BookingRows</code> (expand)</li>
+<li><a href="AccrualAccounting.html">AccrualAccountings</a> — <code>AccountsPayableBookingRow</code> (expand)</li>
+<li><a href="AccrualAccounting.html">AccrualAccountings</a> — <code>BookingRows</code> (expand)</li>
+<li><a href="BookingRow.html">BookingRows</a> — <code>NetAmountBookingRowId</code> (FK)</li>
+<li><a href="Booking.html">Bookings</a> — <code>Rows</code> (expand)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Type": 0,
+  "AuthorizedWhen": null,
+  "PurchaseOrderDeliveryRowId": null,
+  "BookingId": 0,
+  "VatRateId": null,
+  "AccrualAccountingId": null,
+  "OrderNumber": null,
+  "DebitInCompanyCurrency": 0.0,
+  "DebitInCompanyCurrencyCurrencyId": 0,
+  "CreditInCompanyCurrency": 0.0,
+  "CreditInCompanyCurrencyCurrencyId": 0,
+  "Debit": 0.0,
+  "DebitCurrencyId": 0,
+  "Credit": 0.0,
+  "CreditCurrencyId": 0,
+  "Quantity": 0.0,
+  "RowIndex": 0,
+  "CodingEntryId": 0,
+  "NetAmountBookingRowId": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Accounting.BookingRow.html">https://api.monitor.se/api/Monitor.API.Accounting.BookingRow.html</a><br><span class="badge">Accounting</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

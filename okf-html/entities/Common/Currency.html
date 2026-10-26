@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Currencies · Monitor ERP API</title>
+<meta name="description" content="Represents a queryable currency.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>Currencies</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html" aria-current="location">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#referenced-by">Referenced by</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="currencies">Currencies</h1>
+<p>Represents a queryable currency.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Common.html">Common</a></dd><dt>API class</dt><dd><code>Currency</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Common/Currencies</code></dd><dt>Required permission</dt><dd>Show currencies</dd><dt>GUID</dt><dd><code>7FE7D8D5-FECB-4D7C-9300-E99DB95F0F9D</code></dd><dt>Introduced in</dt><dd>2.18</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>Code</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>unique, max length 6</td>
+<td>The human readable identifier of the currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>Description</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The translated description of the currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>RateFactor</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The rate factor of the currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>DefaultSalesExchangeRate</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The default sales exchange rate.</td>
+</tr>
+<tr>
+<td class="prop"><code>DefaultPurchaseExchangeRate</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The default purchase exchange rate.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExchangeRates</code></td>
+<td class="type"><code>CurrencyExchangeRates[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CurrencyExchangeRate.html">CurrencyExchangeRates</a></td>
+<td>expandable, collection</td>
+<td>All available exchange rates for the currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>ExchangeRatesChangeLog</code></td>
+<td class="type"><code>CurrencyExchangeRateChangeLogs[]</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CurrencyExchangeRateChangeLog.html">CurrencyExchangeRateChangeLogs</a></td>
+<td>expandable, collection, since 2.26</td>
+<td>All previous exchange rates for the currency</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="referenced-by">Referenced by</h2>
+<p><strong>Accounting</strong></p>
+<ul>
+<li><a href="../Accounting/AccountYearSetting.html">AccountYearSettings</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>InvoiceAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>InvoiceAmountInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>OrderedRestAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>RestAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>RestAmountInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>VatAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>VatAmountInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>WithholdTaxAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsPayable.html">AccountsPayables</a> — <code>WithholdTaxAmountInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsReceivable.html">AccountsReceivables</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsReceivable.html">AccountsReceivables</a> — <code>InvoiceAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsReceivable.html">AccountsReceivables</a> — <code>InvoiceAmountInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsReceivable.html">AccountsReceivables</a> — <code>OrderedRestAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsReceivable.html">AccountsReceivables</a> — <code>RestAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsReceivable.html">AccountsReceivables</a> — <code>RestAmountInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsReceivable.html">AccountsReceivables</a> — <code>VatAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/AccountsReceivable.html">AccountsReceivables</a> — <code>VatAmountInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/BankAccount.html">BankAccounts</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Accounting/BookingRow.html">BookingRows</a> — <code>CreditCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/BookingRow.html">BookingRows</a> — <code>CreditInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/BookingRow.html">BookingRows</a> — <code>DebitCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/BookingRow.html">BookingRows</a> — <code>DebitInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/IncomingPayment.html">IncomingPayments</a> — <code>BankChargeAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/IncomingPayment.html">IncomingPayments</a> — <code>PaidAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/IncomingPayment.html">IncomingPayments</a> — <code>PaidAmountInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/IncomingPayment.html">IncomingPayments</a> — <code>PaidVatAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/IncomingPayment.html">IncomingPayments</a> — <code>WriteOffAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/IncomingPayment.html">IncomingPayments</a> — <code>WriteOffAmountInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/OpeningBalance.html">OpeningBalances</a> — <code>CreditCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/OpeningBalance.html">OpeningBalances</a> — <code>CreditInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/OpeningBalance.html">OpeningBalances</a> — <code>DebitCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/OpeningBalance.html">OpeningBalances</a> — <code>DebitInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/OutgoingPayment.html">OutgoingPayments</a> — <code>BankChargeAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/OutgoingPayment.html">OutgoingPayments</a> — <code>PaidAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/OutgoingPayment.html">OutgoingPayments</a> — <code>PaidAmountInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/OutgoingPayment.html">OutgoingPayments</a> — <code>PaidVatAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/OutgoingPayment.html">OutgoingPayments</a> — <code>WriteOffAmountCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/OutgoingPayment.html">OutgoingPayments</a> — <code>WriteOffAmountInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/VoucherRow.html">VoucherRows</a> — <code>CreditCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/VoucherRow.html">VoucherRows</a> — <code>CreditInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/VoucherRow.html">VoucherRows</a> — <code>DebitCurrencyId</code> (FK)</li>
+<li><a href="../Accounting/VoucherRow.html">VoucherRows</a> — <code>DebitInCompanyCurrencyCurrencyId</code> (FK)</li>
+</ul>
+<p><strong>Common</strong></p>
+<ul>
+<li><a href="BusinessContactBankAccount.html">BusinessContactBankAccounts</a> — <code>Currency</code> (expand)</li>
+<li><a href="BusinessContactBankAccount.html">BusinessContactBankAccounts</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="Company.html">Companies</a> — <code>Currency</code> (expand)</li>
+<li><a href="Company.html">Companies</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="Country.html">Countries</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="CurrencyExchangeRateChangeLog.html">CurrencyExchangeRateChangeLogs</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="Money.html">Money</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="PartConfigurationResult.html">PartConfigurationResults</a> — <code>StandardPriceCurrencyId</code> (FK)</li>
+<li><a href="PartConfigurationResult.html">PartConfigurationResults</a> — <code>UnitPriceCurrencyId</code> (FK)</li>
+<li><a href="PartConfigurationResult.html">PartConfigurationResults</a> — <code>UnitPriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="PartConfigurationSelectionGroupResult.html">PartConfigurationSelectionGroupResults</a> — <code>UnitPriceCurrencyId</code> (FK)</li>
+<li><a href="PartConfigurationSelectionGroupResult.html">PartConfigurationSelectionGroupResults</a> — <code>UnitPriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="PriceList.html">PriceLists</a> — <code>CurrencyId</code> (FK)</li>
+</ul>
+<p><strong>Inventory</strong></p>
+<ul>
+<li><a href="../Inventory/Alloy.html">Alloys</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Inventory/CaseEntryActivity.html">CaseEntryActivities</a> — <code>CostPerHourCurrencyId</code> (FK)</li>
+<li><a href="../Inventory/CaseEntryAdditionalCost.html">CaseEntryAdditionalCost</a> — <code>CostCurrencyId</code> (FK)</li>
+<li><a href="../Inventory/CaseManagementActivity.html">CaseManagementActivities</a> — <code>CostPerHourCurrencyId</code> (FK)</li>
+<li><a href="../Inventory/CaseManagementCost.html">CaseManagementCost</a> — <code>CostCurrencyId</code> (FK)</li>
+<li><a href="../Inventory/CaseManagementTemplateCost.html">CaseManagementTemplateCosts</a> — <code>CostCurrencyId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>AveragePriceCurrencyId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>FutureStandardPriceCurrencyId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>LastPurchasePriceCurrencyId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>LastSalesPriceCurrencyId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>PostCalculatedAveragePriceCurrencyId</code> (FK)</li>
+<li><a href="../Inventory/Part.html">Parts</a> — <code>StandardPriceCurrencyId</code> (FK)</li>
+<li><a href="../Inventory/PriceChangeLog.html">PriceChangeLogs</a> — <code>NewPriceCurrencyId</code> (FK)</li>
+<li><a href="../Inventory/PriceChangeLog.html">PriceChangeLogs</a> — <code>OldPriceCurrencyId</code> (FK)</li>
+</ul>
+<p><strong>Manufacturing</strong></p>
+<ul>
+<li><a href="../Manufacturing/OperationRow.html">OperationRows</a> — <code>SetupCostCurrencyId</code> (FK)</li>
+<li><a href="../Manufacturing/OperationRow.html">OperationRows</a> — <code>UnitCostCurrencyId</code> (FK)</li>
+</ul>
+<p><strong>Purchase</strong></p>
+<ul>
+<li><a href="../Purchase/BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a> — <code>PriceCurrency</code> (expand)</li>
+<li><a href="../Purchase/BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a> — <code>PriceInCompanyCurrencyCurrency</code> (expand)</li>
+<li><a href="../Purchase/BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a> — <code>PriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a> — <code>SetupPriceCurrency</code> (expand)</li>
+<li><a href="../Purchase/BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a> — <code>SetupPriceCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/BlanketOrderPurchase.html">BlanketOrderPurchases</a> — <code>Currency</code> (expand)</li>
+<li><a href="../Purchase/BlanketOrderPurchase.html">BlanketOrderPurchases</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Purchase/Inquiry.html">Inquiries</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Purchase/InquiryRow.html">InquiryRows</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/InquiryRow.html">InquiryRows</a> — <code>PriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/InquiryRow.html">InquiryRows</a> — <code>SetupPriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/InquiryRow.html">InquiryRows</a> — <code>StandardPriceCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderInvoiceRow.html">PurchaseOrderInvoiceRows</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderInvoiceRow.html">PurchaseOrderInvoiceRows</a> — <code>PriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderInvoiceRow.html">PurchaseOrderInvoiceRows</a> — <code>SetupPriceCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderInvoiceRow.html">PurchaseOrderInvoiceRows</a> — <code>SetupPriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderInvoiceRow.html">PurchaseOrderInvoiceRows</a> — <code>StandardPriceCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>PriceCurrency</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>PriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>SetupPriceCurrency</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>SetupPriceCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>StandardPriceCurrency</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a> — <code>StandardPriceCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/PurchaseOrder.html">PurchaseOrders</a> — <code>Currency</code> (expand)</li>
+<li><a href="../Purchase/PurchaseOrder.html">PurchaseOrders</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Purchase/SupplierPartLink.html">SupplierPartLinks</a> — <code>PriceCurrency</code> (expand)</li>
+<li><a href="../Purchase/SupplierPartLink.html">SupplierPartLinks</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>Currency</code> (expand)</li>
+<li><a href="../Purchase/Supplier.html">Suppliers</a> — <code>CurrencyId</code> (FK)</li>
+</ul>
+<p><strong>Sales</strong></p>
+<ul>
+<li><a href="../Sales/BlanketOrderSales.html">BlanketOrderSales</a> — <code>Currency</code> (expand)</li>
+<li><a href="../Sales/BlanketOrderSales.html">BlanketOrderSales</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Sales/BlanketOrderSalesRow.html">BlanketOrderSalesRows</a> — <code>PriceCurrency</code> (expand)</li>
+<li><a href="../Sales/BlanketOrderSalesRow.html">BlanketOrderSalesRows</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/BlanketOrderSalesRow.html">BlanketOrderSalesRows</a> — <code>PriceInCompanyCurrencyCurrency</code> (expand)</li>
+<li><a href="../Sales/BlanketOrderSalesRow.html">BlanketOrderSalesRows</a> — <code>PriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/BlanketOrderSalesRow.html">BlanketOrderSalesRows</a> — <code>SetupPriceCurrency</code> (expand)</li>
+<li><a href="../Sales/BlanketOrderSalesRow.html">BlanketOrderSalesRows</a> — <code>SetupPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderInvoiceOrderRowDiscount.html">CustomerOrderInvoiceOrderRowDiscounts</a> — <code>AsAmountCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderInvoiceOrderRowDiscount.html">CustomerOrderInvoiceOrderRowDiscounts</a> — <code>GrossPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderInvoiceOrderRowDiscount.html">CustomerOrderInvoiceOrderRowDiscounts</a> — <code>NetPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderInvoiceRow.html">CustomerOrderInvoiceRows</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderInvoiceRow.html">CustomerOrderInvoiceRows</a> — <code>PriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderInvoiceRow.html">CustomerOrderInvoiceRows</a> — <code>SetupPriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderInvoiceRow.html">CustomerOrderInvoiceRows</a> — <code>StandardPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderInvoice.html">CustomerOrderInvoices</a> — <code>EditedOrderAmountExcludingVatCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderOrderRowDiscount.html">CustomerOrderOrderRowDiscounts</a> — <code>AsAmountCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderOrderRowDiscount.html">CustomerOrderOrderRowDiscounts</a> — <code>GrossPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderOrderRowDiscount.html">CustomerOrderOrderRowDiscounts</a> — <code>NetPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderPaymentPlanRow.html">CustomerOrderPaymentPlanRows</a> — <code>AmountCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderPaymentPlanRow.html">CustomerOrderPaymentPlanRows</a> — <code>AmountInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderPaymentPlanRow.html">CustomerOrderPaymentPlanRows</a> — <code>ReducedAmountInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderRowInflow.html">CustomerOrderRowInflows</a> — <code>PriceChangeCurrency</code> (expand)</li>
+<li><a href="../Sales/CustomerOrderRowInflow.html">CustomerOrderRowInflows</a> — <code>PriceChangeCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderRowInflow.html">CustomerOrderRowInflows</a> — <code>SetupPriceChangeCurrency</code> (expand)</li>
+<li><a href="../Sales/CustomerOrderRowInflow.html">CustomerOrderRowInflows</a> — <code>SetupPriceChangeCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderRowInflow.html">CustomerOrderRowInflows</a> — <code>TotalValueChangeCurrency</code> (expand)</li>
+<li><a href="../Sales/CustomerOrderRowInflow.html">CustomerOrderRowInflows</a> — <code>TotalValueChangeCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderRow.html">CustomerOrderRows</a> — <code>ComparativePriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderRow.html">CustomerOrderRows</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderRow.html">CustomerOrderRows</a> — <code>PriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderRow.html">CustomerOrderRows</a> — <code>SetupPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrderRow.html">CustomerOrderRows</a> — <code>StandardPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>EditedOrderAmountExcludingVatCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>ResetPaymentPlanDifferenceAmountCurrency</code> (expand)</li>
+<li><a href="../Sales/CustomerOrder.html">CustomerOrders</a> — <code>ResetPaymentPlanDifferenceAmountCurrencyId</code> (FK)</li>
+<li><a href="../Sales/CustomerPartLink.html">CustomerPartLinks</a> — <code>PriceCurrency</code> (expand)</li>
+<li><a href="../Sales/CustomerPartLink.html">CustomerPartLinks</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>Currency</code> (expand)</li>
+<li><a href="../Sales/Customer.html">Customers</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Sales/QuoteOrderRowDiscount.html">QuoteOrderRowDiscounts</a> — <code>AsAmountCurrencyId</code> (FK)</li>
+<li><a href="../Sales/QuoteOrderRowDiscount.html">QuoteOrderRowDiscounts</a> — <code>GrossPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/QuoteOrderRowDiscount.html">QuoteOrderRowDiscounts</a> — <code>NetPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/QuoteRow.html">QuoteRows</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/QuoteRow.html">QuoteRows</a> — <code>PriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/QuoteRow.html">QuoteRows</a> — <code>SetupPriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/QuoteRow.html">QuoteRows</a> — <code>StandardPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/Quote.html">Quotes</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Sales/Quote.html">Quotes</a> — <code>EditedOrderAmountExcludingVatCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementBasis.html">SalesAgreementBases</a> — <code>Currency</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementBasis.html">SalesAgreementBases</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementBasisRow.html">SalesAgreementBasisRows</a> — <code>PriceCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementBasisRow.html">SalesAgreementBasisRows</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementBasisRow.html">SalesAgreementBasisRows</a> — <code>PriceInCompanyCurrencyCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementBasisRow.html">SalesAgreementBasisRows</a> — <code>PriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementBasisRow.html">SalesAgreementBasisRows</a> — <code>StandardPriceCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementBasisRow.html">SalesAgreementBasisRows</a> — <code>StandardPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>PriceChangeCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>PriceChangeCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>PriceChangeInCompanyCurrencyCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>PriceChangeInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>PriceChangePerIntervalCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>PriceChangePerIntervalCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>PriceChangePerIntervalInCompanyCurrencyCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>PriceChangePerIntervalInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>RowTotalValueCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>RowTotalValueCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>RowTotalValueInCompanyCurrencyCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>RowTotalValueInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>TotalValueChangeCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>TotalValueChangeCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>TotalValueChangeInCompanyCurrencyCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesAgreementRowInflow.html">SalesAgreementRowInflows</a> — <code>TotalValueChangeInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRow.html">SalesAgreementRows</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRow.html">SalesAgreementRows</a> — <code>PriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRow.html">SalesAgreementRows</a> — <code>SetupPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRow.html">SalesAgreementRows</a> — <code>SetupPriceInCompanyCurrencyCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreementRow.html">SalesAgreementRows</a> — <code>StandardPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesAgreement.html">SalesAgreements</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesPrice.html">SalesPrices</a> — <code>FuturePriceCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesPrice.html">SalesPrices</a> — <code>FuturePriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesPrice.html">SalesPrices</a> — <code>FutureSetupPriceCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesPrice.html">SalesPrices</a> — <code>FutureSetupPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesPrice.html">SalesPrices</a> — <code>PriceCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesPrice.html">SalesPrices</a> — <code>PriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/SalesPrice.html">SalesPrices</a> — <code>SetupPriceCurrency</code> (expand)</li>
+<li><a href="../Sales/SalesPrice.html">SalesPrices</a> — <code>SetupPriceCurrencyId</code> (FK)</li>
+<li><a href="../Sales/ShipmentCustoms.html">ShipmentCustoms</a> — <code>Currency</code> (expand)</li>
+<li><a href="../Sales/ShipmentCustoms.html">ShipmentCustoms</a> — <code>CurrencyId</code> (FK)</li>
+<li><a href="../Sales/Shipment.html">Shipments</a> — <code>CalculatedFreightPriceCurrency</code> (expand)</li>
+<li><a href="../Sales/Shipment.html">Shipments</a> — <code>CalculatedFreightPriceCurrencyId</code> (FK)</li>
+</ul>
+<p><strong>TimeRecording</strong></p>
+<ul>
+<li><a href="../TimeRecording/AdditionRecording.html">AdditionRecordings</a> — <code>CostCurrencyId</code> (FK)</li>
+<li><a href="../TimeRecording/AttendanceAddition.html">AttendanceAdditions</a> — <code>CostCurrencyId</code> (FK)</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "Code": null,
+  "Description": null,
+  "RateFactor": 0,
+  "DefaultSalesExchangeRate": 0.0,
+  "DefaultPurchaseExchangeRate": 0.0,
+  "ExchangeRates": null,
+  "ExchangeRatesChangeLog": null
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Common.Currency.html">https://api.monitor.se/api/Monitor.API.Common.Currency.html</a><br><span class="badge">Common</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>

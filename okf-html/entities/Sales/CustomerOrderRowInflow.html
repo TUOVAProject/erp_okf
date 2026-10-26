@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CustomerOrderRowInflows · Monitor ERP API</title>
+<meta name="description" content="Represents a customer order inflow row.">
+<link rel="stylesheet" href="../../assets/okf.css">
+</head>
+<body>
+<header class="top">
+  <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>CustomerOrderRowInflows</span>
+</header>
+<div class="layout">
+<nav class="side" id="side">
+  <input type="search" id="search" placeholder="Search all entities  ( / )" aria-label="Search all entities" autocomplete="off">
+  <div id="results" hidden></div>
+  <div id="nav">
+<div class="nav-group">
+<a href="../../index.html">Overview</a>
+<a href="../../about.html">About this bundle</a>
+<a href="../../modules/index.html">All modules</a>
+<a href="../../entities/index.html">All entities</a>
+<a href="../../log.html">Generation log</a>
+</div>
+<div class="nav-group"><h4>Guides</h4>
+<a href="../../guides/core-entities.html">Core entities</a>
+<a href="../../guides/querying.html">Querying the Monitor API</a>
+<a href="../../guides/naming-conventions.html">Naming conventions</a>
+<a href="../../guides/relationships.html">How entities relate</a>
+<a href="../../guides/permissions.html">Permissions</a>
+</div>
+<div class="nav-group"><h4>Modules</h4>
+<a href="../../modules/Accounting.html">Accounting<span class="count">43</span></a>
+<a href="../../modules/Common.html">Common<span class="count">113</span></a>
+<a href="../../modules/Infrastructure.html">Infrastructure<span class="count">18</span></a>
+<a href="../../modules/Inventory.html">Inventory<span class="count">50</span></a>
+<a href="../../modules/Manufacturing.html">Manufacturing<span class="count">30</span></a>
+<a href="../../modules/Purchase.html">Purchase<span class="count">30</span></a>
+<a href="../../modules/Sales.html" aria-current="location">Sales<span class="count">76</span></a>
+<a href="../../modules/TimeRecording.html">TimeRecording<span class="count">20</span></a>
+</div>
+<div class="nav-group toc"><h4>On this page</h4>
+<a class="toc-h" href="#properties">Properties</a>
+<a class="toc-h" href="#enumerations">Enumerations</a>
+<a class="toc-h" href="#example">Example</a>
+</div>
+  </div>
+</nav>
+<main class="content">
+<h1 id="customerorderrowinflows">CustomerOrderRowInflows</h1>
+<p>Represents a customer order inflow row.</p>
+<dl class="meta"><dt>Module</dt><dd><a href="../../modules/Sales.html">Sales</a></dd><dt>API class</dt><dd><code>CustomerOrderRowInflow</code></dd><dt>Endpoint</dt><dd><span class="method get">GET</span> <code>/api/v1/Sales/CustomerOrderRowInflows</code></dd><dt>Required permission</dt><dd>Show customer orders</dd><dt>GUID</dt><dd><code>446FED74-283D-4566-AC69-BF3F207946AA</code></dd><dt>Introduced in</dt><dd>23.3</dd></dl>
+<h2 id="properties">Properties</h2>
+<div class="table-wrap"><table class="props">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Null</th>
+<th>References</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="prop"><code>Id</code></td>
+<td class="type"><code>Int64</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="CustomerOrderRow.html">CustomerOrderRows</a></td>
+<td></td>
+<td>The business key identifier of the inflow rows customer order row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderRow</code></td>
+<td class="type"><code>CustomerOrderRows</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="CustomerOrderRow.html">CustomerOrderRows</a></td>
+<td>expandable</td>
+<td>The inflow rows customer order row.</td>
+</tr>
+<tr>
+<td class="prop"><code>BlanketOrderSalesRowId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the inflow rows blanket order sales row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PartId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
+<td></td>
+<td>The business key identifier of the inflow rows part.</td>
+</tr>
+<tr>
+<td class="prop"><code>Part</code></td>
+<td class="type"><code>Parts</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
+<td>expandable</td>
+<td>The inflow rows part.</td>
+</tr>
+<tr>
+<td class="prop"><code>EntityIdentityString</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 20</td>
+<td>The human readable identifier of the entity subject of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>AdditionalRowDescription</code></td>
+<td class="type"><code>String</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>max length 80</td>
+<td>The additional row description of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>Status</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The status of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>LoggingTimeStamp</code></td>
+<td class="type"><code>DateTimeOffset</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The logging timestamp of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderedQuantityChange</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The ordered quantity change of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>UnitId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The business key identifier of the inflow rows unit.</td>
+</tr>
+<tr>
+<td class="prop"><code>Unit</code></td>
+<td class="type"><code>Units</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Unit.html">Units</a></td>
+<td>expandable</td>
+<td>The inflow rows unit.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChange</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The price change of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChangeCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the inflow rows price changes currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>PriceChangeCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The inflow rows price changes currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupPriceChange</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The setup price change of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupPriceChangeCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the inflow rows setup price changes currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>SetupPriceChangeCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The inflow rows setup price changes currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>DiscountChange</code></td>
+<td class="type"><code>Decimal?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td></td>
+<td></td>
+<td>The discount change of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>TotalValueChange</code></td>
+<td class="type"><code>Decimal</code></td>
+<td class="nullable"></td>
+<td></td>
+<td></td>
+<td>The total value change of the inflow row.</td>
+</tr>
+<tr>
+<td class="prop"><code>TotalValueChangeCurrencyId</code></td>
+<td class="type"><code>Int64?</code></td>
+<td class="nullable"><span class="badge">null</span></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td></td>
+<td>The business key identifier of the inflow rows total value changes currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>TotalValueChangeCurrency</code></td>
+<td class="type"><code>Currencies</code></td>
+<td class="nullable"></td>
+<td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
+<td>expandable</td>
+<td>The inflow rows total value changes currency.</td>
+</tr>
+<tr>
+<td class="prop"><code>OrderRowType</code></td>
+<td class="type"><code>Int32</code></td>
+<td class="nullable"></td>
+<td></td>
+<td>enum</td>
+<td>The order row type of the inflow row.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="enumerations">Enumerations</h2><ul class="enums"><li><code>Status</code><div class="evs"><span class="ev">New<span>=0</span></span><span class="ev">Changed<span>=1</span></span><span class="ev">Removed<span>=2</span></span></div></li><li><code>OrderRowType</code><div class="evs"><span class="ev">Part<span>=1</span></span><span class="ev">Additional<span>=2</span></span><span class="ev">Sum<span>=3</span></span><span class="ev">FreeText<span>=4</span></span></div></li></ul>
+
+
+
+
+<h2 id="example">Example</h2>
+<pre><code class="language-json">{
+  "Id": 0,
+  "OrderRowId": null,
+  "OrderRow": null,
+  "BlanketOrderSalesRowId": null,
+  "PartId": null,
+  "Part": null,
+  "EntityIdentityString": null,
+  "AdditionalRowDescription": null,
+  "Status": 0,
+  "LoggingTimeStamp": "0001-01-01T00:00:00+00:00",
+  "OrderedQuantityChange": null,
+  "UnitId": null,
+  "Unit": null,
+  "PriceChange": null,
+  "PriceChangeCurrencyId": null,
+  "PriceChangeCurrency": null,
+  "SetupPriceChange": null,
+  "SetupPriceChangeCurrencyId": null,
+  "SetupPriceChangeCurrency": null,
+  "DiscountChange": null,
+  "TotalValueChange": 0.0,
+  "TotalValueChangeCurrencyId": null,
+  "TotalValueChangeCurrency": null,
+  "OrderRowType": 0
+}
+</code></pre>
+<div class="page-meta">Source: <a href="https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderRowInflow.html">https://api.monitor.se/api/Monitor.API.Sales.CustomerOrderRowInflow.html</a><br><span class="badge">Sales</span><span class="badge">queryable</span></div>
+</main>
+</div>
+<script>window.OKF_ROOT = "../../";</script>
+<script src="../../assets/okf-index.js"></script>
+<script src="../../assets/okf.js"></script>
+</body>
+</html>
