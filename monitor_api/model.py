@@ -1,8 +1,5 @@
 """
-This is the only place relationship traversal happens. The previous pipeline
-walked the same source -> property -> target structure in five different places
-across four files, each with slightly different field names, which is how the
-navigation-property edges came to be missing from some outputs and not others.
+This is the only place relationship traversal happens
 
 The model is built once here; every emitter is a pure projection of it.
 """

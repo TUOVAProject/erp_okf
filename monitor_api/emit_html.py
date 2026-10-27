@@ -4,13 +4,6 @@ not the model -- so the site is the bundle, page for page, and cannot say
 anything the markdown does not. No new traversal, no new counting: every
 sentence, table and link on a page comes from the corresponding .md file.
 
-Each page is rendered from markdown, then restyled with BeautifulSoup into the
-markup site_assets/okf.css expects: property tables get per-column classes,
-null badges and reference chips, the entity fact list becomes a <dl> with an
-HTTP-method badge, enum tables become chip rows, and the root stats table
-becomes cards. Those are presentation changes only -- every value shown still
-comes from the markdown cell it replaced.
-
 Links are rewritten from .md to .html and stay file-relative, so the site
 works opened straight from disk (file://) as well as served.
 """
