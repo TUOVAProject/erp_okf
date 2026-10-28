@@ -3,7 +3,7 @@ name: Deploy okf-html to GitHub Pages
 on:
   push:
     branches: [main]
-    paths: [okf-html/**]
+    paths: [okf-html/**, .github/workflows/pages.yml]
   workflow_dispatch:
 
 permissions:
