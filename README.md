@@ -17,7 +17,8 @@ System AB; where the bundle and the upstream documentation differ, the upstream
 documentation is authoritative.
 
 **Just want to read?** Open [`okf/index.md`](okf/index.md). Nothing to install.
-In a browser: open `okf-html/index.html` — the same content as HTML pages, with search.
+In a browser: <https://tuotto.savonia.fi/erp_okf/> — the same content as HTML
+pages, with search (or open `okf-html/index.html` from disk).
 
 **New here?** Follow [`GETTING_STARTED.md`](GETTING_STARTED.md): download, use with
 an AI agent, query from code, refresh from upstream, step by step.
@@ -124,7 +125,7 @@ lists the 20 entities the rest of the model hangs off.
 | --- | --- | --- |
 | **[`okf/`](okf/index.md)** | The OKF bundle | Reading on GitHub or in an editor; AI agents that can open files on demand (Claude Code, Copilot in VS Code, Cursor) |
 | `okf-compact/` | The same model in 14 files, one per module. Not OKF. | Agents with a cap on uploaded knowledge files |
-| `okf-html/` | `okf/` rendered as a static site with search. Not OKF. | Browsing: open `okf-html/index.html` from disk |
+| `okf-html/` | `okf/` rendered as a static site with search. Not OKF. | Browsing: [online](https://tuotto.savonia.fi/erp_okf/), or open `okf-html/index.html` from disk |
 | `build/model.json` | The same model as one JSON file. Generated, not committed. | Querying from your own code |
 
 All four come from the same model in a single build, so they never disagree.
