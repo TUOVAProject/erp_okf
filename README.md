@@ -1,5 +1,13 @@
 # Monitor ERP API Data Model — OKF knowledge bundle
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23498227.svg)](https://doi.org/10.5281/zenodo.23498227)
+
+## Author
+
+> Sasu Eskelinen \
+> sasu.eskelinen@savonia.fi \
+> Savonia University of Applied Sciences
+
 ## In brief
 
 The Monitor ERP API data model as an [Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/open-knowledge-format)
