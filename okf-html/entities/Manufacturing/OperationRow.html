@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OperationRows · Monitor ERP API</title>
+<title>OperationRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents an operation row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>OperationRows</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the material row.</td>
 </tr>
 <tr>
-<td class="prop"><code>OperationNumber</code></td>
+<td class="prop"><code>Operation<wbr/>Number</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -84,7 +84,7 @@
 <td>The operation number of the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SubcontractPartId</code></td>
+<td class="prop"><code>Subcontract<wbr/>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -92,7 +92,7 @@
 <td>The business key identifier of the operation row's subcontract part.</td>
 </tr>
 <tr>
-<td class="prop"><code>SupplierId</code></td>
+<td class="prop"><code>Supplier<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -100,7 +100,7 @@
 <td>The business key identifier of the operation row's supplier.</td>
 </tr>
 <tr>
-<td class="prop"><code>WorkCenterId</code></td>
+<td class="prop"><code>Work<wbr/>Center<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>The business key identifier of the operation's row work center.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsSubcontractor</code></td>
+<td class="prop"><code>Is<wbr/>Subcontractor</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>Specifies if the operation is subcontracted.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -140,7 +140,7 @@
 <td>The translated description of the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>TimeCode</code></td>
+<td class="prop"><code>Time<wbr/>Code</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>The time code specified for the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>TimeUnit</code></td>
+<td class="prop"><code>Time<wbr/>Unit</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,23 +156,23 @@
 <td>The time unit specified for the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupTime</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Setup<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The setup time of the operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitTime</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Unit<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The unit time of the operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraQuantityPercent</code></td>
+<td class="prop"><code>Extra<wbr/>Quantity<wbr/>Percent</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>The extra quantity percentage of the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>NumberOfFlows</code></td>
+<td class="prop"><code>Number<wbr/>Of<wbr/>Flows</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>The number of flows specified for the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>OverlapPercent</code></td>
+<td class="prop"><code>Overlap<wbr/>Percent</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The overlap percentage of the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitStaffingFactor</code></td>
+<td class="prop"><code>Unit<wbr/>Staffing<wbr/>Factor</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>The unit staffing factor of the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupStaffingFactor</code></td>
+<td class="prop"><code>Setup<wbr/>Staffing<wbr/>Factor</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>The setup staffing factor of the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupQuantity</code></td>
+<td class="prop"><code>Setup<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -220,7 +220,7 @@
 <td>The setup quantity of the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsForCalculationOnly</code></td>
+<td class="prop"><code>Is<wbr/>For<wbr/>Calculation<wbr/>Only</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -228,15 +228,15 @@
 <td>Specifies if the operation row is to be used for calculations only.</td>
 </tr>
 <tr>
-<td class="prop"><code>QueueTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Queue<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The queue time of the operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>UseQueueTimeWholeDayRoundOf</code></td>
+<td class="prop"><code>Use<wbr/>Queue<wbr/>Time<wbr/>Whole<wbr/>Day<wbr/>Round<wbr/>Of</code></td>
 <td class="type"><code>Boolean?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -244,7 +244,7 @@
 <td>Specifies if queue time should be rounded to full day.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitCostFactorId</code></td>
+<td class="prop"><code>Unit<wbr/>Cost<wbr/>Factor<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -252,7 +252,7 @@
 <td>The business key identifier of the unit cost factor of the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupCostFactorId</code></td>
+<td class="prop"><code>Setup<wbr/>Cost<wbr/>Factor<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -260,15 +260,15 @@
 <td>The business key identifier of the setup cost factor of the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>FixedLeadTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Fixed<wbr/>Lead<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The fixed lead time of the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupCost</code></td>
+<td class="prop"><code>Setup<wbr/>Cost</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -276,7 +276,7 @@
 <td>The setup cost of the operation row. This value is only available if the operation is a subcontract.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupCostCurrencyId</code></td>
+<td class="prop"><code>Setup<wbr/>Cost<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -284,7 +284,7 @@
 <td>The business key identifier of the setup cost currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitCost</code></td>
+<td class="prop"><code>Unit<wbr/>Cost</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -292,7 +292,7 @@
 <td>The unit cost of the operation row. This value is only available if the operation is a subcontract.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitCostCurrencyId</code></td>
+<td class="prop"><code>Unit<wbr/>Cost<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -300,7 +300,7 @@
 <td>The business key identifier of the unit cost currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>TransportCost</code></td>
+<td class="prop"><code>Transport<wbr/>Cost</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -308,7 +308,7 @@
 <td>The transport cost of the operation represented in the company currency. This value is only available if the operation is a subcontract.</td>
 </tr>
 <tr>
-<td class="prop"><code>SupplierPartNumber</code></td>
+<td class="prop"><code>Supplier<wbr/>Part<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -316,7 +316,7 @@
 <td>The supplier part number of the operation subcontractor part. This value is only available if the operation is a subcontract.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliverToEndCustomer</code></td>
+<td class="prop"><code>Deliver<wbr/>To<wbr/>End<wbr/>Customer</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -324,31 +324,31 @@
 <td>Whether the subcontractor will deliver straight to the end customer or not. This value is only available if the operation is a subcontract.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraFields</code></td>
-<td class="type"><code>ExtraFields[]</code></td>
+<td class="prop"><code>Extra<wbr/>Fields</code></td>
+<td class="type"><code>Extra<wbr/>Fields[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ExtraField.html">ExtraFields</a></td>
+<td><a class="chip" href="../Common/ExtraField.html">Extra<wbr/>Fields</a></td>
 <td>expandable, collection, since 22.5</td>
 <td>The extra fields of the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ControlDataRows</code></td>
-<td class="type"><code>OperationRowControlDataRows[]</code></td>
+<td class="prop"><code>Control<wbr/>Data<wbr/>Rows</code></td>
+<td class="type"><code>Operation<wbr/>Row<wbr/>Control<wbr/>Data<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="OperationRowControlDataRow.html">OperationRowControlDataRows</a></td>
+<td><a class="chip" href="OperationRowControlDataRow.html">Operation<wbr/>Row<wbr/>Control<wbr/>Data<wbr/>Rows</a></td>
 <td>expandable, collection, since 22.5</td>
 <td>The control data rows.</td>
 </tr>
 <tr>
-<td class="prop"><code>AlternativeOperationRows</code></td>
-<td class="type"><code>AlternativeOperationRows[]</code></td>
+<td class="prop"><code>Alternative<wbr/>Operation<wbr/>Rows</code></td>
+<td class="type"><code>Alternative<wbr/>Operation<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AlternativeOperationRow.html">AlternativeOperationRows</a></td>
+<td><a class="chip" href="AlternativeOperationRow.html">Alternative<wbr/>Operation<wbr/>Rows</a></td>
 <td>expandable, collection, since 26.5</td>
 <td>The alternative operation rows (alternative work centers) of the operation row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreparationTermType</code></td>
+<td class="prop"><code>Preparation<wbr/>Term<wbr/>Type</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -356,7 +356,7 @@
 <td>PreparationTermType of the Operation Row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreparationTermFromValue</code></td>
+<td class="prop"><code>Preparation<wbr/>Term<wbr/>From<wbr/>Value</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -364,7 +364,7 @@
 <td>PreparationTermFromValue of the Operation Row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreparationTermToValue</code></td>
+<td class="prop"><code>Preparation<wbr/>Term<wbr/>To<wbr/>Value</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>

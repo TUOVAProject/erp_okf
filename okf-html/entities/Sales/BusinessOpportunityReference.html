@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BusinessOpportunityReferences · Monitor ERP API</title>
+<title>BusinessOpportunityReferences · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a business opportunity reference.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>BusinessOpportunityReferences</span>
 </header>
 <div class="layout">
@@ -82,15 +82,15 @@
 <td>The name of the reference.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="BusinessOpportunity.html">BusinessOpportunities</a></td>
+<td><a class="chip" href="BusinessOpportunity.html">Business<wbr/>Opportunities</a></td>
 <td></td>
 <td>The business key identifier of the reference's business opportunity.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShouldFilterLogPosts</code></td>
+<td class="prop"><code>Should<wbr/>Filter<wbr/>Log<wbr/>Posts</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -98,7 +98,7 @@
 <td>Specifies if the reference should filter log posts.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsDefault</code></td>
+<td class="prop"><code>Is<wbr/>Default</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -106,7 +106,7 @@
 <td>Specifies if this is the default reference for the business opportunity.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerId</code></td>
+<td class="prop"><code>Customer<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Customer.html">Customers</a></td>
@@ -114,7 +114,7 @@
 <td>The business key identifier of the customer the reference belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReferenceCode</code></td>
+<td class="prop"><code>Reference<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -122,7 +122,7 @@
 <td>The code of the reference.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -146,7 +146,7 @@
 <td>The remark of the reference.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReferenceCategory</code></td>
+<td class="prop"><code>Reference<wbr/>Category</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -154,10 +154,10 @@
 <td>The reference category of the reference.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommunicationAddresses</code></td>
-<td class="type"><code>CommunicationAddresses[]</code></td>
+<td class="prop"><code>Communication<wbr/>Addresses</code></td>
+<td class="type"><code>Communication<wbr/>Addresses[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/CommunicationAddress.html">CommunicationAddresses</a></td>
+<td><a class="chip" href="../Common/CommunicationAddress.html">Communication<wbr/>Addresses</a></td>
 <td>expandable, collection</td>
 <td>The communication addresses of the reference.</td>
 </tr>

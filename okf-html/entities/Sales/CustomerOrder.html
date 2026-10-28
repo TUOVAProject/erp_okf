@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CustomerOrders · Monitor ERP API</title>
+<title>CustomerOrders · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a customer order.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>CustomerOrders</span>
 </header>
 <div class="layout">
@@ -76,23 +76,23 @@
 <td>The business key identifier of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentTermId</code></td>
+<td class="prop"><code>Payment<wbr/>Term<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">Payment<wbr/>Terms</a></td>
 <td></td>
 <td>The business key identifier of the payment term of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentTerm</code></td>
-<td class="type"><code>PaymentTerms</code></td>
+<td class="prop"><code>Payment<wbr/>Term</code></td>
+<td class="type"><code>Payment<wbr/>Terms</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">Payment<wbr/>Terms</a></td>
 <td>expandable</td>
 <td>The payment term of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentTermDescription</code></td>
+<td class="prop"><code>Payment<wbr/>Term<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -100,7 +100,7 @@
 <td>The payment term description of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>GracePeriodInDays</code></td>
+<td class="prop"><code>Grace<wbr/>Period<wbr/>In<wbr/>Days</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -108,23 +108,23 @@
 <td>The customer order's grace period in days.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryMethodId</code></td>
+<td class="prop"><code>Delivery<wbr/>Method<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">Delivery<wbr/>Methods</a></td>
 <td></td>
 <td>The business key identifier of the customer order's delivery method.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryTermId</code></td>
+<td class="prop"><code>Delivery<wbr/>Term<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/DeliveryTerm.html">DeliveryTerms</a></td>
+<td><a class="chip" href="../Common/DeliveryTerm.html">Delivery<wbr/>Terms</a></td>
 <td></td>
 <td>The business key identifier of the customer order's delivery term.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryTermDescription</code></td>
+<td class="prop"><code>Delivery<wbr/>Term<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The delivery term description of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryMethodDescription</code></td>
+<td class="prop"><code>Delivery<wbr/>Method<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The delivery method description of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShipmentPayer</code></td>
+<td class="prop"><code>Shipment<wbr/>Payer</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>Specifies who is responsible for the shipment payment for the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>BusinessContactOrderNumber</code></td>
+<td class="prop"><code>Business<wbr/>Contact<wbr/>Order<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The end-customer's order number for the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>OurReferenceId</code></td>
+<td class="prop"><code>Our<wbr/>Reference<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -164,7 +164,7 @@
 <td>The business key identifier of our reference for the customer order. Reference Persons</td>
 </tr>
 <tr>
-<td class="prop"><code>OurReferenceName</code></td>
+<td class="prop"><code>Our<wbr/>Reference<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,15 +172,15 @@
 <td>The name of our reference for the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>BusinessContactReferenceId</code></td>
+<td class="prop"><code>Business<wbr/>Contact<wbr/>Reference<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">Business<wbr/>Contact<wbr/>References</a></td>
 <td></td>
 <td>The business key identifier of the customer's reference for the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>BusinessContactReferenceName</code></td>
+<td class="prop"><code>Business<wbr/>Contact<wbr/>Reference<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>The name of the customer's reference for the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>GoodsLabel</code></td>
+<td class="prop"><code>Goods<wbr/>Label</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The goods label of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyId</code></td>
+<td class="prop"><code>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -204,15 +204,15 @@
 <td>The business key identifier of the currency of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatGroupId</code></td>
+<td class="prop"><code>Vat<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/VatGroup.html">VatGroups</a></td>
+<td><a class="chip" href="../Common/VatGroup.html">Vat<wbr/>Groups</a></td>
 <td></td>
 <td>The business key identifier of the VAT group that applies for the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -228,7 +228,7 @@
 <td>The priority of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectId</code></td>
+<td class="prop"><code>Project<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -236,7 +236,7 @@
 <td>The business key identifier of the customer order's project.</td>
 </tr>
 <tr>
-<td class="prop"><code>SendMethod</code></td>
+<td class="prop"><code>Send<wbr/>Method</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -244,7 +244,7 @@
 <td>Specifies the printout method for the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoicePrintoutMethod</code></td>
+<td class="prop"><code>Invoice<wbr/>Printout<wbr/>Method</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -252,7 +252,7 @@
 <td>Specifies the printout method that should be used for invoices.</td>
 </tr>
 <tr>
-<td class="prop"><code>InternalCommentId</code></td>
+<td class="prop"><code>Internal<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -260,7 +260,7 @@
 <td>The business key identifier of the customer order's internal comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>InternalComment</code></td>
+<td class="prop"><code>Internal<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -268,7 +268,7 @@
 <td>The internal comment of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExternalCommentId</code></td>
+<td class="prop"><code>External<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -276,7 +276,7 @@
 <td>The business key identifier of the customer order's external comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExternalComment</code></td>
+<td class="prop"><code>External<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -284,7 +284,7 @@
 <td>The external comment of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>TransportTime</code></td>
+<td class="prop"><code>Transport<wbr/>Time</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -292,7 +292,7 @@
 <td>The transport time of the customer order in workdays.</td>
 </tr>
 <tr>
-<td class="prop"><code>LifeCycleState</code></td>
+<td class="prop"><code>Life<wbr/>Cycle<wbr/>State</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -308,7 +308,7 @@
 <td>The version of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>UseForwardRate</code></td>
+<td class="prop"><code>Use<wbr/>Forward<wbr/>Rate</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -316,7 +316,7 @@
 <td>Specifies if forward rate should apply for the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExchangeRate</code></td>
+<td class="prop"><code>Exchange<wbr/>Rate</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -324,7 +324,7 @@
 <td>Specifies the exchange rate to use for the customer order.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>OrderAmount</code></td>
+<td class="prop"><code>Order<wbr/>Amount</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -332,7 +332,7 @@
 <td>This property is obsolete and no longer carries a value. <em>(Unavailable)</em></td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>OrderAmountInCompanyCurrency</code></td>
+<td class="prop"><code>Order<wbr/>Amount<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -340,7 +340,7 @@
 <td>This property is obsolete and no longer carries a value. <em>(Unavailable)</em></td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerId</code></td>
+<td class="prop"><code>Customer<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Customer.html">Customers</a></td>
@@ -348,7 +348,7 @@
 <td>The business key identifier of the customer that the customer order belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceCustomerId</code></td>
+<td class="prop"><code>Invoice<wbr/>Customer<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Customer.html">Customers</a></td>
@@ -356,7 +356,7 @@
 <td>The business key identifier of the invoice customer that the customer order belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderNumber</code></td>
+<td class="prop"><code>Order<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -364,8 +364,8 @@
 <td>The human readable identifier of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Order<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
@@ -373,14 +373,14 @@
 </tr>
 <tr>
 <td class="prop"><code>Rows</code></td>
-<td class="type"><code>CustomerOrderRows[]</code></td>
+<td class="type"><code>Customer<wbr/>Order<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CustomerOrderRow.html">CustomerOrderRows</a></td>
+<td><a class="chip" href="CustomerOrderRow.html">Customer<wbr/>Order<wbr/>Rows</a></td>
 <td>expandable, collection</td>
 <td>The rows of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>SellerId</code></td>
+<td class="prop"><code>Seller<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -388,7 +388,7 @@
 <td>The business key identifier of the customer order's seller.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShowPriceInAcknowledgement</code></td>
+<td class="prop"><code>Show<wbr/>Price<wbr/>In<wbr/>Acknowledgement</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -396,7 +396,7 @@
 <td>Specifies if price should be shown in the acknowledgement of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShowTotalInAcknowledgement</code></td>
+<td class="prop"><code>Show<wbr/>Total<wbr/>In<wbr/>Acknowledgement</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -404,7 +404,7 @@
 <td>Specifies if the price total should be shown in the acknowledgement of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ThirdPartyTrading</code></td>
+<td class="prop"><code>Third<wbr/>Party<wbr/>Trading</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -412,7 +412,7 @@
 <td>Specifies if the customer order falls under third party trading.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryInstruction</code></td>
+<td class="prop"><code>Delivery<wbr/>Instruction</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -420,7 +420,7 @@
 <td>The delivery instruction of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActiveDeliveryAddressCustomerId</code></td>
+<td class="prop"><code>Active<wbr/>Delivery<wbr/>Address<wbr/>Customer<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Customer.html">Customers</a></td>
@@ -428,7 +428,7 @@
 <td>The business key identifier of the customer source of the active delivery address.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActiveDeliveryAddressSupplierId</code></td>
+<td class="prop"><code>Active<wbr/>Delivery<wbr/>Address<wbr/>Supplier<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Purchase/Supplier.html">Suppliers</a></td>
@@ -436,7 +436,7 @@
 <td>The business key identifier of the supplier source of the active delivery address.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActiveDeliveryAddressCompanyId</code></td>
+<td class="prop"><code>Active<wbr/>Delivery<wbr/>Address<wbr/>Company<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -444,7 +444,7 @@
 <td>The business key identifier of the company source of the active delivery address.</td>
 </tr>
 <tr>
-<td class="prop"><code>SourceOfAlternativeDeliveryAddresses</code></td>
+<td class="prop"><code>Source<wbr/>Of<wbr/>Alternative<wbr/>Delivery<wbr/>Addresses</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -452,7 +452,7 @@
 <td>Specifies the source of the customer order delivery address.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsCredit</code></td>
+<td class="prop"><code>Is<wbr/>Credit</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -460,7 +460,7 @@
 <td>Specifies if the customer order is on credit or not.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceType</code></td>
+<td class="prop"><code>Invoice<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -468,50 +468,50 @@
 <td>The invoice type of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentMethodId</code></td>
+<td class="prop"><code>Payment<wbr/>Method<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/PaymentMethod.html">PaymentMethods</a></td>
+<td><a class="chip" href="../Common/PaymentMethod.html">Payment<wbr/>Methods</a></td>
 <td></td>
 <td>The business key identifier of the customer order's payment method.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentMethod</code></td>
-<td class="type"><code>PaymentMethods</code></td>
+<td class="prop"><code>Payment<wbr/>Method</code></td>
+<td class="type"><code>Payment<wbr/>Methods</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/PaymentMethod.html">PaymentMethods</a></td>
+<td><a class="chip" href="../Common/PaymentMethod.html">Payment<wbr/>Methods</a></td>
 <td>expandable, since 2.30</td>
 <td>The payment method on the customer order.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>PrintoutTimeStamp</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Printout<wbr/>Time<wbr/>Stamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td><span class="badge dep">deprecated since 2.35</span></td>
 <td>The date/time when the printout of the customer order was made. <em>(Printout date is not stored on the order)</em></td>
 </tr>
 <tr>
-<td class="prop"><code>ConsigneeReferenceId</code></td>
+<td class="prop"><code>Consignee<wbr/>Reference<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">Business<wbr/>Contact<wbr/>References</a></td>
 <td></td>
 <td>The business key identifier of the customer order's consignee reference.</td>
 </tr>
 <tr>
-<td class="prop"><code>ConsigneeReference</code></td>
-<td class="type"><code>BusinessContactReferences</code></td>
+<td class="prop"><code>Consignee<wbr/>Reference</code></td>
+<td class="type"><code>Business<wbr/>Contact<wbr/>References</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">Business<wbr/>Contact<wbr/>References</a></td>
 <td>expandable, since 2.30</td>
 <td>The consignee reference on the customer order.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>PrintoutBy</code></td>
+<td class="prop"><code>Printout<wbr/>By</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td>max length 20, <span class="badge dep">deprecated since 2.35</span></td>
 <td>The user name of the ApplicationUsers that printed the customer order. <em>(Printout user is not stored on the order)</em></td>
 </tr>
@@ -524,7 +524,7 @@
 <td>Specifies if the customer order is to be considered preliminary.</td>
 </tr>
 <tr>
-<td class="prop"><code>ConsigneeReferenceName</code></td>
+<td class="prop"><code>Consignee<wbr/>Reference<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -532,7 +532,7 @@
 <td>The consignee reference name of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>DestinationForDeliveryTerm</code></td>
+<td class="prop"><code>Destination<wbr/>For<wbr/>Delivery<wbr/>Term</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -540,15 +540,15 @@
 <td>The destination for the delivery term.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>CustomerAccountGroupId</code></td>
+<td class="prop"><code>Customer<wbr/>Account<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td><a class="chip" href="CustomerAccountGroup.html">Customer<wbr/>Account<wbr/>Groups</a></td>
 <td><span class="badge dep">deprecated since 2.30</span></td>
 <td>The business key identifier of the customer account group of the customer order. <em>(Replaced by AccountGroupId)</em></td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>SupplierAccountGroupId</code></td>
+<td class="prop"><code>Supplier<wbr/>Account<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -556,7 +556,7 @@
 <td>The business key identifier of the supplier account group of the customer order. References a SupplierAccountGroup <em>(Refer to DeliveryAddress)</em></td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryAddressId</code></td>
+<td class="prop"><code>Delivery<wbr/>Address<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Address.html">Addresses</a></td>
@@ -564,7 +564,7 @@
 <td>The business key identifier of the customer order's delivery address.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryAddress</code></td>
+<td class="prop"><code>Delivery<wbr/>Address</code></td>
 <td class="type"><code>Addresses</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Address.html">Addresses</a></td>
@@ -572,7 +572,7 @@
 <td>The delivery address of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>MailingAddressId</code></td>
+<td class="prop"><code>Mailing<wbr/>Address<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Address.html">Addresses</a></td>
@@ -580,7 +580,7 @@
 <td>The business key identifier of the customer order's mailing address.</td>
 </tr>
 <tr>
-<td class="prop"><code>MailingAddress</code></td>
+<td class="prop"><code>Mailing<wbr/>Address</code></td>
 <td class="type"><code>Addresses</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Address.html">Addresses</a></td>
@@ -588,7 +588,7 @@
 <td>The mailing address of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceAddressId</code></td>
+<td class="prop"><code>Invoice<wbr/>Address<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Address.html">Addresses</a></td>
@@ -596,7 +596,7 @@
 <td>The business key identifier of the customer order's invoice address.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceAddress</code></td>
+<td class="prop"><code>Invoice<wbr/>Address</code></td>
 <td class="type"><code>Addresses</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Address.html">Addresses</a></td>
@@ -604,7 +604,7 @@
 <td>The invoice address of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceStatusPending</code></td>
+<td class="prop"><code>Invoice<wbr/>Status<wbr/>Pending</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -612,7 +612,7 @@
 <td>Specifies if the invoice created for the customer order should start out as pending.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>IsPartOfComprehensiveInvoice</code></td>
+<td class="prop"><code>Is<wbr/>Part<wbr/>Of<wbr/>Comprehensive<wbr/>Invoice</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -620,7 +620,7 @@
 <td>Specifies if the customer order is part of a comprehensive invoice. <em>(Replaced by ComprehensiveInvoiceGroupingMode)</em></td>
 </tr>
 <tr>
-<td class="prop"><code>ComprehensiveInvoiceGroupingMode</code></td>
+<td class="prop"><code>Comprehensive<wbr/>Invoice<wbr/>Grouping<wbr/>Mode</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -628,7 +628,7 @@
 <td>Specifies if the customer order is part of a comprehensive invoice, and how they are grouped.</td>
 </tr>
 <tr>
-<td class="prop"><code>HasInvoicingCharge</code></td>
+<td class="prop"><code>Has<wbr/>Invoicing<wbr/>Charge</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -636,7 +636,7 @@
 <td>Specifies if the customer order involves an invoicing charge.</td>
 </tr>
 <tr>
-<td class="prop"><code>GoodsAddressNumber</code></td>
+<td class="prop"><code>Goods<wbr/>Address<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -644,7 +644,7 @@
 <td>The goods address number of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatNumber</code></td>
+<td class="prop"><code>Vat<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -660,7 +660,7 @@
 <td>The dock of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>FromQuoteNumber</code></td>
+<td class="prop"><code>From<wbr/>Quote<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -676,15 +676,15 @@
 <td>The status of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommunicationAddresses</code></td>
-<td class="type"><code>CommunicationAddresses[]</code></td>
+<td class="prop"><code>Communication<wbr/>Addresses</code></td>
+<td class="type"><code>Communication<wbr/>Addresses[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/CommunicationAddress.html">CommunicationAddresses</a></td>
+<td><a class="chip" href="../Common/CommunicationAddress.html">Communication<wbr/>Addresses</a></td>
 <td>collection</td>
 <td>The communication addresses registered on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>PrintProformaInvoiceVia</code></td>
+<td class="prop"><code>Print<wbr/>Proforma<wbr/>Invoice<wbr/>Via</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -692,23 +692,23 @@
 <td>The preferred Proforma printout method of the customer.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderTypeId</code></td>
+<td class="prop"><code>Order<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CustomerOrderType.html">CustomerOrderTypes</a></td>
+<td><a class="chip" href="CustomerOrderType.html">Customer<wbr/>Order<wbr/>Types</a></td>
 <td>since 2.27</td>
 <td>The business key identifier of the customer order's order type.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderType</code></td>
-<td class="type"><code>CustomerOrderTypes</code></td>
+<td class="prop"><code>Order<wbr/>Type</code></td>
+<td class="type"><code>Customer<wbr/>Order<wbr/>Types</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CustomerOrderType.html">CustomerOrderTypes</a></td>
+<td><a class="chip" href="CustomerOrderType.html">Customer<wbr/>Order<wbr/>Types</a></td>
 <td>expandable, since 2.27</td>
 <td>The order type used on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsStockOrder</code></td>
+<td class="prop"><code>Is<wbr/>Stock<wbr/>Order</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -716,7 +716,7 @@
 <td>Specifies if the customer order is stock order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExcludeFromEdi</code></td>
+<td class="prop"><code>Exclude<wbr/>From<wbr/>Edi</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -724,7 +724,7 @@
 <td>Specifies if the customer order will be excluded from EDI.</td>
 </tr>
 <tr>
-<td class="prop"><code>IncludeInDeliveryAnalysis</code></td>
+<td class="prop"><code>Include<wbr/>In<wbr/>Delivery<wbr/>Analysis</code></td>
 <td class="type"><code>Boolean?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -732,7 +732,7 @@
 <td>Specifies if the customer order will be included in delivery analysis.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartialDeliveryType</code></td>
+<td class="prop"><code>Partial<wbr/>Delivery<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -740,15 +740,15 @@
 <td>The partial delivery type on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryHorizon</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Delivery<wbr/>Horizon</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.30</td>
 <td>The delivery horizon on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryNoteNumberWhenDeliveryPlanning</code></td>
+<td class="prop"><code>Delivery<wbr/>Note<wbr/>Number<wbr/>When<wbr/>Delivery<wbr/>Planning</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -756,47 +756,47 @@
 <td>Specifies if using delivery note number when delivery planning on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>AftermarketProductRecordId</code></td>
+<td class="prop"><code>Aftermarket<wbr/>Product<wbr/>Record<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Inventory/ProductRecord.html">ProductRecords</a></td>
+<td><a class="chip" href="../Inventory/ProductRecord.html">Product<wbr/>Records</a></td>
 <td>since 2.30</td>
 <td>The business key identifier of the customer order's aftermarket product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseOrderId</code></td>
+<td class="prop"><code>Purchase<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Purchase/PurchaseOrder.html">PurchaseOrders</a></td>
+<td><a class="chip" href="../Purchase/PurchaseOrder.html">Purchase<wbr/>Orders</a></td>
 <td>since 2.30</td>
 <td>The business key identifier of the customer order's purchase order.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseOrder</code></td>
-<td class="type"><code>PurchaseOrders</code></td>
+<td class="prop"><code>Purchase<wbr/>Order</code></td>
+<td class="type"><code>Purchase<wbr/>Orders</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Purchase/PurchaseOrder.html">PurchaseOrders</a></td>
+<td><a class="chip" href="../Purchase/PurchaseOrder.html">Purchase<wbr/>Orders</a></td>
 <td>expandable, since 2.30</td>
 <td>The purchase order on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentPlanTemplateId</code></td>
+<td class="prop"><code>Payment<wbr/>Plan<wbr/>Template<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/PaymentPlanTemplate.html">PaymentPlanTemplates</a></td>
+<td><a class="chip" href="../Common/PaymentPlanTemplate.html">Payment<wbr/>Plan<wbr/>Templates</a></td>
 <td>since 2.30</td>
 <td>The business key identifier of the customer order's payment plan template.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentPlanTemplate</code></td>
-<td class="type"><code>PaymentPlanTemplates</code></td>
+<td class="prop"><code>Payment<wbr/>Plan<wbr/>Template</code></td>
+<td class="type"><code>Payment<wbr/>Plan<wbr/>Templates</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/PaymentPlanTemplate.html">PaymentPlanTemplates</a></td>
+<td><a class="chip" href="../Common/PaymentPlanTemplate.html">Payment<wbr/>Plan<wbr/>Templates</a></td>
 <td>expandable, since 2.30</td>
 <td>The payment plan template on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnpaidAdvanceWarningType</code></td>
+<td class="prop"><code>Unpaid<wbr/>Advance<wbr/>Warning<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -804,7 +804,7 @@
 <td>The unpaid advance warning type on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreatedFrom</code></td>
+<td class="prop"><code>Created<wbr/>From</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -812,7 +812,7 @@
 <td>Specifies what the customer order was created from.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShippingInformationId</code></td>
+<td class="prop"><code>Shipping<wbr/>Information<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -820,15 +820,15 @@
 <td>The business key identifier of the customer order's shipping information.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShippingInformationRows</code></td>
-<td class="type"><code>CustomerOrderShippingInformationRows[]</code></td>
+<td class="prop"><code>Shipping<wbr/>Information<wbr/>Rows</code></td>
+<td class="type"><code>Customer<wbr/>Order<wbr/>Shipping<wbr/>Information<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CustomerOrderShippingInformationRow.html">CustomerOrderShippingInformationRows</a></td>
+<td><a class="chip" href="CustomerOrderShippingInformationRow.html">Customer<wbr/>Order<wbr/>Shipping<wbr/>Information<wbr/>Rows</a></td>
 <td>expandable, collection, since 2.30</td>
 <td>The shipping information rows on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExcludeFromPaymentPlanReconciliation</code></td>
+<td class="prop"><code>Exclude<wbr/>From<wbr/>Payment<wbr/>Plan<wbr/>Reconciliation</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -836,7 +836,7 @@
 <td>Specifies if the customer order is excluded from payment plan reconciliation.</td>
 </tr>
 <tr>
-<td class="prop"><code>ResetPaymentPlanDifferenceAmount</code></td>
+<td class="prop"><code>Reset<wbr/>Payment<wbr/>Plan<wbr/>Difference<wbr/>Amount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -844,7 +844,7 @@
 <td>The reset payment plan difference amount on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ResetPaymentPlanDifferenceAmountCurrencyId</code></td>
+<td class="prop"><code>Reset<wbr/>Payment<wbr/>Plan<wbr/>Difference<wbr/>Amount<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -852,7 +852,7 @@
 <td>The business key identifier of the customer order's reset payment plan difference amount currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>ResetPaymentPlanDifferenceAmountCurrency</code></td>
+<td class="prop"><code>Reset<wbr/>Payment<wbr/>Plan<wbr/>Difference<wbr/>Amount<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -860,7 +860,7 @@
 <td>The reset payment plan difference amount currency on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>TransferStatus</code></td>
+<td class="prop"><code>Transfer<wbr/>Status</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -868,7 +868,7 @@
 <td>The transfer status of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreatedInCompanyWithRole</code></td>
+<td class="prop"><code>Created<wbr/>In<wbr/>Company<wbr/>With<wbr/>Role</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -876,23 +876,23 @@
 <td>The role of the company who created the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountGroupId</code></td>
+<td class="prop"><code>Account<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td><a class="chip" href="CustomerAccountGroup.html">Customer<wbr/>Account<wbr/>Groups</a></td>
 <td>since 2.30</td>
 <td>The business key identifier of the account group of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountGroup</code></td>
-<td class="type"><code>CustomerAccountGroups</code></td>
+<td class="prop"><code>Account<wbr/>Group</code></td>
+<td class="type"><code>Customer<wbr/>Account<wbr/>Groups</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td><a class="chip" href="CustomerAccountGroup.html">Customer<wbr/>Account<wbr/>Groups</a></td>
 <td>expandable, since 2.30</td>
 <td>The account group on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CategoryString</code></td>
+<td class="prop"><code>Category<wbr/>String</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -900,15 +900,15 @@
 <td>The category string on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyExchangeTypeId</code></td>
+<td class="prop"><code>Currency<wbr/>Exchange<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">Currency<wbr/>Exchange<wbr/>Types</a></td>
 <td>since 22.9</td>
 <td>The business key identifier of the customer order's currency exchange type.</td>
 </tr>
 <tr>
-<td class="prop"><code>EditedOrderAmountExcludingVat</code></td>
+<td class="prop"><code>Edited<wbr/>Order<wbr/>Amount<wbr/>Excluding<wbr/>Vat</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -916,7 +916,7 @@
 <td>The edited order amount excluding VAT for the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>EditedOrderAmountExcludingVatCurrencyId</code></td>
+<td class="prop"><code>Edited<wbr/>Order<wbr/>Amount<wbr/>Excluding<wbr/>Vat<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -924,7 +924,7 @@
 <td>The currency of the edited order amount excluding VAT for the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>EditedOrderAmountDiscount</code></td>
+<td class="prop"><code>Edited<wbr/>Order<wbr/>Amount<wbr/>Discount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -932,7 +932,7 @@
 <td>The edited order amount discount in percent for the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>TypeOfOrderAmountEntered</code></td>
+<td class="prop"><code>Type<wbr/>Of<wbr/>Order<wbr/>Amount<wbr/>Entered</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -940,18 +940,18 @@
 <td>The type of edited order value entered on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReasonCodeDebitNoteId</code></td>
+<td class="prop"><code>Reason<wbr/>Code<wbr/>Debit<wbr/>Note<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ReasonCodeDebitNote.html">ReasonCodeDebitNotes</a></td>
+<td><a class="chip" href="../Common/ReasonCodeDebitNote.html">Reason<wbr/>Code<wbr/>Debit<wbr/>Notes</a></td>
 <td>since 25.6</td>
 <td>The business key identifier of the customer order's reason code debit note.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReasonCodeDebitNote</code></td>
-<td class="type"><code>ReasonCodeDebitNotes</code></td>
+<td class="prop"><code>Reason<wbr/>Code<wbr/>Debit<wbr/>Note</code></td>
+<td class="type"><code>Reason<wbr/>Code<wbr/>Debit<wbr/>Notes</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ReasonCodeDebitNote.html">ReasonCodeDebitNotes</a></td>
+<td><a class="chip" href="../Common/ReasonCodeDebitNote.html">Reason<wbr/>Code<wbr/>Debit<wbr/>Notes</a></td>
 <td>expandable, since 25.6</td>
 <td>The reason code debit note on the customer order.</td>
 </tr>
@@ -964,7 +964,7 @@
 <td>Specifies if factoring is activated for the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReferenceCode</code></td>
+<td class="prop"><code>Reference<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -972,7 +972,7 @@
 <td>The customer's reference code on the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>PickInstructionId</code></td>
+<td class="prop"><code>Pick<wbr/>Instruction<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -980,7 +980,7 @@
 <td>The business key identifier of the customer order's pick instruction.</td>
 </tr>
 <tr>
-<td class="prop"><code>PickInstruction</code></td>
+<td class="prop"><code>Pick<wbr/>Instruction</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>

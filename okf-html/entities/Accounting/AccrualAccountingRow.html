@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AccrualAccountingRows · Monitor ERP API</title>
+<title>AccrualAccountingRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a accrual accounting row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>AccrualAccountingRows</span>
 </header>
 <div class="layout">
@@ -75,23 +75,23 @@
 <td>The business key identifier of the accounting row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PeriodId</code></td>
+<td class="prop"><code>Period<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AccountingYearPeriod.html">AccountingYearPeriods</a></td>
+<td><a class="chip" href="AccountingYearPeriod.html">Accounting<wbr/>Year<wbr/>Periods</a></td>
 <td></td>
 <td>The business key identifier of the accrual accounting row's accounting year period.</td>
 </tr>
 <tr>
 <td class="prop"><code>Period</code></td>
-<td class="type"><code>AccountingYearPeriods</code></td>
+<td class="type"><code>Accounting<wbr/>Year<wbr/>Periods</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AccountingYearPeriod.html">AccountingYearPeriods</a></td>
+<td><a class="chip" href="AccountingYearPeriod.html">Accounting<wbr/>Year<wbr/>Periods</a></td>
 <td>expandable</td>
 <td>The accounting year period on the accrual accounting row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PeriodAmountInCompanyCurrency</code></td>
+<td class="prop"><code>Period<wbr/>Amount<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -99,7 +99,7 @@
 <td>Amount in company currency</td>
 </tr>
 <tr>
-<td class="prop"><code>AccrualAccountingId</code></td>
+<td class="prop"><code>Accrual<wbr/>Accounting<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -107,7 +107,7 @@
 <td>The business key identifier of the accrual accounting.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsReleased</code></td>
+<td class="prop"><code>Is<wbr/>Released</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -115,23 +115,23 @@
 <td>Specifies if the accrual accounting is released.</td>
 </tr>
 <tr>
-<td class="prop"><code>LedgerId</code></td>
+<td class="prop"><code>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AccrualAccountingLedger.html">AccrualAccountingLedgers</a></td>
+<td><a class="chip" href="AccrualAccountingLedger.html">Accrual<wbr/>Accounting<wbr/>Ledgers</a></td>
 <td></td>
 <td>The business key identifier of the accrual accounting row's ledger.</td>
 </tr>
 <tr>
 <td class="prop"><code>Ledger</code></td>
-<td class="type"><code>AccrualAccountingLedgers</code></td>
+<td class="type"><code>Accrual<wbr/>Accounting<wbr/>Ledgers</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AccrualAccountingLedger.html">AccrualAccountingLedgers</a></td>
+<td><a class="chip" href="AccrualAccountingLedger.html">Accrual<wbr/>Accounting<wbr/>Ledgers</a></td>
 <td>expandable</td>
 <td>The accrual accounting ledger.</td>
 </tr>
 <tr>
-<td class="prop"><code>BookingId</code></td>
+<td class="prop"><code>Booking<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -139,7 +139,7 @@
 <td>The business key identifier of the booking.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowIndex</code></td>
+<td class="prop"><code>Row<wbr/>Index</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -147,10 +147,10 @@
 <td>The row index of the accrual accounting.</td>
 </tr>
 <tr>
-<td class="prop"><code>BookingRows</code></td>
-<td class="type"><code>BookingRows[]</code></td>
+<td class="prop"><code>Booking<wbr/>Rows</code></td>
+<td class="type"><code>Booking<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="BookingRow.html">BookingRows</a></td>
+<td><a class="chip" href="BookingRow.html">Booking<wbr/>Rows</a></td>
 <td>expandable, collection</td>
 <td>Booking rows on the accrual accounting.</td>
 </tr>

@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MonitoringTasks · Monitor ERP API</title>
+<title>MonitoringTasks · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a monitoring task.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>MonitoringTasks</span>
 </header>
 <div class="layout">
@@ -92,7 +92,7 @@
 <td>The name of monitoring task.</td>
 </tr>
 <tr>
-<td class="prop"><code>TaskType</code></td>
+<td class="prop"><code>Task<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>The status of monitoring task.</td>
 </tr>
 <tr>
-<td class="prop"><code>UseSchedule</code></td>
+<td class="prop"><code>Use<wbr/>Schedule</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>Specifies if the monitoring task should be used in schedule.</td>
 </tr>
 <tr>
-<td class="prop"><code>RunOnce</code></td>
+<td class="prop"><code>Run<wbr/>Once</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,39 +124,39 @@
 <td>Specifies if the monitoring task should be deactivated when any of the terms are fulfilled.</td>
 </tr>
 <tr>
-<td class="prop"><code>StartTime</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Start<wbr/>Time</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The start time of the monitoring task.</td>
 </tr>
 <tr>
-<td class="prop"><code>StopTime</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Stop<wbr/>Time</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The end time of the monitoring task.</td>
 </tr>
 <tr>
-<td class="prop"><code>ApplicationUserId</code></td>
+<td class="prop"><code>Application<wbr/>User<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the application user that create the monitoring task.</td>
 </tr>
 <tr>
-<td class="prop"><code>ApplicationUser</code></td>
-<td class="type"><code>ApplicationUsers</code></td>
+<td class="prop"><code>Application<wbr/>User</code></td>
+<td class="type"><code>Application<wbr/>Users</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="ApplicationUser.html">Application<wbr/>Users</a></td>
 <td>expandable</td>
 <td>The application user that create the monitoring task.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Comment.html">Comments</a></td>

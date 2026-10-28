@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ProductRecords · Monitor ERP API</title>
+<title>ProductRecords · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a product record.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>ProductRecords</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProductRecordType</code></td>
+<td class="prop"><code>Product<wbr/>Record<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -84,7 +84,7 @@
 <td>The type of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>SerialNumberWithPartNumber</code></td>
+<td class="prop"><code>Serial<wbr/>Number<wbr/>With<wbr/>Part<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -92,7 +92,7 @@
 <td>The batch or serial number along with the part number of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -108,7 +108,7 @@
 <td>The product record comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>CertificateId</code></td>
+<td class="prop"><code>Certificate<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -124,7 +124,7 @@
 <td>The certificate of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarrantyCommitmentId</code></td>
+<td class="prop"><code>Warranty<wbr/>Commitment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -132,7 +132,7 @@
 <td>The business key identifier of the product record's warranty commitment.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarrantyCommitment</code></td>
+<td class="prop"><code>Warranty<wbr/>Commitment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -140,7 +140,7 @@
 <td>The warranty commitment of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>InstallationCommentId</code></td>
+<td class="prop"><code>Installation<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -148,7 +148,7 @@
 <td>The business key identifier of the product record's installation comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>InstallationComment</code></td>
+<td class="prop"><code>Installation<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -156,7 +156,7 @@
 <td>The installation comment of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>SerialNumber</code></td>
+<td class="prop"><code>Serial<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -164,7 +164,7 @@
 <td>The batch or serial number of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>ChargeNumber</code></td>
+<td class="prop"><code>Charge<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,7 +172,7 @@
 <td>The charge number of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Part.html">Parts</a></td>
@@ -188,31 +188,31 @@
 <td>The part that the product record belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingOrderId</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Manufacturing/ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td><a class="chip" href="../Manufacturing/ManufacturingOrder.html">Manufacturing<wbr/>Orders</a></td>
 <td></td>
 <td>The business key identifier of the manufacturing order that the product record is linked to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingOrder</code></td>
-<td class="type"><code>ManufacturingOrders</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Order</code></td>
+<td class="type"><code>Manufacturing<wbr/>Orders</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Manufacturing/ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td><a class="chip" href="../Manufacturing/ManufacturingOrder.html">Manufacturing<wbr/>Orders</a></td>
 <td>expandable</td>
 <td>The manufacturing order that the product record is linked to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraFields</code></td>
-<td class="type"><code>ExtraFields[]</code></td>
+<td class="prop"><code>Extra<wbr/>Fields</code></td>
+<td class="type"><code>Extra<wbr/>Fields[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ExtraField.html">ExtraFields</a></td>
+<td><a class="chip" href="../Common/ExtraField.html">Extra<wbr/>Fields</a></td>
 <td>expandable, collection</td>
 <td>A collection of extra field values for the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>HasWarranty</code></td>
+<td class="prop"><code>Has<wbr/>Warranty</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -220,23 +220,23 @@
 <td>Specifies if the product is covered by warranty.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarrantyStartDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Warranty<wbr/>Start<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.36</td>
 <td>The date when the warranty started.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarrantyEndDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Warranty<wbr/>End<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.36</td>
 <td>The date when the warranty expires.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarrantyMonths</code></td>
+<td class="prop"><code>Warranty<wbr/>Months</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -244,7 +244,7 @@
 <td>The length of the warranty period in months.</td>
 </tr>
 <tr>
-<td class="prop"><code>OwnerId</code></td>
+<td class="prop"><code>Owner<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Sales/Customer.html">Customers</a></td>
@@ -252,47 +252,47 @@
 <td>The business key identifier of the product record owner.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Sales/CustomerOrder.html">CustomerOrders</a></td>
+<td><a class="chip" href="../Sales/CustomerOrder.html">Customer<wbr/>Orders</a></td>
 <td>since 2.40</td>
 <td>The business key identifier of the customer order of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrder</code></td>
-<td class="type"><code>CustomerOrders</code></td>
+<td class="prop"><code>Customer<wbr/>Order</code></td>
+<td class="type"><code>Customer<wbr/>Orders</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Sales/CustomerOrder.html">CustomerOrders</a></td>
+<td><a class="chip" href="../Sales/CustomerOrder.html">Customer<wbr/>Orders</a></td>
 <td>expandable, since 2.40</td>
 <td>The customer order of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderDeliveryRowId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Delivery<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Sales/CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a></td>
+<td><a class="chip" href="../Sales/CustomerOrderDeliveryRow.html">Customer<wbr/>Order<wbr/>Delivery<wbr/>Rows</a></td>
 <td>since 2.40</td>
 <td>The business key identifier of the customer order delivery row of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderDeliveryRow</code></td>
-<td class="type"><code>CustomerOrderDeliveryRows</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Delivery<wbr/>Row</code></td>
+<td class="type"><code>Customer<wbr/>Order<wbr/>Delivery<wbr/>Rows</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Sales/CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a></td>
+<td><a class="chip" href="../Sales/CustomerOrderDeliveryRow.html">Customer<wbr/>Order<wbr/>Delivery<wbr/>Rows</a></td>
 <td>expandable, since 2.40</td>
 <td>The customer order of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryAddressId</code></td>
+<td class="prop"><code>Delivery<wbr/>Address<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/DeliveryAddress.html">DeliveryAddresses</a></td>
+<td><a class="chip" href="../Common/DeliveryAddress.html">Delivery<wbr/>Addresses</a></td>
 <td>since 2.40</td>
 <td>The business key identifier of the delivery address of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryAddress</code></td>
+<td class="prop"><code>Delivery<wbr/>Address</code></td>
 <td class="type"><code>Addresses</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Address.html">Addresses</a></td>
@@ -300,7 +300,7 @@
 <td>The delivery address of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockMessageId</code></td>
+<td class="prop"><code>Block<wbr/>Message<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -308,7 +308,7 @@
 <td>The business key identifier of the message for the life cycle state of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockMessage</code></td>
+<td class="prop"><code>Block<wbr/>Message</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -316,15 +316,15 @@
 <td>The message for the life cycle state of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedById</code></td>
+<td class="prop"><code>Blocked<wbr/>By<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td>since 2.45</td>
 <td>The identifier of the application user that has set the product record to blocked or message.</td>
 </tr>
 <tr>
-<td class="prop"><code>LifeCycleState</code></td>
+<td class="prop"><code>Life<wbr/>Cycle<wbr/>State</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -332,7 +332,7 @@
 <td>The life cycle state of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockContext</code></td>
+<td class="prop"><code>Block<wbr/>Context</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -340,23 +340,23 @@
 <td>The block context which the product records life cycle state is used for.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedFromDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Blocked<wbr/>From<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.45</td>
 <td>The date from which the product record has been blocked.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedToDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Blocked<wbr/>To<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.45</td>
 <td>The date from which the product record has been unblocked.</td>
 </tr>
 <tr>
-<td class="prop"><code>MeasurementSetting</code></td>
+<td class="prop"><code>Measurement<wbr/>Setting</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -364,15 +364,15 @@
 <td>The measurement setting for a product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>OperationTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Operation<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.49</td>
 <td>The operation time for a product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>NumberOfCycles</code></td>
+<td class="prop"><code>Number<wbr/>Of<wbr/>Cycles</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -380,15 +380,15 @@
 <td>The number of cycles for a product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>OperationReportings</code></td>
-<td class="type"><code>ProductRecordOperationReportings[]</code></td>
+<td class="prop"><code>Operation<wbr/>Reportings</code></td>
+<td class="type"><code>Product<wbr/>Record<wbr/>Operation<wbr/>Reportings[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProductRecordOperationReporting.html">ProductRecordOperationReportings</a></td>
+<td><a class="chip" href="ProductRecordOperationReporting.html">Product<wbr/>Record<wbr/>Operation<wbr/>Reportings</a></td>
 <td>expandable, collection, since 2.49</td>
 <td>The list of product record operation reporting logs.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderOurReferenceId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Our<wbr/>Reference<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -396,15 +396,15 @@
 <td>The business key identifier of the customer order our reference person of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>BusinessContactReferenceId</code></td>
+<td class="prop"><code>Business<wbr/>Contact<wbr/>Reference<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">Business<wbr/>Contact<wbr/>References</a></td>
 <td>since 2.51</td>
 <td>The business key identifier of the customer's reference of the product record.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>CustomerOrderPartRevisionId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Part<wbr/>Revision<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Revision.html">Revisions</a></td>
@@ -412,7 +412,7 @@
 <td>The business key identifier of the revision for the part of the product record. Has been replaced by the more general PartRevisionId <em>(Replaced by PartRevisionId)</em></td>
 </tr>
 <tr>
-<td class="prop"><code>PartRevisionId</code></td>
+<td class="prop"><code>Part<wbr/>Revision<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Revision.html">Revisions</a></td>
@@ -420,23 +420,23 @@
 <td>The business key identifier of the revision for the part of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedDeliveryDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Planned<wbr/>Delivery<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.51</td>
 <td>The planned delivery date for the customer order of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActualDeliveryDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Actual<wbr/>Delivery<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.51</td>
 <td>The actual delivery date for the customer order of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>MeasurementSettingWarranty</code></td>
+<td class="prop"><code>Measurement<wbr/>Setting<wbr/>Warranty</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -444,15 +444,15 @@
 <td>The meter reading for warranty of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>OperationTimeWarranty</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Operation<wbr/>Time<wbr/>Warranty</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.51</td>
 <td>The operation time for warranty of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>NumberOfCyclesWarranty</code></td>
+<td class="prop"><code>Number<wbr/>Of<wbr/>Cycles<wbr/>Warranty</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -460,39 +460,39 @@
 <td>The number of cycles for warranty of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseOrderId</code></td>
+<td class="prop"><code>Purchase<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Purchase/PurchaseOrder.html">PurchaseOrders</a></td>
+<td><a class="chip" href="../Purchase/PurchaseOrder.html">Purchase<wbr/>Orders</a></td>
 <td>since 2.51</td>
 <td>The business key identifier of the purchase order of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActualArrivalDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Actual<wbr/>Arrival<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.51</td>
 <td>The actual delivery date for the purchase order of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufactureDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Manufacture<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.51</td>
 <td>The finish date for the manufacturing order of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>InstallationOrderId</code></td>
+<td class="prop"><code>Installation<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Sales/CustomerOrder.html">CustomerOrders</a></td>
+<td><a class="chip" href="../Sales/CustomerOrder.html">Customer<wbr/>Orders</a></td>
 <td>since 2.51</td>
 <td>The business key identifier of the customer order which the installation is linked to.</td>
 </tr>
 <tr>
-<td class="prop"><code>InstalledBy</code></td>
+<td class="prop"><code>Installed<wbr/>By</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -500,15 +500,15 @@
 <td>The business key identifier of the person that is linked to the installation of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>InstallationDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Installation<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.51</td>
 <td>The date when the installation of the product record will take place.</td>
 </tr>
 <tr>
-<td class="prop"><code>InstallationCode</code></td>
+<td class="prop"><code>Installation<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -516,7 +516,7 @@
 <td>The code that is applying to the installation of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarrantyCode</code></td>
+<td class="prop"><code>Warranty<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -524,7 +524,7 @@
 <td>The code that is applying to the installation of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>RegistrationNo</code></td>
+<td class="prop"><code>Registration<wbr/>No</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -532,7 +532,7 @@
 <td>The registration number for the manufacturing order of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>TypeDescription</code></td>
+<td class="prop"><code>Type<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -548,15 +548,15 @@
 <td>The status of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>BestBeforeDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Best<wbr/>Before<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 22.7</td>
 <td>The best before date of the product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProductRecordBatchId</code></td>
+<td class="prop"><code>Product<wbr/>Record<wbr/>Batch<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>

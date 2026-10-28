@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VatRates · Monitor ERP API</title>
+<title>VatRates · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a VAT rate.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>VatRates</span>
 </header>
 <div class="layout">
@@ -100,7 +100,7 @@
 <td>The translated description of the rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReversedTax</code></td>
+<td class="prop"><code>Reversed<wbr/>Tax</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>Specifies if reverse tax responsibility is applicable for the rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>OutputVatAccountId</code></td>
+<td class="prop"><code>Output<wbr/>Vat<wbr/>Account<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Accounting/Account.html">Accounts</a></td>
@@ -116,7 +116,7 @@
 <td>The business key identifier of the output account for the rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>InputVatAccountId</code></td>
+<td class="prop"><code>Input<wbr/>Vat<wbr/>Account<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Accounting/Account.html">Accounts</a></td>
@@ -132,7 +132,7 @@
 <td>Specifies if the rate is active.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReversedTaxPercentage</code></td>
+<td class="prop"><code>Reversed<wbr/>Tax<wbr/>Percentage</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>Specifies the reverse VAT percentage of the rate.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>ReferenceTextId</code></td>
+<td class="prop"><code>Reference<wbr/>Text<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Comment.html">Comments</a></td>
@@ -148,7 +148,7 @@
 <td>The business key identifier of the rate reference text. References Comments . <em>(Replaced by Reference.)</em></td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>ReferenceText</code></td>
+<td class="prop"><code>Reference<wbr/>Text</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Comment.html">Comments</a></td>
@@ -164,7 +164,7 @@
 <td>The translated reference text of the rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>EcSalesType</code></td>
+<td class="prop"><code>Ec<wbr/>Sales<wbr/>Type</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -172,7 +172,7 @@
 <td>Specifies the European Commission sales type of the VAT rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>CodeType</code></td>
+<td class="prop"><code>Code<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>Specifies the VAT code type of the VAT rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>DatevVatCode</code></td>
+<td class="prop"><code>Datev<wbr/>Vat<wbr/>Code</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>

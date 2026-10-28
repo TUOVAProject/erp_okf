@@ -212,7 +212,7 @@ def emit_root(model: dict) -> None:
 
     write(
         "/index.md",
-        f"""# Monitor ERP API (compact)
+        f"""# Monitor ERP API Data Model (compact)
 
 Compact, coding-agent-friendly view of the Monitor ERP API data model at
 {model['source']}. The full bundle (`okf/`) documents the same

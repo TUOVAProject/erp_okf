@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Balances · Monitor ERP API</title>
+<title>Balances · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a balance.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>Balances</span>
 </header>
 <div class="layout">
@@ -75,10 +75,10 @@
 <td>The business key identifier of the balance.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountingYearId</code></td>
+<td class="prop"><code>Accounting<wbr/>Year<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AccountingYear.html">AccountingYears</a></td>
+<td><a class="chip" href="AccountingYear.html">Accounting<wbr/>Years</a></td>
 <td></td>
 <td>The business key identifier of the accounting year the balance belongs to.</td>
 </tr>
@@ -91,7 +91,7 @@
 <td>The balance amount in the account's currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>AmountInCompanyCurrency</code></td>
+<td class="prop"><code>Amount<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -99,18 +99,18 @@
 <td>The balance amount in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>CodingEntryId</code></td>
+<td class="prop"><code>Coding<wbr/>Entry<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CodingEntry.html">CodingEntries</a></td>
+<td><a class="chip" href="CodingEntry.html">Coding<wbr/>Entries</a></td>
 <td></td>
 <td>The business key identifier of the coding entry the balance belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>OpeningBalanceId</code></td>
+<td class="prop"><code>Opening<wbr/>Balance<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="OpeningBalance.html">OpeningBalances</a></td>
+<td><a class="chip" href="OpeningBalance.html">Opening<wbr/>Balances</a></td>
 <td></td>
 <td>The business key identifier of the opening balance for the balance.</td>
 </tr>

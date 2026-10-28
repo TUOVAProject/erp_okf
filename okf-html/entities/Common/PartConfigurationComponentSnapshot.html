@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PartConfigurationComponentSnapshots · Monitor ERP API</title>
+<title>PartConfigurationComponentSnapshots · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a part configuration component snapshot.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>PartConfigurationComponentSnapshots</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the component snapshot.</td>
 </tr>
 <tr>
-<td class="prop"><code>ComponentType</code></td>
+<td class="prop"><code>Component<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -84,7 +84,7 @@
 <td>The component type discriminator.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -92,7 +92,7 @@
 <td>The business key identifier of the template snapshot this component belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>OriginComponentId</code></td>
+<td class="prop"><code>Origin<wbr/>Component<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -100,15 +100,15 @@
 <td>The business key identifier of the origin configuration component.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentRowId</code></td>
+<td class="prop"><code>Parent<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="PartConfigurationComponentSnapshot.html">PartConfigurationComponentSnapshots</a></td>
+<td><a class="chip" href="PartConfigurationComponentSnapshot.html">Part<wbr/>Configuration<wbr/>Component<wbr/>Snapshots</a></td>
 <td></td>
 <td>The business key identifier of the parent component within the same template (self-referencing hierarchy). For example, a variable nested under a section.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowIndex</code></td>
+<td class="prop"><code>Row<wbr/>Index</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>The row index for ordering.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShowOnDocument</code></td>
+<td class="prop"><code>Show<wbr/>On<wbr/>Document</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>Document types to show the section on. Only applicable for Section components.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShowOnFooter</code></td>
+<td class="prop"><code>Show<wbr/>On<wbr/>Footer</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>Whether the section is visible. Only applicable for Section components.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExternalVisible</code></td>
+<td class="prop"><code>External<wbr/>Visible</code></td>
 <td class="type"><code>Boolean?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The variable name. Only applicable for Variable components.</td>
 </tr>
 <tr>
-<td class="prop"><code>VariableType</code></td>
+<td class="prop"><code>Variable<wbr/>Type</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The maximum value. Only applicable for Variable components.</td>
 </tr>
 <tr>
-<td class="prop"><code>NumberOfDecimals</code></td>
+<td class="prop"><code>Number<wbr/>Of<wbr/>Decimals</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>The number of decimals. Only applicable for Variable components.</td>
 </tr>
 <tr>
-<td class="prop"><code>RoundingBase</code></td>
+<td class="prop"><code>Rounding<wbr/>Base</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>The rounding base. Only applicable for Variable components.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitId</code></td>
+<td class="prop"><code>Unit<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -220,7 +220,7 @@
 <td>The business key identifier of the unit. Only applicable for Variable components.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraFieldTemplateId</code></td>
+<td class="prop"><code>Extra<wbr/>Field<wbr/>Template<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -228,7 +228,7 @@
 <td>The business key identifier of the extra field template. Only applicable for Variable components.</td>
 </tr>
 <tr>
-<td class="prop"><code>VariableId</code></td>
+<td class="prop"><code>Variable<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -236,7 +236,7 @@
 <td>The business key identifier of the variable. Only applicable for Variable components.</td>
 </tr>
 <tr>
-<td class="prop"><code>DocumentDisplaySettings</code></td>
+<td class="prop"><code>Document<wbr/>Display<wbr/>Settings</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -244,7 +244,7 @@
 <td>The document display settings. Only applicable for Variable components.</td>
 </tr>
 <tr>
-<td class="prop"><code>BindPropertyType</code></td>
+<td class="prop"><code>Bind<wbr/>Property<wbr/>Type</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -260,7 +260,7 @@
 <td>The selection group code. Only applicable for SelectionGroup components.</td>
 </tr>
 <tr>
-<td class="prop"><code>AutomaticSelectionAlternative</code></td>
+<td class="prop"><code>Automatic<wbr/>Selection<wbr/>Alternative</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -268,7 +268,7 @@
 <td>The automatic selection alternative. Only applicable for SelectionGroup components.</td>
 </tr>
 <tr>
-<td class="prop"><code>MaximumSelectedRows</code></td>
+<td class="prop"><code>Maximum<wbr/>Selected<wbr/>Rows</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -276,7 +276,7 @@
 <td>The maximum number of selected rows. Only applicable for SelectionGroup components.</td>
 </tr>
 <tr>
-<td class="prop"><code>MinimumSelectedRows</code></td>
+<td class="prop"><code>Minimum<wbr/>Selected<wbr/>Rows</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -284,7 +284,7 @@
 <td>The minimum number of selected rows. Only applicable for SelectionGroup components.</td>
 </tr>
 <tr>
-<td class="prop"><code>MinimumSelectedQuantity</code></td>
+<td class="prop"><code>Minimum<wbr/>Selected<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -292,7 +292,7 @@
 <td>The minimum selected quantity. Only applicable for SelectionGroup components.</td>
 </tr>
 <tr>
-<td class="prop"><code>MaximumSelectedQuantity</code></td>
+<td class="prop"><code>Maximum<wbr/>Selected<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -300,7 +300,7 @@
 <td>The maximum selected quantity. Only applicable for SelectionGroup components.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManagedOptionsType</code></td>
+<td class="prop"><code>Managed<wbr/>Options<wbr/>Type</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -308,7 +308,7 @@
 <td>The managed options type. Only applicable for SelectionGroup components.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManagedOptionsIdentifier</code></td>
+<td class="prop"><code>Managed<wbr/>Options<wbr/>Identifier</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -316,7 +316,7 @@
 <td>The managed options identifier. Only applicable for SelectionGroup components.</td>
 </tr>
 <tr>
-<td class="prop"><code>SourceVersion</code></td>
+<td class="prop"><code>Source<wbr/>Version</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>

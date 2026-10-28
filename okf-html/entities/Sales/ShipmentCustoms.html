@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ShipmentCustoms · Monitor ERP API</title>
+<title>ShipmentCustoms · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a shipments customs information.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>ShipmentCustoms</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the shipments customs information.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Shipment.html">Shipments</a></td>
@@ -92,7 +92,7 @@
 <td>Indicates if the shipment is dutiable.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceNumber</code></td>
+<td class="prop"><code>Invoice<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -100,15 +100,15 @@
 <td>The invoice number on the customs information.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Invoice<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The invoice date on the customs information.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyId</code></td>
+<td class="prop"><code>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -124,55 +124,55 @@
 <td>The customs informations currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyExchangeTypeId</code></td>
+<td class="prop"><code>Currency<wbr/>Exchange<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">Currency<wbr/>Exchange<wbr/>Types</a></td>
 <td></td>
 <td>The business key identifier of the customs informations currency exchange type.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyExchangeType</code></td>
-<td class="type"><code>CurrencyExchangeTypes</code></td>
+<td class="prop"><code>Currency<wbr/>Exchange<wbr/>Type</code></td>
+<td class="type"><code>Currency<wbr/>Exchange<wbr/>Types</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">Currency<wbr/>Exchange<wbr/>Types</a></td>
 <td>expandable</td>
 <td>The customs informations currency exchange type.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryMethodId</code></td>
+<td class="prop"><code>Delivery<wbr/>Method<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">Delivery<wbr/>Methods</a></td>
 <td></td>
 <td>The business key identifier of the customs informations delivery method.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryMethod</code></td>
-<td class="type"><code>DeliveryMethods</code></td>
+<td class="prop"><code>Delivery<wbr/>Method</code></td>
+<td class="type"><code>Delivery<wbr/>Methods</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">Delivery<wbr/>Methods</a></td>
 <td>expandable</td>
 <td>The customs informations delivery method.</td>
 </tr>
 <tr>
-<td class="prop"><code>ForeignDeliveryMethodId</code></td>
+<td class="prop"><code>Foreign<wbr/>Delivery<wbr/>Method<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">Delivery<wbr/>Methods</a></td>
 <td></td>
 <td>The business key identifier of the customs informations foreign delivery method.</td>
 </tr>
 <tr>
-<td class="prop"><code>ForeignDeliveryMethod</code></td>
-<td class="type"><code>DeliveryMethods</code></td>
+<td class="prop"><code>Foreign<wbr/>Delivery<wbr/>Method</code></td>
+<td class="type"><code>Delivery<wbr/>Methods</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">Delivery<wbr/>Methods</a></td>
 <td>expandable</td>
 <td>The customs informations foreign delivery method.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeclarantId</code></td>
+<td class="prop"><code>Declarant<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -188,7 +188,7 @@
 <td>The customs informations declarant person.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeclarantName</code></td>
+<td class="prop"><code>Declarant<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The customs informations declarant name.</td>
 </tr>
 <tr>
-<td class="prop"><code>NumberOfPackages</code></td>
+<td class="prop"><code>Number<wbr/>Of<wbr/>Packages</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -236,7 +236,7 @@
 <td>The comment row 4 on the customs information.</td>
 </tr>
 <tr>
-<td class="prop"><code>TransactionType</code></td>
+<td class="prop"><code>Transaction<wbr/>Type</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -244,7 +244,7 @@
 <td>The customs informations transaction type.</td>
 </tr>
 <tr>
-<td class="prop"><code>PointOfExport</code></td>
+<td class="prop"><code>Point<wbr/>Of<wbr/>Export</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -261,14 +261,14 @@
 </tr>
 <tr>
 <td class="prop"><code>Date</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The customs informations date.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeclarantCorporationIdentificationNumber</code></td>
+<td class="prop"><code>Declarant<wbr/>Corporation<wbr/>Identification<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -276,7 +276,7 @@
 <td>The customs informations declarant corporation identification number.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReferenceNumber</code></td>
+<td class="prop"><code>Reference<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -284,7 +284,7 @@
 <td>The customs informations reference number.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceType</code></td>
+<td class="prop"><code>Invoice<wbr/>Type</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -292,7 +292,7 @@
 <td>The customs informations invoice type.</td>
 </tr>
 <tr>
-<td class="prop"><code>ImportExportType</code></td>
+<td class="prop"><code>Import<wbr/>Export<wbr/>Type</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -300,7 +300,7 @@
 <td>The customs informations import export type.</td>
 </tr>
 <tr>
-<td class="prop"><code>ImportExportTypeName</code></td>
+<td class="prop"><code>Import<wbr/>Export<wbr/>Type<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -308,7 +308,7 @@
 <td>Free-text override of the import/export type. When set, it takes precedence over when the shipment is exported to forwarders (for example for forwarder-specific codes like "GIFT" or "sample").</td>
 </tr>
 <tr>
-<td class="prop"><code>ReasonForExport</code></td>
+<td class="prop"><code>Reason<wbr/>For<wbr/>Export</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -316,7 +316,7 @@
 <td>The customs informations reason for export.</td>
 </tr>
 <tr>
-<td class="prop"><code>StatisticalGoodsCodeType</code></td>
+<td class="prop"><code>Statistical<wbr/>Goods<wbr/>Code<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -324,7 +324,7 @@
 <td>The customs informations statistical goods code type.</td>
 </tr>
 <tr>
-<td class="prop"><code>EoriSeller</code></td>
+<td class="prop"><code>Eori<wbr/>Seller</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -332,7 +332,7 @@
 <td>The Economic Operator Registration and Identification number of the customs informations seller.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatNumberSeller</code></td>
+<td class="prop"><code>Vat<wbr/>Number<wbr/>Seller</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -340,7 +340,7 @@
 <td>The VAT number of the customs informations seller.</td>
 </tr>
 <tr>
-<td class="prop"><code>CorporationIdentificationNumberSeller</code></td>
+<td class="prop"><code>Corporation<wbr/>Identification<wbr/>Number<wbr/>Seller</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -348,7 +348,7 @@
 <td>The corporation identification number of the customs informations seller.</td>
 </tr>
 <tr>
-<td class="prop"><code>EoriPickup</code></td>
+<td class="prop"><code>Eori<wbr/>Pickup</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -356,7 +356,7 @@
 <td>The customs informations Economic Operator Registration and Identification pickup number.</td>
 </tr>
 <tr>
-<td class="prop"><code>EoriPurchaser</code></td>
+<td class="prop"><code>Eori<wbr/>Purchaser</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -364,7 +364,7 @@
 <td>The Economic Operator Registration and Identification number of the customs informations purchaser.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatNumberPurchaser</code></td>
+<td class="prop"><code>Vat<wbr/>Number<wbr/>Purchaser</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -372,7 +372,7 @@
 <td>The VAT number of the customs informations purchaser.</td>
 </tr>
 <tr>
-<td class="prop"><code>CorporationIdentificationNumberPurchaser</code></td>
+<td class="prop"><code>Corporation<wbr/>Identification<wbr/>Number<wbr/>Purchaser</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -380,7 +380,7 @@
 <td>The corporation identification number of the customs informations purchaser.</td>
 </tr>
 <tr>
-<td class="prop"><code>EoriDelivery</code></td>
+<td class="prop"><code>Eori<wbr/>Delivery</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -388,7 +388,7 @@
 <td>The Economic Operator Registration and Identification number of the customs informations delivery.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatNumberDelivery</code></td>
+<td class="prop"><code>Vat<wbr/>Number<wbr/>Delivery</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -396,7 +396,7 @@
 <td>The VAT number of the customs informations delivery.</td>
 </tr>
 <tr>
-<td class="prop"><code>CorporationIdentificationNumberDelivery</code></td>
+<td class="prop"><code>Corporation<wbr/>Identification<wbr/>Number<wbr/>Delivery</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -404,7 +404,7 @@
 <td>The corporation identification number of the customs informations delivery.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomsPayingParty</code></td>
+<td class="prop"><code>Customs<wbr/>Paying<wbr/>Party</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -412,7 +412,7 @@
 <td>Specifies who pay the cusoms fee.</td>
 </tr>
 <tr>
-<td class="prop"><code>EoriCustomsPayer</code></td>
+<td class="prop"><code>Eori<wbr/>Customs<wbr/>Payer</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -420,7 +420,7 @@
 <td>The Economic Operator Registration and Identification number of the customs payer.</td>
 </tr>
 <tr>
-<td class="prop"><code>CorporationIdentificationNumberCustomsPayer</code></td>
+<td class="prop"><code>Corporation<wbr/>Identification<wbr/>Number<wbr/>Customs<wbr/>Payer</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -428,7 +428,7 @@
 <td>The corporation identification number of the customs payer.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatNumberCustomsPayer</code></td>
+<td class="prop"><code>Vat<wbr/>Number<wbr/>Customs<wbr/>Payer</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -436,7 +436,7 @@
 <td>The VAT number of the customs payer.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomsPayer</code></td>
+<td class="prop"><code>Customs<wbr/>Payer</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -445,17 +445,17 @@
 </tr>
 <tr>
 <td class="prop"><code>Rows</code></td>
-<td class="type"><code>ShipmentCustomsRows[]</code></td>
+<td class="type"><code>Shipment<wbr/>Customs<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ShipmentCustomsRow.html">ShipmentCustomsRows</a></td>
+<td><a class="chip" href="ShipmentCustomsRow.html">Shipment<wbr/>Customs<wbr/>Rows</a></td>
 <td>expandable, collection</td>
 <td>The rows of the customs information.</td>
 </tr>
 <tr>
 <td class="prop"><code>Documents</code></td>
-<td class="type"><code>ShipmentCustomsDocuments[]</code></td>
+<td class="type"><code>Shipment<wbr/>Customs<wbr/>Documents[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ShipmentCustomsDocument.html">ShipmentCustomsDocuments</a></td>
+<td><a class="chip" href="ShipmentCustomsDocument.html">Shipment<wbr/>Customs<wbr/>Documents</a></td>
 <td>expandable, collection</td>
 <td>The documents of the customs information.</td>
 </tr>

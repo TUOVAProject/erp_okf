@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Currencies · Monitor ERP API</title>
+<title>Currencies · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a queryable currency.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>Currencies</span>
 </header>
 <div class="layout">
@@ -91,7 +91,7 @@
 <td>The translated description of the currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>RateFactor</code></td>
+<td class="prop"><code>Rate<wbr/>Factor</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -99,7 +99,7 @@
 <td>The rate factor of the currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>DefaultSalesExchangeRate</code></td>
+<td class="prop"><code>Default<wbr/>Sales<wbr/>Exchange<wbr/>Rate</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -107,7 +107,7 @@
 <td>The default sales exchange rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>DefaultPurchaseExchangeRate</code></td>
+<td class="prop"><code>Default<wbr/>Purchase<wbr/>Exchange<wbr/>Rate</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -115,18 +115,18 @@
 <td>The default purchase exchange rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExchangeRates</code></td>
-<td class="type"><code>CurrencyExchangeRates[]</code></td>
+<td class="prop"><code>Exchange<wbr/>Rates</code></td>
+<td class="type"><code>Currency<wbr/>Exchange<wbr/>Rates[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CurrencyExchangeRate.html">CurrencyExchangeRates</a></td>
+<td><a class="chip" href="CurrencyExchangeRate.html">Currency<wbr/>Exchange<wbr/>Rates</a></td>
 <td>expandable, collection</td>
 <td>All available exchange rates for the currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExchangeRatesChangeLog</code></td>
-<td class="type"><code>CurrencyExchangeRateChangeLogs[]</code></td>
+<td class="prop"><code>Exchange<wbr/>Rates<wbr/>Change<wbr/>Log</code></td>
+<td class="type"><code>Currency<wbr/>Exchange<wbr/>Rate<wbr/>Change<wbr/>Logs[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CurrencyExchangeRateChangeLog.html">CurrencyExchangeRateChangeLogs</a></td>
+<td><a class="chip" href="CurrencyExchangeRateChangeLog.html">Currency<wbr/>Exchange<wbr/>Rate<wbr/>Change<wbr/>Logs</a></td>
 <td>expandable, collection, since 2.26</td>
 <td>All previous exchange rates for the currency</td>
 </tr>

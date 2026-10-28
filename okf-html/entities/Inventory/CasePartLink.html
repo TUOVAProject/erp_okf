@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CaseEntryPartLinks · Monitor ERP API</title>
+<title>CaseEntryPartLinks · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a case part link.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>CaseEntryPartLinks</span>
 </header>
 <div class="layout">
@@ -75,15 +75,15 @@
 <td>The business key identifier of the case part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>CaseId</code></td>
+<td class="prop"><code>Case<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CaseEntry.html">CaseEntry</a></td>
+<td><a class="chip" href="CaseEntry.html">Case<wbr/>Entry</a></td>
 <td></td>
 <td>The business key identifier of the case entry this case part link belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Part.html">Parts</a></td>
@@ -91,15 +91,15 @@
 <td>The business key identifier of the referenced part.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProductRecordId</code></td>
+<td class="prop"><code>Product<wbr/>Record<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ProductRecord.html">ProductRecords</a></td>
+<td><a class="chip" href="ProductRecord.html">Product<wbr/>Records</a></td>
 <td></td>
 <td>The business key identifier of the referenced product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsDefault</code></td>
+<td class="prop"><code>Is<wbr/>Default</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -107,7 +107,7 @@
 <td>Defines if the part is considered default part on this case. Can only be set on one part in a case.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartRevisionId</code></td>
+<td class="prop"><code>Part<wbr/>Revision<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Revision.html">Revisions</a></td>
@@ -115,15 +115,15 @@
 <td>The business key identifier of the revision on part.</td>
 </tr>
 <tr>
-<td class="prop"><code>RejectionCodeItemId</code></td>
+<td class="prop"><code>Rejection<wbr/>Code<wbr/>Item<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/RejectionCodeItem.html">RejectionCodeItems</a></td>
+<td><a class="chip" href="../Common/RejectionCodeItem.html">Rejection<wbr/>Code<wbr/>Items</a></td>
 <td></td>
 <td>The business key identifier of the rejection code for this case part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>RejectedQuantity</code></td>
+<td class="prop"><code>Rejected<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -131,7 +131,7 @@
 <td>Quantity rejected for this case part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>RejectionDescription</code></td>
+<td class="prop"><code>Rejection<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -139,42 +139,42 @@
 <td>The rejection description for this case part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProductRecordBatchId</code></td>
+<td class="prop"><code>Product<wbr/>Record<wbr/>Batch<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ProductRecord.html">ProductRecords</a></td>
+<td><a class="chip" href="ProductRecord.html">Product<wbr/>Records</a></td>
 <td></td>
 <td>The business key identifier of the referenced product record batch.</td>
 </tr>
 <tr>
-<td class="prop"><code>CompensationCustomerOrderId</code></td>
+<td class="prop"><code>Compensation<wbr/>Customer<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Sales/CustomerOrder.html">CustomerOrders</a></td>
+<td><a class="chip" href="../Sales/CustomerOrder.html">Customer<wbr/>Orders</a></td>
 <td></td>
 <td>The business key identifier of compensation customer order for this part case link.</td>
 </tr>
 <tr>
-<td class="prop"><code>CompensationAccountsReceivableId</code></td>
+<td class="prop"><code>Compensation<wbr/>Accounts<wbr/>Receivable<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Accounting/AccountsReceivable.html">AccountsReceivables</a></td>
+<td><a class="chip" href="../Accounting/AccountsReceivable.html">Accounts<wbr/>Receivables</a></td>
 <td></td>
 <td>The business key identifier of compensation accounts receivable for this part case link.</td>
 </tr>
 <tr>
-<td class="prop"><code>CompensationPurchaseOrderId</code></td>
+<td class="prop"><code>Compensation<wbr/>Purchase<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Purchase/PurchaseOrder.html">PurchaseOrders</a></td>
+<td><a class="chip" href="../Purchase/PurchaseOrder.html">Purchase<wbr/>Orders</a></td>
 <td></td>
 <td>The business key identifier of compensation purchase order for this part case link.</td>
 </tr>
 <tr>
-<td class="prop"><code>CompensationAccountsPayableId</code></td>
+<td class="prop"><code>Compensation<wbr/>Accounts<wbr/>Payable<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Accounting/AccountsPayable.html">AccountsPayables</a></td>
+<td><a class="chip" href="../Accounting/AccountsPayable.html">Accounts<wbr/>Payables</a></td>
 <td></td>
 <td>The business key identifier of compensation accounts payable for this part case link.</td>
 </tr>

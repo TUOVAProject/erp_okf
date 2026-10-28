@@ -1,4 +1,4 @@
-# Monitor ERP API (compact)
+# Monitor ERP API Data Model (compact)
 
 Compact, coding-agent-friendly view of the Monitor ERP API data model at
 https://api.monitor.se/api/. The full bundle (`okf/`) documents the same

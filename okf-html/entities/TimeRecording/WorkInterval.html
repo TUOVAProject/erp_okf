@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WorkIntervals · Monitor ERP API</title>
+<title>WorkIntervals · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a work interval.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/TimeRecording.html">TimeRecording</a><span class="sep">/</span>WorkIntervals</span>
 </header>
 <div class="layout">
@@ -76,23 +76,23 @@
 <td>The business key identifier of a work interval.</td>
 </tr>
 <tr>
-<td class="prop"><code>IntervalStart</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Interval<wbr/>Start</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The start of the interval.</td>
 </tr>
 <tr>
-<td class="prop"><code>IntervalEnd</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Interval<wbr/>End</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The end of the interval.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsClosedInterval</code></td>
+<td class="prop"><code>Is<wbr/>Closed<wbr/>Interval</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -100,7 +100,7 @@
 <td>Indicatates if the interval was ended. If false the interval is considered an active interval on the day which a future work recording is supposed to end.</td>
 </tr>
 <tr>
-<td class="prop"><code>BundleId</code></td>
+<td class="prop"><code>Bundle<wbr/>Id</code></td>
 <td class="type"><code>Guid</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>Identifier to detect what work was recorded in the same bundle.</td>
 </tr>
 <tr>
-<td class="prop"><code>WorkRecordingType</code></td>
+<td class="prop"><code>Work<wbr/>Recording<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,23 +116,23 @@
 <td>What type of work this recording represents. Indicates which id is relevant on the interval.</td>
 </tr>
 <tr>
-<td class="prop"><code>IndirectWorkCodeId</code></td>
+<td class="prop"><code>Indirect<wbr/>Work<wbr/>Code<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="IndirectWorkCode.html">IndirectWorkCodes</a></td>
+<td><a class="chip" href="IndirectWorkCode.html">Indirect<wbr/>Work<wbr/>Codes</a></td>
 <td></td>
 <td>The business key identifier to an indirect work code. Defined if is indirect work.</td>
 </tr>
 <tr>
-<td class="prop"><code>OperationId</code></td>
+<td class="prop"><code>Operation<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Manufacturing/ManufacturingOrderOperation.html">ManufacturingOrderOperations</a></td>
+<td><a class="chip" href="../Manufacturing/ManufacturingOrderOperation.html">Manufacturing<wbr/>Order<wbr/>Operations</a></td>
 <td></td>
 <td>The business key identifier to a manufacturing order operation. Defined if it is an operation unit or a setup recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>TimeCalculationType</code></td>
+<td class="prop"><code>Time<wbr/>Calculation<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The time calculation type for this interval.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportingEmployeeId</code></td>
+<td class="prop"><code>Reporting<wbr/>Employee<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -148,31 +148,31 @@
 <td>The business key identifier to the employee making the recording. When machine recording this key will represent the operator if defined. Otherwise this will be the same as the person owning the recording day.</td>
 </tr>
 <tr>
-<td class="prop"><code>WorkCenterId</code></td>
+<td class="prop"><code>Work<wbr/>Center<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Manufacturing/WorkCenter.html">WorkCenters</a></td>
+<td><a class="chip" href="../Manufacturing/WorkCenter.html">Work<wbr/>Centers</a></td>
 <td></td>
 <td>The business key identifier to the workcenter associated with the recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>WorkedTime</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Worked<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The calculated work time for this interval.</td>
 </tr>
 <tr>
-<td class="prop"><code>OfWichOvertime</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Of<wbr/>Wich<wbr/>Overtime</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>How much of the worked time that was considered overtime.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedQuantity</code></td>
+<td class="prop"><code>Reported<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>The reported quantity for this recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>RejectedQuantity</code></td>
+<td class="prop"><code>Rejected<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -188,15 +188,15 @@
 <td>The rejected quantity for this recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActivityId</code></td>
+<td class="prop"><code>Activity<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ProjectActivity.html">ProjectActivities</a></td>
+<td><a class="chip" href="../Common/ProjectActivity.html">Project<wbr/>Activities</a></td>
 <td>since 22.6</td>
 <td>The business key identifier to a project activity. Defined if it is a project activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>

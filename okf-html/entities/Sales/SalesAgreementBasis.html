@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SalesAgreementBases · Monitor ERP API</title>
+<title>SalesAgreementBases · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a sales agreement basis.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>SalesAgreementBases</span>
 </header>
 <div class="layout">
@@ -76,31 +76,31 @@
 <td>The business key identifier of the agreement basis.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesAgreementId</code></td>
+<td class="prop"><code>Sales<wbr/>Agreement<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="SalesAgreement.html">SalesAgreements</a></td>
+<td><a class="chip" href="SalesAgreement.html">Sales<wbr/>Agreements</a></td>
 <td></td>
 <td>The business key identifier of the parent agreement.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CustomerOrder.html">CustomerOrders</a></td>
+<td><a class="chip" href="CustomerOrder.html">Customer<wbr/>Orders</a></td>
 <td></td>
 <td>The business key identifier of the customer order generated from this agreement basis.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceId</code></td>
+<td class="prop"><code>Invoice<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CustomerOrderInvoice.html">CustomerOrderInvoices</a></td>
+<td><a class="chip" href="CustomerOrderInvoice.html">Customer<wbr/>Order<wbr/>Invoices</a></td>
 <td></td>
 <td>The business key identifier of the invoice for this agreement basis.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccrualAccountId</code></td>
+<td class="prop"><code>Accrual<wbr/>Account<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Accounting/Account.html">Accounts</a></td>
@@ -108,7 +108,7 @@
 <td>The business key identifier of the accrual account for this agreement basis.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsAccrual</code></td>
+<td class="prop"><code>Is<wbr/>Accrual</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>Indicates if this agreement basis uses accrual accounting.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsOneTimeCost</code></td>
+<td class="prop"><code>Is<wbr/>One<wbr/>Time<wbr/>Cost</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>Indicates if this agreement basis is a one-time cost.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsRemoved</code></td>
+<td class="prop"><code>Is<wbr/>Removed</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>Indicates if the agreement basis and the linked customer order has been set as removed.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsPaused</code></td>
+<td class="prop"><code>Is<wbr/>Paused</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>Indicates if the agreement basis is paused.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoicingMethod</code></td>
+<td class="prop"><code>Invoicing<wbr/>Method</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,39 +148,39 @@
 <td>The invoicing method of the agreement basis.</td>
 </tr>
 <tr>
-<td class="prop"><code>PeriodStart</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Period<wbr/>Start</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The period start date of the agreement basis.</td>
 </tr>
 <tr>
-<td class="prop"><code>PeriodEnd</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Period<wbr/>End</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The period end date of the agreement basis.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedInvoiceDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Planned<wbr/>Invoice<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The planned invoice date of the agreement basis.</td>
 </tr>
 <tr>
-<td class="prop"><code>PeriodStartOnAgreementWhenCreated</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Period<wbr/>Start<wbr/>On<wbr/>Agreement<wbr/>When<wbr/>Created</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The period start on the agreement when this basis was created.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExchangeRate</code></td>
+<td class="prop"><code>Exchange<wbr/>Rate</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>The exchange rate of the agreement basis.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyId</code></td>
+<td class="prop"><code>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -204,7 +204,7 @@
 <td>The currency of the agreement basis.</td>
 </tr>
 <tr>
-<td class="prop"><code>UseForwardRate</code></td>
+<td class="prop"><code>Use<wbr/>Forward<wbr/>Rate</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -213,9 +213,9 @@
 </tr>
 <tr>
 <td class="prop"><code>Rows</code></td>
-<td class="type"><code>SalesAgreementBasisRows[]</code></td>
+<td class="type"><code>Sales<wbr/>Agreement<wbr/>Basis<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="SalesAgreementBasisRow.html">SalesAgreementBasisRows</a></td>
+<td><a class="chip" href="SalesAgreementBasisRow.html">Sales<wbr/>Agreement<wbr/>Basis<wbr/>Rows</a></td>
 <td>expandable, collection</td>
 <td>The rows of the agreement basis.</td>
 </tr>

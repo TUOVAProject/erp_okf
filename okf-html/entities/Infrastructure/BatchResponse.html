@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BatchResponse · Monitor ERP API</title>
+<title>BatchResponse · Monitor ERP API Data Model</title>
 <meta name="description" content="The response object used by the batching system to return the complete result of an entire batch of commands.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Infrastructure.html">Infrastructure</a><span class="sep">/</span>BatchResponse</span>
 </header>
 <div class="layout">
@@ -66,7 +66,7 @@
 </thead>
 <tbody>
 <tr>
-<td class="prop"><code>IsSuccessful</code></td>
+<td class="prop"><code>Is<wbr/>Successful</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -75,14 +75,14 @@
 </tr>
 <tr>
 <td class="prop"><code>Response</code></td>
-<td class="type"><code>EntityCommandResponse[]</code></td>
+<td class="type"><code>Entity<wbr/>Command<wbr/>Response[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="EntityCommandResponse.html">EntityCommandResponse</a></td>
+<td><a class="chip" href="EntityCommandResponse.html">Entity<wbr/>Command<wbr/>Response</a></td>
 <td>collection</td>
 <td>The individual commmand responses in the batch. When the batch command includes commands that uses the /Many tag the responses are flattened out. You still get one result per individual command, but to be able to match the responses, the batch command also needs to be flattened out.</td>
 </tr>
 <tr>
-<td class="prop"><code>FailingIndex</code></td>
+<td class="prop"><code>Failing<wbr/>Index</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -90,7 +90,7 @@
 <td>The index of the failing command in the batch.</td>
 </tr>
 <tr>
-<td class="prop"><code>ErrorMessage</code></td>
+<td class="prop"><code>Error<wbr/>Message</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>

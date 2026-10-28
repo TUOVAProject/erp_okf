@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SalesAgreementRows · Monitor ERP API</title>
+<title>SalesAgreementRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents an agreement row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>SalesAgreementRows</span>
 </header>
 <div class="layout">
@@ -76,18 +76,18 @@
 <td>The business key identifier of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentRowId</code></td>
+<td class="prop"><code>Parent<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="SalesAgreementRow.html">SalesAgreementRows</a></td>
+<td><a class="chip" href="SalesAgreementRow.html">Sales<wbr/>Agreement<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the rows parent row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentOrderId</code></td>
+<td class="prop"><code>Parent<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="SalesAgreement.html">SalesAgreements</a></td>
+<td><a class="chip" href="SalesAgreement.html">Sales<wbr/>Agreements</a></td>
 <td></td>
 <td>The business key identifier of the rows parent agreement.</td>
 </tr>
@@ -100,7 +100,7 @@
 <td>The position of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderRowType</code></td>
+<td class="prop"><code>Order<wbr/>Row<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>The order row type of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -116,7 +116,7 @@
 <td>The business key identifier of the rows part.</td>
 </tr>
 <tr>
-<td class="prop"><code>AdditionalRowDescription</code></td>
+<td class="prop"><code>Additional<wbr/>Row<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The quantity of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>FutureQuantity</code></td>
+<td class="prop"><code>Future<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The future quantity of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreviousQuantity</code></td>
+<td class="prop"><code>Previous<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>The previous quantity of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ConversionFactor</code></td>
+<td class="prop"><code>Conversion<wbr/>Factor</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The conversion factor of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitId</code></td>
+<td class="prop"><code>Unit<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Unit.html">Units</a></td>
@@ -180,7 +180,7 @@
 <td>The price of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -188,7 +188,7 @@
 <td>The business key identifier of the rows price currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceInCompanyCurrency</code></td>
+<td class="prop"><code>Price<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The rows price in the company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -204,7 +204,7 @@
 <td>The business key identifier of the company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>FuturePriceAmount</code></td>
+<td class="prop"><code>Future<wbr/>Price<wbr/>Amount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>The future price amount of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreviousPriceAmount</code></td>
+<td class="prop"><code>Previous<wbr/>Price<wbr/>Amount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -228,31 +228,31 @@
 <td>The discount of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatRateId</code></td>
+<td class="prop"><code>Vat<wbr/>Rate<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td><a class="chip" href="../Common/VatRate.html">Vat<wbr/>Rates</a></td>
 <td></td>
 <td>The business key identifier of the rows VAT rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>FutureValidFrom</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Future<wbr/>Valid<wbr/>From</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The future valid from of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreviousValidThrough</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Previous<wbr/>Valid<wbr/>Through</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The previous valid through of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerPartNumber</code></td>
+<td class="prop"><code>Customer<wbr/>Part<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -260,7 +260,7 @@
 <td>The customer part number of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartRowType</code></td>
+<td class="prop"><code>Part<wbr/>Row<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -268,7 +268,7 @@
 <td>The part row type of the row.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>SetupPrice</code></td>
+<td class="prop"><code>Setup<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -276,7 +276,7 @@
 <td>The setup price of the row. <em>(Setup price has never been used in sales agreements. One time cost rows are used instead.)</em></td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>SetupPriceCurrencyId</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -284,7 +284,7 @@
 <td>The business key identifier of the rows setup price currency. <em>(Setup price has never been used in sales agreements. One time cost rows are used instead.)</em></td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>SetupPriceInCompanyCurrency</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -292,7 +292,7 @@
 <td>The setup price in company currency of the row. <em>(Setup price has never been used in sales agreements. One time cost rows are used instead.)</em></td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>SetupPriceInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -300,7 +300,7 @@
 <td>The business key identifier of the company currency. <em>(Setup price has never been used in sales agreements. One time cost rows are used instead.)</em></td>
 </tr>
 <tr>
-<td class="prop"><code>ShowFreeTextIn</code></td>
+<td class="prop"><code>Show<wbr/>Free<wbr/>Text<wbr/>In</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -308,7 +308,7 @@
 <td>Specifies which documents the free text data of the row should be projected on.</td>
 </tr>
 <tr>
-<td class="prop"><code>RevisionId</code></td>
+<td class="prop"><code>Revision<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Revision.html">Revisions</a></td>
@@ -324,7 +324,7 @@
 <td>The revision of the row's part.</td>
 </tr>
 <tr>
-<td class="prop"><code>FreeTextHtml</code></td>
+<td class="prop"><code>Free<wbr/>Text<wbr/>Html</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -332,7 +332,7 @@
 <td>The free text formatted as rich text HTML of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>FreeText</code></td>
+<td class="prop"><code>Free<wbr/>Text</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -340,7 +340,7 @@
 <td>The free text as raw text of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>LifeCycleState</code></td>
+<td class="prop"><code>Life<wbr/>Cycle<wbr/>State</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -348,7 +348,7 @@
 <td>The life cycle state of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>QuantityRatio</code></td>
+<td class="prop"><code>Quantity<wbr/>Ratio</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -356,7 +356,7 @@
 <td>The quantity ratio of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>CodingId</code></td>
+<td class="prop"><code>Coding<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Accounting/Coding.html">Codings</a></td>
@@ -372,23 +372,23 @@
 <td>The coding of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Delivery<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The delivery date of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>CompensatedRowId</code></td>
+<td class="prop"><code>Compensated<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="SalesAgreementRow.html">SalesAgreementRows</a></td>
+<td><a class="chip" href="SalesAgreementRow.html">Sales<wbr/>Agreement<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the row compensated for this row.</td>
 </tr>
 <tr>
-<td class="prop"><code>OneTimeCostType</code></td>
+<td class="prop"><code>One<wbr/>Time<wbr/>Cost<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -396,31 +396,31 @@
 <td>The one time cost type of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PeriodStart</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Period<wbr/>Start</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The period start of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PeriodEnd</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Period<wbr/>End</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The period end of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedInvoiceDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Planned<wbr/>Invoice<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The planned invoice date of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>StandardPrice</code></td>
+<td class="prop"><code>Standard<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -428,7 +428,7 @@
 <td>The standard price of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>StandardPriceCurrencyId</code></td>
+<td class="prop"><code>Standard<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -436,7 +436,7 @@
 <td>The business key identifier of the rows standard price currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>FutureDiscount</code></td>
+<td class="prop"><code>Future<wbr/>Discount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -444,7 +444,7 @@
 <td>The future discount of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreviousDiscount</code></td>
+<td class="prop"><code>Previous<wbr/>Discount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -452,7 +452,7 @@
 <td>The previous discount of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsAccrual</code></td>
+<td class="prop"><code>Is<wbr/>Accrual</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -460,23 +460,23 @@
 <td>Indicates if the row is accrual.</td>
 </tr>
 <tr>
-<td class="prop"><code>ValidFrom</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Valid<wbr/>From</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The valid from date of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ValidTo</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Valid<wbr/>To</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The valid to date of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>FuturePriceInCompanyCurrencyAmount</code></td>
+<td class="prop"><code>Future<wbr/>Price<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Amount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -484,7 +484,7 @@
 <td>The future price in company currency amount of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreviousPriceInCompanyCurrencyAmount</code></td>
+<td class="prop"><code>Previous<wbr/>Price<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Amount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -492,7 +492,7 @@
 <td>The previous price in company currency amount of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>EntityIdentityString</code></td>
+<td class="prop"><code>Entity<wbr/>Identity<wbr/>String</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -500,7 +500,7 @@
 <td>The entity identity string of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraFieldBool</code></td>
+<td class="prop"><code>Extra<wbr/>Field<wbr/>Bool</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -508,7 +508,7 @@
 <td>An extra field of type bool.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraFieldInteger</code></td>
+<td class="prop"><code>Extra<wbr/>Field<wbr/>Integer</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -516,7 +516,7 @@
 <td>An extra field of type integer.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraFieldDecimal</code></td>
+<td class="prop"><code>Extra<wbr/>Field<wbr/>Decimal</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -524,15 +524,15 @@
 <td>An extra field of type decimal.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraFieldDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Extra<wbr/>Field<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 23.8</td>
 <td>An extra field of type date.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraFieldText</code></td>
+<td class="prop"><code>Extra<wbr/>Field<wbr/>Text</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>

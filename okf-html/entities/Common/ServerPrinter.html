@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ServerPrinters · Monitor ERP API</title>
+<title>ServerPrinters · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a server printer that can be used to print documents via the MONITOR server.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>ServerPrinters</span>
 </header>
 <div class="layout">
@@ -108,7 +108,7 @@
 <td>The printout orientation to apply to the server printer.</td>
 </tr>
 <tr>
-<td class="prop"><code>DuplexMode</code></td>
+<td class="prop"><code>Duplex<wbr/>Mode</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>The duplex mode to apply to the server printer.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaperSize</code></td>
+<td class="prop"><code>Paper<wbr/>Size</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The paper height in millimeters to use if the paper size is "custom".</td>
 </tr>
 <tr>
-<td class="prop"><code>ColorMode</code></td>
+<td class="prop"><code>Color<wbr/>Mode</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,26 +148,26 @@
 <td>The color mode to apply to the server printer.</td>
 </tr>
 <tr>
-<td class="prop"><code>FilePathId</code></td>
+<td class="prop"><code>File<wbr/>Path<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="FilePath.html">FilePaths</a></td>
+<td><a class="chip" href="FilePath.html">File<wbr/>Paths</a></td>
 <td>since 26.4</td>
 <td>The business key identifier of the file path used as output path of a Microsoft Print To PDF Printer References FilePaths .</td>
 </tr>
 <tr>
-<td class="prop"><code>FilePath</code></td>
-<td class="type"><code>FilePaths</code></td>
+<td class="prop"><code>File<wbr/>Path</code></td>
+<td class="type"><code>File<wbr/>Paths</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="FilePath.html">FilePaths</a></td>
+<td><a class="chip" href="FilePath.html">File<wbr/>Paths</a></td>
 <td>expandable, since 26.4</td>
 <td>The file path used as output path of a Microsoft Print To PDF Printer References FilePaths .</td>
 </tr>
 <tr>
-<td class="prop"><code>SubPath</code></td>
+<td class="prop"><code>Sub<wbr/>Path</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="FilePath.html">FilePaths</a></td>
+<td><a class="chip" href="FilePath.html">File<wbr/>Paths</a></td>
 <td>max length 300, since 26.4</td>
 <td>The sub path applied to used as output path of a Microsoft Print To PDF Printer</td>
 </tr>

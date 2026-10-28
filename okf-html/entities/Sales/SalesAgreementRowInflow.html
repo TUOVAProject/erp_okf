@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SalesAgreementRowInflows · Monitor ERP API</title>
+<title>SalesAgreementRowInflows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a sales agreement inflow row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>SalesAgreementRowInflows</span>
 </header>
 <div class="layout">
@@ -75,23 +75,23 @@
 <td>The business key identifier of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreationTime</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Creation<wbr/>Time</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The creation time of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>LoggingTimeStamp</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Logging<wbr/>Time<wbr/>Stamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The logging timestamp of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderRowType</code></td>
+<td class="prop"><code>Order<wbr/>Row<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -99,7 +99,7 @@
 <td>The order row type of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -107,7 +107,7 @@
 <td>The business key identifier of the inflow rows part.</td>
 </tr>
 <tr>
-<td class="prop"><code>AdditionalRowDescription</code></td>
+<td class="prop"><code>Additional<wbr/>Row<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -115,23 +115,23 @@
 <td>The additional row description of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesAgreementId</code></td>
+<td class="prop"><code>Sales<wbr/>Agreement<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="SalesAgreement.html">SalesAgreements</a></td>
+<td><a class="chip" href="SalesAgreement.html">Sales<wbr/>Agreements</a></td>
 <td></td>
 <td>The business key identifier of the inflow rows sales agreement.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesAgreementRowId</code></td>
+<td class="prop"><code>Sales<wbr/>Agreement<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="SalesAgreementRow.html">SalesAgreementRows</a></td>
+<td><a class="chip" href="SalesAgreementRow.html">Sales<wbr/>Agreement<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the inflow rows sales agreement row.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderedQuantityChange</code></td>
+<td class="prop"><code>Ordered<wbr/>Quantity<wbr/>Change</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -139,7 +139,7 @@
 <td>The ordered quantity change of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChange</code></td>
+<td class="prop"><code>Price<wbr/>Change</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -147,7 +147,7 @@
 <td>The price change of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangeCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -155,7 +155,7 @@
 <td>The business key identifier of the price change currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangeCurrency</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -163,7 +163,7 @@
 <td>The price change currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangeInCompanyCurrency</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -171,7 +171,7 @@
 <td>The price change in company currency of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangeInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -179,7 +179,7 @@
 <td>The business key identifier of the price change in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangeInCompanyCurrencyCurrency</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -187,7 +187,7 @@
 <td>The price change in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>DiscountChange</code></td>
+<td class="prop"><code>Discount<wbr/>Change</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -195,7 +195,7 @@
 <td>The discount change of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalValueChange</code></td>
+<td class="prop"><code>Total<wbr/>Value<wbr/>Change</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -203,7 +203,7 @@
 <td>The total value change of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalValueChangeCurrencyId</code></td>
+<td class="prop"><code>Total<wbr/>Value<wbr/>Change<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -211,7 +211,7 @@
 <td>The business key identifier of the total value change currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalValueChangeCurrency</code></td>
+<td class="prop"><code>Total<wbr/>Value<wbr/>Change<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -219,7 +219,7 @@
 <td>The total value change currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalValueChangeInCompanyCurrency</code></td>
+<td class="prop"><code>Total<wbr/>Value<wbr/>Change<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -227,7 +227,7 @@
 <td>The total value change in company currency of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalValueChangeInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Total<wbr/>Value<wbr/>Change<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -235,7 +235,7 @@
 <td>The business key identifier of the total value change in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalValueChangeInCompanyCurrencyCurrency</code></td>
+<td class="prop"><code>Total<wbr/>Value<wbr/>Change<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -243,7 +243,7 @@
 <td>The total value change in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowTotalValue</code></td>
+<td class="prop"><code>Row<wbr/>Total<wbr/>Value</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -251,7 +251,7 @@
 <td>The row total value of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowTotalValueCurrencyId</code></td>
+<td class="prop"><code>Row<wbr/>Total<wbr/>Value<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -259,7 +259,7 @@
 <td>The business key identifier of the row total value currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowTotalValueCurrency</code></td>
+<td class="prop"><code>Row<wbr/>Total<wbr/>Value<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -267,7 +267,7 @@
 <td>The row total value currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowTotalValueInCompanyCurrency</code></td>
+<td class="prop"><code>Row<wbr/>Total<wbr/>Value<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -275,7 +275,7 @@
 <td>The row total value in company currency of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowTotalValueInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Row<wbr/>Total<wbr/>Value<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -283,7 +283,7 @@
 <td>The business key identifier of the row total value in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowTotalValueInCompanyCurrencyCurrency</code></td>
+<td class="prop"><code>Row<wbr/>Total<wbr/>Value<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -291,7 +291,7 @@
 <td>The row total value in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowTotalQuantity</code></td>
+<td class="prop"><code>Row<wbr/>Total<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -299,7 +299,7 @@
 <td>The row total quantity of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsOneTimeCost</code></td>
+<td class="prop"><code>Is<wbr/>One<wbr/>Time<wbr/>Cost</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -307,7 +307,7 @@
 <td>Whether the inflow row is a one-time cost.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesAgreementInvoicingInterval</code></td>
+<td class="prop"><code>Sales<wbr/>Agreement<wbr/>Invoicing<wbr/>Interval</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -315,7 +315,7 @@
 <td>The invoicing interval of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>TypeOfChange</code></td>
+<td class="prop"><code>Type<wbr/>Of<wbr/>Change</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -323,7 +323,7 @@
 <td>The type of change of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceDefinition</code></td>
+<td class="prop"><code>Price<wbr/>Definition</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -331,7 +331,7 @@
 <td>The price definition of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangePerInterval</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>Per<wbr/>Interval</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -339,7 +339,7 @@
 <td>The price change per interval of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangePerIntervalCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>Per<wbr/>Interval<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -347,7 +347,7 @@
 <td>The business key identifier of the price change per interval currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangePerIntervalCurrency</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>Per<wbr/>Interval<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -355,7 +355,7 @@
 <td>The price change per interval currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangePerIntervalInCompanyCurrency</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>Per<wbr/>Interval<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -363,7 +363,7 @@
 <td>The price change per interval in company currency of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangePerIntervalInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>Per<wbr/>Interval<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -371,7 +371,7 @@
 <td>The business key identifier of the price change per interval in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangePerIntervalInCompanyCurrencyCurrency</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>Per<wbr/>Interval<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -379,7 +379,7 @@
 <td>The price change per interval in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalValueChangePerInterval</code></td>
+<td class="prop"><code>Total<wbr/>Value<wbr/>Change<wbr/>Per<wbr/>Interval</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -387,7 +387,7 @@
 <td>The total value change per interval of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalValueChangePerIntervalInCompanyCurrency</code></td>
+<td class="prop"><code>Total<wbr/>Value<wbr/>Change<wbr/>Per<wbr/>Interval<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -395,7 +395,7 @@
 <td>The total value change per interval in company currency of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowTotalValuePerInterval</code></td>
+<td class="prop"><code>Row<wbr/>Total<wbr/>Value<wbr/>Per<wbr/>Interval</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -403,7 +403,7 @@
 <td>The row total value per interval of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowTotalValuePerIntervalInCompanyCurrency</code></td>
+<td class="prop"><code>Row<wbr/>Total<wbr/>Value<wbr/>Per<wbr/>Interval<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>

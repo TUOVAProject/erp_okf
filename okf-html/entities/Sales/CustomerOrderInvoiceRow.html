@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CustomerOrderInvoiceRows · Monitor ERP API</title>
+<title>CustomerOrderInvoiceRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a customer order invoice row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>CustomerOrderInvoiceRows</span>
 </header>
 <div class="layout">
@@ -81,7 +81,7 @@
 <td>The business key identifier of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>CodingId</code></td>
+<td class="prop"><code>Coding<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -97,7 +97,7 @@
 <td>The discount specified on the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>InterestInvoiceBasisId</code></td>
+<td class="prop"><code>Interest<wbr/>Invoice<wbr/>Basis<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -105,7 +105,7 @@
 <td>The business key identifier of the interest invoice basis.</td>
 </tr>
 <tr>
-<td class="prop"><code>LedgerId</code></td>
+<td class="prop"><code>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -113,7 +113,7 @@
 <td>The business key identifier to the ledger's accounts receivable of the customer order invoice.</td>
 </tr>
 <tr>
-<td class="prop"><code>OverrideStandardPrice</code></td>
+<td class="prop"><code>Override<wbr/>Standard<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -121,7 +121,7 @@
 <td>The value of the overridden standard price.</td>
 </tr>
 <tr>
-<td class="prop"><code>OverrideStandardPriceCurrencyId</code></td>
+<td class="prop"><code>Override<wbr/>Standard<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -137,7 +137,7 @@
 <td>The price of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -145,7 +145,7 @@
 <td>The business key identifier of the row's price currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceInCompanyCurrency</code></td>
+<td class="prop"><code>Price<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -153,7 +153,7 @@
 <td>The row's price in the company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -161,7 +161,7 @@
 <td>The business key identifier of the company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceIsFuturePrice</code></td>
+<td class="prop"><code>Price<wbr/>Is<wbr/>Future<wbr/>Price</code></td>
 <td class="type"><code>Boolean?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -169,7 +169,7 @@
 <td>Specifies if the price is a future price.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceLockedFromAutomaticChanges</code></td>
+<td class="prop"><code>Price<wbr/>Locked<wbr/>From<wbr/>Automatic<wbr/>Changes</code></td>
 <td class="type"><code>Boolean?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -177,7 +177,7 @@
 <td>Specifies if price is locked from automatic changes.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceOrigin</code></td>
+<td class="prop"><code>Price<wbr/>Origin</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -185,7 +185,7 @@
 <td>The price origin of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceOriginPriceListId</code></td>
+<td class="prop"><code>Price<wbr/>Origin<wbr/>Price<wbr/>List<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -193,7 +193,7 @@
 <td>The business key identifier of the row's original pricelist.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPrice</code></td>
+<td class="prop"><code>Setup<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -201,7 +201,7 @@
 <td>The setup price of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceCurrencyId</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -209,7 +209,7 @@
 <td>The business key identifier of the row's setup price currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceInCompanyCurrency</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -217,7 +217,7 @@
 <td>The row's setup price in the company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -225,7 +225,7 @@
 <td>The business key identifier of the company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>StandardPrice</code></td>
+<td class="prop"><code>Standard<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -233,7 +233,7 @@
 <td>The standard price of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>StandardPriceCurrencyId</code></td>
+<td class="prop"><code>Standard<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -241,18 +241,18 @@
 <td>The business key identifier of the row's standard price currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatRateId</code></td>
+<td class="prop"><code>Vat<wbr/>Rate<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td><a class="chip" href="../Common/VatRate.html">Vat<wbr/>Rates</a></td>
 <td></td>
 <td>The business key identifier of the row's VAT rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>DiscountRows</code></td>
-<td class="type"><code>CustomerOrderInvoiceOrderRowDiscounts[]</code></td>
+<td class="prop"><code>Discount<wbr/>Rows</code></td>
+<td class="type"><code>Customer<wbr/>Order<wbr/>Invoice<wbr/>Order<wbr/>Row<wbr/>Discounts[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CustomerOrderInvoiceOrderRowDiscount.html">CustomerOrderInvoiceOrderRowDiscounts</a></td>
+<td><a class="chip" href="CustomerOrderInvoiceOrderRowDiscount.html">Customer<wbr/>Order<wbr/>Invoice<wbr/>Order<wbr/>Row<wbr/>Discounts</a></td>
 <td>expandable, collection, since 24.8</td>
 <td>The discount rows for the row.</td>
 </tr>

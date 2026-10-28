@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ApplicationUsers · Monitor ERP API</title>
+<title>ApplicationUsers · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a queryable MONITOR application user.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>ApplicationUsers</span>
 </header>
 <div class="layout">
@@ -92,7 +92,7 @@
 <td>The description of the application user.</td>
 </tr>
 <tr>
-<td class="prop"><code>WindowsUserAccountName</code></td>
+<td class="prop"><code>Windows<wbr/>User<wbr/>Account<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -100,7 +100,7 @@
 <td>The windows account username of the application user.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsInvisible</code></td>
+<td class="prop"><code>Is<wbr/>Invisible</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>Specifies if the application user is hidden from general use in the MONITOR system.</td>
 </tr>
 <tr>
-<td class="prop"><code>DefaultRole</code></td>
+<td class="prop"><code>Default<wbr/>Role</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>The default role of the application user.</td>
 </tr>
 <tr>
-<td class="prop"><code>DefaultGroup</code></td>
+<td class="prop"><code>Default<wbr/>Group</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>The business key identifier of the application user's default permission group.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Warehouse.html">Warehouses</a></td>
@@ -132,15 +132,15 @@
 <td>The business key identifier of the application user's default warehouse. References Warehouses .</td>
 </tr>
 <tr>
-<td class="prop"><code>LanguageId</code></td>
+<td class="prop"><code>Language<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="LanguageCode.html">LanguageCodes</a></td>
+<td><a class="chip" href="LanguageCode.html">Language<wbr/>Codes</a></td>
 <td>since 2.52</td>
 <td>The business key identifier of the application user's default language code. References LanguageCodes .</td>
 </tr>
 <tr>
-<td class="prop"><code>MailAddress</code></td>
+<td class="prop"><code>Mail<wbr/>Address</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>The email address of the user.</td>
 </tr>
 <tr>
-<td class="prop"><code>MailMethod</code></td>
+<td class="prop"><code>Mail<wbr/>Method</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -157,14 +157,14 @@
 </tr>
 <tr>
 <td class="prop"><code>Printers</code></td>
-<td class="type"><code>ApplicationUserPrinters[]</code></td>
+<td class="type"><code>Application<wbr/>User<wbr/>Printers[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ApplicationUserPrinter.html">ApplicationUserPrinters</a></td>
+<td><a class="chip" href="ApplicationUserPrinter.html">Application<wbr/>User<wbr/>Printers</a></td>
 <td>expandable, collection, since 2.52</td>
 <td>The printers that have been assigned to the user.</td>
 </tr>
 <tr>
-<td class="prop"><code>DefaultPrinter</code></td>
+<td class="prop"><code>Default<wbr/>Printer</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,7 +172,7 @@
 <td>The name of the default printer that have been assigned to the user.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>External1Printer</code></td>
+<td class="prop"><code>External1<wbr/>Printer</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>The name of the external 1 printer that has been assigned to the user. <em>(Use the Printers collection with FormReportType = FilesExternal1 instead)</em></td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>External2Printer</code></td>
+<td class="prop"><code>External2<wbr/>Printer</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>The name of the external 2 printer that has been assigned to the user. <em>(Use the Printers collection with FormReportType = FilesExternal2 instead)</em></td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>External3Printer</code></td>
+<td class="prop"><code>External3<wbr/>Printer</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The name of the external 3 printer that has been assigned to the user. <em>(Use the Printers collection with FormReportType = FilesExternal3 instead)</em></td>
 </tr>
 <tr>
-<td class="prop"><code>PrintoutFormatForParcel</code></td>
+<td class="prop"><code>Printout<wbr/>Format<wbr/>For<wbr/>Parcel</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -204,23 +204,23 @@
 <td>The printout document format type that have been assigned to the user.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehousePermissions</code></td>
-<td class="type"><code>WarehousePermissions[]</code></td>
+<td class="prop"><code>Warehouse<wbr/>Permissions</code></td>
+<td class="type"><code>Warehouse<wbr/>Permissions[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="WarehousePermission.html">WarehousePermissions</a></td>
+<td><a class="chip" href="WarehousePermission.html">Warehouse<wbr/>Permissions</a></td>
 <td>expandable, collection, since 22.3</td>
 <td>The warehouse permissions that apply to the application user.</td>
 </tr>
 <tr>
-<td class="prop"><code>DefaultVoucherSeriesId</code></td>
+<td class="prop"><code>Default<wbr/>Voucher<wbr/>Series<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Accounting/VoucherSeries.html">VoucherSeries</a></td>
+<td><a class="chip" href="../Accounting/VoucherSeries.html">Voucher<wbr/>Series</a></td>
 <td>since 22.3</td>
 <td>The business key identifier of the application user's default voucher series.</td>
 </tr>
 <tr>
-<td class="prop"><code>UserAuthenticationMethod</code></td>
+<td class="prop"><code>User<wbr/>Authentication<wbr/>Method</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>

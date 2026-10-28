@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BlanketOrderSalesRows · Monitor ERP API</title>
+<title>BlanketOrderSalesRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a blanket order row for sales.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>BlanketOrderSalesRows</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the blanket order row.</td>
 </tr>
 <tr>
-<td class="prop"><code>LifeCycleState</code></td>
+<td class="prop"><code>Life<wbr/>Cycle<wbr/>State</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -84,23 +84,23 @@
 <td>The life cycle state of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentOrderId</code></td>
+<td class="prop"><code>Parent<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="BlanketOrderSales.html">BlanketOrderSales</a></td>
+<td><a class="chip" href="BlanketOrderSales.html">Blanket<wbr/>Order<wbr/>Sales</a></td>
 <td></td>
 <td>The business key identifier of the row's blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentRowId</code></td>
+<td class="prop"><code>Parent<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="BlanketOrderSalesRow.html">BlanketOrderSalesRows</a></td>
+<td><a class="chip" href="BlanketOrderSalesRow.html">Blanket<wbr/>Order<wbr/>Sales<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the row's parent row.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerPartNumber</code></td>
+<td class="prop"><code>Customer<wbr/>Part<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>The position of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderRowType</code></td>
+<td class="prop"><code>Order<wbr/>Row<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>The order row type of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -140,7 +140,7 @@
 <td>The part of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartRowType</code></td>
+<td class="prop"><code>Part<wbr/>Row<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The quantity of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitId</code></td>
+<td class="prop"><code>Unit<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Unit.html">Units</a></td>
@@ -180,7 +180,7 @@
 <td>The price of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -188,7 +188,7 @@
 <td>The business key identifier of the row's price currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceCurrency</code></td>
+<td class="prop"><code>Price<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -196,15 +196,15 @@
 <td>The price currency of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceOriginPriceListId</code></td>
+<td class="prop"><code>Price<wbr/>Origin<wbr/>Price<wbr/>List<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/PriceList.html">PriceLists</a></td>
+<td><a class="chip" href="../Common/PriceList.html">Price<wbr/>Lists</a></td>
 <td></td>
 <td>The business key identifier of the row's price origin price list.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceLockedFromAutomaticChanges</code></td>
+<td class="prop"><code>Price<wbr/>Locked<wbr/>From<wbr/>Automatic<wbr/>Changes</code></td>
 <td class="type"><code>Boolean?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>Specifies if the row have price locked from automatic changes.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceIsFuturePrice</code></td>
+<td class="prop"><code>Price<wbr/>Is<wbr/>Future<wbr/>Price</code></td>
 <td class="type"><code>Boolean?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -220,7 +220,7 @@
 <td>Specifies if the row's price is future price.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceInCompanyCurrency</code></td>
+<td class="prop"><code>Price<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -228,7 +228,7 @@
 <td>The price in company currency of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -236,7 +236,7 @@
 <td>The business key identifier of the row's company currency used in price in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceInCompanyCurrencyCurrency</code></td>
+<td class="prop"><code>Price<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -252,7 +252,7 @@
 <td>The discount of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPrice</code></td>
+<td class="prop"><code>Setup<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -260,7 +260,7 @@
 <td>The setup price of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceCurrencyId</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -268,7 +268,7 @@
 <td>The business key identifier of the row's setup price currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceCurrency</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -276,7 +276,7 @@
 <td>The setup price currency of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceInCompanyCurrency</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -284,23 +284,23 @@
 <td>The setup price in company currency of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatRateId</code></td>
+<td class="prop"><code>Vat<wbr/>Rate<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td><a class="chip" href="../Common/VatRate.html">Vat<wbr/>Rates</a></td>
 <td></td>
 <td>The business key identifier of the row's VAT rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatRate</code></td>
-<td class="type"><code>VatRates</code></td>
+<td class="prop"><code>Vat<wbr/>Rate</code></td>
+<td class="type"><code>Vat<wbr/>Rates</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td><a class="chip" href="../Common/VatRate.html">Vat<wbr/>Rates</a></td>
 <td>expandable</td>
 <td>The VAT rate of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShowFreeTextIn</code></td>
+<td class="prop"><code>Show<wbr/>Free<wbr/>Text<wbr/>In</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -308,15 +308,15 @@
 <td>Specifies where the row's free text should be visible.</td>
 </tr>
 <tr>
-<td class="prop"><code>ValidThrough</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Valid<wbr/>Through</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The requirement date of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>RevisionId</code></td>
+<td class="prop"><code>Revision<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Revision.html">Revisions</a></td>
@@ -332,7 +332,7 @@
 <td>The revision of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>FreeTextHtml</code></td>
+<td class="prop"><code>Free<wbr/>Text<wbr/>Html</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -340,7 +340,7 @@
 <td>The free text in HTML format of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>FreeText</code></td>
+<td class="prop"><code>Free<wbr/>Text</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -348,7 +348,7 @@
 <td>The free text of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ConversionFactor</code></td>
+<td class="prop"><code>Conversion<wbr/>Factor</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -356,7 +356,7 @@
 <td>The conversion factor of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>QuantityRatio</code></td>
+<td class="prop"><code>Quantity<wbr/>Ratio</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -364,7 +364,7 @@
 <td>The quantity ratio of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>AdditionalRowDescription</code></td>
+<td class="prop"><code>Additional<wbr/>Row<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -372,7 +372,7 @@
 <td>The additional row description of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>AlternatePreparationCode</code></td>
+<td class="prop"><code>Alternate<wbr/>Preparation<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -380,7 +380,7 @@
 <td>The alternate preparation code of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowsGoodsLabel</code></td>
+<td class="prop"><code>Rows<wbr/>Goods<wbr/>Label</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>

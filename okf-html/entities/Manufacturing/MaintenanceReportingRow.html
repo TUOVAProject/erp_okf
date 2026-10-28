@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MaintenanceReportingRows · Monitor ERP API</title>
+<title>MaintenanceReportingRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a maintenance reporting row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>MaintenanceReportingRows</span>
 </header>
 <div class="layout">
@@ -92,7 +92,7 @@
 <td>The comment of the maintenance reporting row.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -108,7 +108,7 @@
 <td>The instruction of the maintenance reporting row.</td>
 </tr>
 <tr>
-<td class="prop"><code>InstructionId</code></td>
+<td class="prop"><code>Instruction<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -124,15 +124,15 @@
 <td>The translated description of the maintenance reporting row.</td>
 </tr>
 <tr>
-<td class="prop"><code>MaintenanceReportingSelectionRowId</code></td>
+<td class="prop"><code>Maintenance<wbr/>Reporting<wbr/>Selection<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="MaintenanceReportingSelectionRow.html">MaintenanceReportingSelectionRows</a></td>
+<td><a class="chip" href="MaintenanceReportingSelectionRow.html">Maintenance<wbr/>Reporting<wbr/>Selection<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the maintenance reporting selection row that the maintenance reporting row relates to.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowIndex</code></td>
+<td class="prop"><code>Row<wbr/>Index</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -148,8 +148,8 @@
 <td>The boolean value of the maintenance reporting row.</td>
 </tr>
 <tr>
-<td class="prop"><code>DateTimeValue</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Date<wbr/>Time<wbr/>Value</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
@@ -164,7 +164,7 @@
 <td>The numeric value of the maintenance reporting row.</td>
 </tr>
 <tr>
-<td class="prop"><code>TextValue</code></td>
+<td class="prop"><code>Text<wbr/>Value</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>The type of the value stored in the maintenance reporting row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportingStatus</code></td>
+<td class="prop"><code>Reporting<wbr/>Status</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>The status of the value stored in the maintenance reporting row.</td>
 </tr>
 <tr>
-<td class="prop"><code>MinValue</code></td>
+<td class="prop"><code>Min<wbr/>Value</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The minimum tolerance value of the maintenance reporting row.</td>
 </tr>
 <tr>
-<td class="prop"><code>MaxValue</code></td>
+<td class="prop"><code>Max<wbr/>Value</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>The setpoint value of the maintenance reporting row.</td>
 </tr>
 <tr>
-<td class="prop"><code>MasterToolId</code></td>
+<td class="prop"><code>Master<wbr/>Tool<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -220,15 +220,15 @@
 <td>The business key identifier of the tool that the maintenance reporting row relates to.</td>
 </tr>
 <tr>
-<td class="prop"><code>MasterToolProductRecordId</code></td>
+<td class="prop"><code>Master<wbr/>Tool<wbr/>Product<wbr/>Record<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Inventory/ProductRecord.html">ProductRecords</a></td>
+<td><a class="chip" href="../Inventory/ProductRecord.html">Product<wbr/>Records</a></td>
 <td></td>
 <td>The business key identifier of the tool's product record that the maintenance reporting row relates to.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitId</code></td>
+<td class="prop"><code>Unit<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Unit.html">Units</a></td>

@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BlanketOrderPurchases · Monitor ERP API</title>
+<title>BlanketOrderPurchases · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a blanket order for purchase.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Purchase.html">Purchase</a><span class="sep">/</span>BlanketOrderPurchases</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>LifeCycleState</code></td>
+<td class="prop"><code>Life<wbr/>Cycle<wbr/>State</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -84,7 +84,7 @@
 <td>The life cycle state of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderNumber</code></td>
+<td class="prop"><code>Order<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -92,15 +92,15 @@
 <td>The human readable identifier of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderTypeId</code></td>
+<td class="prop"><code>Order<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="BlanketOrderPurchaseType.html">BlanketOrderPurchaseTypes</a></td>
+<td><a class="chip" href="BlanketOrderPurchaseType.html">Blanket<wbr/>Order<wbr/>Purchase<wbr/>Types</a></td>
 <td></td>
 <td>The business key identifier of the blanket order's type.</td>
 </tr>
 <tr>
-<td class="prop"><code>BusinessContactId</code></td>
+<td class="prop"><code>Business<wbr/>Contact<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Supplier.html">Suppliers</a></td>
@@ -108,7 +108,7 @@
 <td>The business key identifier of the blanket order's supplier.</td>
 </tr>
 <tr>
-<td class="prop"><code>SuppliersOrderNumber</code></td>
+<td class="prop"><code>Suppliers<wbr/>Order<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,23 +116,23 @@
 <td>The supplier's order number of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>BusinessContactReferenceId</code></td>
+<td class="prop"><code>Business<wbr/>Contact<wbr/>Reference<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">Business<wbr/>Contact<wbr/>References</a></td>
 <td></td>
 <td>The business key identifier of the blanket order's business contact reference.</td>
 </tr>
 <tr>
-<td class="prop"><code>BusinessContactReference</code></td>
-<td class="type"><code>BusinessContactReferences</code></td>
+<td class="prop"><code>Business<wbr/>Contact<wbr/>Reference</code></td>
+<td class="type"><code>Business<wbr/>Contact<wbr/>References</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/BusinessContactReference.html">BusinessContactReferences</a></td>
+<td><a class="chip" href="../Common/BusinessContactReference.html">Business<wbr/>Contact<wbr/>References</a></td>
 <td>expandable</td>
 <td>The business contact reference of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>BusinessContactReferenceName</code></td>
+<td class="prop"><code>Business<wbr/>Contact<wbr/>Reference<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The business contact reference name of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>OurReferenceId</code></td>
+<td class="prop"><code>Our<wbr/>Reference<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -148,7 +148,7 @@
 <td>The business key identifier of the blanket order's our reference.</td>
 </tr>
 <tr>
-<td class="prop"><code>OurReference</code></td>
+<td class="prop"><code>Our<wbr/>Reference</code></td>
 <td class="type"><code>Persons</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -156,7 +156,7 @@
 <td>Our reference of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>OurReferenceName</code></td>
+<td class="prop"><code>Our<wbr/>Reference<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -164,7 +164,7 @@
 <td>Our reference name of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ValidationPeriod</code></td>
+<td class="prop"><code>Validation<wbr/>Period</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,16 +172,16 @@
 <td>Specifies the validation period of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ValidFrom</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Valid<wbr/>From</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The valid from date of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ValidThrough</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Valid<wbr/>Through</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>The status of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CategoryString</code></td>
+<td class="prop"><code>Category<wbr/>String</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>The category string of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>UseForwardRate</code></td>
+<td class="prop"><code>Use<wbr/>Forward<wbr/>Rate</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -220,7 +220,7 @@
 <td>Specifies if the blanket order use forward rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExchangeRate</code></td>
+<td class="prop"><code>Exchange<wbr/>Rate</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -228,7 +228,7 @@
 <td>The exchange rate of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyId</code></td>
+<td class="prop"><code>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -244,15 +244,15 @@
 <td>The currency of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Order<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The order date of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>DefaultOrderPrintoutVia</code></td>
+<td class="prop"><code>Default<wbr/>Order<wbr/>Printout<wbr/>Via</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -260,7 +260,7 @@
 <td>The default order printout method of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>MailingAddressId</code></td>
+<td class="prop"><code>Mailing<wbr/>Address<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Address.html">Addresses</a></td>
@@ -268,7 +268,7 @@
 <td>The business key identifier of the blanket order's mailing address.</td>
 </tr>
 <tr>
-<td class="prop"><code>MailingAddress</code></td>
+<td class="prop"><code>Mailing<wbr/>Address</code></td>
 <td class="type"><code>Addresses</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Address.html">Addresses</a></td>
@@ -276,7 +276,7 @@
 <td>The mailing address of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>InternalCommentId</code></td>
+<td class="prop"><code>Internal<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -284,7 +284,7 @@
 <td>The business key identifier of the blanket order's internal comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>InternalComment</code></td>
+<td class="prop"><code>Internal<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -292,7 +292,7 @@
 <td>The internal comment of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExternalCommentId</code></td>
+<td class="prop"><code>External<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -300,7 +300,7 @@
 <td>The business key identifier of the blanket order's external comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExternalComment</code></td>
+<td class="prop"><code>External<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -308,26 +308,26 @@
 <td>The external comment of the blanket order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyExchangeTypeId</code></td>
+<td class="prop"><code>Currency<wbr/>Exchange<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">Currency<wbr/>Exchange<wbr/>Types</a></td>
 <td></td>
 <td>The business key identifier of the blanket order's currency exchange type.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyExchangeType</code></td>
-<td class="type"><code>CurrencyExchangeTypes</code></td>
+<td class="prop"><code>Currency<wbr/>Exchange<wbr/>Type</code></td>
+<td class="type"><code>Currency<wbr/>Exchange<wbr/>Types</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">Currency<wbr/>Exchange<wbr/>Types</a></td>
 <td>expandable</td>
 <td>The currency exchange type of the blanket order.</td>
 </tr>
 <tr>
 <td class="prop"><code>Rows</code></td>
-<td class="type"><code>BlanketOrderPurchaseRows[]</code></td>
+<td class="type"><code>Blanket<wbr/>Order<wbr/>Purchase<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="BlanketOrderPurchaseRow.html">BlanketOrderPurchaseRows</a></td>
+<td><a class="chip" href="BlanketOrderPurchaseRow.html">Blanket<wbr/>Order<wbr/>Purchase<wbr/>Rows</a></td>
 <td>expandable, collection</td>
 <td>The rows of the blanket order.</td>
 </tr>

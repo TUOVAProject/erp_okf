@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WithdrawalInformationRow · Monitor ERP API</title>
+<title>WithdrawalInformationRow · Monitor ERP API Data Model</title>
 <meta name="description" content="Used to provide the suggested withdrawal information of a customer order row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>WithdrawalInformationRow</span>
 </header>
 <div class="layout">
@@ -66,31 +66,31 @@
 </thead>
 <tbody>
 <tr>
-<td class="prop"><code>CustomerOrderRowId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CustomerOrderRow.html">CustomerOrderRows</a></td>
+<td><a class="chip" href="CustomerOrderRow.html">Customer<wbr/>Order<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the customer order row that the withdrawal information is for.</td>
 </tr>
 <tr>
-<td class="prop"><code>PickingListId</code></td>
+<td class="prop"><code>Picking<wbr/>List<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="SalesPickingList.html">SalesPickingLists</a></td>
+<td><a class="chip" href="SalesPickingList.html">Sales<wbr/>Picking<wbr/>Lists</a></td>
 <td></td>
 <td>The business key identifier of the picking list that the withdrawal information is for.</td>
 </tr>
 <tr>
 <td class="prop"><code>Locations</code></td>
-<td class="type"><code>WithdrawalInformationLocation[]</code></td>
+<td class="type"><code>Withdrawal<wbr/>Information<wbr/>Location[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="WithdrawalInformationLocation.html">WithdrawalInformationLocation</a></td>
+<td><a class="chip" href="WithdrawalInformationLocation.html">Withdrawal<wbr/>Information<wbr/>Location</a></td>
 <td>collection</td>
 <td>The location withdrawal information.</td>
 </tr>
 <tr>
-<td class="prop"><code>SuggestedQuantity</code></td>
+<td class="prop"><code>Suggested<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -98,10 +98,10 @@
 <td>The suggested quantity to withdraw.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentCustomerOrderRowId</code></td>
+<td class="prop"><code>Parent<wbr/>Customer<wbr/>Order<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CustomerOrderRow.html">CustomerOrderRows</a></td>
+<td><a class="chip" href="CustomerOrderRow.html">Customer<wbr/>Order<wbr/>Rows</a></td>
 <td>since 22.2</td>
 <td>The business key identifier of the customer order row's parent row that the withdrawal information is for.</td>
 </tr>

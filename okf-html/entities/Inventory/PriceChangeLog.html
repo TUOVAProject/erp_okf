@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PriceChangeLogs · Monitor ERP API</title>
+<title>PriceChangeLogs · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a price change log entity.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>PriceChangeLogs</span>
 </header>
 <div class="layout">
@@ -83,7 +83,7 @@
 <td>The context of the price change in the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceType</code></td>
+<td class="prop"><code>Price<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -91,23 +91,23 @@
 <td>The type of the price in the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceListId</code></td>
+<td class="prop"><code>Price<wbr/>List<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/PriceList.html">PriceLists</a></td>
+<td><a class="chip" href="../Common/PriceList.html">Price<wbr/>Lists</a></td>
 <td></td>
 <td>The business key identifier of the price changes log's price list.</td>
 </tr>
 <tr>
 <td class="prop"><code>Timestamp</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The timestamp of the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>UserCode</code></td>
+<td class="prop"><code>User<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -115,7 +115,7 @@
 <td>The user code of the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>NewPriceAmount</code></td>
+<td class="prop"><code>New<wbr/>Price<wbr/>Amount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -123,7 +123,7 @@
 <td>The new price amount of the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>NewPriceCurrencyId</code></td>
+<td class="prop"><code>New<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -131,7 +131,7 @@
 <td>The business key identifier for the new price currency of the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>OldPriceAmount</code></td>
+<td class="prop"><code>Old<wbr/>Price<wbr/>Amount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -139,7 +139,7 @@
 <td>The old price amount of the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>OldPriceCurrencyId</code></td>
+<td class="prop"><code>Old<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -155,7 +155,7 @@
 <td>The balance of the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Part.html">Parts</a></td>
@@ -163,7 +163,7 @@
 <td>The part id of the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalculationId</code></td>
+<td class="prop"><code>Calculation<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -171,7 +171,7 @@
 <td>The calculation id of the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>SupplierId</code></td>
+<td class="prop"><code>Supplier<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Purchase/Supplier.html">Suppliers</a></td>
@@ -179,7 +179,7 @@
 <td>The supplier id of the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerId</code></td>
+<td class="prop"><code>Customer<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Sales/Customer.html">Customers</a></td>
@@ -187,7 +187,7 @@
 <td>The customer id of the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>StaggeredQuantity</code></td>
+<td class="prop"><code>Staggered<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -195,7 +195,7 @@
 <td>The staggered quantity of the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsSetupPrice</code></td>
+<td class="prop"><code>Is<wbr/>Setup<wbr/>Price</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -211,7 +211,7 @@
 <td>The discount of the price change log.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsExportedToManagementAccounting</code></td>
+<td class="prop"><code>Is<wbr/>Exported<wbr/>To<wbr/>Management<wbr/>Accounting</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>

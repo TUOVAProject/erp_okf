@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ManufacturingPickingLists · Monitor ERP API</title>
+<title>ManufacturingPickingLists · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a manufacturing picking list.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>ManufacturingPickingLists</span>
 </header>
 <div class="layout">
@@ -83,15 +83,15 @@
 <td>The human readable identifier of the picking list.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreatedByApplicationUserId</code></td>
+<td class="prop"><code>Created<wbr/>By<wbr/>Application<wbr/>User<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the application user that created the picking list.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreatedByPersonId</code></td>
+<td class="prop"><code>Created<wbr/>By<wbr/>Person<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -99,23 +99,23 @@
 <td>The business key identifier of the person that created the picking list.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreatedTimestamp</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Created<wbr/>Timestamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The date the picking list was created.</td>
 </tr>
 <tr>
-<td class="prop"><code>PrintedByApplicationUserId</code></td>
+<td class="prop"><code>Printed<wbr/>By<wbr/>Application<wbr/>User<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the application user that printed the picking list.</td>
 </tr>
 <tr>
-<td class="prop"><code>PrintedByPersonId</code></td>
+<td class="prop"><code>Printed<wbr/>By<wbr/>Person<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -123,8 +123,8 @@
 <td>The business key identifier of the person that printed the picking list.</td>
 </tr>
 <tr>
-<td class="prop"><code>PrintedTimestamp</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Printed<wbr/>Timestamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
@@ -155,7 +155,7 @@
 <td>The sorting for the picking list.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -172,9 +172,9 @@
 </tr>
 <tr>
 <td class="prop"><code>Materials</code></td>
-<td class="type"><code>ManufacturingPickingListMaterials[]</code></td>
+<td class="type"><code>Manufacturing<wbr/>Picking<wbr/>List<wbr/>Materials[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingPickingListMaterial.html">ManufacturingPickingListMaterials</a></td>
+<td><a class="chip" href="ManufacturingPickingListMaterial.html">Manufacturing<wbr/>Picking<wbr/>List<wbr/>Materials</a></td>
 <td>collection</td>
 <td>The picking lists materials</td>
 </tr>

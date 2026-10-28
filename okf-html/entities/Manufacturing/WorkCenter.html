@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WorkCenters · Monitor ERP API</title>
+<title>WorkCenters · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a manufacturing work center.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>WorkCenters</span>
 </header>
 <div class="layout">
@@ -92,7 +92,7 @@
 <td>The translated description of the work center.</td>
 </tr>
 <tr>
-<td class="prop"><code>OperationDescription</code></td>
+<td class="prop"><code>Operation<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>The work center type.</td>
 </tr>
 <tr>
-<td class="prop"><code>DepartmentId</code></td>
+<td class="prop"><code>Department<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>The business key identifier of the department that the work center belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -132,7 +132,7 @@
 <td>The warehouse that the work center belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -148,23 +148,23 @@
 <td>The work center comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingPrintSettings</code></td>
-<td class="type"><code>WorkCenterManufacturingPrintSettings[]</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Print<wbr/>Settings</code></td>
+<td class="type"><code>Work<wbr/>Center<wbr/>Manufacturing<wbr/>Print<wbr/>Settings[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="WorkCenterManufacturingPrintSettings.html">WorkCenterManufacturingPrintSettings</a></td>
+<td><a class="chip" href="WorkCenterManufacturingPrintSettings.html">Work<wbr/>Center<wbr/>Manufacturing<wbr/>Print<wbr/>Settings</a></td>
 <td>expandable, collection, since 2.28</td>
 <td>The print settings for manufacturing order documents.</td>
 </tr>
 <tr>
-<td class="prop"><code>CostFactorGroups</code></td>
-<td class="type"><code>WorkCenterCostFactorGroups[]</code></td>
+<td class="prop"><code>Cost<wbr/>Factor<wbr/>Groups</code></td>
+<td class="type"><code>Work<wbr/>Center<wbr/>Cost<wbr/>Factor<wbr/>Groups[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="WorkCenterCostFactorGroup.html">WorkCenterCostFactorGroups</a></td>
+<td><a class="chip" href="WorkCenterCostFactorGroup.html">Work<wbr/>Center<wbr/>Cost<wbr/>Factor<wbr/>Groups</a></td>
 <td>expandable, collection, since 2.46</td>
 <td>The cost factor groups that belong to the work center.</td>
 </tr>
 <tr>
-<td class="prop"><code>TimePrecision</code></td>
+<td class="prop"><code>Time<wbr/>Precision</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,15 +172,15 @@
 <td>Time precision for the work center</td>
 </tr>
 <tr>
-<td class="prop"><code>BasicTime</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Basic<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td>since 24.3</td>
 <td>Basic time (capacity per day)</td>
 </tr>
 <tr>
-<td class="prop"><code>NumberOfPlanningUnits</code></td>
+<td class="prop"><code>Number<wbr/>Of<wbr/>Planning<wbr/>Units</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>Number of planning units, can be machines or persons depending on the work center type.</td>
 </tr>
 <tr>
-<td class="prop"><code>NumberOfFlows</code></td>
+<td class="prop"><code>Number<wbr/>Of<wbr/>Flows</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>Number of machines per order or number of persons per order depending on the work center type.</td>
 </tr>
 <tr>
-<td class="prop"><code>AvailabilityFactor</code></td>
+<td class="prop"><code>Availability<wbr/>Factor</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>Availability factor in percent for the work center.</td>
 </tr>
 <tr>
-<td class="prop"><code>SimulationFactor</code></td>
+<td class="prop"><code>Simulation<wbr/>Factor</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>Simulation factor in percent for the work center.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitStaffFactor</code></td>
+<td class="prop"><code>Unit<wbr/>Staff<wbr/>Factor</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -220,7 +220,7 @@
 <td>Indicates how large (in percent) a share of the operating unit time that is staffed for the work center.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupStaffFactor</code></td>
+<td class="prop"><code>Setup<wbr/>Staff<wbr/>Factor</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -229,17 +229,17 @@
 </tr>
 <tr>
 <td class="prop"><code>Employees</code></td>
-<td class="type"><code>PersonWorkCenters[]</code></td>
+<td class="type"><code>Person<wbr/>Work<wbr/>Centers[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../TimeRecording/PersonWorkCenter.html">PersonWorkCenters</a></td>
+<td><a class="chip" href="../TimeRecording/PersonWorkCenter.html">Person<wbr/>Work<wbr/>Centers</a></td>
 <td>expandable, collection, since 24.3</td>
 <td>Specifies the persons that should be allowed to select work from this work center.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProductionCalendarExceptions</code></td>
-<td class="type"><code>ProductionCalendarExceptions[]</code></td>
+<td class="prop"><code>Production<wbr/>Calendar<wbr/>Exceptions</code></td>
+<td class="type"><code>Production<wbr/>Calendar<wbr/>Exceptions[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProductionCalendarException.html">ProductionCalendarExceptions</a></td>
+<td><a class="chip" href="ProductionCalendarException.html">Production<wbr/>Calendar<wbr/>Exceptions</a></td>
 <td>expandable, collection, since 24.3</td>
 <td>Specifies the production calendar exceptions for this work center.</td>
 </tr>

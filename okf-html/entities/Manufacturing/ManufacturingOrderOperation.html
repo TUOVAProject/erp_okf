@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ManufacturingOrderOperations · Monitor ERP API</title>
+<title>ManufacturingOrderOperations · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a manufacturing order operation.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>ManufacturingOrderOperations</span>
 </header>
 <div class="layout">
@@ -84,15 +84,15 @@
 <td>The priority of the manufacturing order operation. Can be null.</td>
 </tr>
 <tr>
-<td class="prop"><code>WorkCenterId</code></td>
+<td class="prop"><code>Work<wbr/>Center<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="WorkCenter.html">WorkCenters</a></td>
+<td><a class="chip" href="WorkCenter.html">Work<wbr/>Centers</a></td>
 <td></td>
 <td>The business key identifier of the manufacturing order operation's work center.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Inventory/Part.html">Part</a></td>
@@ -108,7 +108,7 @@
 <td>The manufacturing order operation's part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedQuantity</code></td>
+<td class="prop"><code>Planned<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>The planned quantity of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedQuantity</code></td>
+<td class="prop"><code>Reported<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>The reported quantity of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>RestQuantity</code></td>
+<td class="prop"><code>Rest<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,23 +132,23 @@
 <td>The remaining quantity of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedSetupTime</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Reported<wbr/>Setup<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The reported setup time of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedUnitTime</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Reported<wbr/>Unit<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The reported unit time of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>RejectedQuantity</code></td>
+<td class="prop"><code>Rejected<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The rejected quantity of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>WipLocation</code></td>
+<td class="prop"><code>Wip<wbr/>Location</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -164,7 +164,7 @@
 <td>The work-in-progress location of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportNumber</code></td>
+<td class="prop"><code>Report<wbr/>Number</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,7 +172,7 @@
 <td>The report number of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>InstructionCommentId</code></td>
+<td class="prop"><code>Instruction<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -180,7 +180,7 @@
 <td>The business key identifier of the manufacturing order operation's instruction comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>InstructionComment</code></td>
+<td class="prop"><code>Instruction<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -188,23 +188,23 @@
 <td>The manufacturing order operation's instruction comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingOrderId</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td><a class="chip" href="ManufacturingOrder.html">Manufacturing<wbr/>Orders</a></td>
 <td></td>
 <td>The business key identifier of the manufacturing order that the manufacturing order operation belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingOrderNodeId</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Order<wbr/>Node<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrderNode.html">ManufacturingOrderNodes</a></td>
+<td><a class="chip" href="ManufacturingOrderNode.html">Manufacturing<wbr/>Order<wbr/>Nodes</a></td>
 <td>since 2.30</td>
 <td>The business key identifier of the manufacturing order node that the manufacturing order operation belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>OperationNumber</code></td>
+<td class="prop"><code>Operation<wbr/>Number</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -212,66 +212,66 @@
 <td>The operation number of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedSetupTime</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Planned<wbr/>Setup<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The planned setup time of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedUnitTime</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Planned<wbr/>Unit<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The planned unit time of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedStartDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Planned<wbr/>Start<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td>since 2.27</td>
 <td>The planned start date of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedFinishDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Planned<wbr/>Finish<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td>since 2.27</td>
 <td>The planned finish date of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActualStartDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Actual<wbr/>Start<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.27</td>
 <td>The actual (reported) start date of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActualFinishDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Actual<wbr/>Finish<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.27</td>
 <td>The actual (reported) finish date of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>OperationRowId</code></td>
+<td class="prop"><code>Operation<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="OperationRow.html">OperationRows</a></td>
+<td><a class="chip" href="OperationRow.html">Operation<wbr/>Rows</a></td>
 <td>since 2.41</td>
 <td>The business key identifier of the operation row that the manufacturing order operation is based on. Can be null if the manufacturing order operation is added manually.</td>
 </tr>
 <tr>
-<td class="prop"><code>OperationRow</code></td>
-<td class="type"><code>OperationRows</code></td>
+<td class="prop"><code>Operation<wbr/>Row</code></td>
+<td class="type"><code>Operation<wbr/>Rows</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="OperationRow.html">OperationRows</a></td>
+<td><a class="chip" href="OperationRow.html">Operation<wbr/>Rows</a></td>
 <td>expandable, since 2.41</td>
 <td>The operation row that the manufacturing order operation is based on.</td>
 </tr>
@@ -284,7 +284,7 @@
 <td>The status of the manufacturing order operation's status.</td>
 </tr>
 <tr>
-<td class="prop"><code>WorkshopOperationStatus</code></td>
+<td class="prop"><code>Workshop<wbr/>Operation<wbr/>Status</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -292,7 +292,7 @@
 <td>The workshop status of the manufacturing order operation's status.</td>
 </tr>
 <tr>
-<td class="prop"><code>BundleId</code></td>
+<td class="prop"><code>Bundle<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -308,31 +308,31 @@
 <td>The translated description of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>ControlDataRows</code></td>
-<td class="type"><code>ManufacturingOrderOperationControlDataRows[]</code></td>
+<td class="prop"><code>Control<wbr/>Data<wbr/>Rows</code></td>
+<td class="type"><code>Manufacturing<wbr/>Order<wbr/>Operation<wbr/>Control<wbr/>Data<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrderOperationControlDataRow.html">ManufacturingOrderOperationControlDataRows</a></td>
+<td><a class="chip" href="ManufacturingOrderOperationControlDataRow.html">Manufacturing<wbr/>Order<wbr/>Operation<wbr/>Control<wbr/>Data<wbr/>Rows</a></td>
 <td>expandable, collection, since 22.5</td>
 <td>The control data rows.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderQuantityId</code></td>
+<td class="prop"><code>Order<wbr/>Quantity<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="OrderQuantityManufacturingOrderOperation.html">OrderQuantityManufacturingOrderOperations</a></td>
+<td><a class="chip" href="OrderQuantityManufacturingOrderOperation.html">Order<wbr/>Quantity<wbr/>Manufacturing<wbr/>Order<wbr/>Operations</a></td>
 <td>since 22.6</td>
 <td>The business key identifier of order quantity.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderQuantity</code></td>
-<td class="type"><code>OrderQuantityManufacturingOrderOperations</code></td>
+<td class="prop"><code>Order<wbr/>Quantity</code></td>
+<td class="type"><code>Order<wbr/>Quantity<wbr/>Manufacturing<wbr/>Order<wbr/>Operations</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="OrderQuantityManufacturingOrderOperation.html">OrderQuantityManufacturingOrderOperations</a></td>
+<td><a class="chip" href="OrderQuantityManufacturingOrderOperation.html">Order<wbr/>Quantity<wbr/>Manufacturing<wbr/>Order<wbr/>Operations</a></td>
 <td>expandable, since 22.6</td>
 <td>Order quantity that holds the partial quantities.</td>
 </tr>
 <tr>
-<td class="prop"><code>ClearedStatus</code></td>
+<td class="prop"><code>Cleared<wbr/>Status</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -340,7 +340,7 @@
 <td>Specifies if the status is cleared.</td>
 </tr>
 <tr>
-<td class="prop"><code>OnPriorityPlan</code></td>
+<td class="prop"><code>On<wbr/>Priority<wbr/>Plan</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -348,39 +348,39 @@
 <td>Indicates if the operation is shown in priority plan.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManualOperationStatusId</code></td>
+<td class="prop"><code>Manual<wbr/>Operation<wbr/>Status<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ManualOperationStatus.html">ManualOperationStatuses</a></td>
+<td><a class="chip" href="ManualOperationStatus.html">Manual<wbr/>Operation<wbr/>Statuses</a></td>
 <td>since 25.2</td>
 <td>The business key identifier of manual operation status.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManualOperationStatus</code></td>
-<td class="type"><code>ManualOperationStatuses</code></td>
+<td class="prop"><code>Manual<wbr/>Operation<wbr/>Status</code></td>
+<td class="type"><code>Manual<wbr/>Operation<wbr/>Statuses</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManualOperationStatus.html">ManualOperationStatuses</a></td>
+<td><a class="chip" href="ManualOperationStatus.html">Manual<wbr/>Operation<wbr/>Statuses</a></td>
 <td>expandable, since 25.2</td>
 <td>The manual operation status.</td>
 </tr>
 <tr>
 <td class="prop"><code>Materials</code></td>
-<td class="type"><code>ManufacturingOrderMaterials[]</code></td>
+<td class="type"><code>Manufacturing<wbr/>Order<wbr/>Materials[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrderMaterial.html">ManufacturingOrderMaterials</a></td>
+<td><a class="chip" href="ManufacturingOrderMaterial.html">Manufacturing<wbr/>Order<wbr/>Materials</a></td>
 <td>expandable, collection, since 24.4</td>
 <td>The manufacturing order materials of the operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>FixedLeadTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Fixed<wbr/>Lead<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 24.6</td>
 <td>The fixed lead time of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitStaffingFactor</code></td>
+<td class="prop"><code>Unit<wbr/>Staffing<wbr/>Factor</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -388,7 +388,7 @@
 <td>The unit staffing factor of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupStaffingFactor</code></td>
+<td class="prop"><code>Setup<wbr/>Staffing<wbr/>Factor</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -396,7 +396,7 @@
 <td>The setup staffing factor of the manufacturing order operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsPlannedTimeCalculated</code></td>
+<td class="prop"><code>Is<wbr/>Planned<wbr/>Time<wbr/>Calculated</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>

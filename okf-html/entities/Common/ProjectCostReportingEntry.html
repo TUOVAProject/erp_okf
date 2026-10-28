@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ProjectCostReportingEntries · Monitor ERP API</title>
+<title>ProjectCostReportingEntries · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a project cost reporting entry.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>ProjectCostReportingEntries</span>
 </header>
 <div class="layout">
@@ -82,7 +82,7 @@
 <td>The human readable identifier of the project cost reporting entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectId</code></td>
+<td class="prop"><code>Project<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -90,7 +90,7 @@
 <td>The business key identifier of the project linked to the project cost reporting entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsIncome</code></td>
+<td class="prop"><code>Is<wbr/>Income</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -98,7 +98,7 @@
 <td>Specifies if the project cost reporting entry concerns income.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActivityId</code></td>
+<td class="prop"><code>Activity<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -106,7 +106,7 @@
 <td>The business key identifier of the project activity linked to the project cost reporting entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedTimeInHours</code></td>
+<td class="prop"><code>Reported<wbr/>Time<wbr/>In<wbr/>Hours</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -114,7 +114,7 @@
 <td>The time in hours reported by the project cost reporting entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>CostTypeId</code></td>
+<td class="prop"><code>Cost<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -130,15 +130,15 @@
 <td>The amount reported by the project cost reporting entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportingDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Reporting<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The date of the project cost reporting entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>OurReferenceId</code></td>
+<td class="prop"><code>Our<wbr/>Reference<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -146,7 +146,7 @@
 <td>The business key identifier of the reference for the project cost reporting entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>OurReferenceName</code></td>
+<td class="prop"><code>Our<wbr/>Reference<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -154,7 +154,7 @@
 <td>The name of our reference for the project cost reporting entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>EmployeeId</code></td>
+<td class="prop"><code>Employee<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -162,7 +162,7 @@
 <td>The business key identifier of the employee that performed the reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>WorkCenterId</code></td>
+<td class="prop"><code>Work<wbr/>Center<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -170,7 +170,7 @@
 <td>The business key identifier of the work center the reporting concerns.</td>
 </tr>
 <tr>
-<td class="prop"><code>DepartmentId</code></td>
+<td class="prop"><code>Department<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -178,7 +178,7 @@
 <td>The business key identifier of the department the reporting concerns.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsCancelled</code></td>
+<td class="prop"><code>Is<wbr/>Cancelled</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -186,7 +186,7 @@
 <td>Specifies if the project cost reporting entry is cancelled.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -202,7 +202,7 @@
 <td>The comment of the project cost reporting entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerReference</code></td>
+<td class="prop"><code>Customer<wbr/>Reference</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -210,7 +210,7 @@
 <td>Customer reference for the project cost reporting entry. Entered per log in Authorize/adjust and copied from the work recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderNumber</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -218,7 +218,7 @@
 <td>Customer order number for the project cost reporting entry. Entered per log in Authorize/adjust and copied from the work recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>GoodsMark</code></td>
+<td class="prop"><code>Goods<wbr/>Mark</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -226,7 +226,7 @@
 <td>Goods mark for the project cost reporting entry. Entered per log in Authorize/adjust and copied from the work recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>InternalCommentId</code></td>
+<td class="prop"><code>Internal<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -234,7 +234,7 @@
 <td>The business key identifier of the internal comment for the project cost reporting entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>InternalComment</code></td>
+<td class="prop"><code>Internal<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Comment.html">Comments</a></td>

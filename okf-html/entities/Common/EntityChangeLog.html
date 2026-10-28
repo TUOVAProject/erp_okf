@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EntityChangeLogs · Monitor ERP API</title>
+<title>EntityChangeLogs · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a queryable entity changelog entry.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>EntityChangeLogs</span>
 </header>
 <div class="layout">
@@ -75,7 +75,7 @@
 <td>The business key identifier of the changelog entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>ChangeType</code></td>
+<td class="prop"><code>Change<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -83,7 +83,7 @@
 <td>The type of change that was made to the entity.</td>
 </tr>
 <tr>
-<td class="prop"><code>EntityTypeId</code></td>
+<td class="prop"><code>Entity<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Guid</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -91,7 +91,7 @@
 <td>The GUID of the changed entity's type.</td>
 </tr>
 <tr>
-<td class="prop"><code>EntityId</code></td>
+<td class="prop"><code>Entity<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -99,7 +99,7 @@
 <td>The business key identifier of the changed entity.</td>
 </tr>
 <tr>
-<td class="prop"><code>ModifiedBy</code></td>
+<td class="prop"><code>Modified<wbr/>By</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -107,15 +107,15 @@
 <td>The human readable identifier of the application user that performed the change.</td>
 </tr>
 <tr>
-<td class="prop"><code>ModifiedTimestamp</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Modified<wbr/>Timestamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The date when the change was made.</td>
 </tr>
 <tr>
-<td class="prop"><code>AssociatedTypeId</code></td>
+<td class="prop"><code>Associated<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Guid?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -123,7 +123,7 @@
 <td>The GUID of the changed entity's parent type.</td>
 </tr>
 <tr>
-<td class="prop"><code>AssociatedEntityId</code></td>
+<td class="prop"><code>Associated<wbr/>Entity<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -131,7 +131,7 @@
 <td>The business key identifier of the changed entity's parent.</td>
 </tr>
 <tr>
-<td class="prop"><code>EntityCode</code></td>
+<td class="prop"><code>Entity<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,9 +140,9 @@
 </tr>
 <tr>
 <td class="prop"><code>Changes</code></td>
-<td class="type"><code>EntityPropertyChanges[]</code></td>
+<td class="type"><code>Entity<wbr/>Property<wbr/>Changes[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="EntityPropertyChange.html">EntityPropertyChanges</a></td>
+<td><a class="chip" href="EntityPropertyChange.html">Entity<wbr/>Property<wbr/>Changes</a></td>
 <td>collection</td>
 <td>The property changes for this entity.</td>
 </tr>

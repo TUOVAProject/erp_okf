@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PlannedAbsences · Monitor ERP API</title>
+<title>PlannedAbsences · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a planned absence.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/TimeRecording.html">TimeRecording</a><span class="sep">/</span>PlannedAbsences</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the planned absence.</td>
 </tr>
 <tr>
-<td class="prop"><code>PersonId</code></td>
+<td class="prop"><code>Person<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -84,23 +84,23 @@
 <td>The business key identifier of the person. References(Person)</td>
 </tr>
 <tr>
-<td class="prop"><code>AbsenceFrom</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Absence<wbr/>From</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The start of the absence period.</td>
 </tr>
 <tr>
-<td class="prop"><code>AbsenceTo</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Absence<wbr/>To</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The end of the absence period.</td>
 </tr>
 <tr>
-<td class="prop"><code>AbsenceCodeId</code></td>
+<td class="prop"><code>Absence<wbr/>Code<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>The business key identifier of the absence code. References(AbsenceCode)</td>
 </tr>
 <tr>
-<td class="prop"><code>PartOfDay</code></td>
+<td class="prop"><code>Part<wbr/>Of<wbr/>Day</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,16 +132,16 @@
 <td>Specifies the absence status.</td>
 </tr>
 <tr>
-<td class="prop"><code>AbsenceDuration</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Absence<wbr/>Duration</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The absence duration of the planned absence.</td>
 </tr>
 <tr>
-<td class="prop"><code>AttendanceDuration</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Attendance<wbr/>Duration</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>

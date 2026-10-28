@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FormTemplateRows · Monitor ERP API</title>
+<title>FormTemplateRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a form template row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>FormTemplateRows</span>
 </header>
 <div class="layout">
@@ -91,7 +91,7 @@
 <td>The comment of the form template row.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Comment.html">Comments</a></td>
@@ -107,15 +107,15 @@
 <td>The translated description of the form template row.</td>
 </tr>
 <tr>
-<td class="prop"><code>FormTemplateSelectionRowId</code></td>
+<td class="prop"><code>Form<wbr/>Template<wbr/>Selection<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="FormTemplateSelectionRow.html">FormTemplateSelectionRows</a></td>
+<td><a class="chip" href="FormTemplateSelectionRow.html">Form<wbr/>Template<wbr/>Selection<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the form template selection row that the form template row relates to.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowIndex</code></td>
+<td class="prop"><code>Row<wbr/>Index</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -131,8 +131,8 @@
 <td>The boolean value of the form template row.</td>
 </tr>
 <tr>
-<td class="prop"><code>DateTimeValue</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Date<wbr/>Time<wbr/>Value</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
@@ -147,7 +147,7 @@
 <td>The numeric value of the form template row.</td>
 </tr>
 <tr>
-<td class="prop"><code>TextValue</code></td>
+<td class="prop"><code>Text<wbr/>Value</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -163,7 +163,7 @@
 <td>The type of the value stored in the form template row.</td>
 </tr>
 <tr>
-<td class="prop"><code>LowerBoundary</code></td>
+<td class="prop"><code>Lower<wbr/>Boundary</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -171,7 +171,7 @@
 <td>The minimum setpoint value of the form template row.</td>
 </tr>
 <tr>
-<td class="prop"><code>UpperBoundary</code></td>
+<td class="prop"><code>Upper<wbr/>Boundary</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -179,7 +179,7 @@
 <td>The maximum setpoint value of the form template row.</td>
 </tr>
 <tr>
-<td class="prop"><code>MinValue</code></td>
+<td class="prop"><code>Min<wbr/>Value</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -187,7 +187,7 @@
 <td>The minimum tolerance value of the form template row.</td>
 </tr>
 <tr>
-<td class="prop"><code>MaxValue</code></td>
+<td class="prop"><code>Max<wbr/>Value</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -211,7 +211,7 @@
 <td>Indicates if the value of the form template row needs to be reported.</td>
 </tr>
 <tr>
-<td class="prop"><code>PrintOut</code></td>
+<td class="prop"><code>Print<wbr/>Out</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -219,7 +219,7 @@
 <td>Indicates if the form template row's properties should be printed on the document.</td>
 </tr>
 <tr>
-<td class="prop"><code>MasterToolId</code></td>
+<td class="prop"><code>Master<wbr/>Tool<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -227,7 +227,7 @@
 <td>The business key identifier of the tool that the form template row relates to.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitId</code></td>
+<td class="prop"><code>Unit<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Unit.html">Units</a></td>

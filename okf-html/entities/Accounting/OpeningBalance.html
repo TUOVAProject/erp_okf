@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OpeningBalances · Monitor ERP API</title>
+<title>OpeningBalances · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents an opening balance.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>OpeningBalances</span>
 </header>
 <div class="layout">
@@ -75,18 +75,18 @@
 <td>The business key identifier of the opening balance.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountingYearId</code></td>
+<td class="prop"><code>Accounting<wbr/>Year<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AccountingYear.html">AccountingYears</a></td>
+<td><a class="chip" href="AccountingYear.html">Accounting<wbr/>Years</a></td>
 <td></td>
 <td>The business key identifier of the accounting year the opening balance belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>CodingEntryId</code></td>
+<td class="prop"><code>Coding<wbr/>Entry<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CodingEntry.html">CodingEntries</a></td>
+<td><a class="chip" href="CodingEntry.html">Coding<wbr/>Entries</a></td>
 <td></td>
 <td>The business key identifier of the coding entry the opening balance belongs to.</td>
 </tr>
@@ -99,7 +99,7 @@
 <td>The credit amount of the opening balance.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreditCurrencyId</code></td>
+<td class="prop"><code>Credit<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -107,7 +107,7 @@
 <td>The business key identifier of the currency of the credit amount.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreditInCompanyCurrency</code></td>
+<td class="prop"><code>Credit<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -115,7 +115,7 @@
 <td>The credit amount in company currency of the opening balance.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreditInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Credit<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -131,7 +131,7 @@
 <td>The debit amount of the opening balance.</td>
 </tr>
 <tr>
-<td class="prop"><code>DebitCurrencyId</code></td>
+<td class="prop"><code>Debit<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -139,7 +139,7 @@
 <td>The business key identifier of the currency of the debit amount.</td>
 </tr>
 <tr>
-<td class="prop"><code>DebitInCompanyCurrency</code></td>
+<td class="prop"><code>Debit<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -147,7 +147,7 @@
 <td>The debit amount in company currency of the opening balance.</td>
 </tr>
 <tr>
-<td class="prop"><code>DebitInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Debit<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -155,7 +155,7 @@
 <td>The business key identifier of the currency of the debit amount in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExchangeRate</code></td>
+<td class="prop"><code>Exchange<wbr/>Rate</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>

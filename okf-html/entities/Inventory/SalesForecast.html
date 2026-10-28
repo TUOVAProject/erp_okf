@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SalesForecasts · Monitor ERP API</title>
+<title>SalesForecasts · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a sales forecast.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>SalesForecasts</span>
 </header>
 <div class="layout">
@@ -75,7 +75,7 @@
 <td>The business key identifier of the sales forecast.</td>
 </tr>
 <tr>
-<td class="prop"><code>ForecastCode</code></td>
+<td class="prop"><code>Forecast<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -91,7 +91,7 @@
 <td>The translated description of the sales forecast.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -99,15 +99,15 @@
 <td>The business key identifier of the warehouse that the sales forecast belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>TimeSpan</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Time<wbr/>Span</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The interval time span of the sales forecast.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsActive</code></td>
+<td class="prop"><code>Is<wbr/>Active</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -115,7 +115,7 @@
 <td>The flag that indicates if the sales forecast is active.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerId</code></td>
+<td class="prop"><code>Customer<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Sales/Customer.html">Customers</a></td>
@@ -123,26 +123,26 @@
 <td>The business key identifier for the customer of the sales forecast.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerAccountGroupId</code></td>
+<td class="prop"><code>Customer<wbr/>Account<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Sales/CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td><a class="chip" href="../Sales/CustomerAccountGroup.html">Customer<wbr/>Account<wbr/>Groups</a></td>
 <td></td>
 <td>The business key identifier for the customer account group of the sales forecast.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerDistrictId</code></td>
+<td class="prop"><code>Customer<wbr/>District<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Sales/CustomerDistrict.html">CustomerDistricts</a></td>
+<td><a class="chip" href="../Sales/CustomerDistrict.html">Customer<wbr/>Districts</a></td>
 <td></td>
 <td>The business key identifier for the customer district of the sales forecast.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesForecastRows</code></td>
-<td class="type"><code>SalesForecastRows[]</code></td>
+<td class="prop"><code>Sales<wbr/>Forecast<wbr/>Rows</code></td>
+<td class="type"><code>Sales<wbr/>Forecast<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="SalesForecastRow.html">SalesForecastRows</a></td>
+<td><a class="chip" href="SalesForecastRow.html">Sales<wbr/>Forecast<wbr/>Rows</a></td>
 <td>expandable, collection, since 23.2</td>
 <td>The rows of the sales forecast.</td>
 </tr>

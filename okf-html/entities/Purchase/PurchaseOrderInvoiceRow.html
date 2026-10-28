@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PurchaseOrderInvoiceRows · Monitor ERP API</title>
+<title>PurchaseOrderInvoiceRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a purchase order invoice row entry">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Purchase.html">Purchase</a><span class="sep">/</span>PurchaseOrderInvoiceRows</span>
 </header>
 <div class="layout">
@@ -75,15 +75,15 @@
 <td>The business key identifier of the purchase order invoice row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseOrderDeliveryRowId</code></td>
+<td class="prop"><code>Purchase<wbr/>Order<wbr/>Delivery<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a></td>
+<td><a class="chip" href="PurchaseOrderDeliveryRow.html">Purchase<wbr/>Order<wbr/>Delivery<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the purchase order delivery row.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -107,7 +107,7 @@
 <td>The price of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -115,7 +115,7 @@
 <td>The business key identifier of the row price currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceLockedFromAutomaticChanges</code></td>
+<td class="prop"><code>Price<wbr/>Locked<wbr/>From<wbr/>Automatic<wbr/>Changes</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -123,7 +123,7 @@
 <td>Specifies if price is locked from automatic changes.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceIsFuturePrice</code></td>
+<td class="prop"><code>Price<wbr/>Is<wbr/>Future<wbr/>Price</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -131,7 +131,7 @@
 <td>Specifies if price is a future price.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceInCompanyCurrency</code></td>
+<td class="prop"><code>Price<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -139,7 +139,7 @@
 <td>The price of the row in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -147,7 +147,7 @@
 <td>The business key identifier of the currency for the row price in the company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPrice</code></td>
+<td class="prop"><code>Setup<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -155,7 +155,7 @@
 <td>The setup price of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceCurrencyId</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -163,7 +163,7 @@
 <td>The business key identifier of the currency for the row setup price.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceInCompanyCurrency</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -171,7 +171,7 @@
 <td>The setup price of the row in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -179,10 +179,10 @@
 <td>The business key identifier of the currency for row setup price in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatRateId</code></td>
+<td class="prop"><code>Vat<wbr/>Rate<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td><a class="chip" href="../Common/VatRate.html">Vat<wbr/>Rates</a></td>
 <td></td>
 <td>The business key identifier of the row's VAT rate.</td>
 </tr>
@@ -195,7 +195,7 @@
 <td>The discount in percent set for the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>StandardPrice</code></td>
+<td class="prop"><code>Standard<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -203,7 +203,7 @@
 <td>The standard price of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>StandardPriceCurrencyId</code></td>
+<td class="prop"><code>Standard<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -211,10 +211,10 @@
 <td>The business key identifier of the currency for the row standard price.</td>
 </tr>
 <tr>
-<td class="prop"><code>CodingId</code></td>
+<td class="prop"><code>Coding<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Accounting/CodingEntry.html">CodingEntries</a></td>
+<td><a class="chip" href="../Accounting/CodingEntry.html">Coding<wbr/>Entries</a></td>
 <td>since 2.30</td>
 <td>The business key identifier of the row's coding.</td>
 </tr>
@@ -227,10 +227,10 @@
 <td>The coding of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>LedgerId</code></td>
+<td class="prop"><code>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Accounting/AccountsPayable.html">AccountsPayables</a></td>
+<td><a class="chip" href="../Accounting/AccountsPayable.html">Accounts<wbr/>Payables</a></td>
 <td>since 22.5</td>
 <td>The business key identifier of the invoice row's ledger.</td>
 </tr>

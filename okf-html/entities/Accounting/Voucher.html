@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vouchers · Monitor ERP API</title>
+<title>Vouchers · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a voucher.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>Vouchers</span>
 </header>
 <div class="layout">
@@ -84,18 +84,18 @@
 <td>The version of the voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>SeriesId</code></td>
+<td class="prop"><code>Series<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="VoucherSeries.html">VoucherSeries</a></td>
+<td><a class="chip" href="VoucherSeries.html">Voucher<wbr/>Series</a></td>
 <td></td>
 <td>The business key identifier of the voucher series for the voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountingYearId</code></td>
+<td class="prop"><code>Accounting<wbr/>Year<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AccountingYear.html">AccountingYears</a></td>
+<td><a class="chip" href="AccountingYear.html">Accounting<wbr/>Years</a></td>
 <td></td>
 <td>The business key identifier of the accounting year for the voucher.</td>
 </tr>
@@ -116,15 +116,15 @@
 <td>The description of the voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>VoucherDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Voucher<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The date of the voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>ConnectedVoucherId</code></td>
+<td class="prop"><code>Connected<wbr/>Voucher<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Voucher.html">Vouchers</a></td>
@@ -132,7 +132,7 @@
 <td>The business key identifier of the voucher connected to the voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>ConnectionType</code></td>
+<td class="prop"><code>Connection<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The connection type to the connected voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReverseConnectionVoucherId</code></td>
+<td class="prop"><code>Reverse<wbr/>Connection<wbr/>Voucher<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Voucher.html">Vouchers</a></td>
@@ -148,7 +148,7 @@
 <td>The business key identifier of rectification/copy connected to the voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReverseConnectionType</code></td>
+<td class="prop"><code>Reverse<wbr/>Connection<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The connection type to the reverse connected voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsPreliminary</code></td>
+<td class="prop"><code>Is<wbr/>Preliminary</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -164,7 +164,7 @@
 <td>Specifies if the voucher is preliminary.</td>
 </tr>
 <tr>
-<td class="prop"><code>BundleNumber</code></td>
+<td class="prop"><code>Bundle<wbr/>Number</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -172,7 +172,7 @@
 <td>The bundle number of the voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -189,14 +189,14 @@
 </tr>
 <tr>
 <td class="prop"><code>Rows</code></td>
-<td class="type"><code>VoucherRows[]</code></td>
+<td class="type"><code>Voucher<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="VoucherRow.html">VoucherRows</a></td>
+<td><a class="chip" href="VoucherRow.html">Voucher<wbr/>Rows</a></td>
 <td>expandable, collection</td>
 <td>The rows belonging to the voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsReceivableLedgerId</code></td>
+<td class="prop"><code>Accounts<wbr/>Receivable<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>The business key identifier of the voucher's accounts receivable ledger. References AccountsReceivableLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>CancelledAccountsReceivableLedgerId</code></td>
+<td class="prop"><code>Cancelled<wbr/>Accounts<wbr/>Receivable<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>The business key identifier of the voucher's cancelled accounts receivable ledger. References CancelledAccountsReceivableLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsPayableLedgerId</code></td>
+<td class="prop"><code>Accounts<wbr/>Payable<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -220,7 +220,7 @@
 <td>The business key identifier of the voucher's accounts payable ledger. References AccountsPayableLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>CancelledAccountsPayableLedgerId</code></td>
+<td class="prop"><code>Cancelled<wbr/>Accounts<wbr/>Payable<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -228,7 +228,7 @@
 <td>The business key identifier of the voucher's cancelled accounts payable ledger. References CancelledAccountsPayableLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreliminaryAccountsPayableLedgerId</code></td>
+<td class="prop"><code>Preliminary<wbr/>Accounts<wbr/>Payable<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -236,7 +236,7 @@
 <td>The business key identifier of the voucher's preliminary accounts payable ledger. References PreliminaryAccountsPayableLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>CancelledPreliminaryAccountsPayableLedgerId</code></td>
+<td class="prop"><code>Cancelled<wbr/>Preliminary<wbr/>Accounts<wbr/>Payable<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -244,7 +244,7 @@
 <td>The business key identifier of the voucher's cancelled preliminary accounts payable ledger. References CancelledPreliminaryAccountsPayableLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>IncomingPaymentLedgerId</code></td>
+<td class="prop"><code>Incoming<wbr/>Payment<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -252,7 +252,7 @@
 <td>The business key identifier of the voucher's incoming payment ledger. References IncomingPaymentLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccrualAccountingLedgerId</code></td>
+<td class="prop"><code>Accrual<wbr/>Accounting<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -260,7 +260,7 @@
 <td>The business key identifier of the voucher's accrual accounting ledger. References AccrualAccountingLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>OutgoingPaymentLedgerId</code></td>
+<td class="prop"><code>Outgoing<wbr/>Payment<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -268,7 +268,7 @@
 <td>The business key identifier of the voucher's outgoing payment ledger. References OutgoingPaymentLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>FixedAssetLedgerId</code></td>
+<td class="prop"><code>Fixed<wbr/>Asset<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -276,7 +276,7 @@
 <td>The business key identifier of the voucher's fixed asset payment ledger. References FixedAssetLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnplannedStockBalanceChangeLedgerId</code></td>
+<td class="prop"><code>Unplanned<wbr/>Stock<wbr/>Balance<wbr/>Change<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -284,7 +284,7 @@
 <td>The business key identifier of the voucher's unplanned stock balance change ledger. References UnplannedStockBalanceChangeLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>StockTransactionLogLedgerId</code></td>
+<td class="prop"><code>Stock<wbr/>Transaction<wbr/>Log<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -292,7 +292,7 @@
 <td>The business key identifier of the voucher's stock transaction log ledger. References StockTransactionLogLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingOrderLogLedgerId</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Order<wbr/>Log<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -300,7 +300,7 @@
 <td>The business key identifier of the voucher's manufacturing order log ledger. References ManufacturingOrderLogLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceLogLedgerId</code></td>
+<td class="prop"><code>Invoice<wbr/>Log<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -308,7 +308,7 @@
 <td>The business key identifier of the voucher's invoice log ledger. References InvoiceLogLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangeLogLedgerId</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>Log<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -316,7 +316,7 @@
 <td>The business key identifier of the voucher's price change log ledger. References PriceChangeLogLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalculationDifferenceLedgerId</code></td>
+<td class="prop"><code>Calculation<wbr/>Difference<wbr/>Ledger<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -324,7 +324,7 @@
 <td>The business key identifier of the voucher's calculation difference ledger. References CalculationDifferenceLedger.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnplannedStockBalanceChangeTransactionId</code></td>
+<td class="prop"><code>Unplanned<wbr/>Stock<wbr/>Balance<wbr/>Change<wbr/>Transaction<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -332,7 +332,7 @@
 <td>The business key identifier for the unplanned stock balance change transaction of the voucher. References UnplannedStockBalanceChangeTransaction.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsReceivableId</code></td>
+<td class="prop"><code>Accounts<wbr/>Receivable<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -340,31 +340,31 @@
 <td>The business key identifier for the accounts receivable linked to the voucher. References AccountsReceivable.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsPayableId</code></td>
+<td class="prop"><code>Accounts<wbr/>Payable<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AccountsPayable.html">AccountsPayables</a></td>
+<td><a class="chip" href="AccountsPayable.html">Accounts<wbr/>Payables</a></td>
 <td></td>
 <td>The business key identifier for the accounts payable linked to the voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsPayable</code></td>
-<td class="type"><code>AccountsPayables</code></td>
+<td class="prop"><code>Accounts<wbr/>Payable</code></td>
+<td class="type"><code>Accounts<wbr/>Payables</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AccountsPayable.html">AccountsPayables</a></td>
+<td><a class="chip" href="AccountsPayable.html">Accounts<wbr/>Payables</a></td>
 <td>expandable</td>
 <td>The accounts payable linked to the voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccrualAccountingRowId</code></td>
+<td class="prop"><code>Accrual<wbr/>Accounting<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AccrualAccountingRow.html">AccrualAccountingRows</a></td>
+<td><a class="chip" href="AccrualAccountingRow.html">Accrual<wbr/>Accounting<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier for the accrual accounting row linked to the voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatBookingId</code></td>
+<td class="prop"><code>Vat<wbr/>Booking<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -372,7 +372,7 @@
 <td>The business key identifier for the voucher's VAT booking. References VatBooking.</td>
 </tr>
 <tr>
-<td class="prop"><code>CorrectionBookingId</code></td>
+<td class="prop"><code>Correction<wbr/>Booking<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>

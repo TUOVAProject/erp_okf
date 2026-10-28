@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Preparations · Monitor ERP API</title>
+<title>Preparations · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a part preparation">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>Preparations</span>
 </header>
 <div class="layout">
@@ -75,7 +75,7 @@
 <td>The business key identifier of the part preparation.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartNumber</code></td>
+<td class="prop"><code>Part<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -91,7 +91,7 @@
 <td>The translated description of the part preparation.</td>
 </tr>
 <tr>
-<td class="prop"><code>UseVariantManagement</code></td>
+<td class="prop"><code>Use<wbr/>Variant<wbr/>Management</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -99,50 +99,50 @@
 <td>Specifies if variant management is applied for the preparation.</td>
 </tr>
 <tr>
-<td class="prop"><code>VariantXAxisId</code></td>
+<td class="prop"><code>Variant<wbr/>XAxis<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ExtraFieldTemplate.html">ExtraFieldTemplates</a></td>
+<td><a class="chip" href="../Common/ExtraFieldTemplate.html">Extra<wbr/>Field<wbr/>Templates</a></td>
 <td></td>
 <td>The business key identifier of the extra field template used for the X axis of the variant management system.</td>
 </tr>
 <tr>
-<td class="prop"><code>VariantXAxis</code></td>
-<td class="type"><code>ExtraFieldTemplates</code></td>
+<td class="prop"><code>Variant<wbr/>XAxis</code></td>
+<td class="type"><code>Extra<wbr/>Field<wbr/>Templates</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ExtraFieldTemplate.html">ExtraFieldTemplates</a></td>
+<td><a class="chip" href="../Common/ExtraFieldTemplate.html">Extra<wbr/>Field<wbr/>Templates</a></td>
 <td>expandable</td>
 <td>The extra field template that is applied for the X axis of the variant management system.</td>
 </tr>
 <tr>
-<td class="prop"><code>VariantYAxisId</code></td>
+<td class="prop"><code>Variant<wbr/>YAxis<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ExtraFieldTemplate.html">ExtraFieldTemplates</a></td>
+<td><a class="chip" href="../Common/ExtraFieldTemplate.html">Extra<wbr/>Field<wbr/>Templates</a></td>
 <td></td>
 <td>The business key identifier of the extra field template used for the Y axis of the variant management system. References ExtraFieldTemplates .</td>
 </tr>
 <tr>
-<td class="prop"><code>VariantYAxis</code></td>
-<td class="type"><code>ExtraFieldTemplates</code></td>
+<td class="prop"><code>Variant<wbr/>YAxis</code></td>
+<td class="type"><code>Extra<wbr/>Field<wbr/>Templates</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ExtraFieldTemplate.html">ExtraFieldTemplates</a></td>
+<td><a class="chip" href="../Common/ExtraFieldTemplate.html">Extra<wbr/>Field<wbr/>Templates</a></td>
 <td>expandable</td>
 <td>The extra field template that is applied for the Y axis of the variant management system.</td>
 </tr>
 <tr>
 <td class="prop"><code>Materials</code></td>
-<td class="type"><code>MaterialRows[]</code></td>
+<td class="type"><code>Material<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="MaterialRow.html">MaterialRows</a></td>
+<td><a class="chip" href="MaterialRow.html">Material<wbr/>Rows</a></td>
 <td>expandable, collection</td>
 <td>The material rows of the preparation.</td>
 </tr>
 <tr>
 <td class="prop"><code>Operations</code></td>
-<td class="type"><code>OperationRows[]</code></td>
+<td class="type"><code>Operation<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="OperationRow.html">OperationRows</a></td>
+<td><a class="chip" href="OperationRow.html">Operation<wbr/>Rows</a></td>
 <td>expandable, collection</td>
 <td>The operation rows of the preparation.</td>
 </tr>

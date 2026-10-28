@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SupplierPartLinks · Monitor ERP API</title>
+<title>SupplierPartLinks · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a supplier part link.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Purchase.html">Purchase</a><span class="sep">/</span>SupplierPartLinks</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the supplier part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>SupplierId</code></td>
+<td class="prop"><code>Supplier<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Supplier.html">Suppliers</a></td>
@@ -84,7 +84,7 @@
 <td>The business key identifier of the supplier part link supplier.</td>
 </tr>
 <tr>
-<td class="prop"><code>SupplierPartNumber</code></td>
+<td class="prop"><code>Supplier<wbr/>Part<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -92,7 +92,7 @@
 <td>The supplier part link part number.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseCommentShowInForms</code></td>
+<td class="prop"><code>Purchase<wbr/>Comment<wbr/>Show<wbr/>In<wbr/>Forms</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -100,7 +100,7 @@
 <td>Specifies on which forms the purchase comment should be shown.</td>
 </tr>
 <tr>
-<td class="prop"><code>IncludeAlloyCostOnPurchaseOrder</code></td>
+<td class="prop"><code>Include<wbr/>Alloy<wbr/>Cost<wbr/>On<wbr/>Purchase<wbr/>Order</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>Include alloy cost on purchase orders for this supplier part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Inventory/Part.html">Part</a></td>
@@ -124,7 +124,7 @@
 <td>The price of the supplier link part.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPrice</code></td>
+<td class="prop"><code>Setup<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -132,8 +132,8 @@
 <td>The setup price of the supplier link part.</td>
 </tr>
 <tr>
-<td class="prop"><code>LeadTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Lead<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
@@ -148,15 +148,15 @@
 <td>The discount of the supplier part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceValidThrough</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Price<wbr/>Valid<wbr/>Through</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The valid through date of the supplier part link price.</td>
 </tr>
 <tr>
-<td class="prop"><code>FuturePrice</code></td>
+<td class="prop"><code>Future<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -164,15 +164,15 @@
 <td>The future price of the supplier part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>FuturePriceValidThrough</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Future<wbr/>Price<wbr/>Valid<wbr/>Through</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The valid through date of the supplier part link future price.</td>
 </tr>
 <tr>
-<td class="prop"><code>FutureSetupPrice</code></td>
+<td class="prop"><code>Future<wbr/>Setup<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>The future setup price of the supplier part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>QuantityPerPackage</code></td>
+<td class="prop"><code>Quantity<wbr/>Per<wbr/>Package</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>The quantity per package of the supplier part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>OverridePurchaseCommentId</code></td>
+<td class="prop"><code>Override<wbr/>Purchase<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -196,7 +196,7 @@
 <td>The business key identifier of the supplier part link override purchase comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>OverridePurchaseComment</code></td>
+<td class="prop"><code>Override<wbr/>Purchase<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -204,7 +204,7 @@
 <td>The supplier part link override purchase comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitId</code></td>
+<td class="prop"><code>Unit<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Unit.html">Units</a></td>
@@ -220,7 +220,7 @@
 <td>The supplier part link unit.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -228,7 +228,7 @@
 <td>The business key identifier of the supplier part link price currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceCurrency</code></td>
+<td class="prop"><code>Price<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -236,7 +236,7 @@
 <td>The supplier part link price currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceCommentId</code></td>
+<td class="prop"><code>Price<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -244,7 +244,7 @@
 <td>The business key identifier of the supplier part link price comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceComment</code></td>
+<td class="prop"><code>Price<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -276,7 +276,7 @@
 <td>The dock of the supplier part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsRemoteConfigured</code></td>
+<td class="prop"><code>Is<wbr/>Remote<wbr/>Configured</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -284,18 +284,18 @@
 <td>Specifies if the part is remote configured via the transfer profile connected to the supplier.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartPurchaseExpenseValuesId</code></td>
+<td class="prop"><code>Part<wbr/>Purchase<wbr/>Expense<wbr/>Values<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Inventory/PartPurchaseExpenseValues.html">PartPurchaseExpenseValues</a></td>
+<td><a class="chip" href="../Inventory/PartPurchaseExpenseValues.html">Part<wbr/>Purchase<wbr/>Expense<wbr/>Values</a></td>
 <td>since 26.6</td>
 <td>The business key identitier of the supplier part link purchase expense values.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartPurchaseExpenseValues</code></td>
-<td class="type"><code>PartPurchaseExpenseValues</code></td>
+<td class="prop"><code>Part<wbr/>Purchase<wbr/>Expense<wbr/>Values</code></td>
+<td class="type"><code>Part<wbr/>Purchase<wbr/>Expense<wbr/>Values</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Inventory/PartPurchaseExpenseValues.html">PartPurchaseExpenseValues</a></td>
+<td><a class="chip" href="../Inventory/PartPurchaseExpenseValues.html">Part<wbr/>Purchase<wbr/>Expense<wbr/>Values</a></td>
 <td>expandable, since 26.6</td>
 <td>The supplier part link purchase expense values.</td>
 </tr>

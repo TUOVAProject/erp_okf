@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>QuoteOrderRowDiscounts · Monitor ERP API</title>
+<title>QuoteOrderRowDiscounts · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a discount row for a quote row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>QuoteOrderRowDiscounts</span>
 </header>
 <div class="layout">
@@ -76,15 +76,15 @@
 <td>The business key identifier of the discount row.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderRowId</code></td>
+<td class="prop"><code>Order<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="QuoteRow.html">QuoteRows</a></td>
+<td><a class="chip" href="QuoteRow.html">Quote<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the discount row's quote row.</td>
 </tr>
 <tr>
-<td class="prop"><code>DiscountId</code></td>
+<td class="prop"><code>Discount<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Discount.html">Discounts</a></td>
@@ -92,7 +92,7 @@
 <td>The business key identifier of the discount row's discount.</td>
 </tr>
 <tr>
-<td class="prop"><code>AsPercent</code></td>
+<td class="prop"><code>As<wbr/>Percent</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -100,7 +100,7 @@
 <td>The discount amount as percent of the discount row.</td>
 </tr>
 <tr>
-<td class="prop"><code>DiscountLockedFromAutomaticChanges</code></td>
+<td class="prop"><code>Discount<wbr/>Locked<wbr/>From<wbr/>Automatic<wbr/>Changes</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>Specifies if the discount is locked from automatic changes.</td>
 </tr>
 <tr>
-<td class="prop"><code>AsAmount</code></td>
+<td class="prop"><code>As<wbr/>Amount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>The discount amount of the discount row.</td>
 </tr>
 <tr>
-<td class="prop"><code>AsAmountCurrencyId</code></td>
+<td class="prop"><code>As<wbr/>Amount<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -124,7 +124,7 @@
 <td>The business key identifier of the discount row's amount currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>DiscountType</code></td>
+<td class="prop"><code>Discount<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The discount type of the discount row.</td>
 </tr>
 <tr>
-<td class="prop"><code>GrossPrice</code></td>
+<td class="prop"><code>Gross<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The gross price of the discount row.</td>
 </tr>
 <tr>
-<td class="prop"><code>GrossPriceCurrencyId</code></td>
+<td class="prop"><code>Gross<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -148,7 +148,7 @@
 <td>The business key identifier of the discount row's gross price currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>NetPrice</code></td>
+<td class="prop"><code>Net<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The net price of the discount row.</td>
 </tr>
 <tr>
-<td class="prop"><code>NetPriceCurrencyId</code></td>
+<td class="prop"><code>Net<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -164,7 +164,7 @@
 <td>The business key identifier of the discount row's net price currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>DiscountCalculationType</code></td>
+<td class="prop"><code>Discount<wbr/>Calculation<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>The priority of the discount row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReplacesDiscountFieldOnOrderRow</code></td>
+<td class="prop"><code>Replaces<wbr/>Discount<wbr/>Field<wbr/>On<wbr/>Order<wbr/>Row</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>

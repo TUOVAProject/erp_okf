@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PurchaseOrderDeliveryRows · Monitor ERP API</title>
+<title>PurchaseOrderDeliveryRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a purchase order delivery row entry">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Purchase.html">Purchase</a><span class="sep">/</span>PurchaseOrderDeliveryRows</span>
 </header>
 <div class="layout">
@@ -83,39 +83,39 @@
 <td>The version of the purchase order delivery row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseOrderId</code></td>
+<td class="prop"><code>Purchase<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PurchaseOrder.html">PurchaseOrders</a></td>
+<td><a class="chip" href="PurchaseOrder.html">Purchase<wbr/>Orders</a></td>
 <td></td>
 <td>The business key identifier of the purchase order.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseOrderRowId</code></td>
+<td class="prop"><code>Purchase<wbr/>Order<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PurchaseOrderRow.html">PurchaseOrderRows</a></td>
+<td><a class="chip" href="PurchaseOrderRow.html">Purchase<wbr/>Order<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the purchase order row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseOrderRow</code></td>
-<td class="type"><code>PurchaseOrderRows</code></td>
+<td class="prop"><code>Purchase<wbr/>Order<wbr/>Row</code></td>
+<td class="type"><code>Purchase<wbr/>Order<wbr/>Rows</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PurchaseOrderRow.html">PurchaseOrderRows</a></td>
+<td><a class="chip" href="PurchaseOrderRow.html">Purchase<wbr/>Order<wbr/>Rows</a></td>
 <td>expandable</td>
 <td>The purchase order row.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Delivery<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The delivery date of the of order delivery row.</td>
 </tr>
 <tr>
-<td class="prop"><code>GoodsLocation</code></td>
+<td class="prop"><code>Goods<wbr/>Location</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -123,7 +123,7 @@
 <td>The human readable goods location of the order delivery row.</td>
 </tr>
 <tr>
-<td class="prop"><code>GoodsMessage</code></td>
+<td class="prop"><code>Goods<wbr/>Message</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -131,7 +131,7 @@
 <td>The human readable good message on the order delivery row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ArrivedQuantity</code></td>
+<td class="prop"><code>Arrived<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -139,7 +139,7 @@
 <td>The arrived qty on the order delivery row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ApprovedQuantity</code></td>
+<td class="prop"><code>Approved<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -147,18 +147,18 @@
 <td>The approved qty on the order delivery row.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsPayableId</code></td>
+<td class="prop"><code>Accounts<wbr/>Payable<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Accounting/AccountsPayable.html">AccountsPayables</a></td>
+<td><a class="chip" href="../Accounting/AccountsPayable.html">Accounts<wbr/>Payables</a></td>
 <td>since 22.5</td>
 <td>The business key identifier of the accounts payable the delivery row is linked to.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseOrderDeliveryRowQuantities</code></td>
-<td class="type"><code>PurchaseOrderDeliveryRowQuantities[]</code></td>
+<td class="prop"><code>Purchase<wbr/>Order<wbr/>Delivery<wbr/>Row<wbr/>Quantities</code></td>
+<td class="type"><code>Purchase<wbr/>Order<wbr/>Delivery<wbr/>Row<wbr/>Quantities[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PurchaseOrderDeliveryRowQuantity.html">PurchaseOrderDeliveryRowQuantities</a></td>
+<td><a class="chip" href="PurchaseOrderDeliveryRowQuantity.html">Purchase<wbr/>Order<wbr/>Delivery<wbr/>Row<wbr/>Quantities</a></td>
 <td>collection, since 26.4</td>
 <td>The quantities of the order delivery row.</td>
 </tr>

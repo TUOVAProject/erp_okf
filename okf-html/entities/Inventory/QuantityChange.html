@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>QuantityChanges · Monitor ERP API</title>
+<title>QuantityChanges · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a quantity change.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>QuantityChanges</span>
 </header>
 <div class="layout">
@@ -76,15 +76,15 @@
 <td>The business key identifier of the quantity change.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActualDeliveryDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Actual<wbr/>Delivery<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The date that the delivery was performed.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Part.html">Parts</a></td>
@@ -92,7 +92,7 @@
 <td>The part that the quantity change was made for.</td>
 </tr>
 <tr>
-<td class="prop"><code>BalanceChange</code></td>
+<td class="prop"><code>Balance<wbr/>Change</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -100,7 +100,7 @@
 <td>The total balance change.</td>
 </tr>
 <tr>
-<td class="prop"><code>AvailableBalance</code></td>
+<td class="prop"><code>Available<wbr/>Balance</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,15 +108,15 @@
 <td>The total available balance in the warehouse before the quantity change was performed. Note that this only provides a value for quantity changes that have status "Cleared" and are created in the outgoing delivery planning. This property is not suitable for looking at the historical balance of a part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PickingByUserId</code></td>
+<td class="prop"><code>Picking<wbr/>By<wbr/>User<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The user that performed the picking.</td>
 </tr>
 <tr>
-<td class="prop"><code>PickingByPersonId</code></td>
+<td class="prop"><code>Picking<wbr/>By<wbr/>Person<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -124,15 +124,15 @@
 <td>The person that performed the picking.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveredByUserId</code></td>
+<td class="prop"><code>Delivered<wbr/>By<wbr/>User<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The user that performed the delivery.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveredByPersonId</code></td>
+<td class="prop"><code>Delivered<wbr/>By<wbr/>Person<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -140,7 +140,7 @@
 <td>The person that performed the delivery.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -148,10 +148,10 @@
 <td>The warehouse where the quantity change was performed.</td>
 </tr>
 <tr>
-<td class="prop"><code>StockBalanceChanges</code></td>
-<td class="type"><code>StockBalanceChanges[]</code></td>
+<td class="prop"><code>Stock<wbr/>Balance<wbr/>Changes</code></td>
+<td class="type"><code>Stock<wbr/>Balance<wbr/>Changes[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="StockBalanceChange.html">StockBalanceChanges</a></td>
+<td><a class="chip" href="StockBalanceChange.html">Stock<wbr/>Balance<wbr/>Changes</a></td>
 <td>collection</td>
 <td>The stock balance changes that belong to the quantity change.</td>
 </tr>
@@ -164,23 +164,23 @@
 <td>This determines which way the quantity change is going.</td>
 </tr>
 <tr>
-<td class="prop"><code>ClearingTimeStamp</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Clearing<wbr/>Time<wbr/>Stamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date when clearing was performed.</td>
 </tr>
 <tr>
-<td class="prop"><code>PickingTimeStamp</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Picking<wbr/>Time<wbr/>Stamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date when picking was performed.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsOriginalReceivingInspectionQuantity</code></td>
+<td class="prop"><code>Is<wbr/>Original<wbr/>Receiving<wbr/>Inspection<wbr/>Quantity</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>Price of the row when the transaction was made.</td>
 </tr>
 <tr>
-<td class="prop"><code>CanceledQuantity</code></td>
+<td class="prop"><code>Canceled<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>The quantity that was cancelled.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsExportedToManagementAccounting</code></td>
+<td class="prop"><code>Is<wbr/>Exported<wbr/>To<wbr/>Management<wbr/>Accounting</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -212,23 +212,23 @@
 <td>Is exported to management accounting</td>
 </tr>
 <tr>
-<td class="prop"><code>CanceledTimestamp</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Canceled<wbr/>Timestamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date when cancel was performed.</td>
 </tr>
 <tr>
-<td class="prop"><code>UndoneTimestamp</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Undone<wbr/>Timestamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date when undo was performed.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReservationId</code></td>
+<td class="prop"><code>Reservation<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>

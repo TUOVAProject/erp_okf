@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SalesPrices · Monitor ERP API</title>
+<title>SalesPrices · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a sales price.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>SalesPrices</span>
 </header>
 <div class="layout">
@@ -74,7 +74,7 @@
 <td>The business key identifier of the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -82,10 +82,10 @@
 <td>The business key identifier of the part the sales price belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceListId</code></td>
+<td class="prop"><code>Price<wbr/>List<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/PriceList.html">PriceLists</a></td>
+<td><a class="chip" href="../Common/PriceList.html">Price<wbr/>Lists</a></td>
 <td></td>
 <td>The business key identifier of the price list the sales price belongs to.</td>
 </tr>
@@ -98,7 +98,7 @@
 <td>The price on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -106,7 +106,7 @@
 <td>The business key identifier of the currency for the price on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceCurrency</code></td>
+<td class="prop"><code>Price<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -114,7 +114,7 @@
 <td>The currency for the price on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPrice</code></td>
+<td class="prop"><code>Setup<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -122,7 +122,7 @@
 <td>The setup price on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceCurrencyId</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -130,7 +130,7 @@
 <td>The business key identifier of the currency for the setup price on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceCurrency</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -138,15 +138,15 @@
 <td>The currency for the setup price on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>ValidThrough</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Valid<wbr/>Through</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The valid through date on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -162,7 +162,7 @@
 <td>The comment of the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>FuturePrice</code></td>
+<td class="prop"><code>Future<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -170,7 +170,7 @@
 <td>The future price on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>FuturePriceCurrencyId</code></td>
+<td class="prop"><code>Future<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -178,7 +178,7 @@
 <td>The business key identifier of the currency for the future price on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>FuturePriceCurrency</code></td>
+<td class="prop"><code>Future<wbr/>Price<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -186,7 +186,7 @@
 <td>The currency for the future price on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>FutureSetupPrice</code></td>
+<td class="prop"><code>Future<wbr/>Setup<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -194,7 +194,7 @@
 <td>The future setup price on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>FutureSetupPriceCurrencyId</code></td>
+<td class="prop"><code>Future<wbr/>Setup<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -202,7 +202,7 @@
 <td>The business key identifier of the currency for the future setup price on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>FutureSetupPriceCurrency</code></td>
+<td class="prop"><code>Future<wbr/>Setup<wbr/>Price<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -210,18 +210,18 @@
 <td>The currency for the future setup price on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>FuturePriceValidThrough</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Future<wbr/>Price<wbr/>Valid<wbr/>Through</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The future valid through date on the sales price.</td>
 </tr>
 <tr>
-<td class="prop"><code>StaggeredPrices</code></td>
-<td class="type"><code>StaggeredPrices[]</code></td>
+<td class="prop"><code>Staggered<wbr/>Prices</code></td>
+<td class="type"><code>Staggered<wbr/>Prices[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/StaggeredPrice.html">StaggeredPrices</a></td>
+<td><a class="chip" href="../Common/StaggeredPrice.html">Staggered<wbr/>Prices</a></td>
 <td>expandable, collection</td>
 <td>The staggered prices on the sales price.</td>
 </tr>

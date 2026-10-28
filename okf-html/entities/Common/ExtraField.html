@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ExtraFields · Monitor ERP API</title>
+<title>ExtraFields · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents an extra field.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>ExtraFields</span>
 </header>
 <div class="layout">
@@ -75,7 +75,7 @@
 <td>The business key identifier of the extra field.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentClass</code></td>
+<td class="prop"><code>Parent<wbr/>Class</code></td>
 <td class="type"><code>Guid</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -83,7 +83,7 @@
 <td>The GUID of the parent type.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -107,7 +107,7 @@
 <td>The extra field template type.</td>
 </tr>
 <tr>
-<td class="prop"><code>StringValue</code></td>
+<td class="prop"><code>String<wbr/>Value</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -115,7 +115,7 @@
 <td>The string value of the extra field.</td>
 </tr>
 <tr>
-<td class="prop"><code>IntegerValue</code></td>
+<td class="prop"><code>Integer<wbr/>Value</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -123,7 +123,7 @@
 <td>The integer value of the extra field.</td>
 </tr>
 <tr>
-<td class="prop"><code>DecimalValue</code></td>
+<td class="prop"><code>Decimal<wbr/>Value</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -131,55 +131,55 @@
 <td>The decimal value of the extra field.</td>
 </tr>
 <tr>
-<td class="prop"><code>DateOnlyValue</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Date<wbr/>Only<wbr/>Value</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date-only value of the extra field.</td>
 </tr>
 <tr>
-<td class="prop"><code>DateTimeValue</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Date<wbr/>Time<wbr/>Value</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date-time value of the extra field.</td>
 </tr>
 <tr>
-<td class="prop"><code>SelectedOptionId</code></td>
+<td class="prop"><code>Selected<wbr/>Option<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ExtraFieldOptionTemplate.html">ExtraFieldOptionTemplates</a></td>
+<td><a class="chip" href="ExtraFieldOptionTemplate.html">Extra<wbr/>Field<wbr/>Option<wbr/>Templates</a></td>
 <td></td>
 <td>The business key identifier of the selected option. References ExtraFieldOptionTemplates .</td>
 </tr>
 <tr>
-<td class="prop"><code>SelectedOption</code></td>
-<td class="type"><code>ExtraFieldOptionTemplates</code></td>
+<td class="prop"><code>Selected<wbr/>Option</code></td>
+<td class="type"><code>Extra<wbr/>Field<wbr/>Option<wbr/>Templates</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ExtraFieldOptionTemplate.html">ExtraFieldOptionTemplates</a></td>
+<td><a class="chip" href="ExtraFieldOptionTemplate.html">Extra<wbr/>Field<wbr/>Option<wbr/>Templates</a></td>
 <td>expandable</td>
 <td>The selected option of the extra field. Only applicable to extra fields of type 6 (Options).</td>
 </tr>
 <tr>
-<td class="prop"><code>SelectedOptionIds</code></td>
+<td class="prop"><code>Selected<wbr/>Option<wbr/>Ids</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ExtraFieldOptionTemplate.html">ExtraFieldOptionTemplates</a></td>
+<td><a class="chip" href="ExtraFieldOptionTemplate.html">Extra<wbr/>Field<wbr/>Option<wbr/>Templates</a></td>
 <td></td>
 <td>A comma separated value list of the selected options. References multiple ExtraFieldOptionTemplates .</td>
 </tr>
 <tr>
-<td class="prop"><code>SelectedOptions</code></td>
-<td class="type"><code>ExtraFieldOptionTemplates[]</code></td>
+<td class="prop"><code>Selected<wbr/>Options</code></td>
+<td class="type"><code>Extra<wbr/>Field<wbr/>Option<wbr/>Templates[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ExtraFieldOptionTemplate.html">ExtraFieldOptionTemplates</a></td>
+<td><a class="chip" href="ExtraFieldOptionTemplate.html">Extra<wbr/>Field<wbr/>Option<wbr/>Templates</a></td>
 <td>expandable, collection</td>
 <td>The selected options of the extra field. Only applicable to extra fields of type 7 (Multiple options).</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Comment.html">Comments</a></td>

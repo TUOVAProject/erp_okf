@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Schedules · Monitor ERP API</title>
+<title>Schedules · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a schedule used for time recording.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/TimeRecording.html">TimeRecording</a><span class="sep">/</span>Schedules</span>
 </header>
 <div class="layout">
@@ -92,7 +92,7 @@
 <td>The translated description of the schedule.</td>
 </tr>
 <tr>
-<td class="prop"><code>ScheduleLength</code></td>
+<td class="prop"><code>Schedule<wbr/>Length</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>Information about the end of the schedule.</td>
 </tr>
 <tr>
-<td class="prop"><code>OvertimeScheduleId</code></td>
+<td class="prop"><code>Overtime<wbr/>Schedule<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Schedule.html">Schedules</a></td>
@@ -124,7 +124,7 @@
 <td>The business key identifier of the Overtime schedule.</td>
 </tr>
 <tr>
-<td class="prop"><code>FlexInStart</code></td>
+<td class="prop"><code>Flex<wbr/>In<wbr/>Start</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The flex in start of the schedule.</td>
 </tr>
 <tr>
-<td class="prop"><code>FlexInEnd</code></td>
+<td class="prop"><code>Flex<wbr/>In<wbr/>End</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The flex in end of the schedule.</td>
 </tr>
 <tr>
-<td class="prop"><code>FlexOutStart</code></td>
+<td class="prop"><code>Flex<wbr/>Out<wbr/>Start</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>The flex out start of the schedule.</td>
 </tr>
 <tr>
-<td class="prop"><code>FlexOutEnd</code></td>
+<td class="prop"><code>Flex<wbr/>Out<wbr/>End</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The flex out end of the schedule.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsNightSchedule</code></td>
+<td class="prop"><code>Is<wbr/>Night<wbr/>Schedule</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,7 +172,7 @@
 <td>A type of schedule.</td>
 </tr>
 <tr>
-<td class="prop"><code>AmountSwh</code></td>
+<td class="prop"><code>Amount<wbr/>Swh</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>The amount of shorter work hours (SWH)</td>
 </tr>
 <tr>
-<td class="prop"><code>ScheduleNumberForExport</code></td>
+<td class="prop"><code>Schedule<wbr/>Number<wbr/>For<wbr/>Export</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>The schedule number for export</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedContextType</code></td>
+<td class="prop"><code>Blocked<wbr/>Context<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The context type of block</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedById</code></td>
+<td class="prop"><code>Blocked<wbr/>By<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -204,23 +204,23 @@
 <td>The business key identifier of the application user that blocked the entity.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedFromDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Blocked<wbr/>From<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 24.4</td>
 <td>The date when the entity starts being blocked.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedToDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Blocked<wbr/>To<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 24.4</td>
 <td>The date when the entity stops being blocked.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedStatus</code></td>
+<td class="prop"><code>Blocked<wbr/>Status</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -228,7 +228,7 @@
 <td>The block status of the entity.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockMessageId</code></td>
+<td class="prop"><code>Block<wbr/>Message<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -236,7 +236,7 @@
 <td>The business key identifier of the entity block message comment. References Comments .</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockMessage</code></td>
+<td class="prop"><code>Block<wbr/>Message</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>

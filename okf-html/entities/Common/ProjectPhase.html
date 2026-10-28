@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ProjectPhases · Monitor ERP API</title>
+<title>ProjectPhases · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a project phase.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>ProjectPhases</span>
 </header>
 <div class="layout">
@@ -91,31 +91,31 @@
 <td>The number of the project phase.</td>
 </tr>
 <tr>
-<td class="prop"><code>PhaseTypeId</code></td>
+<td class="prop"><code>Phase<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProjectPhaseType.html">ProjectPhaseTypes</a></td>
+<td><a class="chip" href="ProjectPhaseType.html">Project<wbr/>Phase<wbr/>Types</a></td>
 <td></td>
 <td>The business key identifier of the type of the project phase. References ProjectPhaseTypes .</td>
 </tr>
 <tr>
-<td class="prop"><code>PhaseType</code></td>
-<td class="type"><code>ProjectPhaseTypes</code></td>
+<td class="prop"><code>Phase<wbr/>Type</code></td>
+<td class="type"><code>Project<wbr/>Phase<wbr/>Types</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProjectPhaseType.html">ProjectPhaseTypes</a></td>
+<td><a class="chip" href="ProjectPhaseType.html">Project<wbr/>Phase<wbr/>Types</a></td>
 <td>expandable</td>
 <td>The type of the project phase.</td>
 </tr>
 <tr>
-<td class="prop"><code>ResponsibleUserId</code></td>
+<td class="prop"><code>Responsible<wbr/>User<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the project phase's reponsible user. References ApplicationUsers .</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Project.html">Projects</a></td>
@@ -123,7 +123,7 @@
 <td>The business key identifier of the phase's parent. References Projects .</td>
 </tr>
 <tr>
-<td class="prop"><code>IsDummy</code></td>
+<td class="prop"><code>Is<wbr/>Dummy</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -131,7 +131,7 @@
 <td>Specifies if the project phase is a dummy phase.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowIndex</code></td>
+<td class="prop"><code>Row<wbr/>Index</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,9 +140,9 @@
 </tr>
 <tr>
 <td class="prop"><code>Activities</code></td>
-<td class="type"><code>ProjectActivities[]</code></td>
+<td class="type"><code>Project<wbr/>Activities[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProjectActivity.html">ProjectActivities</a></td>
+<td><a class="chip" href="ProjectActivity.html">Project<wbr/>Activities</a></td>
 <td>expandable, collection</td>
 <td>The activities of the project phase.</td>
 </tr>

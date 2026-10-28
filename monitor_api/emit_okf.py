@@ -811,6 +811,10 @@ def emit_root(model: dict) -> None:
 The data model of the Monitor ERP REST API, derived from the public documentation
 at {model['source']}.
 
+This is an unofficial bundle generated from that public documentation. It is not
+published or endorsed by Monitor ERP System AB; where the two differ, the
+upstream documentation is authoritative.
+
 ## Scope
 
 This bundle describes **what data the API exposes and how it connects**: every
@@ -858,7 +862,7 @@ how data connects, follow the links.
     write(
         "/index.md",
         {"okf_version": OKF_VERSION},
-        f"""# Monitor ERP API
+        f"""# Monitor ERP API Data Model
 
 ## Start here
 

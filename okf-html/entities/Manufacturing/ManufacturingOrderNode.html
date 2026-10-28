@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ManufacturingOrderNodes · Monitor ERP API</title>
+<title>ManufacturingOrderNodes · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a manufacturing order node.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>ManufacturingOrderNodes</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the manufacturing order node.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsMainNode</code></td>
+<td class="prop"><code>Is<wbr/>Main<wbr/>Node</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -84,7 +84,7 @@
 <td>Specifies if the node is the main node on manufacturing order. Only one of the root nodes on order can be the main node.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsRootNode</code></td>
+<td class="prop"><code>Is<wbr/>Root<wbr/>Node</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>Node number, a sequence number in exploding sort order.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -116,7 +116,7 @@
 <td>The business key identifier of the part that the manufacturing order node is to produce.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedQuantity</code></td>
+<td class="prop"><code>Reported<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>The reported quantity.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedQuantity</code></td>
+<td class="prop"><code>Planned<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The planned quantity.</td>
 </tr>
 <tr>
-<td class="prop"><code>RestQuantity</code></td>
+<td class="prop"><code>Rest<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,23 +140,23 @@
 <td>The rest quantity.</td>
 </tr>
 <tr>
-<td class="prop"><code>StartDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Start<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The start date of the manufacturing order node.</td>
 </tr>
 <tr>
-<td class="prop"><code>EndDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>End<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The finish date of the manufacturing order node.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -172,23 +172,23 @@
 <td>The status of the manufacturing order node.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingOrderNodeId</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Order<wbr/>Node<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ManufacturingOrderNode.html">ManufacturingOrderNodes</a></td>
+<td><a class="chip" href="ManufacturingOrderNode.html">Manufacturing<wbr/>Order<wbr/>Nodes</a></td>
 <td></td>
 <td>The business key identifier of the manufacturing order node that the manufacturing order node belongs to. If id is null, it's a root node.</td>
 </tr>
 <tr>
 <td class="prop"><code>Drawings</code></td>
-<td class="type"><code>ManufacturingOrderNodeDrawings[]</code></td>
+<td class="type"><code>Manufacturing<wbr/>Order<wbr/>Node<wbr/>Drawings[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrderNodeDrawing.html">ManufacturingOrderNodeDrawings</a></td>
+<td><a class="chip" href="ManufacturingOrderNodeDrawing.html">Manufacturing<wbr/>Order<wbr/>Node<wbr/>Drawings</a></td>
 <td>expandable, collection, since 24.2</td>
 <td>A collection of drawings that belong to the manufacturing order node.</td>
 </tr>
 <tr>
-<td class="prop"><code>RevisionId</code></td>
+<td class="prop"><code>Revision<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Revision.html">Revisions</a></td>
@@ -204,10 +204,10 @@
 <td>The revision that the manufacturing order node has.</td>
 </tr>
 <tr>
-<td class="prop"><code>SerialNumberProductRecords</code></td>
-<td class="type"><code>ProductRecords[]</code></td>
+<td class="prop"><code>Serial<wbr/>Number<wbr/>Product<wbr/>Records</code></td>
+<td class="type"><code>Product<wbr/>Records[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Inventory/ProductRecord.html">ProductRecords</a></td>
+<td><a class="chip" href="../Inventory/ProductRecord.html">Product<wbr/>Records</a></td>
 <td>expandable, collection, since 25.2</td>
 <td>A collection of product records with serial number traceability that belong to the manufacturing order node.</td>
 </tr>

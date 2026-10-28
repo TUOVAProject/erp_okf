@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MaterialRows · Monitor ERP API</title>
+<title>MaterialRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a material row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>MaterialRows</span>
 </header>
 <div class="layout">
@@ -75,7 +75,7 @@
 <td>The business key identifier of the material row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -83,7 +83,7 @@
 <td>The business key identifier of material row part.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -107,7 +107,7 @@
 <td>The position of the material row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ToOperation</code></td>
+<td class="prop"><code>To<wbr/>Operation</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -123,7 +123,7 @@
 <td>The quantity of the material row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupQuantity</code></td>
+<td class="prop"><code>Setup<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -131,7 +131,7 @@
 <td>The setup quantity of the material row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraPercent</code></td>
+<td class="prop"><code>Extra<wbr/>Percent</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -139,7 +139,7 @@
 <td>The extra percent of the material row.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsForCalculationOnly</code></td>
+<td class="prop"><code>Is<wbr/>For<wbr/>Calculation<wbr/>Only</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -147,7 +147,7 @@
 <td>Specifies if the material row is only used for calculation.</td>
 </tr>
 <tr>
-<td class="prop"><code>MainPartId</code></td>
+<td class="prop"><code>Main<wbr/>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -155,7 +155,7 @@
 <td>The business key identifier of the part that the material row belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowIndex</code></td>
+<td class="prop"><code>Row<wbr/>Index</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -163,7 +163,7 @@
 <td>The row index of the material row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreparationTermType</code></td>
+<td class="prop"><code>Preparation<wbr/>Term<wbr/>Type</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -171,7 +171,7 @@
 <td>PreparationTermType of the Material Row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreparationTermFromValue</code></td>
+<td class="prop"><code>Preparation<wbr/>Term<wbr/>From<wbr/>Value</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -179,7 +179,7 @@
 <td>PreparationTermFromValue of the Material Row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreparationTermToValue</code></td>
+<td class="prop"><code>Preparation<wbr/>Term<wbr/>To<wbr/>Value</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -187,10 +187,10 @@
 <td>PreparationTermToValue of the Material Row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReferenceNumbers</code></td>
-<td class="type"><code>MaterialRowReferenceNumbers[]</code></td>
+<td class="prop"><code>Reference<wbr/>Numbers</code></td>
+<td class="type"><code>Material<wbr/>Row<wbr/>Reference<wbr/>Numbers[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ReferenceNumber.html">MaterialRowReferenceNumbers</a></td>
+<td><a class="chip" href="ReferenceNumber.html">Material<wbr/>Row<wbr/>Reference<wbr/>Numbers</a></td>
 <td>expandable, collection, since 26.6</td>
 <td>The reference numbers configured for this material row.</td>
 </tr>

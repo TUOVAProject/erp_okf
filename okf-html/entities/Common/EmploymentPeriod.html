@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EmploymentPeriods · Monitor ERP API</title>
+<title>EmploymentPeriods · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents the employment period of a personnel record.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>EmploymentPeriods</span>
 </header>
 <div class="layout">
@@ -75,23 +75,23 @@
 <td>The business key identifier of the employment period.</td>
 </tr>
 <tr>
-<td class="prop"><code>StartDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Start<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The start date of the employment period.</td>
 </tr>
 <tr>
-<td class="prop"><code>FinishDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Finish<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The finish date of the employment period.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Comment.html">Comments</a></td>
@@ -107,7 +107,7 @@
 <td>The comment that belongs to the employment period.</td>
 </tr>
 <tr>
-<td class="prop"><code>PersonId</code></td>
+<td class="prop"><code>Person<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Person.html">Persons</a></td>
@@ -115,7 +115,7 @@
 <td>The business key identifier of the personnel record that the employment period belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowIndex</code></td>
+<td class="prop"><code>Row<wbr/>Index</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>

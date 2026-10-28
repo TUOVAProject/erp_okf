@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Drawings · Monitor ERP API</title>
+<title>Drawings · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a drawing.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>Drawings</span>
 </header>
 <div class="layout">
@@ -75,7 +75,7 @@
 <td>The business key identifier of the drawing.</td>
 </tr>
 <tr>
-<td class="prop"><code>DrawingNumber</code></td>
+<td class="prop"><code>Drawing<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -83,7 +83,7 @@
 <td>The human readable number of the drawing.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -92,17 +92,17 @@
 </tr>
 <tr>
 <td class="prop"><code>Revisions</code></td>
-<td class="type"><code>DrawingRevisions[]</code></td>
+<td class="type"><code>Drawing<wbr/>Revisions[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="DrawingRevision.html">DrawingRevisions</a></td>
+<td><a class="chip" href="DrawingRevision.html">Drawing<wbr/>Revisions</a></td>
 <td>expandable, collection</td>
 <td>A collection of revisions that belong the the drawing.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActiveDrawingRevisionId</code></td>
+<td class="prop"><code>Active<wbr/>Drawing<wbr/>Revision<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="DrawingRevision.html">DrawingRevisions</a></td>
+<td><a class="chip" href="DrawingRevision.html">Drawing<wbr/>Revisions</a></td>
 <td>since 23.2</td>
 <td>The business key identifier of the active drawing revision.</td>
 </tr>

@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RecordingDays · Monitor ERP API</title>
+<title>RecordingDays · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a Recording Day, which holds the attendance and work recordings which belongs to an employee for a specific date.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/TimeRecording.html">TimeRecording</a><span class="sep">/</span>RecordingDays</span>
 </header>
 <div class="layout">
@@ -75,15 +75,15 @@
 <td>The business key identifier of the recording day.</td>
 </tr>
 <tr>
-<td class="prop"><code>RecordingDate</code></td>
-<td class="type"><code>DateTime</code></td>
+<td class="prop"><code>Recording<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The date this recording day belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>PersonId</code></td>
+<td class="prop"><code>Person<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -91,7 +91,7 @@
 <td>The business key identifier of the Employee that this recording day belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ScheduleId</code></td>
+<td class="prop"><code>Schedule<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -99,7 +99,7 @@
 <td>The business key identifier of the workshop schedule assigned to this day. Null if recording without schedule.</td>
 </tr>
 <tr>
-<td class="prop"><code>OvertimeScheduleId</code></td>
+<td class="prop"><code>Overtime<wbr/>Schedule<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -107,40 +107,40 @@
 <td>The business key identifier of the workshop overtime schedule assigned to this day. Null if recording without overtime schedule.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalculatedScheduleDiff</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Calculated<wbr/>Schedule<wbr/>Diff</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The calculated difference between the schedule length and the sum of recorded attendance and absence on the day.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalculatedFlex</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Calculated<wbr/>Flex</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The days calculated total flex-time.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalculatedOvertime</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Calculated<wbr/>Overtime</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The days calculated total overtime.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalculatedAbsence</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Calculated<wbr/>Absence</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The days calculated total absence.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalculatedAttendance</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Calculated<wbr/>Attendance</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
@@ -163,26 +163,26 @@
 <td>Indicatates if the day has been authorized.</td>
 </tr>
 <tr>
-<td class="prop"><code>AttendanceIntervals</code></td>
-<td class="type"><code>AttendanceIntervals[]</code></td>
+<td class="prop"><code>Attendance<wbr/>Intervals</code></td>
+<td class="type"><code>Attendance<wbr/>Intervals[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AttendanceInterval.html">AttendanceIntervals</a></td>
+<td><a class="chip" href="AttendanceInterval.html">Attendance<wbr/>Intervals</a></td>
 <td>expandable, collection</td>
 <td>The recorded attendance intervals belonging to this day.</td>
 </tr>
 <tr>
-<td class="prop"><code>WorkIntervals</code></td>
-<td class="type"><code>WorkIntervals[]</code></td>
+<td class="prop"><code>Work<wbr/>Intervals</code></td>
+<td class="type"><code>Work<wbr/>Intervals[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="WorkInterval.html">WorkIntervals</a></td>
+<td><a class="chip" href="WorkInterval.html">Work<wbr/>Intervals</a></td>
 <td>expandable, collection</td>
 <td>The recorded work intervals belonging to this day.</td>
 </tr>
 <tr>
 <td class="prop"><code>Additions</code></td>
-<td class="type"><code>AdditionRecordings[]</code></td>
+<td class="type"><code>Addition<wbr/>Recordings[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AdditionRecording.html">AdditionRecordings</a></td>
+<td><a class="chip" href="AdditionRecording.html">Addition<wbr/>Recordings</a></td>
 <td>expandable, collection</td>
 <td>Additional recordings belonging to this day.</td>
 </tr>
@@ -195,7 +195,7 @@
 <td>Indicates that the employee is finished with the adding or adjustments.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentText</code></td>
+<td class="prop"><code>Comment<wbr/>Text</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>

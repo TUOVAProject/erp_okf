@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PurchaseOrderInvoices · Monitor ERP API</title>
+<title>PurchaseOrderInvoices · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a purchase order invoice entry">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Purchase.html">Purchase</a><span class="sep">/</span>PurchaseOrderInvoices</span>
 </header>
 <div class="layout">
@@ -75,23 +75,23 @@
 <td>The business key identifier of the purchase order invoice.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseOrderDeliveryId</code></td>
+<td class="prop"><code>Purchase<wbr/>Order<wbr/>Delivery<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="PurchaseOrderDelivery.html">PurchaseOrderDeliveries</a></td>
+<td><a class="chip" href="PurchaseOrderDelivery.html">Purchase<wbr/>Order<wbr/>Deliveries</a></td>
 <td></td>
 <td>The business key identifier of the purchase order delivery.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountGroupId</code></td>
+<td class="prop"><code>Account<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="SupplierAccountGroup.html">SupplierAccountGroups</a></td>
+<td><a class="chip" href="SupplierAccountGroup.html">Supplier<wbr/>Account<wbr/>Groups</a></td>
 <td></td>
 <td>The business key identifier of the supplier account group. References SupplierAccountGroups .</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -99,31 +99,31 @@
 <td>The business key identifier of the warehouse that the purchase order invoice belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatGroupId</code></td>
+<td class="prop"><code>Vat<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/VatGroup.html">VatGroups</a></td>
+<td><a class="chip" href="../Common/VatGroup.html">Vat<wbr/>Groups</a></td>
 <td></td>
 <td>The business key identifier of the VAT group that applies for the purchase order invoice.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentTermId</code></td>
+<td class="prop"><code>Payment<wbr/>Term<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">Payment<wbr/>Terms</a></td>
 <td></td>
 <td>The business key identifier of the payment term of the purchase order invoice.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentTerm</code></td>
-<td class="type"><code>PaymentTerms</code></td>
+<td class="prop"><code>Payment<wbr/>Term</code></td>
+<td class="type"><code>Payment<wbr/>Terms</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">Payment<wbr/>Terms</a></td>
 <td>expandable</td>
 <td>The payment term of the purchase order invoice.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentTermDescription</code></td>
+<td class="prop"><code>Payment<wbr/>Term<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -131,7 +131,7 @@
 <td>The payment term description of the purchase order invoice.</td>
 </tr>
 <tr>
-<td class="prop"><code>GracePeriodInDays</code></td>
+<td class="prop"><code>Grace<wbr/>Period<wbr/>In<wbr/>Days</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -139,23 +139,23 @@
 <td>The purchase order invoice grace period in days.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryMethodId</code></td>
+<td class="prop"><code>Delivery<wbr/>Method<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">Delivery<wbr/>Methods</a></td>
 <td></td>
 <td>The business key identifier of the purchase order invoice delivery method.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryTermId</code></td>
+<td class="prop"><code>Delivery<wbr/>Term<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/DeliveryTerm.html">DeliveryTerms</a></td>
+<td><a class="chip" href="../Common/DeliveryTerm.html">Delivery<wbr/>Terms</a></td>
 <td></td>
 <td>The business key identifier of the purchase order invoice delivery term.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryTermDescription</code></td>
+<td class="prop"><code>Delivery<wbr/>Term<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -163,7 +163,7 @@
 <td>The delivery term description of the purchase order invoice.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryMethodDescription</code></td>
+<td class="prop"><code>Delivery<wbr/>Method<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -171,7 +171,7 @@
 <td>The delivery method description of the purchase order invoice.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShipmentPayer</code></td>
+<td class="prop"><code>Shipment<wbr/>Payer</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,9 +180,9 @@
 </tr>
 <tr>
 <td class="prop"><code>Rows</code></td>
-<td class="type"><code>PurchaseOrderInvoiceRows[]</code></td>
+<td class="type"><code>Purchase<wbr/>Order<wbr/>Invoice<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PurchaseOrderInvoiceRow.html">PurchaseOrderInvoiceRows</a></td>
+<td><a class="chip" href="PurchaseOrderInvoiceRow.html">Purchase<wbr/>Order<wbr/>Invoice<wbr/>Rows</a></td>
 <td>expandable, collection</td>
 <td>The rows of the purchase order invoice.</td>
 </tr>

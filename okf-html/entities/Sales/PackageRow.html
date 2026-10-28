@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PackageRows · Monitor ERP API</title>
+<title>PackageRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a package row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>PackageRows</span>
 </header>
 <div class="layout">
@@ -76,31 +76,31 @@
 <td>The business key identifier of the package row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="SalesPickingList.html">SalesPickingLists</a></td>
+<td><a class="chip" href="SalesPickingList.html">Sales<wbr/>Picking<wbr/>Lists</a></td>
 <td></td>
 <td>The business key identifier of the row's picking list.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentRowId</code></td>
+<td class="prop"><code>Parent<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="PackageRow.html">PackageRows</a></td>
+<td><a class="chip" href="PackageRow.html">Package<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the row's parent row.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderDeliveryRowId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Delivery<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a></td>
+<td><a class="chip" href="CustomerOrderDeliveryRow.html">Customer<wbr/>Order<wbr/>Delivery<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the row's delivery row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackagingPartId</code></td>
+<td class="prop"><code>Packaging<wbr/>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -116,7 +116,7 @@
 <td>Specifies if the row is cleared.</td>
 </tr>
 <tr>
-<td class="prop"><code>ContainerNumber</code></td>
+<td class="prop"><code>Container<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>The container number of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SealNumber</code></td>
+<td class="prop"><code>Seal<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The seal number of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackageNumber</code></td>
+<td class="prop"><code>Package<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The package number of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>OtherPackageNumber</code></td>
+<td class="prop"><code>Other<wbr/>Package<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>The other package number of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>OtherPackageNumberNumberSeriesType</code></td>
+<td class="prop"><code>Other<wbr/>Package<wbr/>Number<wbr/>Number<wbr/>Series<wbr/>Type</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The other package number series type of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExternalPackageId</code></td>
+<td class="prop"><code>External<wbr/>Package<wbr/>Id</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The volume of the row's content.</td>
 </tr>
 <tr>
-<td class="prop"><code>VolumeCalculated</code></td>
+<td class="prop"><code>Volume<wbr/>Calculated</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>The calculated volume of the row's content.</td>
 </tr>
 <tr>
-<td class="prop"><code>GrossWeight</code></td>
+<td class="prop"><code>Gross<wbr/>Weight</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>The gross weight of the row's content.</td>
 </tr>
 <tr>
-<td class="prop"><code>GrossWeightCalculated</code></td>
+<td class="prop"><code>Gross<wbr/>Weight<wbr/>Calculated</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -220,7 +220,7 @@
 <td>The calculated gross weight of the row's content.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExternalCommentId</code></td>
+<td class="prop"><code>External<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -228,7 +228,7 @@
 <td>The business key identifier of the row's external comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExternalComment</code></td>
+<td class="prop"><code>External<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -236,7 +236,7 @@
 <td>The external comment of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>InternalCommentId</code></td>
+<td class="prop"><code>Internal<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -244,7 +244,7 @@
 <td>The business key identifier of the row's internal comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>InternalComment</code></td>
+<td class="prop"><code>Internal<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -252,7 +252,7 @@
 <td>The internal comment of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackageComplete</code></td>
+<td class="prop"><code>Package<wbr/>Complete</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -260,7 +260,7 @@
 <td>Specifies if the package row is complete.</td>
 </tr>
 <tr>
-<td class="prop"><code>BalanceChange</code></td>
+<td class="prop"><code>Balance<wbr/>Change</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -268,7 +268,7 @@
 <td>The balance change of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>TemplateCode</code></td>
+<td class="prop"><code>Template<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>

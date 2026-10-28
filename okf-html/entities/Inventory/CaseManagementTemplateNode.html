@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CaseManagementTemplateNodes · Monitor ERP API</title>
+<title>CaseManagementTemplateNodes · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a case management template node.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>CaseManagementTemplateNodes</span>
 </header>
 <div class="layout">
@@ -76,15 +76,15 @@
 <td>The business key identifier of the case management template node.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActivityId</code></td>
+<td class="prop"><code>Activity<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CaseManagementActivity.html">CaseManagementActivities</a></td>
+<td><a class="chip" href="CaseManagementActivity.html">Case<wbr/>Management<wbr/>Activities</a></td>
 <td></td>
 <td>The business key identifier of the case management activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -100,15 +100,15 @@
 <td>The comment of the case management template node.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Planned<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The planned time of the case management template node.</td>
 </tr>
 <tr>
-<td class="prop"><code>LeadTime</code></td>
+<td class="prop"><code>Lead<wbr/>Time</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>The status for the case management template node.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsReminder</code></td>
+<td class="prop"><code>Is<wbr/>Reminder</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>Whether or not to create a reminder for the case management template node.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsMandatory</code></td>
+<td class="prop"><code>Is<wbr/>Mandatory</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>Specifies if the case management template node is mandatory.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsIncludeActivityOnDocument</code></td>
+<td class="prop"><code>Is<wbr/>Include<wbr/>Activity<wbr/>On<wbr/>Document</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>Whether or not to include activity on document for the case management template node.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsChargeable</code></td>
+<td class="prop"><code>Is<wbr/>Chargeable</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,31 +156,31 @@
 <td>Specifies if the case management template node is chargeable.</td>
 </tr>
 <tr>
-<td class="prop"><code>UserId</code></td>
+<td class="prop"><code>User<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier for the application user of the case management template node.</td>
 </tr>
 <tr>
-<td class="prop"><code>PhaseId</code></td>
+<td class="prop"><code>Phase<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CaseManagementPhase.html">CaseManagementPhases</a></td>
+<td><a class="chip" href="CaseManagementPhase.html">Case<wbr/>Management<wbr/>Phases</a></td>
 <td></td>
 <td>The business key identifier for the case management phase of the case management template node.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CaseManagementTemplate.html">CaseManagementTemplates</a></td>
+<td><a class="chip" href="CaseManagementTemplate.html">Case<wbr/>Management<wbr/>Templates</a></td>
 <td></td>
 <td>The business key identifier of the case management template.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentNodeId</code></td>
+<td class="prop"><code>Parent<wbr/>Node<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>The business key identifier of the case management template node's parent that the case management template node belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowIndex</code></td>
+<td class="prop"><code>Row<wbr/>Index</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>

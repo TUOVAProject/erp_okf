@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ShipmentCustomsRows · Monitor ERP API</title>
+<title>ShipmentCustomsRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a shipments customs information row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>ShipmentCustomsRows</span>
 </header>
 <div class="layout">
@@ -75,15 +75,15 @@
 <td>The business key identifier of the shipments customs information row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ShipmentCustoms.html">ShipmentCustoms</a></td>
+<td><a class="chip" href="ShipmentCustoms.html">Shipment<wbr/>Customs</a></td>
 <td></td>
 <td>The business key identifier of the rows customs information.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowIndex</code></td>
+<td class="prop"><code>Row<wbr/>Index</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -91,7 +91,7 @@
 <td>The rows index number.</td>
 </tr>
 <tr>
-<td class="prop"><code>CountryOfOriginId</code></td>
+<td class="prop"><code>Country<wbr/>Of<wbr/>Origin<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Country.html">Countries</a></td>
@@ -99,7 +99,7 @@
 <td>The business key identifier of the rows country of origin.</td>
 </tr>
 <tr>
-<td class="prop"><code>CountryOfOrigin</code></td>
+<td class="prop"><code>Country<wbr/>Of<wbr/>Origin</code></td>
 <td class="type"><code>Countries</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Country.html">Countries</a></td>
@@ -107,23 +107,23 @@
 <td>The rows country of origin.</td>
 </tr>
 <tr>
-<td class="prop"><code>StatisticalGoodsCodeId</code></td>
+<td class="prop"><code>Statistical<wbr/>Goods<wbr/>Code<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/StatisticalGoodsCode.html">StatisticalGoodsCodes</a></td>
+<td><a class="chip" href="../Common/StatisticalGoodsCode.html">Statistical<wbr/>Goods<wbr/>Codes</a></td>
 <td></td>
 <td>The business key identifier of the rows statistical goods code.</td>
 </tr>
 <tr>
-<td class="prop"><code>StatisticalGoodsCode</code></td>
-<td class="type"><code>StatisticalGoodsCodes</code></td>
+<td class="prop"><code>Statistical<wbr/>Goods<wbr/>Code</code></td>
+<td class="type"><code>Statistical<wbr/>Goods<wbr/>Codes</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/StatisticalGoodsCode.html">StatisticalGoodsCodes</a></td>
+<td><a class="chip" href="../Common/StatisticalGoodsCode.html">Statistical<wbr/>Goods<wbr/>Codes</a></td>
 <td>expandable</td>
 <td>The rows statistical goods code.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitId</code></td>
+<td class="prop"><code>Unit<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Unit.html">Units</a></td>
@@ -139,7 +139,7 @@
 <td>The rows unit.</td>
 </tr>
 <tr>
-<td class="prop"><code>AdditionalCode</code></td>
+<td class="prop"><code>Additional<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -155,7 +155,7 @@
 <td>The rows amount.</td>
 </tr>
 <tr>
-<td class="prop"><code>AmountInCompanyCurrency</code></td>
+<td class="prop"><code>Amount<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -171,7 +171,7 @@
 <td>The rows content.</td>
 </tr>
 <tr>
-<td class="prop"><code>GrossWeight</code></td>
+<td class="prop"><code>Gross<wbr/>Weight</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -179,7 +179,7 @@
 <td>The rows gross weight.</td>
 </tr>
 <tr>
-<td class="prop"><code>NetWeight</code></td>
+<td class="prop"><code>Net<wbr/>Weight</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -187,7 +187,7 @@
 <td>The rows net weight.</td>
 </tr>
 <tr>
-<td class="prop"><code>GoodsLabel</code></td>
+<td class="prop"><code>Goods<wbr/>Label</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -195,7 +195,7 @@
 <td>The rows goods label.</td>
 </tr>
 <tr>
-<td class="prop"><code>OtherQuantity</code></td>
+<td class="prop"><code>Other<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -203,7 +203,7 @@
 <td>The rows other quantity.</td>
 </tr>
 <tr>
-<td class="prop"><code>OtherUnitId</code></td>
+<td class="prop"><code>Other<wbr/>Unit<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Unit.html">Units</a></td>
@@ -211,7 +211,7 @@
 <td>The business key identifier of the rows other unit.</td>
 </tr>
 <tr>
-<td class="prop"><code>OtherUnit</code></td>
+<td class="prop"><code>Other<wbr/>Unit</code></td>
 <td class="type"><code>Units</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Unit.html">Units</a></td>
@@ -219,7 +219,7 @@
 <td>The rows other unit.</td>
 </tr>
 <tr>
-<td class="prop"><code>OtherUnitCode</code></td>
+<td class="prop"><code>Other<wbr/>Unit<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>

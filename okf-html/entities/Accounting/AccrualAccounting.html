@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AccrualAccountings · Monitor ERP API</title>
+<title>AccrualAccountings · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a accrual accounting.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>AccrualAccountings</span>
 </header>
 <div class="layout">
@@ -100,23 +100,23 @@
 <td>Type of accrual accounting.</td>
 </tr>
 <tr>
-<td class="prop"><code>StartDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Start<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>Start date of the accrual accounting.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsPayableId</code></td>
+<td class="prop"><code>Accounts<wbr/>Payable<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AccountsPayable.html">AccountsPayables</a></td>
+<td><a class="chip" href="AccountsPayable.html">Accounts<wbr/>Payables</a></td>
 <td></td>
 <td>The business key identifier of the accounts payable.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsPayableBookingRowId</code></td>
+<td class="prop"><code>Accounts<wbr/>Payable<wbr/>Booking<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>The business key identifier of the accounts payable booking row.</td>
 </tr>
 <tr>
-<td class="prop"><code>VoucherId</code></td>
+<td class="prop"><code>Voucher<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The business key identifier of the voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>VoucherRowId</code></td>
+<td class="prop"><code>Voucher<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The business key identifier of the voucher row.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -156,7 +156,7 @@
 <td>The comment on the accrual accounting.</td>
 </tr>
 <tr>
-<td class="prop"><code>CancelCommentId</code></td>
+<td class="prop"><code>Cancel<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -164,7 +164,7 @@
 <td>The business key identifier of the accrual accounting cancellation comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>CancelComment</code></td>
+<td class="prop"><code>Cancel<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -172,7 +172,7 @@
 <td>The cancellation comment on the accrual accounting.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsCancelled</code></td>
+<td class="prop"><code>Is<wbr/>Cancelled</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>Specifies if the accrual accounting is cancelled.</td>
 </tr>
 <tr>
-<td class="prop"><code>BookingId</code></td>
+<td class="prop"><code>Booking<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -189,25 +189,25 @@
 </tr>
 <tr>
 <td class="prop"><code>Rows</code></td>
-<td class="type"><code>AccrualAccountingRows[]</code></td>
+<td class="type"><code>Accrual<wbr/>Accounting<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AccrualAccountingRow.html">AccrualAccountingRows</a></td>
+<td><a class="chip" href="AccrualAccountingRow.html">Accrual<wbr/>Accounting<wbr/>Rows</a></td>
 <td>expandable, collection</td>
 <td>The accrual accounting rows.</td>
 </tr>
 <tr>
-<td class="prop"><code>BookingRows</code></td>
-<td class="type"><code>BookingRows[]</code></td>
+<td class="prop"><code>Booking<wbr/>Rows</code></td>
+<td class="type"><code>Booking<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="BookingRow.html">BookingRows</a></td>
+<td><a class="chip" href="BookingRow.html">Booking<wbr/>Rows</a></td>
 <td>expandable, collection</td>
 <td>The booking rows on the accrual accounting.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsPayableBookingRow</code></td>
-<td class="type"><code>BookingRows</code></td>
+<td class="prop"><code>Accounts<wbr/>Payable<wbr/>Booking<wbr/>Row</code></td>
+<td class="type"><code>Booking<wbr/>Rows</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="BookingRow.html">BookingRows</a></td>
+<td><a class="chip" href="BookingRow.html">Booking<wbr/>Rows</a></td>
 <td>expandable</td>
 <td>The booking row of the accrual accounting's account payable.</td>
 </tr>

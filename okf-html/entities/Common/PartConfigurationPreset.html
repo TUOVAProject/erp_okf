@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PartConfigurationPresets · Monitor ERP API</title>
+<title>PartConfigurationPresets · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a part configuration preset.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>PartConfigurationPresets</span>
 </header>
 <div class="layout">
@@ -83,42 +83,42 @@
 <td>The name of the preset.</td>
 </tr>
 <tr>
-<td class="prop"><code>ChangedDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Changed<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date and time the preset was last changed.</td>
 </tr>
 <tr>
-<td class="prop"><code>ChangedBy</code></td>
+<td class="prop"><code>Changed<wbr/>By</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the application user who last changed the preset.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreatedDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Created<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The date and time the preset was created.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreatedBy</code></td>
+<td class="prop"><code>Created<wbr/>By</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the application user who created the preset.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartConfigurationId</code></td>
+<td class="prop"><code>Part<wbr/>Configuration<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="PartConfiguration.html">PartConfigurations</a></td>
+<td><a class="chip" href="PartConfiguration.html">Part<wbr/>Configurations</a></td>
 <td></td>
 <td>The business key identifier of the preset's configuration.</td>
 </tr>

@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AttendanceIntervals · Monitor ERP API</title>
+<title>AttendanceIntervals · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents an attendance recording interval on a recording day.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/TimeRecording.html">TimeRecording</a><span class="sep">/</span>AttendanceIntervals</span>
 </header>
 <div class="layout">
@@ -76,23 +76,23 @@
 <td>The business key identifier of an attendance interval.</td>
 </tr>
 <tr>
-<td class="prop"><code>IntervalStart</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Interval<wbr/>Start</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The start of the interval.</td>
 </tr>
 <tr>
-<td class="prop"><code>IntervalEnd</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Interval<wbr/>End</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The end of the interval.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsClosedInterval</code></td>
+<td class="prop"><code>Is<wbr/>Closed<wbr/>Interval</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -100,15 +100,15 @@
 <td>Indicatates if the interval was ended. If false the interval is considered the active interval on the day which the next attendance recording is supposed to end.</td>
 </tr>
 <tr>
-<td class="prop"><code>AbsenceCodeId</code></td>
+<td class="prop"><code>Absence<wbr/>Code<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AbsenceCode.html">AbsenceCodes</a></td>
+<td><a class="chip" href="AbsenceCode.html">Absence<wbr/>Codes</a></td>
 <td></td>
 <td>The business key identifier of an absence code. If defined this interval is an absence recording. References a AbsenceCodes</td>
 </tr>
 <tr>
-<td class="prop"><code>DeductedIfDailyHoursNotFulfilledOverride</code></td>
+<td class="prop"><code>Deducted<wbr/>If<wbr/>Daily<wbr/>Hours<wbr/>Not<wbr/>Fulfilled<wbr/>Override</code></td>
 <td class="type"><code>Boolean?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -116,23 +116,23 @@
 <td>Used to per recording be able to override the setting from an absence code if it should affect deduction of overtime.</td>
 </tr>
 <tr>
-<td class="prop"><code>OvertimeTypeBeforeId</code></td>
+<td class="prop"><code>Overtime<wbr/>Type<wbr/>Before<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="OvertimeType.html">OvertimeTypes</a></td>
+<td><a class="chip" href="OvertimeType.html">Overtime<wbr/>Types</a></td>
 <td></td>
 <td>The business key identifier of an overtime type selected at the start of the interval. References a OvertimeTypes</td>
 </tr>
 <tr>
-<td class="prop"><code>OvertimeTypeAfterId</code></td>
+<td class="prop"><code>Overtime<wbr/>Type<wbr/>After<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="OvertimeType.html">OvertimeTypes</a></td>
+<td><a class="chip" href="OvertimeType.html">Overtime<wbr/>Types</a></td>
 <td></td>
 <td>The business key identifier of an overtime type selected at the end of the interval. References a OvertimeTypes</td>
 </tr>
 <tr>
-<td class="prop"><code>IsBreak</code></td>
+<td class="prop"><code>Is<wbr/>Break</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>Indicates if this is a break recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsAutomaticOut</code></td>
+<td class="prop"><code>Is<wbr/>Automatic<wbr/>Out</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>Indicates if this was an automatic clock-out recording due to forgotten clock-out the previous day.</td>
 </tr>
 <tr>
-<td class="prop"><code>AbsenceKind</code></td>
+<td class="prop"><code>Absence<wbr/>Kind</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,24 +156,24 @@
 <td>Specifies the absence kind recorded for this interval.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalculatedTime</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Calculated<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The recorded time for this interval after schedule and settings has been taken into account.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalculatedOvertimeBefore</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Calculated<wbr/>Overtime<wbr/>Before</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The amount of overtime before schedule start.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalculatedOvertimeAfter</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Calculated<wbr/>Overtime<wbr/>After</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>

@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TransferProfiles · Monitor ERP API</title>
+<title>TransferProfiles · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a transfer profile.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>TransferProfiles</span>
 </header>
 <div class="layout">
@@ -100,7 +100,7 @@
 <td>The usages type of the transfer profile.</td>
 </tr>
 <tr>
-<td class="prop"><code>TargetRole</code></td>
+<td class="prop"><code>Target<wbr/>Role</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>The role of the transfer profile.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsVerified</code></td>
+<td class="prop"><code>Is<wbr/>Verified</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>Specifies if this transfer profile is verified.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsActive</code></td>
+<td class="prop"><code>Is<wbr/>Active</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,15 +124,15 @@
 <td>Specifies if this transfer profile is active.</td>
 </tr>
 <tr>
-<td class="prop"><code>ConnectionProfileId</code></td>
+<td class="prop"><code>Connection<wbr/>Profile<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ConnectionProfile.html">ConnectionProfiles</a></td>
+<td><a class="chip" href="ConnectionProfile.html">Connection<wbr/>Profiles</a></td>
 <td>since 23.2</td>
 <td>The business key identifier of the transfer profile's connection profile.</td>
 </tr>
 <tr>
-<td class="prop"><code>RemoteWarehouseId</code></td>
+<td class="prop"><code>Remote<wbr/>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Warehouse.html">Warehouses</a></td>
@@ -140,15 +140,15 @@
 <td>The business key identifier of the transfer profile's remote warehouse.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderTransferSettingsId</code></td>
+<td class="prop"><code>Order<wbr/>Transfer<wbr/>Settings<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="OrderTransferSetting.html">OrderTransferSettings</a></td>
+<td><a class="chip" href="OrderTransferSetting.html">Order<wbr/>Transfer<wbr/>Settings</a></td>
 <td>since 23.2</td>
 <td>The business key identifier of the transfer profile's order transfer setting.</td>
 </tr>
 <tr>
-<td class="prop"><code>SupplierId</code></td>
+<td class="prop"><code>Supplier<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Purchase/Supplier.html">Suppliers</a></td>
@@ -156,7 +156,7 @@
 <td>The business key identifier of the transfer profile's supplier.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerCode</code></td>
+<td class="prop"><code>Customer<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>

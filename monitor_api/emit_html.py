@@ -16,7 +16,8 @@ from pathlib import Path
 
 import markdown
 import yaml
-from bs4 import BeautifulSoup, NavigableString
+from bs4 import BeautifulSoup
+from bs4.element import NavigableString
 
 from .paths import OKF_DIR, OKF_HTML_DIR, OKF_HTML_TMP_DIR
 
@@ -42,13 +43,24 @@ CHIP_COLUMNS = {"References", "Entities"}
 MODULE_COUNTS = re.compile(r"(\d+) queryable, (\d+) commands, (\d+) types")
 PAGE_COUNT = re.compile(r"(\d+) pages")
 
+# Between a lower-case letter or digit and the upper-case letter that starts the
+# next word: "ShipmentPackageInformation" -> Shipment|Package|Information.
+CAMEL_BOUNDARY = re.compile(r"(?<=[a-z0-9])(?=[A-Z])")
+
 # Numeric column drawn with a proportional bar (guides/core-entities.md).
 BAR_COLUMN = "Referenced by"
 
 # `npx serve okf-html` reads this. Its default cleanUrls redirects
 # .../Sales/index.html to .../Sales (no trailing slash), which shifts the base
-# directory and breaks every relative link on index pages.
-SERVE_JSON = '{\n  "cleanUrls": false\n}\n'
+# directory and breaks every relative link on index pages. With cleanUrls off,
+# serve only looks for index.html when a rewrite matches, so "/" needs one or it
+# shows a directory listing instead of the home page.
+SERVE_JSON = (
+    '{\n'
+    '  "cleanUrls": false,\n'
+    '  "rewrites": [{ "source": "/", "destination": "/index.html" }]\n'
+    '}\n'
+)
 
 
 def split_frontmatter(text: str) -> tuple[dict, str]:
@@ -158,6 +170,24 @@ def meta_list(soup) -> None:
         return
 
 
+def soft_breaks(soup, tag) -> None:
+    """A <wbr> at each CamelCase word boundary, so long property and type names
+    can wrap inside a narrow column. The text itself is unchanged."""
+    for text in list(tag.find_all(string=True)):
+        parts = CAMEL_BOUNDARY.split(str(text))
+
+        if len(parts) == 1:
+            continue
+
+        for i, part in enumerate(parts):
+            if i:
+                text.insert_before(soup.new_tag("wbr"))
+
+            text.insert_before(part)
+
+        text.extract()
+
+
 def to_chips(cell) -> None:
     links = cell.find_all("a")
 
@@ -200,8 +230,10 @@ def style_tables(soup) -> None:
             for name, cell in zip(names, row.find_all("td")):
                 if name == "Property" and "props" in table.get("class", []):
                     cell["class"] = ["prop"]
+                    soft_breaks(soup, cell)
                 elif name == "Type" and "props" in table.get("class", []):
                     cell["class"] = ["type"]
+                    soft_breaks(soup, cell)
                 elif name == "Null":
                     nullable = cell.get_text(strip=True) == "yes"
                     cell.clear()
@@ -211,6 +243,9 @@ def style_tables(soup) -> None:
                         cell.append(new_tag(soup, "span", "null", class_="badge"))
                 elif name in CHIP_COLUMNS:
                     to_chips(cell)
+
+                    if "props" in table.get("class", []):
+                        soft_breaks(soup, cell)
                 elif name == "Constraints":
                     strong = cell.find("strong")
 
@@ -257,6 +292,34 @@ def enum_chips(soup) -> None:
         h3.extract()
 
     heading.insert_after(enums)
+
+
+def dependency_panels(soup) -> None:
+    """Under "Depends on other modules", each "- [Module](..): [A](..), [B](..)"
+    as a row: the module link beside its entities as chips."""
+    heading = soup.find("h2", id="depends-on-other-modules")
+    ul = heading and heading.find_next_sibling("ul")
+
+    if not ul:
+        return
+
+    deps = new_tag(soup, "div", class_="deps")
+
+    for li in ul.find_all("li", recursive=False):
+        module, *targets = li.find_all("a")
+        row = new_tag(soup, "div", class_="dep")
+        module["class"] = ["dep-t"]
+        row.append(module.extract())
+        chips = new_tag(soup, "div", class_="dep-chips")
+
+        for target in targets:
+            target["class"] = ["chip"]
+            chips.append(target.extract())
+
+        row.append(chips)
+        deps.append(row)
+
+    ul.replace_with(deps)
 
 
 def composition(soup, counts: list[tuple[str, str]]):
@@ -364,6 +427,7 @@ def render_content(body: str, is_index: bool = False) -> BeautifulSoup:
     meta_list(soup)
     style_tables(soup)
     enum_chips(soup)
+    dependency_panels(soup)
     wrap_tables(soup)
 
     return soup

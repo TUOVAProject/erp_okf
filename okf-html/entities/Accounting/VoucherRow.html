@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VoucherRows · Monitor ERP API</title>
+<title>VoucherRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a voucher row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>VoucherRows</span>
 </header>
 <div class="layout">
@@ -75,7 +75,7 @@
 <td>The business key identifier of the voucher row.</td>
 </tr>
 <tr>
-<td class="prop"><code>EntryIdentifier</code></td>
+<td class="prop"><code>Entry<wbr/>Identifier</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -83,7 +83,7 @@
 <td>The unique coding identifier of the voucher row's coding entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>VoucherId</code></td>
+<td class="prop"><code>Voucher<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Voucher.html">Vouchers</a></td>
@@ -91,15 +91,15 @@
 <td>The business key identifier of the voucher that the voucher row belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentVoucherDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Parent<wbr/>Voucher<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The voucher date of the parent voucher.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentIsPreliminary</code></td>
+<td class="prop"><code>Parent<wbr/>Is<wbr/>Preliminary</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -107,7 +107,7 @@
 <td>Specifies if the parent voucher is preliminary.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExchangeRate</code></td>
+<td class="prop"><code>Exchange<wbr/>Rate</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -115,15 +115,15 @@
 <td>The exchange rate of the voucher row.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatRateId</code></td>
+<td class="prop"><code>Vat<wbr/>Rate<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td><a class="chip" href="../Common/VatRate.html">Vat<wbr/>Rates</a></td>
 <td></td>
 <td>The business key identifier of the row's VAT rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>BalanceId</code></td>
+<td class="prop"><code>Balance<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Balance.html">Balances</a></td>
@@ -131,7 +131,7 @@
 <td>The business key identifier of the row's balance.</td>
 </tr>
 <tr>
-<td class="prop"><code>CodingMethodId</code></td>
+<td class="prop"><code>Coding<wbr/>Method<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -139,15 +139,15 @@
 <td>The business key identifier of the row's coding method. References CodingMethod.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccrualAccountingId</code></td>
+<td class="prop"><code>Accrual<wbr/>Accounting<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AccrualAccounting.html">AccrualAccountings</a></td>
+<td><a class="chip" href="AccrualAccounting.html">Accrual<wbr/>Accountings</a></td>
 <td></td>
 <td>The business key identifier of the row's accrual accounting.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderNumber</code></td>
+<td class="prop"><code>Order<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -155,7 +155,7 @@
 <td>The order number linked to the voucher row</td>
 </tr>
 <tr>
-<td class="prop"><code>DebitInCompanyCurrency</code></td>
+<td class="prop"><code>Debit<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -163,7 +163,7 @@
 <td>Debit in the company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>DebitInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Debit<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -171,7 +171,7 @@
 <td>The business key identifier of the debit in the company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreditInCompanyCurrency</code></td>
+<td class="prop"><code>Credit<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -179,7 +179,7 @@
 <td>Credit in the company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreditInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Credit<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -195,7 +195,7 @@
 <td>Debit on the voucher row.</td>
 </tr>
 <tr>
-<td class="prop"><code>DebitCurrencyId</code></td>
+<td class="prop"><code>Debit<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -211,7 +211,7 @@
 <td>Credit on the voucher row.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreditCurrencyId</code></td>
+<td class="prop"><code>Credit<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -227,34 +227,34 @@
 <td>The quantity set on the voucher row.</td>
 </tr>
 <tr>
-<td class="prop"><code>CodingEntryId</code></td>
+<td class="prop"><code>Coding<wbr/>Entry<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CodingEntry.html">CodingEntries</a></td>
+<td><a class="chip" href="CodingEntry.html">Coding<wbr/>Entries</a></td>
 <td></td>
 <td>The business key identifier of the coding entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsPayableId</code></td>
+<td class="prop"><code>Accounts<wbr/>Payable<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AccountsPayable.html">AccountsPayables</a></td>
+<td><a class="chip" href="AccountsPayable.html">Accounts<wbr/>Payables</a></td>
 <td>since 25.6</td>
 <td>The business key identifier of the accounts payable connected to the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsReceivableId</code></td>
+<td class="prop"><code>Accounts<wbr/>Receivable<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AccountsReceivable.html">AccountsReceivables</a></td>
+<td><a class="chip" href="AccountsReceivable.html">Accounts<wbr/>Receivables</a></td>
 <td>since 25.6</td>
 <td>The business key identifier of the accounts receivable connected to the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>NetAmountVoucherRowId</code></td>
+<td class="prop"><code>Net<wbr/>Amount<wbr/>Voucher<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="VoucherRow.html">VoucherRows</a></td>
+<td><a class="chip" href="VoucherRow.html">Voucher<wbr/>Rows</a></td>
 <td>since 25.6</td>
 <td>The business key identifier of the net amount row that the VAT row belongs to.</td>
 </tr>

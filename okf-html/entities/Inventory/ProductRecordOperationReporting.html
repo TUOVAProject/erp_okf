@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ProductRecordOperationReportings · Monitor ERP API</title>
+<title>ProductRecordOperationReportings · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a product record operation reporting.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>ProductRecordOperationReportings</span>
 </header>
 <div class="layout">
@@ -76,15 +76,15 @@
 <td>The business key identifier of the product record operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>LoggingTimeStamp</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Logging<wbr/>Time<wbr/>Stamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The time when the product record operation reporting was reported.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportingType</code></td>
+<td class="prop"><code>Reporting<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -92,15 +92,15 @@
 <td>The type that the product record operation reporting is.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProductRecordId</code></td>
+<td class="prop"><code>Product<wbr/>Record<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProductRecord.html">ProductRecords</a></td>
+<td><a class="chip" href="ProductRecord.html">Product<wbr/>Records</a></td>
 <td></td>
 <td>The business key identifier of the product record that the product record operation reporting applies.</td>
 </tr>
 <tr>
-<td class="prop"><code>OperationReportingId</code></td>
+<td class="prop"><code>Operation<wbr/>Reporting<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>The business key identifier of the manufacturing order operation reporting that the product record operation reporting applies.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderNumber</code></td>
+<td class="prop"><code>Order<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,15 +116,15 @@
 <td>The product record operation reportings order number.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Reported<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The product record operation reportings reported time.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedQuantity</code></td>
+<td class="prop"><code>Reported<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The product record operation reportings reported quantity.</td>
 </tr>
 <tr>
-<td class="prop"><code>QuantityPerCycle</code></td>
+<td class="prop"><code>Quantity<wbr/>Per<wbr/>Cycle</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -140,23 +140,23 @@
 <td>The product record operation reportings quantity per cycle.</td>
 </tr>
 <tr>
-<td class="prop"><code>CycleTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Cycle<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The product record operation reportings cycle time.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Total<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The product record operation reportings total time.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalCycles</code></td>
+<td class="prop"><code>Total<wbr/>Cycles</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -164,7 +164,7 @@
 <td>The product record operation reportings total cycle.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalMeasurementSetting</code></td>
+<td class="prop"><code>Total<wbr/>Measurement<wbr/>Setting</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,7 +172,7 @@
 <td>The product record operation reportings total seasurement setting.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedMeasurementSetting</code></td>
+<td class="prop"><code>Reported<wbr/>Measurement<wbr/>Setting</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>

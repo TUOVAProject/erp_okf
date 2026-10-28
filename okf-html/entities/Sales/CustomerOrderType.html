@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CustomerOrderTypes · Monitor ERP API</title>
+<title>CustomerOrderTypes · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a customer order type.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>CustomerOrderTypes</span>
 </header>
 <div class="layout">
@@ -116,7 +116,7 @@
 <td>Specifies if the type is visible.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsPreset</code></td>
+<td class="prop"><code>Is<wbr/>Preset</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>Specifies if the type is a preset type.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceSetting</code></td>
+<td class="prop"><code>Price<wbr/>Setting</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,15 +132,15 @@
 <td>The price settings of the type.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceListId</code></td>
+<td class="prop"><code>Price<wbr/>List<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/PriceList.html">PriceLists</a></td>
+<td><a class="chip" href="../Common/PriceList.html">Price<wbr/>Lists</a></td>
 <td></td>
 <td>The business key identifier of the type's price list.</td>
 </tr>
 <tr>
-<td class="prop"><code>IncludeInDeliveryAnalysis</code></td>
+<td class="prop"><code>Include<wbr/>In<wbr/>Delivery<wbr/>Analysis</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>Specifies if customer orders of this type should be included in delivery analysis.</td>
 </tr>
 <tr>
-<td class="prop"><code>IncludeInStatistics</code></td>
+<td class="prop"><code>Include<wbr/>In<wbr/>Statistics</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>Specifies if customer orders of this type should be included in statistics.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceType</code></td>
+<td class="prop"><code>Invoice<wbr/>Type</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -164,15 +164,15 @@
 <td>The default invoice type of customer orders created with this type.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentTermId</code></td>
+<td class="prop"><code>Payment<wbr/>Term<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">Payment<wbr/>Terms</a></td>
 <td></td>
 <td>The business key identifier of the type's default payment term. References a PaymentTerms</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseOrderAddressStrategy</code></td>
+<td class="prop"><code>Purchase<wbr/>Order<wbr/>Address<wbr/>Strategy</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>The purchase order from customer order address strategy to use for customer orders of this type.</td>
 </tr>
 <tr>
-<td class="prop"><code>BaseType</code></td>
+<td class="prop"><code>Base<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>The base type of customer orders created using this type.</td>
 </tr>
 <tr>
-<td class="prop"><code>CodingGroupId</code></td>
+<td class="prop"><code>Coding<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The business key identifier of the type's coding group.</td>
 </tr>
 <tr>
-<td class="prop"><code>RateTypeSetting</code></td>
+<td class="prop"><code>Rate<wbr/>Type<wbr/>Setting</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -204,18 +204,18 @@
 <td>The rate type setting of the customer order type.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyExchangeTypeId</code></td>
+<td class="prop"><code>Currency<wbr/>Exchange<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">Currency<wbr/>Exchange<wbr/>Types</a></td>
 <td>since 22.9</td>
 <td>The business key identifier of the customer order type's currency exchange type.</td>
 </tr>
 <tr>
-<td class="prop"><code>DefaultTransferProfileId</code></td>
+<td class="prop"><code>Default<wbr/>Transfer<wbr/>Profile<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/TransferProfile.html">TransferProfiles</a></td>
+<td><a class="chip" href="../Common/TransferProfile.html">Transfer<wbr/>Profiles</a></td>
 <td>since 23.2</td>
 <td>The business key identifier of the customer order's default transfer profile.</td>
 </tr>

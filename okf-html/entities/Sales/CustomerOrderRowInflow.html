@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CustomerOrderRowInflows · Monitor ERP API</title>
+<title>CustomerOrderRowInflows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a customer order inflow row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>CustomerOrderRowInflows</span>
 </header>
 <div class="layout">
@@ -75,23 +75,23 @@
 <td>The business key identifier of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderRowId</code></td>
+<td class="prop"><code>Order<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CustomerOrderRow.html">CustomerOrderRows</a></td>
+<td><a class="chip" href="CustomerOrderRow.html">Customer<wbr/>Order<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the inflow rows customer order row.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderRow</code></td>
-<td class="type"><code>CustomerOrderRows</code></td>
+<td class="prop"><code>Order<wbr/>Row</code></td>
+<td class="type"><code>Customer<wbr/>Order<wbr/>Rows</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CustomerOrderRow.html">CustomerOrderRows</a></td>
+<td><a class="chip" href="CustomerOrderRow.html">Customer<wbr/>Order<wbr/>Rows</a></td>
 <td>expandable</td>
 <td>The inflow rows customer order row.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlanketOrderSalesRowId</code></td>
+<td class="prop"><code>Blanket<wbr/>Order<wbr/>Sales<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -99,7 +99,7 @@
 <td>The business key identifier of the inflow rows blanket order sales row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -115,7 +115,7 @@
 <td>The inflow rows part.</td>
 </tr>
 <tr>
-<td class="prop"><code>EntityIdentityString</code></td>
+<td class="prop"><code>Entity<wbr/>Identity<wbr/>String</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -123,7 +123,7 @@
 <td>The human readable identifier of the entity subject of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>AdditionalRowDescription</code></td>
+<td class="prop"><code>Additional<wbr/>Row<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -139,15 +139,15 @@
 <td>The status of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>LoggingTimeStamp</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Logging<wbr/>Time<wbr/>Stamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The logging timestamp of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderedQuantityChange</code></td>
+<td class="prop"><code>Ordered<wbr/>Quantity<wbr/>Change</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -155,7 +155,7 @@
 <td>The ordered quantity change of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitId</code></td>
+<td class="prop"><code>Unit<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -171,7 +171,7 @@
 <td>The inflow rows unit.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChange</code></td>
+<td class="prop"><code>Price<wbr/>Change</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -179,7 +179,7 @@
 <td>The price change of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangeCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -187,7 +187,7 @@
 <td>The business key identifier of the inflow rows price changes currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceChangeCurrency</code></td>
+<td class="prop"><code>Price<wbr/>Change<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -195,7 +195,7 @@
 <td>The inflow rows price changes currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceChange</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>Change</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -203,7 +203,7 @@
 <td>The setup price change of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceChangeCurrencyId</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>Change<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -211,7 +211,7 @@
 <td>The business key identifier of the inflow rows setup price changes currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceChangeCurrency</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>Change<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -219,7 +219,7 @@
 <td>The inflow rows setup price changes currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>DiscountChange</code></td>
+<td class="prop"><code>Discount<wbr/>Change</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -227,7 +227,7 @@
 <td>The discount change of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalValueChange</code></td>
+<td class="prop"><code>Total<wbr/>Value<wbr/>Change</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -235,7 +235,7 @@
 <td>The total value change of the inflow row.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalValueChangeCurrencyId</code></td>
+<td class="prop"><code>Total<wbr/>Value<wbr/>Change<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -243,7 +243,7 @@
 <td>The business key identifier of the inflow rows total value changes currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>TotalValueChangeCurrency</code></td>
+<td class="prop"><code>Total<wbr/>Value<wbr/>Change<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -251,7 +251,7 @@
 <td>The inflow rows total value changes currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderRowType</code></td>
+<td class="prop"><code>Order<wbr/>Row<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>

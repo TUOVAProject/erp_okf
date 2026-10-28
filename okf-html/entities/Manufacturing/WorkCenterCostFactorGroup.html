@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WorkCenterCostFactorGroups · Monitor ERP API</title>
+<title>WorkCenterCostFactorGroups · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a cost factor group belonging to a work center. Note that all cost factors are represented in company currency per hour.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>WorkCenterCostFactorGroups</span>
 </header>
 <div class="layout">
@@ -92,7 +92,7 @@
 <td>The types that apply to the work center cost factor group.</td>
 </tr>
 <tr>
-<td class="prop"><code>CostFactor1</code></td>
+<td class="prop"><code>Cost<wbr/>Factor1</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -100,7 +100,7 @@
 <td>The first cost factor of the group.</td>
 </tr>
 <tr>
-<td class="prop"><code>CostFactor2</code></td>
+<td class="prop"><code>Cost<wbr/>Factor2</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>The second cost factor of the group.</td>
 </tr>
 <tr>
-<td class="prop"><code>CostFactor3</code></td>
+<td class="prop"><code>Cost<wbr/>Factor3</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>The third cost factor of the group.</td>
 </tr>
 <tr>
-<td class="prop"><code>FutureCostFactor1</code></td>
+<td class="prop"><code>Future<wbr/>Cost<wbr/>Factor1</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>The future first cost factor of the group.</td>
 </tr>
 <tr>
-<td class="prop"><code>FutureCostFactor2</code></td>
+<td class="prop"><code>Future<wbr/>Cost<wbr/>Factor2</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The future second cost factor of the group.</td>
 </tr>
 <tr>
-<td class="prop"><code>FutureCostFactor3</code></td>
+<td class="prop"><code>Future<wbr/>Cost<wbr/>Factor3</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The future third cost factor of the group.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsDefaultSetupCost</code></td>
+<td class="prop"><code>Is<wbr/>Default<wbr/>Setup<wbr/>Cost</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>Specifies if the cost factor group is used as the default group for setup costs for its parent work center.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsDefaultUnitCost</code></td>
+<td class="prop"><code>Is<wbr/>Default<wbr/>Unit<wbr/>Cost</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,15 +156,15 @@
 <td>Specifies if the cost factor group is used as the default group for unit costs for its parent work center.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="WorkCenter.html">WorkCenters</a></td>
+<td><a class="chip" href="WorkCenter.html">Work<wbr/>Centers</a></td>
 <td></td>
 <td>The business key identifier of the work center that the cost factor group belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowIndex</code></td>
+<td class="prop"><code>Row<wbr/>Index</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>

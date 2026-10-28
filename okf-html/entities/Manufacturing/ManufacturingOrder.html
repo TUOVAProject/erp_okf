@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ManufacturingOrders · Monitor ERP API</title>
+<title>ManufacturingOrders · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a manufacturing order.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>ManufacturingOrders</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the manufacturing order.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderNumber</code></td>
+<td class="prop"><code>Order<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -92,7 +92,7 @@
 <td>The status of the manufacturing order.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -100,7 +100,7 @@
 <td>The business key identifier of the warehouse that the manufacturing order belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -116,7 +116,7 @@
 <td>The comment that belongs to the manufacturing order.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -132,7 +132,7 @@
 <td>The part that the manufacturing order is to produce.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedQuantity</code></td>
+<td class="prop"><code>Reported<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The reported quantity of the main manufacturing order node.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedQuantity</code></td>
+<td class="prop"><code>Planned<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>The planned quantity of the main manufacturing order node.</td>
 </tr>
 <tr>
-<td class="prop"><code>RestQuantity</code></td>
+<td class="prop"><code>Rest<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,16 +156,16 @@
 <td>The rest quantity of the main manufacturing order node.</td>
 </tr>
 <tr>
-<td class="prop"><code>StartDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Start<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The start date of the manufacturing order.</td>
 </tr>
 <tr>
-<td class="prop"><code>FinishDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Finish<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
@@ -180,47 +180,47 @@
 <td>The priority of the manufacturing order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Sales/CustomerOrder.html">CustomerOrders</a></td>
+<td><a class="chip" href="../Sales/CustomerOrder.html">Customer<wbr/>Orders</a></td>
 <td></td>
 <td>The business key identifier of the customer order that produced the manufacturing order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrder</code></td>
-<td class="type"><code>CustomerOrders</code></td>
+<td class="prop"><code>Customer<wbr/>Order</code></td>
+<td class="type"><code>Customer<wbr/>Orders</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Sales/CustomerOrder.html">CustomerOrders</a></td>
+<td><a class="chip" href="../Sales/CustomerOrder.html">Customer<wbr/>Orders</a></td>
 <td>expandable</td>
 <td>The customer order that produced the manufacturing order.</td>
 </tr>
 <tr>
 <td class="prop"><code>Operations</code></td>
-<td class="type"><code>ManufacturingOrderOperations[]</code></td>
+<td class="type"><code>Manufacturing<wbr/>Order<wbr/>Operations[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrderOperation.html">ManufacturingOrderOperations</a></td>
+<td><a class="chip" href="ManufacturingOrderOperation.html">Manufacturing<wbr/>Order<wbr/>Operations</a></td>
 <td>expandable, collection</td>
 <td>The manufacturing order operations that belong to the manufacturing order.</td>
 </tr>
 <tr>
 <td class="prop"><code>Materials</code></td>
-<td class="type"><code>ManufacturingOrderMaterials[]</code></td>
+<td class="type"><code>Manufacturing<wbr/>Order<wbr/>Materials[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrderMaterial.html">ManufacturingOrderMaterials</a></td>
+<td><a class="chip" href="ManufacturingOrderMaterial.html">Manufacturing<wbr/>Order<wbr/>Materials</a></td>
 <td>expandable, collection</td>
 <td>The manufacturing order materials that belong to the manufacturing order.</td>
 </tr>
 <tr>
 <td class="prop"><code>Nodes</code></td>
-<td class="type"><code>ManufacturingOrderNodes[]</code></td>
+<td class="type"><code>Manufacturing<wbr/>Order<wbr/>Nodes[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrderNode.html">ManufacturingOrderNodes</a></td>
+<td><a class="chip" href="ManufacturingOrderNode.html">Manufacturing<wbr/>Order<wbr/>Nodes</a></td>
 <td>expandable, collection, since 2.30</td>
 <td>The manufacturing order nodes that belong to the manufacturing order. It is flattened, not a structure.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectId</code></td>
+<td class="prop"><code>Project<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Project.html">Projects</a></td>
@@ -236,7 +236,7 @@
 <td>The project that belongs to the manufacturing order. Can be null.</td>
 </tr>
 <tr>
-<td class="prop"><code>CategoryString</code></td>
+<td class="prop"><code>Category<wbr/>String</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -244,7 +244,7 @@
 <td>The category string of the manufacturing order.</td>
 </tr>
 <tr>
-<td class="prop"><code>VariantCode</code></td>
+<td class="prop"><code>Variant<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -252,7 +252,7 @@
 <td>The variant code on the manufacturing order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerId</code></td>
+<td class="prop"><code>Customer<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Sales/Customer.html">Customers</a></td>
@@ -260,50 +260,50 @@
 <td>The business key identifier of the customer on the manufacturing order.</td>
 </tr>
 <tr>
-<td class="prop"><code>InitialFinishDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Initial<wbr/>Finish<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td>since 2.53</td>
 <td>The initial finish date for the manufacturing order.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartConfigurationId</code></td>
+<td class="prop"><code>Part<wbr/>Configuration<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/PartConfiguration.html">PartConfigurations</a></td>
+<td><a class="chip" href="../Common/PartConfiguration.html">Part<wbr/>Configurations</a></td>
 <td>since 2.55</td>
 <td>The business key identifier of the manufacturing order's part configuration.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderQuantityId</code></td>
+<td class="prop"><code>Order<wbr/>Quantity<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="OrderQuantityManufacturingOrder.html">OrderQuantityManufacturingOrders</a></td>
+<td><a class="chip" href="OrderQuantityManufacturingOrder.html">Order<wbr/>Quantity<wbr/>Manufacturing<wbr/>Orders</a></td>
 <td>since 22.6</td>
 <td>The business key identifier of order quantity.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderQuantity</code></td>
-<td class="type"><code>OrderQuantityManufacturingOrders</code></td>
+<td class="prop"><code>Order<wbr/>Quantity</code></td>
+<td class="type"><code>Order<wbr/>Quantity<wbr/>Manufacturing<wbr/>Orders</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="OrderQuantityManufacturingOrder.html">OrderQuantityManufacturingOrders</a></td>
+<td><a class="chip" href="OrderQuantityManufacturingOrder.html">Order<wbr/>Quantity<wbr/>Manufacturing<wbr/>Orders</a></td>
 <td>expandable, since 22.6</td>
 <td>Order quantity that holds the partial quantities.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderTypeId</code></td>
+<td class="prop"><code>Order<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ManufacturingOrderType.html">ManufacturingOrderTypes</a></td>
+<td><a class="chip" href="ManufacturingOrderType.html">Manufacturing<wbr/>Order<wbr/>Types</a></td>
 <td>since 24.3</td>
 <td>The business key identifier of order type.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderType</code></td>
-<td class="type"><code>ManufacturingOrderTypes</code></td>
+<td class="prop"><code>Order<wbr/>Type</code></td>
+<td class="type"><code>Manufacturing<wbr/>Order<wbr/>Types</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrderType.html">ManufacturingOrderTypes</a></td>
+<td><a class="chip" href="ManufacturingOrderType.html">Manufacturing<wbr/>Order<wbr/>Types</a></td>
 <td>expandable, since 24.3</td>
 <td>Order type of the Manufacturing Order.</td>
 </tr>

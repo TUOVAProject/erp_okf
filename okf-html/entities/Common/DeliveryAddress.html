@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DeliveryAddresses · Monitor ERP API</title>
+<title>DeliveryAddresses · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a delivery address.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>DeliveryAddresses</span>
 </header>
 <div class="layout">
@@ -140,7 +140,7 @@
 <td>The region of the address.</td>
 </tr>
 <tr>
-<td class="prop"><code>PostalCode</code></td>
+<td class="prop"><code>Postal<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>The postal code of the address.</td>
 </tr>
 <tr>
-<td class="prop"><code>AddressFormatType</code></td>
+<td class="prop"><code>Address<wbr/>Format<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The format type of the address.</td>
 </tr>
 <tr>
-<td class="prop"><code>CountryId</code></td>
+<td class="prop"><code>Country<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Country.html">Countries</a></td>
@@ -164,15 +164,15 @@
 <td>References Countries .</td>
 </tr>
 <tr>
-<td class="prop"><code>LanguageId</code></td>
+<td class="prop"><code>Language<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="LanguageCode.html">LanguageCodes</a></td>
+<td><a class="chip" href="LanguageCode.html">Language<wbr/>Codes</a></td>
 <td></td>
 <td>The business key identifier of the language code. References LanguageCodes .</td>
 </tr>
 <tr>
-<td class="prop"><code>FormReportTranslationGroupId</code></td>
+<td class="prop"><code>Form<wbr/>Report<wbr/>Translation<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>The business key identifier of the form report translation group. References FormReportTranslationGroup.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>PostalCodeId</code></td>
+<td class="prop"><code>Postal<wbr/>Code<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>The business key identifier of the postal code. References PostalCode. <em>(Unavailable)</em></td>
 </tr>
 <tr>
-<td class="prop"><code>IsDefault</code></td>
+<td class="prop"><code>Is<wbr/>Default</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>Specifies if this is the default delivery address.</td>
 </tr>
 <tr>
-<td class="prop"><code>AddressId</code></td>
+<td class="prop"><code>Address<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Address.html">Addresses</a></td>
@@ -204,15 +204,15 @@
 <td>References Addresses .</td>
 </tr>
 <tr>
-<td class="prop"><code>ConsigneeReferenceId</code></td>
+<td class="prop"><code>Consignee<wbr/>Reference<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="BusinessContactReference.html">BusinessContactReferences</a></td>
+<td><a class="chip" href="BusinessContactReference.html">Business<wbr/>Contact<wbr/>References</a></td>
 <td></td>
 <td>References BusinessContactReferences .</td>
 </tr>
 <tr>
-<td class="prop"><code>ConsigneeReferenceName</code></td>
+<td class="prop"><code>Consignee<wbr/>Reference<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -228,7 +228,7 @@
 <td>The destination of the delivery address.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>DeliveryWeekdays</code></td>
+<td class="prop"><code>Delivery<wbr/>Weekdays</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -236,7 +236,7 @@
 <td>Specifies which days delivery can be made to the delivery address. <em>(Can be found under Warehouses)</em></td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryInstruction</code></td>
+<td class="prop"><code>Delivery<wbr/>Instruction</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -244,23 +244,23 @@
 <td>The instruction of delivery for the delivery address.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatRateId</code></td>
+<td class="prop"><code>Vat<wbr/>Rate<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="VatRate.html">VatRates</a></td>
+<td><a class="chip" href="VatRate.html">Vat<wbr/>Rates</a></td>
 <td></td>
 <td>The business key identifier of the VatRate of the delivery address. References VatRates .</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerAccountGroupId</code></td>
+<td class="prop"><code>Customer<wbr/>Account<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Sales/CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td><a class="chip" href="../Sales/CustomerAccountGroup.html">Customer<wbr/>Account<wbr/>Groups</a></td>
 <td></td>
 <td>The business key identifier of the customer account group of the delivery address. References CustomerAccountGroups .</td>
 </tr>
 <tr>
-<td class="prop"><code>SupplierAccountGroupId</code></td>
+<td class="prop"><code>Supplier<wbr/>Account<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -268,15 +268,15 @@
 <td>The business key identifier of the supplier account group of the delivery address. References SupplierAccountGroup.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatGroupId</code></td>
+<td class="prop"><code>Vat<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="VatGroup.html">VatGroups</a></td>
+<td><a class="chip" href="VatGroup.html">Vat<wbr/>Groups</a></td>
 <td></td>
 <td>The business key identifier of the VAT group that the delivery address belongs to. References VatGroups .</td>
 </tr>
 <tr>
-<td class="prop"><code>VatNumber</code></td>
+<td class="prop"><code>Vat<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -285,9 +285,9 @@
 </tr>
 <tr>
 <td class="prop"><code>Warehouses</code></td>
-<td class="type"><code>DeliveryAddressWarehouseInformations[]</code></td>
+<td class="type"><code>Delivery<wbr/>Address<wbr/>Warehouse<wbr/>Informations[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="DeliveryAddressWarehouseInformation.html">DeliveryAddressWarehouseInformations</a></td>
+<td><a class="chip" href="DeliveryAddressWarehouseInformation.html">Delivery<wbr/>Address<wbr/>Warehouse<wbr/>Informations</a></td>
 <td>expandable, collection, since 2.43</td>
 <td>The warehouse information that belongs to the delivery address.</td>
 </tr>

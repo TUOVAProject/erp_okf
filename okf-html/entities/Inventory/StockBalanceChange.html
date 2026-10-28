@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>StockBalanceChanges · Monitor ERP API</title>
+<title>StockBalanceChanges · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a stock balance change.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>StockBalanceChanges</span>
 </header>
 <div class="layout">
@@ -75,15 +75,15 @@
 <td>The business key identifier of the stock balance change.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartLocationId</code></td>
+<td class="prop"><code>Part<wbr/>Location<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="PartLocation.html">PartLocations</a></td>
+<td><a class="chip" href="PartLocation.html">Part<wbr/>Locations</a></td>
 <td></td>
 <td>The part location that the balance change effects.</td>
 </tr>
 <tr>
-<td class="prop"><code>BalanceChange</code></td>
+<td class="prop"><code>Balance<wbr/>Change</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -91,7 +91,7 @@
 <td>The balance change for this part location.</td>
 </tr>
 <tr>
-<td class="prop"><code>AvailableBalance</code></td>
+<td class="prop"><code>Available<wbr/>Balance</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -99,18 +99,18 @@
 <td>The available balance for the part location before the balance change was performed. NOTE: This only produces a value for arrival reporting and manufacturing reportings. This property is not suitable for looking at the historical balance of a part location.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProductRecordId</code></td>
+<td class="prop"><code>Product<wbr/>Record<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ProductRecord.html">ProductRecords</a></td>
+<td><a class="chip" href="ProductRecord.html">Product<wbr/>Records</a></td>
 <td></td>
 <td>The product record that is used for this balance change.</td>
 </tr>
 <tr>
-<td class="prop"><code>QuantityChangeId</code></td>
+<td class="prop"><code>Quantity<wbr/>Change<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="QuantityChange.html">QuantityChanges</a></td>
+<td><a class="chip" href="QuantityChange.html">Quantity<wbr/>Changes</a></td>
 <td></td>
 <td>The parent quantity change of the stock balance change.</td>
 </tr>

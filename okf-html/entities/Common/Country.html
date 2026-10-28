@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Countries · Monitor ERP API</title>
+<title>Countries · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a queryable country.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>Countries</span>
 </header>
 <div class="layout">
@@ -91,7 +91,7 @@
 <td>The translated description of the country.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsEuMember</code></td>
+<td class="prop"><code>Is<wbr/>Eu<wbr/>Member</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -99,15 +99,15 @@
 <td>Specifies if the country is a member of the European Union.</td>
 </tr>
 <tr>
-<td class="prop"><code>LanguageId</code></td>
+<td class="prop"><code>Language<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="LanguageCode.html">LanguageCodes</a></td>
+<td><a class="chip" href="LanguageCode.html">Language<wbr/>Codes</a></td>
 <td></td>
 <td>References LanguageCodes .</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyId</code></td>
+<td class="prop"><code>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Currency.html">Currencies</a></td>
@@ -115,7 +115,7 @@
 <td>References Currencies .</td>
 </tr>
 <tr>
-<td class="prop"><code>AddressFormatType</code></td>
+<td class="prop"><code>Address<wbr/>Format<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -123,15 +123,15 @@
 <td>The format type of the address.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerAccountGroupId</code></td>
+<td class="prop"><code>Customer<wbr/>Account<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Sales/CustomerAccountGroup.html">CustomerAccountGroups</a></td>
+<td><a class="chip" href="../Sales/CustomerAccountGroup.html">Customer<wbr/>Account<wbr/>Groups</a></td>
 <td></td>
 <td>References CustomerAccountGroups .</td>
 </tr>
 <tr>
-<td class="prop"><code>IsActive</code></td>
+<td class="prop"><code>Is<wbr/>Active</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -139,7 +139,7 @@
 <td>Specifies if the country is active and available in MONITOR or not.</td>
 </tr>
 <tr>
-<td class="prop"><code>SupplierAccountGroupId</code></td>
+<td class="prop"><code>Supplier<wbr/>Account<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -147,31 +147,31 @@
 <td>References SupplierAccountGroup.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>VatGroupId</code></td>
+<td class="prop"><code>Vat<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="VatGroup.html">VatGroups</a></td>
+<td><a class="chip" href="VatGroup.html">Vat<wbr/>Groups</a></td>
 <td><span class="badge dep">deprecated since 2.39</span></td>
 <td>References VatGroups . <em>(Replaced by CustomerVatGroupId/SupplierVatGroupId)</em></td>
 </tr>
 <tr>
-<td class="prop"><code>SupplierVatGroupId</code></td>
+<td class="prop"><code>Supplier<wbr/>Vat<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="VatGroup.html">VatGroups</a></td>
+<td><a class="chip" href="VatGroup.html">Vat<wbr/>Groups</a></td>
 <td></td>
 <td>References VatGroups .</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerVatGroupId</code></td>
+<td class="prop"><code>Customer<wbr/>Vat<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="VatGroup.html">VatGroups</a></td>
+<td><a class="chip" href="VatGroup.html">Vat<wbr/>Groups</a></td>
 <td></td>
 <td>References VatGroups .</td>
 </tr>
 <tr>
-<td class="prop"><code>VatRegistrationNumberPrefixException</code></td>
+<td class="prop"><code>Vat<wbr/>Registration<wbr/>Number<wbr/>Prefix<wbr/>Exception</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -179,7 +179,7 @@
 <td>The VAT registration number prefix exception of the country.</td>
 </tr>
 <tr>
-<td class="prop"><code>CountryRegion</code></td>
+<td class="prop"><code>Country<wbr/>Region</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -187,7 +187,7 @@
 <td>Region code in integer format according to ISO-3166</td>
 </tr>
 <tr>
-<td class="prop"><code>CountrySubRegion</code></td>
+<td class="prop"><code>Country<wbr/>Sub<wbr/>Region</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -195,7 +195,7 @@
 <td>Sub region code in integer format according to ISO-3166</td>
 </tr>
 <tr>
-<td class="prop"><code>CountryIntermediateRegion</code></td>
+<td class="prop"><code>Country<wbr/>Intermediate<wbr/>Region</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>

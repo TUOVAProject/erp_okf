@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Revisions · Monitor ERP API</title>
+<title>Revisions · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a revision.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>Revisions</span>
 </header>
 <div class="layout">
@@ -83,15 +83,15 @@
 <td>The revision number. Max length 25 Nullable No Unique Yes (per Part)</td>
 </tr>
 <tr>
-<td class="prop"><code>ValidFrom</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Valid<wbr/>From</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The valid from date of the revision.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Comment.html">Comments</a></td>
@@ -107,7 +107,7 @@
 <td>The revision comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Inventory/Part.html">Part</a></td>

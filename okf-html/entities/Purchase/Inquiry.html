@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inquiries · Monitor ERP API</title>
+<title>Inquiries · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents an inquiry.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Purchase.html">Purchase</a><span class="sep">/</span>Inquiries</span>
 </header>
 <div class="layout">
@@ -76,23 +76,23 @@
 <td>The business key identifier of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentTermId</code></td>
+<td class="prop"><code>Payment<wbr/>Term<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">Payment<wbr/>Terms</a></td>
 <td></td>
 <td>The business key identifier of the inquiry's payment term.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentTerm</code></td>
-<td class="type"><code>PaymentTerms</code></td>
+<td class="prop"><code>Payment<wbr/>Term</code></td>
+<td class="type"><code>Payment<wbr/>Terms</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/PaymentTerm.html">PaymentTerms</a></td>
+<td><a class="chip" href="../Common/PaymentTerm.html">Payment<wbr/>Terms</a></td>
 <td>expandable</td>
 <td>The payment term of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentTermDescription</code></td>
+<td class="prop"><code>Payment<wbr/>Term<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -100,7 +100,7 @@
 <td>The payment term description of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>GracePeriodInDays</code></td>
+<td class="prop"><code>Grace<wbr/>Period<wbr/>In<wbr/>Days</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -108,23 +108,23 @@
 <td>The inquiry's grace period in days.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryMethodId</code></td>
+<td class="prop"><code>Delivery<wbr/>Method<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/DeliveryMethod.html">DeliveryMethods</a></td>
+<td><a class="chip" href="../Common/DeliveryMethod.html">Delivery<wbr/>Methods</a></td>
 <td></td>
 <td>The business key identifier of the inquiry's delivery method.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryTermId</code></td>
+<td class="prop"><code>Delivery<wbr/>Term<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/DeliveryTerm.html">DeliveryTerms</a></td>
+<td><a class="chip" href="../Common/DeliveryTerm.html">Delivery<wbr/>Terms</a></td>
 <td></td>
 <td>The business key identifier of the inquiry's delivery term.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryTermDescription</code></td>
+<td class="prop"><code>Delivery<wbr/>Term<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The delivery term description of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryMethodDescription</code></td>
+<td class="prop"><code>Delivery<wbr/>Method<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The delivery method description of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>BusinessContactOrderNumber</code></td>
+<td class="prop"><code>Business<wbr/>Contact<wbr/>Order<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>The supplier's inquiry number.</td>
 </tr>
 <tr>
-<td class="prop"><code>OurReferenceId</code></td>
+<td class="prop"><code>Our<wbr/>Reference<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -156,7 +156,7 @@
 <td>The business key identifier of our reference on the inquiry. Reference Persons</td>
 </tr>
 <tr>
-<td class="prop"><code>OurReferenceName</code></td>
+<td class="prop"><code>Our<wbr/>Reference<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -164,7 +164,7 @@
 <td>The name of our reference on the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>BusinessContactReferenceId</code></td>
+<td class="prop"><code>Business<wbr/>Contact<wbr/>Reference<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -172,7 +172,7 @@
 <td>The business key identifier of the supplier's reference on the inquiry. Reference Persons</td>
 </tr>
 <tr>
-<td class="prop"><code>BusinessContactReferenceName</code></td>
+<td class="prop"><code>Business<wbr/>Contact<wbr/>Reference<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>The name of the supplier's reference on the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>GoodsLabel</code></td>
+<td class="prop"><code>Goods<wbr/>Label</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>The goods label of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyId</code></td>
+<td class="prop"><code>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -196,15 +196,15 @@
 <td>The business key identifier of the inquiry's currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatGroupId</code></td>
+<td class="prop"><code>Vat<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/VatGroup.html">VatGroups</a></td>
+<td><a class="chip" href="../Common/VatGroup.html">Vat<wbr/>Groups</a></td>
 <td></td>
 <td>The business key identifier of the inquiry's VAT group.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -220,7 +220,7 @@
 <td>The priority of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectId</code></td>
+<td class="prop"><code>Project<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Project.html">Projects</a></td>
@@ -228,7 +228,7 @@
 <td>The business key identifier of the inquiry's project.</td>
 </tr>
 <tr>
-<td class="prop"><code>SendMethod</code></td>
+<td class="prop"><code>Send<wbr/>Method</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -236,7 +236,7 @@
 <td>Specifies the method of the inquiry printout.</td>
 </tr>
 <tr>
-<td class="prop"><code>InternalCommentId</code></td>
+<td class="prop"><code>Internal<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -244,7 +244,7 @@
 <td>The business key identifier of the inquiry's internal comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>InternalComment</code></td>
+<td class="prop"><code>Internal<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -252,7 +252,7 @@
 <td>The internal comment of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExternalCommentId</code></td>
+<td class="prop"><code>External<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -260,7 +260,7 @@
 <td>The business key identifier of the inquiry's external comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExternalComment</code></td>
+<td class="prop"><code>External<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -268,7 +268,7 @@
 <td>The external comment of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>TransportTime</code></td>
+<td class="prop"><code>Transport<wbr/>Time</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -276,7 +276,7 @@
 <td>The transport time of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>LifeCycleState</code></td>
+<td class="prop"><code>Life<wbr/>Cycle<wbr/>State</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -292,7 +292,7 @@
 <td>The version of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>UseForwardRate</code></td>
+<td class="prop"><code>Use<wbr/>Forward<wbr/>Rate</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -300,7 +300,7 @@
 <td>Specifies if forward rate should be used.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExchangeRate</code></td>
+<td class="prop"><code>Exchange<wbr/>Rate</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -308,7 +308,7 @@
 <td>The exchange rate to use for the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>SupplierId</code></td>
+<td class="prop"><code>Supplier<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Supplier.html">Suppliers</a></td>
@@ -316,7 +316,7 @@
 <td>The business key identifier of the supplier that the inquiry belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderNumber</code></td>
+<td class="prop"><code>Order<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -324,8 +324,8 @@
 <td>The order number of the purchase order created as a result of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Order<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
@@ -333,14 +333,14 @@
 </tr>
 <tr>
 <td class="prop"><code>Rows</code></td>
-<td class="type"><code>InquiryRows[]</code></td>
+<td class="type"><code>Inquiry<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="InquiryRow.html">InquiryRows</a></td>
+<td><a class="chip" href="InquiryRow.html">Inquiry<wbr/>Rows</a></td>
 <td>expandable, collection</td>
 <td>The rows of the inquiry.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>CreatedById</code></td>
+<td class="prop"><code>Created<wbr/>By<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -348,7 +348,7 @@
 <td>The business key identifier of the inquiry's creator. <em>(Unavailable)</em></td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryAddressId</code></td>
+<td class="prop"><code>Delivery<wbr/>Address<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Address.html">Addresses</a></td>
@@ -356,7 +356,7 @@
 <td>The business key identifier of the inquiry's delivery address.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryAddress</code></td>
+<td class="prop"><code>Delivery<wbr/>Address</code></td>
 <td class="type"><code>Addresses</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Address.html">Addresses</a></td>
@@ -364,7 +364,7 @@
 <td>The delivery address of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>MailingAddressId</code></td>
+<td class="prop"><code>Mailing<wbr/>Address<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Address.html">Addresses</a></td>
@@ -372,7 +372,7 @@
 <td>The business key identifier of the inquiry's mailing address.</td>
 </tr>
 <tr>
-<td class="prop"><code>MailingAddress</code></td>
+<td class="prop"><code>Mailing<wbr/>Address</code></td>
 <td class="type"><code>Addresses</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Address.html">Addresses</a></td>
@@ -380,7 +380,7 @@
 <td>The mailing address of the inquiry.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>VatNumber</code></td>
+<td class="prop"><code>Vat<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -396,23 +396,23 @@
 <td>The status of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommunicationAddresses</code></td>
-<td class="type"><code>CommunicationAddresses[]</code></td>
+<td class="prop"><code>Communication<wbr/>Addresses</code></td>
+<td class="type"><code>Communication<wbr/>Addresses[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/CommunicationAddress.html">CommunicationAddresses</a></td>
+<td><a class="chip" href="../Common/CommunicationAddress.html">Communication<wbr/>Addresses</a></td>
 <td>expandable, collection</td>
 <td>The communication addresses registered on the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>InquiryDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Inquiry<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The date when the inquiry was made to the supplier.</td>
 </tr>
 <tr>
-<td class="prop"><code>InquiryDescription</code></td>
+<td class="prop"><code>Inquiry<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -420,42 +420,42 @@
 <td>The description of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>LatestContactDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Latest<wbr/>Contact<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The last contact date on the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>ValidThroughDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Valid<wbr/>Through<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The valid through date of the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderTypeId</code></td>
+<td class="prop"><code>Order<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="InquiryType.html">InquiryTypes</a></td>
+<td><a class="chip" href="InquiryType.html">Inquiry<wbr/>Types</a></td>
 <td>since 2.30</td>
 <td>The business key identifier of the inquiry's inquiry type.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderType</code></td>
-<td class="type"><code>InquiryTypes</code></td>
+<td class="prop"><code>Order<wbr/>Type</code></td>
+<td class="type"><code>Inquiry<wbr/>Types</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="InquiryType.html">InquiryTypes</a></td>
+<td><a class="chip" href="InquiryType.html">Inquiry<wbr/>Types</a></td>
 <td>expandable, since 2.30</td>
 <td>The inquiry type used on the inquiry.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyExchangeTypeId</code></td>
+<td class="prop"><code>Currency<wbr/>Exchange<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">Currency<wbr/>Exchange<wbr/>Types</a></td>
 <td>since 22.9</td>
 <td>The business key identifier of the inquiry's currency exchange type.</td>
 </tr>

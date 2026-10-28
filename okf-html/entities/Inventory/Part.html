@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Parts · Monitor ERP API</title>
+<title>Parts · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a part.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>Parts</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartNumber</code></td>
+<td class="prop"><code>Part<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -92,7 +92,7 @@
 <td>The translated description of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraDescription</code></td>
+<td class="prop"><code>Extra<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -100,7 +100,7 @@
 <td>The translated extra description of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>CompanyId</code></td>
+<td class="prop"><code>Company<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The physical height of the part in metres.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackagingType</code></td>
+<td class="prop"><code>Packaging<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The packaging type that the part specifies.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackageVolumeConsistsOf</code></td>
+<td class="prop"><code>Package<wbr/>Volume<wbr/>Consists<wbr/>Of</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,31 +148,31 @@
 <td>Specifies how package volume of the part has been specified.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackageTypeId</code></td>
+<td class="prop"><code>Package<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="PackageType.html">PackageTypes</a></td>
+<td><a class="chip" href="PackageType.html">Package<wbr/>Types</a></td>
 <td></td>
 <td>The business key identifier of the package type specified by the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackageType</code></td>
-<td class="type"><code>PackageTypes</code></td>
+<td class="prop"><code>Package<wbr/>Type</code></td>
+<td class="type"><code>Package<wbr/>Types</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PackageType.html">PackageTypes</a></td>
+<td><a class="chip" href="PackageType.html">Package<wbr/>Types</a></td>
 <td>expandable</td>
 <td>The package type specified by the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartPlanningInformations</code></td>
-<td class="type"><code>PartPlanningInformation[]</code></td>
+<td class="prop"><code>Part<wbr/>Planning<wbr/>Informations</code></td>
+<td class="type"><code>Part<wbr/>Planning<wbr/>Information[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PartPlanningInformation.html">PartPlanningInformation</a></td>
+<td><a class="chip" href="PartPlanningInformation.html">Part<wbr/>Planning<wbr/>Information</a></td>
 <td>expandable, collection</td>
 <td>A collection of part planning information for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>UseRandomLocationStorage</code></td>
+<td class="prop"><code>Use<wbr/>Random<wbr/>Location<wbr/>Storage</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>Specifies if the part employs random location storage.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShowFictiousStructureOnOrderRegistration</code></td>
+<td class="prop"><code>Show<wbr/>Fictious<wbr/>Structure<wbr/>On<wbr/>Order<wbr/>Registration</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>Specifies if the part should show its fictitious structure when registering orders.</td>
 </tr>
 <tr>
-<td class="prop"><code>TraceabilityMode</code></td>
+<td class="prop"><code>Traceability<wbr/>Mode</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The traceability mode that is employed by the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>UseBestBeforeDate</code></td>
+<td class="prop"><code>Use<wbr/>Best<wbr/>Before<wbr/>Date</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>Specifies whether or not best before date applies to the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>DaysToAddToBestBeforeDate</code></td>
+<td class="prop"><code>Days<wbr/>To<wbr/>Add<wbr/>To<wbr/>Best<wbr/>Before<wbr/>Date</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>Days to use when best before date is active.</td>
 </tr>
 <tr>
-<td class="prop"><code>SuggestBestBeforeDate</code></td>
+<td class="prop"><code>Suggest<wbr/>Best<wbr/>Before<wbr/>Date</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -220,7 +220,7 @@
 <td>Specifies whether or not a best before date should be suggested for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManageStockBalance</code></td>
+<td class="prop"><code>Manage<wbr/>Stock<wbr/>Balance</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -228,7 +228,7 @@
 <td>Specifies if stock balance management is enabled for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>StandardPrice</code></td>
+<td class="prop"><code>Standard<wbr/>Price</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -236,7 +236,7 @@
 <td>The standard price of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>StandardPriceCurrencyId</code></td>
+<td class="prop"><code>Standard<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -244,7 +244,7 @@
 <td>The business key identifier of the currency that the standard price is specified in.</td>
 </tr>
 <tr>
-<td class="prop"><code>FutureStandardPrice</code></td>
+<td class="prop"><code>Future<wbr/>Standard<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -252,7 +252,7 @@
 <td>The future standard price of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>FutureStandardPriceCurrencyId</code></td>
+<td class="prop"><code>Future<wbr/>Standard<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -260,7 +260,7 @@
 <td>The business key identifier of the currency that the future standard price is specified in.</td>
 </tr>
 <tr>
-<td class="prop"><code>PostCalculatedAveragePrice</code></td>
+<td class="prop"><code>Post<wbr/>Calculated<wbr/>Average<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -268,7 +268,7 @@
 <td>The post calculated average price of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PostCalculatedAveragePriceCurrencyId</code></td>
+<td class="prop"><code>Post<wbr/>Calculated<wbr/>Average<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -284,23 +284,23 @@
 <td>The part type.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProductGroupId</code></td>
+<td class="prop"><code>Product<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ProductGroup.html">ProductGroups</a></td>
+<td><a class="chip" href="../Common/ProductGroup.html">Product<wbr/>Groups</a></td>
 <td></td>
 <td>The business key identifier of the product group that the part belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProductGroup</code></td>
-<td class="type"><code>ProductGroups</code></td>
+<td class="prop"><code>Product<wbr/>Group</code></td>
+<td class="type"><code>Product<wbr/>Groups</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ProductGroup.html">ProductGroups</a></td>
+<td><a class="chip" href="../Common/ProductGroup.html">Product<wbr/>Groups</a></td>
 <td>expandable</td>
 <td>The product group that the part belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>WeightPerUnit</code></td>
+<td class="prop"><code>Weight<wbr/>Per<wbr/>Unit</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -308,23 +308,23 @@
 <td>The weight of the part per unit in kilograms.</td>
 </tr>
 <tr>
-<td class="prop"><code>StatisticalGoodsCodeId</code></td>
+<td class="prop"><code>Statistical<wbr/>Goods<wbr/>Code<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/StatisticalGoodsCode.html">StatisticalGoodsCodes</a></td>
+<td><a class="chip" href="../Common/StatisticalGoodsCode.html">Statistical<wbr/>Goods<wbr/>Codes</a></td>
 <td></td>
 <td>The business key identifier of the statistical goods code that the part is organized under. References a StatisticalGoodsCodes</td>
 </tr>
 <tr>
-<td class="prop"><code>StatisticalGoodsCode</code></td>
-<td class="type"><code>StatisticalGoodsCodes</code></td>
+<td class="prop"><code>Statistical<wbr/>Goods<wbr/>Code</code></td>
+<td class="type"><code>Statistical<wbr/>Goods<wbr/>Codes</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/StatisticalGoodsCode.html">StatisticalGoodsCodes</a></td>
+<td><a class="chip" href="../Common/StatisticalGoodsCode.html">Statistical<wbr/>Goods<wbr/>Codes</a></td>
 <td>expandable</td>
 <td>The statistical goods code that the part is organized under.</td>
 </tr>
 <tr>
-<td class="prop"><code>StatisticalGoodsValue</code></td>
+<td class="prop"><code>Statistical<wbr/>Goods<wbr/>Value</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -332,7 +332,7 @@
 <td>The statistical goods value of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>CountryOfOriginId</code></td>
+<td class="prop"><code>Country<wbr/>Of<wbr/>Origin<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Country.html">Countries</a></td>
@@ -340,7 +340,7 @@
 <td>The business key identifier of the part's country of origin.</td>
 </tr>
 <tr>
-<td class="prop"><code>CountryOfOrigin</code></td>
+<td class="prop"><code>Country<wbr/>Of<wbr/>Origin</code></td>
 <td class="type"><code>Countries</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Country.html">Countries</a></td>
@@ -348,23 +348,23 @@
 <td>The part's country of origin.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartCodeId</code></td>
+<td class="prop"><code>Part<wbr/>Code<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="PartCode.html">PartCodes</a></td>
+<td><a class="chip" href="PartCode.html">Part<wbr/>Codes</a></td>
 <td></td>
 <td>The business key identifier of the part's part code.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartCode</code></td>
-<td class="type"><code>PartCodes</code></td>
+<td class="prop"><code>Part<wbr/>Code</code></td>
+<td class="type"><code>Part<wbr/>Codes</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PartCode.html">PartCodes</a></td>
+<td><a class="chip" href="PartCode.html">Part<wbr/>Codes</a></td>
 <td>expandable</td>
 <td>The part's part code.</td>
 </tr>
 <tr>
-<td class="prop"><code>CategoryString</code></td>
+<td class="prop"><code>Category<wbr/>String</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -372,55 +372,55 @@
 <td>The category of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>StorageOverheadMarkupId</code></td>
+<td class="prop"><code>Storage<wbr/>Overhead<wbr/>Markup<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="StorageOverheadMarkup.html">StorageOverheadMarkups</a></td>
+<td><a class="chip" href="StorageOverheadMarkup.html">Storage<wbr/>Overhead<wbr/>Markups</a></td>
 <td></td>
 <td>The business key identifier of the storage overhead markup of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>StorageOverheadMarkup</code></td>
-<td class="type"><code>StorageOverheadMarkups</code></td>
+<td class="prop"><code>Storage<wbr/>Overhead<wbr/>Markup</code></td>
+<td class="type"><code>Storage<wbr/>Overhead<wbr/>Markups</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="StorageOverheadMarkup.html">StorageOverheadMarkups</a></td>
+<td><a class="chip" href="StorageOverheadMarkup.html">Storage<wbr/>Overhead<wbr/>Markups</a></td>
 <td>expandable</td>
 <td>The storage overhead markup of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesOverheadMarkupId</code></td>
+<td class="prop"><code>Sales<wbr/>Overhead<wbr/>Markup<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="SalesOverheadMarkup.html">SalesOverheadMarkups</a></td>
+<td><a class="chip" href="SalesOverheadMarkup.html">Sales<wbr/>Overhead<wbr/>Markups</a></td>
 <td></td>
 <td>The business key identifier of the sales overhead markup of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesOverheadMarkup</code></td>
-<td class="type"><code>SalesOverheadMarkups</code></td>
+<td class="prop"><code>Sales<wbr/>Overhead<wbr/>Markup</code></td>
+<td class="type"><code>Sales<wbr/>Overhead<wbr/>Markups</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="SalesOverheadMarkup.html">SalesOverheadMarkups</a></td>
+<td><a class="chip" href="SalesOverheadMarkup.html">Sales<wbr/>Overhead<wbr/>Markups</a></td>
 <td>expandable</td>
 <td>The sales overhead markup of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProfitMarkupId</code></td>
+<td class="prop"><code>Profit<wbr/>Markup<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProfitMarkup.html">ProfitMarkups</a></td>
+<td><a class="chip" href="ProfitMarkup.html">Profit<wbr/>Markups</a></td>
 <td></td>
 <td>The business key identifier of the part's profit markup.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProfitMarkup</code></td>
-<td class="type"><code>ProfitMarkups</code></td>
+<td class="prop"><code>Profit<wbr/>Markup</code></td>
+<td class="type"><code>Profit<wbr/>Markups</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProfitMarkup.html">ProfitMarkups</a></td>
+<td><a class="chip" href="ProfitMarkup.html">Profit<wbr/>Markups</a></td>
 <td>expandable</td>
 <td>The part's profit markup.</td>
 </tr>
 <tr>
-<td class="prop"><code>VolumePerUnit</code></td>
+<td class="prop"><code>Volume<wbr/>Per<wbr/>Unit</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -428,7 +428,7 @@
 <td>The volume per unit of the part in cubic metres.</td>
 </tr>
 <tr>
-<td class="prop"><code>AveragePrice</code></td>
+<td class="prop"><code>Average<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -436,7 +436,7 @@
 <td>The average price of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>AveragePriceCurrencyId</code></td>
+<td class="prop"><code>Average<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -444,7 +444,7 @@
 <td>The business key identifier of the currency that the part's average price is specified in.</td>
 </tr>
 <tr>
-<td class="prop"><code>LastPurchasePrice</code></td>
+<td class="prop"><code>Last<wbr/>Purchase<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -452,7 +452,7 @@
 <td>The last purchase price of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>LastPurchasePriceCurrencyId</code></td>
+<td class="prop"><code>Last<wbr/>Purchase<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -460,15 +460,15 @@
 <td>The business key identifier of the part's last purchase price.</td>
 </tr>
 <tr>
-<td class="prop"><code>AveragePriceTimestamp</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Average<wbr/>Price<wbr/>Timestamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The timestamp of the part's average price.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseLabelType</code></td>
+<td class="prop"><code>Purchase<wbr/>Label<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -476,7 +476,7 @@
 <td>The type of transport label that is used for the part when purchasing.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrentAlloyId</code></td>
+<td class="prop"><code>Current<wbr/>Alloy<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Alloy.html">Alloys</a></td>
@@ -484,7 +484,7 @@
 <td>The business key identifier of the current part alloy.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrentAlloy</code></td>
+<td class="prop"><code>Current<wbr/>Alloy</code></td>
 <td class="type"><code>Alloys</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Alloy.html">Alloys</a></td>
@@ -492,7 +492,7 @@
 <td>The part's current alloy.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseQuantityPerPackage</code></td>
+<td class="prop"><code>Purchase<wbr/>Quantity<wbr/>Per<wbr/>Package</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -500,7 +500,7 @@
 <td>The quantity per package of the part when purchasing.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsPackaging</code></td>
+<td class="prop"><code>Is<wbr/>Packaging</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -516,7 +516,7 @@
 <td>The status of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseAndManufactureOnProject</code></td>
+<td class="prop"><code>Purchase<wbr/>And<wbr/>Manufacture<wbr/>On<wbr/>Project</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -524,7 +524,7 @@
 <td>Specifies if the part is purchased and manufactured on a project.</td>
 </tr>
 <tr>
-<td class="prop"><code>ServiceType</code></td>
+<td class="prop"><code>Service<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -532,7 +532,7 @@
 <td>The service type of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>QuantityPerPackage</code></td>
+<td class="prop"><code>Quantity<wbr/>Per<wbr/>Package</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -540,7 +540,7 @@
 <td>The quantity per package of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackagingWeightPerPackage</code></td>
+<td class="prop"><code>Packaging<wbr/>Weight<wbr/>Per<wbr/>Package</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -548,7 +548,7 @@
 <td>The packaging weight per package.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackagingPartId</code></td>
+<td class="prop"><code>Packaging<wbr/>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Part.html">Parts</a></td>
@@ -556,7 +556,7 @@
 <td>The business key identifier of the packaging part used for this part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackagingPart</code></td>
+<td class="prop"><code>Packaging<wbr/>Part</code></td>
 <td class="type"><code>Parts</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Part.html">Parts</a></td>
@@ -564,7 +564,7 @@
 <td>The packaging part used for this part.</td>
 </tr>
 <tr>
-<td class="prop"><code>LoadingMetersPerUnit</code></td>
+<td class="prop"><code>Loading<wbr/>Meters<wbr/>Per<wbr/>Unit</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -572,7 +572,7 @@
 <td>The loading metres per unit.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackingReference</code></td>
+<td class="prop"><code>Packing<wbr/>Reference</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -580,7 +580,7 @@
 <td>The packing reference of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>Gs1Code</code></td>
+<td class="prop"><code>Gs1<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -588,23 +588,23 @@
 <td>The GS1 code of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatRateId</code></td>
+<td class="prop"><code>Vat<wbr/>Rate<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td><a class="chip" href="../Common/VatRate.html">Vat<wbr/>Rates</a></td>
 <td></td>
 <td>The business key identifier of the part's VAT rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatRate</code></td>
-<td class="type"><code>VatRates</code></td>
+<td class="prop"><code>Vat<wbr/>Rate</code></td>
+<td class="type"><code>Vat<wbr/>Rates</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td><a class="chip" href="../Common/VatRate.html">Vat<wbr/>Rates</a></td>
 <td></td>
 <td>The part's VAT rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>LastSalesPrice</code></td>
+<td class="prop"><code>Last<wbr/>Sales<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -612,7 +612,7 @@
 <td>The last sales price of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>LastSalesPriceCurrencyId</code></td>
+<td class="prop"><code>Last<wbr/>Sales<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -620,7 +620,7 @@
 <td>The business key identifier of the currency that the last sales price was specified in.</td>
 </tr>
 <tr>
-<td class="prop"><code>TransportCost</code></td>
+<td class="prop"><code>Transport<wbr/>Cost</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -628,7 +628,7 @@
 <td>The transport cost of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>SerialNumberGeneration</code></td>
+<td class="prop"><code>Serial<wbr/>Number<wbr/>Generation</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -636,7 +636,7 @@
 <td>The serial number generation method of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>SerialNumberGenerationSource</code></td>
+<td class="prop"><code>Serial<wbr/>Number<wbr/>Generation<wbr/>Source</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -644,7 +644,7 @@
 <td>The serial number generation source of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>GoodsType</code></td>
+<td class="prop"><code>Goods<wbr/>Type</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -652,15 +652,15 @@
 <td>The goods type of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>LeadTimeToCustomer</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Lead<wbr/>Time<wbr/>To<wbr/>Customer</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The lead time to the customer for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>QuantityForLeadtimeToCustomer</code></td>
+<td class="prop"><code>Quantity<wbr/>For<wbr/>Leadtime<wbr/>To<wbr/>Customer</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -668,7 +668,7 @@
 <td>The quantity for the lead time to the customer for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesLabelType</code></td>
+<td class="prop"><code>Sales<wbr/>Label<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -676,7 +676,7 @@
 <td>The type of transport label to use for the part when selling.</td>
 </tr>
 <tr>
-<td class="prop"><code>DefaultCustomerOrderWarehouseId</code></td>
+<td class="prop"><code>Default<wbr/>Customer<wbr/>Order<wbr/>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -684,7 +684,7 @@
 <td>The business key identifier of the default customer order warehouse to use for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingLabelType</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Label<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -692,7 +692,7 @@
 <td>The type of transport label to use for the part when manufacturing.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreparerId</code></td>
+<td class="prop"><code>Preparer<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -708,23 +708,23 @@
 <td>The person that prepares the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>GoodsTypeId</code></td>
+<td class="prop"><code>Goods<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="GoodsType.html">GoodsTypes</a></td>
+<td><a class="chip" href="GoodsType.html">Goods<wbr/>Types</a></td>
 <td></td>
 <td>The business key identifier of the goods type of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExpGoodsType</code></td>
-<td class="type"><code>GoodsTypes</code></td>
+<td class="prop"><code>Exp<wbr/>Goods<wbr/>Type</code></td>
+<td class="type"><code>Goods<wbr/>Types</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="GoodsType.html">GoodsTypes</a></td>
+<td><a class="chip" href="GoodsType.html">Goods<wbr/>Types</a></td>
 <td>expandable</td>
 <td>The goods type of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalculatedQuantity</code></td>
+<td class="prop"><code>Calculated<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -740,23 +740,23 @@
 <td>The part alias.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedById</code></td>
+<td class="prop"><code>Blocked<wbr/>By<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the application user that blocked the entity.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedBy</code></td>
-<td class="type"><code>ApplicationUsers</code></td>
+<td class="prop"><code>Blocked<wbr/>By</code></td>
+<td class="type"><code>Application<wbr/>Users</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td>expandable</td>
 <td>The application user that blocked the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedStatus</code></td>
+<td class="prop"><code>Blocked<wbr/>Status</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -764,7 +764,7 @@
 <td>The block status of the entity.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedContextType</code></td>
+<td class="prop"><code>Blocked<wbr/>Context<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -772,7 +772,7 @@
 <td>Specifies which contexts the block applies for.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockMessageId</code></td>
+<td class="prop"><code>Block<wbr/>Message<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -780,7 +780,7 @@
 <td>The business key identifier of the entity block message comment. References Comments .</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockMessage</code></td>
+<td class="prop"><code>Block<wbr/>Message</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -788,23 +788,23 @@
 <td>The block message of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedFromDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Blocked<wbr/>From<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date when the entity starts being blocked.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedToDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Blocked<wbr/>To<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date when the entity stops being blocked.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReceivingInspectionType</code></td>
+<td class="prop"><code>Receiving<wbr/>Inspection<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -812,7 +812,7 @@
 <td>Specifies when reception inspection of the type occurs.</td>
 </tr>
 <tr>
-<td class="prop"><code>StandardUnitId</code></td>
+<td class="prop"><code>Standard<wbr/>Unit<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Unit.html">Units</a></td>
@@ -820,31 +820,31 @@
 <td>The business key identifier of the standard unit of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>StandardPartUnitUsageId</code></td>
+<td class="prop"><code>Standard<wbr/>Part<wbr/>Unit<wbr/>Usage<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/PartUnitUsage.html">PartUnitUsages</a></td>
+<td><a class="chip" href="../Common/PartUnitUsage.html">Part<wbr/>Unit<wbr/>Usages</a></td>
 <td></td>
 <td>The business key identifier of the standard part unit usage.</td>
 </tr>
 <tr>
-<td class="prop"><code>StandardPartUnitUsage</code></td>
-<td class="type"><code>PartUnitUsages</code></td>
+<td class="prop"><code>Standard<wbr/>Part<wbr/>Unit<wbr/>Usage</code></td>
+<td class="type"><code>Part<wbr/>Unit<wbr/>Usages</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/PartUnitUsage.html">PartUnitUsages</a></td>
+<td><a class="chip" href="../Common/PartUnitUsage.html">Part<wbr/>Unit<wbr/>Usages</a></td>
 <td>expandable</td>
 <td>The standard part unit usage.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartUnitUsages</code></td>
-<td class="type"><code>PartUnitUsages[]</code></td>
+<td class="prop"><code>Part<wbr/>Unit<wbr/>Usages</code></td>
+<td class="type"><code>Part<wbr/>Unit<wbr/>Usages[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/PartUnitUsage.html">PartUnitUsages</a></td>
+<td><a class="chip" href="../Common/PartUnitUsage.html">Part<wbr/>Unit<wbr/>Usages</a></td>
 <td>expandable, collection, since 2.32</td>
 <td>A collection of part unit usages for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -860,7 +860,7 @@
 <td>The part comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActiveRevisionId</code></td>
+<td class="prop"><code>Active<wbr/>Revision<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Revision.html">Revisions</a></td>
@@ -868,7 +868,7 @@
 <td>The business key identifier of the part's active revision.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActiveRevision</code></td>
+<td class="prop"><code>Active<wbr/>Revision</code></td>
 <td class="type"><code>Revisions</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Revision.html">Revisions</a></td>
@@ -876,7 +876,7 @@
 <td>The active revision of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>LatestCalculationId</code></td>
+<td class="prop"><code>Latest<wbr/>Calculation<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -884,7 +884,7 @@
 <td>The business key identifier of the latest part calculation.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReceivingInstructionId</code></td>
+<td class="prop"><code>Receiving<wbr/>Instruction<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -892,7 +892,7 @@
 <td>The business key identifier of the receiving instruction of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReceivingInstruction</code></td>
+<td class="prop"><code>Receiving<wbr/>Instruction</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -900,7 +900,7 @@
 <td>The receiving instruction of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseCommentId</code></td>
+<td class="prop"><code>Purchase<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -908,7 +908,7 @@
 <td>The business key identifier of the part's purchase comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseComment</code></td>
+<td class="prop"><code>Purchase<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -916,7 +916,7 @@
 <td>The purchase comment of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PickingInstructionId</code></td>
+<td class="prop"><code>Picking<wbr/>Instruction<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -924,7 +924,7 @@
 <td>The business key identifier of the part's picking instruction.</td>
 </tr>
 <tr>
-<td class="prop"><code>PickingInstruction</code></td>
+<td class="prop"><code>Picking<wbr/>Instruction</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -932,7 +932,7 @@
 <td>The picking instruction of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesCommentId</code></td>
+<td class="prop"><code>Sales<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -940,7 +940,7 @@
 <td>The business key identifier of the part's sales comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesComment</code></td>
+<td class="prop"><code>Sales<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -948,7 +948,7 @@
 <td>The sales comment of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingCommentId</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -956,7 +956,7 @@
 <td>The business key identifier of the part's manufacturing comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingComment</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -964,7 +964,7 @@
 <td>The manufacturing comment of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreparationId</code></td>
+<td class="prop"><code>Preparation<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Manufacturing/Preparation.html">Preparations</a></td>
@@ -972,26 +972,26 @@
 <td>The business key identifier of the part's preparation.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraFields</code></td>
-<td class="type"><code>ExtraFields[]</code></td>
+<td class="prop"><code>Extra<wbr/>Fields</code></td>
+<td class="type"><code>Extra<wbr/>Fields[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ExtraField.html">ExtraFields</a></td>
+<td><a class="chip" href="../Common/ExtraField.html">Extra<wbr/>Fields</a></td>
 <td>expandable, collection</td>
 <td>A collection of extra field values for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerPartLinks</code></td>
-<td class="type"><code>CustomerPartLinks[]</code></td>
+<td class="prop"><code>Customer<wbr/>Part<wbr/>Links</code></td>
+<td class="type"><code>Customer<wbr/>Part<wbr/>Links[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Sales/CustomerPartLink.html">CustomerPartLinks</a></td>
+<td><a class="chip" href="../Sales/CustomerPartLink.html">Customer<wbr/>Part<wbr/>Links</a></td>
 <td>expandable, collection</td>
 <td>A collection of customer part links for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>SupplierPartLinks</code></td>
-<td class="type"><code>SupplierPartLinks[]</code></td>
+<td class="prop"><code>Supplier<wbr/>Part<wbr/>Links</code></td>
+<td class="type"><code>Supplier<wbr/>Part<wbr/>Links[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Purchase/SupplierPartLink.html">SupplierPartLinks</a></td>
+<td><a class="chip" href="../Purchase/SupplierPartLink.html">Supplier<wbr/>Part<wbr/>Links</a></td>
 <td>expandable, collection</td>
 <td>A collection of supplier part links for the part.</td>
 </tr>
@@ -1012,31 +1012,31 @@
 <td>A collection of drawings that belong to the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartLocations</code></td>
-<td class="type"><code>PartLocations[]</code></td>
+<td class="prop"><code>Part<wbr/>Locations</code></td>
+<td class="type"><code>Part<wbr/>Locations[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PartLocation.html">PartLocations</a></td>
+<td><a class="chip" href="PartLocation.html">Part<wbr/>Locations</a></td>
 <td>expandable, collection, since 2.28</td>
 <td>A collection of locations that belong to the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>HyperLinks</code></td>
-<td class="type"><code>HyperLinks[]</code></td>
+<td class="prop"><code>Hyper<wbr/>Links</code></td>
+<td class="type"><code>Hyper<wbr/>Links[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="HyperLink.html">HyperLinks</a></td>
+<td><a class="chip" href="HyperLink.html">Hyper<wbr/>Links</a></td>
 <td>expandable, collection, since 2.55</td>
 <td>A collection of hyperlinks that belong to the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartActivities</code></td>
-<td class="type"><code>PartActivities[]</code></td>
+<td class="prop"><code>Part<wbr/>Activities</code></td>
+<td class="type"><code>Part<wbr/>Activities[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PartActivity.html">PartActivities</a></td>
+<td><a class="chip" href="PartActivity.html">Part<wbr/>Activities</a></td>
 <td>expandable, collection, since 22.7</td>
 <td>A collection of activities that belong to the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>ConfigurationTemplateId</code></td>
+<td class="prop"><code>Configuration<wbr/>Template<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -1044,31 +1044,31 @@
 <td>The business key identifier of the part configuration template that the part uses for part configuration.</td>
 </tr>
 <tr>
-<td class="prop"><code>ConfigurationTemplate</code></td>
-<td class="type"><code>PartConfigurationTemplates</code></td>
+<td class="prop"><code>Configuration<wbr/>Template</code></td>
+<td class="type"><code>Part<wbr/>Configuration<wbr/>Templates</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/PartConfigurationTemplate.html">PartConfigurationTemplates</a></td>
+<td><a class="chip" href="../Common/PartConfigurationTemplate.html">Part<wbr/>Configuration<wbr/>Templates</a></td>
 <td>expandable, since 22.3</td>
 <td>The part configuration template that the part uses for part configuration.</td>
 </tr>
 <tr>
-<td class="prop"><code>OtherIdentities</code></td>
-<td class="type"><code>PartOtherIdentities[]</code></td>
+<td class="prop"><code>Other<wbr/>Identities</code></td>
+<td class="type"><code>Part<wbr/>Other<wbr/>Identities[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PartOtherIdentity.html">PartOtherIdentities</a></td>
+<td><a class="chip" href="PartOtherIdentity.html">Part<wbr/>Other<wbr/>Identities</a></td>
 <td>expandable, collection, since 2.47</td>
 <td>The "other" identities of the part.</td>
 </tr>
 <tr>
 <td class="prop"><code>Notes</code></td>
-<td class="type"><code>BusinessContactNoteHistories[]</code></td>
+<td class="type"><code>Business<wbr/>Contact<wbr/>Note<wbr/>Histories[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/BusinessContactNoteHistory.html">BusinessContactNoteHistories</a></td>
+<td><a class="chip" href="../Common/BusinessContactNoteHistory.html">Business<wbr/>Contact<wbr/>Note<wbr/>Histories</a></td>
 <td>expandable, collection, since 2.55</td>
 <td>Rows of business contact notes.</td>
 </tr>
 <tr>
-<td class="prop"><code>ConfigurationSelectionDescription</code></td>
+<td class="prop"><code>Configuration<wbr/>Selection<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -1076,23 +1076,23 @@
 <td>The selected configuration description of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderQuantityId</code></td>
+<td class="prop"><code>Order<wbr/>Quantity<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="OrderQuantityTemplate.html">OrderQuantityTemplates</a></td>
+<td><a class="chip" href="OrderQuantityTemplate.html">Order<wbr/>Quantity<wbr/>Templates</a></td>
 <td>since 22.6</td>
 <td>The business key identifier of order quantity.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderQuantity</code></td>
-<td class="type"><code>OrderQuantityTemplates</code></td>
+<td class="prop"><code>Order<wbr/>Quantity</code></td>
+<td class="type"><code>Order<wbr/>Quantity<wbr/>Templates</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="OrderQuantityTemplate.html">OrderQuantityTemplates</a></td>
+<td><a class="chip" href="OrderQuantityTemplate.html">Order<wbr/>Quantity<wbr/>Templates</a></td>
 <td>expandable, since 22.6</td>
 <td>Order quantity template that holds the partial quantities, that acts as a default for the order equivalent order quantities.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectId</code></td>
+<td class="prop"><code>Project<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Project.html">Projects</a></td>
@@ -1100,23 +1100,23 @@
 <td>The business key identifier of the project that the part belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartTemplateId</code></td>
+<td class="prop"><code>Part<wbr/>Template<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="PartTemplate.html">PartTemplates</a></td>
+<td><a class="chip" href="PartTemplate.html">Part<wbr/>Templates</a></td>
 <td>since 23.1</td>
 <td>The business key identifier of the part template.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartTemplate</code></td>
-<td class="type"><code>PartTemplates</code></td>
+<td class="prop"><code>Part<wbr/>Template</code></td>
+<td class="type"><code>Part<wbr/>Templates</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PartTemplate.html">PartTemplates</a></td>
+<td><a class="chip" href="PartTemplate.html">Part<wbr/>Templates</a></td>
 <td>expandable, since 23.1</td>
 <td>A part template information for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsFixedWeight</code></td>
+<td class="prop"><code>Is<wbr/>Fixed<wbr/>Weight</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -1124,7 +1124,7 @@
 <td>Information whether the part has a fixed weight.</td>
 </tr>
 <tr>
-<td class="prop"><code>MaterialValidationSetting</code></td>
+<td class="prop"><code>Material<wbr/>Validation<wbr/>Setting</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -1132,7 +1132,7 @@
 <td>The settings for serial number linked to which operation.</td>
 </tr>
 <tr>
-<td class="prop"><code>AutomaticReportingMode</code></td>
+<td class="prop"><code>Automatic<wbr/>Reporting<wbr/>Mode</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -1140,7 +1140,7 @@
 <td>The automatic reporting mode that the part applies.</td>
 </tr>
 <tr>
-<td class="prop"><code>EmissionFactorId</code></td>
+<td class="prop"><code>Emission<wbr/>Factor<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -1148,8 +1148,8 @@
 <td>The business key identifier of the material type of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>EmissionFactor</code></td>
-<td class="type"><code>EmissionFactors</code></td>
+<td class="prop"><code>Emission<wbr/>Factor</code></td>
+<td class="type"><code>Emission<wbr/>Factors</code></td>
 <td class="nullable"></td>
 <td></td>
 <td>expandable, since 25.7</td>
@@ -1164,10 +1164,10 @@
 <td>The emission factor registered for the material type of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>ControlDataRows</code></td>
-<td class="type"><code>PartPurchaseControlDataRows[]</code></td>
+<td class="prop"><code>Control<wbr/>Data<wbr/>Rows</code></td>
+<td class="type"><code>Part<wbr/>Purchase<wbr/>Control<wbr/>Data<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PartPurchaseControlDataRow.html">PartPurchaseControlDataRows</a></td>
+<td><a class="chip" href="PartPurchaseControlDataRow.html">Part<wbr/>Purchase<wbr/>Control<wbr/>Data<wbr/>Rows</a></td>
 <td>expandable, collection, since 26.6</td>
 <td>A collection of purchase control data rows for the part.</td>
 </tr>

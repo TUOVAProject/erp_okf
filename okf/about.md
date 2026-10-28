@@ -22,6 +22,10 @@ sources:
 The data model of the Monitor ERP REST API, derived from the public documentation
 at https://api.monitor.se/api/.
 
+This is an unofficial bundle generated from that public documentation. It is not
+published or endorsed by Monitor ERP System AB; where the two differ, the
+upstream documentation is authoritative.
+
 ## Scope
 
 This bundle describes **what data the API exposes and how it connects**: every

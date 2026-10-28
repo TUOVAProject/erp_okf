@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects · Monitor ERP API</title>
+<title>Projects · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a project.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>Projects</span>
 </header>
 <div class="layout">
@@ -108,23 +108,23 @@
 <td>The priority of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>StartDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Start<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The start date of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>EndDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>End<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The end date of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerId</code></td>
+<td class="prop"><code>Customer<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Sales/Customer.html">Customers</a></td>
@@ -132,23 +132,23 @@
 <td>The business key identifier of the customer that the project belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Sales/CustomerOrder.html">CustomerOrders</a></td>
+<td><a class="chip" href="../Sales/CustomerOrder.html">Customer<wbr/>Orders</a></td>
 <td>since 2.36</td>
 <td>The business key identifier of the project's customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrder</code></td>
-<td class="type"><code>CustomerOrders</code></td>
+<td class="prop"><code>Customer<wbr/>Order</code></td>
+<td class="type"><code>Customer<wbr/>Orders</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Sales/CustomerOrder.html">CustomerOrders</a></td>
+<td><a class="chip" href="../Sales/CustomerOrder.html">Customer<wbr/>Orders</a></td>
 <td>expandable, since 2.36</td>
 <td>The customer order of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderNumber</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The customer's order number of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>SellerId</code></td>
+<td class="prop"><code>Seller<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Person.html">Persons</a></td>
@@ -172,7 +172,7 @@
 <td>The seller of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>OurReferenceId</code></td>
+<td class="prop"><code>Our<wbr/>Reference<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Person.html">Persons</a></td>
@@ -180,7 +180,7 @@
 <td>The business key identifier of the project's our reference.</td>
 </tr>
 <tr>
-<td class="prop"><code>OurReference</code></td>
+<td class="prop"><code>Our<wbr/>Reference</code></td>
 <td class="type"><code>Persons</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Person.html">Persons</a></td>
@@ -188,23 +188,23 @@
 <td>Our reference of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerReferenceId</code></td>
+<td class="prop"><code>Customer<wbr/>Reference<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="BusinessContactReference.html">BusinessContactReferences</a></td>
+<td><a class="chip" href="BusinessContactReference.html">Business<wbr/>Contact<wbr/>References</a></td>
 <td>since 2.36</td>
 <td>The business key identifier of the project's customer reference.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerReference</code></td>
-<td class="type"><code>BusinessContactReferences</code></td>
+<td class="prop"><code>Customer<wbr/>Reference</code></td>
+<td class="type"><code>Business<wbr/>Contact<wbr/>References</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="BusinessContactReference.html">BusinessContactReferences</a></td>
+<td><a class="chip" href="BusinessContactReference.html">Business<wbr/>Contact<wbr/>References</a></td>
 <td>expandable, since 2.36</td>
 <td>The customer's reference of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>InternalCommentId</code></td>
+<td class="prop"><code>Internal<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Comment.html">Comments</a></td>
@@ -212,7 +212,7 @@
 <td>The business key identifier of the project's internal comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>InternalComment</code></td>
+<td class="prop"><code>Internal<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Comment.html">Comments</a></td>
@@ -220,7 +220,7 @@
 <td>The internal comment of the project</td>
 </tr>
 <tr>
-<td class="prop"><code>ExternalCommentId</code></td>
+<td class="prop"><code>External<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Comment.html">Comments</a></td>
@@ -228,7 +228,7 @@
 <td>The business key identifier of the project's external comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExternalComment</code></td>
+<td class="prop"><code>External<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Comment.html">Comments</a></td>
@@ -236,7 +236,7 @@
 <td>The external comment of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>LongDescription</code></td>
+<td class="prop"><code>Long<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -244,79 +244,79 @@
 <td>The long description of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraFields</code></td>
-<td class="type"><code>ExtraFields[]</code></td>
+<td class="prop"><code>Extra<wbr/>Fields</code></td>
+<td class="type"><code>Extra<wbr/>Fields[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ExtraField.html">ExtraFields</a></td>
+<td><a class="chip" href="ExtraField.html">Extra<wbr/>Fields</a></td>
 <td>expandable, collection, since 2.36</td>
 <td>A collection of extra field values for the project.</td>
 </tr>
 <tr>
 <td class="prop"><code>Phases</code></td>
-<td class="type"><code>ProjectPhases[]</code></td>
+<td class="type"><code>Project<wbr/>Phases[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProjectPhase.html">ProjectPhases</a></td>
+<td><a class="chip" href="ProjectPhase.html">Project<wbr/>Phases</a></td>
 <td>expandable, collection, since 2.36</td>
 <td>The phases of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectTypeId</code></td>
+<td class="prop"><code>Project<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProjectType.html">ProjectTypes</a></td>
+<td><a class="chip" href="ProjectType.html">Project<wbr/>Types</a></td>
 <td>since 2.43</td>
 <td>The business key identifier of the project's type.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectType</code></td>
-<td class="type"><code>ProjectTypes</code></td>
+<td class="prop"><code>Project<wbr/>Type</code></td>
+<td class="type"><code>Project<wbr/>Types</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProjectType.html">ProjectTypes</a></td>
+<td><a class="chip" href="ProjectType.html">Project<wbr/>Types</a></td>
 <td>expandable, since 2.43</td>
 <td>The project type.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectGroupId</code></td>
+<td class="prop"><code>Project<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ProjectGroup.html">ProjectGroups</a></td>
+<td><a class="chip" href="ProjectGroup.html">Project<wbr/>Groups</a></td>
 <td>since 2.43</td>
 <td>The business key identifier of the project's group.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectGroup</code></td>
-<td class="type"><code>ProjectGroups</code></td>
+<td class="prop"><code>Project<wbr/>Group</code></td>
+<td class="type"><code>Project<wbr/>Groups</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProjectGroup.html">ProjectGroups</a></td>
+<td><a class="chip" href="ProjectGroup.html">Project<wbr/>Groups</a></td>
 <td>expandable, since 24.6</td>
 <td>The project group of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectCostBudgets</code></td>
-<td class="type"><code>ProjectCostBudgets[]</code></td>
+<td class="prop"><code>Project<wbr/>Cost<wbr/>Budgets</code></td>
+<td class="type"><code>Project<wbr/>Cost<wbr/>Budgets[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProjectCostBudget.html">ProjectCostBudgets</a></td>
+<td><a class="chip" href="ProjectCostBudget.html">Project<wbr/>Cost<wbr/>Budgets</a></td>
 <td>expandable, collection, since 2.46</td>
 <td>The project cost budgets of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectCostForecasts</code></td>
-<td class="type"><code>ProjectCostForecasts[]</code></td>
+<td class="prop"><code>Project<wbr/>Cost<wbr/>Forecasts</code></td>
+<td class="type"><code>Project<wbr/>Cost<wbr/>Forecasts[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProjectCostForecast.html">ProjectCostForecasts</a></td>
+<td><a class="chip" href="ProjectCostForecast.html">Project<wbr/>Cost<wbr/>Forecasts</a></td>
 <td>expandable, collection, since 2.46</td>
 <td>The project cost forecasts of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectAggregates</code></td>
-<td class="type"><code>ProjectAggregates[]</code></td>
+<td class="prop"><code>Project<wbr/>Aggregates</code></td>
+<td class="type"><code>Project<wbr/>Aggregates[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ProjectAggregate.html">ProjectAggregates</a></td>
+<td><a class="chip" href="ProjectAggregate.html">Project<wbr/>Aggregates</a></td>
 <td>expandable, collection, since 2.46</td>
 <td>The project aggregates of the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentProjectId</code></td>
+<td class="prop"><code>Parent<wbr/>Project<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Project.html">Projects</a></td>
@@ -324,7 +324,7 @@
 <td>The business key identifier of the parent project to the project.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectManagerId</code></td>
+<td class="prop"><code>Project<wbr/>Manager<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Person.html">Persons</a></td>

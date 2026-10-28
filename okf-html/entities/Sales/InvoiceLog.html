@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>InvoiceLogs · Monitor ERP API</title>
+<title>InvoiceLogs · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents an invoice log entry.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>InvoiceLogs</span>
 </header>
 <div class="layout">
@@ -75,31 +75,31 @@
 <td>The business key identifier of the invoice log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceId</code></td>
+<td class="prop"><code>Invoice<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Accounting/AccountsReceivable.html">AccountsReceivables</a></td>
+<td><a class="chip" href="../Accounting/AccountsReceivable.html">Accounts<wbr/>Receivables</a></td>
 <td></td>
 <td>The business key identifier of accounts receivable of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>LoggingTimestamp</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Logging<wbr/>Timestamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The date when the log entry was created.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Invoice<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The invoice date of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceNumber</code></td>
+<td class="prop"><code>Invoice<wbr/>Number</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -107,15 +107,15 @@
 <td>The invoice number of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryRowId</code></td>
+<td class="prop"><code>Delivery<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CustomerOrderDeliveryRow.html">CustomerOrderDeliveryRows</a></td>
+<td><a class="chip" href="CustomerOrderDeliveryRow.html">Customer<wbr/>Order<wbr/>Delivery<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier for the customer order delivery row of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -123,7 +123,7 @@
 <td>The business key identifier for the part of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartNumber</code></td>
+<td class="prop"><code>Part<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -131,7 +131,7 @@
 <td>The part number of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartCategory</code></td>
+<td class="prop"><code>Part<wbr/>Category</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -139,7 +139,7 @@
 <td>The part category of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartCode</code></td>
+<td class="prop"><code>Part<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -147,7 +147,7 @@
 <td>The part code of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerId</code></td>
+<td class="prop"><code>Customer<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Customer.html">Customers</a></td>
@@ -155,7 +155,7 @@
 <td>The business key identifier for the customer of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerCode</code></td>
+<td class="prop"><code>Customer<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -163,7 +163,7 @@
 <td>The customer code of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerGroup</code></td>
+<td class="prop"><code>Customer<wbr/>Group</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -171,15 +171,15 @@
 <td>The customer account group number of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CustomerOrder.html">CustomerOrders</a></td>
+<td><a class="chip" href="CustomerOrder.html">Customer<wbr/>Orders</a></td>
 <td></td>
 <td>The business key identifier for the customer order of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderNumber</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -187,7 +187,7 @@
 <td>The customer order number of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -195,15 +195,15 @@
 <td>The business key identifier for the warehouse of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>UserId</code></td>
+<td class="prop"><code>User<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier for the application user of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>UserName</code></td>
+<td class="prop"><code>User<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -219,7 +219,7 @@
 <td>The seller of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderedQuantity</code></td>
+<td class="prop"><code>Ordered<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -227,7 +227,7 @@
 <td>The ordered quantity of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoicedQuantity</code></td>
+<td class="prop"><code>Invoiced<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -235,7 +235,7 @@
 <td>The invoiced quantity of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitCode</code></td>
+<td class="prop"><code>Unit<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -259,7 +259,7 @@
 <td>The price of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPrice</code></td>
+<td class="prop"><code>Setup<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -267,7 +267,7 @@
 <td>The setup price of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceInCompanyCurrency</code></td>
+<td class="prop"><code>Price<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -275,7 +275,7 @@
 <td>The price in company currency of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPriceInCompanyCurrency</code></td>
+<td class="prop"><code>Setup<wbr/>Price<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -283,7 +283,7 @@
 <td>The setup price in company currency of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>StandardPrice</code></td>
+<td class="prop"><code>Standard<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -291,7 +291,7 @@
 <td>The standard price of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>WeightPerUnit</code></td>
+<td class="prop"><code>Weight<wbr/>Per<wbr/>Unit</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -299,7 +299,7 @@
 <td>The weight per unit of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProductGroupNumber</code></td>
+<td class="prop"><code>Product<wbr/>Group<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -307,7 +307,7 @@
 <td>The product group number of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>StatisticalGoodsCode</code></td>
+<td class="prop"><code>Statistical<wbr/>Goods<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -315,7 +315,7 @@
 <td>The statistical goods code of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>IntrastatTransactionType</code></td>
+<td class="prop"><code>Intrastat<wbr/>Transaction<wbr/>Type</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -323,7 +323,7 @@
 <td>The intrastat transaction type number of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>TariffAndServiceCode</code></td>
+<td class="prop"><code>Tariff<wbr/>And<wbr/>Service<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -331,7 +331,7 @@
 <td>The tariff and service code of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyCode</code></td>
+<td class="prop"><code>Currency<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -339,7 +339,7 @@
 <td>The currency code of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExchangeRate</code></td>
+<td class="prop"><code>Exchange<wbr/>Rate</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -347,7 +347,7 @@
 <td>The exchange rate of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderCategory</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Category</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -355,7 +355,7 @@
 <td>The customer order category of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>BusinessContactOrderNumber</code></td>
+<td class="prop"><code>Business<wbr/>Contact<wbr/>Order<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -363,7 +363,7 @@
 <td>The business contact order number of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderRowType</code></td>
+<td class="prop"><code>Order<wbr/>Row<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -371,7 +371,7 @@
 <td>The order row type of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>ConversionFactor</code></td>
+<td class="prop"><code>Conversion<wbr/>Factor</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -379,7 +379,7 @@
 <td>The conversion factor of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryIndex</code></td>
+<td class="prop"><code>Delivery<wbr/>Index</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -387,7 +387,7 @@
 <td>The delivery index of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>FifoPrice</code></td>
+<td class="prop"><code>Fifo<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -395,7 +395,7 @@
 <td>The FIFO price of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>ServiceType</code></td>
+<td class="prop"><code>Service<wbr/>Type</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -403,7 +403,7 @@
 <td>The service type of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountNumber</code></td>
+<td class="prop"><code>Account<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -411,7 +411,7 @@
 <td>The account number of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryAddressAddressee</code></td>
+<td class="prop"><code>Delivery<wbr/>Address<wbr/>Addressee</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -419,7 +419,7 @@
 <td>The delivery address addressee of the log entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsExportedToManagementAccounting</code></td>
+<td class="prop"><code>Is<wbr/>Exported<wbr/>To<wbr/>Management<wbr/>Accounting</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>

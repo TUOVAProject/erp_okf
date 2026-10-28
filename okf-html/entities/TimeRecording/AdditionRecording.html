@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AdditionRecordings · Monitor ERP API</title>
+<title>AdditionRecordings · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents an additional recording">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/TimeRecording.html">TimeRecording</a><span class="sep">/</span>AdditionRecordings</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the additional recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>AdditionType</code></td>
+<td class="prop"><code>Addition<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -84,39 +84,39 @@
 <td>Type of attendance addition</td>
 </tr>
 <tr>
-<td class="prop"><code>AttendanceAdditionId</code></td>
+<td class="prop"><code>Attendance<wbr/>Addition<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AttendanceAddition.html">AttendanceAdditions</a></td>
+<td><a class="chip" href="AttendanceAddition.html">Attendance<wbr/>Additions</a></td>
 <td></td>
 <td>The business key identifier of attendance addition id.</td>
 </tr>
 <tr>
-<td class="prop"><code>AttendanceAddition</code></td>
-<td class="type"><code>AttendanceAdditions</code></td>
+<td class="prop"><code>Attendance<wbr/>Addition</code></td>
+<td class="type"><code>Attendance<wbr/>Additions</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AttendanceAddition.html">AttendanceAdditions</a></td>
+<td><a class="chip" href="AttendanceAddition.html">Attendance<wbr/>Additions</a></td>
 <td>expandable</td>
 <td>Attendance addition.</td>
 </tr>
 <tr>
-<td class="prop"><code>TimeBankId</code></td>
+<td class="prop"><code>Time<wbr/>Bank<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="TimeBank.html">TimeBanks</a></td>
+<td><a class="chip" href="TimeBank.html">Time<wbr/>Banks</a></td>
 <td></td>
 <td>The business key identifier of time bank.</td>
 </tr>
 <tr>
-<td class="prop"><code>TimeBank</code></td>
-<td class="type"><code>TimeBanks</code></td>
+<td class="prop"><code>Time<wbr/>Bank</code></td>
+<td class="type"><code>Time<wbr/>Banks</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="TimeBank.html">TimeBanks</a></td>
+<td><a class="chip" href="TimeBank.html">Time<wbr/>Banks</a></td>
 <td>expandable</td>
 <td>Time bank</td>
 </tr>
 <tr>
-<td class="prop"><code>TimeBankTransaction</code></td>
+<td class="prop"><code>Time<wbr/>Bank<wbr/>Transaction</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>Type of time bank transaction</td>
 </tr>
 <tr>
-<td class="prop"><code>MandatoryComment</code></td>
+<td class="prop"><code>Mandatory<wbr/>Comment</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>Specifies whether comment is mandatory or not.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -164,7 +164,7 @@
 <td>The cost of the additional recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>CostCurrencyId</code></td>
+<td class="prop"><code>Cost<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -172,7 +172,7 @@
 <td>The business key identifier of the additional recording cost currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProjectId</code></td>
+<td class="prop"><code>Project<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Project.html">Projects</a></td>
@@ -180,16 +180,16 @@
 <td>The business key identifier of the project this additional recording belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>IntervalStart</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Interval<wbr/>Start</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The start of the interval.</td>
 </tr>
 <tr>
-<td class="prop"><code>IntervalEnd</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Interval<wbr/>End</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>

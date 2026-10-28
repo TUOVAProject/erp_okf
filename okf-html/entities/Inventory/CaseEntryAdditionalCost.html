@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CaseEntryAdditionalCost · Monitor ERP API</title>
+<title>CaseEntryAdditionalCost · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a case entry additional cost.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>CaseEntryAdditionalCost</span>
 </header>
 <div class="layout">
@@ -76,26 +76,26 @@
 <td>The business key identifier of the case entry additional cost.</td>
 </tr>
 <tr>
-<td class="prop"><code>CaseEntryId</code></td>
+<td class="prop"><code>Case<wbr/>Entry<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CaseEntry.html">CaseEntry</a></td>
+<td><a class="chip" href="CaseEntry.html">Case<wbr/>Entry</a></td>
 <td>since 22.8</td>
 <td>The business key identifier of the case entry.</td>
 </tr>
 <tr>
-<td class="prop"><code>CaseManagementCostId</code></td>
+<td class="prop"><code>Case<wbr/>Management<wbr/>Cost<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CaseManagementCost.html">CaseManagementCost</a></td>
+<td><a class="chip" href="CaseManagementCost.html">Case<wbr/>Management<wbr/>Cost</a></td>
 <td></td>
 <td>The business key identifier of the case management cost for the case entry additional cost.</td>
 </tr>
 <tr>
-<td class="prop"><code>CaseManagementCost</code></td>
-<td class="type"><code>CaseManagementCost</code></td>
+<td class="prop"><code>Case<wbr/>Management<wbr/>Cost</code></td>
+<td class="type"><code>Case<wbr/>Management<wbr/>Cost</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CaseManagementCost.html">CaseManagementCost</a></td>
+<td><a class="chip" href="CaseManagementCost.html">Case<wbr/>Management<wbr/>Cost</a></td>
 <td>expandable</td>
 <td>The case management cost of the case entry additional cost.</td>
 </tr>
@@ -108,7 +108,7 @@
 <td>The cost of the case entry additional cost.</td>
 </tr>
 <tr>
-<td class="prop"><code>CostCurrencyId</code></td>
+<td class="prop"><code>Cost<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -116,7 +116,7 @@
 <td>The business key identifier of the case entry additional cost currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>CostType</code></td>
+<td class="prop"><code>Cost<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>Specifies if the case additional cost is chargeable.</td>
 </tr>
 <tr>
-<td class="prop"><code>CostPerEach</code></td>
+<td class="prop"><code>Cost<wbr/>Per<wbr/>Each</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>The quantity of the case entry additional cost.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Part.html">Parts</a></td>

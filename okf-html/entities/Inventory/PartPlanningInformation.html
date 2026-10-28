@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PartPlanningInformation · Monitor ERP API</title>
+<title>PartPlanningInformation · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents part planning information for a warehouse.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>PartPlanningInformation</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the part planning information.</td>
 </tr>
 <tr>
-<td class="prop"><code>ContactId</code></td>
+<td class="prop"><code>Contact<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -84,7 +84,7 @@
 <td>The business key identifier of the contact person of the part planning information.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -92,15 +92,15 @@
 <td>The business key identifier of the warehouse that the part planning information is defined for.</td>
 </tr>
 <tr>
-<td class="prop"><code>AbcCodeId</code></td>
+<td class="prop"><code>Abc<wbr/>Code<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AbcCode.html">AbcCodes</a></td>
+<td><a class="chip" href="AbcCode.html">Abc<wbr/>Codes</a></td>
 <td>since 2.31</td>
 <td>The business key identifier of the AbcCode used.</td>
 </tr>
 <tr>
-<td class="prop"><code>AcquisitionWarehouseId</code></td>
+<td class="prop"><code>Acquisition<wbr/>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -116,7 +116,7 @@
 <td>The economic order quantity.</td>
 </tr>
 <tr>
-<td class="prop"><code>RoundingBase</code></td>
+<td class="prop"><code>Rounding<wbr/>Base</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>The rounding quantity for orders.</td>
 </tr>
 <tr>
-<td class="prop"><code>SafetyStock</code></td>
+<td class="prop"><code>Safety<wbr/>Stock</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The safety stock for the part .</td>
 </tr>
 <tr>
-<td class="prop"><code>AnnualVolume</code></td>
+<td class="prop"><code>Annual<wbr/>Volume</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,15 +140,15 @@
 <td>The annual volume for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>LeadTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Lead<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 2.31</td>
 <td>The lead time for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>MinQuantity</code></td>
+<td class="prop"><code>Min<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The minimum order quantity (both purchase and manufacturing).</td>
 </tr>
 <tr>
-<td class="prop"><code>MaxQuantity</code></td>
+<td class="prop"><code>Max<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -164,7 +164,7 @@
 <td>The maximum quantity per order when manufacturing.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReorderPoint</code></td>
+<td class="prop"><code>Reorder<wbr/>Point</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,7 +172,7 @@
 <td>The reorder quantity for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PalletQuantity</code></td>
+<td class="prop"><code>Pallet<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>The quantity per packet when manufacturing.</td>
 </tr>
 <tr>
-<td class="prop"><code>AnnualVolumePace</code></td>
+<td class="prop"><code>Annual<wbr/>Volume<wbr/>Pace</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>The annual volume, current pace.</td>
 </tr>
 <tr>
-<td class="prop"><code>EoqPace</code></td>
+<td class="prop"><code>Eoq<wbr/>Pace</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>Order quantity current pace.</td>
 </tr>
 <tr>
-<td class="prop"><code>LotSizingRule</code></td>
+<td class="prop"><code>Lot<wbr/>Sizing<wbr/>Rule</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -204,15 +204,15 @@
 <td>The lot sizing rule for the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>LotSizingPeriod</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Lot<wbr/>Sizing<wbr/>Period</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td>since 2.31</td>
 <td>The length of the period when using period requirement as lot sizing rule.</td>
 </tr>
 <tr>
-<td class="prop"><code>AllowOrderCreationFromCustomerOrder</code></td>
+<td class="prop"><code>Allow<wbr/>Order<wbr/>Creation<wbr/>From<wbr/>Customer<wbr/>Order</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -220,15 +220,15 @@
 <td>Allow to create orders from customer order (manufacturing order for manufactured parts and purchase orders for purchased parts).</td>
 </tr>
 <tr>
-<td class="prop"><code>SafetyTime</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Safety<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td>since 2.31</td>
 <td>Safety time.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeductSalesForecast</code></td>
+<td class="prop"><code>Deduct<wbr/>Sales<wbr/>Forecast</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -236,7 +236,7 @@
 <td>The type of forecast deduction used.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeductionMethod</code></td>
+<td class="prop"><code>Deduction<wbr/>Method</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -244,31 +244,31 @@
 <td>The method of forecast deduction used.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActiveSupplierPartLinkId</code></td>
+<td class="prop"><code>Active<wbr/>Supplier<wbr/>Part<wbr/>Link<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Purchase/SupplierPartLink.html">SupplierPartLinks</a></td>
+<td><a class="chip" href="../Purchase/SupplierPartLink.html">Supplier<wbr/>Part<wbr/>Links</a></td>
 <td>since 2.55</td>
 <td>The business key identifier of the active supplier part link of the part planning information.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActiveSupplierPartLink</code></td>
-<td class="type"><code>SupplierPartLinks</code></td>
+<td class="prop"><code>Active<wbr/>Supplier<wbr/>Part<wbr/>Link</code></td>
+<td class="type"><code>Supplier<wbr/>Part<wbr/>Links</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Purchase/SupplierPartLink.html">SupplierPartLinks</a></td>
+<td><a class="chip" href="../Purchase/SupplierPartLink.html">Supplier<wbr/>Part<wbr/>Links</a></td>
 <td>expandable</td>
 <td>The active supplier part link of the part planning information.</td>
 </tr>
 <tr>
-<td class="prop"><code>DefaultTransferProfileId</code></td>
+<td class="prop"><code>Default<wbr/>Transfer<wbr/>Profile<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/TransferProfile.html">TransferProfiles</a></td>
+<td><a class="chip" href="../Common/TransferProfile.html">Transfer<wbr/>Profiles</a></td>
 <td>since 22.1</td>
 <td>The business key identifier of the default transfer profile.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlanningMethod</code></td>
+<td class="prop"><code>Planning<wbr/>Method</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>

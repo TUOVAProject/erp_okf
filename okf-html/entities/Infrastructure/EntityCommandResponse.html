@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EntityCommandResponse · Monitor ERP API</title>
+<title>EntityCommandResponse · Monitor ERP API Data Model</title>
 <meta name="description" content="This is the response type of all state commands available in the system. As long as a command uses this return-type, it can be used with the command batching system.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Infrastructure.html">Infrastructure</a><span class="sep">/</span>EntityCommandResponse</span>
 </header>
 <div class="layout">
@@ -67,7 +67,7 @@
 </thead>
 <tbody>
 <tr>
-<td class="prop"><code>RootEntityId</code></td>
+<td class="prop"><code>Root<wbr/>Entity<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -75,7 +75,7 @@
 <td>The business key identifier of the root entity in the context of the command. This is usually the parent entity of the parent that has been changed.</td>
 </tr>
 <tr>
-<td class="prop"><code>EntityId</code></td>
+<td class="prop"><code>Entity<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -83,7 +83,7 @@
 <td>The business key identifier of the main entity in the context of the command. This is always the entity that has been changed by the command.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommandName</code></td>
+<td class="prop"><code>Command<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>

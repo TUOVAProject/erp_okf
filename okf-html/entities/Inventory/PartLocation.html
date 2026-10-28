@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PartLocations · Monitor ERP API</title>
+<title>PartLocations · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a part location.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>PartLocations</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Part.html">Parts</a></td>
@@ -84,7 +84,7 @@
 <td>The business key identifier of the part to which the location belong.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -116,7 +116,7 @@
 <td>The balance in standard unit.</td>
 </tr>
 <tr>
-<td class="prop"><code>LifeCycleState</code></td>
+<td class="prop"><code>Life<wbr/>Cycle<wbr/>State</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,15 +124,15 @@
 <td>The life cycle state of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>LatestArrivalDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Latest<wbr/>Arrival<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>Latest arrival date for the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>WorkCenterPickingLocation</code></td>
+<td class="prop"><code>Work<wbr/>Center<wbr/>Picking<wbr/>Location</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>Whether the location is a work center picking location.</td>
 </tr>
 <tr>
-<td class="prop"><code>WorkCenterPickingLocationFillingQuantity</code></td>
+<td class="prop"><code>Work<wbr/>Center<wbr/>Picking<wbr/>Location<wbr/>Filling<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>Specifies the filling quantity when the location is a work center picking location.</td>
 </tr>
 <tr>
-<td class="prop"><code>OutgoingPickLocation</code></td>
+<td class="prop"><code>Outgoing<wbr/>Pick<wbr/>Location</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>Specifies whether the location is of type pick location.</td>
 </tr>
 <tr>
-<td class="prop"><code>ArrivalLocation</code></td>
+<td class="prop"><code>Arrival<wbr/>Location</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,7 +172,7 @@
 <td>Specifies the priority of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>OutgoingPickLocationReorderPoint</code></td>
+<td class="prop"><code>Outgoing<wbr/>Pick<wbr/>Location<wbr/>Reorder<wbr/>Point</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>Specifies the pick location reordering point, quantity used when filling pick location.</td>
 </tr>
 <tr>
-<td class="prop"><code>BatchNumber</code></td>
+<td class="prop"><code>Batch<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>Batch number when part has traceability of type batch.</td>
 </tr>
 <tr>
-<td class="prop"><code>SerialNumber</code></td>
+<td class="prop"><code>Serial<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>Serial number when part has traceability of type serial number.</td>
 </tr>
 <tr>
-<td class="prop"><code>InventoryStatus</code></td>
+<td class="prop"><code>Inventory<wbr/>Status</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>The inventory status of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsOngoingRefill</code></td>
+<td class="prop"><code>Is<wbr/>Ongoing<wbr/>Refill</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>Specifies if the location is currently being refilled.</td>
 </tr>
 <tr>
-<td class="prop"><code>RevisionId</code></td>
+<td class="prop"><code>Revision<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Revision.html">Revisions</a></td>
@@ -228,7 +228,7 @@
 <td>The revision of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>IgnoredBalance</code></td>
+<td class="prop"><code>Ignored<wbr/>Balance</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -236,10 +236,10 @@
 <td>Specifies if the balance of the location is to be ignored when calculating Net Requirement and CDT.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartLocationProductRecords</code></td>
-<td class="type"><code>PartLocationProductRecords[]</code></td>
+<td class="prop"><code>Part<wbr/>Location<wbr/>Product<wbr/>Records</code></td>
+<td class="type"><code>Part<wbr/>Location<wbr/>Product<wbr/>Records[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PartLocationProductRecord.html">PartLocationProductRecords</a></td>
+<td><a class="chip" href="PartLocationProductRecord.html">Part<wbr/>Location<wbr/>Product<wbr/>Records</a></td>
 <td>expandable, collection, since 2.29</td>
 <td>A collection of quantity items that holds the quantity of each batch/serial number.</td>
 </tr>

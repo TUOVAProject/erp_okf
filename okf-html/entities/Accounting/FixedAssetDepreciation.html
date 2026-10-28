@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FixedAssetDepreciations · Monitor ERP API</title>
+<title>FixedAssetDepreciations · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a depreciation for a fixed assets object.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>FixedAssetDepreciations</span>
 </header>
 <div class="layout">
@@ -82,23 +82,23 @@
 <td>The amount of the depreciation.</td>
 </tr>
 <tr>
-<td class="prop"><code>DepreciationDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Depreciation<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The depreciation date of the depreciation.</td>
 </tr>
 <tr>
-<td class="prop"><code>VoucherDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Voucher<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The voucher date of the depreciation.</td>
 </tr>
 <tr>
-<td class="prop"><code>VoucherText</code></td>
+<td class="prop"><code>Voucher<wbr/>Text</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -106,10 +106,10 @@
 <td>The voucher date of the depreciation.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="FixedAsset.html">FixedAssets</a></td>
+<td><a class="chip" href="FixedAsset.html">Fixed<wbr/>Assets</a></td>
 <td></td>
 <td>The fixed assets object to which the depreciation belongs.</td>
 </tr>

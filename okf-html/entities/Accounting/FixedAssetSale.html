@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FixedAssetSales · Monitor ERP API</title>
+<title>FixedAssetSales · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a sale/retirement of a fixed assets object.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>FixedAssetSales</span>
 </header>
 <div class="layout">
@@ -76,8 +76,8 @@
 <td>The business key identifier of the fixed asset sale.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Sales<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
@@ -100,7 +100,7 @@
 <td>The sold quantity of the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartOfAcquisitionValue</code></td>
+<td class="prop"><code>Part<wbr/>Of<wbr/>Acquisition<wbr/>Value</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>The sold part of the fixed assets object's acquisition value.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesValue</code></td>
+<td class="prop"><code>Sales<wbr/>Value</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>The sales value of the fixed asset sale.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesProfit</code></td>
+<td class="prop"><code>Sales<wbr/>Profit</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -124,15 +124,15 @@
 <td>The profit of the fixed asset sale.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsReceivableId</code></td>
+<td class="prop"><code>Accounts<wbr/>Receivable<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AccountsReceivable.html">AccountsReceivables</a></td>
+<td><a class="chip" href="AccountsReceivable.html">Accounts<wbr/>Receivables</a></td>
 <td></td>
 <td>The business key identifier of the accounts receivable linked to the fixed asset sale.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerId</code></td>
+<td class="prop"><code>Customer<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Sales/Customer.html">Customers</a></td>
@@ -140,7 +140,7 @@
 <td>The business key identifier of the customer linked to the fixed asset sale.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -156,7 +156,7 @@
 <td>The comment to the fixed asset sale.</td>
 </tr>
 <tr>
-<td class="prop"><code>VoucherText</code></td>
+<td class="prop"><code>Voucher<wbr/>Text</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -164,15 +164,15 @@
 <td>The voucher text of the fixed asset sale.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesTimestamp</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Sales<wbr/>Timestamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The timestamp of the fixed asset sale.</td>
 </tr>
 <tr>
-<td class="prop"><code>BookingId</code></td>
+<td class="prop"><code>Booking<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Booking.html">Bookings</a></td>

@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AttendanceChart · Monitor ERP API</title>
+<title>AttendanceChart · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents an attendance chart.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/TimeRecording.html">TimeRecording</a><span class="sep">/</span>AttendanceChart</span>
 </header>
 <div class="layout">
@@ -69,20 +69,20 @@
 <td class="prop"><code>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="RecordingDay.html">RecordingDays</a></td>
+<td><a class="chip" href="RecordingDay.html">Recording<wbr/>Days</a></td>
 <td></td>
 <td>The business key identifier of the latest recording day.</td>
 </tr>
 <tr>
-<td class="prop"><code>RecordingDate</code></td>
-<td class="type"><code>DateTime</code></td>
+<td class="prop"><code>Recording<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The date of the last recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>EmployeeId</code></td>
+<td class="prop"><code>Employee<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -90,7 +90,7 @@
 <td>The business key identifier of the employee that the recording belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>EmployeeNumber</code></td>
+<td class="prop"><code>Employee<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -98,7 +98,7 @@
 <td>The employee number of the recording employee.</td>
 </tr>
 <tr>
-<td class="prop"><code>FirstName</code></td>
+<td class="prop"><code>First<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -106,7 +106,7 @@
 <td>The first name of the recording employee.</td>
 </tr>
 <tr>
-<td class="prop"><code>LastName</code></td>
+<td class="prop"><code>Last<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -114,7 +114,7 @@
 <td>The last name of the recording employee.</td>
 </tr>
 <tr>
-<td class="prop"><code>InternalPhoneNumber</code></td>
+<td class="prop"><code>Internal<wbr/>Phone<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -122,7 +122,7 @@
 <td>The internal phone number of the recording employee.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsClosedInterval</code></td>
+<td class="prop"><code>Is<wbr/>Closed<wbr/>Interval</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -130,23 +130,23 @@
 <td>Specifies if the interval of the attendance period has been closed.</td>
 </tr>
 <tr>
-<td class="prop"><code>IntervalStart</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Interval<wbr/>Start</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>When the interval started.</td>
 </tr>
 <tr>
-<td class="prop"><code>IntervalEnd</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Interval<wbr/>End</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>When the interval ended.</td>
 </tr>
 <tr>
-<td class="prop"><code>AbsenceCodeId</code></td>
+<td class="prop"><code>Absence<wbr/>Code<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -154,7 +154,7 @@
 <td>The business key identifier of the recording's absence code.</td>
 </tr>
 <tr>
-<td class="prop"><code>AbsenceCode</code></td>
+<td class="prop"><code>Absence<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -162,7 +162,7 @@
 <td>The human readable identifier of the recording's absence code.</td>
 </tr>
 <tr>
-<td class="prop"><code>AbsenceDescription</code></td>
+<td class="prop"><code>Absence<wbr/>Description</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -170,7 +170,7 @@
 <td>The absence code description.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsBreak</code></td>
+<td class="prop"><code>Is<wbr/>Break</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -178,7 +178,7 @@
 <td>Specifies if the interval is considered break time.</td>
 </tr>
 <tr>
-<td class="prop"><code>ScheduleId</code></td>
+<td class="prop"><code>Schedule<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -186,7 +186,7 @@
 <td>The business key identifier of the schedule that the recording is based upon.</td>
 </tr>
 <tr>
-<td class="prop"><code>AbsenceKind</code></td>
+<td class="prop"><code>Absence<wbr/>Kind</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -194,7 +194,7 @@
 <td>The absence kind of the recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>ScheduleType</code></td>
+<td class="prop"><code>Schedule<wbr/>Type</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -202,7 +202,7 @@
 <td>The schedule type of the recording. Represents Monitor.StrawberryFields.Shared.Workshop.WorkshopScheduleType 1 - Ordinary 2 - Overtime</td>
 </tr>
 <tr>
-<td class="prop"><code>IsNightSchedule</code></td>
+<td class="prop"><code>Is<wbr/>Night<wbr/>Schedule</code></td>
 <td class="type"><code>Boolean?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -210,7 +210,7 @@
 <td>Specifies if the recording falls under night schedule.</td>
 </tr>
 <tr>
-<td class="prop"><code>ScheduleNumber</code></td>
+<td class="prop"><code>Schedule<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -218,7 +218,7 @@
 <td>The schedule number of the recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>DepartmentId</code></td>
+<td class="prop"><code>Department<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -226,7 +226,7 @@
 <td>The business key identifier of the department linked to the recording.</td>
 </tr>
 <tr>
-<td class="prop"><code>DepartmentCode</code></td>
+<td class="prop"><code>Department<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>

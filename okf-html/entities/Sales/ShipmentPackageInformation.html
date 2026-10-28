@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ShipmentPackageInformations · Monitor ERP API</title>
+<title>ShipmentPackageInformations · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a shipment package information.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>ShipmentPackageInformations</span>
 </header>
 <div class="layout">
@@ -75,10 +75,10 @@
 <td>The business key identifier of the shipment package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>InformationSourceId</code></td>
+<td class="prop"><code>Information<wbr/>Source<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ShipmentInformationSource.html">ShipmentInformationSources</a></td>
+<td><a class="chip" href="ShipmentInformationSource.html">Shipment<wbr/>Information<wbr/>Sources</a></td>
 <td></td>
 <td>The business key identifier of the information source of the package information.</td>
 </tr>
@@ -91,7 +91,7 @@
 <td>The number of packages of the package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackageTypeName</code></td>
+<td class="prop"><code>Package<wbr/>Type<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -99,15 +99,15 @@
 <td>The package type name of the package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackageType</code></td>
+<td class="prop"><code>Package<wbr/>Type</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Inventory/PackageType.html">PackageTypes</a></td>
+<td><a class="chip" href="../Inventory/PackageType.html">Package<wbr/>Types</a></td>
 <td></td>
 <td>The business key identifier of the package type of the package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>GoodsTypeName</code></td>
+<td class="prop"><code>Goods<wbr/>Type<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -115,15 +115,15 @@
 <td>The goods type name of the package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>GoodsType</code></td>
+<td class="prop"><code>Goods<wbr/>Type</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Inventory/GoodsType.html">GoodsTypes</a></td>
+<td><a class="chip" href="../Inventory/GoodsType.html">Goods<wbr/>Types</a></td>
 <td></td>
 <td>The business key identifier of the goods type of the package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackageIdentification</code></td>
+<td class="prop"><code>Package<wbr/>Identification</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -131,7 +131,7 @@
 <td>The package identification of the package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackageTypeCode</code></td>
+<td class="prop"><code>Package<wbr/>Type<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -147,7 +147,7 @@
 <td>The volume of the package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>GrossWeight</code></td>
+<td class="prop"><code>Gross<wbr/>Weight</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -155,7 +155,7 @@
 <td>The gross weight of the package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>LoadingMeters</code></td>
+<td class="prop"><code>Loading<wbr/>Meters</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -187,7 +187,7 @@
 <td>The height of the package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>GoodsLabel</code></td>
+<td class="prop"><code>Goods<wbr/>Label</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -195,7 +195,7 @@
 <td>The GoodsLabel of the package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackageNumber</code></td>
+<td class="prop"><code>Package<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -203,15 +203,15 @@
 <td>The PackageNumber to identify a package with a Shipping Partner of the package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShippingAgentsPackageNumbers</code></td>
-<td class="type"><code>ShipmentPackageInformationPackageNumbers[]</code></td>
+<td class="prop"><code>Shipping<wbr/>Agents<wbr/>Package<wbr/>Numbers</code></td>
+<td class="type"><code>Shipment<wbr/>Package<wbr/>Information<wbr/>Package<wbr/>Numbers[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ShipmentPackageInformationPackageNumber.html">ShipmentPackageInformationPackageNumbers</a></td>
+<td><a class="chip" href="ShipmentPackageInformationPackageNumber.html">Shipment<wbr/>Package<wbr/>Information<wbr/>Package<wbr/>Numbers</a></td>
 <td>expandable, collection, since 24.3</td>
 <td>The Real PackageNumbers from shipping agent or edited manually of the package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShipmentId</code></td>
+<td class="prop"><code>Shipment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Shipment.html">Shipments</a></td>
@@ -219,7 +219,7 @@
 <td>The business key identifier of the shipment of the package information.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowIndex</code></td>
+<td class="prop"><code>Row<wbr/>Index</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>

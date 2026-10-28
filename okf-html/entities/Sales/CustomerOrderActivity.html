@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CustomerOrderActivities · Monitor ERP API</title>
+<title>CustomerOrderActivities · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a customer order activity.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>CustomerOrderActivities</span>
 </header>
 <div class="layout">
@@ -74,18 +74,18 @@
 <td>The business key identifier of the customer order activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>OrderId</code></td>
+<td class="prop"><code>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CustomerOrder.html">CustomerOrders</a></td>
+<td><a class="chip" href="CustomerOrder.html">Customer<wbr/>Orders</a></td>
 <td></td>
 <td>The business key identifier of the customer order to add the activity to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActivityTypeId</code></td>
+<td class="prop"><code>Activity<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CustomerRelationshipActivityType.html">CustomerRelationshipActivityTypes</a></td>
+<td><a class="chip" href="CustomerRelationshipActivityType.html">Customer<wbr/>Relationship<wbr/>Activity<wbr/>Types</a></td>
 <td></td>
 <td>The business key identifier of the customer order activity type that the activity is based on.</td>
 </tr>
@@ -98,16 +98,16 @@
 <td>The description of the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>ResponsibleUserId</code></td>
+<td class="prop"><code>Responsible<wbr/>User<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the application user that is responsible for the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedCompletionDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Planned<wbr/>Completion<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>

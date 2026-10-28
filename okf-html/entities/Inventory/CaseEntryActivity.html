@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CaseEntryActivities · Monitor ERP API</title>
+<title>CaseEntryActivities · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a case entry activity.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>CaseEntryActivities</span>
 </header>
 <div class="layout">
@@ -76,31 +76,31 @@
 <td>The business key identifier of the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>CaseEntryId</code></td>
+<td class="prop"><code>Case<wbr/>Entry<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CaseEntry.html">CaseEntry</a></td>
+<td><a class="chip" href="CaseEntry.html">Case<wbr/>Entry</a></td>
 <td></td>
 <td>The business key identifier of the case entry that the activity belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedTime</code></td>
-<td class="type"><code>TimeSpan</code></td>
+<td class="prop"><code>Planned<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The planned time of the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Reported<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The reported time of the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShowOnDocuments</code></td>
+<td class="prop"><code>Show<wbr/>On<wbr/>Documents</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>Specifies if the activity should be shown on documents or not.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportingType</code></td>
+<td class="prop"><code>Reporting<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>Specifies whether or not the activity is mandatory.</td>
 </tr>
 <tr>
-<td class="prop"><code>CostPerHour</code></td>
+<td class="prop"><code>Cost<wbr/>Per<wbr/>Hour</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The cost per hour of the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>CostPerHourCurrencyId</code></td>
+<td class="prop"><code>Cost<wbr/>Per<wbr/>Hour<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -148,15 +148,15 @@
 <td>Specifies whether or not the activity is chargeable.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActivityTypeId</code></td>
+<td class="prop"><code>Activity<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CaseManagementActivity.html">CaseManagementActivities</a></td>
+<td><a class="chip" href="CaseManagementActivity.html">Case<wbr/>Management<wbr/>Activities</a></td>
 <td></td>
 <td>The business key identifier of the case management activity that the activity is based on.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalendarAppointmentId</code></td>
+<td class="prop"><code>Calendar<wbr/>Appointment<wbr/>Id</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -164,18 +164,18 @@
 <td>The calendar appointment id of the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>CompletedByUserId</code></td>
+<td class="prop"><code>Completed<wbr/>By<wbr/>User<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the user that completed the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>ResponsibleUserId</code></td>
+<td class="prop"><code>Responsible<wbr/>User<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the user that is responsible for the activity.</td>
 </tr>
@@ -188,7 +188,7 @@
 <td>The description of the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -212,7 +212,7 @@
 <td>The status of the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReminderId</code></td>
+<td class="prop"><code>Reminder<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -220,32 +220,32 @@
 <td>The business key identifier of the reminder that is linked with the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedCompletionDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Planned<wbr/>Completion<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The planned completion date of the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>CompletionDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Completion<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The completion date of the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedStartDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Planned<wbr/>Start<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The planned start date of the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActualStartDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Actual<wbr/>Start<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>

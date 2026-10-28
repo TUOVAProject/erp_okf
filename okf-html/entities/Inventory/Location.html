@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Locations · Monitor ERP API</title>
+<title>Locations · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a location (so called generated location) Can also represent a stock package)">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>Locations</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Location.html">Locations</a></td>
@@ -84,7 +84,7 @@
 <td>The business key identifier of the location's parent location. Applicable for locations that represents a stock package.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -108,7 +108,7 @@
 <td>The name of the location or the package number.</td>
 </tr>
 <tr>
-<td class="prop"><code>StorageType</code></td>
+<td class="prop"><code>Storage<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>The type of the location. (Single- or multipart storage)</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -132,23 +132,23 @@
 <td>The comment of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedById</code></td>
+<td class="prop"><code>Blocked<wbr/>By<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the application user that blocked the entity.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedBy</code></td>
-<td class="type"><code>ApplicationUsers</code></td>
+<td class="prop"><code>Blocked<wbr/>By</code></td>
+<td class="type"><code>Application<wbr/>Users</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td>expandable</td>
 <td>The application user that blocked the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedStatus</code></td>
+<td class="prop"><code>Blocked<wbr/>Status</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The block status of the entity.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockMessageId</code></td>
+<td class="prop"><code>Block<wbr/>Message<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -164,7 +164,7 @@
 <td>The business key identifier of the entity block message comment. References Comments .</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockMessage</code></td>
+<td class="prop"><code>Block<wbr/>Message</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -172,23 +172,23 @@
 <td>The block message of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedFromDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Blocked<wbr/>From<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date when the entity starts being blocked.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedToDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Blocked<wbr/>To<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date when the entity stops being blocked.</td>
 </tr>
 <tr>
-<td class="prop"><code>SortingOrder</code></td>
+<td class="prop"><code>Sorting<wbr/>Order</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The route sorting order.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsPackage</code></td>
+<td class="prop"><code>Is<wbr/>Package</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>Whether this location represents a stock package</td>
 </tr>
 <tr>
-<td class="prop"><code>MaxWidth</code></td>
+<td class="prop"><code>Max<wbr/>Width</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>The max width of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>MinWidth</code></td>
+<td class="prop"><code>Min<wbr/>Width</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -220,7 +220,7 @@
 <td>The min width of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>MaxLength</code></td>
+<td class="prop"><code>Max<wbr/>Length</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -228,7 +228,7 @@
 <td>The max length of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>MinLength</code></td>
+<td class="prop"><code>Min<wbr/>Length</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -236,7 +236,7 @@
 <td>The min length of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>MaxHeight</code></td>
+<td class="prop"><code>Max<wbr/>Height</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -244,7 +244,7 @@
 <td>The max height of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>MinHeight</code></td>
+<td class="prop"><code>Min<wbr/>Height</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -252,7 +252,7 @@
 <td>The min height of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>LoadCapacity</code></td>
+<td class="prop"><code>Load<wbr/>Capacity</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -260,7 +260,7 @@
 <td>The max weight load capacity of the location.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackagingPartId</code></td>
+<td class="prop"><code>Packaging<wbr/>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Part.html">Parts</a></td>
@@ -268,7 +268,7 @@
 <td>The business key identifier of the packaging part that defines the packaging type of this location. Applicable for locations that represents a stock package.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackagingPart</code></td>
+<td class="prop"><code>Packaging<wbr/>Part</code></td>
 <td class="type"><code>Parts</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Part.html">Parts</a></td>
@@ -276,34 +276,34 @@
 <td>The packaging part that defines the packaging type of this location. Applicable for locations that represents a stock package.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingOrderId</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Manufacturing/ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td><a class="chip" href="../Manufacturing/ManufacturingOrder.html">Manufacturing<wbr/>Orders</a></td>
 <td>since 25.3</td>
 <td>The business key identifier of the manufacturing order that the package were created for. Applicable for locations that represents a stock package.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingOrderMaterialId</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Order<wbr/>Material<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Manufacturing/ManufacturingOrderOperationReporting.html">ManufacturingOrderOperationReportings</a></td>
+<td><a class="chip" href="../Manufacturing/ManufacturingOrderOperationReporting.html">Manufacturing<wbr/>Order<wbr/>Operation<wbr/>Reportings</a></td>
 <td>since 25.3</td>
 <td>The business key identifier of the reported material that is linked to the package. Applicable for locations that represents a stock package.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseOrderId</code></td>
+<td class="prop"><code>Purchase<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Purchase/PurchaseOrder.html">PurchaseOrders</a></td>
+<td><a class="chip" href="../Purchase/PurchaseOrder.html">Purchase<wbr/>Orders</a></td>
 <td>since 25.3</td>
 <td>The business key identifier of the purchase order that the package were created for. Applicable for locations that represents a stock package.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Sales/CustomerOrder.html">CustomerOrders</a></td>
+<td><a class="chip" href="../Sales/CustomerOrder.html">Customer<wbr/>Orders</a></td>
 <td>since 25.3</td>
 <td>The business key identifier of the customer order that the package were created for. Applicable for locations that represents a stock package.</td>
 </tr>

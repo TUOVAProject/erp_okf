@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AccountYearSettings · Monitor ERP API</title>
+<title>AccountYearSettings · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a account setting on a specific year.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>AccountYearSettings</span>
 </header>
 <div class="layout">
@@ -76,10 +76,10 @@
 <td>The business key identifier of the account year setting.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountingYearId</code></td>
+<td class="prop"><code>Accounting<wbr/>Year<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AccountingYear.html">AccountingYears</a></td>
+<td><a class="chip" href="AccountingYear.html">Accounting<wbr/>Years</a></td>
 <td></td>
 <td>The business key identifier of accounting year.</td>
 </tr>
@@ -92,7 +92,7 @@
 <td>The description of the account year setting.</td>
 </tr>
 <tr>
-<td class="prop"><code>AllowSpecification</code></td>
+<td class="prop"><code>Allow<wbr/>Specification</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -100,7 +100,7 @@
 <td>Specifies if the account year setting allows specification to be used.</td>
 </tr>
 <tr>
-<td class="prop"><code>AllowQuantity</code></td>
+<td class="prop"><code>Allow<wbr/>Quantity</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>Specifies if the account year setting allows quantity to be used.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsCurrencyAccount</code></td>
+<td class="prop"><code>Is<wbr/>Currency<wbr/>Account</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>Specifies if the account year setting is a currency account.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyId</code></td>
+<td class="prop"><code>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -124,7 +124,7 @@
 <td>The business key identifier of the currency if used.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsAccrual</code></td>
+<td class="prop"><code>Is<wbr/>Accrual</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>Specifies if the account year setting is accrual.</td>
 </tr>
 <tr>
-<td class="prop"><code>DebitOrCreditType</code></td>
+<td class="prop"><code>Debit<wbr/>Or<wbr/>Credit<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>Specifies if the account year setting is of debit or credit type.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatType</code></td>
+<td class="prop"><code>Vat<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,15 +148,15 @@
 <td>The vat type on the account year setting.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatRateId</code></td>
+<td class="prop"><code>Vat<wbr/>Rate<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/VatRate.html">VatRates</a></td>
+<td><a class="chip" href="../Common/VatRate.html">Vat<wbr/>Rates</a></td>
 <td></td>
 <td>The business key identifier of the vat rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>BlockedForManualCoding</code></td>
+<td class="prop"><code>Blocked<wbr/>For<wbr/>Manual<wbr/>Coding</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -164,7 +164,7 @@
 <td>Specifies if the account year setting is block for manual coding.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsFixedAssetAccount</code></td>
+<td class="prop"><code>Is<wbr/>Fixed<wbr/>Asset<wbr/>Account</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,7 +172,7 @@
 <td>Specifies if the account year setting is a fixed asset account.</td>
 </tr>
 <tr>
-<td class="prop"><code>IncludeOrderNumberInCoding</code></td>
+<td class="prop"><code>Include<wbr/>Order<wbr/>Number<wbr/>In<wbr/>Coding</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>Specifies if the account year setting should include ordernumber in coding.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountId</code></td>
+<td class="prop"><code>Account<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Account.html">Accounts</a></td>
@@ -196,10 +196,10 @@
 <td>The account of the account year setting.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountCodingDimensions</code></td>
-<td class="type"><code>AccountYearSettingCodingDimensionAvailabilities[]</code></td>
+<td class="prop"><code>Account<wbr/>Coding<wbr/>Dimensions</code></td>
+<td class="type"><code>Account<wbr/>Year<wbr/>Setting<wbr/>Coding<wbr/>Dimension<wbr/>Availabilities[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AccountYearSettingCodingDimensionAvailability.html">AccountYearSettingCodingDimensionAvailabilities</a></td>
+<td><a class="chip" href="AccountYearSettingCodingDimensionAvailability.html">Account<wbr/>Year<wbr/>Setting<wbr/>Coding<wbr/>Dimension<wbr/>Availabilities</a></td>
 <td>expandable, collection</td>
 <td>The account coding dimensions of the account year setting.</td>
 </tr>

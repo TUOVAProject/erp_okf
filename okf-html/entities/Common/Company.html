@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Companies · Monitor ERP API</title>
+<title>Companies · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a company in the MONITOR system.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>Companies</span>
 </header>
 <div class="layout">
@@ -83,7 +83,7 @@
 <td>The name of the company.</td>
 </tr>
 <tr>
-<td class="prop"><code>ImageId</code></td>
+<td class="prop"><code>Image<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -92,14 +92,14 @@
 </tr>
 <tr>
 <td class="prop"><code>Image</code></td>
-<td class="type"><code>BlobData</code></td>
+<td class="type"><code>Blob<wbr/>Data</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="BlobData.html">BlobData</a></td>
+<td><a class="chip" href="BlobData.html">Blob<wbr/>Data</a></td>
 <td>expandable</td>
 <td>The image blob of the company.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyId</code></td>
+<td class="prop"><code>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Currency.html">Currencies</a></td>
@@ -115,18 +115,18 @@
 <td>The company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>LanguageId</code></td>
+<td class="prop"><code>Language<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="LanguageCode.html">LanguageCodes</a></td>
+<td><a class="chip" href="LanguageCode.html">Language<wbr/>Codes</a></td>
 <td></td>
 <td>The business key identifier of the language.</td>
 </tr>
 <tr>
 <td class="prop"><code>Language</code></td>
-<td class="type"><code>LanguageCodes</code></td>
+<td class="type"><code>Language<wbr/>Codes</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="LanguageCode.html">LanguageCodes</a></td>
+<td><a class="chip" href="LanguageCode.html">Language<wbr/>Codes</a></td>
 <td>expandable</td>
 <td>The language of the company.</td>
 </tr>
@@ -139,7 +139,7 @@
 <td>The warehouses that belong to the company.</td>
 </tr>
 <tr>
-<td class="prop"><code>TimeZone</code></td>
+<td class="prop"><code>Time<wbr/>Zone</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -147,7 +147,7 @@
 <td>The time zone of the company. Specified as a time zone identifier. Identifier depends on underlying database engine, and could be in either IANA or Windows style.</td>
 </tr>
 <tr>
-<td class="prop"><code>CorporationIdentificationNumber</code></td>
+<td class="prop"><code>Corporation<wbr/>Identification<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>

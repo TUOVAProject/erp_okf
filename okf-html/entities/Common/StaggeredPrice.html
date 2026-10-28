@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>StaggeredPrices · Monitor ERP API</title>
+<title>StaggeredPrices · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a staggered price.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>StaggeredPrices</span>
 </header>
 <div class="layout">
@@ -75,7 +75,7 @@
 <td>The business key identifier of the staggered price.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -91,7 +91,7 @@
 <td>The price on the staggered price in the parent's currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>LowerBoundaryQuantity</code></td>
+<td class="prop"><code>Lower<wbr/>Boundary<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -99,7 +99,7 @@
 <td>The lower boundary quantity on the staggered price.</td>
 </tr>
 <tr>
-<td class="prop"><code>FuturePrice</code></td>
+<td class="prop"><code>Future<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -107,7 +107,7 @@
 <td>The future price on the staggered price in the parent's currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShippingPrice</code></td>
+<td class="prop"><code>Shipping<wbr/>Price</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -115,7 +115,7 @@
 <td>The shipping price on the staggered price in the parent's currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentClass</code></td>
+<td class="prop"><code>Parent<wbr/>Class</code></td>
 <td class="type"><code>Guid</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -123,7 +123,7 @@
 <td>The GUID of the staggered price's parent type.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>

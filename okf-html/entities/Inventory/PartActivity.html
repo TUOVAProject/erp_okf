@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PartActivities · Monitor ERP API</title>
+<title>PartActivities · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents an part activity.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Inventory.html">Inventory</a><span class="sep">/</span>PartActivities</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the part activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Part.html">Parts</a></td>
@@ -84,10 +84,10 @@
 <td>The business key identifier of the part that the activity belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActivityTypeId</code></td>
+<td class="prop"><code>Activity<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PartActivityType.html">PartActivityTypes</a></td>
+<td><a class="chip" href="PartActivityType.html">Part<wbr/>Activity<wbr/>Types</a></td>
 <td></td>
 <td>The business key identifier of the part activity type.</td>
 </tr>
@@ -100,15 +100,15 @@
 <td>The description of the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>ResponsibleUserId</code></td>
+<td class="prop"><code>Responsible<wbr/>User<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the user that is responsible for the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -116,7 +116,7 @@
 <td>The business key identifier of the activity's comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReminderId</code></td>
+<td class="prop"><code>Reminder<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,8 +124,8 @@
 <td>The business key identifier of the reminder that is linked with the activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedCompletionDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Planned<wbr/>Completion<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>

@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SetOffDestination · Monitor ERP API</title>
+<title>SetOffDestination · Monitor ERP API Data Model</title>
 <meta name="description" content="The set-off invoice.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>SetOffDestination</span>
 </header>
 <div class="layout">
@@ -72,23 +72,23 @@
 </thead>
 <tbody>
 <tr>
-<td class="prop"><code>AccountsReceivableId</code></td>
+<td class="prop"><code>Accounts<wbr/>Receivable<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AccountsReceivable.html">AccountsReceivables</a></td>
+<td><a class="chip" href="AccountsReceivable.html">Accounts<wbr/>Receivables</a></td>
 <td>mandatory (If customer invoices)</td>
 <td>The business key identifier of accounts receivable.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsPayableId</code></td>
+<td class="prop"><code>Accounts<wbr/>Payable<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AccountsPayable.html">AccountsPayables</a></td>
+<td><a class="chip" href="AccountsPayable.html">Accounts<wbr/>Payables</a></td>
 <td>mandatory (If supplier invoices)</td>
 <td>The business key identifier of accounts payable.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetOffAmount</code></td>
+<td class="prop"><code>Set<wbr/>Off<wbr/>Amount</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -96,15 +96,15 @@
 <td>The amount to set-off.</td>
 </tr>
 <tr>
-<td class="prop"><code>WriteOffCodeId</code></td>
+<td class="prop"><code>Write<wbr/>Off<wbr/>Code<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/WriteOffCode.html">WriteOffCodes</a></td>
+<td><a class="chip" href="../Common/WriteOffCode.html">Write<wbr/>Off<wbr/>Codes</a></td>
 <td>mandatory (If overpayment)</td>
 <td>The business key identifier of the write off code of the set-off payment if paid amount deviates from the invoice.</td>
 </tr>
 <tr>
-<td class="prop"><code>InterestType</code></td>
+<td class="prop"><code>Interest<wbr/>Type</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>

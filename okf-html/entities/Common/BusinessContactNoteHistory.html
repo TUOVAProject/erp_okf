@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BusinessContactNoteHistories · Monitor ERP API</title>
+<title>BusinessContactNoteHistories · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a business contact note history entry.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>BusinessContactNoteHistories</span>
 </header>
 <div class="layout">
@@ -83,7 +83,7 @@
 <td>The subject of the business contact note.</td>
 </tr>
 <tr>
-<td class="prop"><code>BodyId</code></td>
+<td class="prop"><code>Body<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -99,23 +99,23 @@
 <td>The body of the business contact note.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreatedByUserId</code></td>
+<td class="prop"><code>Created<wbr/>By<wbr/>User<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the application user that created the business contact note.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreatedTimestamp</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Created<wbr/>Timestamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The date the business contact note was created.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -123,7 +123,7 @@
 <td>The business key identifier of the parent.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentClass</code></td>
+<td class="prop"><code>Parent<wbr/>Class</code></td>
 <td class="type"><code>Guid</code></td>
 <td class="nullable"></td>
 <td></td>

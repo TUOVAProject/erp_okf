@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FixedAssets · Monitor ERP API</title>
+<title>FixedAssets · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a fixed assets object.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>FixedAssets</span>
 </header>
 <div class="layout">
@@ -91,31 +91,31 @@
 <td>The translated description of the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>GroupId</code></td>
+<td class="prop"><code>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="FixedAssetGroup.html">FixedAssetGroups</a></td>
+<td><a class="chip" href="FixedAssetGroup.html">Fixed<wbr/>Asset<wbr/>Groups</a></td>
 <td></td>
 <td>The business key identifier of fixed assets group that the fixed assets object belongs to.</td>
 </tr>
 <tr>
 <td class="prop"><code>Group</code></td>
-<td class="type"><code>FixedAssetGroups</code></td>
+<td class="type"><code>Fixed<wbr/>Asset<wbr/>Groups</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="FixedAssetGroup.html">FixedAssetGroups</a></td>
+<td><a class="chip" href="FixedAssetGroup.html">Fixed<wbr/>Asset<wbr/>Groups</a></td>
 <td>expandable</td>
 <td>The fixed assets group that the fixed assets object belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>AcquisitionDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Acquisition<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The acquisition date of the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>AcquisitionValue</code></td>
+<td class="prop"><code>Acquisition<wbr/>Value</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -131,15 +131,15 @@
 <td>The quantity of the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsPayableId</code></td>
+<td class="prop"><code>Accounts<wbr/>Payable<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AccountsPayable.html">AccountsPayables</a></td>
+<td><a class="chip" href="AccountsPayable.html">Accounts<wbr/>Payables</a></td>
 <td></td>
 <td>The business key identifier of the accounts payable connected to the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>VoucherId</code></td>
+<td class="prop"><code>Voucher<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Voucher.html">Vouchers</a></td>
@@ -147,7 +147,7 @@
 <td>The business key identifier of the voucher connected to the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>SupplierId</code></td>
+<td class="prop"><code>Supplier<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Purchase/Supplier.html">Suppliers</a></td>
@@ -155,7 +155,7 @@
 <td>The business key identifier of the supplier connected to the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>CategoryString</code></td>
+<td class="prop"><code>Category<wbr/>String</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -163,15 +163,15 @@
 <td>The category string of the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>WorkCenterId</code></td>
+<td class="prop"><code>Work<wbr/>Center<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Manufacturing/WorkCenter.html">WorkCenters</a></td>
+<td><a class="chip" href="../Manufacturing/WorkCenter.html">Work<wbr/>Centers</a></td>
 <td></td>
 <td>The business key identifier of the work center of the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>DepartmentId</code></td>
+<td class="prop"><code>Department<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Department.html">Departments</a></td>
@@ -179,7 +179,7 @@
 <td>The business key identifier of the department of the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>SerialNumber</code></td>
+<td class="prop"><code>Serial<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -195,15 +195,15 @@
 <td>The location of the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedDepreciationStartDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Planned<wbr/>Depreciation<wbr/>Start<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The start date for the scheduled depreciation of the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedDepreciationTimeInYears</code></td>
+<td class="prop"><code>Planned<wbr/>Depreciation<wbr/>Time<wbr/>In<wbr/>Years</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -211,7 +211,7 @@
 <td>The time (in years) for the scheduled depreciation of the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedDepreciationPercentage</code></td>
+<td class="prop"><code>Planned<wbr/>Depreciation<wbr/>Percentage</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -219,15 +219,15 @@
 <td>The percentage for the scheduled depreciation of the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalculatedDepreciationStartDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Calculated<wbr/>Depreciation<wbr/>Start<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The start date for the calculated depreciation of the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>CalculatedDepreciationPercentage</code></td>
+<td class="prop"><code>Calculated<wbr/>Depreciation<wbr/>Percentage</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -235,7 +235,7 @@
 <td>The depreciation percentage for the calculated depreciation of the fixed assets object.</td>
 </tr>
 <tr>
-<td class="prop"><code>MinimumValue</code></td>
+<td class="prop"><code>Minimum<wbr/>Value</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -244,9 +244,9 @@
 </tr>
 <tr>
 <td class="prop"><code>Sales</code></td>
-<td class="type"><code>FixedAssetSales[]</code></td>
+<td class="type"><code>Fixed<wbr/>Asset<wbr/>Sales[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="FixedAssetSale.html">FixedAssetSales</a></td>
+<td><a class="chip" href="FixedAssetSale.html">Fixed<wbr/>Asset<wbr/>Sales</a></td>
 <td>expandable, collection, since 23.8</td>
 <td>The registered sales/retirements of the fixed assets object.</td>
 </tr>

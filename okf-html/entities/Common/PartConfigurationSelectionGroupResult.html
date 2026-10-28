@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PartConfigurationSelectionGroupResults · Monitor ERP API</title>
+<title>PartConfigurationSelectionGroupResults · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a part configuration selection group result">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>PartConfigurationSelectionGroupResults</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the part configuration selection group result.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -84,7 +84,7 @@
 <td>The business key identifier of the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>SelectionGroupTemplateRowId</code></td>
+<td class="prop"><code>Selection<wbr/>Group<wbr/>Template<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -92,7 +92,7 @@
 <td>The business key identifier of the selection group row snapshot.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowIndex</code></td>
+<td class="prop"><code>Row<wbr/>Index</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -100,18 +100,18 @@
 <td>The row of the result.</td>
 </tr>
 <tr>
-<td class="prop"><code>SelectionGroupTemplateId</code></td>
+<td class="prop"><code>Selection<wbr/>Group<wbr/>Template<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PartConfigurationComponentSnapshot.html">PartConfigurationComponentSnapshots</a></td>
+<td><a class="chip" href="PartConfigurationComponentSnapshot.html">Part<wbr/>Configuration<wbr/>Component<wbr/>Snapshots</a></td>
 <td></td>
 <td>The business key identifier of the selection group snapshot.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartConfigurationResultId</code></td>
+<td class="prop"><code>Part<wbr/>Configuration<wbr/>Result<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="PartConfigurationResult.html">PartConfigurationResults</a></td>
+<td><a class="chip" href="PartConfigurationResult.html">Part<wbr/>Configuration<wbr/>Results</a></td>
 <td></td>
 <td>The business key identifier of the part configuration result.</td>
 </tr>
@@ -124,7 +124,7 @@
 <td>The quantity of the result row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupQuantity</code></td>
+<td class="prop"><code>Setup<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The setup quantity of the result row.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitPrice</code></td>
+<td class="prop"><code>Unit<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -140,7 +140,7 @@
 <td>The unit price amount.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitPriceCurrencyId</code></td>
+<td class="prop"><code>Unit<wbr/>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Currency.html">Currencies</a></td>
@@ -148,7 +148,7 @@
 <td>The business key identifier of the currency for the unit price.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitPriceInCompanyCurrency</code></td>
+<td class="prop"><code>Unit<wbr/>Price<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The unit price amount in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitPriceInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Unit<wbr/>Price<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Currency.html">Currencies</a></td>
@@ -164,7 +164,7 @@
 <td>The business key identifier of the currency for the unit price in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>DiscountPercentage</code></td>
+<td class="prop"><code>Discount<wbr/>Percentage</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,7 +172,7 @@
 <td>The discount percentage.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceFormulaFactor</code></td>
+<td class="prop"><code>Price<wbr/>Formula<wbr/>Factor</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>The price formula factor.</td>
 </tr>
 <tr>
-<td class="prop"><code>LockedUnitPrice</code></td>
+<td class="prop"><code>Locked<wbr/>Unit<wbr/>Price</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>Whether the unit price is locked.</td>
 </tr>
 <tr>
-<td class="prop"><code>LockedDiscount</code></td>
+<td class="prop"><code>Locked<wbr/>Discount</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>Whether the discount is locked.</td>
 </tr>
 <tr>
-<td class="prop"><code>SelectedByType</code></td>
+<td class="prop"><code>Selected<wbr/>By<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>The type indicating how the row was selected.</td>
 </tr>
 <tr>
-<td class="prop"><code>SelectedByName</code></td>
+<td class="prop"><code>Selected<wbr/>By<wbr/>Name</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>The name indicating who or what selected the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>SelectionType</code></td>
+<td class="prop"><code>Selection<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -220,7 +220,7 @@
 <td>The selection type.</td>
 </tr>
 <tr>
-<td class="prop"><code>ToOperation</code></td>
+<td class="prop"><code>To<wbr/>Operation</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -228,7 +228,7 @@
 <td>The target operation number.</td>
 </tr>
 <tr>
-<td class="prop"><code>MainPartId</code></td>
+<td class="prop"><code>Main<wbr/>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>

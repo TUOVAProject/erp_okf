@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>QuoteTypes · Monitor ERP API</title>
+<title>QuoteTypes · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a quote type.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>QuoteTypes</span>
 </header>
 <div class="layout">
@@ -116,7 +116,7 @@
 <td>Specifies if the type is visible.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsPreset</code></td>
+<td class="prop"><code>Is<wbr/>Preset</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>Specifies if the type is a preset type.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceSetting</code></td>
+<td class="prop"><code>Price<wbr/>Setting</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,15 +132,15 @@
 <td>The price setting to apply for quotes of this type.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceListId</code></td>
+<td class="prop"><code>Price<wbr/>List<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/PriceList.html">PriceLists</a></td>
+<td><a class="chip" href="../Common/PriceList.html">Price<wbr/>Lists</a></td>
 <td></td>
 <td>The business key identifier of the type's price list.</td>
 </tr>
 <tr>
-<td class="prop"><code>BaseType</code></td>
+<td class="prop"><code>Base<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -148,7 +148,7 @@
 <td>The base type of quotes created from this type.</td>
 </tr>
 <tr>
-<td class="prop"><code>CodingGroupId</code></td>
+<td class="prop"><code>Coding<wbr/>Group<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,15 +156,15 @@
 <td>The business key identifier of the type's coding group.</td>
 </tr>
 <tr>
-<td class="prop"><code>FormReportConfigurationId</code></td>
+<td class="prop"><code>Form<wbr/>Report<wbr/>Configuration<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/FormReportConfiguration.html">FormReportConfigurations</a></td>
+<td><a class="chip" href="../Common/FormReportConfiguration.html">Form<wbr/>Report<wbr/>Configurations</a></td>
 <td></td>
 <td>The business key identifier of the type's form report configuration.</td>
 </tr>
 <tr>
-<td class="prop"><code>RateTypeSetting</code></td>
+<td class="prop"><code>Rate<wbr/>Type<wbr/>Setting</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,26 +172,26 @@
 <td>The rate type setting of the quote type.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyExchangeTypeId</code></td>
+<td class="prop"><code>Currency<wbr/>Exchange<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/CurrencyExchangeType.html">CurrencyExchangeTypes</a></td>
+<td><a class="chip" href="../Common/CurrencyExchangeType.html">Currency<wbr/>Exchange<wbr/>Types</a></td>
 <td>since 22.9</td>
 <td>The business key identifier of the quote type's currency exchange type.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderTypeId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Type<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CustomerOrderType.html">CustomerOrderTypes</a></td>
+<td><a class="chip" href="CustomerOrderType.html">Customer<wbr/>Order<wbr/>Types</a></td>
 <td>since 23.2</td>
 <td>The business key identifier of the quote type's cutomer order type.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderType</code></td>
-<td class="type"><code>CustomerOrderTypes</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Type</code></td>
+<td class="type"><code>Customer<wbr/>Order<wbr/>Types</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CustomerOrderType.html">CustomerOrderTypes</a></td>
+<td><a class="chip" href="CustomerOrderType.html">Customer<wbr/>Order<wbr/>Types</a></td>
 <td>expandable, since 23.2</td>
 <td>The quote type's cutomer order type.</td>
 </tr>

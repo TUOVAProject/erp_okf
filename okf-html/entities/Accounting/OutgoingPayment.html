@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OutgoingPayments · Monitor ERP API</title>
+<title>OutgoingPayments · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents an outgoing payment.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>OutgoingPayments</span>
 </header>
 <div class="layout">
@@ -75,15 +75,15 @@
 <td>The business key identifier of the outgoing payment.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountsPayableId</code></td>
+<td class="prop"><code>Accounts<wbr/>Payable<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AccountsPayable.html">AccountsPayables</a></td>
+<td><a class="chip" href="AccountsPayable.html">Accounts<wbr/>Payables</a></td>
 <td></td>
 <td>The business key identifier of the paid accounts payable.</td>
 </tr>
 <tr>
-<td class="prop"><code>SupplierId</code></td>
+<td class="prop"><code>Supplier<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Purchase/Supplier.html">Suppliers</a></td>
@@ -91,31 +91,31 @@
 <td>The business key identifier of the paid supplier.</td>
 </tr>
 <tr>
-<td class="prop"><code>CreationDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Creation<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The creation date of the outgoing payment.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Payment<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The payment date of the outgoing payment.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaymentMethodId</code></td>
+<td class="prop"><code>Payment<wbr/>Method<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/PaymentMethod.html">PaymentMethods</a></td>
+<td><a class="chip" href="../Common/PaymentMethod.html">Payment<wbr/>Methods</a></td>
 <td></td>
 <td>The business key identifier of the payment's payment method.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaidAmount</code></td>
+<td class="prop"><code>Paid<wbr/>Amount</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -123,7 +123,7 @@
 <td>The paid amount.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaidAmountCurrencyId</code></td>
+<td class="prop"><code>Paid<wbr/>Amount<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -131,7 +131,7 @@
 <td>The business key identifier of the paid amount's currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaidAmountInCompanyCurrency</code></td>
+<td class="prop"><code>Paid<wbr/>Amount<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -139,7 +139,7 @@
 <td>The paid amount in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaidAmountInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Paid<wbr/>Amount<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -147,7 +147,7 @@
 <td>The business key identifier of the paid amount in company currency's currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaidVatAmount</code></td>
+<td class="prop"><code>Paid<wbr/>Vat<wbr/>Amount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -155,7 +155,7 @@
 <td>The paid VAT amount.</td>
 </tr>
 <tr>
-<td class="prop"><code>PaidVatAmountCurrencyId</code></td>
+<td class="prop"><code>Paid<wbr/>Vat<wbr/>Amount<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -163,7 +163,7 @@
 <td>The business key identifier of the paid VAT amount's currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>BankChargeAmount</code></td>
+<td class="prop"><code>Bank<wbr/>Charge<wbr/>Amount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -171,7 +171,7 @@
 <td>The bank charge amount.</td>
 </tr>
 <tr>
-<td class="prop"><code>BankChargeAmountCurrencyId</code></td>
+<td class="prop"><code>Bank<wbr/>Charge<wbr/>Amount<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -179,7 +179,7 @@
 <td>The business key identifier of the bank charge amount's currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsOrdered</code></td>
+<td class="prop"><code>Is<wbr/>Ordered</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -187,7 +187,7 @@
 <td>Specifies if the outgoing payment is ordered for payment.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsCancelled</code></td>
+<td class="prop"><code>Is<wbr/>Cancelled</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -195,55 +195,55 @@
 <td>Specifies if the outgoing payment is cancelled.</td>
 </tr>
 <tr>
-<td class="prop"><code>CancelledByUserId</code></td>
+<td class="prop"><code>Cancelled<wbr/>By<wbr/>User<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="../Common/ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the user that cancelled the payment.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>CancelDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Cancel<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td><span class="badge dep">deprecated since 26.5</span></td>
 <td>The date at which the payment was cancelled. <em>(Replaced by CancelTimeStamp)</em></td>
 </tr>
 <tr>
-<td class="prop"><code>CancelTimeStamp</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Cancel<wbr/>Time<wbr/>Stamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 26.5</td>
 <td>The timestamp when the payment was cancelled.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReceivingBankAccountId</code></td>
+<td class="prop"><code>Receiving<wbr/>Bank<wbr/>Account<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/BusinessContactBankAccount.html">BusinessContactBankAccounts</a></td>
+<td><a class="chip" href="../Common/BusinessContactBankAccount.html">Business<wbr/>Contact<wbr/>Bank<wbr/>Accounts</a></td>
 <td></td>
 <td>The business key identifier of the receiving bank account.</td>
 </tr>
 <tr>
-<td class="prop"><code>SendingBankAccountId</code></td>
+<td class="prop"><code>Sending<wbr/>Bank<wbr/>Account<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="BankAccount.html">BankAccounts</a></td>
+<td><a class="chip" href="BankAccount.html">Bank<wbr/>Accounts</a></td>
 <td></td>
 <td>The business key identifier of the bank account the payment was sent from.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetOffIncomingPaymentId</code></td>
+<td class="prop"><code>Set<wbr/>Off<wbr/>Incoming<wbr/>Payment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="IncomingPayment.html">IncomingPayments</a></td>
+<td><a class="chip" href="IncomingPayment.html">Incoming<wbr/>Payments</a></td>
 <td></td>
 <td>The business key identifier of the incoming payment the payment was set off against.</td>
 </tr>
 <tr>
-<td class="prop"><code>BookingId</code></td>
+<td class="prop"><code>Booking<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Booking.html">Bookings</a></td>
@@ -251,15 +251,15 @@
 <td>The business key identifier of the outgoing payment's booking.</td>
 </tr>
 <tr>
-<td class="prop"><code>WriteOffCodeId</code></td>
+<td class="prop"><code>Write<wbr/>Off<wbr/>Code<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Common/WriteOffCode.html">WriteOffCodes</a></td>
+<td><a class="chip" href="../Common/WriteOffCode.html">Write<wbr/>Off<wbr/>Codes</a></td>
 <td></td>
 <td>The business key identifier of the outgoing payment's write off code.</td>
 </tr>
 <tr>
-<td class="prop"><code>WriteOffAmount</code></td>
+<td class="prop"><code>Write<wbr/>Off<wbr/>Amount</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -267,7 +267,7 @@
 <td>The write off amount.</td>
 </tr>
 <tr>
-<td class="prop"><code>WriteOffAmountCurrencyId</code></td>
+<td class="prop"><code>Write<wbr/>Off<wbr/>Amount<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -275,7 +275,7 @@
 <td>The business key identifier of the write off amount's currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>WriteOffAmountInCompanyCurrency</code></td>
+<td class="prop"><code>Write<wbr/>Off<wbr/>Amount<wbr/>In<wbr/>Company<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -283,7 +283,7 @@
 <td>The write off amount in company currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>WriteOffAmountInCompanyCurrencyCurrencyId</code></td>
+<td class="prop"><code>Write<wbr/>Off<wbr/>Amount<wbr/>In<wbr/>Company<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -291,7 +291,7 @@
 <td>The business key identifier of the write off amount in company currency's currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>BundleNumber</code></td>
+<td class="prop"><code>Bundle<wbr/>Number</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -299,7 +299,7 @@
 <td>The payment's bundle number.</td>
 </tr>
 <tr>
-<td class="prop"><code>ChequeNumber</code></td>
+<td class="prop"><code>Cheque<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -307,7 +307,7 @@
 <td>The payment's cheque number.</td>
 </tr>
 <tr>
-<td class="prop"><code>CurrencyExchangeRate</code></td>
+<td class="prop"><code>Currency<wbr/>Exchange<wbr/>Rate</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -315,7 +315,7 @@
 <td>The payment's currency exchange rate.</td>
 </tr>
 <tr>
-<td class="prop"><code>VoucherText</code></td>
+<td class="prop"><code>Voucher<wbr/>Text</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>

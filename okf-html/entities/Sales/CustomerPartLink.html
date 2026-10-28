@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CustomerPartLinks · Monitor ERP API</title>
+<title>CustomerPartLinks · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a customer part link.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>CustomerPartLinks</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the customer part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerId</code></td>
+<td class="prop"><code>Customer<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Customer.html">Customers</a></td>
@@ -84,7 +84,7 @@
 <td>The business key identifier of the customer part link customer. References Customers .</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerPartNumber</code></td>
+<td class="prop"><code>Customer<wbr/>Part<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -92,7 +92,7 @@
 <td>The part number that the customer uses to identify the part.</td>
 </tr>
 <tr>
-<td class="prop"><code>PackagingPartId</code></td>
+<td class="prop"><code>Packaging<wbr/>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -100,7 +100,7 @@
 <td>The business key identifier of the customer part link packaging part. References Parts .</td>
 </tr>
 <tr>
-<td class="prop"><code>Gs1Code</code></td>
+<td class="prop"><code>Gs1<wbr/>Code</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,7 +108,7 @@
 <td>The GS1 code of the customer part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>SalesCommentShowInForms</code></td>
+<td class="prop"><code>Sales<wbr/>Comment<wbr/>Show<wbr/>In<wbr/>Forms</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>Specifies which documents the sales comment of the part link will be shown on.</td>
 </tr>
 <tr>
-<td class="prop"><code>QuantityForLeadTimeToCustomer</code></td>
+<td class="prop"><code>Quantity<wbr/>For<wbr/>Lead<wbr/>Time<wbr/>To<wbr/>Customer</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>The quantity for lead time.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -140,7 +140,7 @@
 <td>The price of the customer part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupPrice</code></td>
+<td class="prop"><code>Setup<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -148,8 +148,8 @@
 <td>The setup price of the customer part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>LeadTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Lead<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
@@ -164,15 +164,15 @@
 <td>The discount percentage of the customer part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceValidThrough</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Price<wbr/>Valid<wbr/>Through</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date/time offset that the customer part link price is valid through.</td>
 </tr>
 <tr>
-<td class="prop"><code>FuturePrice</code></td>
+<td class="prop"><code>Future<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -180,15 +180,15 @@
 <td>The future price of the customer part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>FuturePriceValidThrough</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Future<wbr/>Price<wbr/>Valid<wbr/>Through</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date/time offset that the future customer part link price is valid through.</td>
 </tr>
 <tr>
-<td class="prop"><code>FutureSetupPrice</code></td>
+<td class="prop"><code>Future<wbr/>Setup<wbr/>Price</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The future setup price of the customer part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>QuantityPerPackage</code></td>
+<td class="prop"><code>Quantity<wbr/>Per<wbr/>Package</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>The quantity per package of the customer part link.</td>
 </tr>
 <tr>
-<td class="prop"><code>PickingCommentId</code></td>
+<td class="prop"><code>Picking<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -212,7 +212,7 @@
 <td>The business key identifier of the customer part link picking comment. References Comments .</td>
 </tr>
 <tr>
-<td class="prop"><code>PickingComment</code></td>
+<td class="prop"><code>Picking<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -220,7 +220,7 @@
 <td>The customer part link picking comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>OverrideSalesCommentId</code></td>
+<td class="prop"><code>Override<wbr/>Sales<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -228,7 +228,7 @@
 <td>The business key identifier of the customer part link override sales comment. References Comments .</td>
 </tr>
 <tr>
-<td class="prop"><code>OverrideSalesComment</code></td>
+<td class="prop"><code>Override<wbr/>Sales<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -236,7 +236,7 @@
 <td>The customer part link override sales comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitId</code></td>
+<td class="prop"><code>Unit<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Unit.html">Units</a></td>
@@ -252,7 +252,7 @@
 <td>The customer part link unit.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceCurrencyId</code></td>
+<td class="prop"><code>Price<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -260,7 +260,7 @@
 <td>The business key identifier of the customer part link price currency. References Currencies .</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceCurrency</code></td>
+<td class="prop"><code>Price<wbr/>Currency</code></td>
 <td class="type"><code>Currencies</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Currency.html">Currencies</a></td>
@@ -268,7 +268,7 @@
 <td>The customer part link price currency.</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceCommentId</code></td>
+<td class="prop"><code>Price<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -276,7 +276,7 @@
 <td>The business key identifer of the customer part link price comment. References Comments .</td>
 </tr>
 <tr>
-<td class="prop"><code>PriceComment</code></td>
+<td class="prop"><code>Price<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -284,10 +284,10 @@
 <td>The customer part link price comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>StaggeredPrices</code></td>
-<td class="type"><code>StaggeredPrices[]</code></td>
+<td class="prop"><code>Staggered<wbr/>Prices</code></td>
+<td class="type"><code>Staggered<wbr/>Prices[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Common/StaggeredPrice.html">StaggeredPrices</a></td>
+<td><a class="chip" href="../Common/StaggeredPrice.html">Staggered<wbr/>Prices</a></td>
 <td>expandable, collection, since 24.3</td>
 <td>The staggered prices on the part link.</td>
 </tr>

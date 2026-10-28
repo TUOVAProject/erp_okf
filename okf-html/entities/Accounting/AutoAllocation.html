@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AutoAllocations · Monitor ERP API</title>
+<title>AutoAllocations · Monitor ERP API Data Model</title>
 <meta name="description" content="Represent an auto allocation.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Accounting.html">Accounting</a><span class="sep">/</span>AutoAllocations</span>
 </header>
 <div class="layout">
@@ -107,23 +107,23 @@
 <td>Specifies whether the auto allocation is active or not.</td>
 </tr>
 <tr>
-<td class="prop"><code>AllocationKeyId</code></td>
+<td class="prop"><code>Allocation<wbr/>Key<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="AllocationKey.html">AllocationKeys</a></td>
+<td><a class="chip" href="AllocationKey.html">Allocation<wbr/>Keys</a></td>
 <td>expandable</td>
 <td>The business key identifier of the allocation key linked to the auto allocation.</td>
 </tr>
 <tr>
-<td class="prop"><code>AllocationKey</code></td>
-<td class="type"><code>AllocationKeys</code></td>
+<td class="prop"><code>Allocation<wbr/>Key</code></td>
+<td class="type"><code>Allocation<wbr/>Keys</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="AllocationKey.html">AllocationKeys</a></td>
+<td><a class="chip" href="AllocationKey.html">Allocation<wbr/>Keys</a></td>
 <td></td>
 <td>The allocation key linked to the auto allocation.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountFrom</code></td>
+<td class="prop"><code>Account<wbr/>From</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -131,7 +131,7 @@
 <td>The account number from which the auto allocation applies.</td>
 </tr>
 <tr>
-<td class="prop"><code>AccountTo</code></td>
+<td class="prop"><code>Account<wbr/>To</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>

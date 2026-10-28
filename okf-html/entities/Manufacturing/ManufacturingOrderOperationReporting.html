@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ManufacturingOrderOperationReportings · Monitor ERP API</title>
+<title>ManufacturingOrderOperationReportings · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a manufacturing order operation reporting.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>ManufacturingOrderOperationReportings</span>
 </header>
 <div class="layout">
@@ -76,10 +76,10 @@
 <td>The business key identifier of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>OperationId</code></td>
+<td class="prop"><code>Operation<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrderOperation.html">ManufacturingOrderOperations</a></td>
+<td><a class="chip" href="ManufacturingOrderOperation.html">Manufacturing<wbr/>Order<wbr/>Operations</a></td>
 <td></td>
 <td>The business key identifier of the operation that the manufacturing order operation reporting applies.</td>
 </tr>
@@ -92,31 +92,31 @@
 <td>The quantity of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Setup<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The setup time of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Unit<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The unit time of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>WorkCenterId</code></td>
+<td class="prop"><code>Work<wbr/>Center<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="WorkCenter.html">WorkCenters</a></td>
+<td><a class="chip" href="WorkCenter.html">Work<wbr/>Centers</a></td>
 <td></td>
 <td>The business key identifier of the work center that the manufacturing order operation reporting applies.</td>
 </tr>
 <tr>
-<td class="prop"><code>EmployeeId</code></td>
+<td class="prop"><code>Employee<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -124,7 +124,7 @@
 <td>The business key identifier of the employee that make the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportingEmployeeId</code></td>
+<td class="prop"><code>Reporting<wbr/>Employee<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -132,7 +132,7 @@
 <td>The business key identifier of the employee to report as.</td>
 </tr>
 <tr>
-<td class="prop"><code>WarehouseId</code></td>
+<td class="prop"><code>Warehouse<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Warehouse.html">Warehouses</a></td>
@@ -140,15 +140,15 @@
 <td>The business key identifier of the warehouse the manufacturing order operation reporting applies to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActualReportedDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Actual<wbr/>Reported<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The actual reported date of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreviousRestQuantity</code></td>
+<td class="prop"><code>Previous<wbr/>Rest<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The previous rest quantity of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>RestQuantity</code></td>
+<td class="prop"><code>Rest<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -164,7 +164,7 @@
 <td>The rest quantity of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>OverReceiveQuantity</code></td>
+<td class="prop"><code>Over<wbr/>Receive<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -172,7 +172,7 @@
 <td>The over receive quantity of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupCost</code></td>
+<td class="prop"><code>Setup<wbr/>Cost</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -180,7 +180,7 @@
 <td>The setup cost of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupCostCurrencyId</code></td>
+<td class="prop"><code>Setup<wbr/>Cost<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -188,7 +188,7 @@
 <td>The business key identifier of the currency that the setup cost of the manufacturing order operation reporting applies to.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupCostFactor1</code></td>
+<td class="prop"><code>Setup<wbr/>Cost<wbr/>Factor1</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -196,7 +196,7 @@
 <td>The setup cost factor 1 of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupCostFactor2</code></td>
+<td class="prop"><code>Setup<wbr/>Cost<wbr/>Factor2</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>The setup cost factor 2 of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupCostFactor3</code></td>
+<td class="prop"><code>Setup<wbr/>Cost<wbr/>Factor3</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>The setup cost factor 3 of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupCostInForeignCurrency</code></td>
+<td class="prop"><code>Setup<wbr/>Cost<wbr/>In<wbr/>Foreign<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -220,7 +220,7 @@
 <td>The setup cost in foreign currency of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupCostInForeignCurrencyCurrencyId</code></td>
+<td class="prop"><code>Setup<wbr/>Cost<wbr/>In<wbr/>Foreign<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -228,7 +228,7 @@
 <td>The business key identifier of the foreign currency that the setup cost of the manufacturing order operation reporting applies to.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitCost</code></td>
+<td class="prop"><code>Unit<wbr/>Cost</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -236,7 +236,7 @@
 <td>The unit cost of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitCostCurrencyId</code></td>
+<td class="prop"><code>Unit<wbr/>Cost<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -244,7 +244,7 @@
 <td>The business key identifier of the currency that the unit cost of the manufacturing order operation reporting applies to.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitCostFactor1</code></td>
+<td class="prop"><code>Unit<wbr/>Cost<wbr/>Factor1</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -252,7 +252,7 @@
 <td>The unit cost factor 1 of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitCostFactor2</code></td>
+<td class="prop"><code>Unit<wbr/>Cost<wbr/>Factor2</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -260,7 +260,7 @@
 <td>The unit cost factor 2 of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitCostFactor3</code></td>
+<td class="prop"><code>Unit<wbr/>Cost<wbr/>Factor3</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -268,7 +268,7 @@
 <td>The unit cost factor 3 of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitCostInForeignCurrency</code></td>
+<td class="prop"><code>Unit<wbr/>Cost<wbr/>In<wbr/>Foreign<wbr/>Currency</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -276,7 +276,7 @@
 <td>The unit cost in foreign currency of the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>UnitCostInForeignCurrencyCurrencyId</code></td>
+<td class="prop"><code>Unit<wbr/>Cost<wbr/>In<wbr/>Foreign<wbr/>Currency<wbr/>Currency<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -284,7 +284,7 @@
 <td>The business key identifier of the foreign currency that the unit cost of the manufacturing order operation reporting applies to.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsSubcontractor</code></td>
+<td class="prop"><code>Is<wbr/>Subcontractor</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -300,23 +300,23 @@
 <td>The type that the manufacturing order operation reporting is.</td>
 </tr>
 <tr>
-<td class="prop"><code>SubcontractorRequestedDeliveryDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Subcontractor<wbr/>Requested<wbr/>Delivery<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The date requested by the subcontractor for delivering the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>SubcontractorActualDeliveryDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Subcontractor<wbr/>Actual<wbr/>Delivery<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The actual delivery date provided by the subcontractor for the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportRestQuantitiesOnSubsequentOperations</code></td>
+<td class="prop"><code>Report<wbr/>Rest<wbr/>Quantities<wbr/>On<wbr/>Subsequent<wbr/>Operations</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -324,7 +324,7 @@
 <td>Indicates whether to report remaining quantities on subsequent operations for the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>IsExportedToManagementAccounting</code></td>
+<td class="prop"><code>Is<wbr/>Exported<wbr/>To<wbr/>Management<wbr/>Accounting</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -332,7 +332,7 @@
 <td>Indicates whether the data has been exported to management accounting for the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>WipLocation</code></td>
+<td class="prop"><code>Wip<wbr/>Location</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -340,7 +340,7 @@
 <td>The work in progress location for the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreviousWipLocation</code></td>
+<td class="prop"><code>Previous<wbr/>Wip<wbr/>Location</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -348,15 +348,15 @@
 <td>The previous work in progress location for the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>OfWichTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Of<wbr/>Wich<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>Represents the duration related to a specific event or process.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -372,23 +372,23 @@
 <td>Additional comments or remarks related to the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReasonCodeTimeConsumptionId</code></td>
+<td class="prop"><code>Reason<wbr/>Code<wbr/>Time<wbr/>Consumption<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ReasonCodeTimeConsumption.html">ReasonCodeTimeConsumptions</a></td>
+<td><a class="chip" href="ReasonCodeTimeConsumption.html">Reason<wbr/>Code<wbr/>Time<wbr/>Consumptions</a></td>
 <td></td>
 <td>The business key identifier of the reason code associated with time consumption for the manufacturing order operation reporting applies to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReasonCodeTimeConsumption</code></td>
-<td class="type"><code>ReasonCodeTimeConsumptions</code></td>
+<td class="prop"><code>Reason<wbr/>Code<wbr/>Time<wbr/>Consumption</code></td>
+<td class="type"><code>Reason<wbr/>Code<wbr/>Time<wbr/>Consumptions</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ReasonCodeTimeConsumption.html">ReasonCodeTimeConsumptions</a></td>
+<td><a class="chip" href="ReasonCodeTimeConsumption.html">Reason<wbr/>Code<wbr/>Time<wbr/>Consumptions</a></td>
 <td>expandable</td>
 <td>The reason code associated with time consumption for the manufacturing order operation reporting applies to.</td>
 </tr>
 <tr>
-<td class="prop"><code>AutomaticMaterialReporting</code></td>
+<td class="prop"><code>Automatic<wbr/>Material<wbr/>Reporting</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -396,15 +396,15 @@
 <td>Indicates whether material reporting is performed automatically for the manufacturing order operation reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>PurchaseOrderDeliveryRowId</code></td>
+<td class="prop"><code>Purchase<wbr/>Order<wbr/>Delivery<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Purchase/PurchaseOrderDeliveryRow.html">PurchaseOrderDeliveryRows</a></td>
+<td><a class="chip" href="../Purchase/PurchaseOrderDeliveryRow.html">Purchase<wbr/>Order<wbr/>Delivery<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the delivery row associated with a purchase order for the manufacturing order operation reporting applies to.</td>
 </tr>
 <tr>
-<td class="prop"><code>PreviousNodeStatus</code></td>
+<td class="prop"><code>Previous<wbr/>Node<wbr/>Status</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -412,7 +412,7 @@
 <td>The previous status of the manufacturing order node for the manufacturing order operation reporting applies to.</td>
 </tr>
 <tr>
-<td class="prop"><code>OriginalApprovedQuantityFromDeliveryRow</code></td>
+<td class="prop"><code>Original<wbr/>Approved<wbr/>Quantity<wbr/>From<wbr/>Delivery<wbr/>Row</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -420,7 +420,7 @@
 <td>The originally approved quantity from the delivery row for the manufacturing order operation reporting applies to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportingId</code></td>
+<td class="prop"><code>Reporting<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -428,15 +428,15 @@
 <td>The business key identifier of the manufacturing order operation that the reporting applies to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportingTimestamp</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Reporting<wbr/>Timestamp</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The timestamp where the manufacturing order operation reporting occurred.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowNumber</code></td>
+<td class="prop"><code>Row<wbr/>Number</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>

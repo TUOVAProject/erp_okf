@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Warehouses · Monitor ERP API</title>
+<title>Warehouses · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a warehouse.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>Warehouses</span>
 </header>
 <div class="layout">
@@ -91,15 +91,15 @@
 <td>The warehouse code.</td>
 </tr>
 <tr>
-<td class="prop"><code>LanguageId</code></td>
+<td class="prop"><code>Language<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="LanguageCode.html">LanguageCodes</a></td>
+<td><a class="chip" href="LanguageCode.html">Language<wbr/>Codes</a></td>
 <td></td>
 <td>The business key identifier of the warehouse language code. References LanguageCodes .</td>
 </tr>
 <tr>
-<td class="prop"><code>CountryId</code></td>
+<td class="prop"><code>Country<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Country.html">Countries</a></td>
@@ -107,7 +107,7 @@
 <td>The business key identifier of the warehouse country. References Countries .</td>
 </tr>
 <tr>
-<td class="prop"><code>PlaceOfDispatch</code></td>
+<td class="prop"><code>Place<wbr/>Of<wbr/>Dispatch</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -115,7 +115,7 @@
 <td>The place of dispatch for the warehouse.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>PalletRegistrationNumber</code></td>
+<td class="prop"><code>Pallet<wbr/>Registration<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -131,7 +131,7 @@
 <td>The website URL of the warehouse.</td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>TimeZoneId</code></td>
+<td class="prop"><code>Time<wbr/>Zone<wbr/>Id</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Company.html">Companies</a></td>
@@ -139,7 +139,7 @@
 <td>The time zone of the warehouse. Specified as a time zone identifier (e.g. "W. Europe Standard Time"). From 25.2 moved to Companies . <em>(Time zone is now on company level. All warhouses will return the same value as the company time zone.)</em></td>
 </tr>
 <tr class="deprecated">
-<td class="prop"><code>TimeZone</code></td>
+<td class="prop"><code>Time<wbr/>Zone</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -147,7 +147,7 @@
 <td>The timezone offset of the warehouse. <em>(Replaced by TimeZoneId)</em></td>
 </tr>
 <tr>
-<td class="prop"><code>CalendarId</code></td>
+<td class="prop"><code>Calendar<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="Calendar.html">Calendars</a></td>
@@ -163,7 +163,7 @@
 <td>The warehouse calendar.</td>
 </tr>
 <tr>
-<td class="prop"><code>VatNumber</code></td>
+<td class="prop"><code>Vat<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -171,10 +171,10 @@
 <td>The VAT number of the warehouse.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryAddresses</code></td>
-<td class="type"><code>DeliveryAddresses[]</code></td>
+<td class="prop"><code>Delivery<wbr/>Addresses</code></td>
+<td class="type"><code>Delivery<wbr/>Addresses[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="DeliveryAddress.html">DeliveryAddresses</a></td>
+<td><a class="chip" href="DeliveryAddress.html">Delivery<wbr/>Addresses</a></td>
 <td>expandable, collection, since 25.4</td>
 <td>All available delivery addresses of the warehouse.</td>
 </tr>

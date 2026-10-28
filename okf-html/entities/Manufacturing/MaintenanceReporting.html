@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MaintenanceReportings · Monitor ERP API</title>
+<title>MaintenanceReportings · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a maintenance reporting.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>MaintenanceReportings</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the maintenance reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>SerialNumber</code></td>
+<td class="prop"><code>Serial<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -84,23 +84,23 @@
 <td>The serial number of the maintenance reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingOrderId</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td><a class="chip" href="ManufacturingOrder.html">Manufacturing<wbr/>Orders</a></td>
 <td></td>
 <td>The business key identifier of the manufacturing order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingOrder</code></td>
-<td class="type"><code>ManufacturingOrders</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Order</code></td>
+<td class="type"><code>Manufacturing<wbr/>Orders</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td><a class="chip" href="ManufacturingOrder.html">Manufacturing<wbr/>Orders</a></td>
 <td>expandable</td>
 <td>The maintenance reporting manufacturing order.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProductRecordId</code></td>
+<td class="prop"><code>Product<wbr/>Record<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -108,15 +108,15 @@
 <td>The business key identifier of product record.</td>
 </tr>
 <tr>
-<td class="prop"><code>ProductRecord</code></td>
-<td class="type"><code>ProductRecords</code></td>
+<td class="prop"><code>Product<wbr/>Record</code></td>
+<td class="type"><code>Product<wbr/>Records</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="../Inventory/ProductRecord.html">ProductRecords</a></td>
+<td><a class="chip" href="../Inventory/ProductRecord.html">Product<wbr/>Records</a></td>
 <td>expandable</td>
 <td>The product record of the maintenance reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>MaintenanceRowId</code></td>
+<td class="prop"><code>Maintenance<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>The business key identifier of the maintenance row.</td>
 </tr>
 <tr>
-<td class="prop"><code>ShortComment</code></td>
+<td class="prop"><code>Short<wbr/>Comment</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The short comment of the maintenance reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>CommentId</code></td>
+<td class="prop"><code>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -148,7 +148,7 @@
 <td>The comment of the maintenance reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>MaintenanceStatus</code></td>
+<td class="prop"><code>Maintenance<wbr/>Status</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -156,7 +156,7 @@
 <td>The maintenance status of the maintenance reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedById</code></td>
+<td class="prop"><code>Reported<wbr/>By<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -164,7 +164,7 @@
 <td>The business key identifier of person that reported on the maintenance reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedBy</code></td>
+<td class="prop"><code>Reported<wbr/>By</code></td>
 <td class="type"><code>Persons</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Person.html">Persons</a></td>
@@ -172,7 +172,7 @@
 <td>The person that reported in the maintenance reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportingStatus</code></td>
+<td class="prop"><code>Reporting<wbr/>Status</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -180,8 +180,8 @@
 <td>The reporting status of the maintenance reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActualDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Actual<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
@@ -196,15 +196,15 @@
 <td>The serial number status of the maintenance reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>NextOccurrence</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Next<wbr/>Occurrence</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The next occurrence of the maintenance reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>ColorCode</code></td>
+<td class="prop"><code>Color<wbr/>Code</code></td>
 <td class="type"><code>Int32?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -212,7 +212,7 @@
 <td>The color code of the maintenance reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>InstructionId</code></td>
+<td class="prop"><code>Instruction<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -228,10 +228,10 @@
 <td>The instruction of the maintenance reporting.</td>
 </tr>
 <tr>
-<td class="prop"><code>MaintenanceReportingSelectionRows</code></td>
-<td class="type"><code>MaintenanceReportingSelectionRows[]</code></td>
+<td class="prop"><code>Maintenance<wbr/>Reporting<wbr/>Selection<wbr/>Rows</code></td>
+<td class="type"><code>Maintenance<wbr/>Reporting<wbr/>Selection<wbr/>Rows[]</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="MaintenanceReportingSelectionRow.html">MaintenanceReportingSelectionRows</a></td>
+<td><a class="chip" href="MaintenanceReportingSelectionRow.html">Maintenance<wbr/>Reporting<wbr/>Selection<wbr/>Rows</a></td>
 <td>expandable, collection, since 25.7</td>
 <td>The maintenance reporting selection rows.</td>
 </tr>

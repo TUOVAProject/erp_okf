@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ManufacturingOrderMaterials · Monitor ERP API</title>
+<title>ManufacturingOrderMaterials · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a manufacturing order material.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Manufacturing.html">Manufacturing</a><span class="sep">/</span>ManufacturingOrderMaterials</span>
 </header>
 <div class="layout">
@@ -76,7 +76,7 @@
 <td>The business key identifier of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportNumber</code></td>
+<td class="prop"><code>Report<wbr/>Number</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -84,7 +84,7 @@
 <td>The report number of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>RowNumber</code></td>
+<td class="prop"><code>Row<wbr/>Number</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -92,7 +92,7 @@
 <td>The row number of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>PartId</code></td>
+<td class="prop"><code>Part<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Inventory/Part.html">Parts</a></td>
@@ -108,7 +108,7 @@
 <td>The manufacturing order material part.</td>
 </tr>
 <tr>
-<td class="prop"><code>ToOperationNumber</code></td>
+<td class="prop"><code>To<wbr/>Operation<wbr/>Number</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -116,7 +116,7 @@
 <td>The manufacturing order operation number that the manufacturing order material belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedQuantity</code></td>
+<td class="prop"><code>Reported<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -124,7 +124,7 @@
 <td>The reported quantity of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>RestQuantity</code></td>
+<td class="prop"><code>Rest<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -132,7 +132,7 @@
 <td>The remaining quantity of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>PlannedQuantity</code></td>
+<td class="prop"><code>Planned<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -140,23 +140,23 @@
 <td>The planned quantity of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingOrderId</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrder.html">ManufacturingOrders</a></td>
+<td><a class="chip" href="ManufacturingOrder.html">Manufacturing<wbr/>Orders</a></td>
 <td></td>
 <td>The business key identifier of the manufacturing order that the manufacturing order material belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ManufacturingOrderNodeId</code></td>
+<td class="prop"><code>Manufacturing<wbr/>Order<wbr/>Node<wbr/>Id</code></td>
 <td class="type"><code>Int64</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="ManufacturingOrderNode.html">ManufacturingOrderNodes</a></td>
+<td><a class="chip" href="ManufacturingOrderNode.html">Manufacturing<wbr/>Order<wbr/>Nodes</a></td>
 <td>since 2.30</td>
 <td>The business key identifier of the manufacturing order node that the manufacturing order material belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>PositionNumber</code></td>
+<td class="prop"><code>Position<wbr/>Number</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -164,7 +164,7 @@
 <td>The position number of the material.</td>
 </tr>
 <tr>
-<td class="prop"><code>InstructionCommentId</code></td>
+<td class="prop"><code>Instruction<wbr/>Comment<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -172,7 +172,7 @@
 <td>The business key identifier of the manufacturing order material's instruction comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>InstructionComment</code></td>
+<td class="prop"><code>Instruction<wbr/>Comment</code></td>
 <td class="type"><code>Comments</code></td>
 <td class="nullable"></td>
 <td><a class="chip" href="../Common/Comment.html">Comments</a></td>
@@ -180,7 +180,7 @@
 <td>The manufacturing order material's instruction comment.</td>
 </tr>
 <tr>
-<td class="prop"><code>QuantityPerUnit</code></td>
+<td class="prop"><code>Quantity<wbr/>Per<wbr/>Unit</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -188,15 +188,15 @@
 <td>Quantity per unit of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>CycleTime</code></td>
-<td class="type"><code>TimeSpan?</code></td>
+<td class="prop"><code>Cycle<wbr/>Time</code></td>
+<td class="type"><code>Time<wbr/>Span?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td>since 22.9</td>
 <td>Cycle time of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>EditedStatus</code></td>
+<td class="prop"><code>Edited<wbr/>Status</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -204,7 +204,7 @@
 <td>Edited status of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>ExtraQuantityProcent</code></td>
+<td class="prop"><code>Extra<wbr/>Quantity<wbr/>Procent</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -212,15 +212,15 @@
 <td>Extra quantity procent of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>LinkedPurchaseOrderRowId</code></td>
+<td class="prop"><code>Linked<wbr/>Purchase<wbr/>Order<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Purchase/PurchaseOrderRow.html">PurchaseOrderRows</a></td>
+<td><a class="chip" href="../Purchase/PurchaseOrderRow.html">Purchase<wbr/>Order<wbr/>Rows</a></td>
 <td>since 22.9</td>
 <td>The business key identifier of the purchase order row that the manufacturing order material belongs to.</td>
 </tr>
 <tr>
-<td class="prop"><code>LockedToBatchNo</code></td>
+<td class="prop"><code>Locked<wbr/>To<wbr/>Batch<wbr/>No</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -228,7 +228,7 @@
 <td>Locked To batch number of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>QuantityPerCycle</code></td>
+<td class="prop"><code>Quantity<wbr/>Per<wbr/>Cycle</code></td>
 <td class="type"><code>Decimal?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -236,7 +236,7 @@
 <td>Quantity per cycle of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>RejectedQuantity</code></td>
+<td class="prop"><code>Rejected<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -244,7 +244,7 @@
 <td>Rejected quantity of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>ReportedSetupQuantity</code></td>
+<td class="prop"><code>Reported<wbr/>Setup<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -252,7 +252,7 @@
 <td>Reported setup quantity of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>RestSetupQuantity</code></td>
+<td class="prop"><code>Rest<wbr/>Setup<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -260,7 +260,7 @@
 <td>Rest setup quantity of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>SetupQuantity</code></td>
+<td class="prop"><code>Setup<wbr/>Quantity</code></td>
 <td class="type"><code>Decimal</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -268,7 +268,7 @@
 <td>Setup quantity of the manufacturing order material.</td>
 </tr>
 <tr>
-<td class="prop"><code>MaterialRowOriginId</code></td>
+<td class="prop"><code>Material<wbr/>Row<wbr/>Origin<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>

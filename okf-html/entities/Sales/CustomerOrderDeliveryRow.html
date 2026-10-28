@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CustomerOrderDeliveryRows · Monitor ERP API</title>
+<title>CustomerOrderDeliveryRows · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a customer delivery order row.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Sales.html">Sales</a><span class="sep">/</span>CustomerOrderDeliveryRows</span>
 </header>
 <div class="layout">
@@ -81,7 +81,7 @@
 <td>The business key identifier of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>AffectStockBalance</code></td>
+<td class="prop"><code>Affect<wbr/>Stock<wbr/>Balance</code></td>
 <td class="type"><code>Boolean</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -89,7 +89,7 @@
 <td>Specifies if row affect the stock balance.</td>
 </tr>
 <tr>
-<td class="prop"><code>BusinessTransactionContextType</code></td>
+<td class="prop"><code>Business<wbr/>Transaction<wbr/>Context<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -97,31 +97,31 @@
 <td>The type of the business transaction context.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CustomerOrder.html">CustomerOrders</a></td>
+<td><a class="chip" href="CustomerOrder.html">Customer<wbr/>Orders</a></td>
 <td></td>
 <td>The business key identifier of the customer order.</td>
 </tr>
 <tr>
-<td class="prop"><code>CustomerOrderRowId</code></td>
+<td class="prop"><code>Customer<wbr/>Order<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CustomerOrderRow.html">CustomerOrderRows</a></td>
+<td><a class="chip" href="CustomerOrderRow.html">Customer<wbr/>Order<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the customer order row.</td>
 </tr>
 <tr>
-<td class="prop"><code>DeliveryDate</code></td>
-<td class="type"><code>DateTimeOffset</code></td>
+<td class="prop"><code>Delivery<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset</code></td>
 <td class="nullable"></td>
 <td></td>
 <td></td>
 <td>The delivery date of the row.</td>
 </tr>
 <tr>
-<td class="prop"><code>FreeTextHtml</code></td>
+<td class="prop"><code>Free<wbr/>Text<wbr/>Html</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -129,7 +129,7 @@
 <td>The free text row's rich text HTML row data.</td>
 </tr>
 <tr>
-<td class="prop"><code>FreeText</code></td>
+<td class="prop"><code>Free<wbr/>Text</code></td>
 <td class="type"><code>String</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -137,15 +137,15 @@
 <td>The free text row's raw text.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceId</code></td>
+<td class="prop"><code>Invoice<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CustomerOrderInvoice.html">CustomerOrderInvoices</a></td>
+<td><a class="chip" href="CustomerOrderInvoice.html">Customer<wbr/>Order<wbr/>Invoices</a></td>
 <td></td>
 <td>The business key identifier of the customer order invoice. CustomerOrderInvoices</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentId</code></td>
+<td class="prop"><code>Parent<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -153,7 +153,7 @@
 <td>The business key identifier of the parent.</td>
 </tr>
 <tr>
-<td class="prop"><code>ParentInvoiceId</code></td>
+<td class="prop"><code>Parent<wbr/>Invoice<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -161,15 +161,15 @@
 <td>The business key identifier of the parent invoice.</td>
 </tr>
 <tr>
-<td class="prop"><code>PickListDeliveryDate</code></td>
-<td class="type"><code>DateTimeOffset?</code></td>
+<td class="prop"><code>Pick<wbr/>List<wbr/>Delivery<wbr/>Date</code></td>
+<td class="type"><code>Date<wbr/>Time<wbr/>Offset?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
 <td></td>
 <td>The delivery date of the pick list.</td>
 </tr>
 <tr>
-<td class="prop"><code>QuantityChangeId</code></td>
+<td class="prop"><code>Quantity<wbr/>Change<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td></td>
@@ -177,18 +177,18 @@
 <td>The business key identifier of the quantity change.</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceRowId</code></td>
+<td class="prop"><code>Invoice<wbr/>Row<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="CustomerOrderInvoiceRow.html">CustomerOrderInvoiceRows</a></td>
+<td><a class="chip" href="CustomerOrderInvoiceRow.html">Customer<wbr/>Order<wbr/>Invoice<wbr/>Rows</a></td>
 <td></td>
 <td>The business key identifier of the customer order invoice row. CustomerOrderInvoiceRows</td>
 </tr>
 <tr>
-<td class="prop"><code>InvoiceRow</code></td>
-<td class="type"><code>CustomerOrderInvoiceRows</code></td>
+<td class="prop"><code>Invoice<wbr/>Row</code></td>
+<td class="type"><code>Customer<wbr/>Order<wbr/>Invoice<wbr/>Rows</code></td>
 <td class="nullable"></td>
-<td><a class="chip" href="CustomerOrderInvoiceRow.html">CustomerOrderInvoiceRows</a></td>
+<td><a class="chip" href="CustomerOrderInvoiceRow.html">Customer<wbr/>Order<wbr/>Invoice<wbr/>Rows</a></td>
 <td></td>
 <td>The invoice row of the customer order delivery row. CustomerOrderInvoiceRows</td>
 </tr>

@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DelegatedWork · Monitor ERP API</title>
+<title>DelegatedWork · Monitor ERP API Data Model</title>
 <meta name="description" content="Represents a delegated work.">
 <link rel="stylesheet" href="../../assets/okf.css">
 </head>
 <body>
 <header class="top">
   <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
-  <a class="brand" href="../../index.html">Monitor ERP API</a>
+  <a class="brand" href="../../index.html">Monitor ERP API Data Model</a>
   <span class="crumb"><a href="../../modules/Common.html">Common</a><span class="sep">/</span>DelegatedWork</span>
 </header>
 <div class="layout">
@@ -75,7 +75,7 @@
 <td>The business key identifier of the delegated work.</td>
 </tr>
 <tr>
-<td class="prop"><code>WorkRecordingType</code></td>
+<td class="prop"><code>Work<wbr/>Recording<wbr/>Type</code></td>
 <td class="type"><code>Int32</code></td>
 <td class="nullable"></td>
 <td></td>
@@ -83,15 +83,15 @@
 <td>The work recording type of the delegated work.</td>
 </tr>
 <tr>
-<td class="prop"><code>DelegatedBy</code></td>
+<td class="prop"><code>Delegated<wbr/>By</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ApplicationUser.html">ApplicationUsers</a></td>
+<td><a class="chip" href="ApplicationUser.html">Application<wbr/>Users</a></td>
 <td></td>
 <td>The business key identifier of the user who delegated the work.</td>
 </tr>
 <tr>
-<td class="prop"><code>EmployeeId</code></td>
+<td class="prop"><code>Employee<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
 <td><a class="chip" href="Person.html">Persons</a></td>
@@ -99,18 +99,18 @@
 <td>The business key identifier of the employee the work is delegated to.</td>
 </tr>
 <tr>
-<td class="prop"><code>ActivityId</code></td>
+<td class="prop"><code>Activity<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="ProjectActivity.html">ProjectActivities</a></td>
+<td><a class="chip" href="ProjectActivity.html">Project<wbr/>Activities</a></td>
 <td></td>
 <td>The business key identifier of the delegated work's activity.</td>
 </tr>
 <tr>
-<td class="prop"><code>OperationId</code></td>
+<td class="prop"><code>Operation<wbr/>Id</code></td>
 <td class="type"><code>Int64?</code></td>
 <td class="nullable"><span class="badge">null</span></td>
-<td><a class="chip" href="../Manufacturing/ManufacturingOrderOperation.html">ManufacturingOrderOperations</a></td>
+<td><a class="chip" href="../Manufacturing/ManufacturingOrderOperation.html">Manufacturing<wbr/>Order<wbr/>Operations</a></td>
 <td></td>
 <td>The business key identifier of the delegated work's operation.</td>
 </tr>
