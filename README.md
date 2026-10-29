@@ -1,6 +1,6 @@
 # Monitor ERP API Data Model — OKF knowledge bundle
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23498227.svg)](https://doi.org/10.5281/zenodo.23498227)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23728808.svg)](https://doi.org/10.5281/zenodo.23728808)
 
 ## Author
 
